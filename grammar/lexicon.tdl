@@ -1,0 +1,56 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Nouns
+
+gyùudanee := common-noun-lex &
+  [ STEM < "gyùudanee" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_horse_n_rel" ].
+
+ts’agts’agee := common-noun-lex &
+  [ STEM < "ts’agts’agee" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wagon_n_rel" ].
+
+hlaa := 1sg-agt-noun-lex &
+  [ STEM < "hlaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+t’alang := 1pl-agt-noun-lex &
+  [ STEM < "t’alang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+daa := 2sg-agt-noun-lex &
+  [ STEM < "daa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+dalang := 2pl-agt-noun-lex &
+  [ STEM < "dalang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+0 := 3rd-agt-noun-lex &
+  [ STEM < "0" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+;;; Adjectives
+
+;;; Verbs
+
+dladahldagan := itr-verb-lex &
+  [ STEM < "dladahldagan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_fallDown_v_rel" ].
+
+tlagaaydagan := tr-verb-lex &
+  [ STEM < "tlagaaydagan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_injure_v_rel" ].
+
+;;; Determiners
+
+dii := 1sg-poss-determiner-lex &
+  [ STEM < "dii" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+7iitl’ := 1pl-poss-determiner-lex &
+  [ STEM < "7iitl’" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+’la := 3sg_poss_pronoun-determiner-lex &
+  [ STEM < "’la" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].

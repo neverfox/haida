@@ -1,0 +1,141 @@
+
+version=28
+
+section=general
+language=Haida
+iso-code=hdn
+punctuation-chars=keep-all
+archive=yes
+email=kphowell@uw.edu
+affiliation=University of Washington
+motivation=LING 567
+vcs=git
+
+section=word-order
+word-order=sov
+has-dets=yes
+noun-det-order=det-noun
+has-aux=no
+aux-comp-order=after
+aux-comp=s
+multiple-aux=yes
+
+section=number
+  number1_name=singular
+  number2_name=plural
+
+section=person
+person=1-2-3
+first-person=none
+incl-excl-number=singular, plural
+
+section=gender
+
+section=case
+case-marking=erg-abs
+erg-abs-erg-case-name=agentive
+erg-abs-abs-case-name=objective
+
+section=direct-inverse
+scale-equal=direct
+
+section=tense-aspect-mood
+
+section=other-features
+
+section=sentential-negation
+
+section=coordination
+
+section=matrix-yes-no
+
+section=info-str
+
+section=arg-opt
+
+section=lexicon
+adj_incorp=on
+  noun1_name=common
+  noun1_det=opt
+    noun1_stem1_orth=gyùudanee
+    noun1_stem1_pred=_horse_n_rel
+    noun1_stem2_orth=ts’agts’agee
+    noun1_stem2_pred=_wagon_n_rel
+  noun2_name=agt
+    noun2_feat1_name=case
+    noun2_feat1_value=erg
+  noun2_det=imp
+  noun3_name=obj
+    noun3_feat1_name=case
+    noun3_feat1_value=abs
+  noun3_det=imp
+  noun4_name=1sg-agt
+  noun4_supertypes=noun2
+    noun4_feat1_name=number
+    noun4_feat1_value=singular
+    noun4_feat2_name=person
+    noun4_feat2_value=1st
+  noun4_det=imp
+    noun4_stem1_orth=hlaa
+    noun4_stem1_pred=pron_rel
+  noun5_name=1pl-agt
+  noun5_supertypes=noun2
+    noun5_feat1_name=number
+    noun5_feat1_value=plural
+    noun5_feat2_name=person
+    noun5_feat2_value=1st
+  noun5_det=imp
+    noun5_stem1_orth=t’alang
+    noun5_stem1_pred=pron_rel
+  noun6_name=2sg-agt
+  noun6_supertypes=noun2
+    noun6_feat1_name=number
+    noun6_feat1_value=singular
+    noun6_feat2_name=person
+    noun6_feat2_value=2nd
+  noun6_det=imp
+    noun6_stem1_orth=daa
+    noun6_stem1_pred=pron_rel
+  noun7_name=2pl-agt
+  noun7_supertypes=noun2
+    noun7_feat1_name=number
+    noun7_feat1_value=plural
+    noun7_feat2_name=person
+    noun7_feat2_value=2nd
+  noun7_det=imp
+    noun7_stem1_orth=dalang
+    noun7_stem1_pred=pron_rel
+  noun8_name=3rd-agt
+  noun8_supertypes=noun2
+    noun8_feat1_name=person
+    noun8_feat1_value=3rd
+  noun8_det=imp
+    noun8_stem1_orth=0
+    noun8_stem1_pred=pron_rel
+  verb1_name=itr
+  verb1_valence=abs
+    verb1_stem1_orth=dladahldagan
+    verb1_stem1_pred=_fallDown_v_rel
+  verb2_name=tr
+  verb2_valence=trans
+    verb2_stem1_orth=tlagaaydagan
+    verb2_stem1_pred=_injure_v_rel
+  det1_name=1sg-poss
+    det1_stem1_orth=dii
+    det1_stem1_pred=pron_rel
+  det2_name=1pl-poss
+    det2_stem1_orth=7iitl’
+    det2_stem1_pred=pron_rel
+  det5_name=3sg_poss_pronoun
+    det5_stem1_orth=’la
+    det5_stem1_pred=pron_rel
+
+section=morphology
+
+section=toolbox-import
+
+section=test-sentences
+
+section=gen-options
+
+section=ToolboxLexicon
