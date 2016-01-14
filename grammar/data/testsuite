@@ -4,3 +4,93 @@ Lines: translit translit-seg gloss translat
 Author: Roman Pearah & Kristen Piepgrass
 Date: January 14, 2016
 Source a: Enrico, John. Haida Syntax. Lincoln: University of Nebraska Press, 2003. Print.
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo, det}
+gyùudanee dladahldagan
+gyùudan-ee dladahlda-gan
+horse-DEF fall.down-PST
+`The horse fell down.'
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+dladahldagan gyùudanee
+dladahlda-gan gyùudan-ee
+fall.down-PST horse-DEF
+`The horse fell down.'
+
+Source: a:
+Vetted: s
+Judgment: g
+Phenomena: {wo}
+ts’agts’aggee gyùundanee tlagaaydagan
+ts’agts’ag-gee gyùundan-ee tlagaay-da-gan
+wagon-DEF	horse-DEF	get.injured-CAUSE-PST
+`The wagon injured the horse.'
+
+Source: a:
+Vetted: s
+Judgment: g
+Phenomena: {wo}
+ts’agts’aggee gyùundanee tlagaaydagan
+ts’agts’ag-gee gyùundan-ee tlagaay-da-gan
+wagon-DEF	horse-DEF	get.injured-CAUSE-PST
+`The horse damaged the wagon.'
+
+Source: a:
+Vetted: s
+Judgment: g
+Phenomena: {wo}
+gyùundanee ts’agts’aggee tlagaaydagan
+gyùundan-ee ts’agts’ag-gee tlagaay-da-gan
+horse-DEF wagon-DEF get.injured-CAUSE-PST
+`The horse damaged the wagon.'
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+gyùundanee tlagaaydagan ts’agts’aggee
+gyùundan-ee tlagaay-da-gan ts’agts’ag-gee
+horse-DEF get.injured-CAUSE-PST wagon-DEF
+`The horse damaged the wagon.'
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+tlagaaydagan gyùundanee ts’agts’aggee
+tlagaay-da-gan gyùundan-ee ts’agts’ag-gee
+get.injured-CAUSE-PST horse-DEF wagon-DEF
+`The horse damaged the wagon.'
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+tlagaaydagan ts’agts’aggee gyùundanee
+tlagaay-da-gan ts’agts’ag-gee gyùundan-ee
+get.injured-CAUSE-PST wagon-DEF horse-DEF
+`The horse damaged the wagon.'
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+ts’agts’aggee tlagaaydagan gyùundanee
+ts’agts’ag-gee tlagaay-da-gan gyùundan-ee
+wagon-DEF get.injured-CAUSE-PST horse-DEF
+`The wagon injured the horse.'
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+ts’agts’aggee tlagaaydagan gyùundanee
+ts’agts’ag-gee tlagaay-da-gan gyùundan-ee
+wagon-DEF get.injured-CAUSE-PST horse-DEF
+`The horse damaged the wagon.'
