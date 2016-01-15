@@ -1,0 +1,226 @@
+Language: Haida
+Language code: hdn
+Lines: translit translit-seg gloss translat
+Author: Roman Pearah & Kristen Piepgrass
+Date: January 14, 2016
+Source a: Enrico, John. Haida Syntax. Lincoln: University of Nebraska Press, 2003. Print.
+
+# 1 it wo
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo, det}
+gyùudanee dladahldagan
+gyùudan-ee dladahlda-gan
+horse-DEF fall.down-PST
+`The horse fell down.'
+
+# 2 it wo
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+dladahldagan gyùudanee
+dladahlda-gan gyùudan-ee
+fall.down-PST horse-DEF
+`The horse fell down.'
+
+# 3 tr wo
+Source: a:75
+Vetted: s
+Judgment: g
+Phenomena: {wo}
+ts’agts’aggee gyùundanee tlagaaydagan
+ts’agts’ag-gee gyùundan-ee tlagaay-da-gan
+wagon-DEF horse-DEF get.injured-CAUSE-PST
+`The wagon injured the horse. or the horse damaged the wagon.'
+
+# 4 tr wo
+Source: a:75
+Vetted: s
+Judgment: g
+Phenomena: {wo}
+gyùundanee ts’agts’aggee tlagaaydagan
+gyùundan-ee ts’agts’ag-gee tlagaay-da-gan
+horse-DEF wagon-DEF get.injured-CAUSE-PST
+`The horse damaged the wagon.'
+
+# 5 tr wo
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+gyùundanee tlagaaydagan ts’agts’aggee
+gyùundan-ee tlagaay-da-gan ts’agts’ag-gee
+horse-DEF get.injured-CAUSE-PST wagon-DEF
+`The horse damaged the wagon.'
+
+# 6 tr wo
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+tlagaaydagan gyùundanee ts’agts’aggee
+tlagaay-da-gan gyùundan-ee ts’agts’ag-gee
+get.injured-CAUSE-PST horse-DEF wagon-DEF
+`The horse damaged the wagon.'
+
+# 7 tr wo
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+tlagaaydagan ts’agts’aggee gyùundanee
+tlagaay-da-gan ts’agts’ag-gee gyùundan-ee
+get.injured-CAUSE-PST wagon-DEF horse-DEF
+`The horse damaged the wagon.'
+
+# 8 tr wo
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+ts’agts’aggee tlagaaydagan gyùundanee
+ts’agts’ag-gee tlagaay-da-gan gyùundan-ee
+wagon-DEF get.injured-CAUSE-PST horse-DEF
+`The wagon injured the horse.'
+
+# 9 tr wo
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+ts’agts’aggee tlagaaydagan gyùundanee
+ts’agts’ag-gee tlagaay-da-gan gyùundan-ee
+wagon-DEF get.injured-CAUSE-PST horse-DEF
+`The horse damaged the wagon.'
+
+# 10 tr wo with pns
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo, pn, c}
+dang hla qinggan
+dang hla qing-gan
+2SG.ACC 1SG.NOM see-PST
+`I see you.'
+
+# 11 tr wo with pns
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo, pn, c}
+dii daa qinggan
+dii daa qing-gan
+1SG.ACC 2SG.NOM see-PST
+`You see me.'
+
+# 12 tr wo with pns
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+hlaa dang qinggan
+hlaa dang qing-gan
+1SG.NOM 2SG.ACC see-PST
+`I see you.'
+
+# 13 tr wo with pns
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {c}
+dang dii qinggan
+dang dii qing-gan
+2SG.ACC 1SG.ACC see-PST
+`I see you.'
+
+# 14 tr wo with pns
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {c}
+daa hla qinggan
+daa hla qing-gan
+2SG.NOM 1SG.NOM see-PST
+`I see you.'
+
+# 15 it pn case
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {c}
+hla radgan
+hla rad-gan
+1SG.NOM run-PST
+`I ran.'
+
+# 16 it pn case
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {c}
+dii radgan
+dii rad-gan
+1SG.ACC run-PST
+`I ran.'
+
+# 17 it pn case
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo, det}
+hla dladahldagan
+hla dladahlda-gan
+1SG.ACC fall.down-PST
+`I fell down.'
+
+# 18 it pn case
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {c}
+dii dladahldagan
+dii dladahlda-gan
+1SG.NOM fall.down-PST
+`I fell down.'
+
+# 19 np
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {det}
+dii gyùudan radgan
+dii gyùudan rad-gan
+1SG.POSS horse run-PST
+`My horse ran.'
+
+# 20 np wrong det order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+gyùudan dii radgan
+gyùudan dii rad-gan
+horse 1SG.POSS run-PST
+`My horse ran.'
+
+# 21 np impossible det
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+dii hla dladahldagan
+dii hla dladahlda-gan
+1SG.POSS 1SG.ACC fall.down-PST
+`My I fell down.'
+
+# 22 np missing det
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+gyùudan dladahldagan
+gyùudan dladahlda-gan
+horse fall.down-PST
+`horse fell down.'
