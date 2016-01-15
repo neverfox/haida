@@ -44,8 +44,8 @@ PNG.PER : PNG.PER
   * <> *
 
 PNG.NUM : PNG.NUM
-  plural <> plural
-  singular <> singular
+  pl <> pl
+  sg <> sg
   * <> *
 
 PNG.GEND : PNG.GEND

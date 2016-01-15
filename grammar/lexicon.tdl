@@ -1,56 +1,86 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Nouns
 
-gyùudanee := common-noun-lex &
+gyùudanee := cn-noun-lex &
   [ STEM < "gyùudanee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_horse_n_rel" ].
 
-ts’agts’agee := common-noun-lex &
-  [ STEM < "ts’agts’agee" >,
+ts’agts’aggee := cn-noun-lex &
+  [ STEM < "ts’agts’aggee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wagon_n_rel" ].
 
-hlaa := 1sg-agt-noun-lex &
+hlaa := 1sg-nom-pron-noun-lex &
   [ STEM < "hlaa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-t’alang := 1pl-agt-noun-lex &
+hl := 1sg-nom-pron-noun-lex &
+  [ STEM < "hl" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+t’alang := 1pl-nom-pron-noun-lex &
   [ STEM < "t’alang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-daa := 2sg-agt-noun-lex &
+t’all := 1pl-nom-pron-noun-lex &
+  [ STEM < "t’all" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+daa := 2sg-nom-pron-noun-lex &
   [ STEM < "daa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-dalang := 2pl-agt-noun-lex &
+dang_1 := 2sg-nom-pron-noun-lex &
+  [ STEM < "dang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+’laa := 3p-hpot-pron-noun-lex &
+  [ STEM < "’laa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+’la := 3p-hpot-pron-noun-lex &
+  [ STEM < "’la" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+dii := 1sg-acc-pron-noun-lex &
+  [ STEM < "dii" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+7ittl’ := 1pl-acc-pron-noun-lex &
+  [ STEM < "7ittl’" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+dalang := 2pl-pron-noun-lex &
   [ STEM < "dalang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-0 := 3rd-agt-noun-lex &
+dall := 2pl-pron-noun-lex &
+  [ STEM < "dall" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+7waa := 3p-lpot-pron-noun-lex &
+  [ STEM < "7waa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+7wa := 3p-lpot-pron-noun-lex &
+  [ STEM < "7wa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+0 := 3p-hpot-prox-pron-noun-lex &
   [ STEM < "0" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+dang_2 := 2sg-acc-pron-noun-lex &
+  [ STEM < "dang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
 ;;; Adjectives
 
 ;;; Verbs
 
-dladahldagan := itr-verb-lex &
+dladahldagan := itr-acc-verb-lex &
   [ STEM < "dladahldagan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_fallDown_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_fall_down_v_rel" ].
 
-tlagaaydagan := tr-verb-lex &
+tlagaaydagan := tr-nom-verb-lex &
   [ STEM < "tlagaaydagan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_injure_v_rel" ].
-
-;;; Determiners
-
-dii := 1sg-poss-determiner-lex &
-  [ STEM < "dii" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
-
-7iitl’ := 1pl-poss-determiner-lex &
-  [ STEM < "7iitl’" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
-
-’la := 3sg_poss_pronoun-determiner-lex &
-  [ STEM < "’la" >,
-    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].

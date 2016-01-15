@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Haida
 ;;; created at:
-;;;     Thu Jan 14 17:52:54 UTC 2016
+;;;     Fri Jan 15 20:30:22 UTC 2016
 ;;; based on Matrix customization system version of:
 ;;;     Sun Jan 10 22:56:48 UTC 2016
 ;;;
@@ -36,8 +36,8 @@ basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
 ;;; Case
 
 case := *top*.
-age := case.  ; agentive
-obj := case.  ; objective
+nom := case.  ; nom
+acc := case.  ; acc
 
 ;;; Person
 
@@ -49,8 +49,8 @@ person := *top*.
 ;;; Number
 
 number := *top*.
-singular := number.
-plural := number.
+sg := number.
+pl := number.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
@@ -59,52 +59,58 @@ plural := number.
 ;;; Nouns
 
 noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL [ SPR < #spr &
-                                 [ LOCAL.CAT.HEAD det ] >,
-                           COMPS < >,
+  [ ARG-ST < #spr >,
+    SYNSEM.LOCAL.CAT.VAL [ COMPS < >,
                            SUBJ < >,
-                           SPEC < > ],
-    ARG-ST < #spr > ].
+                           SPEC < >,
+                           SPR < #spr &
+                                 [ LOCAL.CAT.HEAD det,
+                                   OPT + ] > ] ].
 
-no-spr-noun-lex := noun-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
+cn-noun-lex := noun-lex.
 
-; Nouns which cannot take specifiers mark their SPR requirement
-; as OPT +.  Making the non-head daughter OPT - in this rule
-; keeps such nouns out.
-; 
-; Rules for building NPs.  Note that the Matrix uses SPR for
-; the specifier of nouns and SUBJ for the subject (specifier) of verbs.
+nom-pron-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE nom ].
 
-head-spec-phrase := basic-head-spec-phrase & head-final &
-  [ NON-HEAD-DTR.SYNSEM.OPT - ].
+acc-pron-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.CASE acc ].
 
-common-noun-lex := noun-lex.
-
-agt-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.CASE age ].
-
-obj-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL.CAT.HEAD.CASE obj ].
-
-1sg-agt-noun-lex := agt-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ NUM singular,
+1sg-nom-pron-noun-lex := nom-pron-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
                                        PER 1st ] ].
 
-1pl-agt-noun-lex := agt-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ NUM plural,
+1pl-nom-pron-noun-lex := nom-pron-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
                                        PER 1st ] ].
 
-2sg-agt-noun-lex := agt-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ NUM singular,
+2sg-nom-pron-noun-lex := nom-pron-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
                                        PER 2nd ] ].
 
-2pl-agt-noun-lex := agt-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ NUM plural,
-                                       PER 2nd ] ].
-
-3rd-agt-noun-lex := agt-noun-lex &
+3p-hpot-pron-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+1sg-acc-pron-noun-lex := acc-pron-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
+                                       PER 1st ] ].
+
+1pl-acc-pron-noun-lex := acc-pron-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+                                       PER 1st ] ].
+
+2pl-pron-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 2nd,
+                                       NUM pl ] ].
+
+3p-lpot-pron-noun-lex := acc-pron-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+3p-hpot-prox-pron-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
+
+2sg-acc-pron-noun-lex := acc-pron-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+                                       PER 2nd ] ].
 
 ;;; Verbs
 
@@ -130,51 +136,27 @@ transitive-verb-lex := verb-lex & transitive-lex-item &
                                  COMPS < > ],
                            HEAD noun ] ] > ].
 
-obj-intransitive-verb-lex := intransitive-verb-lex &
+nom-intransitive-verb-lex := intransitive-verb-lex &
   [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
-                                [ CASE obj ] ].
+                                [ CASE nom ] ].
 
-age-obj-transitive-verb-lex := transitive-verb-lex &
+acc-intransitive-verb-lex := intransitive-verb-lex &
+  [ ARG-ST.FIRST.LOCAL.CAT.HEAD noun &
+                                [ CASE acc ] ].
+
+nom-acc-transitive-verb-lex := transitive-verb-lex &
   [ ARG-ST < [ LOCAL.CAT.HEAD noun &
-                              [ CASE age ] ],
+                              [ CASE nom ] ],
              [ LOCAL.CAT.HEAD noun &
-                              [ CASE obj ] ] > ].
+                              [ CASE acc ] ] > ].
 
-itr-verb-lex := obj-intransitive-verb-lex.
+itr-acc-verb-lex := acc-intransitive-verb-lex.
 
-tr-verb-lex := transitive-verb-lex.
-
-;;; Others
-
-;;; Determiners
-;;; SPEC is non-empty, and already specified by basic-determiner-lex.
-
-determiner-lex := basic-determiner-lex & basic-zero-arg & non-mod-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL [ SPR < >,
-                           COMPS < >,
-                           SUBJ < > ] ].
-
-1sg-poss-determiner-lex := determiner-lex & no-icons-lex-item.
-
-1pl-poss-determiner-lex := determiner-lex & no-icons-lex-item.
-
-3sg_poss_pronoun-determiner-lex := determiner-lex & no-icons-lex-item.
+tr-nom-verb-lex := nom-acc-transitive-verb-lex.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
 ;;;;;;;;;;;;;;;;;;;
-
-; Adjective Incorporation
-
-adj_incorporation-lex-rule := add-only-rule &
-  [ C-CONT [ RELS <! arg1-ev-relation &
-                     [ LBL #ltop,
-                       ARG1 #index ] !>,
-             HOOK #hook ],
-    DTR.SYNSEM.LOCAL [ CAT.HEAD noun,
-                       CONT.HOOK #hook &
-                                 [ LTOP #ltop,
-                                   INDEX #index ] ] ].
 
 ;;; Lexical rule types
 
@@ -187,8 +169,7 @@ adj_incorporation-lex-rule := add-only-rule &
 
 comp-head-phrase := basic-head-1st-comp-phrase & head-final.
 
-subj-head-phrase := decl-head-subj-phrase & head-final &
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS < > ].
+subj-head-phrase := decl-head-subj-phrase & head-final.
 
 ; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
 ; introduced to match the semantic effect of bare NPs in your language.
