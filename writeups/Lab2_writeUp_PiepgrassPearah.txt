@@ -8,7 +8,10 @@ Date: January 15, 2016
 
 Word Order
 
-Haida has a V-final word order, which is affected by a number of factors, including whether or not the arguments are pronouns and what is the relative potency of the two items. Potency is a pragmatic ranking system in Haida, which ranks nouns in the following decending order: known single adult free humans > non-adult and/or enslaved and/or unknown and/or grouped humans > higher animals > inanimates and lower animals (like fish).
+Haida has a V-final word order, which is affected by a number of factors, including whether or not the arguments 
+are pronouns and what is the relative potency of the two items. Potency is a pragmatic ranking system in Haida,
+which ranks nouns in the following decending order: known single adult free humans > non-adult and/or enslaved 
+and/or unknown and/or grouped humans > higher animals > inanimates and lower animals (like fish).
 
 For intransitive verbs, the word order is subject verb, as shown in the following examples:
 
@@ -32,7 +35,9 @@ dladahlda-gan gyùudan-ee
 fall.down-PST horse-DEF
 `The horse fell down.'
 
-In the case of all nouns besides pronouns, word order for transitive verbs is SOV unless the object has greater potency than the subject. In this case, both SOV and OSV word order are possible. As a result, ambiguous sentences are possible when the first argument has lower relative potency than the second argument. For example:
+In the case of all nouns besides pronouns, word order for transitive verbs is SOV unless the object has greater 
+potency than the subject. In this case, both SOV and OSV word order are possible. As a result, ambiguous sentences 
+are possible when the first argument has lower relative potency than the second argument. For example:
 
 # 4 tr wo
 Source: a:75
@@ -51,12 +56,15 @@ Judgment: g
 Phenomena: {wo}
 ts’agts’aggee gyùundanee tlagaaydagan
 ts’agts’ag-gee gyùundan-ee tlagaay-da-gan
-wagon-DEF horse-DEF get.injured-CAUSE-PST
+wagon-DEF	horse-DEF	get.injured-CAUSE-PST
 `The wagon injured the horse. or the horse damaged the wagon.'
 
-Because a horse (a higher animal) has greater potency than a wagon (inanimate), example 4 is unambiguous. However, example 3 has two possible readings: If we assume SOV word order, the wagon is does the injuring/damaging because it is in subject position. If we assume OSV word order, the horse, the argument with greater potency, does the injuring/damaging.
+Because a horse (a higher animal) has greater potency than a wagon (inanimate), example 4 is unambiguous. However,
+example 3 has two possible readings: If we assume SOV word order, the wagon is does the injuring/damaging because it is in 
+subject position. If we assume OSV word order, the horse, the argument with greater potency, does the injuring/damaging.
 
-That said, no other word orders are possible for transitive verbs in Haida, as shown in the following negative examples:
+That said, no other word orders are possible for transitive verbs in Haida, as shown in the following negative
+examples:
 
 # 5 tr wo
 Source: author
@@ -108,7 +116,8 @@ ts’agts’ag-gee tlagaay-da-gan gyùundan-ee
 wagon-DEF get.injured-CAUSE-PST horse-DEF
 `The horse damaged the wagon.'
 
-If one argument of a transitive verb is a pronoun and the other is a common noun, the arguments can occur in either order, producing ambiguity as show below:
+If one argument of a transitive verb is a pronoun and the other is a common noun, the arguments can occur in either order,
+producing ambiguity as show below:
 
 # 27 wo pronoun and common noun. adapted from p 47
 Source: author
@@ -116,8 +125,8 @@ Vetted: f
 Judgment: g
 Phenomena: {wo}
 naan 'la quinggan
-naan 'la  qing-gan
-a grandmother 3.SG see-PST
+naan	'la 	qing-gan
+a grandmother	3.SG	see-PST
 `a grandmother saw him. He saw my a grandmother'
 
 # 28 wo pronoun and common noun. adapted from p 47
@@ -126,16 +135,23 @@ Vetted: f
 Judgment: g
 Phenomena: {wo}
 'laa naan quinggan
-'laa naan  qing-gan
-3.SG a grandmother see-PST
+'laa	naan 		qing-gan
+3.SG	a grandmother	see-PST
 `a grandmother saw him. He saw my a grandmother'
 
-Note that a short form of the pronoun occurs when adjacent to the noun. This will be discussed further in the pronoun section. Becaus the 3rd person singular pronoun does not contrast for case, it can serve as either the subject or object. Because word order is free before the verb, each sentence has two possible readings.
+Note that a short form of the pronoun occurs when adjacent to the noun. This will be discussed further in the pronoun
+section. Becaus the 3rd person singular pronoun does not contrast for case, it can serve as either the subject or object.
+Because word order is free before the verb, each sentence has two possible readings.
 
-In order to implement verb final word order for both transitive and intransitive verbs, we selected the Verb final word order in the Grammar Matrix Customization page. As a result of this choise our grammar overgenerates, allowing both SOV and OSV for all noun types. This will be discussed in more detail in the section regarding coverage. However, despite
-overgeneration in the current state, we believe that verb final word order provides sufficient information in the grammar to later add constraints to the order of verbal arguments.
+In order to implement verb final word order for both transitive and intransitive verbs, we selected the Verb final word 
+order in the Grammar Matrix Customization page. As a result of this choise our grammar overgenerates, allowing both SOV and 
+OSV for all noun types. This will be discussed in more detail in the section regarding coverage. However, despite
+overgeneration in the current state, we believe that verb final word order provides sufficient information in the grammar
+to later add constraints to the order of verbal arguments.
 
-Haida does have some auxiliaries. Enrico claims that auxiliaries must occur after the verb either as a suffix or as a separate word. Our analysis only considers independent words to be auxiliaries. According to Enrico, the auxiliary occurs to the right of the verb and bears the tense inflection. This is shown in the following examples and counter examples.
+Haida does have some auxiliaries. Enrico claims that auxiliaries must occur after the verb either as a suffix or as a
+separate word. Our analysis only considers independent words to be auxiliaries. According to Enrico, the auxiliary occurs
+to the right of the verb and bears the tense inflection. This is shown in the following examples and counter examples.
 
 # 24 aux
 Source: a: 1193
@@ -143,9 +159,9 @@ Vetted: t
 Judgment: g
 Phenomena: {wo}
 diiga 'laa-srun tlaad tlaagaanggan
-dii-ga  'laa-srun  tla-ad  tlaagaang-gan
-1SG.ACC 3SG.NOM-only help first-PST
-`Only he helped me first.' 
+dii-ga 	'laa-srun 	tla-ad 	tlaagaang-gan
+1SG.ACC	3SG.NOM-only	help	first-PST
+`Only he helped me first.'	
 
 # 25 aux
 Source: author
@@ -153,8 +169,8 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 diiga 'laa-srun tlaagaanggan tlaad 
-dii-ga  'laa-srun   tlaagaang-gan tla-ad
-1SG.ACC 3SG.NOM-only first-PST help
+dii-ga 	'laa-srun  	tlaagaang-gan	tla-ad
+1SG.ACC	3SG.NOM-only	first-PST	help
 `Only he helped me first.'
 
 # 26 aux
@@ -163,20 +179,25 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 diiga 'laa-srun tlaadgan tlaagaang
-dii-ga  'laa-srun  tla-ad-gan  tlaagaang
-1SG.ACC 3SG.NOM-only help-PST first
+dii-ga 	'laa-srun 	tla-ad-gan 	tlaagaang
+1SG.ACC	3SG.NOM-only	help-PST	first
 `Only he helped me first.'
 
-In the above examples, 24 is ungrammatical because the auxiliary occurs before the verb and 25 is ungrammatical because the verb is inflected for tense, rather than the auxiliary.
+In the above examples, 24 is ungrammatical because the auxiliary occurs before the verb and 25 is ungrammatical because
+the verb is inflected for tense, rather than the auxiliary.
 
-The notion that first is a temporal auxiliary is supported by the fact that it bears the inflection for tense and not the verb help. Implimentation of auziliaries is outside the scope of this weeks lab. However, the order of verbs and auxiliaries supports the theory that Haida compliments occur to the left of the head.
+The notion that first is a temporal auxiliary is supported by the fact that it bears the inflection for tense and not the
+verb help. Implimentation of auziliaries is outside the scope of this weeks lab. However, the order of verbs and auxiliaries
+supports the theory that Haida compliments occur to the left of the head.
 
 Pronouns
 
 The distribution of pronouns has been discussed in the word order section.
 
-Pronouns in Haida are contrastive for number, case and person with a few exceptions. The third person pronoun does not contrast for number or case. The third person pronoun can be deleted if it is low potency in the nominative case
-There is a third person accusative case pronoun for refernts with low potency only. Pronouns do not exhibit gender. Each pronoun in Haida is exemplified below.
+Pronouns in Haida are contrastive for number, case and person with a few exceptions. The third person pronoun does
+not contrast for number or case. The third person pronoun can be deleted if it is low potency in the nominative case
+There is a third person accusative case pronoun for refernts with low potency only. Pronouns do not exhibit gender.
+Each pronoun in Haida is exemplified below.
 
 # 34 wo pronoun and common noun. adapted from p 47 1st person singular nominative and 2nd person singular accusative
 Source: author
@@ -184,8 +205,8 @@ Vetted: f
 Judgment: g
 Phenomena: {wo}
 hlaa naan quinggan
-hlaa naan  qing-gan
-1.SG a grandmother see-PST
+hlaa	naan 		qing-gan
+1.SG	a grandmother	see-PST
 `a grandmother saw me. I saw a grandmother'
 
 # 31 tr wo with pns. 1st person plural nominative. ungrammatical b/c wo
@@ -193,9 +214,9 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {wo, pn}
-daa t'alang qinggan
-daa t'alang qing-gan
-2SG.ACC 1PL.NOM see-PST
+daa t'alang	qinggan
+daa	t'alang	qing-gan
+2SG.ACC	1PL.NOM	see-PST
 'We see you'
 
 # 12 tr wo with pns. 2nd person singular nominatve and first person singular accusitive
@@ -204,8 +225,8 @@ Vetted: f
 Judgment: g
 Phenomena: {wo, pn, c}
 dii daa qinggan
-dii daa qing-gan
-1SG.ACC 2SG.NOM see-PST
+dii	daa	qing-gan
+1SG.ACC	2SG.NOM	see-PST
 'You see me'
 
 # 29 tr wo with pns second person plural nominative and second person plural accusative
@@ -213,9 +234,9 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {wo, pn, c}
-dalang dalang qinggan
-dalang dalang  qing-gan
-2PL.ACC 2PL.NOM see-PST
+dalang	dalang qinggan
+dalang	dalang 	qing-gan
+2PL.ACC	2PL.NOM	see-PST
 'You see me'
 
 # 24 aux 3rd person singular or plural
@@ -224,9 +245,9 @@ Vetted: t
 Judgment: g
 Phenomena: {wo, pn}
 diiga 'laa-srun tlaad tlaagaanggan
-dii-ga  'laa-srun  tla-ad  tlaagaang-gan
-1SG.ACC 3SG.NOM-only help first-PST
-`Only he or they helped me first.' 
+dii-ga 	'laa-srun 	tla-ad 	tlaagaang-gan
+1SG.ACC	3SG.NOM-only	help	first-PST
+`Only he or they helped me first.'	
 
 # 35 wo pronoun and common noun. adapted from p 47
 Source: author
@@ -234,8 +255,8 @@ Vetted: f
 Judgment: g
 Phenomena: {wo}
 t'alang naan quinggan
-t'alang naan  qing-gan
-1.SG a grandmother see-PST
+t'alang	naan 		qing-gan
+1.SG	a grandmother	see-PST
 `a grandmother saw me. I saw a grandmother'
 
 # 30 tr wo with pns third person low potencey singular or plural accusative
@@ -244,8 +265,8 @@ Vetted: f
 Judgment: g
 Phenomena: {wo, pn, c}
 7waa dang qinggan
-7waa dang qing-gan
-3.ACC 2SG.NOM see-PST
+7waa	dang	qing-gan
+3.ACC	2SG.NOM	see-PST
 'You see they or them'
 
 # 33 wo null pronoun. adapted from p 47
@@ -254,13 +275,18 @@ Vetted: f
 Judgment: g
 Phenomena: {wo, pn}
 naan 'la quinggan
-naan qing-gan
-a grandmother see-PST
+naan	qing-gan
+a grandmother	see-PST
 `a grandmother saw him. He saw a grandmother'
 
-To impliment these pronouns, we created lexical entries for each contrasting type. For the third singular hi potency pronoun, we underspecified number and case, as they are non contrastive. We did not create a lexical entry for the third person low potency nominative because rather than creating a word with no phonemic structure, we intend to write a lexical rule in the future that will allow a null low potency subject.
+To impliment these pronouns, we created lexical entries for each contrasting type. For the third singular hi potency
+pronoun, we underspecified number and case, as they are non contrastive. We did not create a lexical entry for the
+third person low potency nominative because rather than creating a word with no phonemic structure, we intend to
+write a lexical rule in the future that will allow a null low potency subject.
 
-There is a morpho-phonological constraint in haida that specifies a shortened form of a pronoun only when it occurs adjacent to the noun. In the case of to 2nd person singular nominative there is an ng epenthesis on the short form.This alternation is shown below.
+There is a morpho-phonological constraint in haida that specifies a shortened form of a pronoun only when it occurs
+adjacent to the noun. In the case of to 2nd person singular nominative there is an ng epenthesis on the short form.
+This alternation is shown below.
 
 # 34 wo pronoun and common noun. adapted from p 47
 Source: author
@@ -268,8 +294,8 @@ Vetted: f
 Judgment: g
 Phenomena: {wo}
 hlaa naan quinggan
-hlaa  naan  qing-gan
-1.SG a grandmother see-PST
+hlaa 	naan 		qing-gan
+1.SG	a grandmother	see-PST
 `a grandmother saw me. I saw a grandmother'
 
 
@@ -279,8 +305,8 @@ Vetted: f
 Judgment: g
 Phenomena: {wo, pn, c}
 dang hla qinggan
-dang hla qing-gan
-2SG.ACC 1SG.NOM see-PST
+dang	hla	qing-gan
+2SG.ACC	1SG.NOM	see-PST
 'I see you'
 
 # 32 tr wo with pns. 1st person plural nominative. 
@@ -288,9 +314,9 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {wo, pn}
-7iitl' dang qinggan
-7iitl' dang qing-gan
-1PL.ACC 2SG.NOM see-PST
+7iitl' dang	qinggan
+7iitl' dang	qing-gan
+1PL.ACC	2SG.NOM	see-PST
 
 # 35 wo pronoun and common noun. adapted from p 47
 Source: author
@@ -298,8 +324,8 @@ Vetted: f
 Judgment: g
 Phenomena: {wo}
 t'alang naan quinggan
-t'alang naan  qing-gan
-1.SG a grandmother see-PST
+t'alang	naan 		qing-gan
+1.SG	a grandmother	see-PST
 `a grandmother saw me. I saw a grandmother'
 
 # 31 tr wo with pns. 1st person plural nominative. 
@@ -307,9 +333,9 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {wo, pn}
-daa t'alang qinggan
-daa t'alang qing-gan
-3.ACC 1PL.NOM see-PST
+daa t'alang	qinggan
+daa	t'alang	qing-gan
+3.ACC	1PL.NOM	see-PST
 'He or they see you'
 
 # 30 tr wo with pns third person low potencey singular or plural accusative
@@ -318,8 +344,8 @@ Vetted: f
 Judgment: g
 Phenomena: {wo, pn, c}
 7waa dang qinggan
-7waa dang qing-gan
-2PL.ACC 2SG.NOM see-PST
+7waa	dang	qing-gan
+2PL.ACC	2SG.NOM	see-PST
 'You see they or them'
 
 # 27 wo pronoun and common noun. adapted from p 47
@@ -328,8 +354,8 @@ Vetted: f
 Judgment: g
 Phenomena: {wo}
 naan 'la quinggan
-naan 'la  qing-gan
-a grandmother 3.SG see-PST
+naan		'la 	qing-gan
+a grandmother	3.SG	see-PST
 `a grandmother saw him. He saw my a grandmother'
 
 # 28 wo pronoun and common noun. adapted from p 47
@@ -338,11 +364,13 @@ Vetted: f
 Judgment: g
 Phenomena: {wo}
 'laa naan quinggan
-'laa naan  qing-gan
-3.SG a grandmother see-PST
+'laa	naan 		qing-gan
+3.SG	a grandmother	see-PST
 `a grandmother saw him. He saw my a grandmother'
 
-Because this is a morphophonological constraint, we do not plan an implimentation at this stage to constrain it. Instead, to ensure that the pronouns will parse, we have entered each form as a separate instance of the type for that pronoun.
+Because this is a morphophonological constraint, we do not plan an implimentation at this stage to constrain it.
+Instead, to ensure that the pronouns will parse, we have entered each form as a separate instance of the type for
+that pronoun.
 
 Pronouns in Haida do not take determiners, as shown in the following example:
 
@@ -352,19 +380,24 @@ Vetted: f
 Judgment: u
 Phenomena: {det}
 dii hla dladahldagan
-dii hla dladahlda-gan
-1SG.POSS 1SG.ACC fall.down-PST
+dii		hla dladahlda-gan
+1SG.POSS	1SG.ACC fall.down-PST
 `My I fell down.'
 
-We have marked all pronouns as determiner-impossible in the customization suite. Further explanation can be found in the discussion of the NP.
+We have marked all pronouns as determiner-impossible in the customization suite. Further explanation can be found
+in the discussion of the NP.
 
 Because case is only expressed on pronouns in Haida, I will discuss pronoun case under the case section.
 
 Case
 
-Haida's case system is restricted to pronouns, which were shown in the previous section. Haida has two cases, which Enrico calls Agentive and Objective. In our analysis, these cases behave very similarly to nominative and accusitive, so we have chosen to use these features to distinguish Haida pronouns. Enrico discusses the following verb types with respect to the cases of their arguments.
+Haida's case system is restricted to pronouns, which were shown in the previous section. Haida has two cases, which 
+Enrico calls Agentive and Objective. In our analysis, these cases behave very similarly to nominative and accusitive, 
+so we have chosen to use these features to distinguish Haida pronouns. Enrico discusses the following verb types 
+with respect to the cases of their arguments.
 
-Intransitive- nominative subject. This class of verbs, which includes run, cry, breath, etc. takes a nominative subject only.
+Intransitive- nominative subject. This class of verbs, which includes run, cry, breath, etc. takes a nominative 
+subject only.
 
 # 16 it pn case
 Source: author
@@ -372,8 +405,8 @@ Vetted: f
 Judgment: g
 Phenomena: {c}
 hla radgan
-hla rad-gan
-1SG.NOM run-PST
+hla	rad-gan
+1SG.NOM	run-PST
 'I ran'
 
 # 36 it pn case
@@ -382,11 +415,12 @@ Vetted: f
 Judgment: u
 Phenomena: {c}
 dii radgan
-dii rad-gan
-1SG.ACC run-PST
+dii	rad-gan
+1SG.ACC	run-PST
 'I ran'
 
-Intransitive- accusative subject. This class, which includes hiccup, fall down, disappear, etc. takes only an accusative subject.
+Intransitive- accusative subject. This class, which includes hiccup, fall down, disappear, etc. takes only an 
+accusative subject.
 
 # 18 it pn case
 Source: author
@@ -394,7 +428,7 @@ Vetted: f
 Judgment: g
 Phenomena: {wo, det}
 dii dladahldagan
-dii dladahlda-gan
+dii	dladahlda-gan
 1SG.ACC fall.down-PST
 `I fell down.'
 
@@ -416,8 +450,8 @@ Vetted: f
 Judgment: g
 Phenomena: {wo, pn, c}
 dii daa qinggan
-dii daa qing-gan
-1SG.ACC 2SG.NOM see-PST
+dii	daa	qing-gan
+1SG.ACC	2SG.NOM	see-PST
 'You see me'
 
 # 14 tr wo with pns
@@ -426,8 +460,8 @@ Vetted: f
 Judgment: u
 Phenomena: {c}
 7iitl' dang dii qinggan
-7iitl' dii qing-gan
-1PL.ACC 1SG.ACC see-PST
+7iitl'	dii	qing-gan
+1PL.ACC	1SG.ACC	see-PST
 'We see you'
 
 # 15 tr wo with pns
@@ -435,16 +469,23 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {c}
-dalang hla qinggan
-dalang hla qing-gan
-2PL.NOM 1SG.NOM see-PST
+dalang	hla qinggan
+dalang	hla	qing-gan
+2PL.NOM	1SG.NOM	see-PST
 'I see you'
 
-To implement these three classes, we specified the case system as Split-S. This allows us to have subjects that are either nominative or accusative. We then created an intransitive verb supertype that specifies a NOM subject and another that specifies an ACC subject. The transitive verb supertype specifies a NOM subject and an ACC complement.
+To implement these three classes, we specified the case system as Split-S. This allows us to have subjects that are
+either nominative or accusative. We then created an intransitive verb supertype that specifies a NOM subject and
+another that specifies an ACC subject. The transitive verb supertype specifies a NOM subject and an ACC complement.
 
 The rest of the NP.
 
-Haida appears to have four determiners: this, that, these and those. Although examples are scarce (we could only find one given by Enrico), adjectives can occur between the demonstrative and the noun, indicating that they are in fact determiners. Haida also has a demonstrative suffix, as show below. We also note that the demonstrative determiner does co-occur with the definate suffix, but a definate suffix is not required. Enrico does not make it explicit whether adjectives can also occur before the det or if the det can co-occur with person pronouns. We expect that since we never see it with a pronoun that it is disallowed, although this is unconfirmed.
+Haida appears to have four determiners: this, that, these and those. Although examples are scarce (we could only
+find one given by Enrico), adjectives can occur between the demonstrative and the noun, indicating that they
+are in fact determiners. Haida also has a demonstrative suffix, as show below. We also note that the demonstrative
+determiner does co-occur with the definate suffix, but a definate suffix is not required. Enrico does not make it
+explicit whether adjectives can also occur before the det or if the det can co-occur with person pronouns. We
+expect that since we never see it with a pronoun that it is disallowed, although this is unconfirmed.
 
 
 # 20 np impossible det
@@ -454,7 +495,7 @@ Judgment: u
 Phenomena: {det}
 7aasgee 7iitl' dladahldagan
 7aasgee 7iitl' dladahlda-gan
-these  1PL.ACC fall.down-PST
+these 	1PL.ACC fall.down-PST
 `These we fell down.'
 
 # 36 np impossible det
@@ -473,8 +514,8 @@ Vetted: f
 Judgment: g
 Phenomena: {det}
 7aasgee gyùudanee radgan
-7aasgee gyùudan-ee rad-gan
-these horse-DEF run-PST
+7aasgee gyùudan-ee	rad-gan
+these	horse-DEF	run-PST
 'these horses ran'
 
 # 38 no det or df suffix
@@ -483,8 +524,8 @@ Vetted: f
 Judgment: g
 Phenomena: {det}
 gyùudanee radgan
-gyùudan-ee rad-gan
-horse-DEF run-PST
+gyùudan-ee	rad-gan
+horse-DEF	run-PST
 'horses ran'
 
 # 39 wrong word order
@@ -493,8 +534,8 @@ Vetted: f
 Judgment: u
 Phenomena: {det}
 gyùudanee 7aasgee radgan
-gyùudan-ee 7aasgee rad-gan
-horse-DEF these run-PST
+gyùudan-ee	7aasgee rad-gan
+horse-DEF	these	run-PST
 'these horses ran'
 
 # 40 det adjective
@@ -503,24 +544,33 @@ Vetted: f
 Judgment: g
 Phenomena: {det}
 hlaa 7aasgee srids ts’agts’agg qinggan
-hlaa  7aasgee srid-s ts’agts’ag  qing-gan
-1SG.NOM these he.red-PST wagons see-PST
+hlaa 	7aasgee srid-s		ts’agts’ag 	qing-gan
+1SG.NOM	these	he.red-PST	wagons		see-PST
 'I saw these red wagons'
 
 
-To impliment this distribution of determiners, we have made all pronouns determiner-impossible and all common nouns determiner optional. This allows nouns with or without a definite suffix to bear a demonstrative determiner but prevents the co-occurance of determiners with person pronouns. Because there are currently no adjectives in our test suite, there is no implementation of the adjective position within the np.
+To impliment this distribution of determiners, we have made all pronouns determiner-impossible and all common
+nouns determiner optional. This allows nouns with or without a definite suffix to bear a demonstrative determiner
+but prevents the co-occurance of determiners with person pronouns. Because there are currently no adjectives
+in our test suite, there is no implementation of the adjective position within the np.
 
 
 3. 
-Haida does have auxiliaries, which I describe breifly in the word order section. However have indicated in the customization suit that there are no auxiliaries because our grammar is not yet ready to handle these cases.
+Haida does have auxiliaries, which I describe breifly in the word order section. However have indicated in the 
+customization suit that there are no auxiliaries because our grammar is not yet ready to handle these cases.
 
-The testsuit also presents an example with a null low potency 3rd person pronoun. However our grammar does not yet include the lexical rule that will be necessary to allow the null argument, as descussed in the pronoun section.
+The testsuit also presents an example with a null low potency 3rd person pronoun. However our grammar does not yet
+include the lexical rule that will be necessary to allow the null argument, as descussed in the pronoun section.
 
-The lexicon currently contains entries for the short form pronouns, but does not currently include a way to handle this morpho-syntactic variation. Instead they are simply listed as subtypes of a pronoun type of the appropriate case, number and person.
+The lexicon currently contains entries for the short form pronouns, but does not currently include a way to handle
+this morpho-syntactic variation. Instead they are simply listed as subtypes of a pronoun type of the appropriate
+case, number and person.
 
-4. Our grammar has 82.6% coverage, which is accounted for by examples that were outside the scope of this week's lab.
+4. Our grammar has 82.6% coverage, which is accounted for by examples that were outside the scope of this
+week's lab.
 
-We have not added adjectives to our lexicon or created rules to account for them, so the following sentence fails to parse, as expected.
+We have not added adjectives to our lexicon or created rules to account for them, so the following sentence
+fails to parse, as expected.
 
 # 40 det adjective
 Source: author
@@ -528,11 +578,13 @@ Vetted: f
 Judgment: g
 Phenomena: {det}
 hlaa 7aasgee srids ts’agts’agg qinggan
-hlaa  7aasgee srid-s ts’agts’ag  qing-gan
-1SG.NOM these he.red-PST wagons see-PST
+hlaa 	7aasgee srid-s		ts’agts’ag 	qing-gan
+1SG.NOM	these	he.red-PST	wagons		see-PST
 'I saw these red wagons'
 
-Our auxiliary sentence fials because we have not yet modified the grammar to handle auxiliaries. Furthermore there are some word choices in this example that we do not have a way to represent in our lexicon (first and only), but as our analysis of auxiliaries is still limited, it seemed irresponsible to edit this example.
+Our auxiliary sentence fials because we have not yet modified the grammar to handle auxiliaries. Furthermore
+there are some word choices in this example that we do not have a way to represent in our lexicon (first and
+only), but as our analysis of auxiliaries is still limited, it seemed irresponsible to edit this example.
 
 # 24 aux
 Source: a: 1193
@@ -540,9 +592,9 @@ Vetted: t
 Judgment: g
 Phenomena: {wo}
 diiga 'laa-srun tlaad tlaagaanggan
-dii-ga  'laa-srun  tla-ad  tlaagaang-gan
-1SG.ACC 3SG.NOM-only help first-PST
-`Only he helped me first.' 
+dii-ga 	'laa-srun 	tla-ad 	tlaagaang-gan
+1SG.ACC	3SG.NOM-only	help	first-PST
+`Only he helped me first.'	
 
 # 25 aux
 Source: author
@@ -550,8 +602,8 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 diiga 'laa-srun tlaagaanggan tlaad 
-dii-ga  'laa-srun   tlaagaang-gan tla-ad
-1SG.ACC 3SG.NOM-only first-PST help
+dii-ga 	'laa-srun  	tlaagaang-gan	tla-ad
+1SG.ACC	3SG.NOM-only	first-PST	help
 `Only he helped me first.'
 
 # 26 aux
@@ -560,14 +612,16 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 diiga 'laa-srun tlaadgan tlaagaang
-dii-ga  'laa-srun  tla-ad-gan  tlaagaang
-1SG.ACC 3SG.NOM-only help-PST first
+dii-ga 	'laa-srun 	tla-ad-gan 	tlaagaang
+1SG.ACC	3SG.NOM-only	help-PST	first
 `Only he helped me first.'
 
 We have overgeneration of 29.4% which can be accounted for by a few factors, which we expected and will resolve
 as we further develop our grammar.
 
-We have an overgeneration of word order because we do not yet have constraints to govern the SOV word order of common and proper nouns and the OSV word order of pronouns. This creates two versions of each sentence. As a result, the grammar considers both of the following to be grammatical.
+We have an overgeneration of word order because we do not yet have constraints to govern the SOV word order of 
+common and proper nouns and the OSV word order of pronouns. This creates two versions of each sentence. As a
+result, the grammar considers both of the following to be grammatical.
 
 # 24 aux
 Source: a: 1193
@@ -575,9 +629,9 @@ Vetted: t
 Judgment: g
 Phenomena: {wo}
 diiga 'laa-srun tlaad tlaagaanggan
-dii-ga  'laa-srun  tla-ad  tlaagaang-gan
-1SG.ACC 3SG.NOM-only help first-PST
-`Only he helped me first.' 
+dii-ga 	'laa-srun 	tla-ad 	tlaagaang-gan
+1SG.ACC	3SG.NOM-only	help	first-PST
+`Only he helped me first.'	
 
 # 25 aux
 Source: author
@@ -585,11 +639,13 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 diiga 'laa-srun tlaagaanggan tlaad 
-dii-ga  'laa-srun   tlaagaang-gan tla-ad
-1SG.ACC 3SG.NOM-only first-PST help
+dii-ga 	'laa-srun  	tlaagaang-gan	tla-ad
+1SG.ACC	3SG.NOM-only	first-PST	help
 `Only he helped me first.'
 
-We have another overgeneration of long form versus short form pronouns because we have generalized this morpho-phonological constraint to allow both forms, since they are otherwise equivolent. Therefore the grammar produces the following. However we do not consider the second to be ungrammatical, it simply
+We have another overgeneration of long form versus short form pronouns because we have generalized this
+morpho-phonological constraint to allow both forms, since they are otherwise equivolent. Therefore the
+grammar produces the following. However we do not consider the second to be ungrammatical, it simply
 violates a morpho-phonological rule.
 
 # 27 wo pronoun and common noun. adapted from p 47
@@ -598,16 +654,17 @@ Vetted: f
 Judgment: g
 Phenomena: {wo}
 naan 'la quinggan
-naan 'la  qing-gan
-a grandmother 3.SG see-PST
+naan		'la 	qing-gan
+a grandmother	3.SG	see-PST
 `a grandmother saw him. He saw my a grandmother'
 
 
 Phenomena: {wo}
 naan 'laa quinggan
-naan 'laa  qing-gan
-a grandmother 3.SG see-PST
+naan		'laa 	qing-gan
+a grandmother	3.SG	see-PST
 `a grandmother saw him. He saw my a grandmother'
 
-5. Within the scope of this lab, the customization system was sufficient to handle our grammar. All shortcommins in our grammar are the result of the complexities of the language and beyond the scope of this lab.
+5. Within the scope of this lab, the customization system was sufficient to handle our grammar. All shortcommins
+in our grammar are the result of the complexities of the language and beyond the scope of this lab.
 
