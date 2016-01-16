@@ -30,7 +30,7 @@ Source: a:75
 Vetted: s
 Judgment: g
 Phenomena: {wo}
-ts’agts’aggee gyùundanee tlagaaydagan
+ts’agts’aggee gyùudanee tlagaaydagan
 ts’agts’ag-gee gyùundan-ee tlagaay-da-gan
 wagon-DEF horse-DEF get.injured-CAUSE-PST
 `The wagon injured the horse. The horse damaged the wagon.'
@@ -40,7 +40,7 @@ Source: a:75
 Vetted: s
 Judgment: g
 Phenomena: {wo}
-gyùundanee ts’agts’aggee tlagaaydagan
+gyùudanee ts’agts’aggee tlagaaydagan
 gyùundan-ee ts’agts’ag-gee tlagaay-da-gan
 horse-DEF wagon-DEF get.injured-CAUSE-PST
 `The horse damaged the wagon.'
@@ -50,7 +50,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {wo}
-gyùundanee tlagaaydagan ts’agts’aggee
+gyùudanee tlagaaydagan ts’agts’aggee
 gyùundan-ee tlagaay-da-gan ts’agts’ag-gee
 horse-DEF get.injured-CAUSE-PST wagon-DEF
 `The horse damaged the wagon.'
@@ -60,7 +60,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {wo}
-tlagaaydagan gyùundanee ts’agts’aggee
+tlagaaydagan gyùudanee ts’agts’aggee
 tlagaay-da-gan gyùundan-ee ts’agts’ag-gee
 get.injured-CAUSE-PST horse-DEF wagon-DEF
 `The horse damaged the wagon.'
@@ -70,7 +70,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {wo}
-tlagaaydagan ts’agts’aggee gyùundanee
+tlagaaydagan ts’agts’aggee gyùudanee
 tlagaay-da-gan ts’agts’ag-gee gyùundan-ee
 get.injured-CAUSE-PST wagon-DEF horse-DEF
 `The horse damaged the wagon.'
@@ -80,7 +80,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {wo}
-ts’agts’aggee tlagaaydagan gyùundanee
+ts’agts’aggee tlagaaydagan gyùudanee
 ts’agts’ag-gee tlagaay-da-gan gyùundan-ee
 wagon-DEF get.injured-CAUSE-PST horse-DEF
 `The wagon injured the horse. The horse damaged the wagon.'
@@ -120,8 +120,8 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {c}
-7iitl’ dang dii qinggan
-7iitl’ dii qing-gan
+7ittl’ dang dii qinggan
+7ittl’ dii qing-gan
 1PL.ACC 1SG.ACC see-PST
 `We saw you.'
 
@@ -200,10 +200,10 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {det}
-7aasgee hla dladahldagan
-7aasgee hla dladahlda-gan
-these 1SG.ACC fall.down-PST
-`These I fell down.'
+7aasgee 7ittl’ dladahldagan
+7aasgee 7ittl’ dladahlda-gan
+these 1PL.ACC fall.down-PST
+`These we fell down.'
 
 # 21 np optional det
 Source: author
@@ -216,41 +216,41 @@ horse fall.down-PST
 `A horse fell down.'
 
 # 22 aux
-#Source: a: 1193
-#Vetted: t
-#Judgment: g
-#Phenomena: {wo, pn}
-#diiga ’laa-srun tla.ad tlaagaanggan
-#dii-ga ’laa-srun tla.ad tlaagaang-gan
-#1SG.ACC-PP 3SG.NOM-only help first-PST
-#`Only he helped me first.' 
+Source: a: 1193
+Vetted: t
+Judgment: g
+Phenomena: {wo, pn}
+diiga ’laa-srun tla.ad tlaagaanggan
+dii-ga ’laa-srun tla.ad tlaagaang-gan
+1SG.ACC-PP 3SG.NOM-only help first-PST
+`Only he helped me first.' 
 
 # 23 aux
-#Source: author
-#Vetted: f
-#Judgment: u
-#Phenomena: {wo}
-#diiga ’laa-srun tlaagaanggan tla.ad 
-#dii-ga ’laa-srun tlaagaang-gan tla.ad
-#1SG.ACC-PP 3SG.NOM-only first-PST help
-#`Only he or they helped me first.'
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+diiga ’laa-srun tlaagaanggan tla.ad 
+dii-ga ’laa-srun tlaagaang-gan tla.ad
+1SG.ACC-PP 3SG.NOM-only first-PST help
+`Only he or they helped me first.'
 
 # 24 aux
-#Source: author
-#Vetted: f
-#Judgment: u
-#Phenomena: {wo}
-#diiga ’laa-srun tla.adgan tlaagaang
-#dii-ga ’laa-srun tla.ad-gan tlaagaang
-#1SG.ACC-PP 3SG.NOM-only help-PST first
-#`Only he or they helped me first.'
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+diiga ’laa-srun tla.adgan tlaagaang
+dii-ga ’laa-srun tla.ad-gan tlaagaang
+1SG.ACC-PP 3SG.NOM-only help-PST first
+`Only he or they helped me first.'
 
 # 25 wo pronoun and common noun. adapted from p 47
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {wo}
-naan ’la quinggan
+naan ’la qinggan
 naan ’la qing-gan
 grandmother 3.SG see-PST
 `A grandmother saw him. He saw a grandmother.'
@@ -260,7 +260,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {wo}
-’laa naan quinggan
+’laa naan qinggan
 ’laa naan qing-gan
 3.SG grandmother see-PST
 `A grandmother saw him. He saw grandmother.'
@@ -310,7 +310,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {wo, pn}
-naan ’la quinggan
+naan ’la qinggan
 naan qing-gan
 grandmother see-PST
 `A grandmother saw him. He saw a grandmother.'
@@ -320,7 +320,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {wo}
-hlaa naan quinggan
+hlaa naan qinggan
 hlaa naan qing-gan
 1.SG grandmother see-PST
 `A grandmother saw me. I saw a grandmother.'
@@ -330,7 +330,7 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {wo}
-t’alang naan quinggan
+t’alang naan qinggan
 t’alang naan qing-gan
 1.SG grandmother see-PST
 `A grandmother saw me. I saw a grandmother.'
@@ -354,3 +354,53 @@ hla dladahldagan
 hla dladahlda-gan
 1SG.ACC fall.down-PST
 `I fell down.'
+
+# 36 np impossible det
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {det}
+7ittl’ dladahldagan
+7ittl’ dladahlda-gan
+1PL.ACC fall.down-PST
+`We fell down.'
+
+# 37 det with df suffix
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {det}
+7aasgee gyùudanee radgan
+7aasgee gyùudan-ee rad-gan
+these horse-DEF run-PST
+`These horses ran.'
+
+# 38 det with df suffix
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {det}
+gyùudanee radgan
+gyùudan-ee rad-gan
+horse-DEF run-PST
+`Horses ran.'
+
+# 39 det with df suffix
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+gyùudanee 7aasgee radgan
+gyùudan-ee 7aasgee rad-gan
+horse-DEF these run-PST
+`These horses ran.'
+
+# 40 det with df suffix
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {det}
+hlaa 7aasgee srids ts’agts’agg qinggan
+hlaa 7aasgee srid-s ts’agts’ag qing-gan
+1SG.NOM these he.red-PST wagons see-PST
+`I saw these red wagons.'

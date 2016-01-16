@@ -9,8 +9,8 @@ ts’agts’aggee := cn-noun-lex &
   [ STEM < "ts’agts’aggee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wagon_n_rel" ].
 
-naanaa := cn-noun-lex &
-  [ STEM < "naanaa" >,
+naan := cn-noun-lex &
+  [ STEM < "naan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_grandmother_n_rel" ].
 
 gyùudan := cn-noun-lex &
