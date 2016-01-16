@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Haida
 ;;; created at:
-;;;     Fri Jan 15 20:30:22 UTC 2016
+;;;     Sat Jan 16 04:46:09 UTC 2016
 ;;; based on Matrix customization system version of:
 ;;;     Sun Jan 10 22:56:48 UTC 2016
 ;;;
@@ -59,20 +59,32 @@ pl := number.
 ;;; Nouns
 
 noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
-  [ ARG-ST < #spr >,
-    SYNSEM.LOCAL.CAT.VAL [ COMPS < >,
+  [ SYNSEM.LOCAL.CAT.VAL [ SPR < #spr &
+                                 [ LOCAL.CAT.HEAD det ] >,
+                           COMPS < >,
                            SUBJ < >,
-                           SPEC < >,
-                           SPR < #spr &
-                                 [ LOCAL.CAT.HEAD det,
-                                   OPT + ] > ] ].
+                           SPEC < > ],
+    ARG-ST < #spr > ].
+
+no-spr-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
+
+; Nouns which cannot take specifiers mark their SPR requirement
+; as OPT +.  Making the non-head daughter OPT - in this rule
+; keeps such nouns out.
+; 
+; Rules for building NPs.  Note that the Matrix uses SPR for
+; the specifier of nouns and SUBJ for the subject (specifier) of verbs.
+
+head-spec-phrase := basic-head-spec-phrase & head-final &
+  [ NON-HEAD-DTR.SYNSEM.OPT - ].
 
 cn-noun-lex := noun-lex.
 
-nom-pron-noun-lex := noun-lex &
+nom-pron-noun-lex := no-spr-noun-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE nom ].
 
-acc-pron-noun-lex := noun-lex &
+acc-pron-noun-lex := no-spr-noun-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE acc ].
 
 1sg-nom-pron-noun-lex := nom-pron-noun-lex &
@@ -87,7 +99,7 @@ acc-pron-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ NUM sg,
                                        PER 2nd ] ].
 
-3p-hpot-pron-noun-lex := noun-lex &
+3p-hpot-pron-noun-lex := no-spr-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
 
 1sg-acc-pron-noun-lex := acc-pron-noun-lex &
@@ -98,14 +110,11 @@ acc-pron-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
                                        PER 1st ] ].
 
-2pl-pron-noun-lex := noun-lex &
+2pl-pron-noun-lex := no-spr-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ PER 2nd,
                                        NUM pl ] ].
 
 3p-lpot-pron-noun-lex := acc-pron-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
-
-3p-hpot-prox-pron-noun-lex := noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PER 3rd ].
 
 2sg-acc-pron-noun-lex := acc-pron-noun-lex &
@@ -153,6 +162,23 @@ nom-acc-transitive-verb-lex := transitive-verb-lex &
 itr-acc-verb-lex := acc-intransitive-verb-lex.
 
 tr-nom-verb-lex := nom-acc-transitive-verb-lex.
+
+tr-verb-lex := nom-acc-transitive-verb-lex.
+
+;;; Others
+
+;;; Determiners
+;;; SPEC is non-empty, and already specified by basic-determiner-lex.
+
+determiner-lex := basic-determiner-lex & basic-zero-arg & non-mod-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL [ SPR < >,
+                           COMPS < >,
+                           SUBJ < > ] ].
+
+dem-sg-determiner-lex := determiner-lex & no-icons-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.NUM sg ].
+
+dem-pl-determiner-lex := determiner-lex & no-icons-lex-item.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules

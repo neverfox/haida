@@ -9,12 +9,24 @@ ts’agts’aggee := cn-noun-lex &
   [ STEM < "ts’agts’aggee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wagon_n_rel" ].
 
+naanaa := cn-noun-lex &
+  [ STEM < "naanaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_grandmother_n_rel" ].
+
+gyùudan := cn-noun-lex &
+  [ STEM < "gyùudan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_horse_n_rel" ].
+
 hlaa := 1sg-nom-pron-noun-lex &
   [ STEM < "hlaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
 hl := 1sg-nom-pron-noun-lex &
   [ STEM < "hl" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+
+hla := 1sg-nom-pron-noun-lex &
+  [ STEM < "hla" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
 t’alang := 1pl-nom-pron-noun-lex &
@@ -65,10 +77,6 @@ dall := 2pl-pron-noun-lex &
   [ STEM < "7wa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-0 := 3p-hpot-prox-pron-noun-lex &
-  [ STEM < "0" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
-
 dang_2 := 2sg-acc-pron-noun-lex &
   [ STEM < "dang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
@@ -81,6 +89,32 @@ dladahldagan := itr-acc-verb-lex &
   [ STEM < "dladahldagan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fall_down_v_rel" ].
 
+radgan := itr-acc-verb-lex &
+  [ STEM < "radgan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ran_v_rel" ].
+
 tlagaaydagan := tr-nom-verb-lex &
   [ STEM < "tlagaaydagan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_injure_v_rel" ].
+
+qinggan := tr-verb-lex &
+  [ STEM < "qinggan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
+
+;;; Determiners
+
+7aajii := dem-sg-determiner-lex &
+  [ STEM < "7aajii" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_this_q_rel" ].
+
+waaniis := dem-sg-determiner-lex &
+  [ STEM < "waaniis" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_that_q_rel" ].
+
+7aasgee := dem-pl-determiner-lex &
+  [ STEM < "7aasgee" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_these_q_rel" ].
+
+waasgee := dem-pl-determiner-lex &
+  [ STEM < "waasgee" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_those_q_rel" ].
