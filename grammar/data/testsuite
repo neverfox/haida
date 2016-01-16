@@ -1,4 +1,4 @@
-Language: Haida
+﻿Language: Haida
 Language code: hdn
 Lines: translit translit-seg gloss translat
 Author: Roman Pearah & Kristen Piepgrass
@@ -33,7 +33,7 @@ Phenomena: {wo}
 ts’agts’aggee gyùundanee tlagaaydagan
 ts’agts’ag-gee gyùundan-ee tlagaay-da-gan
 wagon-DEF horse-DEF get.injured-CAUSE-PST
-`The wagon injured the horse. or the horse damaged the wagon.'
+`The wagon injured the horse. The horse damaged the wagon.'
 
 # 4 tr wo
 Source: a:75
@@ -83,19 +83,9 @@ Phenomena: {wo}
 ts’agts’aggee tlagaaydagan gyùundanee
 ts’agts’ag-gee tlagaay-da-gan gyùundan-ee
 wagon-DEF get.injured-CAUSE-PST horse-DEF
-`The wagon injured the horse.'
+`The wagon injured the horse. The horse damaged the wagon.'
 
-# 9 tr wo
-Source: author
-Vetted: f
-Judgment: u
-Phenomena: {wo}
-ts’agts’aggee tlagaaydagan gyùundanee
-ts’agts’ag-gee tlagaay-da-gan gyùundan-ee
-wagon-DEF get.injured-CAUSE-PST horse-DEF
-`The horse damaged the wagon.'
-
-# 10 tr wo with pns
+# 9 tr wo with pns
 Source: author
 Vetted: f
 Judgment: g
@@ -103,9 +93,9 @@ Phenomena: {wo, pn, c}
 dang hla qinggan
 dang hla qing-gan
 2SG.ACC 1SG.NOM see-PST
-`I see you.'
+`I saw you.'
 
-# 11 tr wo with pns
+# 10 tr wo with pns
 Source: author
 Vetted: f
 Judgment: g
@@ -113,39 +103,39 @@ Phenomena: {wo, pn, c}
 dii daa qinggan
 dii daa qing-gan
 1SG.ACC 2SG.NOM see-PST
-`You see me.'
+`You saw me.'
+
+# 11 tr wo with pns
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+t’alang dang qinggan
+t’alang dang qing-gan
+1PL.NOM 2SG.ACC see-PST
+`We saw you.'
 
 # 12 tr wo with pns
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: {wo}
-hlaa dang qinggan
-hlaa dang qing-gan
-1SG.NOM 2SG.ACC see-PST
-`I see you.'
+Phenomena: {c}
+7iitl’ dang dii qinggan
+7iitl’ dii qing-gan
+1PL.ACC 1SG.ACC see-PST
+`We saw you.'
 
 # 13 tr wo with pns
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {c}
-dang dii qinggan
-dang dii qing-gan
-2SG.ACC 1SG.ACC see-PST
-`I see you.'
+dalang hla qinggan
+dalang hla qing-gan
+2PL.NOM 1SG.NOM see-PST
+`I saw you.'
 
-# 14 tr wo with pns
-Source: author
-Vetted: f
-Judgment: u
-Phenomena: {c}
-daa hla qinggan
-daa hla qing-gan
-2SG.NOM 1SG.NOM see-PST
-`I see you.'
-
-# 15 it pn case
+# 14 it pn case
 Source: author
 Vetted: f
 Judgment: g
@@ -155,7 +145,7 @@ hla rad-gan
 1SG.NOM run-PST
 `I ran.'
 
-# 16 it pn case
+# 15 it pn case
 Source: author
 Vetted: f
 Judgment: u
@@ -165,17 +155,17 @@ dii rad-gan
 1SG.ACC run-PST
 `I ran.'
 
-# 17 it pn case
+# 16 it pn case
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {wo, det}
-hla dladahldagan
-hla dladahlda-gan
+dii dladahldagan
+dii dladahlda-gan
 1SG.ACC fall.down-PST
 `I fell down.'
 
-# 18 it pn case
+# 17 it pn case
 Source: author
 Vetted: f
 Judgment: u
@@ -185,42 +175,182 @@ dii dladahlda-gan
 1SG.NOM fall.down-PST
 `I fell down.'
 
-# 19 np
+# 18 np
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {det}
-dii gyùudan radgan
-dii gyùudan rad-gan
-1SG.POSS horse run-PST
-`My horse ran.'
+7aasgee gyùudan radgan
+7aasgee gyùudan rad-gan
+these horse run-PST
+`These horses ran.'
 
-# 20 np wrong det order
+# 19 np wrong det order
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {det}
-gyùudan dii radgan
-gyùudan dii rad-gan
-horse 1SG.POSS run-PST
-`My horse ran.'
+gyùudan 7aasgee radgan
+gyùudan 7aasgee rad-gan
+horse these run-PST
+`These horses ran.'
 
-# 21 np impossible det
+# 20 np impossible det
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {det}
-dii hla dladahldagan
-dii hla dladahlda-gan
-1SG.POSS 1SG.ACC fall.down-PST
-`My I fell down.'
+7aasgee hla dladahldagan
+7aasgee hla dladahlda-gan
+these 1SG.ACC fall.down-PST
+`These I fell down.'
 
-# 22 np missing det
+# 21 np optional det
 Source: author
 Vetted: f
-Judgment: u
+Judgment: g
 Phenomena: {det}
 gyùudan dladahldagan
 gyùudan dladahlda-gan
 horse fall.down-PST
-`horse fell down.'
+`A horse fell down.'
+
+# 22 aux
+#Source: a: 1193
+#Vetted: t
+#Judgment: g
+#Phenomena: {wo, pn}
+#diiga ’laa-srun tla.ad tlaagaanggan
+#dii-ga ’laa-srun tla.ad tlaagaang-gan
+#1SG.ACC-PP 3SG.NOM-only help first-PST
+#`Only he helped me first.' 
+
+# 23 aux
+#Source: author
+#Vetted: f
+#Judgment: u
+#Phenomena: {wo}
+#diiga ’laa-srun tlaagaanggan tla.ad 
+#dii-ga ’laa-srun tlaagaang-gan tla.ad
+#1SG.ACC-PP 3SG.NOM-only first-PST help
+#`Only he or they helped me first.'
+
+# 24 aux
+#Source: author
+#Vetted: f
+#Judgment: u
+#Phenomena: {wo}
+#diiga ’laa-srun tla.adgan tlaagaang
+#dii-ga ’laa-srun tla.ad-gan tlaagaang
+#1SG.ACC-PP 3SG.NOM-only help-PST first
+#`Only he or they helped me first.'
+
+# 25 wo pronoun and common noun. adapted from p 47
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo}
+naan ’la quinggan
+naan ’la qing-gan
+grandmother 3.SG see-PST
+`A grandmother saw him. He saw a grandmother.'
+
+# 26 wo pronoun and common noun. adapted from p 47
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo}
+’laa naan quinggan
+’laa naan qing-gan
+3.SG grandmother see-PST
+`A grandmother saw him. He saw grandmother.'
+
+# 27 tr wo with pns
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo, pn, c}
+dalang dalang qinggan
+dalang dalang qing-gan
+2PL.ACC 2PL.NOM see-PST
+`You saw me.'
+
+# 28 tr wo with pns third person low potencey singular or plural accusative
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo, pn, c}
+7waa dang qinggan
+7waa dang qing-gan
+2PL.ACC 2SG.NOM see-PST
+`You saw them.'
+
+# 29 tr wo with pns. 1st person plural nominative. 
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo, pn}
+daa t’alang qinggan
+daa t’alang qing-gan
+3.ACC 1PL.NOM see-PST
+`He or they saw you.'
+
+# 30 tr wo with pns. 1st person plural nominative. 
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo, pn}
+dang t’all qinggan
+dang t’all qing-gan
+2SG.ACC 1PL.NOM see-PST
+`We saw you.'
+
+# 31 wo null pronoun. adapted from p 47
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo, pn}
+naan ’la quinggan
+naan qing-gan
+grandmother see-PST
+`A grandmother saw him. He saw a grandmother.'
+
+# 32 wo pronoun and common noun. adapted from p 47
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo}
+hlaa naan quinggan
+hlaa naan qing-gan
+1.SG grandmother see-PST
+`A grandmother saw me. I saw a grandmother.'
+
+# 33 wo pronoun and common noun. adapted from p 47
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo}
+t’alang naan quinggan
+t’alang naan qing-gan
+1.SG grandmother see-PST
+`A grandmother saw me. I saw a grandmother.'
+
+# 34 it pn case
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {c}
+dii radgan
+dii rad-gan
+1SG.ACC run-PST
+`I ran.'
+
+# 35 it pn case
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {c}
+hla dladahldagan
+hla dladahlda-gan
+1SG.ACC fall.down-PST
+`I fell down.'
