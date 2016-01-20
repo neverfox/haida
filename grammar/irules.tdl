@@ -1,1 +1,18 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Inflecting Lexical Rule Instances
+
+neg-suffix :=
+%suffix (* -.ang)
+neg-lex-rule.
+
+past-suffix :=
+%suffix (* -gan)
+past-lex-rule.
+
+present-suffix :=
+%suffix (* -gang)
+present-lex-rule.
+
+future-suffix :=
+%suffix (* -.asaang)
+future-lex-rule.

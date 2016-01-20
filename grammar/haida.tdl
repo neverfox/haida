@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Haida
 ;;; created at:
-;;;     Sat Jan 16 04:46:09 UTC 2016
+;;;     Wed Jan 20 22:32:21 UTC 2016
 ;;; based on Matrix customization system version of:
 ;;;     Sun Jan 10 22:56:48 UTC 2016
 ;;;
@@ -19,6 +19,14 @@ non-mod-lex-item := lex-item &
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 noun :+ [ CASE case ].
+
+head :+ [ NEGATED luk ].
+
+inflected :+ [ TENSE-FLAG luk,
+    VERB-FLAG luk ].
+
+infl-satisfied :+ [ TENSE-FLAG na-or-+,
+    VERB-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number ].
@@ -131,7 +139,9 @@ verb-lex := basic-verb-lex & non-mod-lex-item &
     ARG-ST.FIRST #subj &
                  [ LOCAL [ CAT.VAL [ SPR < >,
                                      COMPS < > ],
-                           CONT.HOOK.INDEX #xarg ] ] ].
+                           CONT.HOOK.INDEX #xarg ] ],
+    INFLECTED [ VERB-FLAG +,
+                TENSE-FLAG - ] ].
 
 intransitive-verb-lex := verb-lex & intransitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
@@ -180,11 +190,57 @@ dem-sg-determiner-lex := determiner-lex & no-icons-lex-item &
 
 dem-pl-determiner-lex := determiner-lex & no-icons-lex-item.
 
+; Type for negative selected comps. 
+;                 This type uses the MOD list to get scopal semantics.
+;                 Constrain head-modifier rules to be [NEGATED -] if you don't
+;                 want this type to act as a modifer.
+
+neg-comp-lex := basic-scopal-adverb-lex &
+  [ SYNSEM.LOCAL.CAT [ VAL [ SPR < >,
+                             SPEC < >,
+                             COMPS < >,
+                             SUBJ < > ],
+                       HEAD [ NEGATED +,
+                              MOD < [ LOCAL.CAT.HEAD verb ] > ] ] ].
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
 ;;;;;;;;;;;;;;;;;;;
 
 ;;; Lexical rule types
+
+negation-lex-rule-super := infl-lex-rule & val-change-only-lex-rule &
+  [ INFLECTED #infl,
+    DTR verb-lex &
+        [ INFLECTED #infl ] ].
+
+neg-lex-rule := negation-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL [ SPR #spr,
+                           SPEC #spec,
+                           SUBJ #subj,
+                           COMPS < canonical-synsem &
+                                   [ LOCAL.CAT.HEAD [ NEGATED +,
+                                                      MOD < [ LOCAL.CONT.HOOK #hook ] > ] ] . #oldcomps > ],
+    DTR.SYNSEM.LOCAL [ CAT.VAL [ SPR #spr,
+                                 SPEC #spec,
+                                 SUBJ #subj,
+                                 COMPS #oldcomps ],
+                       CONT.HOOK #hook ] ].
+
+tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED [ TENSE-FLAG +,
+                VERB-FLAG #verb ],
+    DTR verb-lex &
+        [ INFLECTED.VERB-FLAG #verb ] ].
+
+past-lex-rule := tense-lex-rule-super &
+  [ DTR.INFLECTED.VERB-FLAG + ].
+
+future-lex-rule := tense-lex-rule-super &
+  [ DTR.INFLECTED.VERB-FLAG + ].
+
+present-lex-rule := tense-lex-rule-super &
+  [ DTR.INFLECTED.VERB-FLAG + ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types

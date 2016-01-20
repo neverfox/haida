@@ -33,7 +33,7 @@ Phenomena: {wo}
 ts’agts’aggee gyùudanee tlagaaydagan
 ts’agts’ag-gee gyùundan-ee tlagaay-da-gan
 wagon-DEF horse-DEF get.injured-CAUSE-PST
-`The wagon injured the horse. The horse damaged the wagon.'
+`The wagon injured the horse.' or `The horse damaged the wagon.'
 
 # 4 tr wo
 Source: a:75
@@ -83,7 +83,7 @@ Phenomena: {wo}
 ts’agts’aggee tlagaaydagan gyùudanee
 ts’agts’ag-gee tlagaay-da-gan gyùundan-ee
 wagon-DEF get.injured-CAUSE-PST horse-DEF
-`The wagon injured the horse. The horse damaged the wagon.'
+`The wagon injured the horse' or `The horse damaged the wagon.'
 
 # 9 tr wo with pns
 Source: author
@@ -233,7 +233,7 @@ Phenomena: {wo}
 diiga ’laa-srun tlaagaanggan tla.ad 
 dii-ga ’laa-srun tlaagaang-gan tla.ad
 1SG.ACC-PP 3SG.NOM-only first-PST help
-`Only he or they helped me first.'
+`Only he helped me first.' or `Only they helped me first.'
 
 # 24 aux
 Source: author
@@ -243,7 +243,7 @@ Phenomena: {wo}
 diiga ’laa-srun tla.adgan tlaagaang
 dii-ga ’laa-srun tla.ad-gan tlaagaang
 1SG.ACC-PP 3SG.NOM-only help-PST first
-`Only he or they helped me first.'
+`Only he helped me first.' or `Only they helped me first.'
 
 # 25 wo pronoun and common noun. adapted from p 47
 Source: author
@@ -253,7 +253,7 @@ Phenomena: {wo}
 naan ’la qinggan
 naan ’la qing-gan
 grandmother 3.SG see-PST
-`A grandmother saw him. He saw a grandmother.'
+`A grandmother saw him.' or `He saw a grandmother.'
 
 # 26 wo pronoun and common noun. adapted from p 47
 Source: author
@@ -263,7 +263,7 @@ Phenomena: {wo}
 ’laa naan qinggan
 ’laa naan qing-gan
 3.SG grandmother see-PST
-`A grandmother saw him. He saw grandmother.'
+`A grandmother saw him.' or `He saw grandmother.'
 
 # 27 tr wo with pns
 Source: author
@@ -293,7 +293,7 @@ Phenomena: {wo, pn}
 daa t’alang qinggan
 daa t’alang qing-gan
 3.ACC 1PL.NOM see-PST
-`He or they saw you.'
+`He saw you.' or `They saw you.'
 
 # 30 tr wo with pns. 1st person plural nominative. 
 Source: author
@@ -313,7 +313,7 @@ Phenomena: {wo, pn}
 naan ’la qinggan
 naan qing-gan
 grandmother see-PST
-`A grandmother saw him. He saw a grandmother.'
+`A grandmother saw him.' or `He saw a grandmother.'
 
 # 32 wo pronoun and common noun. adapted from p 47
 Source: author
@@ -323,7 +323,7 @@ Phenomena: {wo}
 hlaa naan qinggan
 hlaa naan qing-gan
 1.SG grandmother see-PST
-`A grandmother saw me. I saw a grandmother.'
+`A grandmother saw me.' or `I saw a grandmother.'
 
 # 33 wo pronoun and common noun. adapted from p 47
 Source: author
@@ -333,7 +333,7 @@ Phenomena: {wo}
 t’alang naan qinggan
 t’alang naan qing-gan
 1.SG grandmother see-PST
-`A grandmother saw me. I saw a grandmother.'
+`A grandmother saw me.' or `I saw a grandmother.'
 
 # 34 it pn case
 Source: author
@@ -404,3 +404,73 @@ hlaa 7aasgee srids ts’agts’agg qinggan
 hlaa 7aasgee srid-s ts’agts’ag qing-gan
 1SG.NOM these he.red-PST wagons see-PST
 `I saw these red wagons.'
+
+# 41 negation
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {neg}
+gyùudanee ts’agts’aggee gam qing.anggan
+gyùundan-ee ts’agts’ag-gee gam	qing-.ang-gan
+horse-DEF 	wagon-DEF 		NEG	see-NEG-PST
+`The horse did not see the wagon.'
+
+# 42 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gyùudanee ts’agts’aggee qing.anggan
+gyùundan-ee ts’agts’ag-gee qing-.ang-gan
+horse-DEF 	wagon-DEF 		see-NEG-PST
+`The horse did not see the wagon.'
+
+# 43 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gyùudanee ts’agts’aggee gam qinggan
+gyùundan-ee ts’agts’ag-gee gam	qing-gan
+horse-DEF 	wagon-DEF 		NEG	see-PST
+`The horse did not see the wagon.'
+
+# 44 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gyùudanee ts’agts’aggee gam qinggan.ang
+gyùundan-ee ts’agts’ag-gee gam	qing-gan-.ang
+horse-DEF 	wagon-DEF 		NEG	see-PST-NEG
+`The horse did not see the wagon.'
+
+# 45 past tense
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+gyùudanee ts’agts’aggee qinggan
+gyùundan-ee ts’agts’ag-gee qing-gan
+horse-DEF 	wagon-DEF 		see-PST
+`The horse saw the wagon.'
+
+# 46 present tense
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+gyùudanee ts’agts’aggee qinggang
+gyùundan-ee ts’agts’ag-gee qing-gang
+horse-DEF 	wagon-DEF 		see-PRS
+`The horse sees the wagon.'
+
+# 47 future tense
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+gyùudanee ts’agts’aggee qing.asaang
+gyùundan-ee ts’agts’ag-gee qing-.asaang
+horse-DEF 	wagon-DEF 		see-FUT
+`The horse will see the wago
