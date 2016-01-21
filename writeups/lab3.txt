@@ -5,7 +5,7 @@
 #### Author: Roman Pearah
 #### Partner: Kristen Piepgrass
 
-#### Language: Haida
+#### Language: Haida (Masset dialect)
 
 ---
 
@@ -13,29 +13,206 @@
 
 *Note: Changes from the prior lab are discussed within where relevant.*
 
-#### Tense and aspect
+#### Tense
 
-#### Word order
+Tense in Masset Haida is marked with an suffix on the main verb. Of seven clause-final positions, the (mutually exclusive) tense suffixes appear in the second from the last, with the last two being reserved for the topic change marker and the emphasis marker, respectively. Since these are outside the scope of the lab, the tense suffix will currently be regarded as the final suffix of the verb "complex".
+
+Enrico lists six tense suffixes in the Masset dialect. Only two of these tenses dominate the examples, however, so they will be (along with the **future**, see below) the only ones incorporated for the time being: the **past** and the **present**.
+
+##### Past *-(g)an*
+
+In Lab 2, our lexicon verbs were all given stem forms that were actually full past tense inflections, so we did not have to add any new test sentences to demonstrate this tense (**TODO: this is probably not true since we likely need examples of incorrect suffixes?**). However, in order to incorporate these suffixes explictly, we first had to change the verb entries to have their actual stem forms, and add an inflecting lexical rule for the suffix:
+
+```
+past-suffix :=
+%suffix (* -gan)
+past-lex-rule.
+```
+
+Examples:
+```
+# 1 it wo
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wo, det}
+gyùudanee dladahldagan
+gyùudan-ee dladahlda-gan
+horse-DEF fall.down-PST
+`The horse fell down.'
+
+# 3 tr wo
+Source: a:75
+Vetted: s
+Judgment: g
+Phenomena: {wo}
+ts’agts’aggee gyùudanee tlagaaydagan
+ts’agts’ag-gee gyùundan-ee tlagaay-da-gan
+wagon-DEF horse-DEF get.injured-CAUSE-PST
+`The wagon injured the horse.' or `The horse damaged the wagon.'
+```
+
+##### Present *-(g)ang*
+
+```
+present-suffix :=
+%suffix (* -gang)
+present-lex-rule.
+```
+
+Examples:
+```
+# 46 present tense
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+gyùudanee ts’agts’aggee qinggang
+gyùundan-ee ts’agts’ag-gee qing-gang
+horse-DEF wagon-DEF see-PRS
+`The horse sees the wagon.'
+```
+
+##### Future *-(.a)sa*
+
+Enrico doesn't consider the future (‘will’) to be a tense suffix proper, and instead encodes it as a "mood" suffix coming from what he calls the "Modals 2" group (which occupy clause-final position 4 of 7). In terms of examples, however, the future occurs almost exclusively with the present suffix immediately following, i.e. `-FUT-PRS`. As a result, it is possible and reasonable to build a largely successful grammar under the assumption that there is a future tense suffix *-(.a)saang*:
+
+```
+future-suffix :=
+%suffix (* -.asaang)
+future-lex-rule.
+```
+
+Examples:
+```
+# 47 future tense
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+gyùudanee ts’agts’aggee qing.asaang
+gyùundan-ee ts’agts’ag-gee qing-.asaang
+horse-DEF wagon-DEF see-FUT
+`The horse will see the wagon.'
+```
+
+**TODO: consider encoding the FUT suffix in a manner similar to the NEG suffix, rather than taking the above approach. This will depend on consultation with Prof. Bender**
+
+#### Aspect
+
+"Haida syntactic aspects are state punctual, perfective, progressive, inceptive, continuative, frequentive, durative, incessative, habitual, antecessive, terminative, and iterative." ~ Oh my!
+
+**TODO: See p.23 and the lists on pp.26-32**
 
 #### Argument optionality
 
-#### Sentential negation
 
-#### Morphology
 
-#### Rules for agreement affixes
+#### Negation *gam* & *-.ang*
 
-#### Rules for tense/aspect markers
+Sentential negation is marked by two things occuring together: the adverb *gam* before the verb (and early in the sentence) and the verb suffix *-.ang* (position 2 of 7, meaning that it always precedes the tense suffix in position 5).
 
-#### Other affixes
+For the latter, we introduction another inflecting lexical rule:
+```
+neg-suffix :=
+%suffix (* -.ang)
+neg-lex-rule.
+```
 
-#### Lexicon
+For the former, an addition to the lexicon:
+```
+gam := neg-comp-lex &
+  [ STEM < "gam" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+```
 
-#### Stem forms of verbs
+Examples:
+```
+# 41 negation
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {neg}
+gyùudanee ts’agts’aggee gam qing.anggan
+gyùundan-ee ts’agts’ag-gee gam qing-.ang-gan
+horse-DEF wagon-DEF NEG see-NEG-PST
+`The horse did not see the wagon.'
+
+# 42 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gyùudanee ts’agts’aggee qing.anggan
+gyùundan-ee ts’agts’ag-gee qing-.ang-gan
+horse-DEF wagon-DEF see-NEG-PST
+`The horse did not see the wagon.'
+
+# 43 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gyùudanee ts’agts’aggee gam qinggan
+gyùundan-ee ts’agts’ag-gee gam qing-gan
+horse-DEF wagon-DEF NEG see-PST
+`The horse did not see the wagon.'
+
+# 44 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gyùudanee ts’agts’aggee gam qinggan.ang
+gyùundan-ee ts’agts’ag-gee gam qing-gan-.ang
+horse-DEF wagon-DEF NEG see-PST-NEG
+`The horse did not see the wagon.'
+```
+
+**TODO: Should we be placing *gam* earlier in the sentence, possibly by answering `before` to `How is neg ordered with resepct to other COMPS?`**
+
+#### Possessives
+
+Possession in Haida follows an alienable/inalienable distinction.
+
+##### Alienable
+
+Alienable possession is marked by either a) the separate possessive marker *gyaa* (appearing between the possessor and possessum, possibly regarded as an indefinite pronoun) or b) the possessive NP suffix *-(ng)aa*. In Masset, this latter type is highly lexically restricted to "pronouns and reflexively possessed kin terms" and is non-productive. Furthermore, there is a special logophoric possessive *gyaagan* for the first person singular pronomial possessive. The remaining pronomial possessives utilize the (non-clitic) objective form pronouns:
+
+gyaa forms:
+gyaagan = my
+dang gyaa = your (sg)
+’laa gyaa = his/her
+7iitl’ gyaa = our
+dalang gyaa = your (pl)
+tl’aa gyaa
+Bill gyaa = Bill's
+Mary gyaa = Mary's
+
+-ra forms:
+diinaa = my
+daangaa = gaa = your (sg)
+7iitl’aangaa = 7iitl’aa = our
+dalaaangaa = dalaa = your (pl)
+’laangaa = ’laa = his/her/their
+tl’aangaa = tl’aa = his/her/their, people's
+
+The null third person *0* cannot occur as part of an alienable possessive.
+
+##### Inalienable
+
+Inalienable possession is lexically limited and not marked on either the possessor or possessum:
+
+dii naa.n = my grandmother
+dang kun = your nose (sg)
+Bill naa.n = Bill's grandmother
+etc.
+
+#### Agreement
+
+Morphological rules for tense (3) and negation (1) were added and are described above. However, because Haida has no inflections for number, person, or gender (or any agreement to speak of), no additional rules were added at this time.
 
 #### Auxilairies
-
-#### Additional nouns/verbs
 
 ## Limitations
 
