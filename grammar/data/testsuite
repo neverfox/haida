@@ -411,8 +411,8 @@ Vetted: f
 Judgment: g
 Phenomena: {neg}
 gyùudanee ts’agts’aggee gam qing.anggan
-gyùundan-ee ts’agts’ag-gee gam	qing-.ang-gan
-horse-DEF 	wagon-DEF 		NEG	see-NEG-PST
+gyùundan-ee ts’agts’ag-gee gam qing-.ang-gan
+horse-DEF wagon-DEF NEG see-NEG-PST
 `The horse did not see the wagon.'
 
 # 42 negation
@@ -422,7 +422,7 @@ Judgment: u
 Phenomena: {neg}
 gyùudanee ts’agts’aggee qing.anggan
 gyùundan-ee ts’agts’ag-gee qing-.ang-gan
-horse-DEF 	wagon-DEF 		see-NEG-PST
+horse-DEF wagon-DEF see-NEG-PST
 `The horse did not see the wagon.'
 
 # 43 negation
@@ -431,8 +431,8 @@ Vetted: f
 Judgment: u
 Phenomena: {neg}
 gyùudanee ts’agts’aggee gam qinggan
-gyùundan-ee ts’agts’ag-gee gam	qing-gan
-horse-DEF 	wagon-DEF 		NEG	see-PST
+gyùundan-ee ts’agts’ag-gee gam qing-gan
+horse-DEF wagon-DEF NEG see-PST
 `The horse did not see the wagon.'
 
 # 44 negation
@@ -441,8 +441,8 @@ Vetted: f
 Judgment: u
 Phenomena: {neg}
 gyùudanee ts’agts’aggee gam qinggan.ang
-gyùundan-ee ts’agts’ag-gee gam	qing-gan-.ang
-horse-DEF 	wagon-DEF 		NEG	see-PST-NEG
+gyùundan-ee ts’agts’ag-gee gam qing-gan-.ang
+horse-DEF wagon-DEF NEG see-PST-NEG
 `The horse did not see the wagon.'
 
 # 45 past tense
@@ -452,7 +452,7 @@ Judgment: g
 Phenomena: {tam}
 gyùudanee ts’agts’aggee qinggan
 gyùundan-ee ts’agts’ag-gee qing-gan
-horse-DEF 	wagon-DEF 		see-PST
+horse-DEF wagon-DEF see-PST
 `The horse saw the wagon.'
 
 # 46 present tense
@@ -462,7 +462,7 @@ Judgment: g
 Phenomena: {tam}
 gyùudanee ts’agts’aggee qinggang
 gyùundan-ee ts’agts’ag-gee qing-gang
-horse-DEF 	wagon-DEF 		see-PRS
+horse-DEF wagon-DEF see-PRS
 `The horse sees the wagon.'
 
 # 47 future tense
@@ -472,5 +472,5 @@ Judgment: g
 Phenomena: {tam}
 gyùudanee ts’agts’aggee qing.asaang
 gyùundan-ee ts’agts’ag-gee qing-.asaang
-horse-DEF 	wagon-DEF 		see-FUT
-`The horse will see the wago
+horse-DEF wagon-DEF see-FUT
+`The horse will see the wagon.'
