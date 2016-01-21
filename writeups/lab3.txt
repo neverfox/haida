@@ -1,0 +1,42 @@
+# Lab 3
+
+### University of Washington, LING 567, Winter 2016
+
+#### Author: Roman Pearah
+#### Partner: Kristen Piepgrass
+
+#### Language: Haida
+
+---
+
+## Phenomena
+
+*Note: Changes from the prior lab are discussed within where relevant.*
+
+#### Tense and aspect
+
+#### Word order
+
+#### Argument optionality
+
+#### Sentential negation
+
+#### Morphology
+
+#### Rules for agreement affixes
+
+#### Rules for tense/aspect markers
+
+#### Other affixes
+
+#### Lexicon
+
+#### Stem forms of verbs
+
+#### Auxilairies
+
+#### Additional nouns/verbs
+
+## Limitations
+
+## Coverage
