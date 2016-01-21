@@ -9,8 +9,8 @@ ts’agts’aggee := cn-noun-lex &
   [ STEM < "ts’agts’aggee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wagon_n_rel" ].
 
-naan := cn-noun-lex &
-  [ STEM < "naan" >,
+naanaa := cn-noun-lex &
+  [ STEM < "naanaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_grandmother_n_rel" ].
 
 gyùudan := cn-noun-lex &
@@ -85,20 +85,20 @@ dang_2 := 2sg-acc-pron-noun-lex &
 
 ;;; Verbs
 
-dladahldagan := itr-acc-verb-lex &
-  [ STEM < "dladahldagan" >,
+dladahlda := itr-acc-verb-lex &
+  [ STEM < "dladahlda" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fall_down_v_rel" ].
 
-radgan := itr-acc-verb-lex &
-  [ STEM < "radgan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_ran_v_rel" ].
+rad := itr-acc-verb-lex &
+  [ STEM < "rad" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_run_v_rel" ].
 
-tlagaaydagan := tr-nom-verb-lex &
-  [ STEM < "tlagaaydagan" >,
+tlagaayda := tr-nom-verb-lex &
+  [ STEM < "tlagaayda" >,
     SYNSEM.LKEYS.KEYREL.PRED "_injure_v_rel" ].
 
-qinggan := tr-verb-lex &
-  [ STEM < "qinggan" >,
+qing := tr-verb-lex &
+  [ STEM < "qing" >,
     SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
 
 ;;; Determiners
@@ -118,3 +118,7 @@ waaniis := dem-sg-determiner-lex &
 waasgee := dem-pl-determiner-lex &
   [ STEM < "waasgee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_those_q_rel" ].
+
+gam := neg-comp-lex &
+  [ STEM < "gam" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
