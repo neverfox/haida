@@ -28,3 +28,11 @@ prog-aspect-lex-rule.
 freq-aspect-suffix :=
 %suffix (* -gang)
 freq-aspect-lex-rule.
+
+PL-SUBJ-suffix :=
+%suffix (* -7wa)
+PL-SUBJ-lex-rule.
+
+PL-obj-suffix :=
+%suffix (* -7wa)
+PL-obj-lex-rule.

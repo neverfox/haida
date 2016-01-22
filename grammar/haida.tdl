@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Haida
 ;;; created at:
-;;;     Fri Jan 22 03:01:13 UTC 2016
+;;;     Fri Jan 22 14:54:32 UTC 2016
 ;;; based on Matrix customization system version of:
 ;;;     Sun Jan 10 22:56:48 UTC 2016
 ;;;
@@ -150,7 +150,7 @@ pn-noun-lex := no-spr-noun-lex.
 
 ;;; Verbs
 
-verb-lex := basic-verb-lex & non-mod-lex-item & modal-2-rule-dtr & negation-rule-dtr & tense-rule-dtr &
+verb-lex := basic-verb-lex & non-mod-lex-item & modal-2-rule-dtr & negation-rule-dtr & plural-rule-dtr & tense-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
                              SPEC < >,
                              SUBJ < #subj > ],
@@ -228,12 +228,13 @@ neg-comp-lex := basic-scopal-adverb-lex &
 ;;; Intermediate rule types
 
 modal-2-rule-dtr := word-or-lexrule.
+plural-rule-dtr := word-or-lexrule.
 negation-rule-dtr := word-or-lexrule.
 tense-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
-negation-lex-rule-super := infl-lex-rule & modal-2-rule-dtr & tense-rule-dtr & val-change-only-lex-rule &
+negation-lex-rule-super := infl-lex-rule & modal-2-rule-dtr & plural-rule-dtr & tense-rule-dtr & val-change-only-lex-rule &
   [ INFLECTED #infl,
     DTR negation-rule-dtr &
         [ INFLECTED #infl ] ].
@@ -273,7 +274,7 @@ past-lex-rule := tense-lex-rule-super &
 non-past-lex-rule := tense-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast ].
 
-aspect-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & negation-rule-dtr & tense-rule-dtr &
+aspect-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & negation-rule-dtr & plural-rule-dtr & tense-rule-dtr &
   [ INFLECTED #infl,
     DTR verb-lex &
         [ INFLECTED #infl ] ].
@@ -289,6 +290,19 @@ prog-aspect-lex-rule := imperf-aspect-lex-rule &
 
 freq-aspect-lex-rule := imperf-aspect-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT frequentive ].
+
+plural-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & tense-rule-dtr &
+  [ INFLECTED #infl,
+    DTR plural-rule-dtr &
+        [ INFLECTED #infl ] ].
+
+PL-SUBJ-lex-rule := plural-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+                                                                PER 3rd ] ].
+
+PL-obj-lex-rule := plural-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
+                                                                 PER 3rd ] ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types

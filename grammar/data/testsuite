@@ -175,14 +175,14 @@ dii dladahlda-gan
 1SG.NOM fall.down-PST
 `I fell down.'
 
-# 18 np
+# 18 np plural
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {det}
-7aasgee gyùudan radgan
-7aasgee gyùudan rad-gan
-these horse run-PST
+7aasgee gyùudan rad7wagan
+7aasgee gyùudan rad-7wa-gan
+these horse run-PL-PST
 `These horses ran.'
 
 # 19 np wrong det order
@@ -190,9 +190,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {det}
-gyùudan 7aasgee radgan
-gyùudan 7aasgee rad-gan
-horse these run-PST
+gyùudan 7aasgee rad7wagan
+gyùudan 7aasgee rad-7wa-gan
+horse these run-PL-PST
 `These horses ran.'
 
 # 20 np impossible det
@@ -365,24 +365,24 @@ Phenomena: {det}
 1PL.ACC fall.down-PST
 `We fell down.'
 
-# 37 det with df suffix
+# 37 det with df suffix, plural
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {det}
-7aasgee gyùudanee radgan
-7aasgee gyùudan-ee rad-gan
-these horse-DEF run-PST
+7aasgee gyùudanee rad7wagan
+7aasgee gyùudan-ee rad-7wa-gan
+these horse-DEF run-PL-PST
 `These horses ran.'
 
-# 38 det with df suffix
+# 38 det with df suffix, plural
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {det}
-gyùudanee radgan
-gyùudan-ee rad-gan
-horse-DEF run-PST
+gyùudanee rad7wagan
+gyùudan-ee rad-7wa-gan
+horse-DEF run-PL-PST
 `Horses ran.'
 
 # 39 det with df suffix
@@ -390,19 +390,19 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {det}
-gyùudanee 7aasgee radgan
-gyùudan-ee 7aasgee rad-gan
-horse-DEF these run-PST
+gyùudanee 7aasgee rad7wagan
+gyùudan-ee 7aasgee rad-7wa-gan
+horse-DEF these run-PL-PST
 `These horses ran.'
 
-# 40 det with df suffix
+# 40 det with df suffix, plural
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {det}
-hlaa 7aasgee srids ts’agts’agg qinggan
-hlaa 7aasgee srid-s ts’agts’agg qing-gan
-1SG.NOM these he.red-PST wagons see-PST
+hlaa 7aasgee srids ts’agts’agg qing7wagan
+hlaa 7aasgee srid-s ts’agts’agg qing-7wa-gan
+1SG.NOM these he.red-PST wagons see-PL-PST
 `I saw these red wagons.'
 
 # 41 negation
@@ -554,3 +554,43 @@ gyùudanee radgangda
 gyùudan-ee rad-gang-da
 horse-DEF run-PRS-FREQ
 `The horse often runs.' or `The horse usually runs.'
+
+# 56 agreement
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr}
+gyùudanee ts’agts’aggee qing7wagan
+gyùudan-ee ts’agts’ag-gee qing-7wa-gan
+horse-DEF wagon-DEF see-PL-PST
+`The horse saw the wagons.' or `The horses saw the wagon.'
+
+# 57 agreement
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr}
+hlaa ts’agts’aggee qing7wagan
+hlaa ts’agts’ag-gee qing-7wa-gan
+1SG.NOM wagon-DEF see-PL-PST
+`I saw the wagons.'
+
+# 58 agreement - no plural arg
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+hlaa dang qing7wagan
+hlaa daa qing-7wa-gan
+1SG.NOM 2SG.ACC see-PL-PST
+`I saw him.'
+
+# 59 agreement- wrong order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+hlaa ts’agts’aggee qinggan7wa
+hlaa ts’agts’ag-gee qing-gan-7wa
+1SG.NOM wagon-DEF see-PST-PL
+`I saw the wagons.'
