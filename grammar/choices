@@ -73,11 +73,11 @@ vpc-0-neg=create
 infl-neg=on
 adv-neg=on
 comp-neg-orth=gam
-bineg-type=infl-comp
-neg1-type=fc
+bineg-type=infl-mod
+neg1-type=fm
 neg2-type=b
-comp-neg-head-infl-comp-neg=v
-comp-neg-order-infl-head=after
+neg-mod-infl-mod-neg=s
+neg-mod-order-infl-mod-neg=before
 neg-mod-orth=gam
 
 section=coordination

@@ -24,6 +24,28 @@ head :+ [ AUX bool,
     NEGATED luk,
     FORM form ].
 
+synsem :+ [ NEG-SAT luk ].
+
+basic-verb-lex :+ [ SYNSEM.NEG-SAT na-or-+ ].
+
+basic-head-comp-phrase :+ [ SYNSEM [ NEG-SAT #ns,
+             LOCAL.CAT.MC #mc ],
+    HEAD-DTR.SYNSEM [ NEG-SAT #ns,
+                      LOCAL.CAT.MC #mc ] ].
+
+basic-head-subj-phrase :+ [ SYNSEM.NEG-SAT #ns,
+    HEAD-DTR.SYNSEM.NEG-SAT #ns ].
+
+clause :+ [ SYNSEM.NEG-SAT na-or-+ ].
+
+; This grammar includes head-modifier rules.  To keep
+; out extraneous parses, constrain the value of MOD on
+; various subtypes of head.  This may need to be loosened later.
+; This constraint says that only adverbs, adjectives,
+; and adpositions can be modifiers.
+
++nvcdmo :+ [ MOD < > ].
+
 inflected :+ [ FUT-FLAG luk,
     TENSE-FLAG luk,
     FIN-FLAG luk ].
@@ -292,18 +314,25 @@ dem-sg-determiner-lex := determiner-lex & no-icons-lex-item &
 
 dem-pl-determiner-lex := determiner-lex & no-icons-lex-item.
 
-; Type for negative selected comps. 
-;                 This type uses the MOD list to get scopal semantics.
-;                 Constrain head-modifier rules to be [NEGATED -] if you don't
-;                 want this type to act as a modifer.
+; Type for negative adverbs.
+; 
+; This adverb should go through a specialized phrase structure rule
+;        included with this grammar.
 
-neg-comp-lex := basic-scopal-adverb-lex &
+neg-adv-lex := basic-scopal-adverb-lex &
   [ SYNSEM.LOCAL.CAT [ VAL [ SPR < >,
-                             SPEC < >,
                              COMPS < >,
                              SUBJ < > ],
+                       POSTHEAD -,
                        HEAD [ NEGATED +,
-                              MOD < [ LOCAL.CAT.HEAD verb ] > ] ] ].
+                              MOD < [ LOCAL.CAT [ HEAD verb,
+                                                  VAL [ SUBJ null,
+                                                        COMPS null ] ] ] > ] ] ].
+
+neg-adj-head-scop-phrase := adj-head-scop-phrase &
+  [ SYNSEM.NEG-SAT +,
+    HEAD-DTR.SYNSEM.NEG-SAT -,
+    NON-HEAD-DTR neg-adv-lex ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
@@ -319,24 +348,14 @@ tense-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
-negation-lex-rule-super := infl-lex-rule & modal-2-rule-dtr & plural-rule-dtr & tense-rule-dtr & val-change-only-lex-rule &
+negation-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & plural-rule-dtr & tense-rule-dtr &
   [ INFLECTED #infl,
     DTR negation-rule-dtr &
         [ INFLECTED #infl &
                     [ FIN-FLAG + ] ] ].
 
 neg-lex-rule := negation-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.VAL [ SPR #spr,
-                           SPEC #spec,
-                           SUBJ #subj,
-                           COMPS < canonical-synsem &
-                                   [ LOCAL.CAT.HEAD [ NEGATED +,
-                                                      MOD < [ LOCAL.CONT.HOOK #hook ] > ] ] . #oldcomps > ],
-    DTR.SYNSEM.LOCAL [ CAT.VAL [ SPR #spr,
-                                 SPEC #spec,
-                                 SUBJ #subj,
-                                 COMPS #oldcomps ],
-                       CONT.HOOK #hook ] ].
+  [ SYNSEM.NEG-SAT - ].
 
 modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & tense-rule-dtr &
   [ INFLECTED #infl,

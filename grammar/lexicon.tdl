@@ -105,6 +105,6 @@ waasgee := dem-pl-determiner-lex &
   [ STEM < "waasgee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_those_q_rel" ].
 
-gam := neg-comp-lex &
+gam := neg-adv-lex &
   [ STEM < "gam" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
