@@ -141,7 +141,7 @@ Vetted: f
 Judgment: g
 Phenomena: {c}
 hla radgan
-hla rad-gan
+hlaa rad-gan
 1SG.NOM run-PST
 `I ran.'
 
@@ -301,7 +301,7 @@ Vetted: f
 Judgment: g
 Phenomena: {wo, pn}
 dang t’all qinggan
-dang t’allang qing-gan
+dang t’alang qing-gan
 2SG.ACC 1PL.NOM see-PST
 `We saw you.'
 
@@ -411,7 +411,7 @@ Vetted: f
 Judgment: g
 Phenomena: {neg}
 gyùudanee ts’agts’aggee gam qing.anggan
-gyùudan-ee ts’agts’agg-ee gam qing-.ang-gan
+gyùudan-ee ts’agts’ag-gee gam qing-.ang-gan
 horse-DEF wagon-DEF NEG see-NEG-PST
 `The horse did not see the wagon.'
 
@@ -421,7 +421,7 @@ Vetted: f
 Judgment: u
 Phenomena: {neg}
 gyùudanee ts’agts’aggee qing.anggan
-gyùudan-ee ts’agts’agg-ee qing-.ang-gan
+gyùudan-ee ts’agts’ag-gee qing-.ang-gan
 horse-DEF wagon-DEF see-NEG-PST
 `The horse did not see the wagon.'
 
@@ -431,7 +431,7 @@ Vetted: f
 Judgment: u
 Phenomena: {neg}
 gyùudanee ts’agts’aggee gam qinggan
-gyùudan-ee ts’agts’agg-ee gam qing-gan
+gyùudan-ee ts’agts’ag-gee gam qing-gan
 horse-DEF wagon-DEF NEG see-PST
 `The horse did not see the wagon.'
 
@@ -441,7 +441,7 @@ Vetted: f
 Judgment: u
 Phenomena: {neg}
 gyùudanee ts’agts’aggee gam qinggan.ang
-gyùudan-ee ts’agts’agg-ee gam qing-gan-.ang
+gyùudan-ee ts’agts’ag-gee gam qing-gan-.ang
 horse-DEF wagon-DEF NEG see-PST-NEG
 `The horse did not see the wagon.'
 
@@ -451,7 +451,7 @@ Vetted: f
 Judgment: g
 Phenomena: {tam}
 gyùudanee ts’agts’aggee qinggan
-gyùudan-ee ts’agts’agg-ee qing-gan
+gyùudan-ee ts’agts’ag-gee qing-gan
 horse-DEF wagon-DEF see-PST
 `The horse saw the wagon.'
 
@@ -461,7 +461,7 @@ Vetted: f
 Judgment: g
 Phenomena: {tam}
 gyùudanee ts’agts’aggee qinggang
-gyùudan-ee ts’agts’agg-ee qing-gang
+gyùudan-ee ts’agts’ag-gee qing-gang
 horse-DEF wagon-DEF see-PRS
 `The horse sees the wagon.'
 
@@ -471,7 +471,7 @@ Vetted: f
 Judgment: g
 Phenomena: {tam}
 gyùudanee ts’agts’aggee qing.asaang
-gyùudan-ee ts’agts’agg-ee qing-.asa-gang
+gyùudan-ee ts’agts’ag-gee qing-.asa-gang
 horse-DEF wagon-DEF see-FUT-PRS
 `The horse will see the wagon.'
 
@@ -510,7 +510,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {tam, neg}
-gam gyùudanee dladahldagandii
+gam gyùudanee dladahlda.anggiigan
 gam gyùudan-ee dladahlda-.ang-gii-gan
 NEG horse-DEF fall.down-NEG-PST-PFV
 `The horse hasn't fallen down.'
