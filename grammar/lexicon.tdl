@@ -81,6 +81,12 @@ qing := tr-verb-lex &
   [ STEM < "qing" >,
     SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
 
+;;; Auxiliaries
+
+tlaagaang := inceptive-aux-lex &
+  [ STEM < "tlaagaang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_start_v_rel" ].
+
 ;;; Determiners
 
 7aajii := dem-sg-determiner-lex &

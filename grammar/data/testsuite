@@ -219,31 +219,31 @@ horse fall.down-PST
 Source: a: 1193
 Vetted: t
 Judgment: g
-Phenomena: {wo, pn}
-diiga ’laa-srun tla.ad tlaagaanggan
-dii-ga ’laa-srun tla.ad tlaagaang-gan
-1SG.ACC-PP 3SG.NOM-only help first-PST
-`Only he helped me first.' 
+Phenomena: {wo, tam}
+7aasgee gyùudanee rad tlaagaang7wagan
+7aasgee gyùudan-ee rad	tlaagaang-7wa-gan
+these horse-DEF run	start-PL-PST
+`These horses started to run.'
 
 # 23 aux
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {wo}
-diiga ’laa-srun tlaagaanggan tla.ad 
-dii-ga ’laa-srun tlaagaang-gan tla.ad
-1SG.ACC-PP 3SG.NOM-only first-PST help
-`Only he helped me first.' or `Only they helped me first.'
+7aasgee gyùudanee tlaagaang7wagan rad
+7aasgee gyùudan-ee	tlaagaang-7wa-gan rad
+these horse-DEF		start-PL-PST	 run
+`These horses started to run.'
 
 # 24 aux
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: {wo}
-diiga ’laa-srun tla.adgan tlaagaang
-dii-ga ’laa-srun tla.ad-gan tlaagaang
-1SG.ACC-PP 3SG.NOM-only help-PST first
-`Only he helped me first.' or `Only they helped me first.'
+Phenomena: {tam}
+7aasgee gyùudanee rad tlaagaang7wagan
+7aasgee gyùudan-ee 	rad-7wa-gan	tlaagaang
+these 	horse-DEF 	run-PL-PST	start
+`These horses started to run.'
 
 # 25 wo pronoun and common noun. adapted from p 47
 Source: author
@@ -605,7 +605,7 @@ hlaa qing-7wa-gan
 1SG.NOM see-PL-PST
 `I saw it.'
 
-# 60 agreement
+# 61 agreement
 Source: author
 Vetted: f
 Judgment: g
