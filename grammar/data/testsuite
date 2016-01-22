@@ -611,6 +611,116 @@ Vetted: f
 Judgment: g
 Phenomena: {agr}
 dii qing7wagan
-dii 	qing-7wa-gan
-1SG.ACC	see-PL-PST
+dii qing-7wa-gan
+1SG.ACC see-PL-PST
 `He saw me.'
+
+# 62 possession - alienable gyaa form 1p
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+Mary dalang gyaa ts’agts’aggee qinggan
+Mary dalang gyaa ts’agts’ag-gee qing-gan
+Mary 2p POSS wagon-DF see-PST
+`Mary saw your wagon.'
+
+# 63 possession - alienable gyaa form non-1p
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+Mary gyaagan ts’agts’aggee qinggan
+Mary gyaagan ts’agts’ag-gee qing-gan
+Mary my wagon-DF see-PST
+`Mary saw my wagon.'
+
+# 64 possession - alienable -ra form
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+Mary ts’agts’aggee daangaa qinggan
+Mary ts’agts’ag-gee daangaa qing-gan
+Mary wagon-DEF your see-PST
+`Mary saw your wagon.'
+
+# 65 possession - alienable NP
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+Mary Bill gyaa ts’agts’aggee qinggan
+Mary Bill gyaa ts’agts’ag-gee qing-gan
+Mary Bill POSS wagon-DF see-PST
+`Mary saw Bill's wagon.'
+
+# 66 possession - alienable NP
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+Mary Bill ts’agts’aggee qinggan
+Mary Bill ts’agts’ag-gee qing-gan
+Mary Bill wagon-DF see-PST
+`Mary saw Bill's wagon.'
+
+# 67 possession - inalienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+dii naan Bill gyaa ts’agts’aggee qinggan
+dii naan Bill gyaa ts’agts’ag-gee qing-gan
+my grandmother Bill POSS wagon-DF see-PST
+`My grandmother saw Bill's wagon.'
+
+# 68 possession - inalienable
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+gyaagan naan Bill gyaa ts’agts’aggee qinggan
+gyaagan naan Bill gyaa ts’agts’ag-gee qing-gan
+my grandmother Bill POSS wagon-DF see-PST
+`My grandmother saw Bill's wagon.'
+
+# 69 possession - mixed alienable/inalienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+dii naan gyaa gyùudanee dladahldagan
+dii naan gyaa gyùudan-ee dladahlda-gan
+my grandmother POSS horse-DEF fall.down-PST
+`My grandmother's horse fell down.'
+
+# 70 possession - mixed alienable/inalienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+dii naan gyaa ts’agts’aggee diinaa dladahldagan
+dii naan gyaa ts’agts’ag-gee diinaa dladahlda-gan
+my grandmother POSS wagon-DEF my fall.down-PST
+`My grandmother's wagon of mine fell down.'
+
+# 71 possession - alienable -ra with dem and pn
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss, wo, det}
+waaniis 'laangaa gyùudanee dladahldagan
+waaniis 'laangaa gyùudan-ee dladahlda-gan
+that her horse-DEF fall.down-PST
+`That horse of hers fell down.' or `That one of her horses fell down.'
+
+# 72 possession - alienable -ra with dem and pn
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss, wo, det}
+waaniis gyùudanee 'laangaa dladahldagan
+waaniis gyùudan-ee 'laangaa dladahlda-gan
+that horse-DEF her fall.down-PST
+`That horse of hers fell down.' or `That one of her horses fell down.'
