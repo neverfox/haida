@@ -19,9 +19,9 @@
 19@author@@@1@det@gyùudan 7aasgee rad-7wa-gan@@@@0@3@horse these run-PL-PST`These horses ran.'@roman pearah & kristen piepgrass@january 14, 2016
 20@author@@@1@det@7aasgee 7ittl’ dladahlda-gan@@@@0@3@these 1PL.ACC fall.down-PST`These we fell down.'@roman pearah & kristen piepgrass@january 14, 2016
 21@author@@@1@det@gyùudan dladahlda-gan@@@@1@2@horse fall.down-PST`A horse fell down.'@roman pearah & kristen piepgrass@january 14, 2016
-22@a: 1193@@@1@wo,pn@dii-ga ’laa-srun tla.ad tlaagaang-gan@@@@1@4@1SG.ACC-PP 3SG.NOM-only help first-PST`Only he helped me first.'@roman pearah & kristen piepgrass@january 14, 2016
-23@author@@@1@wo@dii-ga ’laa-srun tlaagaang-gan tla.ad@@@@0@4@1SG.ACC-PP 3SG.NOM-only first-PST help`Only he helped me first.' or `Only they helped me first.'@roman pearah & kristen piepgrass@january 14, 2016
-24@author@@@1@wo@dii-ga ’laa-srun tla.ad-gan tlaagaang@@@@0@4@1SG.ACC-PP 3SG.NOM-only help-PST first`Only he helped me first.' or `Only they helped me first.'@roman pearah & kristen piepgrass@january 14, 2016
+22@a: 1193@@@1@wo,tam@7aasgee gyùudan-ee rad tlaagaang-7wa-gan@@@@1@4@these horse-DEF run start-PL-PST`These horses started to run.'@roman pearah & kristen piepgrass@january 14, 2016
+23@author@@@1@wo@7aasgee gyùudan-ee tlaagaang-7wa-gan rad@@@@0@4@these horse-DEF start-PL-PST run`These horses started to run.'@roman pearah & kristen piepgrass@january 14, 2016
+24@author@@@1@tam@7aasgee gyùudan-ee rad-7wa-gan tlaagaang@@@@0@4@these horse-DEF run-PL-PST start`These horses started to run.'@roman pearah & kristen piepgrass@january 14, 2016
 25@author@@@1@wo@naan ’laa qing-gan@@@@1@3@grandmother 3.SG see-PST`A grandmother saw him.' or `He saw a grandmother.'@roman pearah & kristen piepgrass@january 14, 2016
 26@author@@@1@wo@’laa naan qing-gan@@@@1@3@3.SG grandmother see-PST`A grandmother saw him.' or `He saw grandmother.'@roman pearah & kristen piepgrass@january 14, 2016
 27@author@@@1@wo,pn,c@dalang dalang qing-gan@@@@1@3@2PL.ACC 2PL.NOM see-PST`You saw me.'@roman pearah & kristen piepgrass@january 14, 2016
@@ -38,10 +38,10 @@
 38@author@@@1@det@gyùudan-ee rad-7wa-gan@@@@1@2@horse-DEF run-PL-PST`Horses ran.'@roman pearah & kristen piepgrass@january 14, 2016
 39@author@@@1@det@gyùudan-ee 7aasgee rad-7wa-gan@@@@0@3@horse-DEF these run-PL-PST`These horses ran.'@roman pearah & kristen piepgrass@january 14, 2016
 40@author@@@1@det@hlaa 7aasgee srid-s ts’agts’agg qing-7wa-gan@@@@1@5@1SG.NOM these he.red-PST wagons see-PL-PST`I saw these red wagons.'@roman pearah & kristen piepgrass@january 14, 2016
-41@author@@@1@neg@gyùudan-ee ts’agts’ag-gee gam qing-.ang-gan@@@@1@4@horse-DEF wagon-DEF NEG see-NEG-PST`The horse did not see the wagon.'@roman pearah & kristen piepgrass@january 14, 2016
+41@author@@@1@neg@gam gyùudan-ee ts’agts’ag-gee qing-.ang-gan@@@@1@4@NEG horse-DEF wagon-DEF see-NEG-PST`The horse did not see the wagon.'@roman pearah & kristen piepgrass@january 14, 2016
 42@author@@@1@neg@gyùudan-ee ts’agts’ag-gee qing-.ang-gan@@@@0@3@horse-DEF wagon-DEF see-NEG-PST`The horse did not see the wagon.'@roman pearah & kristen piepgrass@january 14, 2016
-43@author@@@1@neg@gyùudan-ee ts’agts’ag-gee gam qing-gan@@@@0@4@horse-DEF wagon-DEF NEG see-PST`The horse did not see the wagon.'@roman pearah & kristen piepgrass@january 14, 2016
-44@author@@@1@neg@gyùudan-ee ts’agts’ag-gee gam qing-gan-.ang@@@@0@4@horse-DEF wagon-DEF NEG see-PST-NEG`The horse did not see the wagon.'@roman pearah & kristen piepgrass@january 14, 2016
+43@author@@@1@neg@gam gyùudan-ee ts’agts’ag-gee qing-gan@@@@0@4@NEG horse-DEF wagon-DEF see-PST`The horse did not see the wagon.'@roman pearah & kristen piepgrass@january 14, 2016
+44@author@@@1@neg@gam gyùudan-ee ts’agts’ag-gee qing-gan-.ang@@@@0@4@NEG horse-DEF wagon-DEF see-PST-NEG`The horse did not see the wagon.'@roman pearah & kristen piepgrass@january 14, 2016
 45@author@@@1@tam@gyùudan-ee ts’agts’ag-gee qing-gan@@@@1@3@horse-DEF wagon-DEF see-PST`The horse saw the wagon.'@roman pearah & kristen piepgrass@january 14, 2016
 46@author@@@1@tam@gyùudan-ee ts’agts’ag-gee qing-gang@@@@1@3@horse-DEF wagon-DEF see-PRS`The horse sees the wagon.'@roman pearah & kristen piepgrass@january 14, 2016
 47@author@@@1@tam@gyùudan-ee ts’agts’ag-gee qing-.asa-gang@@@@1@3@horse-DEF wagon-DEF see-FUT-PRS`The horse will see the wagon.'@roman pearah & kristen piepgrass@january 14, 2016
@@ -58,4 +58,15 @@
 58@author@@@1@agr@hlaa daa qing-7wa-gan@@@@0@3@1SG.NOM 2SG.ACC see-PL-PST`I saw him.'@roman pearah & kristen piepgrass@january 14, 2016
 59@author@@@1@agr@hlaa ts’agts’ag-gee qing-gan-7wa@@@@0@3@1SG.NOM wagon-DEF see-PST-PL`I saw the wagons.'@roman pearah & kristen piepgrass@january 14, 2016
 60@author@@@1@agr@hlaa qing-7wa-gan@@@@1@2@1SG.NOM see-PL-PST`I saw it.'@roman pearah & kristen piepgrass@january 14, 2016
-61@author@@@1@agr@dii 	qing-7wa-gan@@@@1@2@1SG.ACC	see-PL-PST`He saw me.'@roman pearah & kristen piepgrass@january 14, 2016
+61@author@@@1@agr@dii qing-7wa-gan@@@@1@2@1SG.ACC see-PL-PST`He saw me.'@roman pearah & kristen piepgrass@january 14, 2016
+62@author@@@1@poss@Mary dalang gyaa ts’agts’ag-gee qing-gan@@@@1@5@Mary 2p POSS wagon-DF see-PST`Mary saw your wagon.'@roman pearah & kristen piepgrass@january 14, 2016
+63@author@@@1@poss@Mary gyaagan ts’agts’ag-gee qing-gan@@@@1@4@Mary my wagon-DF see-PST`Mary saw my wagon.'@roman pearah & kristen piepgrass@january 14, 2016
+64@author@@@1@poss@Mary ts’agts’ag-gee daangaa qing-gan@@@@1@4@Mary wagon-DEF your see-PST`Mary saw your wagon.'@roman pearah & kristen piepgrass@january 14, 2016
+65@author@@@1@poss@Mary Bill gyaa ts’agts’ag-gee qing-gan@@@@1@5@Mary Bill POSS wagon-DF see-PST`Mary saw Bill's wagon.'@roman pearah & kristen piepgrass@january 14, 2016
+66@author@@@1@poss@Mary Bill ts’agts’ag-gee qing-gan@@@@0@4@Mary Bill wagon-DF see-PST`Mary saw Bill's wagon.'@roman pearah & kristen piepgrass@january 14, 2016
+67@author@@@1@poss@dii naan Bill gyaa ts’agts’ag-gee qing-gan@@@@1@6@my grandmother Bill POSS wagon-DF see-PST`My grandmother saw Bill's wagon.'@roman pearah & kristen piepgrass@january 14, 2016
+68@author@@@1@poss@gyaagan naan Bill gyaa ts’agts’ag-gee qing-gan@@@@0@6@my grandmother Bill POSS wagon-DF see-PST`My grandmother saw Bill's wagon.'@roman pearah & kristen piepgrass@january 14, 2016
+69@author@@@1@poss@dii naan gyaa gyùudan-ee dladahlda-gan@@@@1@5@my grandmother POSS horse-DEF fall.down-PST`My grandmother's horse fell down.'@roman pearah & kristen piepgrass@january 14, 2016
+70@author@@@1@poss@dii naan gyaa ts’agts’ag-gee diinaa dladahlda-gan@@@@1@6@my grandmother POSS wagon-DEF my fall.down-PST`My grandmother's wagon of mine fell down.'@roman pearah & kristen piepgrass@january 14, 2016
+71@author@@@1@poss,wo,det@waaniis 'laangaa gyùudan-ee dladahlda-gan@@@@1@4@that her horse-DEF fall.down-PST`That horse of hers fell down.' or `That one of her horses fell down.'@roman pearah & kristen piepgrass@january 14, 2016
+72@author@@@1@poss,wo,det@waaniis gyùudan-ee 'laangaa dladahlda-gan@@@@0@4@that horse-DEF her fall.down-PST`That horse of hers fell down.' or `That one of her horses fell down.'@roman pearah & kristen piepgrass@january 14, 2016
