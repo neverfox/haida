@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Haida
 ;;; created at:
-;;;     Fri Jan 22 01:04:11 UTC 2016
+;;;     Fri Jan 22 03:01:13 UTC 2016
 ;;; based on Matrix customization system version of:
 ;;;     Sun Jan 10 22:56:48 UTC 2016
 ;;;
@@ -65,6 +65,13 @@ pl := number.
 nonpast := tense.
 present := nonpast.
 past := tense.
+
+;;; Aspect
+
+perfective := aspect.
+imperfective := aspect.
+progressive := imperfective.
+frequentive := imperfective.
 
 ;;; Mood
 
@@ -139,9 +146,11 @@ acc-pron-noun-lex := no-spr-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
                                        PER 2nd ] ].
 
+pn-noun-lex := no-spr-noun-lex.
+
 ;;; Verbs
 
-verb-lex := basic-verb-lex & non-mod-lex-item & modal-rule-dtr & tense-rule-dtr &
+verb-lex := basic-verb-lex & non-mod-lex-item & modal-2-rule-dtr & negation-rule-dtr & tense-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
                              SPEC < >,
                              SUBJ < #subj > ],
@@ -218,14 +227,15 @@ neg-comp-lex := basic-scopal-adverb-lex &
 
 ;;; Intermediate rule types
 
-modal-rule-dtr := word-or-lexrule.
+modal-2-rule-dtr := word-or-lexrule.
+negation-rule-dtr := word-or-lexrule.
 tense-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
-negation-lex-rule-super := infl-lex-rule & modal-rule-dtr & tense-rule-dtr & val-change-only-lex-rule &
+negation-lex-rule-super := infl-lex-rule & modal-2-rule-dtr & tense-rule-dtr & val-change-only-lex-rule &
   [ INFLECTED #infl,
-    DTR verb-lex &
+    DTR negation-rule-dtr &
         [ INFLECTED #infl ] ].
 
 neg-lex-rule := negation-lex-rule-super &
@@ -241,12 +251,12 @@ neg-lex-rule := negation-lex-rule-super &
                                  COMPS #oldcomps ],
                        CONT.HOOK #hook ] ].
 
-modal-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & tense-rule-dtr &
+modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & tense-rule-dtr &
   [ INFLECTED #infl,
-    DTR modal-rule-dtr &
+    DTR modal-2-rule-dtr &
         [ INFLECTED #infl ] ].
 
-FUT-lex-rule := modal-lex-rule-super &
+fut-lex-rule := modal-2-lex-rule-super &
   [ INFLECTED.FUT-FLAG +,
     SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD future ].
 
@@ -256,12 +266,29 @@ tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
     DTR tense-rule-dtr &
         [ INFLECTED.FUT-FLAG #fut ] ].
 
-PST-lex-rule := tense-lex-rule-super &
+past-lex-rule := tense-lex-rule-super &
   [ DTR.INFLECTED.FUT-FLAG na,
     SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past ].
 
-NON-PST-lex-rule := tense-lex-rule-super &
+non-past-lex-rule := tense-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast ].
+
+aspect-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & negation-rule-dtr & tense-rule-dtr &
+  [ INFLECTED #infl,
+    DTR verb-lex &
+        [ INFLECTED #infl ] ].
+
+perf-aspect-lex-rule := aspect-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT perfective ].
+
+imperf-aspect-lex-rule := aspect-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT imperfective ].
+
+prog-aspect-lex-rule := imperf-aspect-lex-rule &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT progressive ].
+
+freq-aspect-lex-rule := imperf-aspect-lex-rule &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT frequentive ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types

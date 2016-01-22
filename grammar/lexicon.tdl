@@ -53,6 +53,14 @@ dang := 2sg-acc-pron-noun-lex &
   [ STEM < "dang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
+Bill := pn-noun-lex &
+  [ STEM < "Bill" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Bill_n_rel" ].
+
+Mary := pn-noun-lex &
+  [ STEM < "Mary" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Mary_n_rel" ].
+
 ;;; Adjectives
 
 ;;; Verbs

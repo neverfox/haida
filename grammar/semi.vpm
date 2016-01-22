@@ -58,6 +58,10 @@ E.TENSE : E.TENSE
   * <> *
 
 E.ASPECT : E.ASPECT
+  perfective <> perfective
+  progressive <> progressive
+  frequentive <> frequentive
+  imperfective <> imperfective
   * <> *
 
 E.MOOD : E.MOOD

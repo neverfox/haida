@@ -5,14 +5,26 @@ neg-suffix :=
 %suffix (* -.ang)
 neg-lex-rule.
 
-FUT-suffix :=
+fut-suffix :=
 %suffix (* -.asa)
-FUT-lex-rule.
+fut-lex-rule.
 
-PST-suffix :=
+past-suffix :=
 %suffix (* -gan)
-PST-lex-rule.
+past-lex-rule.
 
-NON-PST-suffix :=
+non-past-suffix :=
 %suffix (* -gang)
-NON-PST-lex-rule.
+non-past-lex-rule.
+
+perf-aspect-suffix :=
+%suffix (* -gii)
+perf-aspect-lex-rule.
+
+prog-aspect-suffix :=
+%suffix (* -da)
+prog-aspect-lex-rule.
+
+freq-aspect-suffix :=
+%suffix (* -gang)
+freq-aspect-lex-rule.
