@@ -251,7 +251,7 @@ Vetted: f
 Judgment: g
 Phenomena: {wo}
 naan ’la qinggan
-naan ’la qing-gan
+naan ’laa qing-gan
 grandmother 3.SG see-PST
 `A grandmother saw him.' or `He saw a grandmother.'
 
@@ -474,3 +474,83 @@ gyùudanee ts’agts’aggee qing.asaang
 gyùudan-ee ts’agts’agg-ee qing-.asa-gang
 horse-DEF wagon-DEF see-FUT
 `The horse will see the wagon.'
+
+# 48 perfective aspect
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+gyùudanee dladahldagiigan
+gyùudan-ee dladahlda-gii-gan
+horse-DEF fall.down-PFV-PST
+`The horse has fallen down.'
+
+# 49 perfective aspect
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+gyùudanee dladahldagangii
+gyùudan-ee dladahlda-gan-gii
+horse-DEF fall.down-PST-PFV
+`The horse has fallen down.'
+
+# 50 perfective aspect w/ negation
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam, neg}
+gam gyùudanee dladahldagii.anggan
+gam gyùudan-ee dladahlda-gii-.ang-gan
+NEG horse-DEF fall.down-PFV-NEG-PST
+`The horse hasn't fallen down.'
+
+# 51 perfective aspect w/ negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam, neg}
+gam gyùudanee dladahldagandii
+gam gyùudan-ee dladahlda-.ang-gii-gan
+NEG horse-DEF fall.down-NEG-PST-PFV
+`The horse hasn't fallen down.'
+
+# 52 progressive aspect
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+gyùudanee raddagang
+gyùudan-ee rad-da-gang
+horse-DEF run-PROG-PRS
+`The horse is running.'
+
+# 53 progressive aspect
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+gyùudanee radgangda
+gyùudan-ee rad-gang-da
+horse-DEF run-PRS-PROG
+`The horse is running.'
+
+# 54 frequentive aspect
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+gyùudanee raddagang
+gyùudan-ee rad-da-gang
+horse-DEF run-FREQ-PRS
+`The horse often runs.' or `The horse usually runs.'
+
+# 55 frequentive aspect
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+gyùudanee radgangda
+gyùudan-ee rad-gang-da
+horse-DEF run-PRS-FREQ
+`The horse often runs.' or `The horse usually runs.'
