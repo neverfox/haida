@@ -216,4 +216,6 @@ Morphological rules for tense (3) and negation (1) were added and are described 
 
 ## Limitations
 
+**TODO: talk about how we used the long form of the pronoun on translit-seg (which we use as parse input), while marking difference in short/long on translit.**
+
 ## Coverage
