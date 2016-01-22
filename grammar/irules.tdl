@@ -5,14 +5,14 @@ neg-suffix :=
 %suffix (* -.ang)
 neg-lex-rule.
 
-past-suffix :=
+FUT-suffix :=
+%suffix (* -sa)
+FUT-lex-rule.
+
+PST-suffix :=
 %suffix (* -gan)
-past-lex-rule.
+PST-lex-rule.
 
-present-suffix :=
+NON-PST-suffix :=
 %suffix (* -gang)
-present-lex-rule.
-
-future-suffix :=
-%suffix (* -.asaang)
-future-lex-rule.
+NON-PST-lex-rule.

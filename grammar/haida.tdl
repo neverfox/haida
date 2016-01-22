@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Haida
 ;;; created at:
-;;;     Wed Jan 20 22:32:21 UTC 2016
+;;;     Thu Jan 21 22:49:42 UTC 2016
 ;;; based on Matrix customization system version of:
 ;;;     Sun Jan 10 22:56:48 UTC 2016
 ;;;
@@ -22,11 +22,11 @@ noun :+ [ CASE case ].
 
 head :+ [ NEGATED luk ].
 
-inflected :+ [ TENSE-FLAG luk,
-    VERB-FLAG luk ].
+inflected :+ [ PAST-FLAG luk,
+    FUT-OR-PRS-FLAG luk ].
 
-infl-satisfied :+ [ TENSE-FLAG na-or-+,
-    VERB-FLAG na-or-+ ].
+infl-satisfied :+ [ PAST-FLAG na-or-+,
+    FUT-OR-PRS-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number ].
@@ -59,6 +59,13 @@ person := *top*.
 number := *top*.
 sg := number.
 pl := number.
+
+;;; Tense
+
+nonpast := tense.
+present := nonpast.
+future := nonpast.
+past := tense.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
@@ -131,7 +138,7 @@ acc-pron-noun-lex := no-spr-noun-lex &
 
 ;;; Verbs
 
-verb-lex := basic-verb-lex & non-mod-lex-item &
+verb-lex := basic-verb-lex & non-mod-lex-item & future-rule-dtr & past-rule-dtr &
   [ SYNSEM.LOCAL [ CAT.VAL [ SPR < >,
                              SPEC < >,
                              SUBJ < #subj > ],
@@ -140,8 +147,8 @@ verb-lex := basic-verb-lex & non-mod-lex-item &
                  [ LOCAL [ CAT.VAL [ SPR < >,
                                      COMPS < > ],
                            CONT.HOOK.INDEX #xarg ] ],
-    INFLECTED [ VERB-FLAG +,
-                TENSE-FLAG - ] ].
+    INFLECTED [ PAST-FLAG -,
+                FUT-OR-PRS-FLAG na-or-- ] ].
 
 intransitive-verb-lex := verb-lex & intransitive-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < >,
@@ -207,9 +214,14 @@ neg-comp-lex := basic-scopal-adverb-lex &
 ;;; Lexical Rules
 ;;;;;;;;;;;;;;;;;;;
 
+;;; Intermediate rule types
+
+future-rule-dtr := word-or-lexrule.
+past-rule-dtr := word-or-lexrule.
+
 ;;; Lexical rule types
 
-negation-lex-rule-super := infl-lex-rule & val-change-only-lex-rule &
+negation-lex-rule-super := future-rule-dtr & infl-lex-rule & past-rule-dtr & val-change-only-lex-rule &
   [ INFLECTED #infl,
     DTR verb-lex &
         [ INFLECTED #infl ] ].
@@ -227,20 +239,32 @@ neg-lex-rule := negation-lex-rule-super &
                                  COMPS #oldcomps ],
                        CONT.HOOK #hook ] ].
 
-tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
-  [ INFLECTED [ TENSE-FLAG +,
-                VERB-FLAG #verb ],
-    DTR verb-lex &
-        [ INFLECTED.VERB-FLAG #verb ] ].
+future-lex-rule-super := add-only-no-ccont-rule & past-rule-dtr &
+  [ INFLECTED #infl,
+    DTR future-rule-dtr &
+        [ INFLECTED #infl ] ].
 
-past-lex-rule := tense-lex-rule-super &
-  [ DTR.INFLECTED.VERB-FLAG + ].
+FUT-lex-rule := future-lex-rule-super & infl-lex-rule &
+  [ INFLECTED.FUT-OR-PRS-FLAG +,
+    SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE future ].
 
-future-lex-rule := tense-lex-rule-super &
-  [ DTR.INFLECTED.VERB-FLAG + ].
+PRS-lex-rule := const-lex-rule & future-lex-rule-super &
+  [ INFLECTED.FUT-OR-PRS-FLAG +,
+    SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE present ].
 
-present-lex-rule := tense-lex-rule-super &
-  [ DTR.INFLECTED.VERB-FLAG + ].
+past-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED [ PAST-FLAG +,
+                FUT-OR-PRS-FLAG #fut-or-prs ],
+    DTR past-rule-dtr &
+        [ INFLECTED.FUT-OR-PRS-FLAG #fut-or-prs ] ].
+
+NON-PST-lex-rule := past-lex-rule-super &
+  [ DTR.INFLECTED.FUT-OR-PRS-FLAG +,
+    SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast ].
+
+PST-lex-rule := past-lex-rule-super &
+  [ DTR.INFLECTED.FUT-OR-PRS-FLAG na,
+    SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types

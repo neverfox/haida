@@ -31,7 +31,7 @@ Vetted: s
 Judgment: g
 Phenomena: {wo}
 ts’agts’aggee gyùudanee tlagaaydagan
-ts’agts’ag-gee gyùundan-ee tlagaay-da-gan
+ts’agts’ag-gee gyùudan-ee tlagaay-da-gan
 wagon-DEF horse-DEF get.injured-CAUSE-PST
 `The wagon injured the horse.' or `The horse damaged the wagon.'
 
@@ -41,7 +41,7 @@ Vetted: s
 Judgment: g
 Phenomena: {wo}
 gyùudanee ts’agts’aggee tlagaaydagan
-gyùundan-ee ts’agts’ag-gee tlagaay-da-gan
+gyùudan-ee ts’agts’ag-gee tlagaay-da-gan
 horse-DEF wagon-DEF get.injured-CAUSE-PST
 `The horse damaged the wagon.'
 
@@ -51,7 +51,7 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 gyùudanee tlagaaydagan ts’agts’aggee
-gyùundan-ee tlagaay-da-gan ts’agts’ag-gee
+gyùudan-ee tlagaay-da-gan ts’agts’ag-gee
 horse-DEF get.injured-CAUSE-PST wagon-DEF
 `The horse damaged the wagon.'
 
@@ -61,7 +61,7 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 tlagaaydagan gyùudanee ts’agts’aggee
-tlagaay-da-gan gyùundan-ee ts’agts’ag-gee
+tlagaay-da-gan gyùudan-ee ts’agts’ag-gee
 get.injured-CAUSE-PST horse-DEF wagon-DEF
 `The horse damaged the wagon.'
 
@@ -71,7 +71,7 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 tlagaaydagan ts’agts’aggee gyùudanee
-tlagaay-da-gan ts’agts’ag-gee gyùundan-ee
+tlagaay-da-gan ts’agts’ag-gee gyùudan-ee
 get.injured-CAUSE-PST wagon-DEF horse-DEF
 `The horse damaged the wagon.'
 
@@ -81,7 +81,7 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 ts’agts’aggee tlagaaydagan gyùudanee
-ts’agts’ag-gee tlagaay-da-gan gyùundan-ee
+ts’agts’ag-gee tlagaay-da-gan gyùudan-ee
 wagon-DEF get.injured-CAUSE-PST horse-DEF
 `The wagon injured the horse' or `The horse damaged the wagon.'
 
@@ -131,7 +131,7 @@ Vetted: f
 Judgment: u
 Phenomena: {c}
 dalang hla qinggan
-dalang hla qing-gan
+dalang hlaa qing-gan
 2PL.NOM 1SG.NOM see-PST
 `I saw you.'
 
@@ -351,7 +351,7 @@ Vetted: f
 Judgment: u
 Phenomena: {c}
 hla dladahldagan
-hla dladahlda-gan
+hlaa dladahlda-gan
 1SG.ACC fall.down-PST
 `I fell down.'
 
@@ -401,7 +401,7 @@ Vetted: f
 Judgment: g
 Phenomena: {det}
 hlaa 7aasgee srids ts’agts’agg qinggan
-hlaa 7aasgee srid-s ts’agts’ag qing-gan
+hlaa 7aasgee srid-s ts’agts’agg qing-gan
 1SG.NOM these he.red-PST wagons see-PST
 `I saw these red wagons.'
 
@@ -411,7 +411,7 @@ Vetted: f
 Judgment: g
 Phenomena: {neg}
 gyùudanee ts’agts’aggee gam qing.anggan
-gyùundan-ee ts’agts’ag-gee gam qing-.ang-gan
+gyùudan-ee ts’agts’agg-ee gam qing-.ang-gan
 horse-DEF wagon-DEF NEG see-NEG-PST
 `The horse did not see the wagon.'
 
@@ -421,7 +421,7 @@ Vetted: f
 Judgment: u
 Phenomena: {neg}
 gyùudanee ts’agts’aggee qing.anggan
-gyùundan-ee ts’agts’ag-gee qing-.ang-gan
+gyùudan-ee ts’agts’agg-ee qing-.ang-gan
 horse-DEF wagon-DEF see-NEG-PST
 `The horse did not see the wagon.'
 
@@ -431,7 +431,7 @@ Vetted: f
 Judgment: u
 Phenomena: {neg}
 gyùudanee ts’agts’aggee gam qinggan
-gyùundan-ee ts’agts’ag-gee gam qing-gan
+gyùudan-ee ts’agts’agg-ee gam qing-gan
 horse-DEF wagon-DEF NEG see-PST
 `The horse did not see the wagon.'
 
@@ -441,7 +441,7 @@ Vetted: f
 Judgment: u
 Phenomena: {neg}
 gyùudanee ts’agts’aggee gam qinggan.ang
-gyùundan-ee ts’agts’ag-gee gam qing-gan-.ang
+gyùudan-ee ts’agts’agg-ee gam qing-gan-.ang
 horse-DEF wagon-DEF NEG see-PST-NEG
 `The horse did not see the wagon.'
 
@@ -451,7 +451,7 @@ Vetted: f
 Judgment: g
 Phenomena: {tam}
 gyùudanee ts’agts’aggee qinggan
-gyùundan-ee ts’agts’ag-gee qing-gan
+gyùudan-ee ts’agts’agg-ee qing-gan
 horse-DEF wagon-DEF see-PST
 `The horse saw the wagon.'
 
@@ -461,7 +461,7 @@ Vetted: f
 Judgment: g
 Phenomena: {tam}
 gyùudanee ts’agts’aggee qinggang
-gyùundan-ee ts’agts’ag-gee qing-gang
+gyùudan-ee ts’agts’agg-ee qing-gang
 horse-DEF wagon-DEF see-PRS
 `The horse sees the wagon.'
 
@@ -471,6 +471,6 @@ Vetted: f
 Judgment: g
 Phenomena: {tam}
 gyùudanee ts’agts’aggee qing.asaang
-gyùundan-ee ts’agts’ag-gee qing-.asaang
+gyùudan-ee ts’agts’agg-ee qing-.asaang
 horse-DEF wagon-DEF see-FUT
 `The horse will see the wagon.'

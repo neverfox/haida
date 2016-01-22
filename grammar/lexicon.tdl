@@ -1,12 +1,12 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Nouns
 
-gyùudanee := cn-noun-lex &
-  [ STEM < "gyùudanee" >,
+gyùudan-ee := cn-noun-lex &
+  [ STEM < "gyùudan-ee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_horse_n_rel" ].
 
-ts’agts’aggee := cn-noun-lex &
-  [ STEM < "ts’agts’aggee" >,
+ts’agts’agg-ee := cn-noun-lex &
+  [ STEM < "ts’agts’agg-ee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wagon_n_rel" ].
 
 naanaa := cn-noun-lex &
@@ -21,36 +21,16 @@ hlaa := 1sg-nom-pron-noun-lex &
   [ STEM < "hlaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-hl := 1sg-nom-pron-noun-lex &
-  [ STEM < "hl" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
-
-hla := 1sg-nom-pron-noun-lex &
-  [ STEM < "hla" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
-
 t’alang := 1pl-nom-pron-noun-lex &
   [ STEM < "t’alang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
-
-t’all := 1pl-nom-pron-noun-lex &
-  [ STEM < "t’all" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
 daa := 2sg-nom-pron-noun-lex &
   [ STEM < "daa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-dang_1 := 2sg-nom-pron-noun-lex &
-  [ STEM < "dang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
-
 ’laa := 3p-hpot-pron-noun-lex &
   [ STEM < "’laa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
-
-’la := 3p-hpot-pron-noun-lex &
-  [ STEM < "’la" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
 dii := 1sg-acc-pron-noun-lex &
@@ -65,19 +45,11 @@ dalang := 2pl-pron-noun-lex &
   [ STEM < "dalang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-dall := 2pl-pron-noun-lex &
-  [ STEM < "dall" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
-
 7waa := 3p-lpot-pron-noun-lex &
   [ STEM < "7waa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-7wa := 3p-lpot-pron-noun-lex &
-  [ STEM < "7wa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
-
-dang_2 := 2sg-acc-pron-noun-lex &
+dang := 2sg-acc-pron-noun-lex &
   [ STEM < "dang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
