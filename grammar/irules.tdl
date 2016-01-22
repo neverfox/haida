@@ -6,7 +6,7 @@ neg-suffix :=
 neg-lex-rule.
 
 FUT-suffix :=
-%suffix (* -sa)
+%suffix (* -.asa)
 FUT-lex-rule.
 
 PST-suffix :=
