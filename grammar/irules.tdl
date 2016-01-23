@@ -29,10 +29,10 @@ freq-aspect-suffix :=
 %suffix (* -gang)
 freq-aspect-lex-rule.
 
-PL-SUBJ-suffix :=
+pl-subj-suffix :=
 %suffix (* -7wa)
-PL-SUBJ-lex-rule.
+pl-subj-lex-rule.
 
-PL-obj-suffix :=
+pl-obj-suffix :=
 %suffix (* -7wa)
-PL-obj-lex-rule.
+pl-obj-lex-rule.
