@@ -32,7 +32,7 @@ Judgment: g
 Phenomena: {wo}
 ts’agts’aggee gyùudanee tlagaaydagan
 ts’agts’ag-gee gyùudan-ee tlagaayda-gan
-wagon-DEF horse-DEF get.injure-PST
+wagon-DEF horse-DEF injure-PST
 `The wagon injured the horse.' or `The horse damaged the wagon.'
 
 # 4 tr wo
@@ -42,7 +42,7 @@ Judgment: g
 Phenomena: {wo}
 gyùudanee ts’agts’aggee tlagaaydagan
 gyùudan-ee ts’agts’ag-gee tlagaayda-gan
-horse-DEF wagon-DEF get.injure-PST
+horse-DEF wagon-DEF injure-PST
 `The horse damaged the wagon.'
 
 # 5 tr wo
@@ -52,7 +52,7 @@ Judgment: u
 Phenomena: {wo}
 gyùudanee tlagaaydagan ts’agts’aggee
 gyùudan-ee tlagaayda-gan ts’agts’ag-gee
-horse-DEF get.injure-PST wagon-DEF
+horse-DEF injure-PST wagon-DEF
 `The horse damaged the wagon.'
 
 # 6 tr wo
@@ -62,7 +62,7 @@ Judgment: u
 Phenomena: {wo}
 tlagaaydagan gyùudanee ts’agts’aggee
 tlagaayda-gan gyùudan-ee ts’agts’ag-gee
-get.injure-PST horse-DEF wagon-DEF
+injure-PST horse-DEF wagon-DEF
 `The horse damaged the wagon.'
 
 # 7 tr wo
@@ -72,7 +72,7 @@ Judgment: u
 Phenomena: {wo}
 tlagaaydagan ts’agts’aggee gyùudanee
 tlagaayda-gan ts’agts’ag-gee gyùudan-ee
-get.injure-PST wagon-DEF horse-DEF
+injure-PST wagon-DEF horse-DEF
 `The horse damaged the wagon.'
 
 # 8 tr wo
@@ -82,7 +82,7 @@ Judgment: u
 Phenomena: {wo}
 ts’agts’aggee tlagaaydagan gyùudanee
 ts’agts’ag-gee tlagaayda-gan gyùudan-ee
-wagon-DEF get.injure-PST horse-DEF
+wagon-DEF injure-PST horse-DEF
 `The wagon injured the horse' or `The horse damaged the wagon.'
 
 # 9 tr wo with pns
@@ -599,21 +599,21 @@ hlaa ts’agts’ag-gee qing-gan-7wa
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: {pro-d}
+Phenomena: {agr, pro-d}
 hlaa qing7wagan
 hlaa qing-7wa-gan
 1SG.NOM see-PL-PST
-`I saw it.'
+`I saw them.'
 
 # 61 argument optionality
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: {pro-d}
+Phenomena: {agr, pro-d}
 dii qing7wagan
 dii qing-7wa-gan
 1SG.ACC see-PL-PST
-`He saw me.'
+`They saw me.'
 
 # 62 possession - alienable gyaa form 1p
 Source: author

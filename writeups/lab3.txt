@@ -51,41 +51,7 @@ choices:
 
 #### Inceptive
 
-The `inceptive` auxiliary aspect takes an uninflected verb as a complement and then gets all of the inflection as the head. The customization system requires you to specify a FORM, so this required:
-
-* an addition to the lexicon for the auxiliary that selects for a finite complement:
-
-  ```
-  aux1_name=inceptive
-  aux1_sem=add-pred
-    aux1_feat1_name=aspect
-    aux1_feat1_value=inceptive
-    aux1_feat1_head=verb
-  aux1_subj=np-comp-case
-    aux1_compfeature1_name=form
-    aux1_compfeature1_value=finite
-    aux1_stem1_orth=tlaagaang
-    aux1_stem1_pred=_start_v_rel
-  
-  ```
-
-* a pair of non-affix lexical rules to mark verbs as non-finite or finite:
-
-  ```
-  verb-pc6_name=finite
-  verb-pc6_order=suffix
-  verb-pc6_inputs=verb
-    verb-pc6_lrt1_name=NON_FIN
-      verb-pc6_lrt1_feat1_name=form
-      verb-pc6_lrt1_feat1_value=nonfinite
-      verb-pc6_lrt1_feat1_head=verb
-      verb-pc6_lrt1_lri1_inflecting=no
-    verb-pc6_lrt2_name=FIN
-      verb-pc6_lrt2_feat1_name=form
-      verb-pc6_lrt2_feat1_value=finite
-      verb-pc6_lrt2_feat1_head=verb
-      verb-pc6_lrt2_lri1_inflecting=no
-  ```
+The `inceptive` auxiliary aspect takes an uninflected verb as a complement and then receives all of the inflection as the head.
 
 Examples:
 
@@ -121,42 +87,45 @@ these horse-DEF run-PL-PST start
 `These horses started to run.'
 ```
 
-####
- Perfective & Imperfective
-Three inflecting lexical rules were added for the `perfective`, `progressive` and `frequentive` (for now, `imperfective` serves only serves a supertype without morphological impact).
+The customization system requires you to specify a FORM, so this required:
 
-Choices:
-```
-  verb-pc4_name=aspect
-  verb-pc4_order=suffix
-  verb-pc4_inputs=verb-pc6_lrt2
-    verb-pc4_lrt1_name=perf-aspect
-      verb-pc4_lrt1_feat1_name=aspect
-      verb-pc4_lrt1_feat1_value=perfective
-      verb-pc4_lrt1_feat1_head=verb
-      verb-pc4_lrt1_lri1_inflecting=yes
-      verb-pc4_lrt1_lri1_orth=-gii
-    verb-pc4_lrt2_name=imperf-aspect
-      verb-pc4_lrt2_feat1_name=aspect
-      verb-pc4_lrt2_feat1_value=imperfective
-      verb-pc4_lrt2_feat1_head=verb
-    verb-pc4_lrt3_name=prog-aspect
-    verb-pc4_lrt3_supertypes=verb-pc4_lrt2
-      verb-pc4_lrt3_feat1_name=aspect
-      verb-pc4_lrt3_feat1_value=progressive
-      verb-pc4_lrt3_feat1_head=verb
-      verb-pc4_lrt3_lri1_inflecting=yes
-      verb-pc4_lrt3_lri1_orth=-da
-    verb-pc4_lrt4_name=freq-aspect
-    verb-pc4_lrt4_supertypes=verb-pc4_lrt2
-      verb-pc4_lrt4_feat1_name=aspect
-      verb-pc4_lrt4_feat1_value=frequentive
-      verb-pc4_lrt4_feat1_head=verb
-      verb-pc4_lrt4_lri1_inflecting=yes
-      verb-pc4_lrt4_lri1_orth=-gang
-```
+* an addition to the lexicon for the auxiliary that selects for a finite complement:
 
-The input of this class of rules is `verb-pc6_lrt2` from above, meaning a finite verb.
+  ```
+  aux1_name=inceptive
+  aux1_sem=add-pred
+    aux1_feat1_name=aspect
+    aux1_feat1_value=inceptive
+    aux1_feat1_head=verb
+  aux1_subj=np-comp-case
+    aux1_compfeature1_name=form
+    aux1_compfeature1_value=finite
+    aux1_stem1_orth=tlaagaang
+    aux1_stem1_pred=_start_v_rel
+  
+  ```
+
+* a pair of non-affix lexical rules to mark verbs as non-finite or finite:
+
+  ```
+  verb-pc6_name=finite
+  verb-pc6_order=suffix
+  verb-pc6_inputs=verb
+    verb-pc6_lrt1_name=NON_FIN
+      verb-pc6_lrt1_feat1_name=form
+      verb-pc6_lrt1_feat1_value=nonfinite
+      verb-pc6_lrt1_feat1_head=verb
+      verb-pc6_lrt1_lri1_inflecting=no
+    verb-pc6_lrt2_name=FIN
+      verb-pc6_lrt2_feat1_name=form
+      verb-pc6_lrt2_feat1_value=finite
+      verb-pc6_lrt2_feat1_head=verb
+      verb-pc6_lrt2_lri1_inflecting=no
+  ```
+
+#### Perfective & Imperfective
+
+The suffix aspects appear before all 7 clause-final positions, including tense.
 
 Examples:
 ```
@@ -221,43 +190,11 @@ horse-DEF run-PRS-FREQ
 `The horse often runs.' or `The horse usually runs.'
 ```
 
+This was implemented with three optional inflecting `aspect` lexical rules for the `perfective`, `progressive` and `frequentive` (for now, `imperfective` serves only serves a supertype without morphological impact) with a finite verb input.
+
 #### Negation *gam* & *-.ang*
 
 Sentential negation in Haida is marked by two things occuring together: the adverb *gam* appearing before the verb (and early in the sentence) and the verb suffix *-.ang* (position 2 of 7 clause-final positions).
-
-For the latter, we introduction another inflecting lexical rule that requires a finite verb, already (optionally) inflected for aspect:
-
-  ```
-  verb-pc1_name=negation
-  verb-pc1_order=suffix
-  verb-pc1_inputs=verb-pc4
-    verb-pc1_require1_others=verb-pc6_lrt2
-    verb-pc1_lrt1_name=neg
-      verb-pc1_lrt1_feat1_name=negation
-      verb-pc1_lrt1_feat1_value=plus
-      verb-pc1_lrt1_feat1_head=verb
-      verb-pc1_lrt1_lri1_inflecting=yes
-      verb-pc1_lrt1_lri1_orth=-.ang
-  ```
-
-For the former, an addition to the lexicon via the sential negation choices:
-
-```
-section=sentential-negation
-neg-exp=2
-vpc-0-neg=create
-infl-neg=on
-adv-neg=on
-comp-neg-orth=gam
-bineg-type=infl-mod
-neg1-type=fm
-neg2-type=b
-neg-mod-infl-mod-neg=s
-neg-mod-order-infl-mod-neg=before
-neg-mod-orth=gam
-```
-
-We described the negation adverb as a free modifier on S, to put it as early in the clause as possible.
 
 Examples:
 ```
@@ -322,6 +259,40 @@ NEG horse-DEF fall.down-NEG-PFV-PST
 `The horse hasn't fallen down.'
 ```
 
+For the suffix, we introduction another inflecting lexical rule that requires a finite verb, already (optionally) inflected for aspect:
+
+  ```
+  verb-pc1_name=negation
+  verb-pc1_order=suffix
+  verb-pc1_inputs=verb-pc4
+    verb-pc1_require1_others=verb-pc6_lrt2
+    verb-pc1_lrt1_name=neg
+      verb-pc1_lrt1_feat1_name=negation
+      verb-pc1_lrt1_feat1_value=plus
+      verb-pc1_lrt1_feat1_head=verb
+      verb-pc1_lrt1_lri1_inflecting=yes
+      verb-pc1_lrt1_lri1_orth=-.ang
+  ```
+
+For the adverb, an addition to the lexicon via the sentential negation choices:
+
+```
+section=sentential-negation
+neg-exp=2
+vpc-0-neg=create
+infl-neg=on
+adv-neg=on
+comp-neg-orth=gam
+bineg-type=infl-mod
+neg1-type=fm
+neg2-type=b
+neg-mod-infl-mod-neg=s
+neg-mod-order-infl-mod-neg=before
+neg-mod-orth=gam
+```
+
+We described the negation adverb as a free modifier on S, to put it as early in the clause as possible.
+
 #### Tense
 
 Tense in Masset Haida is marked with an suffix on the main verb. Of seven clause-final positions, the (mutually exclusive) tense suffixes appear in position five. The last two positions are reserved for the topic change marker and the emphasis marker, respectively. Since these are outside the scope of the lab, the tense suffix will currently be regarded as the final suffix of the verb "complex".
@@ -329,6 +300,19 @@ Tense in Masset Haida is marked with an suffix on the main verb. Of seven clause
 Enrico lists six tense suffixes in the Masset dialect. However, only two of these appear to qualify as straightforward, non-perfect tenses (other beings immediate present, relative present, usitative, and reflexive question) and dominate the examples: the **past** and the **present**.
 
 ##### Past *-(g)an*
+
+Example (other examples occur in most test suite examples, as it currently our default tense when demonstrating other phenomena):
+```
+# 45 past tense
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+gyùudanee ts’agts’aggee qinggan
+gyùudan-ee ts’agts’ag-gee qing-gan
+horse-DEF wagon-DEF see-PST
+`The horse saw the wagon.'
+```
 
 In Lab 2, our lexicon verbs were all given stem forms that were actually full past tense inflections, so we did not have to add any new test sentences to demonstrate this tense. However, in order to incorporate these suffixes explictly, we first had to change the verb entries to have their actual stem forms, and choose an inflecting lexical rule for the suffix:
 
@@ -347,31 +331,7 @@ verb-pc3_inputs=verb-pc2
     verb-pc3_lrt1_lri1_orth=-gan
 ```
 
-Example (other examples occur in most test suite examples, as it currently our default tense when demonstrating other phenomena):
-```
-# 45 past tense
-Source: author
-Vetted: f
-Judgment: g
-Phenomena: {tam}
-gyùudanee ts’agts’aggee qinggan
-gyùudan-ee ts’agts’ag-gee qing-gan
-horse-DEF wagon-DEF see-PST
-`The horse saw the wagon.'
-```
-
 ##### Present *-(g)ang*
-
-In order to deal with the fact that the present tense suffix can occur with modal suffixes such as the future suffix (see below), we decided to choose `non-past` as a tense type with `present` as a subtype.
-
-```
-verb-pc3_lrt2_name=non-past
-  verb-pc3_lrt2_feat1_name=tense
-  verb-pc3_lrt2_feat1_value=nonpast
-  verb-pc3_lrt2_feat1_head=verb
-  verb-pc3_lrt2_lri1_inflecting=yes
-  verb-pc3_lrt2_lri1_orth=-gang
-```
 
 Examples:
 ```
@@ -386,22 +346,11 @@ horse-DEF wagon-DEF see-PRS
 `The horse sees the wagon.'
 ```
 
+In order to deal with the fact that the present tense suffix can occur with modal suffixes such as the future suffix (see below), we decided to choose `non-past` as a tense type with `present` as a subtype.
+
 ##### Future *-(.a)sa*
 
-Enrico doesn't consider the future (‘will’) to be a tense suffix proper, and instead encodes it as a "mood" suffix coming from what he calls the "Modals 2" group (which occupy clause-final position 4 of 7, before tense and after negation and plural marking). In terms of examples, the future occurs almost exclusively with the present suffix immediately following, i.e. `-FUT-PRS`. We chose to create a lexical rule for this position, with `future` as the only current rule type:
-
-```
-verb-pc2_name=modal-2
-verb-pc2_order=suffix
-verb-pc2_inputs=verb-pc5
-  verb-pc2_require1_others=verb-pc6_lrt2
-  verb-pc2_lrt1_name=fut
-    verb-pc2_lrt1_feat1_name=mood
-    verb-pc2_lrt1_feat1_value=future
-    verb-pc2_lrt1_feat1_head=verb
-    verb-pc2_lrt1_lri1_inflecting=yes
-    verb-pc2_lrt1_lri1_orth=-.asa
-```
+Enrico doesn't consider the future (‘will’) to be a tense suffix proper, and instead encodes it as a "mood" suffix coming from what he calls the "Modals 2" group (which occupy clause-final position 4 of 7, before tense and after negation and plural marking). In terms of examples, the future occurs almost exclusively with the present suffix immediately following, i.e. `-FUT-PRS`.
 
 Examples:
 ```
@@ -416,35 +365,11 @@ horse-DEF wagon-DEF see-FUT-PRS
 `The horse will see the wagon.'
 ```
 
+We chose to create an optional, inflexing lexical rule for this model 2 position, with `future` as the only current rule type.
+
 #### Plural Agreement *-7wa*
 
-Haida has no inflections for number, person, or gender (or any agreement to speak of), with one notable exception. One deficiency of our grammar from last lab was plural marking of the verb that occurs with with third-person arguments, which is done with a suffix in clause-final position 2 of 7 (equal with negation).
-
-We added the following lexical rules to account for this:
-```
-  verb-pc5_name=plural
-  verb-pc5_order=suffix
-  verb-pc5_inputs=verb-pc1
-    verb-pc5_require1_others=verb-pc6_lrt2
-    verb-pc5_lrt1_name=PL-SUBJ
-      verb-pc5_lrt1_feat1_name=number
-      verb-pc5_lrt1_feat1_value=pl
-      verb-pc5_lrt1_feat1_head=subj
-      verb-pc5_lrt1_feat2_name=person
-      verb-pc5_lrt1_feat2_value=3rd
-      verb-pc5_lrt1_feat2_head=subj
-      verb-pc5_lrt1_lri1_inflecting=yes
-      verb-pc5_lrt1_lri1_orth=-7wa
-    verb-pc5_lrt2_name=PL-obj
-      verb-pc5_lrt2_feat1_name=number
-      verb-pc5_lrt2_feat1_value=pl
-      verb-pc5_lrt2_feat1_head=obj
-      verb-pc5_lrt2_feat2_name=person
-      verb-pc5_lrt2_feat2_value=3rd
-      verb-pc5_lrt2_feat2_head=obj
-      verb-pc5_lrt2_lri1_inflecting=yes
-      verb-pc5_lrt2_lri1_orth=-7wa
-```
+Haida has no inflections for number, person, or gender (or any agreement to speak of), with one notable exception. One deficiency of our grammar from last lab was plural marking of the verb that occurs with third-person arguments, which is done with a suffix in clause-final position 2 of 7 (equal with negation).
 
 Examples:
 ```
@@ -489,38 +414,11 @@ hlaa ts’agts’ag-gee qing-gan-7wa
 `I saw the wagons.'
 ```
 
+We added two optional, inflecting lexical rules for subject and object agreement with plural, third-person features.
+
 #### Argument optionality
 
-In Haida, subject and object pronouns can be dropped based on relative potency (dropping the lower). We don't currently have a way to deal with this relativity, but we were able to create a feature for POT HIGH and LOW that can account for simple cases:
-
-```
-section=other-features
-  feature1_name=POT
-  feature1_type=index
-  feature1_cat=noun
-  feature1_new=yes
-    feature1_value1_name=HIGH
-      feature1_value1_supertype1_name=POT
-    feature1_value2_name=LOW
-      feature1_value2_supertype1_name=POT
-```
-
-```
-section=arg-opt
-subj-drop=subj-drop-all
-subj-mark-drop=subj-mark-drop-not
-subj-mark-no-drop=subj-mark-no-drop-not
-subj-con=subj-con-some
-    context1_feat1_name=POT
-    context1_feat1_value=LOW
-    context1_feat1_head=subj
-    context1_feat2_name=person
-    context1_feat2_value=3rd
-    context1_feat2_head=subj
-obj-drop=obj-drop-all
-obj-mark-drop=obj-mark-drop-not
-obj-mark-no-drop=obj-mark-no-drop-not
-```
+In Haida, subject and object pronouns can be dropped based on relative potency (dropping the lower).
 
 Examples:
 ```
@@ -528,22 +426,24 @@ Examples:
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: {pro-d}
+Phenomena: {agr, pro-d}
 hlaa qing7wagan
 hlaa qing-7wa-gan
 1SG.NOM see-PL-PST
-`I saw it.'
+`I saw them.'
 
 # 61 argument optionality
 Source: author
 Vetted: f
 Judgment: g
-Phenomena: {pro-d}
+Phenomena: {agr, pro-d}
 dii qing7wagan
 dii qing-7wa-gan
 1SG.ACC see-PL-PST
-`He saw me.'
+`They saw me.'
 ```
+
+We don't currently have a way to deal with this relativity, but we were able to create a `POT` feature with `HIGH` and `LOW` potency values, specifying it as a condition for argument optionality.
 
 #### Possessives
 
@@ -553,7 +453,7 @@ Possession in Haida follows an alienable/inalienable distinction.
 
 Alienable possession is marked by either a) the separate possessive marker *gyaa* or b) the possessive NP suffix *-(ng)aa*. In Masset, this latter type is highly lexically restricted to "pronouns and reflexively possessed kin terms" and is non-productive. Furthermore, there is a special logophoric possessive *gyaagan* for the first person singular pronomial possessive. The remaining pronomial possessives utilize the (non-clitic) objective form pronouns:
 
-**gyaa forms:**
+***gyaa* forms:**
 gyaagan = my
 dang gyaa = your (sg)
 ’laa gyaa = his/her
@@ -563,7 +463,7 @@ tl’aa gyaa
 Bill gyaa = Bill's
 Mary gyaa = Mary's
 
-**-(ng)aa forms:**
+***-(ng)aa* forms:**
 diinaa = my
 daangaa = gaa = your (sg)
 7iitl’aangaa = 7iitl’aa = our
@@ -701,8 +601,61 @@ my grandmother POSS wagon-DEF my fall.down-PST
 `My grandmother's wagon of mine fell down.'
 ```
 
-## Limitations
+## Other changes
 
-**TODO: talk about how we used the long form of the pronoun on translit-seg (which we use as parse input), while marking difference in short/long on translit.**
+We added two proper nouns to the lexicon (*Bill* and *Mary*) to help with tests for possession. Now that tense suffixes are broken out, we the *-CAUSE-* suffix that appeared in some examples into the verb stem for *tlagaay*, changing the predicate to `_injure_v_rel` until it can be handled explicitly.
 
 ## Coverage
+
+Overall coverage: 78.4%
+Overgeneration: 20.7%
+
+Our coverage as decreased since last lab primarily because of the addition of properties of Haida illustrated in our test suite that aren't accounted for in the starter grammar and matrix, especially the addition of several possessive examples. Some of the same sentences that did not parse in Lab 2, such as:
+
+```
+# 40 det with df suffix, plural
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {det}
+hlaa 7aasgee srids ts’agts’agg qing7wagan
+hlaa 7aasgee srid-s ts’agts’agg qing-7wa-gan
+1SG.NOM these he.red-PST wagons see-PL-PST
+`I saw these red wagons.'
+```
+
+still do not parse because we have yet to implement adjectives.
+
+Also, while it appeared that the matrix customization was somewhat able to encode the bipartite negation features that we wanted (though it seems limited in how we can place the modifier), we were unable to get correct results, e.g.:
+
+```
+# 41 negation
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {neg}
+gam gyùudanee ts’agts’aggee qing.anggan
+gam gyùudan-ee ts’agts’ag-gee qing-.ang-gan
+NEG horse-DEF wagon-DEF see-NEG-PST
+`The horse did not see the wagon.'
+
+# 42 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gyùudanee ts’agts’aggee qing.anggan
+gyùudan-ee ts’agts’ag-gee qing-.ang-gan
+horse-DEF wagon-DEF see-NEG-PST
+`The horse did not see the wagon.'
+```
+
+Example 41 (grammatical) does not parse and example 42 (ungrammatical) does parse, exactly the opposite of what was expected. We will have to investigate further to understand why this might be happening and we will try to fix it in the tdl.
+
+Our current level of overgeneration is due primarily to:
+
+1. word order (from last lab)
+2. [underspecified aspect](https://catalyst.uw.edu/gopost/conversation/ebender/947775)
+3. [inability to restrict pro-drop to low potency](https://catalyst.uw.edu/gopost/conversation/ebender/947771)
+4. plural is underspecified for 3rd person pronoun
+5. common nouns are underspecified for number and the plural agreement can come from either argument
