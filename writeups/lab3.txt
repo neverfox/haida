@@ -213,7 +213,7 @@ NEG horse-DEF fall.down-NEG-PFV-PST
 `The horse hasn't fallen down.'
 ```
 
-For the suffix, we introduction another inflecting lexical rule that requires a finite verb, already (optionally) inflected for aspect. For the adverb, an addition to the lexicon via the sentential negation choices. We described the negation adverb as a free modifier on S, to put it as early in the clause as possible.
+For the suffix, we introduced another inflecting lexical rule that requires a finite verb, already (optionally) inflected for aspect. For the adverb, an addition to the lexicon via the sentential negation choices. We described the negation adverb as a free modifier on S, to put it as early in the clause as possible.
 
 #### Tense
 
