@@ -9,8 +9,6 @@
 
 ---
 
-This text file includes GitHub-flavored Markdown syntax, so while still pure text, it can be viewed with formatting [here]().
-
 ## Phenomena
 
 *Note: Changes from the prior lab are discussed within where relevant.*
