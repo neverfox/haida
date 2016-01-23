@@ -272,7 +272,7 @@ horse-DEF wagon-DEF see-FUT-PRS
 `The horse will see the wagon.'
 ```
 
-We chose to create an optional, inflexing lexical rule for this model 2 position, with `future` as the only current rule type.
+We chose to create an optional, inflecting lexical rule for this modal-2 position, with `future` as the only current rule type. The output of the future rule is forbidden from the input for the past lex rule.
 
 #### Plural Agreement *-7wa*
 
