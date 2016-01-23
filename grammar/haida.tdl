@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Haida
 ;;; created at:
-;;;     Fri Jan 22 21:33:06 UTC 2016
+;;;     Sat Jan 23 01:11:32 UTC 2016
 ;;; based on Matrix customization system version of:
 ;;;     Sun Jan 10 22:56:48 UTC 2016
 ;;;
@@ -28,10 +28,12 @@ synsem :+ [ NEG-SAT luk ].
 
 basic-verb-lex :+ [ SYNSEM.NEG-SAT na-or-+ ].
 
-basic-head-comp-phrase :+ [ SYNSEM [ NEG-SAT #ns,
-             LOCAL.CAT.MC #mc ],
-    HEAD-DTR.SYNSEM [ NEG-SAT #ns,
-                      LOCAL.CAT.MC #mc ] ].
+basic-head-comp-phrase :+ [ HEAD-DTR.SYNSEM [ NEG-SAT #ns,
+                      LOCAL.CAT.MC #mc ],
+    SYNSEM [ NEG-SAT #ns,
+             LOCAL.CAT [ MC #mc,
+                         VC #vc ] ],
+    NON-HEAD-DTR.SYNSEM.LOCAL.CAT.VC #vc ].
 
 basic-head-subj-phrase :+ [ SYNSEM.NEG-SAT #ns,
     HEAD-DTR.SYNSEM.NEG-SAT #ns ].
@@ -57,11 +59,6 @@ infl-satisfied :+ [ FUT-FLAG na-or-+,
 png :+ [ PER person,
     NUM number,
     POT POT ].
-
-basic-head-comp-phrase :+ [ HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc,
-    SYNSEM.LOCAL.CAT [ MC #mc,
-                       VC #vc ],
-    NON-HEAD-DTR.SYNSEM.LOCAL.CAT.VC #vc ].
 
 basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     NON-HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
@@ -120,7 +117,7 @@ perfective := aspect.
 imperfective := aspect.
 progressive := imperfective.
 frequentive := imperfective.
-inceptive := perfective.
+inceptive := aspect.
 
 ;;; Mood
 
@@ -202,11 +199,15 @@ pn-noun-lex := no-spr-noun-lex.
 
 ;;; Verbs
 
+; verb-lex is HC-LIGHT - to allow us to pick out
+; 
+;   lexical Vs for V-level attachment of negative adverbs.
+
 verb-lex := non-mod-lex-item & aspect-rule-dtr & modal-2-rule-dtr & negation-rule-dtr & plural-rule-dtr & tense-rule-dtr &
   [ SYNSEM.LOCAL.CAT [ HEAD verb,
                        HC-LIGHT - ],
-    INFLECTED [ TENSE-FLAG -,
-                FIN-FLAG na-or-- ] ].
+    INFLECTED [ FIN-FLAG na-or--,
+                TENSE-FLAG - ] ].
 
 main-verb-lex := verb-lex & basic-verb-lex &
   [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
@@ -414,11 +415,11 @@ PL-obj-lex-rule := plural-lex-rule-super &
                                                                  PER 3rd ] ].
 
 finite-lex-rule-super := add-only-no-ccont-rule & const-lex-rule &
-  [ INFLECTED [ TENSE-FLAG #tense,
-                FUT-FLAG #fut ],
+  [ INFLECTED [ FUT-FLAG #fut,
+                TENSE-FLAG #tense ],
     DTR verb-lex &
-        [ INFLECTED [ TENSE-FLAG #tense,
-                      FUT-FLAG #fut ] ] ].
+        [ INFLECTED [ FUT-FLAG #fut,
+                      TENSE-FLAG #tense ] ] ].
 
 FIN-lex-rule := aspect-rule-dtr & finite-lex-rule-super & modal-2-rule-dtr & negation-rule-dtr & plural-rule-dtr & tense-rule-dtr &
   [ INFLECTED.FIN-FLAG +,

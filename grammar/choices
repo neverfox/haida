@@ -53,7 +53,7 @@ nonpast=on
   aspect4_name=frequentive
     aspect4_supertype1_name=imperfective
   aspect5_name=inceptive
-    aspect5_supertype1_name=perfective
+    aspect5_supertype1_name=aspect
   mood1_name=future
     mood1_supertype1_name=mood
 

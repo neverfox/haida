@@ -31,8 +31,8 @@ Vetted: s
 Judgment: g
 Phenomena: {wo}
 ts’agts’aggee gyùudanee tlagaaydagan
-ts’agts’ag-gee gyùudan-ee tlagaay-da-gan
-wagon-DEF horse-DEF get.injured-CAUSE-PST
+ts’agts’ag-gee gyùudan-ee tlagaayda-gan
+wagon-DEF horse-DEF get.injure-PST
 `The wagon injured the horse.' or `The horse damaged the wagon.'
 
 # 4 tr wo
@@ -41,8 +41,8 @@ Vetted: s
 Judgment: g
 Phenomena: {wo}
 gyùudanee ts’agts’aggee tlagaaydagan
-gyùudan-ee ts’agts’ag-gee tlagaay-da-gan
-horse-DEF wagon-DEF get.injured-CAUSE-PST
+gyùudan-ee ts’agts’ag-gee tlagaayda-gan
+horse-DEF wagon-DEF get.injure-PST
 `The horse damaged the wagon.'
 
 # 5 tr wo
@@ -51,8 +51,8 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 gyùudanee tlagaaydagan ts’agts’aggee
-gyùudan-ee tlagaay-da-gan ts’agts’ag-gee
-horse-DEF get.injured-CAUSE-PST wagon-DEF
+gyùudan-ee tlagaayda-gan ts’agts’ag-gee
+horse-DEF get.injure-PST wagon-DEF
 `The horse damaged the wagon.'
 
 # 6 tr wo
@@ -61,8 +61,8 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 tlagaaydagan gyùudanee ts’agts’aggee
-tlagaay-da-gan gyùudan-ee ts’agts’ag-gee
-get.injured-CAUSE-PST horse-DEF wagon-DEF
+tlagaayda-gan gyùudan-ee ts’agts’ag-gee
+get.injure-PST horse-DEF wagon-DEF
 `The horse damaged the wagon.'
 
 # 7 tr wo
@@ -71,8 +71,8 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 tlagaaydagan ts’agts’aggee gyùudanee
-tlagaay-da-gan ts’agts’ag-gee gyùudan-ee
-get.injured-CAUSE-PST wagon-DEF horse-DEF
+tlagaayda-gan ts’agts’ag-gee gyùudan-ee
+get.injure-PST wagon-DEF horse-DEF
 `The horse damaged the wagon.'
 
 # 8 tr wo
@@ -81,8 +81,8 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 ts’agts’aggee tlagaaydagan gyùudanee
-ts’agts’ag-gee tlagaay-da-gan gyùudan-ee
-wagon-DEF get.injured-CAUSE-PST horse-DEF
+ts’agts’ag-gee tlagaayda-gan gyùudan-ee
+wagon-DEF get.injure-PST horse-DEF
 `The wagon injured the horse' or `The horse damaged the wagon.'
 
 # 9 tr wo with pns
