@@ -1,4 +1,4 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
-NON_FIN-lex := NON_FIN-lex-rule.
+non-fin-lex := non-fin-lex-rule.
 
-FIN-lex := FIN-lex-rule.
+fin-lex := fin-lex-rule.

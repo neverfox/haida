@@ -325,7 +325,7 @@ We added two optional, inflecting lexical rules for subject and object agreement
 
 #### Argument optionality
 
-In Haida, subject and object pronouns can be dropped based on relative potency (dropping the lower).
+In Haida, subject and object pronouns can be dropped based on relative potency (dropping the lower). Low potency subjects must be dropped, but for objects, pronoun-drop is optional.
 
 Examples:
 ```
