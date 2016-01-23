@@ -9,122 +9,148 @@
 
 ---
 
+This text file includes GitHub-flavored Markdown syntax, so while still pure text, it can be viewed with formatting [here]().
+
 ## Phenomena
 
 *Note: Changes from the prior lab are discussed within where relevant.*
 
-#### Tense
+### Aspect
 
-Tense in Masset Haida is marked with an suffix on the main verb. Of seven clause-final positions, the (mutually exclusive) tense suffixes appear in the second from the last, with the last two being reserved for the topic change marker and the emphasis marker, respectively. Since these are outside the scope of the lab, the tense suffix will currently be regarded as the final suffix of the verb "complex".
+Enrico declares that "Haida syntactic aspects are state punctual, perfective, progressive, inceptive, continuative, frequentive, durative, incessative, habitual, antecessive, terminative, and iterative," and these manifest as either auxiliaries or suffixes.
 
-Enrico lists six tense suffixes in the Masset dialect. Only two of these tenses dominate the examples, however, so they will be (along with the **future**, see below) the only ones incorporated for the time being: the **past** and the **present**.
-
-##### Past *-(g)an*
-
-In Lab 2, our lexicon verbs were all given stem forms that were actually full past tense inflections, so we did not have to add any new test sentences to demonstrate this tense (**TODO: this is probably not true since we likely need examples of incorrect suffixes?**). However, in order to incorporate these suffixes explictly, we first had to change the verb entries to have their actual stem forms, and add an inflecting lexical rule for the suffix:
+In this lab, we introduced the perfective, progressive and frequentive suffixes and the inceptive auxiliary to the grammar. We created an aspect type hierarchy as follows:
 
 ```
-past-suffix :=
-%suffix (* -gan)
-past-lex-rule.
+                 aspect
+                   +
+    +--------------+------+-----+
+    |              |            |
+    +              +            +
+inceptive     perfective   imperfective
+                                +
+                            +---+---+
+                            +       +
+                    progressive   frequentive
+
 ```
+
+#### Inceptive
+
+The `inceptive` auxiliary aspect takes an uninflected verb as a complement and then receives all of the inflection as the head.
 
 Examples:
+
 ```
-# 1 it wo
+# 22 aux
+Source: a: 1193
+Vetted: t
+Judgment: g
+Phenomena: {wo, tam}
+7aasgee gyùudanee rad tlaagaang7wagan
+7aasgee gyùudan-ee rad tlaagaang-7wa-gan
+these horse-DEF run start-PL-PST
+`These horses started to run.'
+
+# 23 aux
 Source: author
 Vetted: f
-Judgment: g
-Phenomena: {wo, det}
-gyùudanee dladahldagan
-gyùudan-ee dladahlda-gan
-horse-DEF fall.down-PST
-`The horse fell down.'
-
-# 3 tr wo
-Source: a:75
-Vetted: s
-Judgment: g
+Judgment: u
 Phenomena: {wo}
-ts’agts’aggee gyùudanee tlagaaydagan
-ts’agts’ag-gee gyùundan-ee tlagaay-da-gan
-wagon-DEF horse-DEF get.injured-CAUSE-PST
-`The wagon injured the horse.' or `The horse damaged the wagon.'
+7aasgee gyùudanee tlaagaang7wagan rad
+7aasgee gyùudan-ee tlaagaang-7wa-gan rad
+these horse-DEF start-PL-PST run
+`These horses started to run.'
+
+# 24 aux
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+7aasgee gyùudanee rad tlaagaang7wagan
+7aasgee gyùudan-ee rad-7wa-gan tlaagaang
+these horse-DEF run-PL-PST start
+`These horses started to run.'
 ```
 
-##### Present *-(g)ang*
+The customization system requires you to specify a FORM, so this required:
 
-```
-present-suffix :=
-%suffix (* -gang)
-present-lex-rule.
-```
+* an addition to the lexicon for the auxiliary that selects for a finite complement
+
+* a pair of non-affix lexical rules to mark verbs as non-finite or finite
+
+#### Perfective & Imperfective
+
+The suffix aspects appear before all 7 clause-final positions, including tense.
 
 Examples:
 ```
-# 46 present tense
+# 48 perfective aspect
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {tam}
-gyùudanee ts’agts’aggee qinggang
-gyùundan-ee ts’agts’ag-gee qing-gang
-horse-DEF wagon-DEF see-PRS
-`The horse sees the wagon.'
-```
+gyùudanee dladahldagiigan
+gyùudan-ee dladahlda-gii-gan
+horse-DEF fall.down-PFV-PST
+`The horse has fallen down.'
 
-##### Future *-(.a)sa*
+# 49 perfective aspect
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+gyùudanee dladahldagangii
+gyùudan-ee dladahlda-gan-gii
+horse-DEF fall.down-PST-PFV
+`The horse has fallen down.'
 
-Enrico doesn't consider the future (‘will’) to be a tense suffix proper, and instead encodes it as a "mood" suffix coming from what he calls the "Modals 2" group (which occupy clause-final position 4 of 7). In terms of examples, however, the future occurs almost exclusively with the present suffix immediately following, i.e. `-FUT-PRS`. As a result, it is possible and reasonable to build a largely successful grammar under the assumption that there is a future tense suffix *-(.a)saang*:
-
-```
-future-suffix :=
-%suffix (* -.asaang)
-future-lex-rule.
-```
-
-Examples:
-```
-# 47 future tense
+# 52 progressive aspect
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {tam}
-gyùudanee ts’agts’aggee qing.asaang
-gyùundan-ee ts’agts’ag-gee qing-.asaang
-horse-DEF wagon-DEF see-FUT
-`The horse will see the wagon.'
+gyùudanee raddagang
+gyùudan-ee rad-da-gang
+horse-DEF run-PROG-PRS
+`The horse is running.'
+
+# 53 progressive aspect
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+gyùudanee radgangda
+gyùudan-ee rad-gang-da
+horse-DEF run-PRS-PROG
+`The horse is running.'
+
+# 54 frequentive aspect
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+gyùudanee raddagang
+gyùudan-ee rad-da-gang
+horse-DEF run-FREQ-PRS
+`The horse often runs.' or `The horse usually runs.'
+
+# 55 frequentive aspect
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+gyùudanee radgangda
+gyùudan-ee rad-gang-da
+horse-DEF run-PRS-FREQ
+`The horse often runs.' or `The horse usually runs.'
 ```
 
-**TODO: consider encoding the FUT suffix in a manner similar to the NEG suffix, rather than taking the above approach. This will depend on consultation with Prof. Bender**
-
-#### Aspect
-
-"Haida syntactic aspects are state punctual, perfective, progressive, inceptive, continuative, frequentive, durative, incessative, habitual, antecessive, terminative, and iterative." ~ Oh my!
-
-**TODO: See p.23 and the lists on pp.26-32**
-
-#### Argument optionality
-
-
+This was implemented with three optional inflecting `aspect` lexical rules for the `perfective`, `progressive` and `frequentive` (for now, `imperfective` serves only serves a supertype without morphological impact) with a finite verb input.
 
 #### Negation *gam* & *-.ang*
 
-Sentential negation is marked by two things occuring together: the adverb *gam* before the verb (and early in the sentence) and the verb suffix *-.ang* (position 2 of 7, meaning that it always precedes the tense suffix in position 5).
-
-For the latter, we introduction another inflecting lexical rule:
-```
-neg-suffix :=
-%suffix (* -.ang)
-neg-lex-rule.
-```
-
-For the former, an addition to the lexicon:
-```
-gam := neg-comp-lex &
-  [ STEM < "gam" >,
-    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
-```
+Sentential negation in Haida is marked by two things occuring together: the adverb *gam* appearing before the verb (and early in the sentence) and the verb suffix *-.ang* (position 2 of 7 clause-final positions).
 
 Examples:
 ```
@@ -167,9 +193,166 @@ gyùudanee ts’agts’aggee gam qinggan.ang
 gyùundan-ee ts’agts’ag-gee gam qing-gan-.ang
 horse-DEF wagon-DEF NEG see-PST-NEG
 `The horse did not see the wagon.'
+
+# 50 perfective aspect w/ negation
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam, neg}
+gam gyùudanee dladahldagii.anggan
+gam gyùudan-ee dladahlda-gii-.ang-gan
+NEG horse-DEF fall.down-PFV-NEG-PST
+`The horse hasn't fallen down.'
+
+# 51 perfective aspect w/ negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam, neg}
+gam gyùudanee dladahlda.anggiigan
+gam gyùudan-ee dladahlda-.ang-gii-gan
+NEG horse-DEF fall.down-NEG-PFV-PST
+`The horse hasn't fallen down.'
 ```
 
-**TODO: Should we be placing *gam* earlier in the sentence, possibly by answering `before` to `How is neg ordered with resepct to other COMPS?`**
+For the suffix, we introduction another inflecting lexical rule that requires a finite verb, already (optionally) inflected for aspect. For the adverb, an addition to the lexicon via the sentential negation choices. We described the negation adverb as a free modifier on S, to put it as early in the clause as possible.
+
+#### Tense
+
+Tense in Masset Haida is marked with an suffix on the main verb. Of seven clause-final positions, the (mutually exclusive) tense suffixes appear in position five. The last two positions are reserved for the topic change marker and the emphasis marker, respectively. Since these are outside the scope of the lab, the tense suffix will currently be regarded as the final suffix of the verb "complex".
+
+Enrico lists six tense suffixes in the Masset dialect. However, only two of these appear to qualify as straightforward, non-perfect tenses (other beings immediate present, relative present, usitative, and reflexive question) and dominate the examples: the **past** and the **present**.
+
+##### Past *-(g)an*
+
+Example (other examples occur in most test suite examples, as it currently our default tense when demonstrating other phenomena):
+```
+# 45 past tense
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+gyùudanee ts’agts’aggee qinggan
+gyùudan-ee ts’agts’ag-gee qing-gan
+horse-DEF wagon-DEF see-PST
+`The horse saw the wagon.'
+```
+
+In Lab 2, our lexicon verbs were all given stem forms that were actually full past tense inflections, so we did not have to add any new test sentences to demonstrate this tense. However, in order to incorporate these suffixes explictly, we first had to change the verb entries to have their actual stem forms, and choose an inflecting lexical rule for the suffix.
+
+##### Present *-(g)ang*
+
+Examples:
+```
+# 46 present tense
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+gyùudanee ts’agts’aggee qinggang
+gyùudan-ee ts’agts’ag-gee qing-gang
+horse-DEF wagon-DEF see-PRS
+`The horse sees the wagon.'
+```
+
+In order to deal with the fact that the present tense suffix can occur with modal suffixes such as the future suffix (see below), we decided to choose `non-past` as a tense type with `present` as a subtype.
+
+##### Future *-(.a)sa*
+
+Enrico doesn't consider the future (‘will’) to be a tense suffix proper, and instead encodes it as a "mood" suffix coming from what he calls the "Modals 2" group (which occupy clause-final position 4 of 7, before tense and after negation and plural marking). In terms of examples, the future occurs almost exclusively with the present suffix immediately following, i.e. `-FUT-PRS`.
+
+Examples:
+```
+# 47 future mood
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+gyùudanee ts’agts’aggee qing.asaang
+gyùudan-ee ts’agts’ag-gee qing-.asa-gang
+horse-DEF wagon-DEF see-FUT-PRS
+`The horse will see the wagon.'
+```
+
+We chose to create an optional, inflexing lexical rule for this model 2 position, with `future` as the only current rule type.
+
+#### Plural Agreement *-7wa*
+
+Haida has no inflections for number, person, or gender (or any agreement to speak of), with one notable exception. One deficiency of our grammar from last lab was plural marking of the verb that occurs with third-person arguments, which is done with a suffix in clause-final position 2 of 7 (equal with negation).
+
+Examples:
+```
+# 56 agreement
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr}
+gyùudanee ts’agts’aggee qing7wagan
+gyùudan-ee ts’agts’ag-gee qing-7wa-gan
+horse-DEF wagon-DEF see-PL-PST
+`The horse saw the wagons.' or `The horses saw the wagon.'
+
+# 57 agreement
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr}
+hlaa ts’agts’aggee qing7wagan
+hlaa ts’agts’ag-gee qing-7wa-gan
+1SG.NOM wagon-DEF see-PL-PST
+`I saw the wagons.'
+
+# 58 agreement - no plural arg
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+hlaa dang qing7wagan
+hlaa daa qing-7wa-gan
+1SG.NOM 2SG.ACC see-PL-PST
+`I saw him.'
+
+# 59 agreement- wrong order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+hlaa ts’agts’aggee qinggan7wa
+hlaa ts’agts’ag-gee qing-gan-7wa
+1SG.NOM wagon-DEF see-PST-PL
+`I saw the wagons.'
+```
+
+We added two optional, inflecting lexical rules for subject and object agreement with plural, third-person features.
+
+#### Argument optionality
+
+In Haida, subject and object pronouns can be dropped based on relative potency (dropping the lower).
+
+Examples:
+```
+# 60 argument optionality
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr, pro-d}
+hlaa qing7wagan
+hlaa qing-7wa-gan
+1SG.NOM see-PL-PST
+`I saw them.'
+
+# 61 argument optionality
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr, pro-d}
+dii qing7wagan
+dii qing-7wa-gan
+1SG.ACC see-PL-PST
+`They saw me.'
+```
+
+We don't currently have a way to deal with this relativity, but we were able to create a `POT` feature with `HIGH` and `LOW` potency values, specifying it as a condition for argument optionality.
 
 #### Possessives
 
@@ -177,43 +360,237 @@ Possession in Haida follows an alienable/inalienable distinction.
 
 ##### Alienable
 
-Alienable possession is marked by either a) the separate possessive marker *gyaa* (appearing between the possessor and possessum, possibly regarded as an indefinite pronoun) or b) the possessive NP suffix *-(ng)aa*. In Masset, this latter type is highly lexically restricted to "pronouns and reflexively possessed kin terms" and is non-productive. Furthermore, there is a special logophoric possessive *gyaagan* for the first person singular pronomial possessive. The remaining pronomial possessives utilize the (non-clitic) objective form pronouns:
+Alienable possession is marked by either a) the separate possessive marker *gyaa* or b) the possessive NP suffix *-(ng)aa*. In Masset, this latter type is highly lexically restricted to "pronouns and reflexively possessed kin terms" and is non-productive. Furthermore, there is a special logophoric possessive *gyaagan* for the first person singular pronomial possessive. The remaining pronomial possessives utilize the (non-clitic) objective form pronouns:
 
-gyaa forms:
-gyaagan = my
-dang gyaa = your (sg)
-’laa gyaa = his/her
-7iitl’ gyaa = our
-dalang gyaa = your (pl)
-tl’aa gyaa
-Bill gyaa = Bill's
-Mary gyaa = Mary's
+***gyaa* forms:**
 
--ra forms:
-diinaa = my
-daangaa = gaa = your (sg)
-7iitl’aangaa = 7iitl’aa = our
-dalaaangaa = dalaa = your (pl)
-’laangaa = ’laa = his/her/their
-tl’aangaa = tl’aa = his/her/their, people's
+- gyaagan = my
+- dang gyaa = your (sg)
+- ’laa gyaa = his/her
+- 7iitl’ gyaa = our
+- dalang gyaa = your (pl)
+- tl’aa gyaa
+- Bill gyaa = Bill's
+- Mary gyaa = Mary's
+
+***-(ng)aa* forms:**
+
+- diinaa = my
+- daangaa = gaa = your (sg)
+- 7iitl’aangaa = 7iitl’aa = our
+- dalaaangaa = dalaa = your (pl)
+- ’laangaa = ’laa = his/her/their
+- tl’aangaa = tl’aa = his/her/their, people's
 
 The null third person *0* cannot occur as part of an alienable possessive.
 
+Only testsuite instances were added at this time:
+
+```
+# 62 possession - alienable gyaa form 1p
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+Mary dalang gyaa ts’agts’aggee qinggan
+Mary dalang gyaa ts’agts’ag-gee qing-gan
+Mary 2p POSS wagon-DF see-PST
+`Mary saw your wagon.'
+
+# 63 possession - alienable gyaa form non-1p
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+Mary gyaagan ts’agts’aggee qinggan
+Mary gyaagan ts’agts’ag-gee qing-gan
+Mary my wagon-DF see-PST
+`Mary saw my wagon.'
+
+# 64 possession - alienable -(ng)aa form
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+Mary ts’agts’aggee daangaa qinggan
+Mary ts’agts’ag-gee daangaa qing-gan
+Mary wagon-DEF your see-PST
+`Mary saw your wagon.'
+
+# 65 possession - alienable NP
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+Mary Bill gyaa ts’agts’aggee qinggan
+Mary Bill gyaa ts’agts’ag-gee qing-gan
+Mary Bill POSS wagon-DF see-PST
+`Mary saw Bill's wagon.'
+
+# 66 possession - alienable NP
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+Mary Bill ts’agts’aggee qinggan
+Mary Bill ts’agts’ag-gee qing-gan
+Mary Bill wagon-DF see-PST
+`Mary saw Bill's wagon.'
+
+# 71 possession - alienable -(ng)aa with dem and pn
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss, wo, det}
+waaniis 'laangaa gyùudanee dladahldagan
+waaniis 'laangaa gyùudan-ee dladahlda-gan
+that her horse-DEF fall.down-PST
+`That horse of hers fell down.' or `That one of her horses fell down.'
+
+# 72 possession - alienable -(ng)aa with dem and pn
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss, wo, det}
+waaniis gyùudanee 'laangaa dladahldagan
+waaniis gyùudan-ee 'laangaa dladahlda-gan
+that horse-DEF her fall.down-PST
+`That horse of hers fell down.' or `That one of her horses fell down.'
+```
+
+The last two examples demonstrate that word order is strict when demonstratives are combined with the -(ng)aa form possessives.
+
 ##### Inalienable
 
-Inalienable possession is lexically limited and not marked on either the possessor or possessum:
+Inalienable possession is lexically limited (kins terms, part terms, and terms such as 'house') and not marked on either the possessor or possessum:
 
 dii naa.n = my grandmother
 dang kun = your nose (sg)
 Bill naa.n = Bill's grandmother
 etc.
 
-#### Agreement
+Examples:
+```
+# 67 possession - inalienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+dii naan Bill gyaa ts’agts’aggee qinggan
+dii naan Bill gyaa ts’agts’ag-gee qing-gan
+my grandmother Bill POSS wagon-DF see-PST
+`My grandmother saw Bill's wagon.'
 
-Morphological rules for tense (3) and negation (1) were added and are described above. However, because Haida has no inflections for number, person, or gender (or any agreement to speak of), no additional rules were added at this time.
+# 68 possession - inalienable
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+gyaagan naan Bill gyaa ts’agts’aggee qinggan
+gyaagan naan Bill gyaa ts’agts’ag-gee qing-gan
+my grandmother Bill POSS wagon-DF see-PST
+`My grandmother saw Bill's wagon.'
 
-#### Auxilairies
+# 69 possession - mixed alienable/inalienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+dii naan gyaa gyùudanee dladahldagan
+dii naan gyaa gyùudan-ee dladahlda-gan
+my grandmother POSS horse-DEF fall.down-PST
+`My grandmother's horse fell down.'
 
-## Limitations
+# 70 possession - mixed alienable/inalienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+dii naan gyaa ts’agts’aggee diinaa dladahldagan
+dii naan gyaa ts’agts’ag-gee diinaa dladahlda-gan
+my grandmother POSS wagon-DEF my fall.down-PST
+`My grandmother's wagon of mine fell down.'
+```
+
+## Other changes
+
+We added two proper nouns to the lexicon (*Bill* and *Mary*) to help with tests for possession. Now that tense suffixes are broken out, we the *-CAUSE-* suffix that appeared in some examples into the verb stem for *tlagaay*, changing the predicate to `_injure_v_rel` until it can be handled explicitly.
 
 ## Coverage
+
+Overall coverage: 67.4%
+Overgeneration: 20.7%
+
+Our coverage as decreased since last lab primarily because of the addition of properties of Haida illustrated in our test suite that aren't accounted for in the starter grammar and matrix, especially the addition of several possessive examples. Some of the same sentences that did not parse in Lab 2, such as:
+
+```
+# 40 det with df suffix, plural
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {det}
+hlaa 7aasgee srids ts’agts’agg qing7wagan
+hlaa 7aasgee srid-s ts’agts’agg qing-7wa-gan
+1SG.NOM these he.red-PST wagons see-PL-PST
+`I saw these red wagons.'
+```
+
+still do not parse because we have yet to implement adjectives.
+
+Also, while it appeared that the matrix customization was somewhat able to encode the bipartite negation features that we wanted (though it seems limited in how we can place the modifier), we were unable to get correct results, e.g.:
+
+```
+# 41 negation
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {neg}
+gam gyùudanee ts’agts’aggee qing.anggan
+gam gyùudan-ee ts’agts’ag-gee qing-.ang-gan
+NEG horse-DEF wagon-DEF see-NEG-PST
+`The horse did not see the wagon.'
+
+# 42 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gyùudanee ts’agts’aggee qing.anggan
+gyùudan-ee ts’agts’ag-gee qing-.ang-gan
+horse-DEF wagon-DEF see-NEG-PST
+`The horse did not see the wagon.'
+```
+
+Example 41 (grammatical) does not parse and example 42 (ungrammatical) does parse, exactly the opposite of what was expected. We will have to investigate further to understand why this might be happening and we will try to fix it in the tdl.
+
+Our current level of overgeneration is due primarily to:
+
+1. We still have "an overgeneration of word order because we do not yet have constraints to govern the SOV word order of common and proper nouns and the OSV word order of pronouns. This creates two versions of each sentence" (see lab 2 for examples)
+
+2. Haida verbs don't require aspect, so simple tenses are underspecified for aspect, causing results with aspect markers. This is expected until we can edit the grammar.
+
+  ```
+  # 21 np optional det
+  Source: author
+  Vetted: f
+  Judgment: g
+  Phenomena: {det}
+  gyùudan dladahldagan
+  gyùudan dladahlda-gan
+  horse fall.down-PST
+  `A horse fell down.'  
+  ```
+
+3. pronoun drop is limited to low potency pronouns. However, the customization system doesn't allow you to add  an environment in which the rule applies. Until we edit the tdl, we are unable to prevent high potency pronouns from dropping, causing sentences with a dropped low pot object to produce readings with high potency.
+
+  ```
+  # 31 wo null pronoun. adapted from p 47
+  Source: author
+  Vetted: f
+  Judgment: g
+  Phenomena: {wo, pn}
+  naan qinggan
+  naan qing-gan
+  grandmother see-PST
+  `A grandmother saw him.' or `He saw a grandmother.'
+  ```

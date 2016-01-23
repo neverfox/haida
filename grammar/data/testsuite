@@ -31,8 +31,8 @@ Vetted: s
 Judgment: g
 Phenomena: {wo}
 ts’agts’aggee gyùudanee tlagaaydagan
-ts’agts’ag-gee gyùundan-ee tlagaay-da-gan
-wagon-DEF horse-DEF get.injured-CAUSE-PST
+ts’agts’ag-gee gyùudan-ee tlagaayda-gan
+wagon-DEF horse-DEF injure-PST
 `The wagon injured the horse.' or `The horse damaged the wagon.'
 
 # 4 tr wo
@@ -41,8 +41,8 @@ Vetted: s
 Judgment: g
 Phenomena: {wo}
 gyùudanee ts’agts’aggee tlagaaydagan
-gyùundan-ee ts’agts’ag-gee tlagaay-da-gan
-horse-DEF wagon-DEF get.injured-CAUSE-PST
+gyùudan-ee ts’agts’ag-gee tlagaayda-gan
+horse-DEF wagon-DEF injure-PST
 `The horse damaged the wagon.'
 
 # 5 tr wo
@@ -51,8 +51,8 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 gyùudanee tlagaaydagan ts’agts’aggee
-gyùundan-ee tlagaay-da-gan ts’agts’ag-gee
-horse-DEF get.injured-CAUSE-PST wagon-DEF
+gyùudan-ee tlagaayda-gan ts’agts’ag-gee
+horse-DEF injure-PST wagon-DEF
 `The horse damaged the wagon.'
 
 # 6 tr wo
@@ -61,8 +61,8 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 tlagaaydagan gyùudanee ts’agts’aggee
-tlagaay-da-gan gyùundan-ee ts’agts’ag-gee
-get.injured-CAUSE-PST horse-DEF wagon-DEF
+tlagaayda-gan gyùudan-ee ts’agts’ag-gee
+injure-PST horse-DEF wagon-DEF
 `The horse damaged the wagon.'
 
 # 7 tr wo
@@ -71,8 +71,8 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 tlagaaydagan ts’agts’aggee gyùudanee
-tlagaay-da-gan ts’agts’ag-gee gyùundan-ee
-get.injured-CAUSE-PST wagon-DEF horse-DEF
+tlagaayda-gan ts’agts’ag-gee gyùudan-ee
+injure-PST wagon-DEF horse-DEF
 `The horse damaged the wagon.'
 
 # 8 tr wo
@@ -81,8 +81,8 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 ts’agts’aggee tlagaaydagan gyùudanee
-ts’agts’ag-gee tlagaay-da-gan gyùundan-ee
-wagon-DEF get.injured-CAUSE-PST horse-DEF
+ts’agts’ag-gee tlagaayda-gan gyùudan-ee
+wagon-DEF injure-PST horse-DEF
 `The wagon injured the horse' or `The horse damaged the wagon.'
 
 # 9 tr wo with pns
@@ -131,7 +131,7 @@ Vetted: f
 Judgment: u
 Phenomena: {c}
 dalang hla qinggan
-dalang hla qing-gan
+dalang hlaa qing-gan
 2PL.NOM 1SG.NOM see-PST
 `I saw you.'
 
@@ -141,7 +141,7 @@ Vetted: f
 Judgment: g
 Phenomena: {c}
 hla radgan
-hla rad-gan
+hlaa rad-gan
 1SG.NOM run-PST
 `I ran.'
 
@@ -175,14 +175,14 @@ dii dladahlda-gan
 1SG.NOM fall.down-PST
 `I fell down.'
 
-# 18 np
+# 18 np plural
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {det}
-7aasgee gyùudan radgan
-7aasgee gyùudan rad-gan
-these horse run-PST
+7aasgee gyùudan rad7wagan
+7aasgee gyùudan rad-7wa-gan
+these horse run-PL-PST
 `These horses ran.'
 
 # 19 np wrong det order
@@ -190,9 +190,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {det}
-gyùudan 7aasgee radgan
-gyùudan 7aasgee rad-gan
-horse these run-PST
+gyùudan 7aasgee rad7wagan
+gyùudan 7aasgee rad-7wa-gan
+horse these run-PL-PST
 `These horses ran.'
 
 # 20 np impossible det
@@ -219,31 +219,31 @@ horse fall.down-PST
 Source: a: 1193
 Vetted: t
 Judgment: g
-Phenomena: {wo, pn}
-diiga ’laa-srun tla.ad tlaagaanggan
-dii-ga ’laa-srun tla.ad tlaagaang-gan
-1SG.ACC-PP 3SG.NOM-only help first-PST
-`Only he helped me first.' 
+Phenomena: {wo, tam}
+7aasgee gyùudanee rad tlaagaang7wagan
+7aasgee gyùudan-ee rad tlaagaang-7wa-gan
+these horse-DEF run start-PL-PST
+`These horses started to run.'
 
 # 23 aux
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {wo}
-diiga ’laa-srun tlaagaanggan tla.ad 
-dii-ga ’laa-srun tlaagaang-gan tla.ad
-1SG.ACC-PP 3SG.NOM-only first-PST help
-`Only he helped me first.' or `Only they helped me first.'
+7aasgee gyùudanee tlaagaang7wagan rad
+7aasgee gyùudan-ee tlaagaang-7wa-gan rad
+these horse-DEF start-PL-PST run
+`These horses started to run.'
 
 # 24 aux
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: {wo}
-diiga ’laa-srun tla.adgan tlaagaang
-dii-ga ’laa-srun tla.ad-gan tlaagaang
-1SG.ACC-PP 3SG.NOM-only help-PST first
-`Only he helped me first.' or `Only they helped me first.'
+Phenomena: {tam}
+7aasgee gyùudanee rad tlaagaang7wagan
+7aasgee gyùudan-ee rad-7wa-gan tlaagaang
+these horse-DEF run-PL-PST start
+`These horses started to run.'
 
 # 25 wo pronoun and common noun. adapted from p 47
 Source: author
@@ -251,7 +251,7 @@ Vetted: f
 Judgment: g
 Phenomena: {wo}
 naan ’la qinggan
-naan ’la qing-gan
+naan ’laa qing-gan
 grandmother 3.SG see-PST
 `A grandmother saw him.' or `He saw a grandmother.'
 
@@ -301,7 +301,7 @@ Vetted: f
 Judgment: g
 Phenomena: {wo, pn}
 dang t’all qinggan
-dang t’allang qing-gan
+dang t’alang qing-gan
 2SG.ACC 1PL.NOM see-PST
 `We saw you.'
 
@@ -351,7 +351,7 @@ Vetted: f
 Judgment: u
 Phenomena: {c}
 hla dladahldagan
-hla dladahlda-gan
+hlaa dladahlda-gan
 1SG.ACC fall.down-PST
 `I fell down.'
 
@@ -365,24 +365,24 @@ Phenomena: {det}
 1PL.ACC fall.down-PST
 `We fell down.'
 
-# 37 det with df suffix
+# 37 det with df suffix, plural
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {det}
-7aasgee gyùudanee radgan
-7aasgee gyùudan-ee rad-gan
-these horse-DEF run-PST
+7aasgee gyùudanee rad7wagan
+7aasgee gyùudan-ee rad-7wa-gan
+these horse-DEF run-PL-PST
 `These horses ran.'
 
-# 38 det with df suffix
+# 38 det with df suffix, plural
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {det}
-gyùudanee radgan
-gyùudan-ee rad-gan
-horse-DEF run-PST
+gyùudanee rad7wagan
+gyùudan-ee rad-7wa-gan
+horse-DEF run-PL-PST
 `Horses ran.'
 
 # 39 det with df suffix
@@ -390,19 +390,19 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {det}
-gyùudanee 7aasgee radgan
-gyùudan-ee 7aasgee rad-gan
-horse-DEF these run-PST
+gyùudanee 7aasgee rad7wagan
+gyùudan-ee 7aasgee rad-7wa-gan
+horse-DEF these run-PL-PST
 `These horses ran.'
 
-# 40 det with df suffix
+# 40 det with df suffix, plural
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {det}
-hlaa 7aasgee srids ts’agts’agg qinggan
-hlaa 7aasgee srid-s ts’agts’ag qing-gan
-1SG.NOM these he.red-PST wagons see-PST
+hlaa 7aasgee srids ts’agts’agg qing7wagan
+hlaa 7aasgee srid-s ts’agts’agg qing-7wa-gan
+1SG.NOM these he.red-PST wagons see-PL-PST
 `I saw these red wagons.'
 
 # 41 negation
@@ -410,9 +410,9 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {neg}
-gyùudanee ts’agts’aggee gam qing.anggan
-gyùundan-ee ts’agts’ag-gee gam qing-.ang-gan
-horse-DEF wagon-DEF NEG see-NEG-PST
+gam gyùudanee ts’agts’aggee qing.anggan
+gam gyùudan-ee ts’agts’ag-gee qing-.ang-gan
+NEG horse-DEF wagon-DEF see-NEG-PST
 `The horse did not see the wagon.'
 
 # 42 negation
@@ -421,7 +421,7 @@ Vetted: f
 Judgment: u
 Phenomena: {neg}
 gyùudanee ts’agts’aggee qing.anggan
-gyùundan-ee ts’agts’ag-gee qing-.ang-gan
+gyùudan-ee ts’agts’ag-gee qing-.ang-gan
 horse-DEF wagon-DEF see-NEG-PST
 `The horse did not see the wagon.'
 
@@ -430,9 +430,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {neg}
-gyùudanee ts’agts’aggee gam qinggan
-gyùundan-ee ts’agts’ag-gee gam qing-gan
-horse-DEF wagon-DEF NEG see-PST
+gam gyùudanee ts’agts’aggee qinggan
+gam gyùudan-ee ts’agts’ag-gee qing-gan
+NEG horse-DEF wagon-DEF see-PST
 `The horse did not see the wagon.'
 
 # 44 negation
@@ -440,9 +440,9 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {neg}
-gyùudanee ts’agts’aggee gam qinggan.ang
-gyùundan-ee ts’agts’ag-gee gam qing-gan-.ang
-horse-DEF wagon-DEF NEG see-PST-NEG
+gam gyùudanee ts’agts’aggee qinggan.ang
+gam gyùudan-ee ts’agts’ag-gee qing-gan-.ang
+NEG horse-DEF wagon-DEF see-PST-NEG
 `The horse did not see the wagon.'
 
 # 45 past tense
@@ -451,7 +451,7 @@ Vetted: f
 Judgment: g
 Phenomena: {tam}
 gyùudanee ts’agts’aggee qinggan
-gyùundan-ee ts’agts’ag-gee qing-gan
+gyùudan-ee ts’agts’ag-gee qing-gan
 horse-DEF wagon-DEF see-PST
 `The horse saw the wagon.'
 
@@ -461,16 +461,266 @@ Vetted: f
 Judgment: g
 Phenomena: {tam}
 gyùudanee ts’agts’aggee qinggang
-gyùundan-ee ts’agts’ag-gee qing-gang
+gyùudan-ee ts’agts’ag-gee qing-gang
 horse-DEF wagon-DEF see-PRS
 `The horse sees the wagon.'
 
-# 47 future tense
+# 47 future mood
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {tam}
 gyùudanee ts’agts’aggee qing.asaang
-gyùundan-ee ts’agts’ag-gee qing-.asaang
-horse-DEF wagon-DEF see-FUT
+gyùudan-ee ts’agts’ag-gee qing-.asa-gang
+horse-DEF wagon-DEF see-FUT-PRS
 `The horse will see the wagon.'
+
+# 48 perfective aspect
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+gyùudanee dladahldagiigan
+gyùudan-ee dladahlda-gii-gan
+horse-DEF fall.down-PFV-PST
+`The horse has fallen down.'
+
+# 49 perfective aspect
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+gyùudanee dladahldagangii
+gyùudan-ee dladahlda-gan-gii
+horse-DEF fall.down-PST-PFV
+`The horse has fallen down.'
+
+# 50 perfective aspect w/ negation
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam, neg}
+gam gyùudanee dladahldagii.anggan
+gam gyùudan-ee dladahlda-gii-.ang-gan
+NEG horse-DEF fall.down-PFV-NEG-PST
+`The horse hasn't fallen down.'
+
+# 51 perfective aspect w/ negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam, neg}
+gam gyùudanee dladahlda.anggiigan
+gam gyùudan-ee dladahlda-.ang-gii-gan
+NEG horse-DEF fall.down-NEG-PFV-PST
+`The horse hasn't fallen down.'
+
+# 52 progressive aspect
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+gyùudanee raddagang
+gyùudan-ee rad-da-gang
+horse-DEF run-PROG-PRS
+`The horse is running.'
+
+# 53 progressive aspect
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+gyùudanee radgangda
+gyùudan-ee rad-gang-da
+horse-DEF run-PRS-PROG
+`The horse is running.'
+
+# 54 frequentive aspect
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {tam}
+gyùudanee raddagang
+gyùudan-ee rad-da-gang
+horse-DEF run-FREQ-PRS
+`The horse often runs.' or `The horse usually runs.'
+
+# 55 frequentive aspect
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+gyùudanee radgangda
+gyùudan-ee rad-gang-da
+horse-DEF run-PRS-FREQ
+`The horse often runs.' or `The horse usually runs.'
+
+# 56 agreement
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr}
+gyùudanee ts’agts’aggee qing7wagan
+gyùudan-ee ts’agts’ag-gee qing-7wa-gan
+horse-DEF wagon-DEF see-PL-PST
+`The horse saw the wagons.' or `The horses saw the wagon.'
+
+# 57 agreement
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr}
+hlaa ts’agts’aggee qing7wagan
+hlaa ts’agts’ag-gee qing-7wa-gan
+1SG.NOM wagon-DEF see-PL-PST
+`I saw the wagons.'
+
+# 58 agreement - no plural arg
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+hlaa dang qing7wagan
+hlaa daa qing-7wa-gan
+1SG.NOM 2SG.ACC see-PL-PST
+`I saw him.'
+
+# 59 agreement- wrong order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {agr}
+hlaa ts’agts’aggee qinggan7wa
+hlaa ts’agts’ag-gee qing-gan-7wa
+1SG.NOM wagon-DEF see-PST-PL
+`I saw the wagons.'
+
+# 60 argument optionality
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr, pro-d}
+hlaa qing7wagan
+hlaa qing-7wa-gan
+1SG.NOM see-PL-PST
+`I saw them.'
+
+# 61 argument optionality
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr, pro-d}
+dii qing7wagan
+dii qing-7wa-gan
+1SG.ACC see-PL-PST
+`They saw me.'
+
+# 62 possession - alienable gyaa form 1p
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+Mary dalang gyaa ts’agts’aggee qinggan
+Mary dalang gyaa ts’agts’ag-gee qing-gan
+Mary 2p POSS wagon-DF see-PST
+`Mary saw your wagon.'
+
+# 63 possession - alienable gyaa form non-1p
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+Mary gyaagan ts’agts’aggee qinggan
+Mary gyaagan ts’agts’ag-gee qing-gan
+Mary my wagon-DF see-PST
+`Mary saw my wagon.'
+
+# 64 possession - alienable -ra form
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+Mary ts’agts’aggee daangaa qinggan
+Mary ts’agts’ag-gee daangaa qing-gan
+Mary wagon-DEF your see-PST
+`Mary saw your wagon.'
+
+# 65 possession - alienable NP
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+Mary Bill gyaa ts’agts’aggee qinggan
+Mary Bill gyaa ts’agts’ag-gee qing-gan
+Mary Bill POSS wagon-DF see-PST
+`Mary saw Bill's wagon.'
+
+# 66 possession - alienable NP
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+Mary Bill ts’agts’aggee qinggan
+Mary Bill ts’agts’ag-gee qing-gan
+Mary Bill wagon-DF see-PST
+`Mary saw Bill's wagon.'
+
+# 67 possession - inalienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+dii naan Bill gyaa ts’agts’aggee qinggan
+dii naan Bill gyaa ts’agts’ag-gee qing-gan
+my grandmother Bill POSS wagon-DF see-PST
+`My grandmother saw Bill's wagon.'
+
+# 68 possession - inalienable
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+gyaagan naan Bill gyaa ts’agts’aggee qinggan
+gyaagan naan Bill gyaa ts’agts’ag-gee qing-gan
+my grandmother Bill POSS wagon-DF see-PST
+`My grandmother saw Bill's wagon.'
+
+# 69 possession - mixed alienable/inalienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+dii naan gyaa gyùudanee dladahldagan
+dii naan gyaa gyùudan-ee dladahlda-gan
+my grandmother POSS horse-DEF fall.down-PST
+`My grandmother's horse fell down.'
+
+# 70 possession - mixed alienable/inalienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+dii naan gyaa ts’agts’aggee diinaa dladahldagan
+dii naan gyaa ts’agts’ag-gee diinaa dladahlda-gan
+my grandmother POSS wagon-DEF my fall.down-PST
+`My grandmother's wagon of mine fell down.'
+
+# 71 possession - alienable -ra with dem and pn
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss, wo, det}
+waaniis 'laangaa gyùudanee dladahldagan
+waaniis 'laangaa gyùudan-ee dladahlda-gan
+that her horse-DEF fall.down-PST
+`That horse of hers fell down.' or `That one of her horses fell down.'
+
+# 72 possession - alienable -ra with dem and pn
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss, wo, det}
+waaniis gyùudanee 'laangaa dladahldagan
+waaniis gyùudan-ee 'laangaa dladahlda-gan
+that horse-DEF her fall.down-PST
+`That horse of hers fell down.' or `That one of her horses fell down.'
