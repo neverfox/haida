@@ -607,7 +607,7 @@ We added two proper nouns to the lexicon (*Bill* and *Mary*) to help with tests 
 
 ## Coverage
 
-Overall coverage: 78.4%
+Overall coverage: 67.4%
 Overgeneration: 20.7%
 
 Our coverage as decreased since last lab primarily because of the addition of properties of Haida illustrated in our test suite that aren't accounted for in the starter grammar and matrix, especially the addition of several possessive examples. Some of the same sentences that did not parse in Lab 2, such as:
