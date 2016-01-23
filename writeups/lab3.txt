@@ -35,20 +35,6 @@ inceptive     perfective   imperfective
 
 ```
 
-choices:
-```
-  aspect1_name=perfective
-    aspect1_supertype1_name=aspect
-  aspect2_name=imperfective
-    aspect2_supertype1_name=aspect
-  aspect3_name=progressive
-    aspect3_supertype1_name=imperfective
-  aspect4_name=frequentive
-    aspect4_supertype1_name=imperfective
-  aspect5_name=inceptive
-    aspect5_supertype1_name=aspect
-```
-
 #### Inceptive
 
 The `inceptive` auxiliary aspect takes an uninflected verb as a complement and then receives all of the inflection as the head.
@@ -89,39 +75,9 @@ these horse-DEF run-PL-PST start
 
 The customization system requires you to specify a FORM, so this required:
 
-* an addition to the lexicon for the auxiliary that selects for a finite complement:
+* an addition to the lexicon for the auxiliary that selects for a finite complement
 
-  ```
-  aux1_name=inceptive
-  aux1_sem=add-pred
-    aux1_feat1_name=aspect
-    aux1_feat1_value=inceptive
-    aux1_feat1_head=verb
-  aux1_subj=np-comp-case
-    aux1_compfeature1_name=form
-    aux1_compfeature1_value=finite
-    aux1_stem1_orth=tlaagaang
-    aux1_stem1_pred=_start_v_rel
-  
-  ```
-
-* a pair of non-affix lexical rules to mark verbs as non-finite or finite:
-
-  ```
-  verb-pc6_name=finite
-  verb-pc6_order=suffix
-  verb-pc6_inputs=verb
-    verb-pc6_lrt1_name=NON_FIN
-      verb-pc6_lrt1_feat1_name=form
-      verb-pc6_lrt1_feat1_value=nonfinite
-      verb-pc6_lrt1_feat1_head=verb
-      verb-pc6_lrt1_lri1_inflecting=no
-    verb-pc6_lrt2_name=FIN
-      verb-pc6_lrt2_feat1_name=form
-      verb-pc6_lrt2_feat1_value=finite
-      verb-pc6_lrt2_feat1_head=verb
-      verb-pc6_lrt2_lri1_inflecting=no
-  ```
+* a pair of non-affix lexical rules to mark verbs as non-finite or finite
 
 #### Perfective & Imperfective
 
@@ -259,39 +215,7 @@ NEG horse-DEF fall.down-NEG-PFV-PST
 `The horse hasn't fallen down.'
 ```
 
-For the suffix, we introduction another inflecting lexical rule that requires a finite verb, already (optionally) inflected for aspect:
-
-  ```
-  verb-pc1_name=negation
-  verb-pc1_order=suffix
-  verb-pc1_inputs=verb-pc4
-    verb-pc1_require1_others=verb-pc6_lrt2
-    verb-pc1_lrt1_name=neg
-      verb-pc1_lrt1_feat1_name=negation
-      verb-pc1_lrt1_feat1_value=plus
-      verb-pc1_lrt1_feat1_head=verb
-      verb-pc1_lrt1_lri1_inflecting=yes
-      verb-pc1_lrt1_lri1_orth=-.ang
-  ```
-
-For the adverb, an addition to the lexicon via the sentential negation choices:
-
-```
-section=sentential-negation
-neg-exp=2
-vpc-0-neg=create
-infl-neg=on
-adv-neg=on
-comp-neg-orth=gam
-bineg-type=infl-mod
-neg1-type=fm
-neg2-type=b
-neg-mod-infl-mod-neg=s
-neg-mod-order-infl-mod-neg=before
-neg-mod-orth=gam
-```
-
-We described the negation adverb as a free modifier on S, to put it as early in the clause as possible.
+For the suffix, we introduction another inflecting lexical rule that requires a finite verb, already (optionally) inflected for aspect. For the adverb, an addition to the lexicon via the sentential negation choices. We described the negation adverb as a free modifier on S, to put it as early in the clause as possible.
 
 #### Tense
 
@@ -314,22 +238,7 @@ horse-DEF wagon-DEF see-PST
 `The horse saw the wagon.'
 ```
 
-In Lab 2, our lexicon verbs were all given stem forms that were actually full past tense inflections, so we did not have to add any new test sentences to demonstrate this tense. However, in order to incorporate these suffixes explictly, we first had to change the verb entries to have their actual stem forms, and choose an inflecting lexical rule for the suffix:
-
-```
-verb-pc3_name=tense
-verb-pc3_obligatory=on
-verb-pc3_order=suffix
-verb-pc3_inputs=verb-pc2
-  verb-pc3_require1_others=verb-pc6_lrt2
-  verb-pc3_lrt1_name=past
-    verb-pc3_lrt1_feat1_name=tense
-    verb-pc3_lrt1_feat1_value=past
-    verb-pc3_lrt1_feat1_head=verb
-    verb-pc3_lrt1_forbid1_others=verb-pc2_lrt1
-    verb-pc3_lrt1_lri1_inflecting=yes
-    verb-pc3_lrt1_lri1_orth=-gan
-```
+In Lab 2, our lexicon verbs were all given stem forms that were actually full past tense inflections, so we did not have to add any new test sentences to demonstrate this tense. However, in order to incorporate these suffixes explictly, we first had to change the verb entries to have their actual stem forms, and choose an inflecting lexical rule for the suffix.
 
 ##### Present *-(g)ang*
 
@@ -454,22 +363,24 @@ Possession in Haida follows an alienable/inalienable distinction.
 Alienable possession is marked by either a) the separate possessive marker *gyaa* or b) the possessive NP suffix *-(ng)aa*. In Masset, this latter type is highly lexically restricted to "pronouns and reflexively possessed kin terms" and is non-productive. Furthermore, there is a special logophoric possessive *gyaagan* for the first person singular pronomial possessive. The remaining pronomial possessives utilize the (non-clitic) objective form pronouns:
 
 ***gyaa* forms:**
-gyaagan = my
-dang gyaa = your (sg)
-’laa gyaa = his/her
-7iitl’ gyaa = our
-dalang gyaa = your (pl)
-tl’aa gyaa
-Bill gyaa = Bill's
-Mary gyaa = Mary's
+
+- gyaagan = my
+- dang gyaa = your (sg)
+- ’laa gyaa = his/her
+- 7iitl’ gyaa = our
+- dalang gyaa = your (pl)
+- tl’aa gyaa
+- Bill gyaa = Bill's
+- Mary gyaa = Mary's
 
 ***-(ng)aa* forms:**
-diinaa = my
-daangaa = gaa = your (sg)
-7iitl’aangaa = 7iitl’aa = our
-dalaaangaa = dalaa = your (pl)
-’laangaa = ’laa = his/her/their
-tl’aangaa = tl’aa = his/her/their, people's
+
+- diinaa = my
+- daangaa = gaa = your (sg)
+- 7iitl’aangaa = 7iitl’aa = our
+- dalaaangaa = dalaa = your (pl)
+- ’laangaa = ’laa = his/her/their
+- tl’aangaa = tl’aa = his/her/their, people's
 
 The null third person *0* cannot occur as part of an alienable possessive.
 
@@ -654,8 +565,32 @@ Example 41 (grammatical) does not parse and example 42 (ungrammatical) does pars
 
 Our current level of overgeneration is due primarily to:
 
-1. word order (from last lab)
-2. [underspecified aspect](https://catalyst.uw.edu/gopost/conversation/ebender/947775)
-3. [inability to restrict pro-drop to low potency](https://catalyst.uw.edu/gopost/conversation/ebender/947771)
-4. plural is underspecified for 3rd person pronoun
-5. common nouns are underspecified for number and the plural agreement can come from either argument
+1. We still have "an overgeneration of word order because we do not yet have constraints to govern the SOV word order of common and proper nouns and the OSV word order of pronouns. This creates two versions of each sentence" (see lab 2 for examples)
+
+2. Haida verbs don't require aspect, so simple tenses are underspecified for aspect, causing results with aspect markers. This is expected until we can edit the grammar.
+
+  ```
+  # 21 np optional det
+  Source: author
+  Vetted: f
+  Judgment: g
+  Phenomena: {det}
+  gyùudan dladahldagan
+  gyùudan dladahlda-gan
+  horse fall.down-PST
+  `A horse fell down.'  
+  ```
+
+3. pronoun drop is limited to low potency pronouns. However, the customization system doesn't allow you to add  an environment in which the rule applies. Until we edit the tdl, we are unable to prevent high potency pronouns from dropping, causing sentences with a dropped low pot object to produce readings with high potency.
+
+  ```
+  # 31 wo null pronoun. adapted from p 47
+  Source: author
+  Vetted: f
+  Judgment: g
+  Phenomena: {wo, pn}
+  naan qinggan
+  naan qing-gan
+  grandmother see-PST
+  `A grandmother saw him.' or `He saw a grandmother.'
+  ```
