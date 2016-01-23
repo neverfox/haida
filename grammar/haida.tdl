@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Haida
 ;;; created at:
-;;;     Sat Jan 23 01:11:32 UTC 2016
+;;;     Sat Jan 23 04:36:20 UTC 2016
 ;;; based on Matrix customization system version of:
 ;;;     Sun Jan 10 22:56:48 UTC 2016
 ;;;
@@ -48,12 +48,16 @@ clause :+ [ SYNSEM.NEG-SAT na-or-+ ].
 
 +nvcdmo :+ [ MOD < > ].
 
-inflected :+ [ FUT-FLAG luk,
+inflected :+ [ FINITE-FLAG luk,
     TENSE-FLAG luk,
+    PLURAL-FLAG luk,
+    FUT-FLAG luk,
     FIN-FLAG luk ].
 
-infl-satisfied :+ [ FUT-FLAG na-or-+,
+infl-satisfied :+ [ FINITE-FLAG na-or-+,
     TENSE-FLAG na-or-+,
+    PLURAL-FLAG na-or-+,
+    FUT-FLAG na-or-+,
     FIN-FLAG na-or-+ ].
 
 png :+ [ PER person,
@@ -206,8 +210,10 @@ pn-noun-lex := no-spr-noun-lex.
 verb-lex := non-mod-lex-item & aspect-rule-dtr & modal-2-rule-dtr & negation-rule-dtr & plural-rule-dtr & tense-rule-dtr &
   [ SYNSEM.LOCAL.CAT [ HEAD verb,
                        HC-LIGHT - ],
-    INFLECTED [ FIN-FLAG na-or--,
-                TENSE-FLAG - ] ].
+    INFLECTED [ FINITE-FLAG -,
+                FIN-FLAG na-or--,
+                TENSE-FLAG -,
+                PLURAL-FLAG - ] ].
 
 main-verb-lex := verb-lex & basic-verb-lex &
   [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
@@ -371,10 +377,14 @@ fut-lex-rule := modal-2-lex-rule-super &
 tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED [ TENSE-FLAG +,
                 FUT-FLAG #fut,
-                FIN-FLAG #fin ],
+                FIN-FLAG #fin,
+                FINITE-FLAG #finite,
+                PLURAL-FLAG #plural ],
     DTR tense-rule-dtr &
         [ INFLECTED [ FUT-FLAG #fut,
-                      FIN-FLAG #fin & + ] ] ].
+                      FIN-FLAG #fin & +,
+                      FINITE-FLAG #finite,
+                      PLURAL-FLAG #plural ] ] ].
 
 past-lex-rule := tense-lex-rule-super &
   [ DTR.INFLECTED.FUT-FLAG na,
@@ -401,31 +411,40 @@ freq-aspect-lex-rule := imperf-aspect-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT frequentive ].
 
 plural-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & tense-rule-dtr &
-  [ INFLECTED #infl,
+  [ INFLECTED [ PLURAL-FLAG +,
+                FUT-FLAG #fut,
+                FIN-FLAG #fin,
+                FINITE-FLAG #finite,
+                TENSE-FLAG #tense ],
     DTR plural-rule-dtr &
-        [ INFLECTED #infl &
-                    [ FIN-FLAG + ] ] ].
+        [ INFLECTED [ FUT-FLAG #fut,
+                      FIN-FLAG #fin & +,
+                      FINITE-FLAG #finite,
+                      TENSE-FLAG #tense ] ] ].
 
-PL-SUBJ-lex-rule := plural-lex-rule-super &
+pl-subj-lex-rule := plural-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
                                                                 PER 3rd ] ].
 
-PL-obj-lex-rule := plural-lex-rule-super &
+pl-obj-lex-rule := plural-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
                                                                  PER 3rd ] ].
 
 finite-lex-rule-super := add-only-no-ccont-rule & const-lex-rule &
-  [ INFLECTED [ FUT-FLAG #fut,
-                TENSE-FLAG #tense ],
+  [ INFLECTED [ FINITE-FLAG +,
+                FUT-FLAG #fut,
+                TENSE-FLAG #tense,
+                PLURAL-FLAG #plural ],
     DTR verb-lex &
         [ INFLECTED [ FUT-FLAG #fut,
-                      TENSE-FLAG #tense ] ] ].
+                      TENSE-FLAG #tense,
+                      PLURAL-FLAG #plural ] ] ].
 
-FIN-lex-rule := aspect-rule-dtr & finite-lex-rule-super & modal-2-rule-dtr & negation-rule-dtr & plural-rule-dtr & tense-rule-dtr &
+fin-lex-rule := aspect-rule-dtr & finite-lex-rule-super & modal-2-rule-dtr & negation-rule-dtr & plural-rule-dtr & tense-rule-dtr &
   [ INFLECTED.FIN-FLAG +,
     SYNSEM.LOCAL.CAT.HEAD.FORM finite ].
 
-NON_FIN-lex-rule := finite-lex-rule-super &
+non-fin-lex-rule := finite-lex-rule-super &
   [ INFLECTED.FIN-FLAG #fin,
     DTR.INFLECTED.FIN-FLAG #fin,
     SYNSEM.LOCAL.CAT.HEAD.FORM nonfinite ].

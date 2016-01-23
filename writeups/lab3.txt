@@ -9,8 +9,6 @@
 
 ---
 
-This text file includes GitHub-flavored Markdown syntax, so while still pure text, it can be viewed with formatting [here]().
-
 ## Phenomena
 
 *Note: Changes from the prior lab are discussed within where relevant.*
@@ -215,7 +213,7 @@ NEG horse-DEF fall.down-NEG-PFV-PST
 `The horse hasn't fallen down.'
 ```
 
-For the suffix, we introduction another inflecting lexical rule that requires a finite verb, already (optionally) inflected for aspect. For the adverb, an addition to the lexicon via the sentential negation choices. We described the negation adverb as a free modifier on S, to put it as early in the clause as possible.
+For the suffix, we introduced another inflecting lexical rule that requires a finite verb, already (optionally) inflected for aspect. For the adverb, an addition to the lexicon via the sentential negation choices. We described the negation adverb as a free modifier on S, to put it as early in the clause as possible.
 
 #### Tense
 
@@ -274,7 +272,7 @@ horse-DEF wagon-DEF see-FUT-PRS
 `The horse will see the wagon.'
 ```
 
-We chose to create an optional, inflexing lexical rule for this model 2 position, with `future` as the only current rule type.
+We chose to create an optional, inflecting lexical rule for this modal-2 position, with `future` as the only current rule type. The output of the future rule is forbidden from the input for the past lex rule.
 
 #### Plural Agreement *-7wa*
 
@@ -327,7 +325,7 @@ We added two optional, inflecting lexical rules for subject and object agreement
 
 #### Argument optionality
 
-In Haida, subject and object pronouns can be dropped based on relative potency (dropping the lower).
+In Haida, subject and object pronouns can be dropped based on relative potency (dropping the lower). Low potency subjects must be dropped, but for objects, pronoun-drop is optional.
 
 Examples:
 ```
