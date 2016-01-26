@@ -754,3 +754,34 @@ daagu gudang7as
 daa-gu 	gudang-7as
 you-Q	understand-FUT
 `Will you understand it?'
+
+#76 wh questions --a in awhla needs a a downward pitch accent
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.awhlaang
+giisd-.uu 	dang 	gyaa 	taanaa nee 	tla.awhla-ang
+who-FOC		you	POSS	smokehouse	build-PR
+`Who is building your smokehouse?'
+
+#77 wh questions --a in awhla needs a a downward pitch accent
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.awhlayaa
+giisd-.uu 	dang 	gyaa 	taanaa nee 	tla.awhla-aa
+who-FOC		you	POSS	smokehouse	build-EVID
+`Who built your smokehouse?'
+
+#78 wh questions
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+huugu Bill guus taagaa
+huu-gu	Bill	guus	taa-gaa
+there-Q	Bill	what	eat-EVID
+`What did Bill eat?'
+
