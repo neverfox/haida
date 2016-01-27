@@ -1,0 +1,210 @@
+Lab 4 Write Up
+Author: Kristen Piepgrass
+Partner: Roman Pearah
+Language: Haida
+Date: January 26, 2016
+
+1. The following phenomena are represented in the test suite and accounted for by the grammar matrix customization:
+
+
+
+
+
+2. The following are properties of Haida that illustrated in the test suite but not covered by the current state of
+the grammar
+
+Matrix yes-no questions.
+
+Yes/no questions in Haida are marked with clitic after the first constituent. In addition, the head verb in a 
+yes/no question lacks it's position three and four suffixes (this is the suffix position for tense). As a result,
+a present tense question doesn't have a tense marker. The future tense marker is in the second suffix position, so
+it is unaffected. But with the past tense marker omitted, yes/no questions in the past tense are marked with the 
+evidential modal. Each of these tenses are represented in the data below.
+
+# 73 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudang
+daa-gu     gudang
+you-Q    understand
+`Do you understand it?'
+
+# 74 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudangaa
+daa-gu     gudang-aa
+you-Q    understand-EVID
+`Did you understand it?'
+
+# 75 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudang7as
+daa-gu     gudang-7as
+you-Q    understand-FUT
+`Will you understand it?'
+
+# 79 yes/no questions. clitic in wrong position
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {q}
+diigu daa gudang
+dii-gu 		daa 	gudang
+1SG.ACC-Q	you	understand
+`Do you understand me?'
+
+It is worth noting that the following examples are ungrammatical, due either to the position of the clitic or the
+presence of a position 3 or 4 (such as a past or present tense) suffix.
+
+# 76 yes/no questions. ileagal present tense marker
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+daagu gudanggang
+daa-gu 	gudang-gang
+you-Q	understand-PRS
+`Do you understand it?'
+
+# 77 yes/no questions. ileagal past tense marker
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+daagu gudanggan
+daa-gu 	gudang-gan
+you-Q	understand-PST
+`Did you understand it?'
+
+# 78 yes/no questions. clitic in wrong position
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+dii daagu gudang
+dii 	daa-gu 	gudang
+1SG.ACC	you-Q	understand
+`Do you understand me?'
+
+According to Enrico, the use of negation in a yes/no question is awkward and speakers of Haida offer alternatives,
+rather than negation. For example, one would not say "Is Bill here yet? Did he not come?", but rather "Is Bill
+here? Or is he still at home?"
+
+The customization system does not handle first position clitics, so we will impliment this structure in tdl. We 
+also haven't added the evidential modal because evidentiality is not on the menu this quarter. However, to capture the 
+past tense in yes/no questions, we will need to add it in the future. 
+
+Matrix WH Questions
+
+There are two question words for arguments in Haida: 'who', given in the next examples and 'what', given in some 
+examples below. There is no variation for subject/object. The primary method of expressing matrix wh-questions is 
+with a focus-marked question word in the focus position at the start of the sentence.  For example:
+
+#80 wh questions --a in awhla needs a a downward pitch accent
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.awhlaang
+giisd-.uu 	dang 	gyaa 	taanaa nee 	tla.awhla-ang
+who-FOC		you	POSS	smokehouse	build-PRS
+`Who is building your smokehouse?'
+
+#81 wh questions --a in awhla needs a a downward pitch accent
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.awhlayaa
+giisd-.uu 	dang 	gyaa 	taanaa nee 	tla.awhla-aa
+who-FOC		you	POSS	smokehouse	build-EVID
+`Who built your smokehouse?'
+
+The following is ungrammatical because the question word is in the wrong position
+
+#82 wh questions -- wrong order a in awhla needs a a downward pitch accent
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+dang gyaa giisd.uu taanaa nee tla.awhlaang
+dang 	gyaa 	giisd-.uu 	taanaa nee 	tla.awhla-ang
+you	POSS	who-FOC		smokehouse	build-PRS
+`Who is building your smokehouse?'
+
+This sentence is ungrammatical because there is no focus marker on the question word.
+
+#83 wh questions --a in awhla needs a a downward pitch accent
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+giisd dang gyaa taanaa nee tla.awhlaang
+giisd 	dang 	gyaa 	taanaa nee 	tla.awhla-ang
+who	you	POSS	smokehouse	build-PRS
+`Who is building your smokehouse?'
+
+Although it is not discussed explicitly, the following example (used in the context of demonstrating anaphora
+resolution) shows a question word that belongs in an embedded clause in the sentence focus position at the
+beginning of the question:
+
+#87 wh questions from embedded clause. adapted from 381--a in awhla needs a a downward pitch accent
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.awhlaang Bill gudang-gang
+giisd-.uu     dang     gyaa     taanaa nee     tla.awhla-ang    Bill    gudang-gang
+who-FOC        you    POSS    smokehouse    build-PRS    Bill    thing-PRS
+`Who Does Bill think is building your smokehouse?'
+
+The second strategy for wh-questions allows the question word to occur in a non-focal position, but the 
+interrogative clitic used for yes/no questions must mark the position where the question word belongs.
+
+#84 wh questions
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+huugu Bill guus taagaa
+huu-gu	Bill	guus	taa-gaa
+there-Q	Bill	what	eat-EVID
+`What did Bill eat?'
+
+#85 wh questions
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wh}
+Bill huugu guus taagaa
+Bill	huu-gu	guus	taa-gaa
+Bill	there-Q	what	eat-EVID
+`What did Bill eat?'
+
+#86 wh questions
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+Bill guus taagaa huugu
+Bill	guus	taa-gaa		huu-gu
+Bill	what	eat-EVID	there-Q
+`What did Bill eat?'
+
+We have not implemeted either strategy for wh-questions as this topic is not covered in teh customization
+system.
+
+3. Coverage of our grammar over the testsuite.
+
+
+
+
+4. Changes we made to our grammar to improve its performance (coverage and accuracy).

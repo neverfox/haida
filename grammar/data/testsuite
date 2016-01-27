@@ -755,17 +755,57 @@ daa-gu 	gudang-7as
 you-Q	understand-FUT
 `Will you understand it?'
 
-#76 wh questions --a in awhla needs a a downward pitch accent
+# 76 yes/no questions. ileagal present tense marker
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+daagu gudanggang
+daa-gu 	gudang-gang
+you-Q	understand-PRS
+`Do you understand it?'
+
+# 77 yes/no questions. ileagal past tense marker
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+daagu gudanggan
+daa-gu 	gudang-gan
+you-Q	understand-PST
+`Did you understand it?'
+
+# 78 yes/no questions. clitic in wrong position
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+dii daagu gudang
+dii 	daa-gu 	gudang
+1SG.ACC	you-Q	understand
+`Do you understand me?'
+
+# 79 yes/no questions. clitic in wrong position
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {q}
+diigu daa gudang
+dii-gu 		daa 	gudang
+1SG.ACC-Q	you	understand
+`Do you understand me?'
+
+#80 wh questions --a in awhla needs a a downward pitch accent
 Source: a:134
 Vetted: s
 Judgment: g
 Phenomena: {wh}
 giisd.uu dang gyaa taanaa nee tla.awhlaang
 giisd-.uu 	dang 	gyaa 	taanaa nee 	tla.awhla-ang
-who-FOC		you	POSS	smokehouse	build-PR
+who-FOC		you	POSS	smokehouse	build-PRS
 `Who is building your smokehouse?'
 
-#77 wh questions --a in awhla needs a a downward pitch accent
+#81 wh questions --a in awhla needs a a downward pitch accent
 Source: a:134
 Vetted: s
 Judgment: g
@@ -775,7 +815,27 @@ giisd-.uu 	dang 	gyaa 	taanaa nee 	tla.awhla-aa
 who-FOC		you	POSS	smokehouse	build-EVID
 `Who built your smokehouse?'
 
-#78 wh questions
+#82 wh questions -- wrong order. a in awhla needs a a downward pitch accent
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+dang gyaa giisd.uu taanaa nee tla.awhlaang
+dang 	gyaa 	giisd-.uu 	taanaa nee 	tla.awhla-ang
+you	POSS	who-FOC		smokehouse	build-PRS
+`Who is building your smokehouse?'
+
+#83 wh questions no focus--a in awhla needs a a downward pitch accent
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+giisd dang gyaa taanaa nee tla.awhlaang
+giisd 	dang 	gyaa 	taanaa nee 	tla.awhla-ang
+who	you	POSS	smokehouse	build-PRS
+`Who is building your smokehouse?'
+
+#84 wh questions
 Source: a:134
 Vetted: s
 Judgment: g
@@ -785,3 +845,32 @@ huu-gu	Bill	guus	taa-gaa
 there-Q	Bill	what	eat-EVID
 `What did Bill eat?'
 
+#85 wh questions
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wh}
+Bill huugu guus taagaa
+Bill	huu-gu	guus	taa-gaa
+Bill	there-Q	what	eat-EVID
+`What did Bill eat?'
+
+#86 wh questions
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+Bill guus taagaa huugu
+Bill	guus	taa-gaa		huu-gu
+Bill	what	eat-EVID	there-Q
+`What did Bill eat?'
+
+#87 wh questions from embedded clause. adapted from 381--a in awhla needs a a downward pitch accent
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.awhlaang Bill gudang-gang
+giisd-.uu 	dang 	gyaa 	taanaa nee 	tla.awhla-ang	Bill	gudang-gang
+who-FOC		you	POSS	smokehouse	build-PRS	Bill	thing-PRS
+`Who Does Bill think is building your smokehouse?'
