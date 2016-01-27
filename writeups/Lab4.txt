@@ -16,8 +16,8 @@ the grammar
 Matrix yes-no questions.
 
 Yes/no questions in Haida are marked with clitic after the first constituent. In addition, the head verb in a 
-yes/no question lacks it's position three and four suffixes (this is the suffix position for tense). As a result,
-a present tense question doesn't have a tense marker. The future tense marker is in the second suffix position, so
+yes/no question lacks it's position four and five suffixes (this is the suffix position for tense). As a result,
+a present tense question doesn't have a tense marker. The future tense marker is in the third suffix position, so
 it is unaffected. But with the past tense marker omitted, yes/no questions in the past tense are marked with the 
 evidential modal. Each of these tenses are represented in the data below.
 
@@ -104,9 +104,10 @@ past tense in yes/no questions, we will need to add it in the future.
 
 Matrix WH Questions
 
-There are two question words for arguments in Haida: 'who', given in the next examples and 'what', given in some 
-examples below. There is no variation for subject/object. The primary method of expressing matrix wh-questions is 
-with a focus-marked question word in the focus position at the start of the sentence.  For example:
+There are two question words for arguments in Haida: 'giisda' meaning who, given in the next examples and 'guus' 
+meaning what, given in some examples below. There is no variation for subject/object. The primary method of 
+expressing matrix wh-questions is with a focus-marked question word in the focus position at the start of the 
+sentence.  For example:
 
 #80 wh questions --a in awhla needs a a downward pitch accent
 Source: a:134
@@ -166,6 +167,9 @@ giisd-.uu     dang     gyaa     taanaa nee     tla.awhla-ang    Bill    gudang-g
 who-FOC        you    POSS    smokehouse    build-PRS    Bill    thing-PRS
 `Who Does Bill think is building your smokehouse?'
 
+This example is meant to illustrate the position of the question word when the argument it represents is in
+a lower clause. More information on embedded clauses is given in the embedded clause section below.
+
 The second strategy for wh-questions allows the question word to occur in a non-focal position, but the 
 interrogative clitic used for yes/no questions must mark the position where the question word belongs.
 
@@ -201,6 +205,103 @@ Bill	what	eat-EVID	there-Q
 
 We have not implemeted either strategy for wh-questions as this topic is not covered in teh customization
 system.
+
+Adverbs
+
+Although Enrico does not describe adverbs in regards to the type of constituents they modify, he describes
+their distribution in comparison to the negation adverb gam. The adverb (in some cases I consider
+Enrico's manner adverbs to be temporal, but the distribution is not affected by this semantic distinction,
+so I will just say adverb) can occur before or after the negation adverb, but it's scope must be inside
+the negation. Therefore, both of the following word orders are legal:
+
+# 92 negation and adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv, neg}
+neesdagaang.an gam gyùudanee ts’agts’aggee tlagaayda.anggan
+neesdagaang.an	gam	gyùudan-ee 	ts’agts’ag-gee tlagaayda-.ang-gan
+right.away	NEG	horse-DEF 	wagon-DEF 	injure-NEG-PST
+`The horse did not damage the wagon right away.'
+
+# 93 negation and adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv, neg}
+gam neesdagaang.an gyùudanee ts’agts’aggee tlagaayda.anggan
+gam	neesdagaang.an	gyùudan-ee 	ts’agts’ag-gee tlagaayda-.ang-gan
+NEG	right.away	horse-DEF 	wagon-DEF 	injure-NEG-PST
+`The horse did not damage the wagon right away.'
+
+From the data Enrico gives to show this distribution, we can see that adverbs occur in three possible positions
+to modify verbs, verb phrases and sentences. Tihs permits the following sentences:
+
+# 88 adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+neesdagaang.an gyùudanee ts’agts’aggee tlagaaydagan
+neesdagaang.an	gyùudan-ee 	ts’agts’ag-gee tlagaayda-gan
+right.away	horse-DEF 	wagon-DEF 	injure-PST
+`The horse damaged the wagon right away.'
+
+# 89 adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+gyùudanee neesdagaang.an ts’agts’aggee tlagaaydagan
+gyùudan-ee 	neesdagaang.an	ts’agts’ag-gee tlagaayda-gan
+horse-DEF	right.away	wagon-DEF 	injure-PST
+`The horse damaged the wagon right away.'
+
+# 90 adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+gyùudanee ts’agts’aggee neesdagaang.an tlagaaydagan
+gyùudan-ee 	ts’agts’ag-gee 	neesdagaang.an	tlagaayda-gan
+horse-DEF	wagon-DEF 	right.away	injure-PST
+`The horse damaged the wagon right away.'
+
+However, because Haida is a verb-final language, the following word order is impossible:
+
+# 91 adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adv}
+gyùudanee ts’agts’aggee tlagaaydagan neesdagaang.an
+gyùudan-ee 	ts’agts’ag-gee	tlagaayda-gan 	neesdagaang.an
+horse-DEF	wagon-DEF 	injure-PST	right.away
+`The horse damaged the wagon right away.'
+
+
+
+
+
+
+Embedded clauses
+We have already seen that questions with embedded clauses are possible as shown below.
+
+
+
+
+
+#87 wh questions from embedded clause. adapted from 381--a in awhla needs a a downward pitch accent
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.awhlaang Bill gudang-gang
+giisd-.uu     dang     gyaa     taanaa nee     tla.awhla-ang    Bill    gudang-gang
+who-FOC        you    POSS    smokehouse    build-PRS    Bill    thing-PRS
+`Who Does Bill think is building your smokehouse?'
+
+Adverbs are not covered in the customization system, so we have not implemented them yet in our grammar.
 
 3. Coverage of our grammar over the testsuite.
 

@@ -874,3 +874,63 @@ giisd.uu dang gyaa taanaa nee tla.awhlaang Bill gudang-gang
 giisd-.uu 	dang 	gyaa 	taanaa nee 	tla.awhla-ang	Bill	gudang-gang
 who-FOC		you	POSS	smokehouse	build-PRS	Bill	thing-PRS
 `Who Does Bill think is building your smokehouse?'
+
+# 88 adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+neesdagaang.an gyùudanee ts’agts’aggee tlagaaydagan
+neesdagaang.an	gyùudan-ee 	ts’agts’ag-gee tlagaayda-gan
+right.away	horse-DEF 	wagon-DEF 	injure-PST
+`The horse damaged the wagon right away.'
+
+# 89 adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+gyùudanee neesdagaang.an ts’agts’aggee tlagaaydagan
+gyùudan-ee 	neesdagaang.an	ts’agts’ag-gee tlagaayda-gan
+horse-DEF	right.away	wagon-DEF 	injure-PST
+`The horse damaged the wagon right away.'
+
+# 90 adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+gyùudanee ts’agts’aggee neesdagaang.an tlagaaydagan
+gyùudan-ee 	ts’agts’ag-gee 	neesdagaang.an	tlagaayda-gan
+horse-DEF	wagon-DEF 	right.away	injure-PST
+`The horse damaged the wagon right away.'
+
+# 91 adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adv}
+gyùudanee ts’agts’aggee tlagaaydagan neesdagaang.an
+gyùudan-ee 	ts’agts’ag-gee	tlagaayda-gan 	neesdagaang.an
+horse-DEF	wagon-DEF 	injure-PST	right.away
+`The horse damaged the wagon right away.'
+
+# 92 negation and adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv, neg}
+neesdagaang.an gam gyùudanee ts’agts’aggee tlagaayda.anggan
+neesdagaang.an	gam	gyùudan-ee 	ts’agts’ag-gee tlagaayda-.ang-gan
+right.away	NEG	horse-DEF 	wagon-DEF 	injure-NEG-PST
+`The horse did not damage the wagon right away.'
+
+# 93 negation and adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv, neg}
+gam neesdagaang.an gyùudanee ts’agts’aggee tlagaayda.anggan
+gam	neesdagaang.an	gyùudan-ee 	ts’agts’ag-gee tlagaayda-.ang-gan
+NEG	right.away	horse-DEF 	wagon-DEF 	injure-NEG-PST
+`The horse did not damage the wagon right away.'
