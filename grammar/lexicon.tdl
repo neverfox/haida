@@ -109,8 +109,8 @@ gam := neg-adv-lex &
   [ STEM < "gam" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
-7isgyann1 := conj-lex &
-  [ STEM < "7isgyann" >,
+7isgyaan1 := conj-lex &
+  [ STEM < "7isgyaan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "1" ].
 
