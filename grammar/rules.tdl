@@ -19,11 +19,7 @@ np1-bottom-coord := np1-bottom-coord-rule.
 
 np2-top-coord := np2-top-coord-rule.
 
-np2-mid-coord := np2-mid-coord-rule.
-
 np2-bottom-coord := np2-bottom-coord-rule.
-
-np2-left-coord := np2-left-coord-rule.
 
 vp3-top-coord := vp3-top-coord-rule.
 
