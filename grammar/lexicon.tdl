@@ -108,3 +108,22 @@ waasgee := dem-pl-determiner-lex &
 gam := neg-adv-lex &
   [ STEM < "gam" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+
+7isgyann1 := conj-lex &
+  [ STEM < "7isgyann" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    CFORM "1" ].
+
+-rahl2 := conj-lex &
+  [ STEM < "-rahl" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    CFORM "2" ].
+
+-rahl2_nosem := nosem-conj-lex &
+  [ STEM < "-rahl" >,
+    CFORM "2" ].
+
+-gyaan3 := conj-lex &
+  [ STEM < "-gyaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    CFORM "3" ].

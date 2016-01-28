@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Haida
 ;;; created at:
-;;;     Sat Jan 23 04:36:20 UTC 2016
+;;;     Thu Jan 28 01:39:34 UTC 2016
 ;;; based on Matrix customization system version of:
 ;;;     Sun Jan 10 22:56:48 UTC 2016
 ;;;
@@ -49,16 +49,16 @@ clause :+ [ SYNSEM.NEG-SAT na-or-+ ].
 +nvcdmo :+ [ MOD < > ].
 
 inflected :+ [ FINITE-FLAG luk,
-    TENSE-FLAG luk,
-    PLURAL-FLAG luk,
     FUT-FLAG luk,
-    FIN-FLAG luk ].
+    FIN-FLAG luk,
+    TENSE-FLAG luk,
+    PLURAL-FLAG luk ].
 
 infl-satisfied :+ [ FINITE-FLAG na-or-+,
-    TENSE-FLAG na-or-+,
-    PLURAL-FLAG na-or-+,
     FUT-FLAG na-or-+,
-    FIN-FLAG na-or-+ ].
+    FIN-FLAG na-or-+,
+    TENSE-FLAG na-or-+,
+    PLURAL-FLAG na-or-+ ].
 
 png :+ [ PER person,
     NUM number,
@@ -376,15 +376,15 @@ fut-lex-rule := modal-2-lex-rule-super &
 
 tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED [ TENSE-FLAG +,
-                FUT-FLAG #fut,
+                PLURAL-FLAG #plural,
                 FIN-FLAG #fin,
                 FINITE-FLAG #finite,
-                PLURAL-FLAG #plural ],
+                FUT-FLAG #fut ],
     DTR tense-rule-dtr &
-        [ INFLECTED [ FUT-FLAG #fut,
+        [ INFLECTED [ PLURAL-FLAG #plural,
                       FIN-FLAG #fin & +,
                       FINITE-FLAG #finite,
-                      PLURAL-FLAG #plural ] ] ].
+                      FUT-FLAG #fut ] ] ].
 
 past-lex-rule := tense-lex-rule-super &
   [ DTR.INFLECTED.FUT-FLAG na,
@@ -412,15 +412,15 @@ freq-aspect-lex-rule := imperf-aspect-lex-rule &
 
 plural-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & tense-rule-dtr &
   [ INFLECTED [ PLURAL-FLAG +,
-                FUT-FLAG #fut,
                 FIN-FLAG #fin,
                 FINITE-FLAG #finite,
-                TENSE-FLAG #tense ],
+                TENSE-FLAG #tense,
+                FUT-FLAG #fut ],
     DTR plural-rule-dtr &
-        [ INFLECTED [ FUT-FLAG #fut,
-                      FIN-FLAG #fin & +,
+        [ INFLECTED [ FIN-FLAG #fin & +,
                       FINITE-FLAG #finite,
-                      TENSE-FLAG #tense ] ] ].
+                      TENSE-FLAG #tense,
+                      FUT-FLAG #fut ] ] ].
 
 pl-subj-lex-rule := plural-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ NUM pl,
@@ -470,3 +470,45 @@ subj-head-phrase := decl-head-subj-phrase & head-final &
 
 bare-np-phrase := basic-bare-np-phrase &
   [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
+
+;;;;;;;;;;;;;;;;;;
+;;; Coordination
+;;;;;;;;;;;;;;;;;;
+
+;;; Coordination Strategy 1
+
+np1-top-coord-rule := basic-np-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+np1-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase &
+  [ SYNSEM.LOCAL.COORD-STRAT "1" ].
+
+;;; Coordination Strategy 2
+
+np2-top-coord-rule := basic-np-top-coord-rule & omni-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
+
+np2-mid-coord-rule := basic-np-mid-coord-rule & omni-mid-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
+
+np2-bottom-coord-rule := omni-conj-first-bottom-coord-rule & np-bottom-coord-phrase &
+  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
+
+np2-left-coord-rule := omni-conj-first-left-coord-rule & np-bottom-coord-phrase &
+  [ SYNSEM.LOCAL.COORD-STRAT "2" ].
+
+;;; Coordination Strategy 3
+
+vp3-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "3" ].
+
+vp3-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase &
+  [ SYNSEM.LOCAL.COORD-STRAT "3" ].
+
+;;; Coordination Strategy 3
+
+s3-top-coord-rule := basic-s-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM.LOCAL.COORD-STRAT "3" ].
+
+s3-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
+  [ SYNSEM.LOCAL.COORD-STRAT "3" ].
