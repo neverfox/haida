@@ -215,6 +215,11 @@ tlaagaang := inceptive-aux-lex &
   [ STEM < "tlaagaang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_start_v_rel" ].
 
+;;; Copulas
+
+7iij := copula-cop-lex &
+  [ STEM < "7iij" > ].
+
 ;;; Determiners
 
 7aajii := dem-sg-determiner-lex &

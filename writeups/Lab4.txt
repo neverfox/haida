@@ -6,9 +6,317 @@ Date: January 26, 2016
 
 1. The following phenomena are represented in the test suite and accounted for by the grammar matrix customization:
 
+Coordination:
+
+Haida has a polysyndeton coordination structure  which places a coordinating conjunction before each coordinand.
+For nouns, there are two coordinating conjunctions: 7isgyaan and rahl. Enrico analyzes rahl as a left leaning 
+clitic as shown in the following examples.
+
+#94 phrasal coordination
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+Bill 7isgyaan Mary dladahldagan
+Bill 7isgyaan Mary dladahlda-gan
+Bill and Mary fall.down-PST
+`Bill and Mary fell down.'
+
+#95 phrasal coordination - comitative
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+Billrahl Mary dladahldagan
+Bill=rahl Mary dladahlda-gan
+Bill=and Mary fall.down-PST
+`Bill and Mary fell down.'
+
+#99 phrasal coordination - comitative
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd, poss}
+Bill 7isgyaan Mary naan dladahldagan
+Bill 7isgyaan Mary naan dladahlda-gan
+Bill and Mary grandmother fall.down-PST
+`Bill and Mary's grandmother fell down.'
 
 
+#101 phrasal coordination
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill Mary dladahldagan
+Bill Mary dladahlda-gan
+Bill Mary fall.down-PST
+`Bill and Mary fell down.'
 
+#103 phrasal coordination
+Source: a:1091
+Vetted: s
+Judgement: g
+Phenomena: {crd}
+sguusiid 7isgyaan 7anyaas 7isgyaan 7inuu 7isgyaan ts’at’saga dii sdahlaang
+sguusiid 7isgyaan 7anyaas 7isgyaan 7inuu 7isgyaan ts’at’sa-ga dii sdahla-ang
+potato and onion and rutabaga and carrot-PP I need-PRS
+`I need potatoes and onions and rutabagas and carrots.' or `I need potatoes, onions, rutabagas, and carrots.'
+
+#104 phrasal coordination
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+sguusiid 7anyaas 7inuu ts’at’saga dii sdahlaang
+sguusiid 7anyaas 7inuu ts’at’sa-ga dii sdahla-ang
+potato onion rutabaga carrot-PP I need-PRS
+`I need potatoes and onions and rutabagas and carrots.' or `I need potatoes, onions, rutabagas, and carrots.'
+
+VPs and Ss follow the same strategy as NPs, but use a different conjunction, gyaan: 
+
+#105 clausal coordination
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+gyùudanee dladahldagangyaan ’la ts’agts’aggee tlagaaydagan
+gyùudan-ee dladahlda-gan gyaan ’la ts’agts’ag-gee tlagaayda-gan
+horse-DEF fall.down-PST and 3p wagon-DF injure-PST
+`The horse fell down and damaged the wagon.'
+
+#106 clausal coordination
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+gyùudanee dladahldagan ’la ts’agts’aggee tlagaaydagan
+gyùudan-ee dladahlda-gan ’la ts’agts’ag-gee tlagaayda-gan
+horse-DEF fall.down-PST 3p wagon-DF injure-PST
+`The horse fell down and damaged the wagon.'
+
+#100 phrasal coordination
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill gyaan Mary dladahldagan
+Bill gyaan Mary dladahlda-gan
+Bill and Mary fall.down-PST
+`Bill and Mary fell down.'
+
+#137 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+Bill qats’agangyaan Mary qaaguhlaa.aagan
+Bill qats’a-gan=gyaan Mary qaaguhlaa.aa-gan
+Bill come.in-PST=and Mary go.out-PST
+`Bill came in and Mary went out.'
+
+#138 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill qats’agan Mary qaaguhlaa.aagan
+Bill qats’a-gan Mary qaaguhlaa.aa-gan
+Bill come.in-PST Mary go.out-PST
+`Bill came in and Mary went out.'
+
+#139 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill qats’agangyaan Mary qaaguhlaa.aagangyaan
+Bill qats’a-gan=gyaan Mary qaaguhlaa.aa-gan=gyaan
+Bill come.in-PST=and Mary go.out-PST=and
+`Bill came in and Mary went out.'
+
+#140 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill qats’agan Mary qaaguhlaa.aagangyaan
+Bill qats’a-gan Mary qaaguhlaa.aa-gan=gyaan
+Bill come.in-PST Mary go.out-PST=and
+`Bill came in and Mary went out.'
+
+#141 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill gyaan qats’agan Mary qaaguhlaa.aagangyaan
+Bill gyaan qats’a-gan Mary qaaguhlaa.aa-gan=gyaan
+Bill come.in-PST Mary go.out-PST
+`Bill came in and Mary went out.'
+
+#142 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+Bill qats’agangyaan Mary qaaguhlaa.aagan7isan
+Bill qats’a-gan=gyaan Mary qaaguhlaa.aa-gan=7isan
+Bill come.in-PST=and Mary go.out-PST=too
+`Bill came in and Mary went out.'
+
+Enrico says that gyaan can not be used to coordinate NPs, as showen in #100, but he does highlight the following 
+example:
+
+#107 clausal coordination
+Source: a:988
+Vetted: s
+Judgement: g
+Phenomena: {crd}
+Bill sguusiid taagangyaan sriwhan.isgyann tsii.nhan.isgyaan pickleshan.isan
+Bill sguusiid taa-gan=gyaan sriw=han.is=gyaan tsii.n=han.is=gyaan pickles=han.isan
+Bill potatoes eat-PST=and seaweed-too=and salmon-too=and pickles-too
+`Bill eats potatoes (and) [he eats] seaweed (and) [he eats] salmon (and) [he eats] pickles.'
+
+Enrico translates this bracketing the subject and verb to show that there may be a different process here than 
+in #100. We have included the example because it is interesting, but it cannot be parsed in the current grammar.
+
+To impliment coordination, we created three strategies in the customization system. We created two polysyndeton 
+strategies in which the conjunction occurs before a noun coordinand (one for each 7isgyaan and rahl). We treat rahl
+as an independent word that attaches to the right of a noun syntactically but attached to the left of a noun
+phonologically.  This strategy allows us to take advantage of the customization system, and say that it occurs before
+the coordinand, but in our testsuite, we have written rahl up as clitic attached to the word before the coordinand.
+Our third stratecy specifies a polysyndeton conjunction, called gyaan, that comes before a VP or an S.
+
+There is another coordination strategy in Haida which Enrico calls comative coordination. A comative clitic on the
+last or all nouns changess the meaning of a sentence like "Bill and Mary fell down" from "Bill fell down and in a
+separate event Mary also fell down" to "Bill and Mary fell down together as part of the same event." Distribution of
+this clitic is shown below:
+
+#96 phrasal coordination - comitative
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+Billrahl Mary-7isan dladahldagan
+Bill=rahl Mary=7isan dladahlda-gan
+Bill=and Mary=too fall.down-PST
+`Bill and Mary fell down.'
+
+#97 phrasal coordination - comitative
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+Bill 7isgyaan Mary-7isan dladahldagan
+Bill 7isgyaan Mary=7isan dladahlda-gan
+Bill and Mary=too fall.down-PST
+`Bill and Mary fell down.'
+
+#98 phrasal coordination - comitative
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill-7isan 7isgyaan Mary-7isan dladahldagan
+Bill=7isan 7isgyaan Mary=7isan dladahlda-gan
+Bill=too and Mary=too fall.down-PST
+`Bill and Mary fell down.'
+
+We have not implimented this phenomenon in grammar yet, as it will need to be done in tdl editing.
+
+Attributive Adjectives
+
+Attributive addjectives attache to the right of the constituent that they modify. However they are not predicative
+and do not occur with a copula. They only modify noun phrases. Examples of this distribution are given below:
+
+#126 attributive adjectives
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {adj}
+gyùudanee 7iw7aan dladahldagan
+gyùudan-ee 7iw7aan dladahlda-gan
+horse-DEF be.big fall.down-PST
+`The big horse fell down.'
+
+#127 attributive adjectives
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {adj, cop}
+xa.a q’iigaa 7aanàa 7iijang
+xa.a q’iigaa 7aanàa 7iij-gang
+mallard be.old in.next.room be-PRS
+`An old mallard is in the next room.'
+
+#128 attributive adjectives
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {adj}
+7iw7aan gyùudanee dladahldagan
+7iw7aan gyùudan-ee dladahlda-gan
+be.big horse-DEF fall.down-PST
+`The big horse fell down.'
+
+#120 non-verbal predicates - adj
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+gyùudanee 7iw7aan 7iijang
+gyùudan-ee 7iw7aan 7iij-gang
+horse-DEF be.big be-PRS
+`The horse is big.' or `The horse is large.'
+
+To impliment the attributive adjectives, we added them to our lexicon in a single class that is strictly attributive, occurs
+after the noun and impossibly behaves predicately.
+
+Enrico claims that these attributive adjectives actually derrive from verbs by way of a lexical rule. We elected to treat
+them as adjectives non the less so that we could take advantage of the customization system. That said for each "adjective"
+that we entered into the lexicon, an intrasitive verb exixts that infleccts for tense, etc. We have used these verbs
+to demonstrate sentences that are similar to AP predicative sentences in other languages.
+
+#118 non-verbal predicates - Adj
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {cop}
+gyùudanee 7iw7aangang
+gyùudan-ee 7iw7aan-gang
+horse-DEF be.big-PRS
+`The horse is big.' or `The horse is large.'
+
+#119 non-verbal predicates - adj
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {cop}
+ts’agts’aggee sridgang
+ts’agts’ag-gee srid-gang
+wagon-DEF be.red-PRS
+`The wagon is red.'
+
+#123 attributive adjectives
+Source: a:589
+Vetted: s
+Judgement: g
+Phenomena: {adj, cop}
+na q’iigaa t’iij ’laagang
+na q’iigaa t’iij ’laa-gang
+house be.old some.of be.good-PRS
+`Some old houses are good.'
+
+#124 attributive adjectives
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {adj, cop}
+na t’iij q’iigaagang ’laagang
+na t’iij q’iigaa-gang ’laa-gang
+house some.of be.old-PRS be.good-PRS
+`Some old houses are good.'
 
 2. The following are properties of Haida that illustrated in the test suite but not covered by the current state of
 the grammar
@@ -279,10 +587,119 @@ gyùudan-ee 	ts’agts’ag-gee	tlagaayda-gan 	neesdagaang.an
 horse-DEF	wagon-DEF 	injure-PST	right.away
 `The horse damaged the wagon right away.'
 
+Non-Verbal Predicates
 
+Haida has a copula for non-verbal predicates of type NP and PP. It is important to note that the copula is NOT used
+for attributive APs. Rather an intransitive verb exists for each adjective, as was previously discussed. The Haida
+copula occurs in the standard verb position, after the subject and either NP or PP. The predicative phrase must occur
+after its subject and before the copula. In the following examples, please keep in mind that while a mallard is necessarily
+a bird, a bird is not necessarily a mallard, so we consider 109 to be ungrammatical because it places the predicative
+NP before the subject. 
 
+#108 non-verbal predicate - noun
+Source: a:211
+Vetted: s
+Judgement: g
+Phenomena: {cop, wo}
+xa.a xid7iid 7iijang
+xa.a xid7iid 7iij-gang
+mallard bird be-PRS
+`A mallard is a bird.'
 
+#109 non-verbal predicate - noun
+Source: a:211
+Vetted: s
+Judgement: u
+Phenomena: {cop, wo}
+xid7iid xa.a 7iijang
+xid7iid xa.a 7iij-gang
+bird mallard be-PRS
+`A mallard is a bird.'
 
+#110 non-verbal predicate - noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+xa.a xid7iid
+xa.a xid7iid
+mallard bird
+`A mallard is a bird.'
+
+#111 non-verbal predicate - noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+xa.a 7iijang xid7iid
+xa.a 7iij-gang xid7iid
+mallard be-PRS bird
+`A mallard is a bird.'
+
+#112 non-verbal predicate - noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+7iijang xa.a xid7iid
+7iij-gang xa.a xid7iid
+be-PRS mallard bird
+`A mallard is a bird.'
+
+#113 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {cop}
+xa.a 7aanàa 7iijang
+xa.a 7aanàa 7iij-gang
+mallard in.next.room be-PRS
+`A mallard is in the next room.'
+
+#114 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+xa.a 7iijang 7aanàa
+xa.a 7iij-gang 7aanàa 
+mallard be-PRS in.next.room
+`A mallard is in the next room.'
+
+#115 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+xa.a 7aanàa
+xa.a 7aanàa 
+mallard in.next.room
+`A mallard is in the next room.'
+
+#116 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+7iijang xa.a 7aanàa
+7iij-gang xa.a 7aanàa 
+be-PRS mallard in.next.room
+`A mallard is in the next room.'
+
+#117 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+7aanàa 7iijang xa.a 
+7aanàa 7iij-gang xa.a 
+in.next.room be-PRS mallard 
+`A mallard is in the next room.'
+
+We have not yet implimented non-verbal predicates because they are not on the menu for
+this week. However, we did add a copula in the customization sytem that allows AP
+compliments. This implimentation correctly prevents AP compliments on the copula, though
+because we have already specified our adjectives as attributive only.
 
 Embedded clauses
 We have already seen that questions with embedded clauses are possible as shown below.
