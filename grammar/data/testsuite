@@ -1075,15 +1075,14 @@ Bill sguusiid taa-gan gyaan sriw-han.is gyaan tsii.n-han.is gyaan pickles-han.is
 Bill potatoes eat-PST and seaweed-too and salmon-too and pickles-too
 `Bill eats potatoes, seaweed, salmon, and pickles.'
 
-<<<<<<< HEAD
 #108 non-verbal predicate - noun
 Source: a:211
 Vetted: s
 Judgement: g
 Phenomena: {cop, wo}
-xa.a id7iid 7iijang
-xa.a 	id7iid	7iij-gang
-mallard	bird	be-PRS
+xa.a xid7iid 7iijang
+xa.a xid7iid 7iij-gang
+mallard bird be-PRS
 `A mallard is a bird.'
 
 #109 non-verbal predicate - noun
@@ -1091,9 +1090,9 @@ Source: a:211
 Vetted: s
 Judgement: u
 Phenomena: {cop, wo}
-id7iid xa.a 7iijang
-id7iid	xa.a 	7iij-gang
-bird	mallard	be-PRS
+xid7iid xa.a 7iijang
+xid7iid xa.a 7iij-gang
+bird mallard be-PRS
 `A mallard is a bird.'
 
 #108 non-verbal predicate - noun
@@ -1101,9 +1100,9 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {cop}
-xa.a id7iid
-xa.a 	id7iid
-mallard	bird
+xa.a xid7iid
+xa.a xid7iid
+mallard bird
 `A mallard is a bird.'
 
 #109 non-verbal predicate - noun
@@ -1111,9 +1110,9 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {cop}
-xa.a 7iijang id7iid
-xa.a 	7iij-gang	id7iid
-mallard	be-PRS	bird
+xa.a 7iijang xid7iid
+xa.a 7iij-gang xid7iid
+mallard be-PRS bird
 `A mallard is a bird.'
 
 #110 non-verbal predicate - noun
@@ -1121,9 +1120,9 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {cop}
-7iijang xa.a id7iid
-7iij-gang	xa.a 	id7iid
-be-PRS	mallard	bird
+7iijang xa.a xid7iid
+7iij-gang xa.a xid7iid
+be-PRS mallard bird
 `A mallard is a bird.'
 
 #111 non-verbal predicate - pp - adapted from p114 (iv)
@@ -1132,8 +1131,8 @@ Vetted: f
 Judgement: g
 Phenomena: {cop}
 xa.a 7aanàa 7iijang
-xa.a 	7aanàa		7iij-gang
-mallard	in.next.room	be-PRS
+xa.a 7aanàa 7iij-gang
+mallard in.next.room be-PRS
 `A mallard is in the next room.'
 
 #112 non-verbal predicate - pp - adapted from p114 (iv)
@@ -1142,8 +1141,8 @@ Vetted: f
 Judgement: u
 Phenomena: {cop}
 xa.a 7iijang 7aanàa
-xa.a	7iij-gang	7aanàa	
-mallard	be-PRS	in.next.room
+xa.a 7iij-gang 7aanàa 
+mallard be-PRS in.next.room
 `A mallard is in the next room.'
 
 #113 non-verbal predicate - pp - adapted from p114 (iv)
@@ -1152,8 +1151,8 @@ Vetted: f
 Judgement: u
 Phenomena: {cop}
 xa.a 7aanàa
-xa.a	7aanàa	
-mallard	in.next.room
+xa.a 7aanàa 
+mallard in.next.room
 `A mallard is in the next room.'
 
 #114 non-verbal predicate - pp - adapted from p114 (iv)
@@ -1162,8 +1161,8 @@ Vetted: f
 Judgement: u
 Phenomena: {cop}
 7iijang xa.a 7aanàa
-7iij-gang	xa.a	7aanàa	
-be-PRS	mallard	in.next.room
+7iij-gang xa.a 7aanàa 
+be-PRS mallard in.next.room
 `A mallard is in the next room.'
 
 #115 non-verbal predicate - pp - adapted from p114 (iv)
@@ -1172,8 +1171,8 @@ Vetted: f
 Judgement: u
 Phenomena: {cop}
 7aanàa 7iijang xa.a 
-7aanàa		7iij-gang	xa.a	
-in.next.room	be-PRS	mallard	
+7aanàa 7iij-gang xa.a 
+in.next.room be-PRS mallard 
 `A mallard is in the next room.'
 
 #116 non-verbal predicates - Adj
