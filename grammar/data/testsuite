@@ -400,9 +400,9 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {det}
-hlaa 7aasgee srids ts’agts’agg qing7wagan
-hlaa 7aasgee srid-s ts’agts’agg qing-7wa-gan
-1SG.NOM these be.red-PST wagons see-PL-PST
+hlaa 7aasgee ts’agts’agg srids qing7wagan
+hlaa 7aasgee ts’agts’agg srid-s qing-7wa-gan
+1SG.NOM these wagons be.red-PRS see-PL-PST
 `I saw these red wagons.'
 
 # 41 negation
@@ -1185,7 +1185,7 @@ gyùudan-ee 7iw7aan-gang
 horse-DEF be.big-PRS
 `The horse is big.' or `The horse is large.'
 
-#117 non-verbal predicates - Adj
+#117 non-verbal predicates - adj
 Source: author
 Vetted: f
 Judgement: g
@@ -1195,7 +1195,7 @@ ts’agts’ag-gee srid-gang
 wagon-DEF be.red-PRS
 `The wagon is red.'
 
-#118 non-verbal predicates - Adj
+#118 non-verbal predicates - adj
 Source: author
 Vetted: f
 Judgement: u
@@ -1205,7 +1205,7 @@ gyùudan-ee 7iw7aan 7iij-gang
 horse-DEF be.big be-PRS
 `The horse is big.' or `The horse is large.'
 
-#119 non-verbal predicates - Adj
+#119 non-verbal predicates - adj
 Source: a:461
 Vetted: s
 Judgement: g
@@ -1274,3 +1274,93 @@ xa.a q’iigaa 7aanàa 7iijang
 xa.a q’iigaa 7aanàa 7iij-gang
 mallard be.old in.next.room be-PRS
 `An old mallard is in the next room.'
+
+#126 attributive adjectives
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {adj}
+7iw7aan gyùudanee dladahldagan
+7iw7aan gyùudan-ee dladahlda-gan
+be.big horse-DEF fall.down-PST
+`The big horse fell down.'
+
+#127 attributive adjectives
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {adj, cop}
+q’iigaa xa.a 7aanàa 7iijang
+q’iigaa xa.a 7aanàa 7iij-gang
+be.old mallard in.next.room be-PRS
+`An old mallard is in the next room.'
+
+#128 attributive adjectives
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {adj, cop}
+q’iigaa xa.a 7aanàa 7iijang
+q’iigaa xa.a 7aanàa 7iij-gang
+be.old mallard in.next.room be-PRS
+`An old mallard is in the next room.'
+
+# 129 attributive adjectives (variation of #40)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+hlaa 7aasgee srids ts’agts’agg qing7wagan
+hlaa 7aasgee srid-as ts’agts’agg qing-7wa-gan
+1SG.NOM these be.red-PRS wagons see-PL-PST
+`I saw these red wagons.'
+
+# 130 attributive adjectives (variation of #40)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+hlaa 7aasgee ts’agts’agg sridan qing7wagan
+hlaa 7aasgee ts’agts’agg srid-gan qing-7wa-gan
+1SG.NOM these wagons be.red-PST see-PL-PST
+`I saw these red wagons.'
+
+# 131 attributive adjectives
+Source: a:588
+Vetted: s
+Judgment: g
+Phenomena: {adj}
+sguusadee t’ijj ts’uudalaas ’la daanggan
+sguusiid-ee t’ijj ts’uudalaa-as ’la daang-gan
+potato-DF some.of be.small-PRS 3p throw.away-PST
+`She threw away some of the small pototoes.'
+
+# 132 attributive adjectives
+Source: a:588
+Vetted: s
+Judgment: g
+Phenomena: {adj}
+sguusadee ts’uudalaas t’ijj ’la daanggan
+sguusiid-ee ts’uudalaa-as t’ijj ’la daang-gan
+potato-DF be.small-PRS some.of 3p throw.away-PST
+`She threw away some of the small pototoes.'
+
+# 133 attributive adjectives (variation from a:588, wrong tense)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+sguusadee t’ijj ts’uudalaagan ’la daanggan
+sguusiid-ee t’ijj ts’uudalaa-gan ’la daang-gan
+potato-DF some.of be.small-PST 3p throw.away-PST
+`She threw away some of the small pototoes.'
+
+# 134 attributive adjectives (variation from a:588, wrong tense)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+sguusadee ts’uudalaagan t’ijj ’la daanggan
+sguusiid-ee ts’uudalaa-gan t’ijj ’la daang-gan
+potato-DF be.small-PST some.of 3p throw.away-PST
+`She threw away some of the small pototoes.'
