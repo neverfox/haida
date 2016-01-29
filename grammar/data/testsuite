@@ -952,7 +952,7 @@ Judgement: g
 Phenomena: {crd}
 Billrahl Mary dladahldagan
 Bill=rahl Mary dladahlda-gan
-Bill and Mary fall.down-PST
+Bill=and Mary fall.down-PST
 `Bill and Mary fell down.'
 
 #96 phrasal coordination - comitative
@@ -962,7 +962,7 @@ Judgement: g
 Phenomena: {crd}
 Billrahl Mary-7isan dladahldagan
 Bill=rahl Mary=7isan dladahlda-gan
-Bill and Mary-too fall.down-PST
+Bill=and Mary=too fall.down-PST
 `Bill and Mary fell down.'
 
 #97 phrasal coordination - comitative
@@ -972,7 +972,7 @@ Judgement: g
 Phenomena: {crd}
 Bill 7isgyaan Mary-7isan dladahldagan
 Bill 7isgyaan Mary=7isan dladahlda-gan
-Bill and Mary-too fall.down-PST
+Bill=and Mary=too fall.down-PST
 `Bill and Mary fell down.'
 
 #98 phrasal coordination - comitative
@@ -982,7 +982,7 @@ Judgement: u
 Phenomena: {crd}
 Bill-7isan 7isgyaan Mary-7isan dladahldagan
 Bill=7isan 7isgyaan Mary=7isan dladahlda-gan
-Bill-too and Mary-too fall.down-PST
+Bill=too and Mary=too fall.down-PST
 `Bill and Mary fell down.'
 
 #99 phrasal coordination - comitative
@@ -1052,7 +1052,7 @@ Judgement: g
 Phenomena: {crd}
 gyùudanee dladahldagangyaan ’la ts’agts’aggee tlagaaydagan
 gyùudan-ee dladahlda-gan=gyaan ’laa ts’agts’ag-gee tlagaayda-gan
-horse-DEF fall.down-PST and 3p wagon-DF injure-PST
+horse-DEF fall.down-PST=and 3p wagon-DF injure-PST
 `The horse fell down and damaged the wagon.'
 
 #106 clausal coordination
@@ -1072,7 +1072,7 @@ Judgement: g
 Phenomena: {crd}
 Bill sguusiid taagangyaan sriwhan.isgyann tsii.nhan.isgyaan pickleshan.isan
 Bill sguusiid taa-gan=gyaan sriw=han.is=gyaan tsii.n=han.is=gyaan pickles=han.isan
-Bill potatoes eat-PST and seaweed-too and salmon-too and pickles-too
+Bill potatoes eat-PST=and seaweed-too=and salmon-too=and pickles-too
 `Bill eats potatoes, seaweed, salmon, and pickles.' or `Bill eats potatoes (and) [he eats] seaweed (and) [he eats] salmon (and) [he eats] pickles.'
 
 #108 non-verbal predicate - noun
@@ -1364,3 +1364,103 @@ sguusadee ts’uudalaagan t’ijj ’la daanggan
 sguusiid-ee ts’uudalaa-gan t’ijj ’laa daang-gan
 potato-DF be.small-PST some.of 3p throw.away-PST
 `She threw away some of the small pototoes.'
+
+#137 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+Bill qats’agangyaan Mary qaaguhlaa.aagan
+Bill qats’a-gan=gyaan Mary qaaguhlaa.aa-gan
+Bill come.in-PST=and Mary go.out-PST
+`Bill came in and Mary went out.'
+
+#138 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill qats’agan Mary qaaguhlaa.aagan
+Bill qats’a-gan Mary qaaguhlaa.aa-gan
+Bill come.in-PST Mary go.out-PST
+`Bill came in and Mary went out.'
+
+#139 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill qats’agangyaan Mary qaaguhlaa.aagangyaan
+Bill qats’a-gan=gyaan Mary qaaguhlaa.aa-gan=gyaan
+Bill come.in-PST=and Mary go.out-PST=and
+`Bill came in and Mary went out.'
+
+#140 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill qats’agan Mary qaaguhlaa.aagangyaan
+Bill qats’a-gan Mary qaaguhlaa.aa-gan=gyaan
+Bill come.in-PST Mary go.out-PST=and
+`Bill came in and Mary went out.'
+
+#141 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill gyaan qats’agan Mary qaaguhlaa.aagangyaan
+Bill gyaan qats’a-gan Mary qaaguhlaa.aa-gan=gyaan
+Bill come.in-PST Mary go.out-PST
+`Bill came in and Mary went out.'
+
+#142 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+Bill qats’agangyaan Mary qaaguhlaa.aagan7isan
+Bill qats’a-gan=gyaan Mary qaaguhlaa.aa-gan=7isan
+Bill come.in-PST=and Mary go.out-PST=too
+`Bill came in and Mary went out.'
+
+#143 clausal coordination - S
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+ts’agts’aggee 7iw7aanganggyaan ts’agts’aggee sridgang
+ts’agts’ag-gee 7iw7aan-gang=gyaan ts’agts’ag-gee srid-gang
+wagon-DF be.big-PRS=and wagon-DF be.red-PRS
+`The wagon is big and the wagon is red.'
+
+#144 clausal coordination - S
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+ts’agts’aggee 7iw7aangangyaan ts’agts’aggee sridgan
+ts’agts’ag-gee 7iw7aan-gan=gyaan ts’agts’ag-gee srid-gan
+wagon-DF be.big-PST=and wagon-DF be.red-PST
+`The wagon was big and the wagon was red.'
+
+#145 clausal coordination - S (too requires past)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+ts’agts’aggee 7iw7aanganggyaan ts’agts’aggee sridgang7isan
+ts’agts’ag-gee 7iw7aan-gang=gyaan ts’agts’ag-gee srid-gang=7isan
+wagon-DF be.big-PRS=and wagon-DF be.red-PRS=too
+`The wagon is big and the wagon is red.'
+
+#146 clausal coordination - S (too requires past)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+ts’agts’aggee 7iw7aangangyaan ts’agts’aggee sridgan7isan
+ts’agts’ag-gee 7iw7aan-gan=gyaan ts’agts’ag-gee srid-gan=7isan
+wagon-DF be.big-PST=and wagon-DF be.red-PST=too
+`The wagon was big and the wagon was red.'
