@@ -402,7 +402,7 @@ Judgment: g
 Phenomena: {det}
 hlaa 7aasgee srids ts’agts’agg qing7wagan
 hlaa 7aasgee srid-s ts’agts’agg qing-7wa-gan
-1SG.NOM these he.red-PST wagons see-PL-PST
+1SG.NOM these be.red-PST wagons see-PL-PST
 `I saw these red wagons.'
 
 # 41 negation
@@ -1074,3 +1074,63 @@ Bill sguusiid taagangyaan sriwhan.isgyann tsii.nhan.isgyaan pickleshan.isan
 Bill sguusiid taa-gan gyaan sriw-han.is gyaan tsii.n-han.is gyaan pickles-han.isan
 Bill potatoes eat-PST and seaweed-too and salmon-too and pickles-too
 `Bill eats potatoes, seaweed, salmon, and pickles.'
+
+#108 non-verbal predicates - NP
+Source: a:211
+Vetted: s
+Judgement: g
+Phenomena: {cop, wo}
+xa.a xid7iid 7iijang
+xa.a xid7iid 7iij-gang
+mallard bird be-PRS
+`A “mallard” is a bird.'
+
+#109 non-verbal predicates - NP
+Source: a:211
+Vetted: s
+Judgement: u
+Phenomena: {cop, wo}
+xid7iid xa.a 7iijang
+xid7iid xa.a 7iij-gang
+bird mallard be-PRS
+`A “mallard” is a bird.'
+
+#110 non-verbal predicates - Adj
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {cop}
+gyùudanee 7iw7aangang
+gyùudan-ee 7iw7aan-gang
+horse-DEF be.big-PRS
+`The horse is big.' or `The horse is large.'
+
+#110 non-verbal predicates - Adj
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {cop}
+ts’agts’aggee sridgang
+ts’agts’ag-gee srid-gang
+wagone-DEF be.red-PRS
+`The wagon is red.'
+
+#111 non-verbal predicates - Adj
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+gyùudanee 7iw7aan 7iijang
+gyùudan-ee 7iw7aan 7iij-gang
+horse-DEF be.big be-PRS
+`The horse is big.' or `The horse is large.'
+
+#112 non-verbal predicates - PP
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {cop}
+xaay 7aanàa 7iijang
+x-aay 7aanàa 7iij-gang
+dog-DEF in.next.room be-PRS
+`The dog is in the next room.'
