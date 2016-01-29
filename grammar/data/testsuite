@@ -972,7 +972,7 @@ Judgement: g
 Phenomena: {crd}
 Bill 7isgyaan Mary-7isan dladahldagan
 Bill 7isgyaan Mary=7isan dladahlda-gan
-Bill=and Mary=too fall.down-PST
+Bill Mary=too fall.down-PST
 `Bill and Mary fell down.'
 
 #98 phrasal coordination - comitative
@@ -1073,7 +1073,7 @@ Phenomena: {crd}
 Bill sguusiid taagangyaan sriwhan.isgyann tsii.nhan.isgyaan pickleshan.isan
 Bill sguusiid taa-gan=gyaan sriw=han.is=gyaan tsii.n=han.is=gyaan pickles=han.isan
 Bill potatoes eat-PST=and seaweed-too=and salmon-too=and pickles-too
-`Bill eats potatoes, seaweed, salmon, and pickles.' or `Bill eats potatoes (and) [he eats] seaweed (and) [he eats] salmon (and) [he eats] pickles.'
+`Bill eats potatoes (and) [he eats] seaweed (and) [he eats] salmon (and) [he eats] pickles.'
 
 #108 non-verbal predicate - noun
 Source: a:211
@@ -1464,3 +1464,73 @@ ts’agts’aggee 7iw7aangangyaan ts’agts’aggee sridgan7isan
 ts’agts’ag-gee 7iw7aan-gan=gyaan ts’agts’ag-gee srid-gan=7isan
 wagon-DF be.big-PST=and wagon-DF be.red-PST=too
 `The wagon was big and the wagon was red.'
+
+#147 embedded clauses
+Source: a:430
+Vetted: s
+Judgement: g
+Phenomena: {emb-d}
+Bill gid k'untl'aa.ang 'la suugan
+Bill gid 	k'untl'aa-.ang 'la 	suu-gan
+Bill child	get.burned-NF 	3	say-PST
+`Bill said that his child got burned.'
+
+#148 embedded clauses
+Source: a:430
+Vetted: s
+Judgement: g
+Phenomena: {emb-d}
+Bill gid k'untl'aa.ang suugan
+Bill gid 	k'untl'aa-.ang 	suu-gan
+Bill child	get.burned-NF 	say-PST
+`Bill said that his child got burned.'
+
+#149 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-d}
+Bill suugan gid k'untl'aa.ang
+Bill 	suu-gan gid 	k'untl'aa-.ang
+Bill 	say-PST child	get.burned-NF
+`Bill said that his child got burned.'
+
+#150 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-d}
+gid k'untl'aa.ang Bill suugan
+gid 	k'untl'aa-.ang 	Bill suu-gan
+child	get.burned-NF 	Bill say-PST
+`Bill said that his child got burned.'
+
+#151 embedded clauses
+Source: a:430
+Vetted: s
+Judgement: g
+Phenomena: {emb-q}
+daagu 7isdaa hlangaa.ang dang gudang
+daa-gu 	7isdaa 	hlangaa-.ang 	dang 	gudang
+you-Q	do	could-NF	you	think
+`Do you think that you could do it'
+
+#152 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-q}
+hlangaa.ang dang gudang daagu 7isdaa
+hlangaa-.ang 	dang 	gudang	daa-gu 	7isdaa 	
+could-NF	you	think	you-Q	do	
+`Do you think that you could do it'
+
+#153 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-q}
+daa 7isdaa hlangaa.ang dang gudang
+daa 	7isdaa 	hlangaa-.ang 	dang 	gudang
+you	do	could-NF	you	think
+`Do you think that you could do it'
