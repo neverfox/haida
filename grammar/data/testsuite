@@ -1051,7 +1051,7 @@ Vetted: f
 Judgement: g
 Phenomena: {crd}
 gyùudanee dladahldagangyaan ’la ts’agts’aggee tlagaaydagan
-gyùudan-ee dladahlda-gan gyaan ’la ts’agts’ag-gee tlagaayda-gan
+gyùudan-ee dladahlda-gan gyaan ’laa ts’agts’ag-gee tlagaayda-gan
 horse-DEF fall.down-PST and 3p wagon-DF injure-PST
 `The horse fell down and damaged the wagon.'
 
@@ -1061,7 +1061,7 @@ Vetted: f
 Judgement: u
 Phenomena: {crd}
 gyùudanee dladahldagan ’la ts’agts’aggee tlagaaydagan
-gyùudan-ee dladahlda-gan ’la ts’agts’ag-gee tlagaayda-gan
+gyùudan-ee dladahlda-gan ’laa ts’agts’ag-gee tlagaayda-gan
 horse-DEF fall.down-PST 3p wagon-DF injure-PST
 `The horse fell down and damaged the wagon.'
 
@@ -1095,7 +1095,7 @@ xid7iid xa.a 7iij-gang
 bird mallard be-PRS
 `A mallard is a bird.'
 
-#108 non-verbal predicate - noun
+#110 non-verbal predicate - noun
 Source: author
 Vetted: f
 Judgement: u
@@ -1105,7 +1105,7 @@ xa.a xid7iid
 mallard bird
 `A mallard is a bird.'
 
-#109 non-verbal predicate - noun
+#111 non-verbal predicate - noun
 Source: author
 Vetted: f
 Judgement: u
@@ -1115,7 +1115,7 @@ xa.a 7iij-gang xid7iid
 mallard be-PRS bird
 `A mallard is a bird.'
 
-#110 non-verbal predicate - noun
+#112 non-verbal predicate - noun
 Source: author
 Vetted: f
 Judgement: u
@@ -1125,7 +1125,7 @@ Phenomena: {cop}
 be-PRS mallard bird
 `A mallard is a bird.'
 
-#111 non-verbal predicate - pp - adapted from p114 (iv)
+#113 non-verbal predicate - pp - adapted from p114 (iv)
 Source: author
 Vetted: f
 Judgement: g
@@ -1135,7 +1135,7 @@ xa.a 7aanàa 7iij-gang
 mallard in.next.room be-PRS
 `A mallard is in the next room.'
 
-#112 non-verbal predicate - pp - adapted from p114 (iv)
+#114 non-verbal predicate - pp - adapted from p114 (iv)
 Source: author
 Vetted: f
 Judgement: u
@@ -1145,7 +1145,7 @@ xa.a 7iij-gang 7aanàa
 mallard be-PRS in.next.room
 `A mallard is in the next room.'
 
-#113 non-verbal predicate - pp - adapted from p114 (iv)
+#115 non-verbal predicate - pp - adapted from p114 (iv)
 Source: author
 Vetted: f
 Judgement: u
@@ -1155,7 +1155,7 @@ xa.a 7aanàa
 mallard in.next.room
 `A mallard is in the next room.'
 
-#114 non-verbal predicate - pp - adapted from p114 (iv)
+#116 non-verbal predicate - pp - adapted from p114 (iv)
 Source: author
 Vetted: f
 Judgement: u
@@ -1165,7 +1165,7 @@ Phenomena: {cop}
 be-PRS mallard in.next.room
 `A mallard is in the next room.'
 
-#115 non-verbal predicate - pp - adapted from p114 (iv)
+#117 non-verbal predicate - pp - adapted from p114 (iv)
 Source: author
 Vetted: f
 Judgement: u
@@ -1175,7 +1175,7 @@ Phenomena: {cop}
 in.next.room be-PRS mallard 
 `A mallard is in the next room.'
 
-#116 non-verbal predicates - Adj
+#118 non-verbal predicates - Adj
 Source: author
 Vetted: f
 Judgement: g
@@ -1185,7 +1185,7 @@ gyùudan-ee 7iw7aan-gang
 horse-DEF be.big-PRS
 `The horse is big.' or `The horse is large.'
 
-#117 non-verbal predicates - adj
+#119 non-verbal predicates - adj
 Source: author
 Vetted: f
 Judgement: g
@@ -1195,7 +1195,7 @@ ts’agts’ag-gee srid-gang
 wagon-DEF be.red-PRS
 `The wagon is red.'
 
-#118 non-verbal predicates - adj
+#120 non-verbal predicates - adj
 Source: author
 Vetted: f
 Judgement: u
@@ -1205,7 +1205,7 @@ gyùudan-ee 7iw7aan 7iij-gang
 horse-DEF be.big be-PRS
 `The horse is big.' or `The horse is large.'
 
-#119 non-verbal predicates - adj
+#121 non-verbal predicates - adj
 Source: a:461
 Vetted: s
 Judgement: g
@@ -1215,7 +1215,7 @@ hlaa ga taa-gan xaw.ula-gan
 I INDF eat-PST be.delicious-PST
 'The ones that I ate were delicious.'
 
-#120 attributive adjectives
+#122 attributive adjectives
 Source: a:589
 Vetted: s
 Judgement: g
@@ -1225,7 +1225,7 @@ na t’iij q’iigaa ’laa-gang
 house some.of be.old be.good-PRS
 `Some old houses are good.'
 
-#121 attributive adjectives
+#123 attributive adjectives
 Source: a:589
 Vetted: s
 Judgement: g
@@ -1235,7 +1235,7 @@ na q’iigaa t’iij ’laa-gang
 house be.old some.of be.good-PRS
 `Some old houses are good.'
 
-#122 attributive adjectives
+#124 attributive adjectives
 Source: author
 Vetted: f
 Judgement: u
@@ -1245,7 +1245,7 @@ na t’iij q’iigaa-gang ’laa-gang
 house some.of be.old-PRS be.good-PRS
 `Some old houses are good.'
 
-#123 attributive adjectives
+#125 attributive adjectives
 Source: author
 Vetted: f
 Judgement: u
@@ -1255,7 +1255,7 @@ na q’iigaa-gang t’iij ’laa-gang
 house be.old-PRS some.of be.good-PRS
 `Some old houses are good.'
 
-#124 attributive adjectives
+#126 attributive adjectives
 Source: author
 Vetted: f
 Judgement: g
@@ -1265,7 +1265,7 @@ gyùudan-ee 7iw7aan dladahlda-gan
 horse-DEF be.big fall.down-PST
 `The big horse fell down.'
 
-#125 attributive adjectives
+#127 attributive adjectives
 Source: author
 Vetted: f
 Judgement: g
@@ -1275,7 +1275,7 @@ xa.a q’iigaa 7aanàa 7iij-gang
 mallard be.old in.next.room be-PRS
 `An old mallard is in the next room.'
 
-#126 attributive adjectives
+#128 attributive adjectives
 Source: author
 Vetted: f
 Judgement: g
@@ -1285,7 +1285,7 @@ Phenomena: {adj}
 be.big horse-DEF fall.down-PST
 `The big horse fell down.'
 
-#127 attributive adjectives
+#129 attributive adjectives
 Source: author
 Vetted: f
 Judgement: u
@@ -1295,7 +1295,7 @@ q’iigaa xa.a 7aanàa 7iij-gang
 be.old mallard in.next.room be-PRS
 `An old mallard is in the next room.'
 
-#128 attributive adjectives
+#130 attributive adjectives
 Source: author
 Vetted: f
 Judgement: u
@@ -1305,7 +1305,7 @@ q’iigaa xa.a 7aanàa 7iij-gang
 be.old mallard in.next.room be-PRS
 `An old mallard is in the next room.'
 
-# 129 attributive adjectives (variation of #40)
+# 131 attributive adjectives (variation of #40)
 Source: author
 Vetted: f
 Judgment: u
@@ -1315,7 +1315,7 @@ hlaa 7aasgee srid-as ts’agts’ag qing-7wa-gan
 1SG.NOM these be.red-PRS wagons see-PL-PST
 `I saw these red wagons.'
 
-# 130 attributive adjectives (variation of #40)
+# 132 attributive adjectives (variation of #40)
 Source: author
 Vetted: f
 Judgment: u
@@ -1325,42 +1325,42 @@ hlaa 7aasgee ts’agts’ag srid-gan qing-7wa-gan
 1SG.NOM these wagons be.red-PST see-PL-PST
 `I saw these red wagons.'
 
-# 131 attributive adjectives
+# 133 attributive adjectives
 Source: a:588
 Vetted: s
 Judgment: g
 Phenomena: {adj}
 sguusadee t’ijj ts’uudalaas ’la daanggan
-sguusiid-ee t’ijj ts’uudalaa-as ’la daang-gan
+sguusiid-ee t’ijj ts’uudalaa-as ’laa daang-gan
 potato-DF some.of be.small-PRS 3p throw.away-PST
 `She threw away some of the small pototoes.'
 
-# 132 attributive adjectives
+# 134 attributive adjectives
 Source: a:588
 Vetted: s
 Judgment: g
 Phenomena: {adj}
 sguusadee ts’uudalaas t’ijj ’la daanggan
-sguusiid-ee ts’uudalaa-as t’ijj ’la daang-gan
+sguusiid-ee ts’uudalaa-as t’ijj ’laa daang-gan
 potato-DF be.small-PRS some.of 3p throw.away-PST
 `She threw away some of the small pototoes.'
 
-# 133 attributive adjectives (variation from a:588, wrong tense)
+# 135 attributive adjectives (variation from a:588, wrong tense)
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {adj}
 sguusadee t’ijj ts’uudalaagan ’la daanggan
-sguusiid-ee t’ijj ts’uudalaa-gan ’la daang-gan
+sguusiid-ee t’ijj ts’uudalaa-gan ’laa daang-gan
 potato-DF some.of be.small-PST 3p throw.away-PST
 `She threw away some of the small pototoes.'
 
-# 134 attributive adjectives (variation from a:588, wrong tense)
+# 136 attributive adjectives (variation from a:588, wrong tense)
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {adj}
 sguusadee ts’uudalaagan t’ijj ’la daanggan
-sguusiid-ee ts’uudalaa-gan t’ijj ’la daang-gan
+sguusiid-ee ts’uudalaa-gan t’ijj ’laa daang-gan
 potato-DF be.small-PST some.of 3p throw.away-PST
 `She threw away some of the small pototoes.'
