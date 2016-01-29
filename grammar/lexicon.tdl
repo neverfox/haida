@@ -149,10 +149,6 @@ dladahlda := itr-acc-verb-lex &
   [ STEM < "dladahlda" >,
     SYNSEM.LKEYS.KEYREL.PRED "_fall_down_v_rel" ].
 
-rad := itr-acc-verb-lex &
-  [ STEM < "rad" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_run_v_rel" ].
-
 srid_1 := itr-acc-verb-lex &
   [ STEM < "srid" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_red_v_rel" ].
@@ -208,6 +204,10 @@ tla%2Eàwhla := tr-verb-lex &
 gudang := tr-verb-lex &
   [ STEM < "gudang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_understand_v_rel" ].
+
+rad := itr-nom-verb-lex &
+  [ STEM < "rad" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_run_v_rel" ].
 
 ;;; Auxiliaries
 
