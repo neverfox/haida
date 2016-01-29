@@ -1073,7 +1073,7 @@ Phenomena: {crd}
 Bill sguusiid taagangyaan sriwhan.isgyann tsii.nhan.isgyaan pickleshan.isan
 Bill sguusiid taa-gan gyaan sriw-han.is gyaan tsii.n-han.is gyaan pickles-han.isan
 Bill potatoes eat-PST and seaweed-too and salmon-too and pickles-too
-`Bill eats potatoes, seaweed, salmon, and pickles.'
+`Bill eats potatoes, seaweed, salmon, and pickles.' or `Bill eats potatoes (and) [he eats] seaweed (and) [he eats] salmon (and) [he eats] pickles.'
 
 #108 non-verbal predicate - noun
 Source: a:211
@@ -1204,3 +1204,63 @@ gyùudanee 7iw7aan 7iijang
 gyùudan-ee 7iw7aan 7iij-gang
 horse-DEF be.big be-PRS
 `The horse is big.' or `The horse is large.'
+
+#119 attributive adjectives
+Source: a:589
+Vetted: s
+Judgement: g
+Phenomena: {adj, cop}
+na t’iij q’iigaa ’laagang
+na t’iij q’iigaa ’laa-gang
+house some.of be.old be.good-PRS
+`Some old houses are good.'
+
+#120 attributive adjectives
+Source: a:589
+Vetted: s
+Judgement: g
+Phenomena: {adj, cop}
+na q’iigaa t’iij ’laagang
+na q’iigaa t’iij ’laa-gang
+house be.old some.of be.good-PRS
+`Some old houses are good.'
+
+#121 attributive adjectives
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {adj, cop}
+na t’iij q’iigaagang ’laagang
+na t’iij q’iigaa-gang ’laa-gang
+house some.of be.old-PRS be.good-PRS
+`Some old houses are good.'
+
+#122 attributive adjectives
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {adj, cop}
+na q’iigaagang t’iij ’laagang
+na q’iigaa-gang t’iij ’laa-gang
+house be.old-PRS some.of be.good-PRS
+`Some old houses are good.'
+
+#123 attributive adjectives
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {adj}
+gyùudanee 7iw7aan dladahldagan
+gyùudan-ee 7iw7aan dladahlda-gan
+horse-DEF be.big fall.down-PST
+`The big horse fell down.'
+
+#124 attributive adjectives
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {adj, cop}
+xa.a q’iigaa 7aanàa 7iijang
+xa.a q’iigaa 7aanàa 7iij-gang
+mallard be.old in.next.room be-PRS
+`An old mallard is in the next room.'
