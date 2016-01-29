@@ -73,7 +73,7 @@ rad := itr-acc-verb-lex &
   [ STEM < "rad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_run_v_rel" ].
 
-tlagaayda := tr-nom-verb-lex &
+tlagaayda := tr-verb-lex &
   [ STEM < "tlagaayda" >,
     SYNSEM.LKEYS.KEYREL.PRED "_injure_v_rel" ].
 

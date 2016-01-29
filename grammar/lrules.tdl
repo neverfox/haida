@@ -1,4 +1,8 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+non-3pl-lex := non-3pl-lex-rule.
+
+non-3pl-intrans-lex := non-3pl-intrans-lex-rule.
+
 non-fin-lex := non-fin-lex-rule.
 
 fin-lex := fin-lex-rule.

@@ -37,13 +37,18 @@ COG-ST : COG-ST
   * <> *
 
 
-PNG.PER : PNG.PER
+PNG.PERNUM : PNG.PERNUM
+  3pl <> 3pl
+  2pl <> 2pl
+  1pl_excl <> 1pl_excl
+  1pl_incl <> 1pl_incl
+  1pl <> 1pl
+  3sg <> 3sg
+  2sg <> 2sg
+  1sg <> 1sg
   3rd <> 3rd
   2nd <> 2nd
   1st <> 1st
-  * <> *
-
-PNG.NUM : PNG.NUM
   pl <> pl
   sg <> sg
   * <> *
