@@ -795,43 +795,43 @@ dii-gu daa gudang
 1SG.ACC-Q you understand
 `Do you understand me?'
 
-#80 wh questions --a in awhla needs a a downward pitch accent
+#80 wh questions
 Source: a:134
 Vetted: s
 Judgment: g
 Phenomena: {wh}
-giisd.uu dang gyaa taanaa nee tla.awhlaang
-giisd-.uu dang gyaa taanaanee tla.awhla-ang
+giisd.uu dang gyaa taanaa nee tla.àwhlaang
+giisd-.uu dang gyaa taanaanee tla.àwhla-gang
 who-FOC you POSS smokehouse build-PRS
 `Who is building your smokehouse?'
 
-#81 wh questions --a in awhla needs a a downward pitch accent
+#81 wh questions
 Source: a:134
 Vetted: s
 Judgment: g
 Phenomena: {wh}
-giisd.uu dang gyaa taanaa nee tla.awhlayaa
-giisd-.uu dang gyaa taanaanee tla.awhla-yaa
+giisd.uu dang gyaa taanaa nee tla.àwhlayaa
+giisd-.uu dang gyaa taanaanee tla.àwhla-yaa
 who-FOC you POSS smokehouse build-EVID
 `Who built your smokehouse?'
 
-#82 wh questions -- wrong order. a in awhla needs a a downward pitch accent
+#82 wh questions -- wrong order.
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {wh}
-dang gyaa giisd.uu taanaa nee tla.awhlaang
-dang gyaa giisd-.uu taanaanee tla.awhla-ang
+dang gyaa giisd.uu taanaa nee tla.àwhlaang
+dang gyaa giisd-.uu taanaanee tla.àwhla-gang
 you POSS who-FOC smokehouse build-PRS
 `Who is building your smokehouse?'
 
-#83 wh questions no focus--a in awhla needs a a downward pitch accent
+#83 wh questions no focus
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {wh}
-giisd dang gyaa taanaa nee tla.awhlaang
-giisd dang gyaa taanaanee tla.awhla-ang
+giisd dang gyaa taanaa nee tla.àwhlaang
+giisd dang gyaa taanaanee tla.àwhla-gang
 who you POSS smokehouse build-PRS
 `Who is building your smokehouse?'
 
@@ -865,13 +865,13 @@ Bill guus taa-gaa huu-gu
 Bill what eat-EVID there-Q
 `What did Bill eat?'
 
-#87 wh questions from embedded clause. adapted from 381--a in awhla needs a a downward pitch accent
+#87 wh questions from embedded clause. adapted from 381
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {wh}
-giisd.uu dang gyaa taanaa nee tla.awhlaang Bill gudang-gang
-giisd-.uu dang gyaa taanaanee tla.awhla-ang Bill gudang-gang
+giisd.uu dang gyaa taanaa nee tla.àwhlaang Bill gudang-gang
+giisd-.uu dang gyaa taanaanee tla.àwhla-gang Bill gudang-gang
 who-FOC you POSS smokehouse build-PRS Bill think-PRS
 `Who does Bill think is building your smokehouse?'
 
@@ -1074,3 +1074,103 @@ Bill sguusiid taagangyaan sriwhan.isgyann tsii.nhan.isgyaan pickleshan.isan
 Bill sguusiid taa-gan gyaan sriw-han.is gyaan tsii.n-han.is gyaan pickles-han.isan
 Bill potatoes eat-PST and seaweed-too and salmon-too and pickles-too
 `Bill eats potatoes, seaweed, salmon, and pickles.'
+
+#108 non-verbal predicate - noun
+Source: a:211
+Vetted: s
+Judgement: g
+Phenomena: {cop}
+xa.a id7iid 7iijang
+xa.a 	id7iid	7iij-gang
+mallard	bird	be-PRS
+`A mallard is a bird.'
+
+#109 non-verbal predicate - noun
+Source: a:211
+Vetted: s
+Judgement: u
+Phenomena: {cop}
+id7iid xa.a 7iijang
+id7iid	xa.a 	7iij-gang
+bird	mallard	be-PRS
+`A mallard is a bird.'
+
+#108 non-verbal predicate - noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+xa.a id7iid
+xa.a 	id7iid
+mallard	bird
+`A mallard is a bird.'
+
+#109 non-verbal predicate - noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+xa.a 7iijang id7iid
+xa.a 	7iij-gang	id7iid
+mallard	be-PRS	bird
+`A mallard is a bird.'
+
+#110 non-verbal predicate - noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+7iijang xa.a id7iid
+7iij-gang	xa.a 	id7iid
+be-PRS	mallard	bird
+`A mallard is a bird.'
+
+#111 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {cop}
+xa.a 7aanàa 7iijang
+xa.a 	7aanàa		7iij-gang
+mallard	in.next.room	be-PRS
+`A mallard is in the next room.'
+
+#112 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+xa.a 7iijang 7aanàa
+xa.a	7iij-gang	7aanàa	
+mallard	be-PRS	in.next.room
+`A mallard is in the next room.'
+
+#113 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+xa.a 7aanàa
+xa.a	7aanàa	
+mallard	in.next.room
+`A mallard is in the next room.'
+
+#114 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+7iijang xa.a 7aanàa
+7iij-gang	xa.a	7aanàa	
+be-PRS	mallard	in.next.room
+`A mallard is in the next room.'
+
+#115 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+7aanàa 7iijang xa.a 
+7aanàa		7iij-gang	xa.a	
+in.next.room	be-PRS	mallard	
+`A mallard is in the next room.'
