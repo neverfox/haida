@@ -951,7 +951,7 @@ Vetted: f
 Judgement: g
 Phenomena: {crd}
 Billrahl Mary dladahldagan
-Bill rahl Mary dladahlda-gan
+Bill=rahl Mary dladahlda-gan
 Bill and Mary fall.down-PST
 `Bill and Mary fell down.'
 
@@ -961,7 +961,7 @@ Vetted: f
 Judgement: g
 Phenomena: {crd}
 Billrahl Mary-7isan dladahldagan
-Bill rahl Mary-7isan dladahlda-gan
+Bill=rahl Mary=7isan dladahlda-gan
 Bill and Mary-too fall.down-PST
 `Bill and Mary fell down.'
 
@@ -971,7 +971,7 @@ Vetted: f
 Judgement: g
 Phenomena: {crd}
 Bill 7isgyaan Mary-7isan dladahldagan
-Bill 7isgyaan Mary-7isan dladahlda-gan
+Bill 7isgyaan Mary=7isan dladahlda-gan
 Bill and Mary-too fall.down-PST
 `Bill and Mary fell down.'
 
@@ -981,7 +981,7 @@ Vetted: f
 Judgement: u
 Phenomena: {crd}
 Bill-7isan 7isgyaan Mary-7isan dladahldagan
-Bill-7isan 7isgyaan Mary-7isan dladahlda-gan
+Bill=7isan 7isgyaan Mary=7isan dladahlda-gan
 Bill-too and Mary-too fall.down-PST
 `Bill and Mary fell down.'
 
@@ -1051,7 +1051,7 @@ Vetted: f
 Judgement: g
 Phenomena: {crd}
 gyùudanee dladahldagangyaan ’la ts’agts’aggee tlagaaydagan
-gyùudan-ee dladahlda-gan gyaan ’laa ts’agts’ag-gee tlagaayda-gan
+gyùudan-ee dladahlda-gan=gyaan ’laa ts’agts’ag-gee tlagaayda-gan
 horse-DEF fall.down-PST and 3p wagon-DF injure-PST
 `The horse fell down and damaged the wagon.'
 
@@ -1071,7 +1071,7 @@ Vetted: s
 Judgement: g
 Phenomena: {crd}
 Bill sguusiid taagangyaan sriwhan.isgyann tsii.nhan.isgyaan pickleshan.isan
-Bill sguusiid taa-gan gyaan sriw-han.is gyaan tsii.n-han.is gyaan pickles-han.isan
+Bill sguusiid taa-gan=gyaan sriw=han.is=gyaan tsii.n=han.is=gyaan pickles=han.isan
 Bill potatoes eat-PST and seaweed-too and salmon-too and pickles-too
 `Bill eats potatoes, seaweed, salmon, and pickles.' or `Bill eats potatoes (and) [he eats] seaweed (and) [he eats] salmon (and) [he eats] pickles.'
 
