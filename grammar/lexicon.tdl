@@ -65,6 +65,14 @@ taanaanee := cn-noun-lex &
   [ STEM < "taanaanee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_smokehouse_n_rel" ].
 
+ts’agts’ag := cn-noun-lex &
+  [ STEM < "ts’agts’ag" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_wagon_n_rel" ].
+
+sguusiid-ee := cn-noun-lex &
+  [ STEM < "sguusiid-ee" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_potato_n_rel" ].
+
 hlaa := 1sg-nom-pron-noun-lex &
   [ STEM < "hlaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
@@ -77,7 +85,7 @@ daa := 2sg-nom-pron-noun-lex &
   [ STEM < "daa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-’laa := 3p-hpot-pron-noun-lex &
+’laa_1 := 3p-hpot-pron-noun-lex &
   [ STEM < "’laa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
@@ -111,6 +119,30 @@ Mary := pn-noun-lex &
 
 ;;; Adjectives
 
+srid_2 := attrib-adj-adj-lex &
+  [ STEM < "srid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_red_a_rel" ].
+
+ts’uudalaa_2 := attrib-adj-adj-lex &
+  [ STEM < "ts’uudalaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_small_a_rel" ].
+
+7iw7aan_2 := attrib-adj-adj-lex &
+  [ STEM < "7iw7aan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_big_a_rel" ].
+
+q’iigaa_2 := attrib-adj-adj-lex &
+  [ STEM < "q’iigaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_old_a_rel" ].
+
+xaw%2Eula_2 := attrib-adj-adj-lex &
+  [ STEM < "xaw.ula" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_delicious_a_rel" ].
+
+’laa_3 := attrib-adj-adj-lex &
+  [ STEM < "’laa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_good_a_rel" ].
+
 ;;; Verbs
 
 dladahlda := itr-acc-verb-lex &
@@ -120,6 +152,34 @@ dladahlda := itr-acc-verb-lex &
 rad := itr-acc-verb-lex &
   [ STEM < "rad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_run_v_rel" ].
+
+srid_1 := itr-acc-verb-lex &
+  [ STEM < "srid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_red_v_rel" ].
+
+ts’uudalaa_1 := itr-acc-verb-lex &
+  [ STEM < "ts’uudalaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_small_v_rel" ].
+
+7iw7aan_1 := itr-acc-verb-lex &
+  [ STEM < "7iw7aan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_big_v_rel" ].
+
+q’iigaa_1 := itr-acc-verb-lex &
+  [ STEM < "q’iigaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_old_v_rel" ].
+
+xaw%2Eula_1 := itr-acc-verb-lex &
+  [ STEM < "xaw.ula" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_delicious_v_rel" ].
+
+’laa_2 := itr-acc-verb-lex &
+  [ STEM < "’laa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_good_v_rel" ].
+
+7ists’a := itr-acc-verb-lex &
+  [ STEM < "7ists’a" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_come_in_v_rel" ].
 
 tlagaayda := tr-verb-lex &
   [ STEM < "tlagaayda" >,
@@ -132,6 +192,22 @@ qing := tr-verb-lex &
 taa := tr-verb-lex &
   [ STEM < "taa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+
+daang := tr-verb-lex &
+  [ STEM < "daang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_throw_away_v_rel" ].
+
+sdahla := tr-verb-lex &
+  [ STEM < "sdahla" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_need_v_rel" ].
+
+tla%2Eàwhla := tr-verb-lex &
+  [ STEM < "tla.àwhla" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_build_v_rel" ].
+
+gudang := tr-verb-lex &
+  [ STEM < "gudang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_understand_v_rel" ].
 
 ;;; Auxiliaries
 
