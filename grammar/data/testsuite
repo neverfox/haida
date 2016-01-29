@@ -1205,7 +1205,17 @@ gyùudan-ee 7iw7aan 7iij-gang
 horse-DEF be.big be-PRS
 `The horse is big.' or `The horse is large.'
 
-#119 attributive adjectives
+#119 non-verbal predicates - Adj
+Source: a:461
+Vetted: s
+Judgement: g
+Phenomena: {adj}
+hlaa ga taa-gan xaw.ulagan
+hlaa ga taa-gan xaw.ula-gan
+I INDF eat-PST be.delicious-PST
+'The ones that I ate were delicious.'
+
+#120 attributive adjectives
 Source: a:589
 Vetted: s
 Judgement: g
@@ -1215,7 +1225,7 @@ na t’iij q’iigaa ’laa-gang
 house some.of be.old be.good-PRS
 `Some old houses are good.'
 
-#120 attributive adjectives
+#121 attributive adjectives
 Source: a:589
 Vetted: s
 Judgement: g
@@ -1225,7 +1235,7 @@ na q’iigaa t’iij ’laa-gang
 house be.old some.of be.good-PRS
 `Some old houses are good.'
 
-#121 attributive adjectives
+#122 attributive adjectives
 Source: author
 Vetted: f
 Judgement: u
@@ -1235,7 +1245,7 @@ na t’iij q’iigaa-gang ’laa-gang
 house some.of be.old-PRS be.good-PRS
 `Some old houses are good.'
 
-#122 attributive adjectives
+#123 attributive adjectives
 Source: author
 Vetted: f
 Judgement: u
@@ -1245,7 +1255,7 @@ na q’iigaa-gang t’iij ’laa-gang
 house be.old-PRS some.of be.good-PRS
 `Some old houses are good.'
 
-#123 attributive adjectives
+#124 attributive adjectives
 Source: author
 Vetted: f
 Judgement: g
@@ -1255,7 +1265,7 @@ gyùudan-ee 7iw7aan dladahlda-gan
 horse-DEF be.big fall.down-PST
 `The big horse fell down.'
 
-#124 attributive adjectives
+#125 attributive adjectives
 Source: author
 Vetted: f
 Judgement: g
