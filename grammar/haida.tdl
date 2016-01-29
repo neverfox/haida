@@ -2,7 +2,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Haida
 ;;; created at:
-;;;     Fri Jan 29 02:06:25 UTC 2016
+;;;     Fri Jan 29 06:10:59 UTC 2016
 ;;; based on Matrix customization system version of:
 ;;;     Sun Jan 10 22:56:48 UTC 2016
 ;;;
@@ -48,19 +48,19 @@ clause :+ [ SYNSEM.NEG-SAT na-or-+ ].
 
 +nvcdmo :+ [ MOD < > ].
 
-inflected :+ [ FINITE-FLAG luk,
-    TRANSITIVE-VERB-FLAG luk,
-    TENSE-FLAG luk,
-    FIN-FLAG luk,
+inflected :+ [ TENSE-FLAG luk,
     NUM-FLAG luk,
-    FUT-FLAG luk ].
+    FIN-FLAG luk,
+    FUT-FLAG luk,
+    TRANSITIVE-VERB-FLAG luk,
+    FINITE-FLAG luk ].
 
-infl-satisfied :+ [ FINITE-FLAG na-or-+,
-    TRANSITIVE-VERB-FLAG na-or-+,
-    TENSE-FLAG na-or-+,
-    FIN-FLAG na-or-+,
+infl-satisfied :+ [ TENSE-FLAG na-or-+,
     NUM-FLAG na-or-+,
-    FUT-FLAG na-or-+ ].
+    FIN-FLAG na-or-+,
+    FUT-FLAG na-or-+,
+    TRANSITIVE-VERB-FLAG na-or-+,
+    FINITE-FLAG na-or-+ ].
 
 png :+ [ PERNUM pernum,
     POT POT ].
@@ -209,10 +209,10 @@ pn-noun-lex := no-spr-noun-lex.
 verb-lex := non-mod-lex-item & NUM-rule-dtr & aspect-rule-dtr & modal-2-rule-dtr & negation-rule-dtr & tense-rule-dtr &
   [ SYNSEM.LOCAL.CAT [ HEAD verb,
                        HC-LIGHT - ],
-    INFLECTED [ NUM-FLAG -,
+    INFLECTED [ TENSE-FLAG -,
                 FIN-FLAG na-or--,
-                FINITE-FLAG -,
-                TENSE-FLAG - ] ].
+                NUM-FLAG -,
+                FINITE-FLAG - ] ].
 
 main-verb-lex := verb-lex & basic-verb-lex &
   [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
@@ -374,17 +374,17 @@ fut-lex-rule := modal-2-lex-rule-super &
 
 tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED [ TENSE-FLAG +,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
-                FINITE-FLAG #finite,
+                FUT-FLAG #fut,
                 NUM-FLAG #num,
                 FIN-FLAG #fin,
-                FUT-FLAG #fut ],
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                FINITE-FLAG #finite ],
     DTR tense-rule-dtr &
-        [ INFLECTED [ TRANSITIVE-VERB-FLAG #transitive-verb,
-                      FINITE-FLAG #finite,
+        [ INFLECTED [ FUT-FLAG #fut,
                       NUM-FLAG #num,
                       FIN-FLAG #fin & +,
-                      FUT-FLAG #fut ] ] ].
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      FINITE-FLAG #finite ] ] ].
 
 past-lex-rule := tense-lex-rule-super &
   [ DTR.INFLECTED.FUT-FLAG na,
@@ -412,17 +412,17 @@ freq-aspect-lex-rule := imperf-aspect-lex-rule &
 
 NUM-lex-rule-super := add-only-no-ccont-rule & modal-2-rule-dtr & tense-rule-dtr &
   [ INFLECTED [ NUM-FLAG +,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
-                FINITE-FLAG #finite,
                 FUT-FLAG #fut,
+                TENSE-FLAG #tense,
                 FIN-FLAG #fin,
-                TENSE-FLAG #tense ],
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                FINITE-FLAG #finite ],
     DTR NUM-rule-dtr &
-        [ INFLECTED [ TRANSITIVE-VERB-FLAG #transitive-verb,
-                      FINITE-FLAG #finite,
-                      FUT-FLAG #fut,
+        [ INFLECTED [ FUT-FLAG #fut,
+                      TENSE-FLAG #tense,
                       FIN-FLAG #fin & +,
-                      TENSE-FLAG #tense ] ] ].
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      FINITE-FLAG #finite ] ] ].
 
 non-3pl-intrans-lex-rule := NUM-lex-rule-super & const-lex-rule &
   [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG na,
@@ -440,15 +440,15 @@ non-3pl-lex-rule := NUM-lex-rule-super & const-lex-rule &
 
 finite-lex-rule-super := add-only-no-ccont-rule & const-lex-rule &
   [ INFLECTED [ FINITE-FLAG +,
-                NUM-FLAG #num,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
                 FUT-FLAG #fut,
-                TENSE-FLAG #tense ],
+                TENSE-FLAG #tense,
+                NUM-FLAG #num,
+                TRANSITIVE-VERB-FLAG #transitive-verb ],
     DTR verb-lex &
-        [ INFLECTED [ NUM-FLAG #num,
-                      TRANSITIVE-VERB-FLAG #transitive-verb,
-                      FUT-FLAG #fut,
-                      TENSE-FLAG #tense ] ] ].
+        [ INFLECTED [ FUT-FLAG #fut,
+                      TENSE-FLAG #tense,
+                      NUM-FLAG #num,
+                      TRANSITIVE-VERB-FLAG #transitive-verb ] ] ].
 
 fin-lex-rule := NUM-rule-dtr & aspect-rule-dtr & finite-lex-rule-super & modal-2-rule-dtr & negation-rule-dtr & tense-rule-dtr &
   [ INFLECTED.FIN-FLAG +,
