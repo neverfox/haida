@@ -13,9 +13,13 @@ past-suffix :=
 %suffix (* -gan)
 past-lex-rule.
 
-non-past-suffix :=
+present-suffix :=
 %suffix (* -gang)
-non-past-lex-rule.
+present-lex-rule.
+
+rel-prs-suffix :=
+%suffix (* -as)
+rel-prs-lex-rule.
 
 perf-aspect-suffix :=
 %suffix (* -gii)
