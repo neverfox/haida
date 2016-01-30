@@ -52,3 +52,7 @@ pl-subj-lex-rule.
 pl-obj-suffix :=
 %suffix (* -7wa)
 pl-obj-lex-rule.
+
+non-factive-suffix :=
+%suffix (* -.ang)
+non-factive-lex-rule.

@@ -615,75 +615,75 @@ dii qing-7wa-gan
 1SG.ACC see-PL-PST
 `They saw me.'
 
-# 62 possession - alienable gyaa form 1p
+# 62 possession - alienable gyaa form non-1p
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {poss}
-Mary dalang gyaa ts’agts’aggee qinggan
-Mary dalang gyaa ts’agts’ag-gee qing-gan
-Mary 2p POSS wagon-DF see-PST
-`Mary saw your wagon.'
+’la dalang gyaa ts’agts’aggee qinggan
+’laa dalang gyaa ts’agts’ag-gee qing-gan
+3p 2p POSS wagon-DF see-PST
+`She saw your wagon.'
 
-# 63 possession - alienable gyaa form non-1p
+# 63 possession - alienable gyaa form 1p
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {poss}
-Mary gyaagan ts’agts’aggee qinggan
-Mary gyaagan ts’agts’ag-gee qing-gan
-Mary my wagon-DF see-PST
-`Mary saw my wagon.'
+’la gyaagan ts’agts’aggee qinggan
+’laa gyaagan ts’agts’ag-gee qing-gan
+3p my wagon-DF see-PST
+`She saw my wagon.'
 
 # 64 possession - alienable -ra form
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {poss}
-Mary ts’agts’aggee daangaa qinggan
-Mary ts’agts’ag-gee daangaa qing-gan
-Mary wagon-DEF your see-PST
-`Mary saw your wagon.'
+’la ts’agts’aggee daangaa qinggan
+’laa ts’agts’ag-gee daangaa qing-gan
+3p wagon-DEF your see-PST
+`She saw your wagon.'
 
 # 65 possession - alienable NP
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {poss}
-Mary Bill gyaa ts’agts’aggee qinggan
-Mary Bill gyaa ts’agts’ag-gee qing-gan
-Mary Bill POSS wagon-DF see-PST
-`Mary saw Bill's wagon.'
+’la gyùudanee gyaa ts’agts’aggee qinggan
+’laa gyùudan-ee gyaa ts’agts’ag-gee qing-gan
+3p horse-DF POSS wagon-DF see-PST
+`She saw the horse's wagon.'
 
 # 66 possession - alienable NP
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {poss}
-Mary Bill ts’agts’aggee qinggan
-Mary Bill ts’agts’ag-gee qing-gan
-Mary Bill wagon-DF see-PST
-`Mary saw Bill's wagon.'
+’la gyùudanee ts’agts’aggee qinggan
+’laa gyùudan-ee ts’agts’ag-gee qing-gan
+3p horse-DF wagon-DF see-PST
+`She saw the horse's wagon.'
 
 # 67 possession - inalienable
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {poss}
-dii naan Bill gyaa ts’agts’aggee qinggan
-dii naan Bill gyaa ts’agts’ag-gee qing-gan
-my grandmother Bill POSS wagon-DF see-PST
-`My grandmother saw Bill's wagon.'
+dii naan gyùudanee gyaa ts’agts’aggee qinggan
+dii naan gyùudan-ee gyaa ts’agts’ag-gee qing-gan
+my grandmother horse-DF POSS wagon-DF see-PST
+`My grandmother saw the horse's wagon.'
 
 # 68 possession - inalienable
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {poss}
-gyaagan naan Bill gyaa ts’agts’aggee qinggan
-gyaagan naan Bill gyaa ts’agts’ag-gee qing-gan
-my grandmother Bill POSS wagon-DF see-PST
-`My grandmother saw Bill's wagon.'
+gyaagan naan gyùudanee gyaa ts’agts’aggee qinggan
+gyaagan naan gyùudan-ee gyaa ts’agts’ag-gee qing-gan
+my grandmother horse-DF POSS wagon-DF see-PST
+`My grandmother saw the horse's wagon.'
 
 # 69 possession - mixed alienable/inalienable
 Source: author
@@ -940,90 +940,90 @@ Source: author
 Vetted: f
 Judgement: g
 Phenomena: {crd}
-Bill 7isgyaan Mary dladahldagan
-Bill 7isgyaan Mary dladahlda-gan
-Bill and Mary fall.down-PST
-`Bill and Mary fell down.'
+gyùudanee 7isgyaan ts’agts’aggee dladahldagan
+gyùudan-ee 7isgyaan ts’agts’ag-gee dladahlda-gan
+horse-DF and wagon-DF fall.down-PST
+`The horse and the wagon fell down.'
 
 #95 phrasal coordination - comitative
 Source: author
 Vetted: f
 Judgement: g
 Phenomena: {crd}
-Billrahl Mary dladahldagan
-Bill=rahl Mary dladahlda-gan
-Bill=and Mary fall.down-PST
-`Bill and Mary fell down.'
+gyùudaneerahl ts’agts’aggee dladahldagan
+gyùudan-ee=rahl ts’agts’ag-gee dladahlda-gan
+horse-DF=and wagon-DF fall.down-PST
+`The horse and the wagon fell down.'
 
 #96 phrasal coordination - comitative
 Source: author
 Vetted: f
 Judgement: g
 Phenomena: {crd}
-Billrahl Mary-7isan dladahldagan
-Bill=rahl Mary=7isan dladahlda-gan
-Bill=and Mary=too fall.down-PST
-`Bill and Mary fell down.'
+gyùudaneerahl ts’agts’aggee-7isan dladahldagan
+gyùudan-ee=rahl ts’agts’ag-gee=7isan dladahlda-gan
+horse-DF=and wagon-DF=too fall.down-PST
+`The horse and the wagon fell down.'
 
 #97 phrasal coordination - comitative
 Source: author
 Vetted: f
 Judgement: g
 Phenomena: {crd}
-Bill 7isgyaan Mary-7isan dladahldagan
-Bill 7isgyaan Mary=7isan dladahlda-gan
-Bill Mary=too fall.down-PST
-`Bill and Mary fell down.'
+gyùudanee 7isgyaan ts’agts’aggee-7isan dladahldagan
+gyùudan-ee 7isgyaan ts’agts’ag-gee=7isan dladahlda-gan
+horse-DF and wagon-DF=too fall.down-PST
+`The horse and the wagon fell down.'
 
 #98 phrasal coordination - comitative
 Source: author
 Vetted: f
 Judgement: u
 Phenomena: {crd}
-Bill-7isan 7isgyaan Mary-7isan dladahldagan
-Bill=7isan 7isgyaan Mary=7isan dladahlda-gan
-Bill=too and Mary=too fall.down-PST
-`Bill and Mary fell down.'
+gyùudanee-7isan 7isgyaan ts’agts’aggee-7isan dladahldagan
+gyùudan-ee=7isan 7isgyaan ts’agts’ag-gee=7isan dladahlda-gan
+horse-DF=too and wagon-DF=too fall.down-PST
+`The horse and the wagon fell down.'
 
 #99 phrasal coordination - comitative
 Source: author
 Vetted: f
 Judgement: u
 Phenomena: {crd, poss}
-Bill 7isgyaan Mary naan dladahldagan
-Bill 7isgyaan Mary naan dladahlda-gan
-Bill and Mary grandmother fall.down-PST
-`Bill and Mary's grandmother fell down.'
+gyùudanee 7isgyaan gyùudan-ee gyaa ts’agts’aggee dladahldagan
+gyùudan-ee 7isgyaan gyùudan-ee gyaa ts’agts’ag-gee dladahlda-gan
+horse-DF and horse-DF POSS wagon-DF fall.down-PST
+`The horse and the horse's wagon fell down.'
 
 #100 phrasal coordination
 Source: author
 Vetted: f
 Judgement: u
 Phenomena: {crd}
-Bill gyaan Mary dladahldagan
-Bill gyaan Mary dladahlda-gan
-Bill and Mary fall.down-PST
-`Bill and Mary fell down.'
+gyùudanee gyaan ts’agts’aggee dladahldagan
+gyùudan-ee gyaan ts’agts’ag-gee dladahlda-gan
+horse-DF and wagon-DF fall.down-PST
+`The horse and the wagon fell down.'
 
 #101 phrasal coordination
 Source: author
 Vetted: f
 Judgement: u
 Phenomena: {crd}
-Bill Mary dladahldagan
-Bill Mary dladahlda-gan
-Bill Mary fall.down-PST
-`Bill and Mary fell down.'
+gyùudanee ts’agts’aggee dladahldagan
+gyùudan-ee ts’agts’ag-gee dladahlda-gan
+horse-DF wagon-DF fall.down-PST
+`The horse and the wagon fell down.'
 
 #102 phrasal coordination
 Source: a:1094
 Vetted: s
 Judgement: g
 Phenomena: {crd}
-Bill 7isgyaan xaay 7ists’agan
-Bill 7isgyaan x-aay 7ists’a-gan
-Bill and dog-DF come.in-PST
-`Bill and the dog came in.'
+gyùudanee 7isgyaan xaay 7ists’agan
+gyùudan-ee 7isgyaan x-aay 7ists’a-gan
+horse-DF and dog-DF come.in-PST
+`The horse and the dog came in.'
 
 #103 phrasal coordination
 Source: a:1091
@@ -1072,7 +1072,7 @@ Judgement: g
 Phenomena: {crd}
 Bill sguusiid taagangyaan sriwhan.isgyann tsii.nhan.isgyaan pickleshan.isan
 Bill sguusiid taa-gan=gyaan sriw=han.is=gyaan tsii.n=han.is=gyaan pickles=han.isan
-Bill potatoes eat-PST=and seaweed-too=and salmon-too=and pickles-too
+Bill potatoes eat-PST=and seaweed=too=and salmon=too=and pickles=too
 `Bill eats potatoes (and) [he eats] seaweed (and) [he eats] salmon (and) [he eats] pickles.'
 
 #108 non-verbal predicate - noun
@@ -1412,7 +1412,7 @@ Judgement: u
 Phenomena: {crd}
 Bill gyaan qats’agan Mary qaaguhlaa.aagangyaan
 Bill gyaan qats’a-gan Mary qaaguhlaa.aa-gan=gyaan
-Bill come.in-PST Mary go.out-PST
+Bill and come.in-PST Mary go.out-PST=and
 `Bill came in and Mary went out.'
 
 #142 clausal coordination - S (adapted from a:988)
@@ -1471,8 +1471,8 @@ Vetted: s
 Judgement: g
 Phenomena: {emb-d}
 Bill gid k'untl'aa.ang 'la suugan
-Bill gid 	k'untl'aa-.ang 'la 	suu-gan
-Bill child	get.burned-NF 	3	say-PST
+Bill gid k'untl'aa-.ang 'la suu-gan
+Bill child get.burned-NF 3p say-PST
 `Bill said that his child got burned.'
 
 #148 embedded clauses
@@ -1481,8 +1481,8 @@ Vetted: s
 Judgement: g
 Phenomena: {emb-d}
 Bill gid k'untl'aa.ang suugan
-Bill gid 	k'untl'aa-.ang 	suu-gan
-Bill child	get.burned-NF 	say-PST
+Bill gid k'untl'aa-.ang suu-gan
+Bill child get.burned-NF say-PST
 `Bill said that his child got burned.'
 
 #149 embedded clauses
@@ -1491,8 +1491,8 @@ Vetted: f
 Judgement: u
 Phenomena: {emb-d}
 Bill suugan gid k'untl'aa.ang
-Bill 	suu-gan gid 	k'untl'aa-.ang
-Bill 	say-PST child	get.burned-NF
+Bill suu-gan gid k'untl'aa-.ang
+Bill say-PST child get.burned-NF
 `Bill said that his child got burned.'
 
 #150 embedded clauses
@@ -1501,8 +1501,8 @@ Vetted: f
 Judgement: u
 Phenomena: {emb-d}
 gid k'untl'aa.ang Bill suugan
-gid 	k'untl'aa-.ang 	Bill suu-gan
-child	get.burned-NF 	Bill say-PST
+gid k'untl'aa-.ang Bill suu-gan
+child get.burned-NF Bill say-PST
 `Bill said that his child got burned.'
 
 #151 embedded clauses
@@ -1511,8 +1511,8 @@ Vetted: s
 Judgement: g
 Phenomena: {emb-q}
 daagu 7isdaa hlangaa.ang dang gudang
-daa-gu 	7isdaa 	hlangaa-.ang 	dang 	gudang
-you-Q	do	could-NF	you	think
+daa-gu 7isdaa hlangaa-.ang dang gudang
+you-Q do could-NF you think
 `Do you think that you could do it'
 
 #152 embedded clauses
@@ -1521,8 +1521,8 @@ Vetted: f
 Judgement: u
 Phenomena: {emb-q}
 hlangaa.ang dang gudang daagu 7isdaa
-hlangaa-.ang 	dang 	gudang	daa-gu 	7isdaa 	
-could-NF	you	think	you-Q	do	
+hlangaa-.ang dang gudang daa-gu 7isdaa 
+could-NF you think you-Q do 
 `Do you think that you could do it'
 
 #153 embedded clauses
@@ -1531,6 +1531,6 @@ Vetted: f
 Judgement: u
 Phenomena: {emb-q}
 daa 7isdaa hlangaa.ang dang gudang
-daa 	7isdaa 	hlangaa-.ang 	dang 	gudang
-you	do	could-NF	you	think
+daa 7isdaa hlangaa-.ang dang gudang
+you do could-NF you think
 `Do you think that you could do it'
