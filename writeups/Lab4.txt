@@ -2,7 +2,7 @@ Lab 4 Write Up
 Author: Kristen Piepgrass
 Partner: Roman Pearah
 Language: Haida
-Date: January 26, 2016
+Date: January 29, 2016
 
 1. The following phenomena are represented in the test suite and accounted for by the grammar matrix customization:
 
@@ -587,6 +587,8 @@ gyùudan-ee 	ts’agts’ag-gee	tlagaayda-gan 	neesdagaang.an
 horse-DEF	wagon-DEF 	injure-PST	right.away
 `The horse damaged the wagon right away.'
 
+Adverbs are not covered in the customization system, so we have not implemented them yet in our grammar.
+
 Non-Verbal Predicates
 
 Haida has a copula for non-verbal predicates of type NP and PP. It is important to note that the copula is NOT used
@@ -704,10 +706,6 @@ because we have already specified our adjectives as attributive only.
 Embedded clauses
 We have already seen that questions with embedded clauses are possible as shown below.
 
-
-
-
-
 #87 wh questions from embedded clause. adapted from 381--a in awhla needs a a downward pitch accent
 Source: author
 Vetted: f
@@ -718,11 +716,193 @@ giisd-.uu     dang     gyaa     taanaa nee     tla.awhla-ang    Bill    gudang-g
 who-FOC        you    POSS    smokehouse    build-PRS    Bill    thing-PRS
 `Who Does Bill think is building your smokehouse?'
 
-Adverbs are not covered in the customization system, so we have not implemented them yet in our grammar.
+While this example contains a wh-word and is outside the scope of the assignment, it is valuable because it
+is a relatively clear cut example. The examples and analysis that follow are drawn from Enrico's analysis of
+anaphora resolution in embedded clauses. As a result, I am hesitent to over-generate negative examples, which
+I do not know are ungrammatical with any certainty and we may have to make additional changes to our grammar
+to implement these when we come to tdl editing.
+
+With that disclaimer in mind, I have drawn the following generalizations about embedded clauses from the data.
+Haida does not use a complementize for embedded clauses and embedded clauses bear no overt marker. Instead, 
+embedded clauses are a compliment of the transitive verb and occur in object position. The content of the 
+embedded clause follows standard Haida word order, including the fronting of question words as described above. 
+Embedded questions do require the Q marker on the first argument as described in the section on yes/no 
+questions.
+
+I have selected the following examples from Enrico, based on their relative simplicity. However it is clear from
+Enrico's data that the verbs think and be used in both declaratives and questions. It is also noteworthy that
+the verbs say and think require a non-factive marker on the verb in the embedded clause.
+
+#147 embedded clauses
+Source: a:430
+Vetted: s
+Judgement: g
+Phenomena: {emb-d}
+Bill gid k'untl'aa.ang 'la suugan
+Bill gid 	k'untl'aa-.ang 'la 	suu-gan
+Bill child	get.burned-NF 	3	say-PST
+`Bill said that his child got burned.'
+
+#148 embedded clauses
+Source: a:430
+Vetted: s
+Judgement: g
+Phenomena: {emb-d}
+Bill gid k'untl'aa.ang suugan
+Bill gid 	k'untl'aa-.ang 	suu-gan
+Bill child	get.burned-NF 	say-PST
+`Bill said that his child got burned.'
+
+#149 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-d}
+Bill suugan gid k'untl'aa.ang
+Bill 	suu-gan gid 	k'untl'aa-.ang
+Bill 	say-PST child	get.burned-NF
+`Bill said that his child got burned.'
+
+#150 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-d}
+gid k'untl'aa.ang Bill suugan
+gid 	k'untl'aa-.ang 	Bill suu-gan
+child	get.burned-NF 	Bill say-PST
+`Bill said that his child got burned.'
+
+#151 embedded clauses
+Source: a:430
+Vetted: s
+Judgement: g
+Phenomena: {emb-q}
+daagu 7isdaa hlangaa.ang dang gudang
+daa-gu 	7isdaa 	hlangaa-.ang 	dang 	gudang
+you-Q	do	could-NF	you	think
+`Do you think that you could do it'
+
+#152 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-q}
+hlangaa.ang dang gudang daagu 7isdaa
+hlangaa-.ang 	dang 	gudang	daa-gu 	7isdaa 	
+could-NF	you	think	you-Q	do	
+`Do you think that you could do it'
+
+#153 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-q}
+daa 7isdaa hlangaa.ang dang gudang
+daa 	7isdaa 	hlangaa-.ang 	dang 	gudang
+you	do	could-NF	you	think
+`Do you think that you could do it'
+
+The data above demonstrates constituent ordering and the requirement of a question marker on embedded questions.
+The optionality of the subject of the main clause is not explained, but may be the result of relative potency.
+Enrico does not comment on teh missing tense marker in example 151 either. We have not emplimented embedded
+clauses in this lab, but will do so in tdl editing.
 
 3. Coverage of our grammar over the testsuite.
+Our coverage this week is 42.9%
+
+This can be accounted for by the following:
+
+This week we added a number of phenomena to our grammar that we do not expect to parse, as have been
+outlined in section two above.
+
+Negation
+In last week's lab we discussed an error in the implimentation of our negation rule. Further investigation
+revealed that when the negative suffix is added to the verb, the NEG feature is saturated, so the verb does
+not select for the required negative adverb. Emily has been sent the choices file and will recommend a tdl
+edit. In the meantime the following parses but shouldn't:
+# 42 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gyùudanee ts’agts’aggee qing.anggan
+gyùudan-ee ts’agts’ag-gee qing-.ang-gan
+horse-DEF wagon-DEF see-NEG-PST
+`The horse did not see the wagon.'
+
+Adjectives with tense
+As discussed above, adjectives in Haida derive from verbs. However, in some cases, the adjective bears tense
+that corresponds to the time at which the attribute is true/ relative.
+
+Our overgeneration is only 5.8%. THis is accounted for by the following.
+
+We still have overgeneralization with word order in regards to potency, as discussed in lab 2. This causes
+examples 11-13 to overgenerate.
+
+One negation sentence also overgenerates per the negation bug mentioned above.
+
+# 42 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gyùudanee ts’agts’aggee qing.anggan
+gyùudan-ee ts’agts’ag-gee qing-.ang-gan
+horse-DEF wagon-DEF see-NEG-PST
+`The horse did not see the wagon.'
 
 
+# 133 attributive adjectives
+Source: a:588
+Vetted: s
+Judgment: g
+Phenomena: {adj}
+sguusadee t’ijj ts’uudalaas ’la daanggan
+sguusiid-ee t’ijj ts’uudalaa-as ’laa daang-gan
+potato-DF some.of be.small-PRS 3p throw.away-PST
+`She threw away some of the small pototoes.'
+
+We do not have a wat to impliment tense on adjectives in teh customization system, but will address this
+in tdl editing.
 
 
 4. Changes we made to our grammar to improve its performance (coverage and accuracy).
+
+Added Tenses
+
+In order to improve our testsuite with examples from the author, we have added two additional tenses: the
+relative present and the evedential past. For example:
+
+# 74 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudangaa
+daa-gu gudang-aa
+you-Q understand-EVID
+`Did you understand it?'
+
+# 133 attributive adjectives
+Source: a:588
+Vetted: s
+Judgment: g
+Phenomena: {adj}
+sguusadee t’ijj ts’uudalaas ’la daanggan
+sguusiid-ee t’ijj ts’uudalaa-as ’laa daang-gan
+potato-DF some.of be.small-PRS 3p throw.away-PST
+`She threw away some of the small pototoes.'
+
+When doing this Roman attempted to add a feature for verbs to indicate whether or not they are evidential.
+However, due to a bug this was not possible and we will correct this in the tdl.
+
+Corrected plural rule
+Our plural rule was not correctly capturing the phenomenon in haida that causes a plural marker on the verb
+if either argument is third person plural. To correct this, we added an incl-excl distinction to the grammar, even though
+this distinction is not made in Haida, in order to impliment a pernum feature in the customization system.
+Using this pernum feature, we updated our plural morphology position to include a plural subject rule, a plural
+object rule, a non-plural rule for transitive verbs and a separate for intransitives. These choices allow all
+verbs to select for number, without a transitive singular noun being able to select one singular and one plural
+object.
+
