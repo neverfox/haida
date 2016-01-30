@@ -165,7 +165,7 @@ Bill qats’a-gan=gyaan Mary qaaguhlaa.aa-gan=7isan
 Bill come.in-PST=and Mary go.out-PST=too
 `Bill came in and Mary went out.'
 
-Enrico says that gyaan can not be used to coordinate NPs, as showen in #100, but he does highlight the following 
+Enrico says that gyaan can not be used to coordinate NPs, as shown in #100, but he does highlight the following 
 example:
 
 #107 clausal coordination
@@ -181,15 +181,15 @@ Bill potatoes eat-PST=and seaweed-too=and salmon-too=and pickles-too
 Enrico translates this bracketing the subject and verb to show that there may be a different process here than 
 in #100. We have included the example because it is interesting, but it cannot be parsed in the current grammar.
 
-To impliment coordination, we created three strategies in the customization system. We created two polysyndeton 
+To implement coordination, we created three strategies in the customization system. We created two polysyndeton 
 strategies in which the conjunction occurs before a noun coordinand (one for each 7isgyaan and rahl). We treat rahl
 as an independent word that attaches to the right of a noun syntactically but attached to the left of a noun
 phonologically.  This strategy allows us to take advantage of the customization system, and say that it occurs before
 the coordinand, but in our testsuite, we have written rahl up as clitic attached to the word before the coordinand.
-Our third stratecy specifies a polysyndeton conjunction, called gyaan, that comes before a VP or an S.
+Our third strategy specifies a polysyndeton conjunction, called gyaan, that comes before a VP or an S.
 
-There is another coordination strategy in Haida which Enrico calls comative coordination. A comative clitic on the
-last or all nouns changess the meaning of a sentence like "Bill and Mary fell down" from "Bill fell down and in a
+There is another coordination strategy in Haida which Enrico calls comitative coordination. A comitative clitic on the
+last or all nouns changes the meaning of a sentence like "Bill and Mary fell down" from "Bill fell down and in a
 separate event Mary also fell down" to "Bill and Mary fell down together as part of the same event." Distribution of
 this clitic is shown below:
 
@@ -223,11 +223,11 @@ Bill=7isan 7isgyaan Mary=7isan dladahlda-gan
 Bill=too and Mary=too fall.down-PST
 `Bill and Mary fell down.'
 
-We have not implimented this phenomenon in grammar yet, as it will need to be done in tdl editing.
+We have not implemented this phenomenon in grammar yet, as it will need to be done in tdl editing.
 
 Attributive Adjectives
 
-Attributive addjectives attache to the right of the constituent that they modify. However they are not predicative
+Attributive adjectives attach to the right of the constituent that they modify. However they are not predicative
 and do not occur with a copula. They only modify noun phrases. Examples of this distribution are given below:
 
 #126 attributive adjectives
@@ -270,12 +270,12 @@ gyùudan-ee 7iw7aan 7iij-gang
 horse-DEF be.big be-PRS
 `The horse is big.' or `The horse is large.'
 
-To impliment the attributive adjectives, we added them to our lexicon in a single class that is strictly attributive, occurs
+To implement the attributive adjectives, we added them to our lexicon in a single class that is strictly attributive, occurs
 after the noun and impossibly behaves predicately.
 
-Enrico claims that these attributive adjectives actually derrive from verbs by way of a lexical rule. We elected to treat
-them as adjectives non the less so that we could take advantage of the customization system. That said for each "adjective"
-that we entered into the lexicon, an intrasitive verb exixts that infleccts for tense, etc. We have used these verbs
+Enrico claims that these attributive adjectives actually derive from verbs by way of a lexical rule. We elected to treat
+them as adjectives nonetheless so that we could take advantage of the customization system. That said, for each "adjective"
+that we entered into the lexicon, an intransitive verb exists that inflects for tense, etc. We have used these verbs
 to demonstrate sentences that are similar to AP predicative sentences in other languages.
 
 #118 non-verbal predicates - Adj
@@ -318,13 +318,13 @@ na t’iij q’iigaa-gang ’laa-gang
 house some.of be.old-PRS be.good-PRS
 `Some old houses are good.'
 
-2. The following are properties of Haida that illustrated in the test suite but not covered by the current state of
-the grammar
+2. The following are properties of Haida that are illustrated in the test suite but not covered by the current state of
+the grammar:
 
 Matrix yes-no questions.
 
-Yes/no questions in Haida are marked with clitic after the first constituent. In addition, the head verb in a 
-yes/no question lacks it's position four and five suffixes (this is the suffix position for tense). As a result,
+Yes/no questions in Haida are marked with a clitic after the first constituent. In addition, the head verb in a 
+yes/no question lacks its position four and five suffixes (this is the suffix position for tense). As a result,
 a present tense question doesn't have a tense marker. The future tense marker is in the third suffix position, so
 it is unaffected. But with the past tense marker omitted, yes/no questions in the past tense are marked with the 
 evidential modal. Each of these tenses are represented in the data below.
@@ -372,7 +372,7 @@ dii-gu 		daa 	gudang
 It is worth noting that the following examples are ungrammatical, due either to the position of the clitic or the
 presence of a position 3 or 4 (such as a past or present tense) suffix.
 
-# 76 yes/no questions. ileagal present tense marker
+# 76 yes/no questions. illegal present tense marker
 Source: author
 Vetted: f
 Judgment: u
@@ -382,7 +382,7 @@ daa-gu 	gudang-gang
 you-Q	understand-PRS
 `Do you understand it?'
 
-# 77 yes/no questions. ileagal past tense marker
+# 77 yes/no questions. illegal past tense marker
 Source: author
 Vetted: f
 Judgment: u
@@ -406,7 +406,7 @@ According to Enrico, the use of negation in a yes/no question is awkward and spe
 rather than negation. For example, one would not say "Is Bill here yet? Did he not come?", but rather "Is Bill
 here? Or is he still at home?"
 
-The customization system does not handle first position clitics, so we will impliment this structure in tdl. We 
+The customization system does not handle first position clitics, so we will implement this structure in tdl. We 
 also haven't added the evidential modal because evidentiality is not on the menu this quarter. However, to capture the 
 past tense in yes/no questions, we will need to add it in the future. 
 
@@ -417,7 +417,7 @@ meaning what, given in some examples below. There is no variation for subject/ob
 expressing matrix wh-questions is with a focus-marked question word in the focus position at the start of the 
 sentence.  For example:
 
-#80 wh questions --a in awhla needs a a downward pitch accent
+#80 wh questions --a in awhla needs a downward pitch accent
 Source: a:134
 Vetted: s
 Judgment: g
@@ -427,7 +427,7 @@ giisd-.uu 	dang 	gyaa 	taanaa nee 	tla.awhla-ang
 who-FOC		you	POSS	smokehouse	build-PRS
 `Who is building your smokehouse?'
 
-#81 wh questions --a in awhla needs a a downward pitch accent
+#81 wh questions --a in awhla needs a downward pitch accent
 Source: a:134
 Vetted: s
 Judgment: g
@@ -439,7 +439,7 @@ who-FOC		you	POSS	smokehouse	build-EVID
 
 The following is ungrammatical because the question word is in the wrong position
 
-#82 wh questions -- wrong order a in awhla needs a a downward pitch accent
+#82 wh questions -- wrong order a in awhla needs a downward pitch accent
 Source: author
 Vetted: f
 Judgment: u
@@ -511,7 +511,7 @@ Bill	guus	taa-gaa		huu-gu
 Bill	what	eat-EVID	there-Q
 `What did Bill eat?'
 
-We have not implemeted either strategy for wh-questions as this topic is not covered in teh customization
+We have not implemented either strategy for wh-questions as this topic is not covered in the customization
 system.
 
 Adverbs
@@ -519,7 +519,7 @@ Adverbs
 Although Enrico does not describe adverbs in regards to the type of constituents they modify, he describes
 their distribution in comparison to the negation adverb gam. The adverb (in some cases I consider
 Enrico's manner adverbs to be temporal, but the distribution is not affected by this semantic distinction,
-so I will just say adverb) can occur before or after the negation adverb, but it's scope must be inside
+so I will just say adverb) can occur before or after the negation adverb, but its scope must be inside
 the negation. Therefore, both of the following word orders are legal:
 
 # 92 negation and adverbs example constructed from data on pages 40
@@ -543,7 +543,7 @@ NEG	right.away	horse-DEF 	wagon-DEF 	injure-NEG-PST
 `The horse did not damage the wagon right away.'
 
 From the data Enrico gives to show this distribution, we can see that adverbs occur in three possible positions
-to modify verbs, verb phrases and sentences. Tihs permits the following sentences:
+to modify verbs, verb phrases and sentences. This permits the following sentences:
 
 # 88 adverbs example constructed from data on pages 40
 Source: author
@@ -698,9 +698,9 @@ Phenomena: {cop}
 in.next.room be-PRS mallard 
 `A mallard is in the next room.'
 
-We have not yet implimented non-verbal predicates because they are not on the menu for
-this week. However, we did add a copula in the customization sytem that allows AP
-compliments. This implimentation correctly prevents AP compliments on the copula, though
+We have not yet implemented non-verbal predicates because they are not on the menu for
+this week. However, we did add a copula in the customization system that allows AP
+complements. This implementation correctly prevents AP complements on the copula though
 because we have already specified our adjectives as attributive only.
 
 Embedded clauses
@@ -718,13 +718,13 @@ who-FOC        you    POSS    smokehouse    build-PRS    Bill    thing-PRS
 
 While this example contains a wh-word and is outside the scope of the assignment, it is valuable because it
 is a relatively clear cut example. The examples and analysis that follow are drawn from Enrico's analysis of
-anaphora resolution in embedded clauses. As a result, I am hesitent to over-generate negative examples, which
+anaphora resolution in embedded clauses. As a result, I am hesitant to over-generate negative examples, which
 I do not know are ungrammatical with any certainty and we may have to make additional changes to our grammar
 to implement these when we come to tdl editing.
 
 With that disclaimer in mind, I have drawn the following generalizations about embedded clauses from the data.
 Haida does not use a complementize for embedded clauses and embedded clauses bear no overt marker. Instead, 
-embedded clauses are a compliment of the transitive verb and occur in object position. The content of the 
+embedded clauses are a complement of the transitive verb and occur in object position. The content of the 
 embedded clause follows standard Haida word order, including the fronting of question words as described above. 
 Embedded questions do require the Q marker on the first argument as described in the section on yes/no 
 questions.
@@ -805,7 +805,7 @@ you	do	could-NF	you	think
 
 The data above demonstrates constituent ordering and the requirement of a question marker on embedded questions.
 The optionality of the subject of the main clause is not explained, but may be the result of relative potency.
-Enrico does not comment on teh missing tense marker in example 151 either. We have not emplimented embedded
+Enrico does not comment on the missing tense marker in example 151 either. We have not implemented embedded
 clauses in this lab, but will do so in tdl editing.
 
 3. Coverage of our grammar over the testsuite.
@@ -817,7 +817,7 @@ This week we added a number of phenomena to our grammar that we do not expect to
 outlined in section two above.
 
 Negation
-In last week's lab we discussed an error in the implimentation of our negation rule. Further investigation
+In last week's lab we discussed an error in the implementation of our negation rule. Further investigation
 revealed that when the negative suffix is added to the verb, the NEG feature is saturated, so the verb does
 not select for the required negative adverb. Emily has been sent the choices file and will recommend a tdl
 edit. In the meantime the following parses but shouldn't:
@@ -835,7 +835,7 @@ Adjectives with tense
 As discussed above, adjectives in Haida derive from verbs. However, in some cases, the adjective bears tense
 that corresponds to the time at which the attribute is true/ relative.
 
-Our overgeneration is only 5.8%. THis is accounted for by the following.
+Our overgeneration is only 5.8%. This is accounted for by the following.
 
 We still have overgeneralization with word order in regards to potency, as discussed in lab 2. This causes
 examples 11-13 to overgenerate.
@@ -863,7 +863,7 @@ sguusiid-ee t’ijj ts’uudalaa-as ’laa daang-gan
 potato-DF some.of be.small-PRS 3p throw.away-PST
 `She threw away some of the small pototoes.'
 
-We do not have a wat to impliment tense on adjectives in teh customization system, but will address this
+We do not have a way to implement tense on adjectives in the customization system, but will address this
 in tdl editing.
 
 
@@ -872,7 +872,7 @@ in tdl editing.
 Added Tenses
 
 In order to improve our testsuite with examples from the author, we have added two additional tenses: the
-relative present and the evedential past. For example:
+relative present and the evidential past. For example:
 
 # 74 yes/no questions
 Source: a:132
@@ -900,7 +900,7 @@ However, due to a bug this was not possible and we will correct this in the tdl.
 Corrected plural rule
 Our plural rule was not correctly capturing the phenomenon in haida that causes a plural marker on the verb
 if either argument is third person plural. To correct this, we added an incl-excl distinction to the grammar, even though
-this distinction is not made in Haida, in order to impliment a pernum feature in the customization system.
+this distinction is not made in Haida, in order to implement a pernum feature in the customization system.
 Using this pernum feature, we updated our plural morphology position to include a plural subject rule, a plural
 object rule, a non-plural rule for transitive verbs and a separate for intransitives. These choices allow all
 verbs to select for number, without a transitive singular noun being able to select one singular and one plural
