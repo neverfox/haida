@@ -170,8 +170,8 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {c}
-dii dladahldagan
-dii dladahlda-gan
+hla dladahldagan
+hlaa dladahlda-gan
 1SG.NOM fall.down-PST
 `I fell down.'
 
@@ -285,7 +285,7 @@ Phenomena: {wo, pn, c}
 2PL.ACC 2SG.NOM see-PST
 `You saw them.'
 
-# 29 tr wo with pns. 1st person plural nominative. 
+# 29 tr wo with pns. 1st person plural nominative.
 Source: author
 Vetted: f
 Judgment: g
@@ -295,7 +295,7 @@ daa t’alang qing-gan
 3.ACC 1PL.NOM see-PST
 `He saw you.' or `They saw you.'
 
-# 30 tr wo with pns. 1st person plural nominative. 
+# 30 tr wo with pns. 1st person plural nominative.
 Source: author
 Vetted: f
 Judgment: g
@@ -400,9 +400,9 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {det}
-hlaa 7aasgee srids ts’agts’agg qing7wagan
-hlaa 7aasgee srid-s ts’agts’agg qing-7wa-gan
-1SG.NOM these he.red-PST wagons see-PL-PST
+hlaa 7aasgee ts’agts’ag srids qing7wagan
+hlaa 7aasgee ts’agts’ag srid-as qing-7wa-gan
+1SG.NOM these wagons be.red-PRS see-PL-PST
 `I saw these red wagons.'
 
 # 41 negation
@@ -615,75 +615,75 @@ dii qing-7wa-gan
 1SG.ACC see-PL-PST
 `They saw me.'
 
-# 62 possession - alienable gyaa form 1p
+# 62 possession - alienable gyaa form non-1p
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {poss}
-Mary dalang gyaa ts’agts’aggee qinggan
-Mary dalang gyaa ts’agts’ag-gee qing-gan
-Mary 2p POSS wagon-DF see-PST
-`Mary saw your wagon.'
+’la dalang gyaa ts’agts’aggee qinggan
+’laa dalang gyaa ts’agts’ag-gee qing-gan
+3p 2p POSS wagon-DF see-PST
+`She saw your wagon.'
 
-# 63 possession - alienable gyaa form non-1p
+# 63 possession - alienable gyaa form 1p
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {poss}
-Mary gyaagan ts’agts’aggee qinggan
-Mary gyaagan ts’agts’ag-gee qing-gan
-Mary my wagon-DF see-PST
-`Mary saw my wagon.'
+’la gyaagan ts’agts’aggee qinggan
+’laa gyaagan ts’agts’ag-gee qing-gan
+3p my wagon-DF see-PST
+`She saw my wagon.'
 
 # 64 possession - alienable -ra form
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {poss}
-Mary ts’agts’aggee daangaa qinggan
-Mary ts’agts’ag-gee daangaa qing-gan
-Mary wagon-DEF your see-PST
-`Mary saw your wagon.'
+’la ts’agts’aggee daangaa qinggan
+’laa ts’agts’ag-gee daangaa qing-gan
+3p wagon-DEF your see-PST
+`She saw your wagon.'
 
 # 65 possession - alienable NP
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {poss}
-Mary Bill gyaa ts’agts’aggee qinggan
-Mary Bill gyaa ts’agts’ag-gee qing-gan
-Mary Bill POSS wagon-DF see-PST
-`Mary saw Bill's wagon.'
+’la gyùudanee gyaa ts’agts’aggee qinggan
+’laa gyùudan-ee gyaa ts’agts’ag-gee qing-gan
+3p horse-DF POSS wagon-DF see-PST
+`She saw the horse's wagon.'
 
 # 66 possession - alienable NP
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {poss}
-Mary Bill ts’agts’aggee qinggan
-Mary Bill ts’agts’ag-gee qing-gan
-Mary Bill wagon-DF see-PST
-`Mary saw Bill's wagon.'
+’la gyùudanee ts’agts’aggee qinggan
+’laa gyùudan-ee ts’agts’ag-gee qing-gan
+3p horse-DF wagon-DF see-PST
+`She saw the horse's wagon.'
 
 # 67 possession - inalienable
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {poss}
-dii naan Bill gyaa ts’agts’aggee qinggan
-dii naan Bill gyaa ts’agts’ag-gee qing-gan
-my grandmother Bill POSS wagon-DF see-PST
-`My grandmother saw Bill's wagon.'
+dii naan gyùudanee gyaa ts’agts’aggee qinggan
+dii naan gyùudan-ee gyaa ts’agts’ag-gee qing-gan
+my grandmother horse-DF POSS wagon-DF see-PST
+`My grandmother saw the horse's wagon.'
 
 # 68 possession - inalienable
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {poss}
-gyaagan naan Bill gyaa ts’agts’aggee qinggan
-gyaagan naan Bill gyaa ts’agts’ag-gee qing-gan
-my grandmother Bill POSS wagon-DF see-PST
-`My grandmother saw Bill's wagon.'
+gyaagan naan gyùudanee gyaa ts’agts’aggee qinggan
+gyaagan naan gyùudan-ee gyaa ts’agts’ag-gee qing-gan
+my grandmother horse-DF POSS wagon-DF see-PST
+`My grandmother saw the horse's wagon.'
 
 # 69 possession - mixed alienable/inalienable
 Source: author
@@ -724,3 +724,813 @@ waaniis gyùudanee 'laangaa dladahldagan
 waaniis gyùudan-ee 'laangaa dladahlda-gan
 that horse-DEF her fall.down-PST
 `That horse of hers fell down.' or `That one of her horses fell down.'
+
+# 73 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudang
+daa-gu gudang
+you-Q understand
+`Do you understand it?'
+
+# 74 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudangaa
+daa-gu gudang-aa
+you-Q understand-EVID
+`Did you understand it?'
+
+# 75 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudang7as
+daa-gu gudang-7as
+you-Q understand-FUT
+`Will you understand it?'
+
+# 76 yes/no questions. illegal present tense marker
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+daagu gudanggang
+daa-gu gudang-gang
+you-Q understand-PRS
+`Do you understand it?'
+
+# 77 yes/no questions. illegal past tense marker
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+daagu gudanggan
+daa-gu gudang-gan
+you-Q understand-PST
+`Did you understand it?'
+
+# 78 yes/no questions. clitic in wrong position
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+dii daagu gudang
+dii daa-gu gudang
+1SG.ACC you-Q understand
+`Do you understand me?'
+
+# 79 yes/no questions. clitic in wrong position
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {q}
+diigu daa gudang
+dii-gu daa gudang
+1SG.ACC-Q you understand
+`Do you understand me?'
+
+#80 wh questions
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.àwhlaang
+giisd-.uu dang gyaa taanaanee tla.àwhla-gang
+who-FOC you POSS smokehouse build-PRS
+`Who is building your smokehouse?'
+
+#81 wh questions
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.àwhlayaa
+giisd-.uu dang gyaa taanaanee tla.àwhla-yaa
+who-FOC you POSS smokehouse build-EVID
+`Who built your smokehouse?'
+
+#82 wh questions -- wrong order.
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+dang gyaa giisd.uu taanaa nee tla.àwhlaang
+dang gyaa giisd-.uu taanaanee tla.àwhla-gang
+you POSS who-FOC smokehouse build-PRS
+`Who is building your smokehouse?'
+
+#83 wh questions no focus
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+giisd dang gyaa taanaa nee tla.àwhlaang
+giisd dang gyaa taanaanee tla.àwhla-gang
+who you POSS smokehouse build-PRS
+`Who is building your smokehouse?'
+
+#84 wh questions
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+huugu Bill guus taagaa
+huu-gu Bill guus taa-gaa
+there-Q Bill what eat-EVID
+`What did Bill eat?'
+
+#85 wh questions
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wh}
+Bill huugu guus taagaa
+Bill huu-gu guus taa-gaa
+Bill there-Q what eat-EVID
+`What did Bill eat?'
+
+#86 wh questions
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+Bill guus taagaa huugu
+Bill guus taa-gaa huu-gu
+Bill what eat-EVID there-Q
+`What did Bill eat?'
+
+#87 wh questions from embedded clause. adapted from 381
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.àwhlaang Bill gudang-gang
+giisd-.uu dang gyaa taanaanee tla.àwhla-gang Bill gudang-gang
+who-FOC you POSS smokehouse build-PRS Bill think-PRS
+`Who does Bill think is building your smokehouse?'
+
+# 88 adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+neesdagaang.an gyùudanee ts’agts’aggee tlagaaydagan
+neesdagaang.an gyùudan-ee ts’agts’ag-gee tlagaayda-gan
+right.away horse-DEF wagon-DEF injure-PST
+`The horse damaged the wagon right away.'
+
+# 89 adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+gyùudanee neesdagaang.an ts’agts’aggee tlagaaydagan
+gyùudan-ee neesdagaang.an ts’agts’ag-gee tlagaayda-gan
+horse-DEF right.away wagon-DEF injure-PST
+`The horse damaged the wagon right away.'
+
+# 90 adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+gyùudanee ts’agts’aggee neesdagaang.an tlagaaydagan
+gyùudan-ee ts’agts’ag-gee neesdagaang.an tlagaayda-gan
+horse-DEF wagon-DEF right.away injure-PST
+`The horse damaged the wagon right away.'
+
+# 91 adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adv}
+gyùudanee ts’agts’aggee tlagaaydagan neesdagaang.an
+gyùudan-ee ts’agts’ag-gee tlagaayda-gan neesdagaang.an
+horse-DEF wagon-DEF injure-PST right.away
+`The horse damaged the wagon right away.'
+
+# 92 negation and adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv, neg}
+neesdagaang.an gam gyùudanee ts’agts’aggee tlagaayda.anggan
+neesdagaang.an gam gyùudan-ee ts’agts’ag-gee tlagaayda-.ang-gan
+right.away NEG horse-DEF wagon-DEF injure-NEG-PST
+`The horse did not damage the wagon right away.'
+
+# 93 negation and adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv, neg}
+gam neesdagaang.an gyùudanee ts’agts’aggee tlagaayda.anggan
+gam neesdagaang.an gyùudan-ee ts’agts’ag-gee tlagaayda-.ang-gan
+NEG right.away horse-DEF wagon-DEF injure-NEG-PST
+`The horse did not damage the wagon right away.'
+
+#94 phrasal coordination
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+gyùudanee 7isgyaan ts’agts’aggee dladahldagan
+gyùudan-ee 7isgyaan ts’agts’ag-gee dladahlda-gan
+horse-DF and wagon-DF fall.down-PST
+`The horse and the wagon fell down.'
+
+#95 phrasal coordination - comitative
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+gyùudaneerahl ts’agts’aggee dladahldagan
+gyùudan-ee=rahl ts’agts’ag-gee dladahlda-gan
+horse-DF=and wagon-DF fall.down-PST
+`The horse and the wagon fell down.'
+
+#96 phrasal coordination - comitative
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+gyùudaneerahl ts’agts’aggee-7isan dladahldagan
+gyùudan-ee=rahl ts’agts’ag-gee=7isan dladahlda-gan
+horse-DF=and wagon-DF=too fall.down-PST
+`The horse and the wagon fell down.'
+
+#97 phrasal coordination - comitative
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+gyùudanee 7isgyaan ts’agts’aggee-7isan dladahldagan
+gyùudan-ee 7isgyaan ts’agts’ag-gee=7isan dladahlda-gan
+horse-DF and wagon-DF=too fall.down-PST
+`The horse and the wagon fell down.'
+
+#98 phrasal coordination - comitative
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+gyùudanee-7isan 7isgyaan ts’agts’aggee-7isan dladahldagan
+gyùudan-ee=7isan 7isgyaan ts’agts’ag-gee=7isan dladahlda-gan
+horse-DF=too and wagon-DF=too fall.down-PST
+`The horse and the wagon fell down.'
+
+#99 phrasal coordination - comitative
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd, poss}
+gyùudanee 7isgyaan gyùudan-ee gyaa ts’agts’aggee dladahldagan
+gyùudan-ee 7isgyaan gyùudan-ee gyaa ts’agts’ag-gee dladahlda-gan
+horse-DF and horse-DF POSS wagon-DF fall.down-PST
+`The horse and the horse's wagon fell down.'
+
+#100 phrasal coordination
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+gyùudanee gyaan ts’agts’aggee dladahldagan
+gyùudan-ee gyaan ts’agts’ag-gee dladahlda-gan
+horse-DF and wagon-DF fall.down-PST
+`The horse and the wagon fell down.'
+
+#101 phrasal coordination
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+gyùudanee ts’agts’aggee dladahldagan
+gyùudan-ee ts’agts’ag-gee dladahlda-gan
+horse-DF wagon-DF fall.down-PST
+`The horse and the wagon fell down.'
+
+#102 phrasal coordination
+Source: a:1094
+Vetted: s
+Judgement: g
+Phenomena: {crd}
+gyùudanee 7isgyaan xaay 7ists’agan
+gyùudan-ee 7isgyaan x-aay 7ists’a-gan
+horse-DF and dog-DF come.in-PST
+`The horse and the dog came in.'
+
+#103 phrasal coordination
+Source: a:1091
+Vetted: s
+Judgement: g
+Phenomena: {crd}
+sguusiid 7isgyaan 7anyaas 7isgyaan 7inuu 7isgyaan ts’at’saga dii sdahlaang
+sguusiid 7isgyaan 7anyaas 7isgyaan 7inuu 7isgyaan ts’at’sa-ga dii sdahla-ang
+potato and onion and rutabaga and carrot-PP I need-PRS
+`I need potatoes and onions and rutabagas and carrots.' or `I need potatoes, onions, rutabagas, and carrots.'
+
+#104 phrasal coordination
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+sguusiid 7anyaas 7inuu ts’at’saga dii sdahlaang
+sguusiid 7anyaas 7inuu ts’at’sa-ga dii sdahla-ang
+potato onion rutabaga carrot-PP I need-PRS
+`I need potatoes and onions and rutabagas and carrots.' or `I need potatoes, onions, rutabagas, and carrots.'
+
+#105 clausal coordination
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+gyùudanee dladahldagangyaan ’la ts’agts’aggee tlagaaydagan
+gyùudan-ee dladahlda-gan=gyaan ’laa ts’agts’ag-gee tlagaayda-gan
+horse-DEF fall.down-PST=and 3p wagon-DF injure-PST
+`The horse fell down and damaged the wagon.'
+
+#106 clausal coordination
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+gyùudanee dladahldagan ’la ts’agts’aggee tlagaaydagan
+gyùudan-ee dladahlda-gan ’laa ts’agts’ag-gee tlagaayda-gan
+horse-DEF fall.down-PST 3p wagon-DF injure-PST
+`The horse fell down and damaged the wagon.'
+
+#107 clausal coordination
+Source: a:988
+Vetted: s
+Judgement: g
+Phenomena: {crd}
+Bill sguusiid taagangyaan sriwhan.isgyann tsii.nhan.isgyaan pickleshan.isan
+Bill sguusiid taa-gan=gyaan sriw=han.is=gyaan tsii.n=han.is=gyaan pickles=han.isan
+Bill potatoes eat-PST=and seaweed=too=and salmon=too=and pickles=too
+`Bill eats potatoes (and) [he eats] seaweed (and) [he eats] salmon (and) [he eats] pickles.'
+
+#108 non-verbal predicate - noun
+Source: a:211
+Vetted: s
+Judgement: g
+Phenomena: {cop, wo}
+xa.a xid7iid 7iijang
+xa.a xid7iid 7iij-gang
+mallard bird be-PRS
+`A mallard is a bird.'
+
+#109 non-verbal predicate - noun
+Source: a:211
+Vetted: s
+Judgement: u
+Phenomena: {cop, wo}
+xid7iid xa.a 7iijang
+xid7iid xa.a 7iij-gang
+bird mallard be-PRS
+`A mallard is a bird.'
+
+#110 non-verbal predicate - noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+xa.a xid7iid
+xa.a xid7iid
+mallard bird
+`A mallard is a bird.'
+
+#111 non-verbal predicate - noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+xa.a 7iijang xid7iid
+xa.a 7iij-gang xid7iid
+mallard be-PRS bird
+`A mallard is a bird.'
+
+#112 non-verbal predicate - noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+7iijang xa.a xid7iid
+7iij-gang xa.a xid7iid
+be-PRS mallard bird
+`A mallard is a bird.'
+
+#113 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {cop}
+xa.a 7aanàa 7iijang
+xa.a 7aanàa 7iij-gang
+mallard in.next.room be-PRS
+`A mallard is in the next room.'
+
+#114 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+xa.a 7iijang 7aanàa
+xa.a 7iij-gang 7aanàa 
+mallard be-PRS in.next.room
+`A mallard is in the next room.'
+
+#115 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+xa.a 7aanàa
+xa.a 7aanàa 
+mallard in.next.room
+`A mallard is in the next room.'
+
+#116 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+7iijang xa.a 7aanàa
+7iij-gang xa.a 7aanàa 
+be-PRS mallard in.next.room
+`A mallard is in the next room.'
+
+#117 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+7aanàa 7iijang xa.a 
+7aanàa 7iij-gang xa.a 
+in.next.room be-PRS mallard 
+`A mallard is in the next room.'
+
+#118 non-verbal predicates - Adj
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {cop}
+gyùudanee 7iw7aangang
+gyùudan-ee 7iw7aan-gang
+horse-DEF be.big-PRS
+`The horse is big.' or `The horse is large.'
+
+#119 non-verbal predicates - adj
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {cop}
+ts’agts’aggee sridgang
+ts’agts’ag-gee srid-gang
+wagon-DEF be.red-PRS
+`The wagon is red.'
+
+#120 non-verbal predicates - adj
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+gyùudanee 7iw7aan 7iijang
+gyùudan-ee 7iw7aan 7iij-gang
+horse-DEF be.big be-PRS
+`The horse is big.' or `The horse is large.'
+
+#121 non-verbal predicates - adj
+Source: a:461
+Vetted: s
+Judgement: g
+Phenomena: {adj}
+hlaa ga taa-gan xaw.ulagan
+hlaa ga taa-gan xaw.ula-gan
+I INDF eat-PST be.delicious-PST
+'The ones that I ate were delicious.'
+
+#122 attributive adjectives
+Source: a:589
+Vetted: s
+Judgement: g
+Phenomena: {adj, cop}
+na t’iij q’iigaa ’laagang
+na t’iij q’iigaa ’laa-gang
+house some.of be.old be.good-PRS
+`Some old houses are good.'
+
+#123 attributive adjectives
+Source: a:589
+Vetted: s
+Judgement: g
+Phenomena: {adj, cop}
+na q’iigaa t’iij ’laagang
+na q’iigaa t’iij ’laa-gang
+house be.old some.of be.good-PRS
+`Some old houses are good.'
+
+#124 attributive adjectives
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {adj, cop}
+na t’iij q’iigaagang ’laagang
+na t’iij q’iigaa-gang ’laa-gang
+house some.of be.old-PRS be.good-PRS
+`Some old houses are good.'
+
+#125 attributive adjectives
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {adj, cop}
+na q’iigaagang t’iij ’laagang
+na q’iigaa-gang t’iij ’laa-gang
+house be.old-PRS some.of be.good-PRS
+`Some old houses are good.'
+
+#126 attributive adjectives
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {adj}
+gyùudanee 7iw7aan dladahldagan
+gyùudan-ee 7iw7aan dladahlda-gan
+horse-DEF be.big fall.down-PST
+`The big horse fell down.'
+
+#127 attributive adjectives
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {adj, cop}
+xa.a q’iigaa 7aanàa 7iijang
+xa.a q’iigaa 7aanàa 7iij-gang
+mallard be.old in.next.room be-PRS
+`An old mallard is in the next room.'
+
+#128 attributive adjectives
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {adj}
+7iw7aan gyùudanee dladahldagan
+7iw7aan gyùudan-ee dladahlda-gan
+be.big horse-DEF fall.down-PST
+`The big horse fell down.'
+
+#129 attributive adjectives
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {adj, cop}
+q’iigaa xa.a 7aanàa 7iijang
+q’iigaa xa.a 7aanàa 7iij-gang
+be.old mallard in.next.room be-PRS
+`An old mallard is in the next room.'
+
+#130 attributive adjectives
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {adj, cop}
+q’iigaa xa.a 7aanàa 7iijang
+q’iigaa xa.a 7aanàa 7iij-gang
+be.old mallard in.next.room be-PRS
+`An old mallard is in the next room.'
+
+# 131 attributive adjectives (variation of #40)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+hlaa 7aasgee srids ts’agts’ag qing7wagan
+hlaa 7aasgee srid-as ts’agts’ag qing-7wa-gan
+1SG.NOM these be.red-PRS wagons see-PL-PST
+`I saw these red wagons.'
+
+# 132 attributive adjectives (variation of #40)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+hlaa 7aasgee ts’agts’ag sridan qing7wagan
+hlaa 7aasgee ts’agts’ag srid-gan qing-7wa-gan
+1SG.NOM these wagons be.red-PST see-PL-PST
+`I saw these red wagons.'
+
+# 133 attributive adjectives
+Source: a:588
+Vetted: s
+Judgment: g
+Phenomena: {adj}
+sguusadee t’ijj ts’uudalaas ’la daanggan
+sguusiid-ee t’ijj ts’uudalaa-as ’laa daang-gan
+potato-DF some.of be.small-PRS 3p throw.away-PST
+`She threw away some of the small pototoes.'
+
+# 134 attributive adjectives
+Source: a:588
+Vetted: s
+Judgment: g
+Phenomena: {adj}
+sguusadee ts’uudalaas t’ijj ’la daanggan
+sguusiid-ee ts’uudalaa-as t’ijj ’laa daang-gan
+potato-DF be.small-PRS some.of 3p throw.away-PST
+`She threw away some of the small pototoes.'
+
+# 135 attributive adjectives (variation from a:588, wrong tense)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+sguusadee t’ijj ts’uudalaagan ’la daanggan
+sguusiid-ee t’ijj ts’uudalaa-gan ’laa daang-gan
+potato-DF some.of be.small-PST 3p throw.away-PST
+`She threw away some of the small pototoes.'
+
+# 136 attributive adjectives (variation from a:588, wrong tense)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+sguusadee ts’uudalaagan t’ijj ’la daanggan
+sguusiid-ee ts’uudalaa-gan t’ijj ’laa daang-gan
+potato-DF be.small-PST some.of 3p throw.away-PST
+`She threw away some of the small pototoes.'
+
+#137 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+Bill qats’agangyaan Mary qaaguhlaa.aagan
+Bill qats’a-gan=gyaan Mary qaaguhlaa.aa-gan
+Bill come.in-PST=and Mary go.out-PST
+`Bill came in and Mary went out.'
+
+#138 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill qats’agan Mary qaaguhlaa.aagan
+Bill qats’a-gan Mary qaaguhlaa.aa-gan
+Bill come.in-PST Mary go.out-PST
+`Bill came in and Mary went out.'
+
+#139 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill qats’agangyaan Mary qaaguhlaa.aagangyaan
+Bill qats’a-gan=gyaan Mary qaaguhlaa.aa-gan=gyaan
+Bill come.in-PST=and Mary go.out-PST=and
+`Bill came in and Mary went out.'
+
+#140 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill qats’agan Mary qaaguhlaa.aagangyaan
+Bill qats’a-gan Mary qaaguhlaa.aa-gan=gyaan
+Bill come.in-PST Mary go.out-PST=and
+`Bill came in and Mary went out.'
+
+#141 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill gyaan qats’agan Mary qaaguhlaa.aagangyaan
+Bill gyaan qats’a-gan Mary qaaguhlaa.aa-gan=gyaan
+Bill and come.in-PST Mary go.out-PST=and
+`Bill came in and Mary went out.'
+
+#142 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+Bill qats’agangyaan Mary qaaguhlaa.aagan7isan
+Bill qats’a-gan=gyaan Mary qaaguhlaa.aa-gan=7isan
+Bill come.in-PST=and Mary go.out-PST=too
+`Bill came in and Mary went out.'
+
+#143 clausal coordination - S
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+ts’agts’aggee 7iw7aanganggyaan ts’agts’aggee sridgang
+ts’agts’ag-gee 7iw7aan-gang=gyaan ts’agts’ag-gee srid-gang
+wagon-DF be.big-PRS=and wagon-DF be.red-PRS
+`The wagon is big and the wagon is red.'
+
+#144 clausal coordination - S
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+ts’agts’aggee 7iw7aangangyaan ts’agts’aggee sridgan
+ts’agts’ag-gee 7iw7aan-gan=gyaan ts’agts’ag-gee srid-gan
+wagon-DF be.big-PST=and wagon-DF be.red-PST
+`The wagon was big and the wagon was red.'
+
+#145 clausal coordination - S (too requires past)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+ts’agts’aggee 7iw7aanganggyaan ts’agts’aggee sridgang7isan
+ts’agts’ag-gee 7iw7aan-gang=gyaan ts’agts’ag-gee srid-gang=7isan
+wagon-DF be.big-PRS=and wagon-DF be.red-PRS=too
+`The wagon is big and the wagon is red.'
+
+#146 clausal coordination - S (too requires past)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+ts’agts’aggee 7iw7aangangyaan ts’agts’aggee sridgan7isan
+ts’agts’ag-gee 7iw7aan-gan=gyaan ts’agts’ag-gee srid-gan=7isan
+wagon-DF be.big-PST=and wagon-DF be.red-PST=too
+`The wagon was big and the wagon was red.'
+
+#147 embedded clauses
+Source: a:430
+Vetted: s
+Judgement: g
+Phenomena: {emb-d}
+Bill gid k'untl'aa.ang 'la suugan
+Bill gid k'untl'aa-.ang 'laa suu-gan
+Bill child get.burned-NF 3p say-PST
+`Bill said that his child got burned.'
+
+#148 embedded clauses
+Source: a:430
+Vetted: s
+Judgement: g
+Phenomena: {emb-d}
+Bill gid k'untl'aa.ang suugan
+Bill gid k'untl'aa-.ang suu-gan
+Bill child get.burned-NF say-PST
+`Bill said that his child got burned.'
+
+#149 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-d}
+Bill suugan gid k'untl'aa.ang
+Bill suu-gan gid k'untl'aa-.ang
+Bill say-PST child get.burned-NF
+`Bill said that his child got burned.'
+
+#150 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-d}
+gid k'untl'aa.ang Bill suugan
+gid k'untl'aa-.ang Bill suu-gan
+child get.burned-NF Bill say-PST
+`Bill said that his child got burned.'
+
+#151 embedded clauses
+Source: a:430
+Vetted: s
+Judgement: g
+Phenomena: {emb-q}
+daagu 7isdaa hlangaa.ang dang gudang
+daa-gu 7isdaa hlangaa-.ang dang gudang
+you-Q do could-NF you think
+`Do you think that you could do it'
+
+#152 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-q}
+hlangaa.ang dang gudang daagu 7isdaa
+hlangaa-.ang dang gudang daa-gu 7isdaa 
+could-NF you think you-Q do 
+`Do you think that you could do it'
+
+#153 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-q}
+daa 7isdaa hlangaa.ang dang gudang
+daa 7isdaa hlangaa-.ang dang gudang
+you do could-NF you think
+`Do you think that you could do it'

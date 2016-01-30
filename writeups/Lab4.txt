@@ -1,0 +1,912 @@
+Lab 4 Write Up
+Author: Kristen Piepgrass
+Partner: Roman Pearah
+Language: Haida
+Date: January 29, 2016
+
+1. The following phenomena are represented in the test suite and accounted for by the grammar matrix customization:
+
+Coordination:
+
+Haida has a polysyndeton coordination structure  which places a coordinating conjunction before each coordinand.
+For nouns, there are two coordinating conjunctions: 7isgyaan and rahl. Enrico analyzes rahl as a left leaning 
+clitic as shown in the following examples.
+
+#94 phrasal coordination
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+Bill 7isgyaan Mary dladahldagan
+Bill 7isgyaan Mary dladahlda-gan
+Bill and Mary fall.down-PST
+`Bill and Mary fell down.'
+
+#95 phrasal coordination - comitative
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+Billrahl Mary dladahldagan
+Bill=rahl Mary dladahlda-gan
+Bill=and Mary fall.down-PST
+`Bill and Mary fell down.'
+
+#99 phrasal coordination - comitative
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd, poss}
+Bill 7isgyaan Mary naan dladahldagan
+Bill 7isgyaan Mary naan dladahlda-gan
+Bill and Mary grandmother fall.down-PST
+`Bill and Mary's grandmother fell down.'
+
+
+#101 phrasal coordination
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill Mary dladahldagan
+Bill Mary dladahlda-gan
+Bill Mary fall.down-PST
+`Bill and Mary fell down.'
+
+#103 phrasal coordination
+Source: a:1091
+Vetted: s
+Judgement: g
+Phenomena: {crd}
+sguusiid 7isgyaan 7anyaas 7isgyaan 7inuu 7isgyaan ts’at’saga dii sdahlaang
+sguusiid 7isgyaan 7anyaas 7isgyaan 7inuu 7isgyaan ts’at’sa-ga dii sdahla-ang
+potato and onion and rutabaga and carrot-PP I need-PRS
+`I need potatoes and onions and rutabagas and carrots.' or `I need potatoes, onions, rutabagas, and carrots.'
+
+#104 phrasal coordination
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+sguusiid 7anyaas 7inuu ts’at’saga dii sdahlaang
+sguusiid 7anyaas 7inuu ts’at’sa-ga dii sdahla-ang
+potato onion rutabaga carrot-PP I need-PRS
+`I need potatoes and onions and rutabagas and carrots.' or `I need potatoes, onions, rutabagas, and carrots.'
+
+VPs and Ss follow the same strategy as NPs, but use a different conjunction, gyaan: 
+
+#105 clausal coordination
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+gyùudanee dladahldagangyaan ’la ts’agts’aggee tlagaaydagan
+gyùudan-ee dladahlda-gan gyaan ’la ts’agts’ag-gee tlagaayda-gan
+horse-DEF fall.down-PST and 3p wagon-DF injure-PST
+`The horse fell down and damaged the wagon.'
+
+#106 clausal coordination
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+gyùudanee dladahldagan ’la ts’agts’aggee tlagaaydagan
+gyùudan-ee dladahlda-gan ’la ts’agts’ag-gee tlagaayda-gan
+horse-DEF fall.down-PST 3p wagon-DF injure-PST
+`The horse fell down and damaged the wagon.'
+
+#100 phrasal coordination
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill gyaan Mary dladahldagan
+Bill gyaan Mary dladahlda-gan
+Bill and Mary fall.down-PST
+`Bill and Mary fell down.'
+
+#137 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+Bill qats’agangyaan Mary qaaguhlaa.aagan
+Bill qats’a-gan=gyaan Mary qaaguhlaa.aa-gan
+Bill come.in-PST=and Mary go.out-PST
+`Bill came in and Mary went out.'
+
+#138 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill qats’agan Mary qaaguhlaa.aagan
+Bill qats’a-gan Mary qaaguhlaa.aa-gan
+Bill come.in-PST Mary go.out-PST
+`Bill came in and Mary went out.'
+
+#139 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill qats’agangyaan Mary qaaguhlaa.aagangyaan
+Bill qats’a-gan=gyaan Mary qaaguhlaa.aa-gan=gyaan
+Bill come.in-PST=and Mary go.out-PST=and
+`Bill came in and Mary went out.'
+
+#140 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill qats’agan Mary qaaguhlaa.aagangyaan
+Bill qats’a-gan Mary qaaguhlaa.aa-gan=gyaan
+Bill come.in-PST Mary go.out-PST=and
+`Bill came in and Mary went out.'
+
+#141 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill gyaan qats’agan Mary qaaguhlaa.aagangyaan
+Bill gyaan qats’a-gan Mary qaaguhlaa.aa-gan=gyaan
+Bill come.in-PST Mary go.out-PST
+`Bill came in and Mary went out.'
+
+#142 clausal coordination - S (adapted from a:988)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+Bill qats’agangyaan Mary qaaguhlaa.aagan7isan
+Bill qats’a-gan=gyaan Mary qaaguhlaa.aa-gan=7isan
+Bill come.in-PST=and Mary go.out-PST=too
+`Bill came in and Mary went out.'
+
+Enrico says that gyaan can not be used to coordinate NPs, as shown in #100, but he does highlight the following 
+example:
+
+#107 clausal coordination
+Source: a:988
+Vetted: s
+Judgement: g
+Phenomena: {crd}
+Bill sguusiid taagangyaan sriwhan.isgyann tsii.nhan.isgyaan pickleshan.isan
+Bill sguusiid taa-gan=gyaan sriw=han.is=gyaan tsii.n=han.is=gyaan pickles=han.isan
+Bill potatoes eat-PST=and seaweed-too=and salmon-too=and pickles-too
+`Bill eats potatoes (and) [he eats] seaweed (and) [he eats] salmon (and) [he eats] pickles.'
+
+Enrico translates this bracketing the subject and verb to show that there may be a different process here than 
+in #100. We have included the example because it is interesting, but it cannot be parsed in the current grammar.
+
+To implement coordination, we created three strategies in the customization system. We created two polysyndeton 
+strategies in which the conjunction occurs before a noun coordinand (one for each 7isgyaan and rahl). We treat rahl
+as an independent word that attaches to the right of a noun syntactically but attached to the left of a noun
+phonologically.  This strategy allows us to take advantage of the customization system, and say that it occurs before
+the coordinand, but in our testsuite, we have written rahl up as clitic attached to the word before the coordinand.
+Our third strategy specifies a polysyndeton conjunction, called gyaan, that comes before a VP or an S.
+
+There is another coordination strategy in Haida which Enrico calls comitative coordination. A comitative clitic on the
+last or all nouns changes the meaning of a sentence like "Bill and Mary fell down" from "Bill fell down and in a
+separate event Mary also fell down" to "Bill and Mary fell down together as part of the same event." Distribution of
+this clitic is shown below:
+
+#96 phrasal coordination - comitative
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+Billrahl Mary-7isan dladahldagan
+Bill=rahl Mary=7isan dladahlda-gan
+Bill=and Mary=too fall.down-PST
+`Bill and Mary fell down.'
+
+#97 phrasal coordination - comitative
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {crd}
+Bill 7isgyaan Mary-7isan dladahldagan
+Bill 7isgyaan Mary=7isan dladahlda-gan
+Bill and Mary=too fall.down-PST
+`Bill and Mary fell down.'
+
+#98 phrasal coordination - comitative
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd}
+Bill-7isan 7isgyaan Mary-7isan dladahldagan
+Bill=7isan 7isgyaan Mary=7isan dladahlda-gan
+Bill=too and Mary=too fall.down-PST
+`Bill and Mary fell down.'
+
+We have not implemented this phenomenon in grammar yet, as it will need to be done in tdl editing.
+
+Attributive Adjectives
+
+Attributive adjectives attach to the right of the constituent that they modify. However they are not predicative
+and do not occur with a copula. They only modify noun phrases. Examples of this distribution are given below:
+
+#126 attributive adjectives
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {adj}
+gyùudanee 7iw7aan dladahldagan
+gyùudan-ee 7iw7aan dladahlda-gan
+horse-DEF be.big fall.down-PST
+`The big horse fell down.'
+
+#127 attributive adjectives
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {adj, cop}
+xa.a q’iigaa 7aanàa 7iijang
+xa.a q’iigaa 7aanàa 7iij-gang
+mallard be.old in.next.room be-PRS
+`An old mallard is in the next room.'
+
+#128 attributive adjectives
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {adj}
+7iw7aan gyùudanee dladahldagan
+7iw7aan gyùudan-ee dladahlda-gan
+be.big horse-DEF fall.down-PST
+`The big horse fell down.'
+
+#120 non-verbal predicates - adj
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+gyùudanee 7iw7aan 7iijang
+gyùudan-ee 7iw7aan 7iij-gang
+horse-DEF be.big be-PRS
+`The horse is big.' or `The horse is large.'
+
+To implement the attributive adjectives, we added them to our lexicon in a single class that is strictly attributive, occurs
+after the noun and impossibly behaves predicately.
+
+Enrico claims that these attributive adjectives actually derive from verbs by way of a lexical rule. We elected to treat
+them as adjectives nonetheless so that we could take advantage of the customization system. That said, for each "adjective"
+that we entered into the lexicon, an intransitive verb exists that inflects for tense, etc. We have used these verbs
+to demonstrate sentences that are similar to AP predicative sentences in other languages.
+
+#118 non-verbal predicates - Adj
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {cop}
+gyùudanee 7iw7aangang
+gyùudan-ee 7iw7aan-gang
+horse-DEF be.big-PRS
+`The horse is big.' or `The horse is large.'
+
+#119 non-verbal predicates - adj
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {cop}
+ts’agts’aggee sridgang
+ts’agts’ag-gee srid-gang
+wagon-DEF be.red-PRS
+`The wagon is red.'
+
+#123 attributive adjectives
+Source: a:589
+Vetted: s
+Judgement: g
+Phenomena: {adj, cop}
+na q’iigaa t’iij ’laagang
+na q’iigaa t’iij ’laa-gang
+house be.old some.of be.good-PRS
+`Some old houses are good.'
+
+#124 attributive adjectives
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {adj, cop}
+na t’iij q’iigaagang ’laagang
+na t’iij q’iigaa-gang ’laa-gang
+house some.of be.old-PRS be.good-PRS
+`Some old houses are good.'
+
+2. The following are properties of Haida that are illustrated in the test suite but not covered by the current state of
+the grammar:
+
+Matrix yes-no questions.
+
+Yes/no questions in Haida are marked with a clitic after the first constituent. In addition, the head verb in a 
+yes/no question lacks its position four and five suffixes. (I remind you that the Haida verb complex contains a number
+of ordered suffixes, including negation, plural, modal, tense etc. tenses occcur in the fourth and fifth positions). 
+As a result, a present tense question doesn't have a tense marker. The future tense marker is in the third suffix position, so
+it is unaffected. But with the past tense marker omitted, yes/no questions in the past tense are marked with the 
+evidential modal. Each of these tenses are represented in the data below.
+
+# 73 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudang
+daa-gu     gudang
+you-Q    understand
+`Do you understand it?'
+
+# 74 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudangaa
+daa-gu     gudang-aa
+you-Q    understand-EVID
+`Did you understand it?'
+
+# 75 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudang7as
+daa-gu     gudang-7as
+you-Q    understand-FUT
+`Will you understand it?'
+
+# 79 yes/no questions. clitic in wrong position
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {q}
+diigu daa gudang
+dii-gu 		daa 	gudang
+1SG.ACC-Q	you	understand
+`Do you understand me?'
+
+It is worth noting that the following examples are ungrammatical, due either to the position of the clitic or the
+presence of a position 3 or 4 (such as a past or present tense) suffix.
+
+# 76 yes/no questions. illegal present tense marker
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+daagu gudanggang
+daa-gu 	gudang-gang
+you-Q	understand-PRS
+`Do you understand it?'
+
+# 77 yes/no questions. illegal past tense marker
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+daagu gudanggan
+daa-gu 	gudang-gan
+you-Q	understand-PST
+`Did you understand it?'
+
+# 78 yes/no questions. clitic in wrong position
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+dii daagu gudang
+dii 	daa-gu 	gudang
+1SG.ACC	you-Q	understand
+`Do you understand me?'
+
+According to Enrico, the use of negation in a yes/no question is awkward and speakers of Haida offer alternatives,
+rather than negation. For example, one would not say "Is Bill here yet? Did he not come?", but rather "Is Bill
+here? Or is he still at home?"
+
+The customization system does not handle second position clitics, so we will implement this structure in tdl.Roman 
+attempted to add a feature for verbs to indicate whether or not they are evidential. However, due to a bug in the
+customization system, this was not possible. However, to capture the past tense in yes/no questions, we will 
+need to have the evidential working so we will correct this in the tdl. 
+
+Matrix WH Questions
+
+There are two question words for arguments in Haida: 'giisda' meaning who, given in the next examples and 'guus' 
+meaning what, given in some examples below. There is no variation for subject/object. The primary method of 
+expressing matrix wh-questions is with a focus-marked question word in the focus position at the start of the 
+sentence.  For example:
+
+#80 wh questions 
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.awhlaang
+giisd-.uu 	dang 	gyaa 	taanaa nee 	tla.awhla-ang
+who-FOC		you	POSS	smokehouse	build-PRS
+`Who is building your smokehouse?'
+
+#81 wh questions 
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.awhlayaa
+giisd-.uu 	dang 	gyaa 	taanaa nee 	tla.awhla-aa
+who-FOC		you	POSS	smokehouse	build-EVID
+`Who built your smokehouse?'
+
+The following is ungrammatical because the question word is in the wrong position
+
+#82 wh questions -- wrong order 
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+dang gyaa giisd.uu taanaa nee tla.awhlaang
+dang 	gyaa 	giisd-.uu 	taanaa nee 	tla.awhla-ang
+you	POSS	who-FOC		smokehouse	build-PRS
+`Who is building your smokehouse?'
+
+This sentence is ungrammatical because there is no focus marker on the question word.
+
+#83 wh questions 
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+giisd dang gyaa taanaa nee tla.awhlaang
+giisd 	dang 	gyaa 	taanaa nee 	tla.awhla-ang
+who	you	POSS	smokehouse	build-PRS
+`Who is building your smokehouse?'
+
+Although it is not discussed explicitly, the following example (used in the context of demonstrating anaphora
+resolution) shows a question word that belongs in an embedded clause in the sentence focus position at the
+beginning of the question:
+
+#87 wh questions from embedded clause. adapted from 381
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.awhlaang Bill gudang-gang
+giisd-.uu     dang     gyaa     taanaa nee     tla.awhla-ang    Bill    gudang-gang
+who-FOC        you    POSS    smokehouse    build-PRS    Bill    thing-PRS
+`Who Does Bill think is building your smokehouse?'
+
+This example is meant to illustrate the position of the question word when the argument it represents is in
+a lower clause. More information on embedded clauses is given in the embedded clause section below.
+
+The second strategy for wh-questions allows the question word to occur in a non-focal position, but the 
+interrogative clitic used for yes/no questions must mark the position where the question word belongs.
+
+#84 wh questions
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+huugu Bill guus taagaa
+huu-gu	Bill	guus	taa-gaa
+there-Q	Bill	what	eat-EVID
+`What did Bill eat?'
+
+#85 wh questions
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wh}
+Bill huugu guus taagaa
+Bill	huu-gu	guus	taa-gaa
+Bill	there-Q	what	eat-EVID
+`What did Bill eat?'
+
+#86 wh questions
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+Bill guus taagaa huugu
+Bill	guus	taa-gaa		huu-gu
+Bill	what	eat-EVID	there-Q
+`What did Bill eat?'
+
+We have not implemented either strategy for wh-questions as this topic is not covered in the customization
+system.
+
+Adverbs
+
+Although Enrico does not describe adverbs in regards to the type of constituents they modify, he describes
+their distribution in comparison to the negation adverb gam. The adverb (in some cases I consider
+Enrico's manner adverbs to be temporal, but the distribution is not affected by this semantic distinction,
+so I will just say adverb) can occur before or after the negation adverb, but its scope must be inside
+the negation. Therefore, both of the following word orders are legal:
+
+# 92 negation and adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv, neg}
+neesdagaang.an gam gyùudanee ts’agts’aggee tlagaayda.anggan
+neesdagaang.an	gam	gyùudan-ee 	ts’agts’ag-gee tlagaayda-.ang-gan
+right.away	NEG	horse-DEF 	wagon-DEF 	injure-NEG-PST
+`The horse did not damage the wagon right away.'
+
+# 93 negation and adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv, neg}
+gam neesdagaang.an gyùudanee ts’agts’aggee tlagaayda.anggan
+gam	neesdagaang.an	gyùudan-ee 	ts’agts’ag-gee tlagaayda-.ang-gan
+NEG	right.away	horse-DEF 	wagon-DEF 	injure-NEG-PST
+`The horse did not damage the wagon right away.'
+
+From the data Enrico gives to show this distribution, we can see that adverbs occur in three possible positions
+to modify verbs, verb phrases and sentences. This permits the following sentences:
+
+# 88 adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+neesdagaang.an gyùudanee ts’agts’aggee tlagaaydagan
+neesdagaang.an	gyùudan-ee 	ts’agts’ag-gee tlagaayda-gan
+right.away	horse-DEF 	wagon-DEF 	injure-PST
+`The horse damaged the wagon right away.'
+
+# 89 adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+gyùudanee neesdagaang.an ts’agts’aggee tlagaaydagan
+gyùudan-ee 	neesdagaang.an	ts’agts’ag-gee tlagaayda-gan
+horse-DEF	right.away	wagon-DEF 	injure-PST
+`The horse damaged the wagon right away.'
+
+# 90 adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adv}
+gyùudanee ts’agts’aggee neesdagaang.an tlagaaydagan
+gyùudan-ee 	ts’agts’ag-gee 	neesdagaang.an	tlagaayda-gan
+horse-DEF	wagon-DEF 	right.away	injure-PST
+`The horse damaged the wagon right away.'
+
+However, because Haida is a verb-final language, the following word order is impossible:
+
+# 91 adverbs example constructed from data on pages 40
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adv}
+gyùudanee ts’agts’aggee tlagaaydagan neesdagaang.an
+gyùudan-ee 	ts’agts’ag-gee	tlagaayda-gan 	neesdagaang.an
+horse-DEF	wagon-DEF 	injure-PST	right.away
+`The horse damaged the wagon right away.'
+
+Adverbs are not covered in the customization system, so we have not implemented them yet in our grammar.
+
+Non-Verbal Predicates
+
+Haida has a copula for non-verbal predicates of type NP and PP. It is important to note that the copula is NOT used
+for attributive APs. Rather an intransitive verb exists for each adjective, as was previously discussed. The Haida
+copula occurs in the standard verb position, after the subject and either NP or PP. The predicative phrase must occur
+after its subject and before the copula. In the following examples, please keep in mind that while a mallard is necessarily
+a bird, a bird is not necessarily a mallard, so we consider 109 to be ungrammatical because it places the predicative
+NP before the subject. 
+
+#108 non-verbal predicate - noun
+Source: a:211
+Vetted: s
+Judgement: g
+Phenomena: {cop, wo}
+xa.a xid7iid 7iijang
+xa.a xid7iid 7iij-gang
+mallard bird be-PRS
+`A mallard is a bird.'
+
+#109 non-verbal predicate - noun
+Source: a:211
+Vetted: s
+Judgement: u
+Phenomena: {cop, wo}
+xid7iid xa.a 7iijang
+xid7iid xa.a 7iij-gang
+bird mallard be-PRS
+`A mallard is a bird.'
+
+#110 non-verbal predicate - noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+xa.a xid7iid
+xa.a xid7iid
+mallard bird
+`A mallard is a bird.'
+
+#111 non-verbal predicate - noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+xa.a 7iijang xid7iid
+xa.a 7iij-gang xid7iid
+mallard be-PRS bird
+`A mallard is a bird.'
+
+#112 non-verbal predicate - noun
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+7iijang xa.a xid7iid
+7iij-gang xa.a xid7iid
+be-PRS mallard bird
+`A mallard is a bird.'
+
+#113 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {cop}
+xa.a 7aanàa 7iijang
+xa.a 7aanàa 7iij-gang
+mallard in.next.room be-PRS
+`A mallard is in the next room.'
+
+#114 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+xa.a 7iijang 7aanàa
+xa.a 7iij-gang 7aanàa 
+mallard be-PRS in.next.room
+`A mallard is in the next room.'
+
+#115 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+xa.a 7aanàa
+xa.a 7aanàa 
+mallard in.next.room
+`A mallard is in the next room.'
+
+#116 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+7iijang xa.a 7aanàa
+7iij-gang xa.a 7aanàa 
+be-PRS mallard in.next.room
+`A mallard is in the next room.'
+
+#117 non-verbal predicate - pp - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {cop}
+7aanàa 7iijang xa.a 
+7aanàa 7iij-gang xa.a 
+in.next.room be-PRS mallard 
+`A mallard is in the next room.'
+
+We have not yet implemented non-verbal predicates because they are not on the menu for
+this week. However, we did add a copula in the customization system that allows AP
+complements. This implementation correctly prevents AP complements on the copula though
+because we have already specified our adjectives as attributive only.
+
+Embedded clauses
+We have already seen that questions with embedded clauses are possible as shown below.
+
+#87 wh questions from embedded clause. adapted from 381
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.awhlaang Bill gudang-gang
+giisd-.uu     dang     gyaa     taanaa nee     tla.awhla-ang    Bill    gudang-gang
+who-FOC        you    POSS    smokehouse    build-PRS    Bill    thing-PRS
+`Who Does Bill think is building your smokehouse?'
+
+While this example contains a wh-word and is outside the scope of the assignment, it is valuable because it
+is a relatively clear cut example. The examples and analysis that follow are drawn from Enrico's analysis of
+anaphora resolution in embedded clauses. As a result, I am hesitant to over-generate negative examples, which
+I do not know are ungrammatical with any certainty and we may have to make additional changes to our grammar
+to implement these when we come to tdl editing.
+
+With that disclaimer in mind, I have drawn the following generalizations about embedded clauses from the data.
+Haida does not use a complementizer for embedded clauses and embedded clauses bear no overt marker. Instead, 
+embedded clauses are a complement of the transitive verb and occur in object position. The content of the 
+embedded clause follows standard Haida word order, including the fronting of question words as described above. 
+Embedded questions do require the Q marker on the first argument as described in the section on yes/no 
+questions.
+
+I have selected the following examples from Enrico, based on their relative simplicity. Enrico provides a number of
+sentences using think and say, which show that both verbs can be used in both declaratives and questions. It is 
+also noteworthy that the verbs say and think require a non-factive marker on the verb in the embedded clause.
+
+#147 embedded clauses
+Source: a:430
+Vetted: s
+Judgement: g
+Phenomena: {emb-d}
+Bill gid k'untl'aa.ang 'la suugan
+Bill gid 	k'untl'aa-.ang 'la 	suu-gan
+Bill child	get.burned-NF 	3	say-PST
+`Bill said that his child got burned.'
+
+#148 embedded clauses
+Source: a:430
+Vetted: s
+Judgement: g
+Phenomena: {emb-d}
+Bill gid k'untl'aa.ang suugan
+Bill gid 	k'untl'aa-.ang 	suu-gan
+Bill child	get.burned-NF 	say-PST
+`Bill said that his child got burned.'
+
+#149 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-d}
+Bill suugan gid k'untl'aa.ang
+Bill 	suu-gan gid 	k'untl'aa-.ang
+Bill 	say-PST child	get.burned-NF
+`Bill said that his child got burned.'
+
+#150 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-d}
+gid k'untl'aa.ang Bill suugan
+gid 	k'untl'aa-.ang 	Bill suu-gan
+child	get.burned-NF 	Bill say-PST
+`Bill said that his child got burned.'
+
+#151 embedded clauses
+Source: a:430
+Vetted: s
+Judgement: g
+Phenomena: {emb-q}
+daagu 7isdaa hlangaa.ang dang gudang
+daa-gu 	7isdaa 	hlangaa-.ang 	dang 	gudang
+you-Q	do	could-NF	you	think
+`Do you think that you could do it'
+
+#152 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-q}
+hlangaa.ang dang gudang daagu 7isdaa
+hlangaa-.ang 	dang 	gudang	daa-gu 	7isdaa 	
+could-NF	you	think	you-Q	do	
+`Do you think that you could do it'
+
+#153 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-q}
+daa 7isdaa hlangaa.ang dang gudang
+daa 	7isdaa 	hlangaa-.ang 	dang 	gudang
+you	do	could-NF	you	think
+`Do you think that you could do it'
+
+The data above demonstrates constituent ordering and the requirement of a question marker on embedded questions.
+The optionality of the subject of the main clause is not explained, but may be the result of relative potency.
+Enrico does not comment on the missing tense marker in example 151 either. We have not implemented embedded
+clauses in this lab, but will do so in tdl editing. We have however, added the non-factive tense, which will be
+required for implementation of embedded clauses for these verbs.
+
+3. Coverage of our grammar over the testsuite.
+Our coverage this week is 42.9%
+
+This can be accounted for by the following:
+
+This week we added a number of phenomena to our grammar that we do not expect to parse, as have been
+outlined in section two above.
+
+Negation
+In last week's lab we discussed an error in the implementation of our negation rule. Further investigation
+revealed that when the negative suffix is added to the verb, the NEG feature is saturated, so the verb does
+not select for the required negative adverb. Emily has been sent the choices file and will recommend a tdl
+edit. In the meantime the following parses but shouldn't:
+# 42 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gyùudanee ts’agts’aggee qing.anggan
+gyùudan-ee ts’agts’ag-gee qing-.ang-gan
+horse-DEF wagon-DEF see-NEG-PST
+`The horse did not see the wagon.'
+
+Adjectives with tense
+As discussed above, adjectives in Haida derive from verbs. However, in some cases, the adjective bears tense
+that corresponds to the time at which the attribute is true/ relative.
+
+Our overgeneration is only 5.8%. This is accounted for by the following.
+
+We still have overgeneralization with word order in regards to potency, as discussed in lab 2. This causes
+examples 11-13 to overgenerate.
+
+One negation sentence also overgenerates per the negation bug mentioned above.
+
+# 42 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gyùudanee ts’agts’aggee qing.anggan
+gyùudan-ee ts’agts’ag-gee qing-.ang-gan
+horse-DEF wagon-DEF see-NEG-PST
+`The horse did not see the wagon.'
+
+
+# 133 attributive adjectives
+Source: a:588
+Vetted: s
+Judgment: g
+Phenomena: {adj}
+sguusadee t’ijj ts’uudalaas ’la daanggan
+sguusiid-ee t’ijj ts’uudalaa-as ’laa daang-gan
+potato-DF some.of be.small-PRS 3p throw.away-PST
+`She threw away some of the small pototoes.'
+
+We do not have a way to implement tense on adjectives in the customization system, but will address this
+in tdl editing.
+
+
+4. Changes we made to our grammar to improve its performance (coverage and accuracy).
+
+Added Tenses
+
+In order to improve our testsuite with examples from the author, we have added two additional tenses: the
+relative present and the evidential past (Enrico referres to the evidential past as a modal suffix, and it does
+occur in the same suffix position as some modals).  For example:
+
+# 74 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudangaa
+daa-gu gudang-aa
+you-Q understand-EVID
+`Did you understand it?'
+
+# 133 attributive adjectives
+Source: a:588
+Vetted: s
+Judgment: g
+Phenomena: {adj}
+sguusadee t’ijj ts’uudalaas ’la daanggan
+sguusiid-ee t’ijj ts’uudalaa-as ’laa daang-gan
+potato-DF some.of be.small-PRS 3p throw.away-PST
+`She threw away some of the small pototoes.'
+
+When doing this Roman attempted to add a feature for verbs to indicate whether or not they are evidential.
+However, due to a bug this was not possible and we will correct this in the tdl.
+
+Corrected plural rule
+Our plural rule was not correctly capturing the phenomenon in haida that causes a plural marker on the verb
+if either argument is third person plural. To correct this, we added an incl-excl distinction to the grammar, even though
+this distinction is not made in Haida, in order to implement a pernum feature in the customization system.
+Using this pernum feature, we updated our plural morphology position to include a plural subject rule, a plural
+object rule, a non-plural rule for transitive verbs and a separate for intransitives. These choices allow all
+verbs to select for number, without a transitive singular noun being able to select one singular and one plural
+object.
+

@@ -9,13 +9,29 @@ fut-suffix :=
 %suffix (* -.asa)
 fut-lex-rule.
 
+evid-suffix1 :=
+%suffix (* -aa)
+evid-lex-rule.
+
+evid-suffix2 :=
+%suffix (* -gaa)
+evid-lex-rule.
+
+evid-suffix3 :=
+%suffix (* -yaa)
+evid-lex-rule.
+
 past-suffix :=
 %suffix (* -gan)
 past-lex-rule.
 
-non-past-suffix :=
+present-suffix :=
 %suffix (* -gang)
-non-past-lex-rule.
+present-lex-rule.
+
+rel-prs-suffix :=
+%suffix (* -as)
+rel-prs-lex-rule.
 
 perf-aspect-suffix :=
 %suffix (* -gii)
@@ -36,3 +52,7 @@ pl-subj-lex-rule.
 pl-obj-suffix :=
 %suffix (* -7wa)
 pl-obj-lex-rule.
+
+non-factive-suffix :=
+%suffix (* -.ang)
+non-factive-lex-rule.
