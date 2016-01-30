@@ -324,8 +324,9 @@ the grammar:
 Matrix yes-no questions.
 
 Yes/no questions in Haida are marked with a clitic after the first constituent. In addition, the head verb in a 
-yes/no question lacks its position four and five suffixes (this is the suffix position for tense). As a result,
-a present tense question doesn't have a tense marker. The future tense marker is in the third suffix position, so
+yes/no question lacks its position four and five suffixes. (I remind you that the Haida verb complex contains a number
+of ordered suffixes, including negation, plural, modal, tense etc. tenses occcur in the fourth and fifth positions). 
+As a result, a present tense question doesn't have a tense marker. The future tense marker is in the third suffix position, so
 it is unaffected. But with the past tense marker omitted, yes/no questions in the past tense are marked with the 
 evidential modal. Each of these tenses are represented in the data below.
 
@@ -406,9 +407,10 @@ According to Enrico, the use of negation in a yes/no question is awkward and spe
 rather than negation. For example, one would not say "Is Bill here yet? Did he not come?", but rather "Is Bill
 here? Or is he still at home?"
 
-The customization system does not handle first position clitics, so we will implement this structure in tdl. We 
-also haven't added the evidential modal because evidentiality is not on the menu this quarter. However, to capture the 
-past tense in yes/no questions, we will need to add it in the future. 
+The customization system does not handle second position clitics, so we will implement this structure in tdl.Roman 
+attempted to add a feature for verbs to indicate whether or not they are evidential. However, due to a bug in the
+customization system, this was not possible. However, to capture the past tense in yes/no questions, we will 
+need to have the evidential working so we will correct this in the tdl. 
 
 Matrix WH Questions
 
@@ -417,7 +419,7 @@ meaning what, given in some examples below. There is no variation for subject/ob
 expressing matrix wh-questions is with a focus-marked question word in the focus position at the start of the 
 sentence.  For example:
 
-#80 wh questions --a in awhla needs a downward pitch accent
+#80 wh questions 
 Source: a:134
 Vetted: s
 Judgment: g
@@ -427,7 +429,7 @@ giisd-.uu 	dang 	gyaa 	taanaa nee 	tla.awhla-ang
 who-FOC		you	POSS	smokehouse	build-PRS
 `Who is building your smokehouse?'
 
-#81 wh questions --a in awhla needs a downward pitch accent
+#81 wh questions 
 Source: a:134
 Vetted: s
 Judgment: g
@@ -439,7 +441,7 @@ who-FOC		you	POSS	smokehouse	build-EVID
 
 The following is ungrammatical because the question word is in the wrong position
 
-#82 wh questions -- wrong order a in awhla needs a downward pitch accent
+#82 wh questions -- wrong order 
 Source: author
 Vetted: f
 Judgment: u
@@ -451,7 +453,7 @@ you	POSS	who-FOC		smokehouse	build-PRS
 
 This sentence is ungrammatical because there is no focus marker on the question word.
 
-#83 wh questions --a in awhla needs a a downward pitch accent
+#83 wh questions 
 Source: author
 Vetted: f
 Judgment: u
@@ -465,7 +467,7 @@ Although it is not discussed explicitly, the following example (used in the cont
 resolution) shows a question word that belongs in an embedded clause in the sentence focus position at the
 beginning of the question:
 
-#87 wh questions from embedded clause. adapted from 381--a in awhla needs a a downward pitch accent
+#87 wh questions from embedded clause. adapted from 381
 Source: author
 Vetted: f
 Judgment: g
@@ -706,7 +708,7 @@ because we have already specified our adjectives as attributive only.
 Embedded clauses
 We have already seen that questions with embedded clauses are possible as shown below.
 
-#87 wh questions from embedded clause. adapted from 381--a in awhla needs a a downward pitch accent
+#87 wh questions from embedded clause. adapted from 381
 Source: author
 Vetted: f
 Judgment: g
@@ -723,15 +725,15 @@ I do not know are ungrammatical with any certainty and we may have to make addit
 to implement these when we come to tdl editing.
 
 With that disclaimer in mind, I have drawn the following generalizations about embedded clauses from the data.
-Haida does not use a complementize for embedded clauses and embedded clauses bear no overt marker. Instead, 
+Haida does not use a complementizer for embedded clauses and embedded clauses bear no overt marker. Instead, 
 embedded clauses are a complement of the transitive verb and occur in object position. The content of the 
 embedded clause follows standard Haida word order, including the fronting of question words as described above. 
 Embedded questions do require the Q marker on the first argument as described in the section on yes/no 
 questions.
 
-I have selected the following examples from Enrico, based on their relative simplicity. However it is clear from
-Enrico's data that the verbs think and be used in both declaratives and questions. It is also noteworthy that
-the verbs say and think require a non-factive marker on the verb in the embedded clause.
+I have selected the following examples from Enrico, based on their relative simplicity. Enrico provides a number of
+sentences using think and say, which show that both verbs can be used in both declaratives and questions. It is 
+also noteworthy that the verbs say and think require a non-factive marker on the verb in the embedded clause.
 
 #147 embedded clauses
 Source: a:430
@@ -806,7 +808,8 @@ you	do	could-NF	you	think
 The data above demonstrates constituent ordering and the requirement of a question marker on embedded questions.
 The optionality of the subject of the main clause is not explained, but may be the result of relative potency.
 Enrico does not comment on the missing tense marker in example 151 either. We have not implemented embedded
-clauses in this lab, but will do so in tdl editing.
+clauses in this lab, but will do so in tdl editing. We have however, added the non-factive tense, which will be
+required for implementation of embedded clauses for these verbs.
 
 3. Coverage of our grammar over the testsuite.
 Our coverage this week is 42.9%
@@ -872,7 +875,8 @@ in tdl editing.
 Added Tenses
 
 In order to improve our testsuite with examples from the author, we have added two additional tenses: the
-relative present and the evidential past. For example:
+relative present and the evidential past (Enrico referres to the evidential past as a modal suffix, and it does
+occur in the same suffix position as some modals).  For example:
 
 # 74 yes/no questions
 Source: a:132
