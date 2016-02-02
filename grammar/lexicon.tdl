@@ -254,9 +254,18 @@ waasgee := dem-pl-determiner-lex &
   [ STEM < "waasgee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_those_q_rel" ].
 
+;;; Adverbs
+
 gam := neg-adv-lex &
   [ STEM < "gam" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+
+neesdagaang_an := adverb-lex &
+  [ STEM < "neesdagaang_an" >,
+    SYNSEM.LKEYS.KEYREL.PRED "right_away_rel" ].
+
+
+;;; Conjunctions
 
 7isgyaan1 := conj-lex &
   [ STEM < "7isgyaan" >,

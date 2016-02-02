@@ -2223,6 +2223,7 @@ adj-head-phrase := basic-head-mod-phrase-simple & head-final &
 head-adj-phrase := basic-head-mod-phrase-simple & head-initial & phrasal &
   [ SYNSEM [ LOCAL.CAT.POSTHEAD +,
 	     MODIFIED rmod ],
+    HEAD-DTR.SYNSEM [LOCAL.CAT.HEAD noun],
     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT.POSTHEAD +,
 			  NON-LOCAL.QUE 0-dlist ] ].
 

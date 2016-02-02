@@ -365,6 +365,15 @@ dem-sg-determiner-lex := determiner-lex & no-icons-lex-item &
 
 dem-pl-determiner-lex := determiner-lex & no-icons-lex-item.
 
+;;; Type for adverbs
+
+adverb-lex := basic-adverb-lex & intersective-mod-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD verb ]>,
+			   VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ]]]]].
+
 ; Type for negative adverbs.
 ; 
 ; This adverb should go through a specialized phrase structure rule
