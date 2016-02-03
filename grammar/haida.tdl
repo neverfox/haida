@@ -415,12 +415,12 @@ aspect-rule-dtr := word-or-lexrule.
 
 ;;; Lexical rule types
 
-disc-stat-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+cog-st-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
   [ INFLECTED #infl,
     DTR alienable-noun-lex &
         [ INFLECTED #infl ] ].
 
-def-lex-rule := disc-stat-lex-rule-super.
+def-lex-rule := cog-st-lex-rule-super.
 
 negation-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & modal-3-or-tense-rule-dtr &
   [ INFLECTED #infl,

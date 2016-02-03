@@ -344,7 +344,7 @@ section=lexicon
     det2_stem2_pred=_those_q_rel
 
 section=morphology
-  noun-pc1_name=disc-stat
+  noun-pc1_name=cog-st
   noun-pc1_order=suffix
   noun-pc1_inputs=noun1
     noun-pc1_lrt1_name=def
