@@ -1,6 +1,14 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Inflecting Lexical Rule Instances
 
+def-suffix1 :=
+%suffix (* -ee)
+def-lex-rule.
+
+def-suffix2 :=
+%suffix (* -gee)
+def-lex-rule.
+
 neg-suffix :=
 %suffix (* -.ang)
 neg-lex-rule.

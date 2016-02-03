@@ -1,79 +1,63 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Nouns
 
-gyùudan-ee := cn-noun-lex &
-  [ STEM < "gyùudan-ee" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_horse_n_rel" ].
-
-ts’agts’ag-gee := cn-noun-lex &
-  [ STEM < "ts’agts’ag-gee" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_wagon_n_rel" ].
-
-naan := cn-noun-lex &
-  [ STEM < "naan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_grandmother_n_rel" ].
-
-gyùudan := cn-noun-lex &
+gyùudan := alienable-noun-lex &
   [ STEM < "gyùudan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_horse_n_rel" ].
 
-na := cn-noun-lex &
+na := alienable-noun-lex &
   [ STEM < "na" >,
     SYNSEM.LKEYS.KEYREL.PRED "_house_n_rel" ].
 
-xa%2Ea := cn-noun-lex &
+xa%2Ea := alienable-noun-lex &
   [ STEM < "xa.a" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mallard_n_rel" ].
 
-xid7iid := cn-noun-lex &
+xid7iid := alienable-noun-lex &
   [ STEM < "xid7iid" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bird_n_rel" ].
 
-sguusiid := cn-noun-lex &
+sguusiid := alienable-noun-lex &
   [ STEM < "sguusiid" >,
     SYNSEM.LKEYS.KEYREL.PRED "_potato_n_rel" ].
 
-sriw := cn-noun-lex &
+sriw := alienable-noun-lex &
   [ STEM < "sriw" >,
     SYNSEM.LKEYS.KEYREL.PRED "_seaweed_n_rel" ].
 
-tsii%2En := cn-noun-lex &
+tsii%2En := alienable-noun-lex &
   [ STEM < "tsii.n" >,
     SYNSEM.LKEYS.KEYREL.PRED "_salmon_n_rel" ].
 
-pickles := cn-noun-lex &
+pickles := alienable-noun-lex &
   [ STEM < "pickles" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pickles_n_rel" ].
 
-7anyaas := cn-noun-lex &
+7anyaas := alienable-noun-lex &
   [ STEM < "7anyaas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_onion_n_rel" ].
 
-7inuu := cn-noun-lex &
+7inuu := alienable-noun-lex &
   [ STEM < "7inuu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_rutabaga_n_rel" ].
 
-ts’at’sa := cn-noun-lex &
+ts’at’sa := alienable-noun-lex &
   [ STEM < "ts’at’sa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_carrot_n_rel" ].
 
-x-aay := cn-noun-lex &
+x-aay := alienable-noun-lex &
   [ STEM < "x-aay" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
 
-taanaanee := cn-noun-lex &
+taanaanee := alienable-noun-lex &
   [ STEM < "taanaanee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_smokehouse_n_rel" ].
 
-ts’agts’ag := cn-noun-lex &
+ts’agts’ag := alienable-noun-lex &
   [ STEM < "ts’agts’ag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wagon_n_rel" ].
 
-sguusiid-ee := cn-noun-lex &
-  [ STEM < "sguusiid-ee" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_potato_n_rel" ].
-
-gid := cn-noun-lex &
+gid := alienable-noun-lex &
   [ STEM < "gid" >,
     SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
 
@@ -113,13 +97,17 @@ dang := 2sg-acc-pron-noun-lex &
   [ STEM < "dang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-Bill := pn-noun-lex &
+Bill := proper-noun-lex &
   [ STEM < "Bill" >,
     SYNSEM.LKEYS.KEYREL.PRED "_Bill_n_rel" ].
 
-Mary := pn-noun-lex &
+Mary := proper-noun-lex &
   [ STEM < "Mary" >,
     SYNSEM.LKEYS.KEYREL.PRED "_Mary_n_rel" ].
+
+naan := inalienable-noun-lex &
+  [ STEM < "naan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_grandmother_n_rel" ].
 
 ;;; Adjectives
 
