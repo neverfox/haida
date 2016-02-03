@@ -248,8 +248,8 @@ gam := neg-adv-lex &
   [ STEM < "gam" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
-neesdagaang_an := adverb-lex &
-  [ STEM < "neesdagaang_an" >,
+neesdagaang%an := adverb-lex &
+  [ STEM < "neesdagaang.an" >,
     SYNSEM.LKEYS.KEYREL.PRED "right_away_rel" ].
 
 
