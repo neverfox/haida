@@ -269,7 +269,7 @@ nom-acc-transitive-verb-lex := transitive-verb-lex &
 
 itr-acc-verb-lex := itr-verb-lex & acc-intransitive-verb-lex.
 
-tr-verb-lex := transitive-verb-lex.
+tr-verb-lex := nom-acc-transitive-verb-lex.
 
 itr-verb-lex := verb-lex.
 
