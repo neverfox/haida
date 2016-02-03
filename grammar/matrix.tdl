@@ -1887,6 +1887,8 @@ basic-head-opt-comp-phrase := head-valence-phrase & head-only &
 						    [ OPT +,
 						      OPT-CS #def,
 						      LOCAL.CONT.HOOK [ INDEX #index & [ COG-ST #def ],
+									INDEX.PNG [POTENCY low,
+										   PERNUM 3rd],
 									ICONS-KEY #ikey,
 									CLAUSE-KEY #ckey ] ] . #comps >,
 					    SPR #spr,
