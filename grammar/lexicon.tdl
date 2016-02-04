@@ -269,3 +269,10 @@ gyaan3 := conj-lex &
   [ STEM < "gyaan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "3" ].
+
+;;; Possessives
+
+gyaa := adposition-lex &
+  [ STEM < "gyaa" >,
+    SYNSEM.LKEYS.KEYREL [ PRED "poss_rel",
+        ARG1.COG-ST uniq+fam+act ] ].

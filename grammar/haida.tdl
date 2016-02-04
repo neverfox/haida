@@ -404,6 +404,25 @@ neg-adj-head-scop-phrase := adj-head-scop-phrase &
     HEAD-DTR.SYNSEM.NEG-SAT -,
     NON-HEAD-DTR neg-adv-lex ].
 
+;;; Possessives
+
+;; Linker word
+
+adposition-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item &
+  [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
+                            ARG1 #xarg,
+                            ARG2 #ind ],
+             LOCAL [ CONT.HOOK [ XARG #xarg,
+                                 INDEX #arg0 ],
+                     CAT [ HEAD.MOD < [ LOCAL [ CAT [ HEAD noun,
+                                                      VAL.SPR cons ],
+                                                CONT.HOOK.INDEX #xarg ]] >,
+                      VAL [ SPR < >,
+                            COMPS < [ LOCAL [ CAT [ HEAD noun,
+                                                    VAL.SPR < > ],
+                                              CONT.HOOK.INDEX #ind ]] >,
+                            SUBJ < > ]]]]].
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
 ;;;;;;;;;;;;;;;;;;;
