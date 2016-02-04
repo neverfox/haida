@@ -406,6 +406,9 @@ poss-pron-det-lex := determiner-lex-supertype &
                                                            ARG0 #arg2 & [ COG-ST activ-or-more,
                                                                           SPECI + ] ] ] ].
 
+alienable-poss-pron-det-lex := poss-pron-det-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY +].
+
 inalienable-poss-pron-det-lex := poss-pron-det-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY -].
 

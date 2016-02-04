@@ -242,6 +242,10 @@ waasgee := dem-pl-determiner-lex &
   [ STEM < "waasgee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_those_q_rel" ].
 
+gyaagan := alienable-poss-pron-det-lex &
+  [ STEM < "gyaagan" >,
+    SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
+
 dii := inalienable-poss-pron-det-lex &
   [ STEM < "dii" >,
     SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
