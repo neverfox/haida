@@ -31,7 +31,7 @@ Vetted: s
 Judgment: g
 Phenomena: {wo}
 ts’agts’aggee gyùudanee tlagaaydagan
-ts’agts’ag-gee gyùudan-ee tlagaayda-gan
+ts’agts’ag-ee gyùudan-ee tlagaayda-gan
 wagon-DEF horse-DEF injure-PST
 `The wagon injured the horse.' or `The horse damaged the wagon.'
 
@@ -41,7 +41,7 @@ Vetted: s
 Judgment: g
 Phenomena: {wo}
 gyùudanee ts’agts’aggee tlagaaydagan
-gyùudan-ee ts’agts’ag-gee tlagaayda-gan
+gyùudan-ee ts’agts’ag-ee tlagaayda-gan
 horse-DEF wagon-DEF injure-PST
 `The horse damaged the wagon.'
 
@@ -51,7 +51,7 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 gyùudanee tlagaaydagan ts’agts’aggee
-gyùudan-ee tlagaayda-gan ts’agts’ag-gee
+gyùudan-ee tlagaayda-gan ts’agts’ag-ee
 horse-DEF injure-PST wagon-DEF
 `The horse damaged the wagon.'
 
@@ -61,7 +61,7 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 tlagaaydagan gyùudanee ts’agts’aggee
-tlagaayda-gan gyùudan-ee ts’agts’ag-gee
+tlagaayda-gan gyùudan-ee ts’agts’ag-ee
 injure-PST horse-DEF wagon-DEF
 `The horse damaged the wagon.'
 
@@ -71,7 +71,7 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 tlagaaydagan ts’agts’aggee gyùudanee
-tlagaayda-gan ts’agts’ag-gee gyùudan-ee
+tlagaayda-gan ts’agts’ag-ee gyùudan-ee
 injure-PST wagon-DEF horse-DEF
 `The horse damaged the wagon.'
 
@@ -81,7 +81,7 @@ Vetted: f
 Judgment: u
 Phenomena: {wo}
 ts’agts’aggee tlagaaydagan gyùudanee
-ts’agts’ag-gee tlagaayda-gan gyùudan-ee
+ts’agts’ag-ee tlagaayda-gan gyùudan-ee
 wagon-DEF injure-PST horse-DEF
 `The wagon injured the horse' or `The horse damaged the wagon.'
 
@@ -411,7 +411,7 @@ Vetted: f
 Judgment: g
 Phenomena: {neg}
 gam gyùudanee ts’agts’aggee qing.anggan
-gam gyùudan-ee ts’agts’ag-gee qing-.ang-gan
+gam gyùudan-ee ts’agts’ag-ee qing-.ang-gan
 NEG horse-DEF wagon-DEF see-NEG-PST
 `The horse did not see the wagon.'
 
@@ -421,7 +421,7 @@ Vetted: f
 Judgment: u
 Phenomena: {neg}
 gyùudanee ts’agts’aggee qing.anggan
-gyùudan-ee ts’agts’ag-gee qing-.ang-gan
+gyùudan-ee ts’agts’ag-ee qing-.ang-gan
 horse-DEF wagon-DEF see-NEG-PST
 `The horse did not see the wagon.'
 
@@ -431,7 +431,7 @@ Vetted: f
 Judgment: u
 Phenomena: {neg}
 gam gyùudanee ts’agts’aggee qinggan
-gam gyùudan-ee ts’agts’ag-gee qing-gan
+gam gyùudan-ee ts’agts’ag-ee qing-gan
 NEG horse-DEF wagon-DEF see-PST
 `The horse did not see the wagon.'
 
@@ -441,7 +441,7 @@ Vetted: f
 Judgment: u
 Phenomena: {neg}
 gam gyùudanee ts’agts’aggee qinggan.ang
-gam gyùudan-ee ts’agts’ag-gee qing-gan-.ang
+gam gyùudan-ee ts’agts’ag-ee qing-gan-.ang
 NEG horse-DEF wagon-DEF see-PST-NEG
 `The horse did not see the wagon.'
 
@@ -451,7 +451,7 @@ Vetted: f
 Judgment: g
 Phenomena: {tam}
 gyùudanee ts’agts’aggee qinggan
-gyùudan-ee ts’agts’ag-gee qing-gan
+gyùudan-ee ts’agts’ag-ee qing-gan
 horse-DEF wagon-DEF see-PST
 `The horse saw the wagon.'
 
@@ -461,7 +461,7 @@ Vetted: f
 Judgment: g
 Phenomena: {tam}
 gyùudanee ts’agts’aggee qinggang
-gyùudan-ee ts’agts’ag-gee qing-gang
+gyùudan-ee ts’agts’ag-ee qing-gang
 horse-DEF wagon-DEF see-PRS
 `The horse sees the wagon.'
 
@@ -471,7 +471,7 @@ Vetted: f
 Judgment: g
 Phenomena: {tam}
 gyùudanee ts’agts’aggee qing.asaang
-gyùudan-ee ts’agts’ag-gee qing-.asa-gang
+gyùudan-ee ts’agts’ag-ee qing-.asa-gang
 horse-DEF wagon-DEF see-FUT-PRS
 `The horse will see the wagon.'
 
@@ -561,7 +561,7 @@ Vetted: f
 Judgment: g
 Phenomena: {agr}
 gyùudanee ts’agts’aggee qing7wagan
-gyùudan-ee ts’agts’ag-gee qing-7wa-gan
+gyùudan-ee ts’agts’ag-ee qing-7wa-gan
 horse-DEF wagon-DEF see-PL-PST
 `The horse saw the wagons.' or `The horses saw the wagon.'
 
@@ -571,7 +571,7 @@ Vetted: f
 Judgment: g
 Phenomena: {agr}
 hlaa ts’agts’aggee qing7wagan
-hlaa ts’agts’ag-gee qing-7wa-gan
+hlaa ts’agts’ag-ee qing-7wa-gan
 1SG.NOM wagon-DEF see-PL-PST
 `I saw the wagons.'
 
@@ -591,7 +591,7 @@ Vetted: f
 Judgment: u
 Phenomena: {agr}
 hlaa ts’agts’aggee qinggan7wa
-hlaa ts’agts’ag-gee qing-gan-7wa
+hlaa ts’agts’ag-ee qing-gan-7wa
 1SG.NOM wagon-DEF see-PST-PL
 `I saw the wagons.'
 
@@ -621,7 +621,7 @@ Vetted: f
 Judgment: g
 Phenomena: {poss}
 ’la dalang gyaa ts’agts’aggee qinggan
-’laa dalang gyaa ts’agts’ag-gee qing-gan
+’laa dalang gyaa ts’agts’ag-ee qing-gan
 3p 2p POSS wagon-DEF see-PST
 `She saw your wagon.'
 
@@ -631,7 +631,7 @@ Vetted: f
 Judgment: g
 Phenomena: {poss}
 ’la gyaagan ts’agts’aggee qinggan
-’laa gyaagan ts’agts’ag-gee qing-gan
+’laa gyaagan ts’agts’ag-ee qing-gan
 3p my wagon-DEF see-PST
 `She saw my wagon.'
 
@@ -641,7 +641,7 @@ Vetted: f
 Judgment: g
 Phenomena: {poss}
 ’la ts’agts’aggee daangaa qinggan
-’laa ts’agts’ag-gee daangaa qing-gan
+’laa ts’agts’ag-ee daangaa qing-gan
 3p wagon-DEF your see-PST
 `She saw your wagon.'
 
@@ -651,7 +651,7 @@ Vetted: f
 Judgment: g
 Phenomena: {poss}
 ’la gyùudanee gyaa ts’agts’aggee qinggan
-’laa gyùudan-ee gyaa ts’agts’ag-gee qing-gan
+’laa gyùudan-ee gyaa ts’agts’ag-ee qing-gan
 3p horse-DEF POSS wagon-DEF see-PST
 `She saw the horse's wagon.'
 
@@ -661,7 +661,7 @@ Vetted: f
 Judgment: u
 Phenomena: {poss}
 ’la gyùudanee ts’agts’aggee qinggan
-’laa gyùudan-ee ts’agts’ag-gee qing-gan
+’laa gyùudan-ee ts’agts’ag-ee qing-gan
 3p horse-DEF wagon-DEF see-PST
 `She saw the horse's wagon.'
 
@@ -671,7 +671,7 @@ Vetted: f
 Judgment: g
 Phenomena: {poss}
 dii naan gyùudanee gyaa ts’agts’aggee qinggan
-dii naan gyùudan-ee gyaa ts’agts’ag-gee qing-gan
+dii naan gyùudan-ee gyaa ts’agts’ag-ee qing-gan
 my grandmother horse-DEF POSS wagon-DEF see-PST
 `My grandmother saw the horse's wagon.'
 
@@ -681,7 +681,7 @@ Vetted: f
 Judgment: u
 Phenomena: {poss}
 gyaagan naan gyùudanee gyaa ts’agts’aggee qinggan
-gyaagan naan gyùudan-ee gyaa ts’agts’ag-gee qing-gan
+gyaagan naan gyùudan-ee gyaa ts’agts’ag-ee qing-gan
 my grandmother horse-DEF POSS wagon-DEF see-PST
 `My grandmother saw the horse's wagon.'
 
@@ -701,7 +701,7 @@ Vetted: f
 Judgment: g
 Phenomena: {poss}
 dii naan gyaa ts’agts’aggee diinaa dladahldagan
-dii naan gyaa ts’agts’ag-gee diinaa dladahlda-gan
+dii naan gyaa ts’agts’ag-ee diinaa dladahlda-gan
 my grandmother POSS wagon-DEF my fall.down-PST
 `My grandmother's wagon of mine fell down.'
 
@@ -881,7 +881,7 @@ Vetted: f
 Judgment: g
 Phenomena: {adv}
 neesdagaang.an gyùudanee ts’agts’aggee tlagaaydagan
-neesdagaang.an gyùudan-ee ts’agts’ag-gee tlagaayda-gan
+neesdagaang.an gyùudan-ee ts’agts’ag-ee tlagaayda-gan
 right.away horse-DEF wagon-DEF injure-PST
 `The horse damaged the wagon right away.'
 
@@ -891,7 +891,7 @@ Vetted: f
 Judgment: g
 Phenomena: {adv}
 gyùudanee neesdagaang.an ts’agts’aggee tlagaaydagan
-gyùudan-ee neesdagaang.an ts’agts’ag-gee tlagaayda-gan
+gyùudan-ee neesdagaang.an ts’agts’ag-ee tlagaayda-gan
 horse-DEF right.away wagon-DEF injure-PST
 `The horse damaged the wagon right away.'
 
@@ -901,7 +901,7 @@ Vetted: f
 Judgment: g
 Phenomena: {adv}
 gyùudanee ts’agts’aggee neesdagaang.an tlagaaydagan
-gyùudan-ee ts’agts’ag-gee neesdagaang.an tlagaayda-gan
+gyùudan-ee ts’agts’ag-ee neesdagaang.an tlagaayda-gan
 horse-DEF wagon-DEF right.away injure-PST
 `The horse damaged the wagon right away.'
 
@@ -911,7 +911,7 @@ Vetted: f
 Judgment: u
 Phenomena: {adv}
 gyùudanee ts’agts’aggee tlagaaydagan neesdagaang.an
-gyùudan-ee ts’agts’ag-gee tlagaayda-gan neesdagaang.an
+gyùudan-ee ts’agts’ag-ee tlagaayda-gan neesdagaang.an
 horse-DEF wagon-DEF injure-PST right.away
 `The horse damaged the wagon right away.'
 
@@ -921,7 +921,7 @@ Vetted: f
 Judgment: g
 Phenomena: {adv, neg}
 neesdagaang.an gam gyùudanee ts’agts’aggee tlagaayda.anggan
-neesdagaang.an gam gyùudan-ee ts’agts’ag-gee tlagaayda-.ang-gan
+neesdagaang.an gam gyùudan-ee ts’agts’ag-ee tlagaayda-.ang-gan
 right.away NEG horse-DEF wagon-DEF injure-NEG-PST
 `The horse did not damage the wagon right away.'
 
@@ -931,7 +931,7 @@ Vetted: f
 Judgment: g
 Phenomena: {adv, neg}
 gam neesdagaang.an gyùudanee ts’agts’aggee tlagaayda.anggan
-gam neesdagaang.an gyùudan-ee ts’agts’ag-gee tlagaayda-.ang-gan
+gam neesdagaang.an gyùudan-ee ts’agts’ag-ee tlagaayda-.ang-gan
 NEG right.away horse-DEF wagon-DEF injure-NEG-PST
 `The horse did not damage the wagon right away.'
 
@@ -941,7 +941,7 @@ Vetted: f
 Judgement: g
 Phenomena: {crd}
 gyùudanee 7isgyaan ts’agts’aggee dladahldagan
-gyùudan-ee 7isgyaan ts’agts’ag-gee dladahlda-gan
+gyùudan-ee 7isgyaan ts’agts’ag-ee dladahlda-gan
 horse-DEF and wagon-DEF fall.down-PST
 `The horse and the wagon fell down.'
 
@@ -951,7 +951,7 @@ Vetted: f
 Judgement: g
 Phenomena: {crd}
 gyùudaneerahl ts’agts’aggee dladahldagan
-gyùudan-ee=rahl ts’agts’ag-gee dladahlda-gan
+gyùudan-ee=rahl ts’agts’ag-ee dladahlda-gan
 horse-DEF=and wagon-DEF fall.down-PST
 `The horse and the wagon fell down.'
 
@@ -961,7 +961,7 @@ Vetted: f
 Judgement: g
 Phenomena: {crd}
 gyùudaneerahl ts’agts’aggee-7isan dladahldagan
-gyùudan-ee=rahl ts’agts’ag-gee=7isan dladahlda-gan
+gyùudan-ee=rahl ts’agts’ag-ee=7isan dladahlda-gan
 horse-DEF=and wagon-DEF=too fall.down-PST
 `The horse and the wagon fell down.'
 
@@ -971,7 +971,7 @@ Vetted: f
 Judgement: g
 Phenomena: {crd}
 gyùudanee 7isgyaan ts’agts’aggee-7isan dladahldagan
-gyùudan-ee 7isgyaan ts’agts’ag-gee=7isan dladahlda-gan
+gyùudan-ee 7isgyaan ts’agts’ag-ee=7isan dladahlda-gan
 horse-DEF and wagon-DEF=too fall.down-PST
 `The horse and the wagon fell down.'
 
@@ -981,7 +981,7 @@ Vetted: f
 Judgement: u
 Phenomena: {crd}
 gyùudanee-7isan 7isgyaan ts’agts’aggee-7isan dladahldagan
-gyùudan-ee=7isan 7isgyaan ts’agts’ag-gee=7isan dladahlda-gan
+gyùudan-ee=7isan 7isgyaan ts’agts’ag-ee=7isan dladahlda-gan
 horse-DEF=too and wagon-DEF=too fall.down-PST
 `The horse and the wagon fell down.'
 
@@ -991,7 +991,7 @@ Vetted: f
 Judgement: u
 Phenomena: {crd, poss}
 gyùudanee 7isgyaan gyùudan-ee gyaa ts’agts’aggee dladahldagan
-gyùudan-ee 7isgyaan gyùudan-ee gyaa ts’agts’ag-gee dladahlda-gan
+gyùudan-ee 7isgyaan gyùudan-ee gyaa ts’agts’ag-ee dladahlda-gan
 horse-DEF and horse-DEF POSS wagon-DEF fall.down-PST
 `The horse and the horse's wagon fell down.'
 
@@ -1001,7 +1001,7 @@ Vetted: f
 Judgement: u
 Phenomena: {crd}
 gyùudanee gyaan ts’agts’aggee dladahldagan
-gyùudan-ee gyaan ts’agts’ag-gee dladahlda-gan
+gyùudan-ee gyaan ts’agts’ag-ee dladahlda-gan
 horse-DEF and wagon-DEF fall.down-PST
 `The horse and the wagon fell down.'
 
@@ -1011,7 +1011,7 @@ Vetted: f
 Judgement: u
 Phenomena: {crd}
 gyùudanee ts’agts’aggee dladahldagan
-gyùudan-ee ts’agts’ag-gee dladahlda-gan
+gyùudan-ee ts’agts’ag-ee dladahlda-gan
 horse-DEF wagon-DEF fall.down-PST
 `The horse and the wagon fell down.'
 
@@ -1051,7 +1051,7 @@ Vetted: f
 Judgement: g
 Phenomena: {crd}
 gyùudanee dladahldagangyaan ’la ts’agts’aggee tlagaaydagan
-gyùudan-ee dladahlda-gan=gyaan ’laa ts’agts’ag-gee tlagaayda-gan
+gyùudan-ee dladahlda-gan=gyaan ’laa ts’agts’ag-ee tlagaayda-gan
 horse-DEF fall.down-PST=and 3p wagon-DEF injure-PST
 `The horse fell down and damaged the wagon.'
 
@@ -1061,7 +1061,7 @@ Vetted: f
 Judgement: u
 Phenomena: {crd}
 gyùudanee dladahldagan ’la ts’agts’aggee tlagaaydagan
-gyùudan-ee dladahlda-gan ’laa ts’agts’ag-gee tlagaayda-gan
+gyùudan-ee dladahlda-gan ’laa ts’agts’ag-ee tlagaayda-gan
 horse-DEF fall.down-PST 3p wagon-DEF injure-PST
 `The horse fell down and damaged the wagon.'
 
@@ -1191,7 +1191,7 @@ Vetted: f
 Judgement: g
 Phenomena: {cop}
 ts’agts’aggee sridgang
-ts’agts’ag-gee srid-gang
+ts’agts’ag-ee srid-gang
 wagon-DEF be.red-PRS
 `The wagon is red.'
 
@@ -1431,7 +1431,7 @@ Vetted: f
 Judgement: g
 Phenomena: {crd}
 ts’agts’aggee 7iw7aanganggyaan ts’agts’aggee sridgang
-ts’agts’ag-gee 7iw7aan-gang=gyaan ts’agts’ag-gee srid-gang
+ts’agts’ag-ee 7iw7aan-gang=gyaan ts’agts’ag-ee srid-gang
 wagon-DEF be.big-PRS=and wagon-DEF be.red-PRS
 `The wagon is big and the wagon is red.'
 
@@ -1441,7 +1441,7 @@ Vetted: f
 Judgement: g
 Phenomena: {crd}
 ts’agts’aggee 7iw7aangangyaan ts’agts’aggee sridgan
-ts’agts’ag-gee 7iw7aan-gan=gyaan ts’agts’ag-gee srid-gan
+ts’agts’ag-ee 7iw7aan-gan=gyaan ts’agts’ag-ee srid-gan
 wagon-DEF be.big-PST=and wagon-DEF be.red-PST
 `The wagon was big and the wagon was red.'
 
@@ -1451,7 +1451,7 @@ Vetted: f
 Judgement: u
 Phenomena: {crd}
 ts’agts’aggee 7iw7aanganggyaan ts’agts’aggee sridgang7isan
-ts’agts’ag-gee 7iw7aan-gang=gyaan ts’agts’ag-gee srid-gang=7isan
+ts’agts’ag-ee 7iw7aan-gang=gyaan ts’agts’ag-ee srid-gang=7isan
 wagon-DEF be.big-PRS=and wagon-DEF be.red-PRS=too
 `The wagon is big and the wagon is red.'
 
@@ -1461,7 +1461,7 @@ Vetted: f
 Judgement: g
 Phenomena: {crd}
 ts’agts’aggee 7iw7aangangyaan ts’agts’aggee sridgan7isan
-ts’agts’ag-gee 7iw7aan-gan=gyaan ts’agts’ag-gee srid-gan=7isan
+ts’agts’ag-ee 7iw7aan-gan=gyaan ts’agts’ag-ee srid-gan=7isan
 wagon-DEF be.big-PST=and wagon-DEF be.red-PST=too
 `The wagon was big and the wagon was red.'
 
