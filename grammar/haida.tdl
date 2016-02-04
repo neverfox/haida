@@ -167,7 +167,7 @@ head-spec-phrase := basic-head-spec-phrase & head-final &
   [ NON-HEAD-DTR.SYNSEM.OPT - ].
 
 alienable-noun-lex := common-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY -,
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY +,
     INFLECTED.COG-ST-FLAG - ].
 
 nom-pron-noun-lex := no-spr-noun-lex &
