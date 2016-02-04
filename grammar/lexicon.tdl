@@ -135,6 +135,10 @@ xaw%2Eula_2 := attrib-adj-adj-lex &
   [ STEM < "’laa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_good_a_rel" ].
 
+t’iij := attrib-adj-adj-lex &
+  [ STEM < "t’iij" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_some_of_a_rel" ].
+
 ;;; Verbs
 
 dladahlda := itr-acc-verb-lex &
