@@ -77,10 +77,6 @@ daa := 2sg-nom-pron-noun-lex &
   [ STEM < "’laa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-dii := 1sg-acc-pron-noun-lex &
-  [ STEM < "dii" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
-
 7ittl’ := 1pl-acc-pron-noun-lex &
   [ STEM < "7ittl’" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
@@ -245,6 +241,11 @@ waaniis := dem-sg-determiner-lex &
 waasgee := dem-pl-determiner-lex &
   [ STEM < "waasgee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_those_q_rel" ].
+
+dii := inalienable-poss-pron-det-lex &
+  [ STEM < "dii" >,
+    [ SYNSEM [ LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg,
+              LOCAL.CAT.HEAD.CASE acc ] ].
 
 ;;; Adverbs
 

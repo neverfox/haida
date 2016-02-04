@@ -375,6 +375,40 @@ dem-sg-determiner-lex := determiner-lex & no-icons-lex-item &
 
 dem-pl-determiner-lex := determiner-lex & no-icons-lex-item.
 
+determiner-lex-supertype := norm-hook-lex-item & norm-zero-arg & non-mod-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD det,
+                           VAL [ SPEC.FIRST.LOCAL.CONT.HOOK [ INDEX #ind,
+                                                              LTOP #larg ],
+                                 SPR < >,
+                                 SUBJ < >,
+                                 COMPS < > ] ],
+                     CONT.HCONS.LIST.FIRST qeq & [ HARG #harg,
+                                                   LARG #larg ] ],
+             LKEYS.KEYREL quant-relation & [ ARG0 #ind,
+                                             RSTR #harg ] ] ].
+
+poss-pron-det-lex := determiner-lex-supertype &
+  [ SYNSEM [ LOCAL [ CAT.VAL.SPEC < [ LOCAL.CONT.HOOK [ INDEX #arg1 & [ COG-ST uniq+fam+act ],
+                                                        LTOP #lbl ] ] >,
+                     CONT [ RELS < ! [ PRED "exist_q_rel" ],
+                                     arg12-ev-relation & [ PRED "poss_rel",
+                                                           LBL #lbl,
+                                                           ARG1 #arg1,
+                                                           ARG2 #arg2 ],
+                                     quant-relation & [ PRED "exist_q_rel",
+                                                        ARG0 #arg2,
+                                                        RSTR #harg ],
+                                     #altkeyrel ! >,
+                            HCONS < ! [ ], qeq & [ HARG #harg,
+                                                   LARG #lbl2 ] ! > ] ],
+            LKEYS.ALTKEYREL #altkeyrel & noun-relation & [ PRED "pron_rel",
+                                                           LBL #lbl2,
+                                                           ARG0 #arg2 & [ COG-ST activ-or-more,
+                                                                          SPECI + ] ] ] ].
+
+inalienable-poss-pron-det-lex := poss-pron-det-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY -].
+
 ;;; Type for adverbs
 
 adverb-lex := basic-adverb-lex & intersective-mod-lex &
@@ -522,7 +556,7 @@ present-lex-rule := non-past-lex-rule &
 rel-prs-lex-rule := non-past-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE rel-prs ].
 
-aspect-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & modal-3-or-tense-rule-dtr & negation-rule-dtr & same-neg-sat-lex-rule & 
+aspect-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & modal-3-or-tense-rule-dtr & negation-rule-dtr & same-neg-sat-lex-rule &
   [ INFLECTED #infl,
     DTR aspect-rule-dtr &
         [ INFLECTED #infl ] ].
