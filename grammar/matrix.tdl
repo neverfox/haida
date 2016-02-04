@@ -873,6 +873,14 @@ ocons := olist & cons &
 
 onull := olist & null.
 
+high-pot-list := list.
+
+high-pot-cons := high-pot-list & cons &
+  [ FIRST.LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high,
+    REST list ].
+
+high-pot-null := high-pot-list & null.
+
 ; The LinGO grammar also makes use of a prolist -- or list
 ; of synsems of type pro-ss. 
 
@@ -1882,7 +1890,7 @@ basic-head-opt-comp-phrase := head-valence-phrase & head-only &
 			    POSTHEAD #ph ],
 		MODIFIED #mod ],
     HEAD-DTR [ INFLECTED #infl & infl-satisfied,
-	       SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ #subj,
+	       SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ #subj & < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
 					    COMPS < unexpressed &
 						    [ OPT +,
 						      OPT-CS #def,
@@ -1935,13 +1943,14 @@ basic-head-opt-subj-phrase := head-valence-phrase & head-only &
 			    POSTHEAD #ph ],
 		MODIFIED #mod ],
     HEAD-DTR [ INFLECTED #infl & infl-satisfied,
-	       SYNSEM [ LOCAL [ CAT [ HEAD.MOD olist,
+	       SYNSEM [ LIGHT +,
+			LOCAL [ CAT [ HEAD.MOD olist,
 	       	      	      	      VAL [ SUBJ < unexpressed-reg &
 						   [ OPT +,
 						     LOCAL.CONT.HOOK [ INDEX #index & [ COG-ST in-foc ],
 								       ICONS-KEY #ikey,
 								       CLAUSE-KEY #ckey ] ] >,
-					    COMPS #comps & < >,
+					    COMPS #comps & < high-pot-list >,
 					    SPR #spr,
 					    SPEC #spec ],
 				      POSTHEAD #ph ],
