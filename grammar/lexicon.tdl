@@ -246,6 +246,10 @@ gyaagan := alienable-poss-pron-det-lex &
   [ STEM < "gyaagan" >,
     SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
 
+daangaa := alienable-poss-pron-det-lex &
+  [ STEM < "daangaa" >,
+    SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 2sg ].
+
 dii := inalienable-poss-pron-det-lex &
   [ STEM < "dii" >,
     SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
@@ -283,4 +287,4 @@ gyaan3 := conj-lex &
 gyaa := adposition-lex &
   [ STEM < "gyaa" >,
     SYNSEM.LKEYS.KEYREL [ PRED "poss_rel",
-        ARG1.COG-ST uniq+fam+act ] ].
+                          ARG1.COG-ST uniq+fam+act ] ].
