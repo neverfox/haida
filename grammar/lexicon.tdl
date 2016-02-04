@@ -244,8 +244,7 @@ waasgee := dem-pl-determiner-lex &
 
 dii := inalienable-poss-pron-det-lex &
   [ STEM < "dii" >,
-    [ SYNSEM [ LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg,
-              LOCAL.CAT.HEAD.CASE acc ] ].
+    SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
 
 ;;; Adverbs
 
