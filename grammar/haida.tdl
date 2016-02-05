@@ -416,7 +416,8 @@ inalienable-poss-pron-det-lex := poss-pron-det-lex &
 
 adverb-lex := basic-adverb-lex & intersective-mod-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD verb ]>,
-			   VAL [ SPR < >,
+			   	 POSTHEAD -,
+				 VAL [ SPR < >,
 				 SUBJ < >,
 				 COMPS < >,
 				 SPEC < > ]]]]].

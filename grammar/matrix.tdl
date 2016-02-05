@@ -873,14 +873,6 @@ ocons := olist & cons &
 
 onull := olist & null.
 
-high-pot-list := list.
-
-high-pot-cons := high-pot-list & cons &
-  [ FIRST.LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high,
-    REST list ].
-
-high-pot-null := high-pot-list & null.
-
 ; The LinGO grammar also makes use of a prolist -- or list
 ; of synsems of type pro-ss. 
 
@@ -1890,13 +1882,11 @@ basic-head-opt-comp-phrase := head-valence-phrase & head-only &
 			    POSTHEAD #ph ],
 		MODIFIED #mod ],
     HEAD-DTR [ INFLECTED #infl & infl-satisfied,
-	       SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ #subj & < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
+	       SYNSEM [ LOCAL [ CAT [ VAL [ SUBJ #subj,
 					    COMPS < unexpressed &
 						    [ OPT +,
 						      OPT-CS #def,
 						      LOCAL.CONT.HOOK [ INDEX #index & [ COG-ST #def ],
-									INDEX.PNG [POTENCY low,
-										   PERNUM 3rd],
 									ICONS-KEY #ikey,
 									CLAUSE-KEY #ckey ] ] . #comps >,
 					    SPR #spr,
@@ -1943,14 +1933,13 @@ basic-head-opt-subj-phrase := head-valence-phrase & head-only &
 			    POSTHEAD #ph ],
 		MODIFIED #mod ],
     HEAD-DTR [ INFLECTED #infl & infl-satisfied,
-	       SYNSEM [ LIGHT +,
-			LOCAL [ CAT [ HEAD.MOD olist,
+	       SYNSEM [ LOCAL [ CAT [ HEAD.MOD olist,
 	       	      	      	      VAL [ SUBJ < unexpressed-reg &
 						   [ OPT +,
 						     LOCAL.CONT.HOOK [ INDEX #index & [ COG-ST in-foc ],
 								       ICONS-KEY #ikey,
 								       CLAUSE-KEY #ckey ] ] >,
-					    COMPS #comps & high-pot-list,
+					    COMPS #comps & < >,
 					    SPR #spr,
 					    SPEC #spec ],
 				      POSTHEAD #ph ],
@@ -2216,14 +2205,11 @@ basic-head-mod-phrase-simple := head-mod-phrase & binary-headed-phrase &
 ;  [ HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.LTOP #htop,
 ;    NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CONT.HOOK.LTOP #htop ] >].
 
-
-; added constrataint head daughter is verby - KP
-
 adj-head-phrase := basic-head-mod-phrase-simple & head-final &
   [ SYNSEM [ LOCAL.CAT.POSTHEAD #ph,
 	     MODIFIED lmod & [ PERIPH #periph ],
              LIGHT #light ],
-    HEAD-DTR.SYNSEM [ LOCAL.CAT [ POSTHEAD #ph ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT.POSTHEAD #ph,
                       LIGHT #light ],
     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT [ VAL.COMPS < > ],
 			  NON-LOCAL [ SLASH 0-dlist,
@@ -2234,13 +2220,9 @@ adj-head-phrase := basic-head-mod-phrase-simple & head-final &
 ;;    HEAD-DTR.SYNSEM.MODIFIED notmod-or-rmod,
 ;; As Antske Fokkens points out in an e-mail to matrix-dev,
 ;;   this is an english-specific leftover ---JDC
-
-; added constraint head daughter is nouny -KP
-
 head-adj-phrase := basic-head-mod-phrase-simple & head-initial & phrasal &
   [ SYNSEM [ LOCAL.CAT.POSTHEAD +,
 	     MODIFIED rmod ],
-    HEAD-DTR.SYNSEM [LOCAL.CAT.HEAD noun],
     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT.POSTHEAD +,
 			  NON-LOCAL.QUE 0-dlist ] ].
 
