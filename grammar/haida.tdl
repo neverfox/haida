@@ -681,7 +681,8 @@ comp-head-phrase := basic-head-1st-comp-phrase & head-final.
 ; created to handle optional compliments -KP
 
 context1-head-opt-comp-phrase := basic-head-opt-comp-phrase &
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL [SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
+  [ SYNSEM.LIGHT -,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL [SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
 				   COMPS < [ LOCAL.CONT.HOOK.INDEX.PNG [POTENCY low,
 								       PERNUM 3rd]] > ]].
 

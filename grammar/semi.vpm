@@ -11,6 +11,9 @@ semarg         << u
 SPECI : SPECI
   * <> *
 
+POTENCY : POTENCY
+ * <> *
+
 SF : SF
   prop <> prop
   ques <> ques

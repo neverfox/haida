@@ -3,11 +3,9 @@ head-adj-int := head-adj-int-phrase.
 
 adj-head-int := adj-head-int-phrase.
 
-basic-head-opt-comp := basic-head-opt-comp-phrase.
-
 context1-decl-head-opt-subj := context1-decl-head-opt-subj-phrase.
 
-context1-head-opt-comp-phrase := basic-head-opt-comp-phrase.
+context1-head-opt-comp := context1-head-opt-comp-phrase.
 
 neg-adj-head-scop := neg-adj-head-scop-phrase.
 
