@@ -522,10 +522,11 @@ cog-st-lex-rule-super := add-only-no-ccont-rule &
                       TRANSITIVE-VERB-FLAG #transitive-verb,
                       TENSE-FLAG #tense ] ] ].
 
-indef-lex-rule := cog-st-lex-rule-super & const-lex-rule.
+indef-lex-rule := cog-st-lex-rule-super & const-lex-rule &
+  [ SYNSEM.OPT-CS type-id ].
 
 def-lex-rule := cog-st-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act ].
+  [ SYNSEM.OPT-CS uniq+fam+act ].
 
 negation-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & modal-3-or-tense-rule-dtr &
   [ INFLECTED #infl,
@@ -692,7 +693,8 @@ subj-head-phrase := decl-head-subj-phrase & head-final &
 
 bare-np-phrase := basic-bare-np-phrase &
   [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !>,
-    SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST type-id ].
+    SYNSEM.OPT-CS #optcs,
+    HEAD-DTR.SYNSEM.OPT-CS #optcs].
 
 ;;;;;;;;;;;;;;;;;;
 ;;; Coordination
