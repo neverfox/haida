@@ -693,8 +693,8 @@ subj-head-phrase := decl-head-subj-phrase & head-final &
 
 bare-np-phrase := basic-bare-np-phrase &
   [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !>,
-    SYNSEM.OPT-CS #optcs,
-    HEAD-DTR.SYNSEM.OPT-CS #optcs].
+    HEAD-DTR.SYNSEM.OPT-CS #optcs,
+    HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST #optcs ].
 
 ;;;;;;;;;;;;;;;;;;
 ;;; Coordination
