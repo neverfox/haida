@@ -1950,7 +1950,7 @@ basic-head-opt-subj-phrase := head-valence-phrase & head-only &
 						     LOCAL.CONT.HOOK [ INDEX #index & [ COG-ST in-foc ],
 								       ICONS-KEY #ikey,
 								       CLAUSE-KEY #ckey ] ] >,
-					    COMPS #comps & < high-pot-list >,
+					    COMPS #comps & high-pot-list,
 					    SPR #spr,
 					    SPEC #spec ],
 				      POSTHEAD #ph ],
@@ -2216,11 +2216,14 @@ basic-head-mod-phrase-simple := head-mod-phrase & binary-headed-phrase &
 ;  [ HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.LTOP #htop,
 ;    NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CONT.HOOK.LTOP #htop ] >].
 
+
+; added constrataint head daughter is verby - KP
+
 adj-head-phrase := basic-head-mod-phrase-simple & head-final &
   [ SYNSEM [ LOCAL.CAT.POSTHEAD #ph,
 	     MODIFIED lmod & [ PERIPH #periph ],
              LIGHT #light ],
-    HEAD-DTR.SYNSEM [ LOCAL.CAT [ POSTHEAD #ph],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT [ POSTHEAD #ph ],
                       LIGHT #light ],
     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT [ VAL.COMPS < > ],
 			  NON-LOCAL [ SLASH 0-dlist,
@@ -2232,9 +2235,12 @@ adj-head-phrase := basic-head-mod-phrase-simple & head-final &
 ;; As Antske Fokkens points out in an e-mail to matrix-dev,
 ;;   this is an english-specific leftover ---JDC
 
+; added constraint head daughter is nouny -KP
+
 head-adj-phrase := basic-head-mod-phrase-simple & head-initial & phrasal &
   [ SYNSEM [ LOCAL.CAT.POSTHEAD +,
 	     MODIFIED rmod ],
+    HEAD-DTR.SYNSEM [LOCAL.CAT.HEAD noun],
     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT.POSTHEAD +,
 			  NON-LOCAL.QUE 0-dlist ] ].
 
