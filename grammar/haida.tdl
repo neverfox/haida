@@ -522,8 +522,7 @@ cog-st-lex-rule-super := add-only-no-ccont-rule &
                       TRANSITIVE-VERB-FLAG #transitive-verb,
                       TENSE-FLAG #tense ] ] ].
 
-indef-lex-rule := cog-st-lex-rule-super & const-lex-rule &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST type-id ].
+indef-lex-rule := cog-st-lex-rule-super & const-lex-rule.
 
 def-lex-rule := cog-st-lex-rule-super & infl-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST uniq+fam+act ].
@@ -692,7 +691,8 @@ subj-head-phrase := decl-head-subj-phrase & head-final &
 ; introduced to match the semantic effect of bare NPs in your language.
 
 bare-np-phrase := basic-bare-np-phrase &
-  [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
+  [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !>,
+    SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST type-id ].
 
 ;;;;;;;;;;;;;;;;;;
 ;;; Coordination
