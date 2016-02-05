@@ -77,7 +77,7 @@ daa := 2sg-nom-pron-noun-lex &
   [ STEM < "’laa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-dii := 1sg-acc-pron-noun-lex &
+dii_1 := 1sg-acc-pron-noun-lex &
   [ STEM < "dii" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
@@ -238,12 +238,12 @@ tlaagaang := inceptive-aux-lex &
 waaniis := dem-det-lex &
   [ STEM < "waaniis" >,
     SYNSEM.LKEYS.ALTKEYREL.PRED "distal+dem_a_rel",
-    SYNSEM.LKEYS.ALTKEYREL.ARG1.PNG.PERNUM 3pl ].
+    SYNSEM.LKEYS.ALTKEYREL.ARG1.PNG.PERNUM 3sg ].
 
 7aasgee := dem-det-lex &
   [ STEM < "7aasgee" >,
     SYNSEM.LKEYS.ALTKEYREL.PRED "proximal+dem_a_rel",
-    SYNSEM.LKEYS.ALTKEYREL.ARG1.PNG.PERNUM 3sg ].
+    SYNSEM.LKEYS.ALTKEYREL.ARG1.PNG.PERNUM 3pl ].
 
 waasgee := dem-det-lex &
   [ STEM < "waasgee" >,
@@ -258,7 +258,7 @@ daangaa := alienable-poss-pron-det-lex &
   [ STEM < "daangaa" >,
     SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 2sg ].
 
-dii := inalienable-poss-pron-det-lex &
+dii_2 := inalienable-poss-pron-det-lex &
   [ STEM < "dii" >,
     SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
 
