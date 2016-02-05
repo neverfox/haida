@@ -80,6 +80,20 @@ cat :+ [ VC luk ].
 lex-rule :+ [ SYNSEM.LOCAL.CAT.VC #vc,
     DTR.SYNSEM.LOCAL.CAT.VC #vc ].
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Some useful kinds of lists
+
+; A list of items with potencey -KP
+
+high-pot-list := list.
+
+high-pot-cons := high-pot-list & cons &
+  [ FIRST.LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high,
+    REST list ].
+
+high-pot-null := high-pot-list & null.
+
 ;;;;;;;;;;;;;;
 ;;; Features
 ;;;;;;;;;;;;;;
@@ -639,14 +653,25 @@ non-factive-lex-rule := modal-3-lex-rule-super.
 ;;; Phrasal Types
 ;;;;;;;;;;;;;;;;;;;
 
+; constrained for LIGHT +, high potency compliment and low potency, 3p subject -KP
+
 context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase &
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY low,
-                                                                         PERNUM 3rd ] ].
+  [ HEAD-DTR.SYNSEM [LIGHT +,
+		     LOCAL.CAT.VAL [SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY low,
+                                                                         PERNUM 3rd ],
+				    COMPS high-pot-list ] ]].
 
 ;Constraint on MC used to be part of matrix.tdl
 ;;it applies to all wo implementations, except for v2
 
 comp-head-phrase := basic-head-1st-comp-phrase & head-final.
+
+; created to handle optional compliments -KP
+
+context1-head-opt-comp-phrase := basic-head-opt-comp-phrase &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL [SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
+				   COMPS < [ LOCAL.CONT.HOOK.INDEX.PNG [POTENCY low,
+								       PERNUM 3rd]] > ]].
 
 subj-head-phrase := decl-head-subj-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
