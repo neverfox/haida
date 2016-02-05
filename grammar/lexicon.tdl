@@ -254,9 +254,17 @@ gyaagan := alienable-poss-pron-det-lex &
   [ STEM < "gyaagan" >,
     SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
 
+diinaa := alienable-poss-pron-det-lex &
+  [ STEM < "diinaa" >,
+    SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
+
 daangaa := alienable-poss-pron-det-lex &
   [ STEM < "daangaa" >,
     SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 2sg ].
+
+’laangaa := alienable-poss-pron-det-lex &
+  [ STEM < "’laangaa" >,
+    SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 3sg ].
 
 dii_2 := inalienable-poss-pron-det-lex &
   [ STEM < "dii" >,
