@@ -111,31 +111,31 @@ naan := inalienable-noun-lex &
 
 ;;; Adjectives
 
-srid_2 := attrib-adj-adj-lex &
+srid_2 := attrib-adj-lex &
   [ STEM < "srid" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_red_a_rel" ].
 
-ts’uudalaa_2 := attrib-adj-adj-lex &
+ts’uudalaa_2 := attrib-adj-lex &
   [ STEM < "ts’uudalaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_small_a_rel" ].
 
-7iw7aan_2 := attrib-adj-adj-lex &
+7iw7aan_2 := attrib-adj-lex &
   [ STEM < "7iw7aan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_big_a_rel" ].
 
-q’iigaa_2 := attrib-adj-adj-lex &
+q’iigaa_2 := attrib-adj-lex &
   [ STEM < "q’iigaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_old_a_rel" ].
 
-xaw%2Eula_2 := attrib-adj-adj-lex &
+xaw%2Eula_2 := attrib-adj-lex &
   [ STEM < "xaw.ula" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_delicious_a_rel" ].
 
-’laa_3 := attrib-adj-adj-lex &
+’laa_3 := attrib-adj-lex &
   [ STEM < "’laa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_good_a_rel" ].
 
-t’iij := attrib-adj-adj-lex &
+t’iij := attrib-adj-lex &
   [ STEM < "t’iij" >,
     SYNSEM.LKEYS.KEYREL.PRED "_some_of_a_rel" ].
 

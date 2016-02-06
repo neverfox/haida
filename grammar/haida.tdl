@@ -361,7 +361,7 @@ copula-cop-lex := adj-comp-copula-verb-lex.
 
 adj-lex := basic-intersective-adjective-lex.
 
-attrib-adj-adj-lex := attr-only-adj-lex &
+attrib-adj-lex := attr-only-adj-lex &
   [ SYNSEM.LOCAL.CAT.POSTHEAD + ].
 
 ; Basic attributive adjective definition
