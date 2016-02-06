@@ -85,6 +85,36 @@ gam neesdagaang.an gyùudanee ts’agts’aggee tlagaayda.anggan
 gam neesdagaang.an gyùudan-ee ts’agts’ag-ee tlagaayda-.ang-gan
 NEG right.away horse-DEF wagon-DEF injure-NEG-PST
 `The horse did not damage the wagon right away.'
+
+# 159 negation
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {neg}
+gah gyùudanee ts’agts’aggee qing.anggan
+gah gyùudan-ee ts’agts’ag-ee qing-.ang-gan
+NEG horse-DEF wagon-DEF see-NEG-PST
+`The horse absolutely did not see the wagon.'
+
+# 160 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gah gyùudanee ts’agts’aggee qinggan
+gah gyùudan-ee ts’agts’ag-ee qing-gan
+NEG horse-DEF wagon-DEF see-PST
+`The horse absolutely did not see the wagon.'
+
+# 161 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gah gam gyùudanee ts’agts’aggee qinggan
+gah gam gyùudan-ee ts’agts’ag-ee qing-gan
+NEG NEG horse-DEF wagon-DEF see-PST
+`The horse absolutely did not see the wagon.'
 ```
 
 #### Implementation
@@ -109,9 +139,30 @@ adverb-lex := basic-adverb-lex & intersective-mod-lex &
 
 Specifically, the `POSTHEAD -` prevents an adverb from attaching to the right of the constituent that it modifies.
 
+Haida has two negative adverbs: *gam* and *gah*. We could only add one in the customization system, so we added the later ourselves. They are syntactically interchangeable, but *gah* is more emphatic, rendering "absolutely did not". It is of the same type as *gam* and therefore acts the same, but we gave it a different predication to prevent one from generating from the other:
+
+```
+gah := neg-adv-lex &
+  [ STEM < "gah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_emphatic_rel" ].
+```
+
+This correctly allows #159 to parse and correctly prevents #160-61 from parsing.
+
+Last week we reported a bug with negation that caused the following problem: the negative suffix is added to the verb, the `NEG` feature is saturated, so the verb does not select for the required negative adverb and incorrectly licensed sentences without it. Prof. Bender identified the following problems:
+
+> 1. The feature `NEG-SAT` (which is used to track whether the obligatory adverb is picked up) was required to be `na-or-+` on clauses, and the `subj-head` rule inherits from the clause type.  
+>
+> 2. The feature `NEG-SAT` was not copied up by the lexical rules.
+
+A constraint was removed from the clause which specified `NEGSAT +` and instead added to the root definition was to check for `NEG-SAT`, in order to prevent the sentences being licensed without the negative adverb. Prof. Bender changed `NEGSAT +` to `NEG-SAT na-or-+` in the root definition so that the grammar won't license sentences that do not have `NEG-SAT` satisfied, fixing the problem.
+
+Clauses will have to be specified to check for `NEG-SAT +` in the future for clauses with embedded verbs.
+
 #### Problems
 
 None. All relevant test sentences are analyzed as expected.
+
 
 ### Adjectival modifiers
 
@@ -286,9 +337,11 @@ attrib-adj-adj-lex := attr-only-adj-lex &
 
 We are still unable to parse adjectives with tense inflection (#133-134 above). We plan to analyze these as relative clauses (see [here](https://catalyst.uw.edu/gopost/conversation/ebender/949464 FMI)), and will implement this later in the quarter.
 
+
 ### Agreement between adjectives and head nouns
 
 Haida does not have this phenomenon.
+
 
 ### Definiteness
 
@@ -461,6 +514,7 @@ def-lex-rule := cog-st-lex-rule-super & infl-lex-rule &
 #### Problems
 
 None. All relevant test sentences are analyzed as expected.
+
 
 ### Demonstratives
 
@@ -686,7 +740,20 @@ waasgee := dem-det-lex &
 
 #### Problems
 
-TODO: mention #71
+This implementation resulted in the correct MRS for nearly all of the examples, viz. the `_exist_q_rel`'s `ARG0.COG-ST` is set to the correct status and refers to the correct target. However, example #71 still fails to parse. Once understood, it became clear that the problem was that both demonstratives and possessives were implemented as determiners, viz. you cannot nest instances of `head-spec-phrase`.
+
+As Prof. Bender reminded us
+
+> You can only have one determiner (= specifier) per NP. If you’re getting both demonstratives and possessives in the same NP, then one of them can’t be a determiner.
+
+However, implementing demonstratives as adjectives would lead to another problem, as it would call into question the determiner status of possessives (see below) since
+
+> If the putative determiner appears between an adjective and the noun, it can’t be a determiner.
+
+In other words, `ADJ-HEAD-INT` also will not accept a `head-spec-phrase`.
+
+We did not have time to explore other options this week. We are considering implementing demonstratives as modifiers, but are not sure if this is theoretically valid and would like to explore our options further in coming labs.
+
 
 ### Possessives
 
@@ -695,6 +762,118 @@ TODO: mention #71
 As stated in lab 3, possession in Haida follows an alienable/inalienable distinction, with alienable possession marked by either a) the *gyaa* linker word or b) the possessive suffix *-(ng)aa*, which is non-productive and highly lexically restricted to "pronouns and reflexively possessed kin terms". Meanwhile, inalienable possession is not marked on either the possessor or possessum and is lexically limited to kins terms, part terms, and certain additional nouns.
 
 #### Examples
+
+```
+# 62 possession - alienable gyaa form non-1p
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+’la dalang gyaa ts’agts’aggee qinggan
+’laa dalang gyaa ts’agts’ag-ee qing-gan
+3p 2p POSS wagon-DEF see-PST
+`She saw your wagon.'
+
+# 63 possession - alienable gyaa form 1p
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+’la gyaagan ts’agts’aggee qinggan
+’laa gyaagan ts’agts’ag-ee qing-gan
+3p my wagon-DEF see-PST
+`She saw my wagon.'
+
+# 64 possession - alienable -ra form
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+’la ts’agts’aggee daangaa qinggan
+’laa ts’agts’ag-ee daangaa qing-gan
+3p wagon-DEF your see-PST
+`She saw your wagon.'
+
+# 65 possession - alienable NP
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+’la gyùudanee gyaa ts’agts’aggee qinggan
+’laa gyùudan-ee gyaa ts’agts’ag-ee qing-gan
+3p horse-DEF POSS wagon-DEF see-PST
+`She saw the horse's wagon.'
+
+# 66 possession - alienable NP
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+’la gyùudanee ts’agts’aggee qinggan
+’laa gyùudan-ee ts’agts’ag-ee qing-gan
+3p horse-DEF wagon-DEF see-PST
+`She saw the horse's wagon.'
+
+# 67 possession - inalienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+dii naan gyùudanee gyaa ts’agts’aggee qinggan
+dii naan gyùudan-ee gyaa ts’agts’ag-ee qing-gan
+my grandmother horse-DEF POSS wagon-DEF see-PST
+`My grandmother saw the horse's wagon.'
+
+# 68 possession - inalienable
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss}
+gyaagan naan gyùudanee gyaa ts’agts’aggee qinggan
+gyaagan naan gyùudan-ee gyaa ts’agts’ag-ee qing-gan
+my grandmother horse-DEF POSS wagon-DEF see-PST
+`My grandmother saw the horse's wagon.'
+
+# 69 possession - mixed alienable/inalienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+dii naan gyaa gyùudanee dladahldagan
+dii naan gyaa gyùudan-ee dladahlda-gan
+my grandmother POSS horse-DEF fall.down-PST
+`My grandmother's horse fell down.'
+
+# 70 possession - mixed alienable/inalienable
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss}
+dii naan gyaa ts’agts’aggee diinaa dladahldagan
+dii naan gyaa ts’agts’ag-ee diinaa dladahlda-gan
+my grandmother POSS wagon-DEF my fall.down-PST
+`My grandmother's wagon of mine fell down.'
+
+# 71 possession - alienable -ra with dem and pn
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss, wo, det}
+waaniis ’laangaa gyùudanee dladahldagan
+waaniis ’laangaa gyùudan-ee dladahlda-gan
+that her horse-DEF fall.down-PST
+`That horse of hers fell down.' or `That one of her horses fell down.'
+
+# 72 possession - alienable -ra with dem and pn
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss, wo, det}
+waaniis gyùudanee ’laangaa dladahldagan
+waaniis gyùudan-ee ’laangaa dladahlda-gan
+that horse-DEF her fall.down-PST
+`That horse of hers fell down.' or `That one of her horses fell down.'
+```
 
 #### Implementation
 
@@ -784,7 +963,10 @@ The only edit form the `adposition-lex` provided to us as an example was the add
 
 #### Problems
 
-TODO: mention #71
+First, see the discussion of the problem raised by example #71 in the section on demonstratives above.
+
+Second, our implementation currently does not handle the `X of Y's` form of possessives shown in #64 and #70. We believe that we could support this with some modification to or version of the `HEAD-SPEC` rule that allows for reversing the arguments. We did not have time to implement this this week but would like to do so in upcoming labs.
+
 
 ### Argument optionality
 
@@ -831,8 +1013,8 @@ Vetted: f
 Judgment: g
 Phenomena: {pro-d}
 ’laa naan qing7wagan
-’laa    naan    qing-7wa-gan
-3p.POThigh  grandmother see-PL-PST
+’laa naan qing-7wa-gan
+3p.POThigh grandmother see-PL-PST
 `Grandmother saw them.' or `They saw grandmother.'
 ```
 
@@ -840,19 +1022,7 @@ Phenomena: {pro-d}
 
 In lab 3, we reported that the customization system did not allow us to add constraints to complement drop, only do this with subject drop. Furthermore, we had not captured the relative nature of potency in that implementation, instead opting for a simple high/low binary as a start.
 
-To make subject drop work for low potency pronouns, we simply leave out any low potency subject from the lexicon. Therefore, the following is always interpreted in the MRS as POT high:
-
-```
-# 158 potency - hlaa must be POT high
-Source: author
-Vetted: f
-Judgment: g
-Phenomena: {pro-d}
-’laa naan qing7wagan
-’laa naan qing-7wa-gan
-3p.POThigh grandmother see-PL-PST
-`Grandmother saw them.' or `They saw grandmother.'
-```
+To make subject drop work for low potency pronouns, we simply leave out any low potency subject from the lexicon. Therefore, #158 is always interpreted in the MRS as POT high.
 
 Nevertheless, the subject drop rule had to be edited to select for both a low potency subject and a high potency complement. To do this, we created a list that contains a high potency element:
 
@@ -876,21 +1046,7 @@ context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase &
    COMPS high-pot-list ] ]].
 ```
 
-Because this rule inherits from `basic-head-opt-subj-phrase`, it was necessary to remove the `COMPS < >` from `basic-head-opt-subj-phrase`.
-
-This correctly licenses the following sentence with the correct semantics (the subject is `PERNUM 3rd`, `POT low` and the complement is `POT high`):
-
-```
-# 61 argument optionality
-Source: author
-Vetted: f
-Judgment: g
-Phenomena: {agr, pro-d}
-dii qing7wagan
-dii qing-7wa-gan
-1SG.ACC see-PL-PST
-`They saw me.'
-```
+Because this rule inherits from `basic-head-opt-subj-phrase`, it was necessary to remove the `COMPS < >` from `basic-head-opt-subj-phrase`. This correctly licenses #61, with the correct semantics (the subject is `PERNUM 3rd`, `POT low` and the complement is `POT high`).
 
 To implement optionality of low potency objects, we had to add a phrase structure rule to `rules.tdl` and then define it:
 
@@ -902,41 +1058,13 @@ context1-head-opt-comp-phrase := basic-head-opt-comp-phrase &
                                        PERNUM 3rd ] ] > ] ].
 ```
 
-This rule is `LIGHT -`, and specifies a high potency on the subject and low potency and `PERNUM 3rd` on the complement to be dropped.
-
-This correctly licenses the following sentence with the correct semantics (the complement is `PERNUM 3rd`, `POT low` and the subject is `POT high`):
-
-```
-# 60 argument optionality
-Source: author
-Vetted: f
-Judgment: g
-Phenomena: {agr, pro-d}
-hlaa qing7wagan
-hlaa qing-7wa-gan
-1SG.NOM see-PL-PST
-`I saw them.'
-```
-
-These rules correctly rule out the possibility of both arguments droping, which is illegal in Haida:
-
-```
-# 157 argument optionality
-Source: author
-Vetted: f
-Judgment: u
-Phenomena: {pro-d}
-qing7wagan
-qing-7wa-gan
-see-PL-PST
-`I saw them.'
-```
-
-Because the `head-opt-comps` rule has a head mother that is `LIGHT -`, it cannot serve as input to the `head-opt-subj` rule, which requires a `LIGHT +`daughter.
+This rule is `LIGHT -`, and specifies a high potency on the subject and low potency and `PERNUM 3rd` on the complement to be dropped. This correctly licenses #60, with the correct semantics (the complement is `PERNUM 3rd`, `POT low` and the subject is `POT high`). These rules correctly rule out the possibility of both arguments dropping, shown in #157, which is illegal in Haida. Because the `head-opt-comps` rule has a head mother that is `LIGHT -`, it cannot serve as input to the `head-opt-subj` rule, which requires a `LIGHT +` daughter.
 
 #### Problems
 
-### Additional fixes
+None. All relevant test sentences are analyzed as expected.
+
+### Additional fixes and problems
 
 ## Coverage
 
