@@ -466,15 +466,165 @@ None. All relevant test sentences are analyzed as expected.
 
 #### Description
 
+Demonstratives in Masset Haida consist of inflectional phrasal demonstratives, related lexical demonstratives, and derivational demonstratives, based on six demonstrative roots:
+
+| root            | semantics                                    |
+|-----------------|----------------------------------------------|
+| *7aa*           | near speaker and visible                     |
+| *haw, huu, waa* | away from speaker and visible                |
+| *7ahl*          | away from speaker and hearer and not visible |
+| *gii*           | root question-word root                      |
+| *tla, tlii*     | embedded question-word root                  |
+
+Since we did not systematically collect demonstratives, our testsuite only covers a subset of these at this time, drawn from the first two rows, which conveniently sets up a basic proximal/distal semantic distinction.
+
 #### Examples
 
+```
+# 18 np plural
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {det}
+7aasgee gyùudan rad7wagan
+7aasgee gyùudan rad-7wa-gan
+these horse run-PL-PST
+`These horses ran.'
+
+# 19 np wrong det order
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+gyùudan 7aasgee rad7wagan
+gyùudan 7aasgee rad-7wa-gan
+horse these run-PL-PST
+`These horses ran.'
+
+# 20 np impossible det
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+7aasgee 7ittl’ dladahldagan
+7aasgee 7ittl’ dladahlda-gan
+these 1PL.ACC fall.down-PST
+`These we fell down.'
+
+# 22 aux
+Source: a: 1193
+Vetted: t
+Judgment: g
+Phenomena: {wo, tam}
+7aasgee gyùudanee rad tlaagaang7wagan
+7aasgee gyùudan-ee rad tlaagaang-7wa-gan
+these horse-DEF run start-PL-PST
+`These horses started to run.'
+
+# 23 aux
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+7aasgee gyùudanee tlaagaang7wagan rad
+7aasgee gyùudan-ee tlaagaang-7wa-gan rad
+these horse-DEF start-PL-PST run
+`These horses started to run.'
+
+# 24 aux
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {tam}
+7aasgee gyùudanee rad tlaagaang7wagan
+7aasgee gyùudan-ee rad-7wa-gan tlaagaang
+these horse-DEF run-PL-PST start
+`These horses started to run.'
+
+# 37 det with df suffix, plural
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {det}
+7aasgee gyùudanee rad7wagan
+7aasgee gyùudan-ee rad-7wa-gan
+these horse-DEF run-PL-PST
+`These horses ran.'
+
+# 39 det with df suffix
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {det}
+gyùudanee 7aasgee rad7wagan
+gyùudan-ee 7aasgee rad-7wa-gan
+horse-DEF these run-PL-PST
+`These horses ran.'
+
+# 40 det with df suffix, plural
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {det}
+hlaa 7aasgee ts’agts’ag srids qing7wagan
+hlaa 7aasgee ts’agts’ag srid-as qing-7wa-gan
+1SG.NOM these wagons be.red-PRS see-PL-PST
+`I saw these red wagons.'
+
+# 71 possession - alienable -ra with dem and pn
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {poss, wo, det}
+waaniis ’laangaa gyùudanee dladahldagan
+waaniis ’laangaa gyùudan-ee dladahlda-gan
+that her horse-DEF fall.down-PST
+`That horse of hers fell down.' or `That one of her horses fell down.'
+
+# 72 possession - alienable -ra with dem and pn
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {poss, wo, det}
+waaniis gyùudanee ’laangaa dladahldagan
+waaniis gyùudan-ee ’laangaa dladahlda-gan
+that horse-DEF her fall.down-PST
+`That horse of hers fell down.' or `That one of her horses fell down.'
+
+# 131 attributive adjectives (variation of #40)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+hlaa 7aasgee srids ts’agts’ag qing7wagan
+hlaa 7aasgee srid-as ts’agts’ag qing-7wa-gan
+1SG.NOM these be.red-PRS wagons see-PL-PST
+`I saw these red wagons.'
+
+# 132 attributive adjectives (variation of #40)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {adj}
+hlaa 7aasgee ts’agts’ag sridan qing7wagan
+hlaa 7aasgee ts’agts’ag srid-gan qing-7wa-gan
+1SG.NOM these wagons be.red-PST see-PL-PST
+`I saw these red wagons.'
+```
+
 #### Implementation
+
+We chose to implement demonstratives as determiners as a) they appeared at the right edge and b) nothing appeared to contradict this. This latter point was later drawn into question by a single example too late to reconsider this choice. More is said about this in the "Problems" section below and again in the discussion of possessives.
+
+Set up the necessary predicates:
 
 ```
 demonstrative_a_rel := predsort.
 proximal+dem_a_rel := demonstrative_a_rel. ; close to speaker
 distal+dem_a_rel := demonstrative_a_rel.   ; away from speaker
 ```
+
+Implement a determiner supertype:
 
 ```
 determiner-lex-supertype := norm-hook-lex-item & norm-zero-arg & non-mod-lex-item &
@@ -488,7 +638,19 @@ determiner-lex-supertype := norm-hook-lex-item & norm-zero-arg & non-mod-lex-ite
                                                    LARG #larg ] ],
              LKEYS.KEYREL quant-relation & [ ARG0 #ind,
                                              RSTR #harg ] ] ].
+```
 
+and a `dem-det-lex` subtype as directed by the lab instructions:
+
+> This type should have two subtypes (assuming you have demonstrative determiners as well as others in your language --- otherwise, just incorporate the constraints for demonstrative determiners into the type above).
+>
+>  1. The subtype for ordinary (non-demonstrative) determiners should add the constraint that the RELS list has exactly one thing on it, by adding the supertype single-rel-lex-item.
+>
+>  2. The subtype for demonstrative determiners should specify a RELS list with two things on it: the first should have the "exist_q_rel" for its PRED value. (It's already constrained to be a quant-relation because the type norm-hook-lex-item inherited by determiner-lex-supertype identifies the first element of the RELS list with the LKEYS.KEYREL.) The second one should be identified with LKEYS.ALTKEYREL and should be an arg1-ev-relation (the type we use for the relations of intransitive adjectives). The HOOK.INDEX.COG-ST inside the SPEC value should be constrained to activ+fam. Finally, the LBL and ARG1 of the arg1-ev-relation should be identified with the SPEC..HOOK.LTOP and SPEC..HOOK.INDEX of the determiner, respectively. (This will result in the demonstrative adjective relation sharing its handle with the N' the determiner attaches to.)
+
+The result:
+
+```
 dem-det-lex := determiner-lex-supertype &
   [ SYNSEM [ LOCAL [ CAT.VAL.SPEC < [ LOCAL.CONT.HOOK [ INDEX #arg & [ COG-ST activ+fam ],
                                                         LTOP #lbl ] ] >,
@@ -497,6 +659,8 @@ dem-det-lex := determiner-lex-supertype &
             LKEYS.ALTKEYREL #altkeyrel & arg1-ev-relation & [ LBL #lbl,
                                                               ARG1 #arg ] ] ].
 ```
+
+Finally, use this type in the lexicon, additionally setting the appropriate `PERNUM` values:
 
 ```
 7aajii := dem-det-lex &
@@ -521,6 +685,8 @@ waasgee := dem-det-lex &
 ```
 
 #### Problems
+
+TODO: mention #71
 
 ### Possessives
 

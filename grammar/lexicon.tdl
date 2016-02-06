@@ -236,23 +236,23 @@ tlaagaang := inceptive-aux-lex &
 
 7aajii := dem-det-lex &
   [ STEM < "7aajii" >,
-    SYNSEM.LKEYS.ALTKEYREL.PRED "proximal+dem_a_rel",
-    SYNSEM.LKEYS.ALTKEYREL.ARG1.PNG.PERNUM 3sg ].
+    SYNSEM.LKEYS.ALTKEYREL [ PRED "proximal+dem_a_rel",
+                             ARG1.PNG.PERNUM 3sg ] ].
 
 waaniis := dem-det-lex &
   [ STEM < "waaniis" >,
-    SYNSEM.LKEYS.ALTKEYREL.PRED "distal+dem_a_rel",
-    SYNSEM.LKEYS.ALTKEYREL.ARG1.PNG.PERNUM 3sg ].
+    SYNSEM.LKEYS.ALTKEYREL [ PRED "distal+dem_a_rel",
+                             ARG1.PNG.PERNUM 3sg ] ].
 
 7aasgee := dem-det-lex &
   [ STEM < "7aasgee" >,
-    SYNSEM.LKEYS.ALTKEYREL.PRED "proximal+dem_a_rel",
-    SYNSEM.LKEYS.ALTKEYREL.ARG1.PNG.PERNUM 3pl ].
+    SYNSEM.LKEYS.ALTKEYREL [ PRED "proximal+dem_a_rel",
+                             ARG1.PNG.PERNUM 3pl ] ].
 
 waasgee := dem-det-lex &
   [ STEM < "waasgee" >,
-    SYNSEM.LKEYS.ALTKEYREL.PRED "distal+dem_a_rel",
-    SYNSEM.LKEYS.ALTKEYREL.ARG1.PNG.PERNUM 3pl ].
+    SYNSEM.LKEYS.ALTKEYREL [ PRED "distal+dem_a_rel",
+                             ARG1.PNG.PERNUM 3pl ] ].
 
 gyaagan := alienable-poss-pron-det-lex &
   [ STEM < "gyaagan" >,
