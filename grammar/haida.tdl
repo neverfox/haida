@@ -2,11 +2,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Grammar of Haida
 ;;; created at:
-;;;     Fri Jan 29 23:35:50 UTC 2016
+;;;     Wed Feb 03 05:01:10 UTC 2016
 ;;; based on Matrix customization system version of:
 ;;;     Sun Jan 10 22:56:48 UTC 2016
 ;;;
-;;; 
+;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Type assigning empty mod list. Added to basic types for nouns, verbs and determiners.
@@ -19,6 +19,7 @@ non-mod-lex-item := lex-item &
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 png :+ [ EVIDENTIAL bool,
+    ALIENABILITY bool,
     PERNUM pernum,
     POTENCY potency ].
 
@@ -42,8 +43,8 @@ basic-head-comp-phrase :+ [ HEAD-DTR.SYNSEM [ NEG-SAT #ns,
 
 basic-head-subj-phrase :+ [ SYNSEM.NEG-SAT #ns,
     HEAD-DTR.SYNSEM.NEG-SAT #ns ].
-
-clause :+ [ SYNSEM.NEG-SAT na-or-+ ].
+; commented out for negation bug fix - KP
+; clause :+ [ SYNSEM.NEG-SAT na-or-+ ].
 
 ; This grammar includes head-modifier rules.  To keep
 ; out extraneous parses, constrain the value of MOD on
@@ -53,19 +54,21 @@ clause :+ [ SYNSEM.NEG-SAT na-or-+ ].
 
 +nvcdmo :+ [ MOD < > ].
 
-inflected :+ [ FIN-FLAG luk,
-    NUM-FLAG luk,
-    TENSE-FLAG luk,
+inflected :+ [ TRANSITIVE-VERB-FLAG luk,
+    COG-ST-FLAG luk,
     FUT-FLAG luk,
-    TRANSITIVE-VERB-FLAG luk,
-    FINITE-FLAG luk ].
+    FINITE-FLAG luk,
+    FIN-FLAG luk,
+    NUM-FLAG luk,
+    TENSE-FLAG luk ].
 
-infl-satisfied :+ [ FIN-FLAG na-or-+,
-    NUM-FLAG na-or-+,
-    TENSE-FLAG na-or-+,
+infl-satisfied :+ [ TRANSITIVE-VERB-FLAG na-or-+,
+    COG-ST-FLAG na-or-+,
     FUT-FLAG na-or-+,
-    TRANSITIVE-VERB-FLAG na-or-+,
-    FINITE-FLAG na-or-+ ].
+    FINITE-FLAG na-or-+,
+    FIN-FLAG na-or-+,
+    NUM-FLAG na-or-+,
+    TENSE-FLAG na-or-+ ].
 
 basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     NON-HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
@@ -76,6 +79,20 @@ cat :+ [ VC luk ].
 
 lex-rule :+ [ SYNSEM.LOCAL.CAT.VC #vc,
     DTR.SYNSEM.LOCAL.CAT.VC #vc ].
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Some useful kinds of lists
+
+; A list of items with potencey -KP
+
+high-pot-list := list.
+
+high-pot-cons := high-pot-list & cons &
+  [ FIRST.LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high,
+    REST list ].
+
+high-pot-null := high-pot-list & null.
 
 ;;;;;;;;;;;;;;
 ;;; Features
@@ -108,8 +125,8 @@ sg := non-3pl.
 ;;; Potency
 
 potency := *top*.
-HIGH := potency.
-LOW := potency.
+high := potency.
+low := potency.
 
 ;;; Form
 
@@ -156,14 +173,16 @@ no-spr-noun-lex := noun-lex &
 ; Nouns which cannot take specifiers mark their SPR requirement
 ; as OPT +.  Making the non-head daughter OPT - in this rule
 ; keeps such nouns out.
-; 
+;
 ; Rules for building NPs.  Note that the Matrix uses SPR for
 ; the specifier of nouns and SUBJ for the subject (specifier) of verbs.
 
 head-spec-phrase := basic-head-spec-phrase & head-final &
   [ NON-HEAD-DTR.SYNSEM.OPT - ].
 
-cn-noun-lex := noun-lex.
+alienable-noun-lex := common-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY +,
+    INFLECTED.COG-ST-FLAG - ].
 
 nom-pron-noun-lex := no-spr-noun-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE nom ].
@@ -181,7 +200,7 @@ acc-pron-noun-lex := no-spr-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
 
 3p-hpot-pron-noun-lex := no-spr-noun-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY HIGH,
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY high,
                                        PERNUM 3rd ] ].
 
 1sg-acc-pron-noun-lex := acc-pron-noun-lex &
@@ -195,27 +214,32 @@ acc-pron-noun-lex := no-spr-noun-lex &
 
 3p-lpot-pron-noun-lex := acc-pron-noun-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE acc,
-                   CONT.HOOK.INDEX.PNG [ POTENCY LOW,
+                   CONT.HOOK.INDEX.PNG [ POTENCY low,
                                          PERNUM 3rd ] ] ].
 
 2sg-acc-pron-noun-lex := acc-pron-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ].
 
-pn-noun-lex := no-spr-noun-lex.
+proper-noun-lex := no-spr-noun-lex.
+
+common-noun-lex := noun-lex.
+
+inalienable-noun-lex := common-noun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY - ].
 
 ;;; Verbs
 
 ; verb-lex is HC-LIGHT - to allow us to pick out
-; 
+;
 ;   lexical Vs for V-level attachment of negative adverbs.
 
 verb-lex := non-mod-lex-item & NUM-rule-dtr & aspect-rule-dtr & modal-2-rule-dtr & modal-3-or-tense-rule-dtr & negation-rule-dtr &
   [ SYNSEM.LOCAL.CAT [ HEAD verb,
                        HC-LIGHT - ],
     INFLECTED [ FIN-FLAG na-or--,
+                FINITE-FLAG -,
                 NUM-FLAG -,
-                TENSE-FLAG -,
-                FINITE-FLAG - ] ].
+                TENSE-FLAG - ] ].
 
 main-verb-lex := verb-lex & basic-verb-lex &
   [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
@@ -262,7 +286,7 @@ nom-acc-transitive-verb-lex := transitive-verb-lex &
 
 itr-acc-verb-lex := itr-verb-lex & acc-intransitive-verb-lex.
 
-tr-verb-lex := transitive-verb-lex.
+tr-verb-lex := nom-acc-transitive-verb-lex.
 
 itr-verb-lex := verb-lex.
 
@@ -337,7 +361,7 @@ copula-cop-lex := adj-comp-copula-verb-lex.
 
 adj-lex := basic-intersective-adjective-lex.
 
-attrib-adj-adj-lex := attr-only-adj-lex &
+attrib-adj-lex := attr-only-adj-lex &
   [ SYNSEM.LOCAL.CAT.POSTHEAD + ].
 
 ; Basic attributive adjective definition
@@ -365,8 +389,67 @@ dem-sg-determiner-lex := determiner-lex & no-icons-lex-item &
 
 dem-pl-determiner-lex := determiner-lex & no-icons-lex-item.
 
+demonstrative_a_rel := predsort.
+proximal+dem_a_rel := demonstrative_a_rel. ; close to speaker
+distal+dem_a_rel := demonstrative_a_rel.   ; away from speaker
+
+determiner-lex-supertype := norm-hook-lex-item & norm-zero-arg & non-mod-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD det,
+                           VAL [ SPEC.FIRST.LOCAL.CONT.HOOK [ INDEX #ind,
+                                                              LTOP #larg ],
+                                 SPR < >,
+                                 SUBJ < >,
+                                 COMPS < > ] ],
+                     CONT.HCONS.LIST.FIRST qeq & [ HARG #harg,
+                                                   LARG #larg ] ],
+             LKEYS.KEYREL quant-relation & [ ARG0 #ind,
+                                             RSTR #harg ] ] ].
+
+dem-det-lex := determiner-lex-supertype &
+  [ SYNSEM [ LOCAL [ CAT.VAL.SPEC < [ LOCAL.CONT.HOOK [ INDEX #arg & [ COG-ST activ+fam ],
+                                                        LTOP #lbl ] ] >,
+                     CONT [ RELS < ! [ PRED "exist_q_rel" ],
+                                     #altkeyrel ! > ] ],
+            LKEYS.ALTKEYREL #altkeyrel & arg1-ev-relation & [ LBL #lbl,
+                                                              ARG1 #arg ] ] ].
+
+poss-pron-det-lex := determiner-lex-supertype &
+  [ SYNSEM [ LOCAL [ CAT.VAL.SPEC < [ LOCAL.CONT.HOOK [ INDEX #arg1 & [ COG-ST uniq+fam+act ],
+                                                        LTOP #lbl ] ] >,
+                     CONT [ RELS < ! [ PRED "exist_q_rel" ],
+                                     arg12-ev-relation & [ PRED "poss_rel",
+                                                           LBL #lbl,
+                                                           ARG1 #arg1,
+                                                           ARG2 #arg2 ],
+                                     quant-relation & [ PRED "exist_q_rel",
+                                                        ARG0 #arg2,
+                                                        RSTR #harg ],
+                                     #altkeyrel ! >,
+                            HCONS < ! [ ], qeq & [ HARG #harg,
+                                                   LARG #lbl2 ] ! > ] ],
+            LKEYS.ALTKEYREL #altkeyrel & noun-relation & [ PRED "pron_rel",
+                                                           LBL #lbl2,
+                                                           ARG0 #arg2 & [ COG-ST activ-or-more,
+                                                                          SPECI + ] ] ] ].
+
+alienable-poss-pron-det-lex := poss-pron-det-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY +].
+
+inalienable-poss-pron-det-lex := poss-pron-det-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY -].
+
+;;; Type for adverbs
+
+adverb-lex := basic-adverb-lex & intersective-mod-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD verb ]>,
+			   	 POSTHEAD -,
+				 VAL [ SPR < >,
+				 SUBJ < >,
+				 COMPS < >,
+				 SPEC < > ]]]]].
+
 ; Type for negative adverbs.
-; 
+;
 ; This adverb should go through a specialized phrase structure rule
 ;        included with this grammar.
 
@@ -385,19 +468,65 @@ neg-adj-head-scop-phrase := adj-head-scop-phrase &
     HEAD-DTR.SYNSEM.NEG-SAT -,
     NON-HEAD-DTR neg-adv-lex ].
 
+;;; Possessives
+
+;; Linker word
+
+adposition-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item &
+  [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
+                            ARG1 #xarg,
+                            ARG2 #ind ],
+             LOCAL [ CONT.HOOK [ XARG #xarg,
+                                 INDEX #arg0 ],
+                     CAT [ POSTHEAD -,
+			   HEAD.MOD < [ LOCAL [ CAT [ HEAD noun,
+                                                      VAL.SPR cons ],
+                                                CONT.HOOK.INDEX #xarg ]] >,
+                      VAL [ SPR < >,
+                            COMPS < [ LOCAL [ CAT [ HEAD noun,
+                                                    VAL.SPR < > ],
+                                              CONT.HOOK.INDEX #ind ]] >,
+                            SUBJ < > ]]]]].
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
 ;;;;;;;;;;;;;;;;;;;
 
 ;;; Intermediate rule types
 
-modal-3-or-tense-rule-dtr := word-or-lexrule.
 modal-2-rule-dtr := word-or-lexrule.
-NUM-rule-dtr := word-or-lexrule.
-negation-rule-dtr := word-or-lexrule.
 aspect-rule-dtr := word-or-lexrule.
+NUM-rule-dtr := word-or-lexrule.
+modal-3-or-tense-rule-dtr := word-or-lexrule.
+negation-rule-dtr := word-or-lexrule.
+
+same-neg-sat-lex-rule := lex-rule &
+ [ SYNSEM.NEG-SAT #ns,
+   DTR.SYNSEM.NEG-SAT #ns ].
 
 ;;; Lexical rule types
+
+cog-st-lex-rule-super := add-only-no-ccont-rule &
+  [ INFLECTED [ COG-ST-FLAG +,
+                FIN-FLAG #fin,
+                NUM-FLAG #num,
+                FUT-FLAG #fut,
+                FINITE-FLAG #finite,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                TENSE-FLAG #tense ],
+    DTR alienable-noun-lex &
+        [ INFLECTED [ FIN-FLAG #fin,
+                      NUM-FLAG #num,
+                      FUT-FLAG #fut,
+                      FINITE-FLAG #finite,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      TENSE-FLAG #tense ] ] ].
+
+indef-lex-rule := cog-st-lex-rule-super & const-lex-rule &
+  [ SYNSEM.OPT-CS type-id ].
+
+def-lex-rule := cog-st-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.OPT-CS uniq+fam+act ].
 
 negation-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & modal-3-or-tense-rule-dtr &
   [ INFLECTED #infl,
@@ -408,18 +537,20 @@ negation-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule
 neg-lex-rule := negation-lex-rule-super &
   [ SYNSEM.NEG-SAT - ].
 
-modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-3-or-tense-rule-dtr &
-  [ INFLECTED [ TRANSITIVE-VERB-FLAG #transitive-verb,
-                FIN-FLAG #fin,
+modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-3-or-tense-rule-dtr & same-neg-sat-lex-rule &
+  [ INFLECTED [ FIN-FLAG #fin,
                 NUM-FLAG #num,
-                TENSE-FLAG #tense,
-                FINITE-FLAG #finite ],
+                COG-ST-FLAG #cog-st,
+                FINITE-FLAG #finite,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                TENSE-FLAG #tense ],
     DTR modal-2-rule-dtr &
-        [ INFLECTED [ TRANSITIVE-VERB-FLAG #transitive-verb,
-                      FIN-FLAG #fin & +,
+        [ INFLECTED [ FIN-FLAG #fin & +,
                       NUM-FLAG #num,
-                      TENSE-FLAG #tense,
-                      FINITE-FLAG #finite ] ] ].
+                      COG-ST-FLAG #cog-st,
+                      FINITE-FLAG #finite,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      TENSE-FLAG #tense ] ] ].
 
 fut-lex-rule := modal-2-lex-rule-super &
   [ INFLECTED.FUT-FLAG +,
@@ -429,18 +560,18 @@ evid-lex-rule := modal-2-lex-rule-super &
   [ INFLECTED.FUT-FLAG #fut,
     DTR.INFLECTED.FUT-FLAG #fut ].
 
-tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-lex-rule &
   [ INFLECTED [ TENSE-FLAG +,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
                 FUT-FLAG #fut,
                 FIN-FLAG #fin,
                 NUM-FLAG #num,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
                 FINITE-FLAG #finite ],
     DTR modal-3-or-tense-rule-dtr &
-        [ INFLECTED [ TRANSITIVE-VERB-FLAG #transitive-verb,
-                      FUT-FLAG #fut,
+        [ INFLECTED [ FUT-FLAG #fut,
                       FIN-FLAG #fin & +,
                       NUM-FLAG #num,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
                       FINITE-FLAG #finite ] ] ].
 
 past-lex-rule := tense-lex-rule-super &
@@ -456,7 +587,7 @@ present-lex-rule := non-past-lex-rule &
 rel-prs-lex-rule := non-past-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE rel-prs ].
 
-aspect-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & modal-3-or-tense-rule-dtr & negation-rule-dtr &
+aspect-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & modal-3-or-tense-rule-dtr & negation-rule-dtr & same-neg-sat-lex-rule &
   [ INFLECTED #infl,
     DTR aspect-rule-dtr &
         [ INFLECTED #infl ] ].
@@ -473,19 +604,19 @@ prog-aspect-lex-rule := imperf-aspect-lex-rule &
 freq-aspect-lex-rule := imperf-aspect-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT frequentive ].
 
-NUM-lex-rule-super := add-only-no-ccont-rule & modal-2-rule-dtr & modal-3-or-tense-rule-dtr &
+NUM-lex-rule-super := add-only-no-ccont-rule & modal-2-rule-dtr & modal-3-or-tense-rule-dtr & same-neg-sat-lex-rule &
   [ INFLECTED [ NUM-FLAG +,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
                 FUT-FLAG #fut,
                 FIN-FLAG #fin,
-                TENSE-FLAG #tense,
-                FINITE-FLAG #finite ],
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                FINITE-FLAG #finite,
+                TENSE-FLAG #tense ],
     DTR NUM-rule-dtr &
-        [ INFLECTED [ TRANSITIVE-VERB-FLAG #transitive-verb,
-                      FUT-FLAG #fut,
+        [ INFLECTED [ FUT-FLAG #fut,
                       FIN-FLAG #fin & +,
-                      TENSE-FLAG #tense,
-                      FINITE-FLAG #finite ] ] ].
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      FINITE-FLAG #finite,
+                      TENSE-FLAG #tense ] ] ].
 
 non-3pl-intrans-lex-rule := NUM-lex-rule-super & const-lex-rule &
   [ DTR.INFLECTED.TRANSITIVE-VERB-FLAG na,
@@ -501,16 +632,16 @@ non-3pl-lex-rule := NUM-lex-rule-super & const-lex-rule &
   [ SYNSEM.LOCAL.CAT.VAL [ SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM non-3pl,
                            COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM non-3pl ] ].
 
-finite-lex-rule-super := add-only-no-ccont-rule & const-lex-rule &
+finite-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & same-neg-sat-lex-rule &
   [ INFLECTED [ FINITE-FLAG +,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
                 FUT-FLAG #fut,
                 NUM-FLAG #num,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
                 TENSE-FLAG #tense ],
     DTR verb-lex &
-        [ INFLECTED [ TRANSITIVE-VERB-FLAG #transitive-verb,
-                      FUT-FLAG #fut,
+        [ INFLECTED [ FUT-FLAG #fut,
                       NUM-FLAG #num,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
                       TENSE-FLAG #tense ] ] ].
 
 fin-lex-rule := NUM-rule-dtr & aspect-rule-dtr & finite-lex-rule-super & modal-2-rule-dtr & modal-3-or-tense-rule-dtr & negation-rule-dtr &
@@ -522,7 +653,7 @@ non-fin-lex-rule := finite-lex-rule-super &
     DTR.INFLECTED.FIN-FLAG #fin,
     SYNSEM.LOCAL.CAT.HEAD.FORM nonfinite ].
 
-modal-3-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+modal-3-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-lex-rule &
   [ INFLECTED #infl,
     DTR modal-3-or-tense-rule-dtr &
         [ INFLECTED #infl &
@@ -534,14 +665,26 @@ non-factive-lex-rule := modal-3-lex-rule-super.
 ;;; Phrasal Types
 ;;;;;;;;;;;;;;;;;;;
 
+; constrained for LIGHT +, high potency compliment and low potency, 3p subject -KP
+
 context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase &
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY LOW,
-                                                                         PERNUM 3rd ] ].
+  [ HEAD-DTR.SYNSEM [LIGHT +,
+		     LOCAL.CAT.VAL [SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY low,
+                                                                         PERNUM 3rd ],
+				    COMPS high-pot-list ] ]].
 
 ;Constraint on MC used to be part of matrix.tdl
 ;;it applies to all wo implementations, except for v2
 
 comp-head-phrase := basic-head-1st-comp-phrase & head-final.
+
+; created to handle optional compliments -KP
+
+context1-head-opt-comp-phrase := basic-head-opt-comp-phrase &
+  [ SYNSEM.LIGHT -,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL [SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
+				   COMPS < [ LOCAL.CONT.HOOK.INDEX.PNG [POTENCY low,
+								       PERNUM 3rd]] > ]].
 
 subj-head-phrase := decl-head-subj-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
@@ -550,7 +693,9 @@ subj-head-phrase := decl-head-subj-phrase & head-final &
 ; introduced to match the semantic effect of bare NPs in your language.
 
 bare-np-phrase := basic-bare-np-phrase &
-  [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !> ].
+  [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !>,
+    HEAD-DTR.SYNSEM.OPT-CS #optcs,
+    HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST #optcs ].
 
 ;;;;;;;;;;;;;;;;;;
 ;;; Coordination

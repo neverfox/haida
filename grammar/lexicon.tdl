@@ -1,79 +1,63 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 ;;; Nouns
 
-gyùudan-ee := cn-noun-lex &
-  [ STEM < "gyùudan-ee" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_horse_n_rel" ].
-
-ts’agts’ag-gee := cn-noun-lex &
-  [ STEM < "ts’agts’ag-gee" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_wagon_n_rel" ].
-
-naan := cn-noun-lex &
-  [ STEM < "naan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_grandmother_n_rel" ].
-
-gyùudan := cn-noun-lex &
+gyùudan := alienable-noun-lex &
   [ STEM < "gyùudan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_horse_n_rel" ].
 
-na := cn-noun-lex &
+na := alienable-noun-lex &
   [ STEM < "na" >,
     SYNSEM.LKEYS.KEYREL.PRED "_house_n_rel" ].
 
-xa%2Ea := cn-noun-lex &
+xa%2Ea := alienable-noun-lex &
   [ STEM < "xa.a" >,
     SYNSEM.LKEYS.KEYREL.PRED "_mallard_n_rel" ].
 
-xid7iid := cn-noun-lex &
+xid7iid := alienable-noun-lex &
   [ STEM < "xid7iid" >,
     SYNSEM.LKEYS.KEYREL.PRED "_bird_n_rel" ].
 
-sguusiid := cn-noun-lex &
+sguusiid := alienable-noun-lex &
   [ STEM < "sguusiid" >,
     SYNSEM.LKEYS.KEYREL.PRED "_potato_n_rel" ].
 
-sriw := cn-noun-lex &
+sriw := alienable-noun-lex &
   [ STEM < "sriw" >,
     SYNSEM.LKEYS.KEYREL.PRED "_seaweed_n_rel" ].
 
-tsii%2En := cn-noun-lex &
+tsii%2En := alienable-noun-lex &
   [ STEM < "tsii.n" >,
     SYNSEM.LKEYS.KEYREL.PRED "_salmon_n_rel" ].
 
-pickles := cn-noun-lex &
+pickles := alienable-noun-lex &
   [ STEM < "pickles" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pickles_n_rel" ].
 
-7anyaas := cn-noun-lex &
+7anyaas := alienable-noun-lex &
   [ STEM < "7anyaas" >,
     SYNSEM.LKEYS.KEYREL.PRED "_onion_n_rel" ].
 
-7inuu := cn-noun-lex &
+7inuu := alienable-noun-lex &
   [ STEM < "7inuu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_rutabaga_n_rel" ].
 
-ts’at’sa := cn-noun-lex &
+ts’at’sa := alienable-noun-lex &
   [ STEM < "ts’at’sa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_carrot_n_rel" ].
 
-x-aay := cn-noun-lex &
+x-aay := alienable-noun-lex &
   [ STEM < "x-aay" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
 
-taanaanee := cn-noun-lex &
+taanaanee := alienable-noun-lex &
   [ STEM < "taanaanee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_smokehouse_n_rel" ].
 
-ts’agts’ag := cn-noun-lex &
+ts’agts’ag := alienable-noun-lex &
   [ STEM < "ts’agts’ag" >,
     SYNSEM.LKEYS.KEYREL.PRED "_wagon_n_rel" ].
 
-sguusiid-ee := cn-noun-lex &
-  [ STEM < "sguusiid-ee" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_potato_n_rel" ].
-
-gid := cn-noun-lex &
+gid := alienable-noun-lex &
   [ STEM < "gid" >,
     SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
 
@@ -93,7 +77,7 @@ daa := 2sg-nom-pron-noun-lex &
   [ STEM < "’laa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-dii := 1sg-acc-pron-noun-lex &
+dii_1 := 1sg-acc-pron-noun-lex &
   [ STEM < "dii" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
@@ -113,39 +97,47 @@ dang := 2sg-acc-pron-noun-lex &
   [ STEM < "dang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-Bill := pn-noun-lex &
+Bill := proper-noun-lex &
   [ STEM < "Bill" >,
     SYNSEM.LKEYS.KEYREL.PRED "_Bill_n_rel" ].
 
-Mary := pn-noun-lex &
+Mary := proper-noun-lex &
   [ STEM < "Mary" >,
     SYNSEM.LKEYS.KEYREL.PRED "_Mary_n_rel" ].
 
+naan := inalienable-noun-lex &
+  [ STEM < "naan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_grandmother_n_rel" ].
+
 ;;; Adjectives
 
-srid_2 := attrib-adj-adj-lex &
+srid_2 := attrib-adj-lex &
   [ STEM < "srid" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_red_a_rel" ].
 
-ts’uudalaa_2 := attrib-adj-adj-lex &
+ts’uudalaa_2 := attrib-adj-lex &
   [ STEM < "ts’uudalaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_small_a_rel" ].
 
-7iw7aan_2 := attrib-adj-adj-lex &
+7iw7aan_2 := attrib-adj-lex &
   [ STEM < "7iw7aan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_big_a_rel" ].
 
-q’iigaa_2 := attrib-adj-adj-lex &
+q’iigaa_2 := attrib-adj-lex &
   [ STEM < "q’iigaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_old_a_rel" ].
 
-xaw%2Eula_2 := attrib-adj-adj-lex &
+xaw%2Eula_2 := attrib-adj-lex &
   [ STEM < "xaw.ula" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_delicious_a_rel" ].
 
-’laa_3 := attrib-adj-adj-lex &
+’laa_3 := attrib-adj-lex &
   [ STEM < "’laa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_good_a_rel" ].
+
+t’iij := attrib-adj-lex &
+  [ STEM < "t’iij" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_some_of_a_rel" ].
 
 ;;; Verbs
 
@@ -225,6 +217,10 @@ xaw%2Eula_1 := itr-nom-verb-lex &
   [ STEM < "’laa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_good_v_rel" ].
 
+qaaguhlaa%aa := itr-nom-verb-lex &
+  [ STEM < "qaaguhlaa.aa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "qaaguhlaa.aa" ].
+
 ;;; Auxiliaries
 
 tlaagaang := inceptive-aux-lex &
@@ -238,25 +234,62 @@ tlaagaang := inceptive-aux-lex &
 
 ;;; Determiners
 
-7aajii := dem-sg-determiner-lex &
+7aajii := dem-det-lex &
   [ STEM < "7aajii" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_this_q_rel" ].
+    SYNSEM.LKEYS.ALTKEYREL [ PRED "proximal+dem_a_rel",
+                             ARG1.PNG.PERNUM 3sg ] ].
 
-waaniis := dem-sg-determiner-lex &
+waaniis := dem-det-lex &
   [ STEM < "waaniis" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_that_q_rel" ].
+    SYNSEM.LKEYS.ALTKEYREL [ PRED "distal+dem_a_rel",
+                             ARG1.PNG.PERNUM 3sg ] ].
 
-7aasgee := dem-pl-determiner-lex &
+7aasgee := dem-det-lex &
   [ STEM < "7aasgee" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_these_q_rel" ].
+    SYNSEM.LKEYS.ALTKEYREL [ PRED "proximal+dem_a_rel",
+                             ARG1.PNG.PERNUM 3pl ] ].
 
-waasgee := dem-pl-determiner-lex &
+waasgee := dem-det-lex &
   [ STEM < "waasgee" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_those_q_rel" ].
+    SYNSEM.LKEYS.ALTKEYREL [ PRED "distal+dem_a_rel",
+                             ARG1.PNG.PERNUM 3pl ] ].
+
+gyaagan := alienable-poss-pron-det-lex &
+  [ STEM < "gyaagan" >,
+    SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
+
+diinaa := alienable-poss-pron-det-lex &
+  [ STEM < "diinaa" >,
+    SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
+
+daangaa := alienable-poss-pron-det-lex &
+  [ STEM < "daangaa" >,
+    SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 2sg ].
+
+’laangaa := alienable-poss-pron-det-lex &
+  [ STEM < "’laangaa" >,
+    SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 3sg ].
+
+dii_2 := inalienable-poss-pron-det-lex &
+  [ STEM < "dii" >,
+    SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
+
+;;; Adverbs
 
 gam := neg-adv-lex &
   [ STEM < "gam" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+
+gah := neg-adv-lex &
+  [ STEM < "gah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_emphatic_rel" ].
+
+neesdagaang%an := adverb-lex &
+  [ STEM < "neesdagaang.an" >,
+    SYNSEM.LKEYS.KEYREL.PRED "right_away_rel" ].
+
+
+;;; Conjunctions
 
 7isgyaan1 := conj-lex &
   [ STEM < "7isgyaan" >,
@@ -272,3 +305,10 @@ gyaan3 := conj-lex &
   [ STEM < "gyaan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
     CFORM "3" ].
+
+;;; Possessives
+
+gyaa := adposition-lex &
+  [ STEM < "gyaa" >,
+    SYNSEM.LKEYS.KEYREL [ PRED "poss_rel",
+                          ARG1.COG-ST uniq+fam+act ] ].

@@ -1,4 +1,6 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
+indef-lex := indef-lex-rule.
+
 non-3pl-lex := non-3pl-lex-rule.
 
 non-3pl-intrans-lex := non-3pl-intrans-lex-rule.

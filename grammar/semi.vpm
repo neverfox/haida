@@ -11,6 +11,9 @@ semarg         << u
 SPECI : SPECI
   * <> *
 
+POTENCY : POTENCY
+ * <> *
+
 SF : SF
   prop <> prop
   ques <> ques
@@ -38,8 +41,8 @@ COG-ST : COG-ST
 
 
 PNG.POTENCY : PNG.POTENCY
-  HIGH <> HIGH
-  LOW <> LOW
+  high <> high
+  low <> low
   * <> *
 
 PNG.PERNUM : PNG.PERNUM

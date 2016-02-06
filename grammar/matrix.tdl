@@ -1923,6 +1923,8 @@ basic-head-opt-comp-phrase := head-valence-phrase & head-only &
 ; down to decl-head-opt-subj-phrase, since we might *not* want it for
 ; imperatives.
 
+; Removed comps empty on head daughter - KP
+
 basic-head-opt-subj-phrase := head-valence-phrase & head-only &
   [ INFLECTED #infl,
     SYNSEM canonical-synsem &
@@ -1939,7 +1941,7 @@ basic-head-opt-subj-phrase := head-valence-phrase & head-only &
 						     LOCAL.CONT.HOOK [ INDEX #index & [ COG-ST in-foc ],
 								       ICONS-KEY #ikey,
 								       CLAUSE-KEY #ckey ] ] >,
-					    COMPS #comps & < >,
+					    COMPS #comps,
 					    SPR #spr,
 					    SPEC #spec ],
 				      POSTHEAD #ph ],
