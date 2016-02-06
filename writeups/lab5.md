@@ -1120,7 +1120,7 @@ dalang hlaa qing-gan
 `I saw you.'
 ```
 
-Finally, the following parses when it shouldn't because the grammar currently has no way to enforce the comitative clitic:
+Next, the following parses when it shouldn't because the grammar currently has no way to enforce the comitative clitic:
 
 ```
 #99 phrasal coordination - comitative
@@ -1133,6 +1133,8 @@ gyùudan-ee 7isgyaan gyùudan-ee gyaa ts’agts’ag-ee dladahlda-gan
 horse-DEF and horse-DEF POSS wagon-DEF fall.down-PST
 `The horse and the horse's wagon fell down.'
 ```
+
+Finally, there are 30 sentences in the test suite that cannot yet be analyzed for lack of tokens in the lexicon. These are all expected (comitative clicks, focus markers, etc.) with the exception #71-72, which do not give this error in lkb, but do in tsdb.
 
 ## Coverage
 
