@@ -754,6 +754,7 @@ In other words, `ADJ-HEAD-INT` also will not accept a `head-spec-phrase`.
 
 We did not have time to explore other options this week. We are considering implementing demonstratives as modifiers, but are not sure if this is theoretically valid and would like to explore our options further in coming labs.
 
+Furthermore, as mentioned earlier, sentences like #40 and #132 do not parse because of the tense on the attributive adjective.
 
 ### Possessives
 
@@ -1066,9 +1067,72 @@ None. All relevant test sentences are analyzed as expected.
 
 ### Additional fixes and problems
 
-11 and 13- always have. When a tr verb takes two pronouns it's supposed to be OSV. We have not found a way to implement this and are still treating haida as v-final in our analysis.
+The grammar still does not parse the copula (which we hope to address when we get to editing for non-verbal predicates):
 
-99- incorrectly missing the comative clitic. we have not implemented this requirement
+```
+#108 non-verbal predicate - noun
+Source: a:211
+Vetted: s
+Judgement: g
+Phenomena: {cop, wo}
+xa.a xid7iid 7iijang
+xa.a xid7iid 7iij-gang
+mallard bird be-PRS
+`A mallard is a bird.'
+```
+
+Also, embedded clauses are still not supported:
+
+```
+#148 embedded clauses
+Source: a:430
+Vetted: s
+Judgement: g
+Phenomena: {emb-d}
+Bill gid k'untl'aa.ang suugan
+Bill gid k'untl'aa-.ang suu-gan
+Bill child get.burned-NF say-PST
+`Bill said that his child got burned.'
+```
+
+
+The following sentences parse but should not, because not implemented a way for the grammar to switch to OSV word order when two pronouns are used with a transitive verb:
+
+```
+# 11 tr wo with pns
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wo}
+t’alang dang qinggan
+t’alang dang qing-gan
+1PL.NOM 2SG.ACC see-PST
+`We saw you.'
+
+# 13 tr wo with pns
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {c}
+dalang hla qinggan
+dalang hlaa qing-gan
+2PL.NOM 1SG.NOM see-PST
+`I saw you.'
+```
+
+Finally, the following parses when it shouldn't because the grammar currently has no way to enforce the comitative clitic:
+
+```
+#99 phrasal coordination - comitative
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {crd, poss}
+gyùudanee 7isgyaan gyùudan-ee gyaa ts’agts’aggee dladahldagan
+gyùudan-ee 7isgyaan gyùudan-ee gyaa ts’agts’ag-ee dladahlda-gan
+horse-DEF and horse-DEF POSS wagon-DEF fall.down-PST
+`The horse and the horse's wagon fell down.'
+```
 
 ## Coverage
 
