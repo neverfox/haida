@@ -431,7 +431,7 @@ Prior to this lab, our common nouns existed in the lexicon as one type (`common-
   * an inflecting rule for the definite suffix *-ee* and `uniq+fam+act`
 * "assumed a morpho-phonological analyzer" by using *-ee* for all instances of the suffix in the translit-seg lines of the testsuite
 
-Most of these changes were accomplished through additional matrix customization. However, setting the `COG-ST` value appropriately was entered by hand:
+Most of these changes were accomplished through additional matrix customization. However, setting the `COG-ST` value appropriately was entered by hand. Originally, we had set firm values:
 
 ```
 indef-lex-rule := cog-st-lex-rule-super & const-lex-rule &
@@ -442,6 +442,21 @@ def-lex-rule := cog-st-lex-rule-super & infl-lex-rule &
 ```
 
 The result of these changes is that alienable nouns can optionally take the definite suffix, and inalienable nouns cannot take it at all. Furthermore, the suffix drives the appropriate `COG-ST` value. Inalienable nouns are always associated with a possessor, so it wasn't necessary to ensure here that they had a definite cognitive status by default.
+
+However, our testsuite indicated to us that while bare NPs have definiteness fixed by the suffix, they are optional in the presense of possessive and demonstrative determiners. This required us to go back and attach cognitive status values as `OPT-CS` and copy them to the `HEAD-DTR` in the case of bare NPs:
+
+```
+bare-np-phrase := basic-bare-np-phrase &
+  [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !>,
+    HEAD-DTR.SYNSEM [ OPT-CS #optcs,
+                      LOCAL.CONT.HOOK.INDEX.COG-ST #optcs ] ].
+
+indef-lex-rule := cog-st-lex-rule-super & const-lex-rule &
+  [ SYNSEM.OPT-CS type-id ].
+
+def-lex-rule := cog-st-lex-rule-super & infl-lex-rule &
+  [ SYNSEM.OPT-CS uniq+fam+act ].
+```
 
 #### Problems
 
@@ -511,9 +526,13 @@ waasgee := dem-det-lex &
 
 #### Description
 
+As stated in lab 3, possession in Haida follows an alienable/inalienable distinction, with alienable possession marked by either a) the *gyaa* linker word or b) the possessive suffix *-(ng)aa*, which is non-productive and highly lexically restricted to "pronouns and reflexively possessed kin terms". Meanwhile, inalienable possession is not marked on either the possessor or possessum and is lexically limited to kins terms, part terms, and certain additional nouns.
+
 #### Examples
 
 #### Implementation
+
+As the description implies, it should be possible to model possession in Haida by implementing both a linker word for alienable nouns and possessive pronouns determiners for both kinds (following the suggestion in the lab instructions). Since we had already established the necessary alienable/inalienable distinction between nouns for definiteness, we were able to take advantage of it to create two subtypes of `poss-pron-det-lex` to constrain the `ALIENABILITY` feature appropriately.
 
 Pronouns:
 
@@ -544,17 +563,26 @@ inalienable-poss-pron-det-lex := poss-pron-det-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY -].
 ```
 
+Using the appropriate type, we could then associate each possessive pronoun in our lexicon with the appropriate `PERNUM` value:
 
 ```
 gyaagan := alienable-poss-pron-det-lex &
   [ STEM < "gyaagan" >,
     SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
 
+diinaa := alienable-poss-pron-det-lex &
+  [ STEM < "diinaa" >,
+    SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
+
 daangaa := alienable-poss-pron-det-lex &
   [ STEM < "daangaa" >,
     SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 2sg ].
 
-dii := inalienable-poss-pron-det-lex &
+’laangaa := alienable-poss-pron-det-lex &
+  [ STEM < "’laangaa" >,
+    SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 3sg ].
+
+dii_2 := inalienable-poss-pron-det-lex &
   [ STEM < "dii" >,
     SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
 ```
@@ -586,7 +614,11 @@ gyaa := adposition-lex &
                           ARG1.COG-ST uniq+fam+act ] ].
 ```
 
+The only edit form the `adposition-lex` provided to us as an example was the addition of `POSTHEAD -` to constrain the linker word to appear before whatever it modifies.
+
 #### Problems
+
+TODO: mention #71
 
 ### Argument optionality
 
