@@ -217,6 +217,10 @@ xaw%2Eula_1 := itr-nom-verb-lex &
   [ STEM < "’laa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_good_v_rel" ].
 
+qaaguhlaa%aa := itr-nom-verb-lex &
+  [ STEM < "qaaguhlaa.aa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "qaaguhlaa.aa" ].
+
 ;;; Auxiliaries
 
 tlaagaang := inceptive-aux-lex &
