@@ -125,7 +125,7 @@ The customization system only allowed for post-head modifiers (and then only for
 adj-head-int := adj-head-int-phrase.
 ```
 
-This alone is sufficient to allow sentences like #88-90 to parse correctly. However, to prevent the ungrammatical #91 (showing a post-head adverb) from parsing, we had to add the following to `haida.tdl`:
+While this allowed #88-90 to parse, it placed the adverb after the V or VP it modified. To get the correct constituent order, we added the following `POSTHEAD -` specification to the the adverb-lex type in `haida.tdl`:
 
 ```
 adverb-lex := basic-adverb-lex & intersective-mod-lex &
@@ -148,7 +148,7 @@ gah := neg-adv-lex &
 ```
 
 This correctly allows #159 to parse and correctly prevents #160-61 from parsing.
-
+ 
 Last week we reported a bug with negation that caused the following problem: the negative suffix is added to the verb, the `NEG` feature is saturated, so the verb does not select for the required negative adverb and incorrectly licensed sentences without it. Prof. Bender identified the following problems:
 
 > 1. The feature `NEG-SAT` (which is used to track whether the obligatory adverb is picked up) was required to be `na-or-+` on clauses, and the `subj-head` rule inherits from the clause type.  
@@ -159,9 +159,11 @@ A constraint was removed from the clause which specified `NEGSAT +` and instead 
 
 Clauses will have to be specified to check for `NEG-SAT +` in the future for clauses with embedded verbs.
 
+The adverb can occur before or after the negation adverb, but it's scope must be inside the negation. Because the only adverb with scope, currently is the negation adverb, this is correctly predicted in the MRS.
+
 #### Problems
 
-None. All relevant test sentences are analyzed as expected.
+The changes implemented generated the correct analyses where expected.
 
 
 ### Adjectival modifiers
@@ -335,7 +337,7 @@ attrib-adj-adj-lex := attr-only-adj-lex &
 
 #### Problems
 
-We are still unable to parse adjectives with tense inflection (#133-134 above). We plan to analyze these as relative clauses (see [here](https://catalyst.uw.edu/gopost/conversation/ebender/949464 FMI)), and will implement this later in the quarter.
+We are still unable to parse adjectives with tense inflection (#133-134 above). We plan to analyze these as relative clauses, and will implement this later in the quarter.
 
 
 ### Agreement between adjectives and head nouns
@@ -513,7 +515,7 @@ def-lex-rule := cog-st-lex-rule-super & infl-lex-rule &
 
 #### Problems
 
-None. All relevant test sentences are analyzed as expected.
+The changes implemented generated the correct analyses where expected.
 
 
 ### Demonstratives
@@ -966,7 +968,7 @@ The only edit form the `adposition-lex` provided to us as an example was the add
 
 First, see the discussion of the problem raised by example #71 in the section on demonstratives above.
 
-Second, our implementation currently does not handle the `X of Y's` form of possessives shown in #64 and #70. We believe that we could support this with some modification to or version of the `HEAD-SPEC` rule that allows for reversing the arguments. We did not have time to implement this this week but would like to do so in upcoming labs.
+Second, our implementation currently does not handle the inverted form of possessives shown in #64 and #70. We believe that we could support this with some modification to or version of the `HEAD-SPEC` rule that allows for reversing the arguments. We did not have time to implement this this week but would like to do so in upcoming labs.
 
 
 ### Argument optionality
@@ -1023,7 +1025,7 @@ Phenomena: {pro-d}
 
 In lab 3, we reported that the customization system did not allow us to add constraints to complement drop, only do this with subject drop. Furthermore, we had not captured the relative nature of potency in that implementation, instead opting for a simple high/low binary as a start.
 
-To make subject drop work for low potency pronouns, we simply leave out any low potency subject from the lexicon. Therefore, #158 is always interpreted in the MRS as POT high.
+To make subject drop obligatory for low potency pronouns, we simply leave out any low potency subject from the lexicon. Therefore, #158 is always interpreted in the MRS as POT high.
 
 Nevertheless, the subject drop rule had to be edited to select for both a low potency subject and a high potency complement. To do this, we created a list that contains a high potency element:
 
@@ -1047,7 +1049,7 @@ context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase &
    COMPS high-pot-list ] ]].
 ```
 
-Because this rule inherits from `basic-head-opt-subj-phrase`, it was necessary to remove the `COMPS < >` from `basic-head-opt-subj-phrase`. This correctly licenses #61, with the correct semantics (the subject is `PERNUM 3rd`, `POT low` and the complement is `POT high`).
+Because this rule inherits from `basic-head-opt-subj-phrase`, it was necessary to remove the `COMPS < >` from `basic-head-opt-subj-phrase`. This correctly licenses #61, with the correct semantics (the subject is `PERNUM 3rd`, `POT low` and the complement is `POT high`). *This change in `matrix.tdl` was approved by Prof. Bender.*
 
 To implement optionality of low potency objects, we had to add a phrase structure rule to `rules.tdl` and then define it:
 
@@ -1063,9 +1065,24 @@ This rule is `LIGHT -`, and specifies a high potency on the subject and low pote
 
 #### Problems
 
-None. All relevant test sentences are analyzed as expected.
+The changes implemented generated the correct analyses where expected.
 
-### Additional fixes and problems
+
+### Additional notes
+
+Our auxiliary example does not currently allow the auxiliary to take the finite verbal complement, as implemented in the customization system. We intend to correct this in tdl editing in the coming weeks:
+
+```
+# 22 aux
+Source: a: 1193
+Vetted: t
+Judgment: g
+Phenomena: {wo, tam}
+7aasgee gyùudanee rad tlaagaang7wagan
+7aasgee gyùudan-ee rad tlaagaang-7wa-gan
+these horse-DEF run start-PL-PST
+`These horses started to run.'
+```
 
 The grammar still does not parse the copula (which we hope to address when we get to editing for non-verbal predicates):
 
@@ -1150,7 +1167,7 @@ After the changes implemented in lab 5:
 
 ## Corpus
 
-We collected the following 10-sentence corpus text from Enrico (originally from Swanton 1908:324) and built a test suite file (`testcorpus`) for it:
+We collected the following 10-sentence corpus text from Enrico (actually the contatenation of *two* stories, originally from Swanton 1908, given that the longest is only seven sentences) and built a test suite file (`testcorpus`) for it:
 
 ```
 # 1
