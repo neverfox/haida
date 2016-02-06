@@ -1167,7 +1167,7 @@ After the changes implemented in lab 5:
 
 ## Corpus
 
-We collected the following 10-sentence corpus text from Enrico (actually the contatenation of *two* stories, originally from Swanton 1908, given that the longest is only seven sentences) and built a test suite file (`testcorpus`) for it:
+We collected the following 10-sentence corpus text from Enrico (actually the contatenation of *two* stories, originally from Swanton 1908, given that the longest is only seven sentences). The corpus was given in the test as IGT and we created a test corpus in the same format as our test suite:
 
 ```
 # 1
