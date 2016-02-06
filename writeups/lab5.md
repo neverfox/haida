@@ -790,9 +790,149 @@ TODO: mention #71
 
 #### Description
 
+In Haida, both subject and object pronouns can be dropped based on relative potency. The lower of two arguments can drop optionally if it's a complement and obligatorily if it's a subject.
+
 #### Examples
 
+```
+# 60 argument optionality
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr, pro-d}
+hlaa qing7wagan
+hlaa qing-7wa-gan
+1SG.NOM see-PL-PST
+`I saw them.'
+
+# 61 argument optionality
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr, pro-d}
+dii qing7wagan
+dii qing-7wa-gan
+1SG.ACC see-PL-PST
+`They saw me.'
+
+# 157 argument optionality
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {pro-d}
+qing7wagan
+qing-7wa-gan
+see-PL-PST
+`I saw them.'
+
+# 158 potency - hlaa must be POT high
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pro-d}
+’laa naan qing7wagan
+’laa    naan    qing-7wa-gan
+3p.POThigh  grandmother see-PL-PST
+`Grandmother saw them.' or `They saw grandmother.'
+```
+
 #### Implementation
+
+In lab 3, we reported that the customization system did not allow us to add constraints to complement drop, only do this with subject drop. Furthermore, we had not captured the relative nature of potency in that implementation, instead opting for a simple high/low binary as a start.
+
+To make subject drop work for low potency pronouns, we simply leave out any low potency subject from the lexicon. Therefore, the following is always interpreted in the MRS as POT high:
+
+```
+# 158 potency - hlaa must be POT high
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pro-d}
+’laa naan qing7wagan
+’laa naan qing-7wa-gan
+3p.POThigh grandmother see-PL-PST
+`Grandmother saw them.' or `They saw grandmother.'
+```
+
+Nevertheless, the subject drop rule had to be edited to select for both a low potency subject and a high potency complement. To do this, we created a list that contains a high potency element:
+
+```
+high-pot-list := list.
+
+high-pot-cons := high-pot-list & cons &
+  [ FIRST.LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high,
+    REST list ].
+
+high-pot-null := high-pot-list & null.
+```
+
+The customization system had created a `context1-decl-head-opt-subj-phrase`, which specified that the subj of the head daughter be `POT low` and `PERNUM 3rd`. We then called the `high-pot-list` under complements on the head daughter and specified that the head daughter be `LIGHT +` so that this rule would occur lower in the tree:
+
+```
+context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase &
+  [ HEAD-DTR.SYNSEM [LIGHT +,
+    LOCAL.CAT.VAL [SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY low,
+                                                          PERNUM 3rd ],
+   COMPS high-pot-list ] ]].
+```
+
+Because this rule inherits from `basic-head-opt-subj-phrase`, it was necessary to remove the `COMPS < >` from `basic-head-opt-subj-phrase`.
+
+This correctly licenses the following sentence with the correct semantics (the subject is `PERNUM 3rd`, `POT low` and the complement is `POT high`):
+
+```
+# 61 argument optionality
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr, pro-d}
+dii qing7wagan
+dii qing-7wa-gan
+1SG.ACC see-PL-PST
+`They saw me.'
+```
+
+To implement optionality of low potency objects, we had to add a phrase structure rule to `rules.tdl` and then define it:
+
+```
+context1-head-opt-comp-phrase := basic-head-opt-comp-phrase &
+  [ SYNSEM.LIGHT -,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL [SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
+  COMPS < [ LOCAL.CONT.HOOK.INDEX.PNG [POTENCY low,
+                                       PERNUM 3rd ] ] > ] ].
+```
+
+This rule is `LIGHT -`, and specifies a high potency on the subject and low potency and `PERNUM 3rd` on the complement to be dropped.
+
+This correctly licenses the following sentence with the correct semantics (the complement is `PERNUM 3rd`, `POT low` and the subject is `POT high`):
+
+```
+# 60 argument optionality
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {agr, pro-d}
+hlaa qing7wagan
+hlaa qing-7wa-gan
+1SG.NOM see-PL-PST
+`I saw them.'
+```
+
+These rules correctly rule out the possibility of both arguments droping, which is illegal in Haida:
+
+```
+# 157 argument optionality
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {pro-d}
+qing7wagan
+qing-7wa-gan
+see-PL-PST
+`I saw them.'
+```
+
+Because the `head-opt-comps` rule has a head mother that is `LIGHT -`, it cannot serve as input to the `head-opt-subj` rule, which requires a `LIGHT +`daughter.
 
 #### Problems
 
