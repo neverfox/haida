@@ -1,5 +1,7 @@
 ### go through and change to underlying forms in translit-seg line
 ### add case to pronouns
+### PLACE morpheme on #5 is not glossed in Enrico
+### words with spaces use _
 
 Language: Haida
 Language code: hdn
@@ -12,9 +14,9 @@ Source a: Enrico, John. Haida Syntax. Lincoln: University of Nebraska Press, 200
 Source: a:1341
 Vetted: s
 Judgment: g
-Phenomena: {}
+Phenomena:
 7waadluu k’am.aalgyaa q’ii.udaaray ginn ta qa.àwgadaa ’la gudaangaan
-7waadluu	k’am.aal-gyaa	q’ii.udaa-ray	ginn	ta qa.àwgadaa	’la 	gudaang-aa-n
+7waadluu	k’am.aal-gyaa	q’ii.udaa-ray	ginn	ta_qa.àwgadaa	’la 	gudaang-aa-n
 then		shell-IDENT	lie-into	thing	talk.noisily	3p	hear-EVID-PST	
 `Then he heard something takling noisily in a shell.'
 
@@ -22,7 +24,7 @@ then		shell-IDENT	lie-into	thing	talk.noisily	3p	hear-EVID-PST
 Source: a:1341
 Vetted: s
 Judgment: g
-Phenomena: {}
+Phenomena:
 7waagyaan hit’an ’la qii.idaanii
 7waagyaan	hit’an	’la	qii.id-aa-n-ii
 and		then	3p	pick.up-EVID-PA-TC
@@ -32,7 +34,7 @@ and		then	3p	pick.up-EVID-PA-TC
 Source: a:1341
 Vetted: s
 Judgment: g
-Phenomena: {}
+Phenomena:
 7waagyaan gudsda ’la 7isdaayaanii
 7waagyaan	gud-sda		’la	7isdaa-yaa-n-ii
 and		REC-from	3p	take-EVID-PST-TC
@@ -42,7 +44,7 @@ and		REC-from	3p	take-EVID-PST-TC
 Source: a:1342
 Vetted: s
 Judgment: g
-Phenomena: {}
+Phenomena:
 7waagyaan 7aajguusdageeraa tl’a xàadaa st’a.àwgaagaan
 7waagyaan	7aajguusda-gee-raa	tl’a	xàadaa		st’a.àwgaa-gaa-n
 and		on.this.side-DM-in	INDF	be.people	be.full-EVID-PST
@@ -52,17 +54,17 @@ and		on.this.side-DM-in	INDF	be.people	be.full-EVID-PST
 Source: a:1342
 Vetted: s
 Judgment: g
-Phenomena: {}
+Phenomena:
 7waagyaan 7aajguusdageeraa7isan ginn tìigaa-s st’a.àwgaagaan
-7waagyaan	7aajguusda-gee-raa-7isan	ginn tìigaa-s	st’a.àwgaa-gaa-n
-and		on.this.side-DM-in-too		animals		be.full-EVID-PST
+7waagyaan	7aajguusda-gee-raa-7isan	ginn_tìigaa-s	st’a.àwgaa-gaa-n
+and		on.this.side-DM-in-too		animals-PLACE	be.full-EVID-PST
 `The other side was full of animals.'
 
 # 6
 Source: a:1342
 Vetted: s
 Judgment: g
-Phenomena: {}
+Phenomena:
 7waagyaan 7waa didguhan ’lanngee 7waa.an ’la tla.àwhlahaalaanii
 7waagyaan	7waa	didgu-han		’lann-gee	7waa-.an	’la	tla.àwhla-haal-aa-n-ii
 and		3p	inland.from-CLITIC	town-DF		3p-for		3p	make-CAUS-EVID-PST-TC
@@ -72,9 +74,9 @@ and		3p	inland.from-CLITIC	town-DF		3p-for		3p	make-CAUS-EVID-PST-TC
 Source: a:1342
 Vetted: s
 Judgment: g
-Phenomena: {}
+Phenomena:
 7waagyaan ginn tìigagee7isan tlada.aaw gwii ’la 7is rujuuhaalaanii
-7waagyaan	ginn tìiga-gee-7isan	tlada.aaw-gwii	’la 	7is	rujuu-haal-aa-n-ii
+7waagyaan	ginn_tìiga-gee-7isan	tlada.aaw-gwii	’la 	7is	rujuu-haal-aa-n-ii
 and		animal-DF-too		mountain-on	3p	go	all-CAUS-EVID-PST-TC
 `And he told the animals too to go up on a mountain.'
 
@@ -82,7 +84,7 @@ and		animal-DF-too		mountain-on	3p	go	all-CAUS-EVID-PST-TC
 Source: a:1328
 Vetted: s
 Judgment: g
-Phenomena: {}
+Phenomena:
 7waa-dluu	sii.i-s-gu	ragwii	ginn	hlgijuutl’a.aa-s	’la	qeeng-aa-n
 7waa-dluu	sii.i-s-gu	ragwii	ginn	hlgijuutl’a.aa-s	’la	qeeng-aa-n
 3p-when		sea-PLACE-at	CLITIC	thing	stick.out-PRS		3p	see-EVID-PST
@@ -92,7 +94,7 @@ Phenomena: {}
 Source: a:1328
 Vetted: s
 Judgment: g
-Phenomena: {}
+Phenomena:
 na tiijuutl’a.agansgingaan ridaanii
 na	tiijuutl’a.a-gan-s-gingaan	rid-aa-n-ii
 house	stick.out-FREQ-PRS-like		be-EVID-PST-TC
@@ -102,7 +104,7 @@ house	stick.out-FREQ-PRS-like		be-EVID-PST-TC
 Source: a:1328
 Vetted: s
 Judgment: g
-Phenomena: {}
+Phenomena:
 7waadluu stl’aqamm ’laa.an ginn hlrahl sq’a.atl’a.agaan
 7waa-dluu	stl’aqamm	’laa-.an	ginn	hlrahl	sq’a.atl’a.a-gaa-n
 3p-when		Butterfly	3p-for		thing	black	bring-EVID-PST
