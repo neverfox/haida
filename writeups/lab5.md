@@ -1066,8 +1066,124 @@ None. All relevant test sentences are analyzed as expected.
 
 ### Additional fixes and problems
 
+11 and 13- always have. When a tr verb takes two pronouns it's supposed to be OSV. We have not found a way to implement this and are still treating haida as v-final in our analysis.
+
+99- incorrectly missing the comative clitic. we have not implemented this requirement
+
 ## Coverage
 
-## Baseline Comparison
+Our baseline from lab 4 (run against all testsuite changes from this week):
+
+* Coverage: 31.8%
+* Overgeneration: 5.5%
+
+After the changes implemented in lab 5:
+
+* Coverage: 61.4% (+29.6%)
+* Overgeneration: 4.1% (-1.4%)
 
 ## Corpus
+
+We collected the following 10-sentence corpus text from Enrico (originally from Swanton 1908:324) and built a test suite file (`testcorpus`) for it:
+
+```
+# 1
+Source: a:1341
+Vetted: s
+Judgment: g
+Phenomena: {}
+7waadluu k’am.aalgyaa q’ii.udaaray ginn ta qa.àwgadaa ’la gudaangaan
+7waadluu k’am.aal-gyaa q’ii.udaa-ray ginn ta qa.àwgadaa ’la gudaang-aa-n
+then shell-IDENT lie-into thing talk.noisily 3p hear-EVID-PST 
+`Then he heard something talking noisily in a shell.'
+
+# 2
+Source: a:1341
+Vetted: s
+Judgment: g
+Phenomena: {}
+7waagyaan hit’an ’la qii.idaanii
+7waagyaan hit’an ’la qii.id-aa-n-ii
+and then 3p pick.up-EVID-PA-TC
+`He picked it up.'
+
+# 3
+Source: a:1341
+Vetted: s
+Judgment: g
+Phenomena: {}
+7waagyaan gudsda ’la 7isdaayaanii
+7waagyaan gud-sda ’la 7isdaa-yaa-n-ii
+and REC-from 3p take-EVID-PST-TC
+`He took it.'
+
+# 4
+Source: a:1342
+Vetted: s
+Judgment: g
+Phenomena: {}
+7waagyaan 7aajguusdageeraa tl’a xàadaa st’a.àwgaagaan
+7waagyaan 7aajguusda-gee-raa tl’a xàadaa st’a.àwgaa-gaa-n
+and on.this.side-DM-in INDF be.people be.full-EVID-PST
+`One side was full of people.'
+
+# 5
+Source: a:1342
+Vetted: s
+Judgment: g
+Phenomena: {}
+7waagyaan 7aajguusdageeraa7isan ginn tìigaa-s st’a.àwgaagaan
+7waagyaan 7aajguusda-gee-raa-7isan ginn tìigaa-s st’a.àwgaa-gaa-n
+and on.this.side-DM-in-too animals be.full-EVID-PST
+`The other side was full of animals.'
+
+# 6
+Source: a:1342
+Vetted: s
+Judgment: g
+Phenomena: {}
+7waagyaan 7waa didguhan ’lanngee 7waa.an ’la tla.àwhlahaalaanii
+7waagyaan 7waa didgu-han ’lann-gee 7waa-.an ’la tla.àwhla-haal-aa-n-ii
+and 3p inland.from-CLITIC town-DF 3p-for 3p make-CAUS-EVID-PST-TC
+`Then he directed that a town be built for them (the people) right inland.'
+
+# 7
+Source: a:1342
+Vetted: s
+Judgment: g
+Phenomena: {}
+7waagyaan ginn tìigagee7isan tlada.aaw gwii ’la 7is rujuuhaalaanii
+7waagyaan ginn tìiga-gee-7isan tlada.aaw-gwii ’la 7is rujuu-haal-aa-n-ii
+and animal-DF-too mountain-on 3p go all-CAUS-EVID-PST-TC
+`And he told the animals too to go up on a mountain.'
+
+# 8
+Source: a:1328
+Vetted: s
+Judgment: g
+Phenomena: {}
+7waa-dluu sii.i-s-gu ragwii ginn hlgijuutl’a.aa-s ’la qeeng-aa-n
+7waa-dluu sii.i-s-gu ragwii ginn hlgijuutl’a.aa-s ’la qeeng-aa-n
+3p-when sea-PLACE-at CLITIC thing stick.out-PRS 3p see-EVID-PST
+`Then he (Raven) saw something sticking out far out in the water.'
+
+# 9
+Source: a:1328
+Vetted: s
+Judgment: g
+Phenomena: {}
+na tiijuutl’a.agansgingaan ridaanii
+na tiijuutl’a.a-gan-s-gingaan rid-aa-n-ii
+house stick.out-FREQ-PRS-like be-EVID-PST-TC
+`It was like a house sticking out.'
+
+# 10
+Source: a:1328
+Vetted: s
+Judgment: g
+Phenomena: {}
+7waadluu stl’aqamm ’laa.an ginn hlrahl sq’a.atl’a.agaan
+7waa-dluu stl’aqamm ’laa-.an ginn hlrahl sq’a.atl’a.a-gaa-n
+3p-when Butterfly 3p-for thing black bring-EVID-PST
+`Then Butterfly brought a black sticklike thing for him.'
+```
