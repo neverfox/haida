@@ -113,31 +113,31 @@ naan := inalienable-noun-lex &
 
 srid_2 := attrib-adj-lex &
   [ STEM < "srid" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_red_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_red_a_rel" ].
 
 ts’uudalaa_2 := attrib-adj-lex &
   [ STEM < "ts’uudalaa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_small_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_small_a_rel" ].
 
 7iw7aan_2 := attrib-adj-lex &
   [ STEM < "7iw7aan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_big_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_big_a_rel" ].
 
 q’iigaa_2 := attrib-adj-lex &
   [ STEM < "q’iigaa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_old_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_old_a_rel" ].
 
 xaw%2Eula_2 := attrib-adj-lex &
   [ STEM < "xaw.ula" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_delicious_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_delicious_a_rel" ].
 
 ’laa_3 := attrib-adj-lex &
   [ STEM < "’laa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_good_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_good_a_rel" ].
 
 t’iij := attrib-adj-lex &
   [ STEM < "t’iij" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_some_of_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_some+of_a_rel" ].
 
 ;;; Verbs
 
@@ -147,15 +147,15 @@ dladahlda := itr-acc-verb-lex &
 
 7ists’a := itr-acc-verb-lex &
   [ STEM < "7ists’a" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_come_in_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_come+in_v_rel" ].
 
 qats’a := itr-acc-verb-lex &
   [ STEM < "qats’a" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_come_in_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_come+in_v_rel" ].
 
 k%27untl%27aa := itr-acc-verb-lex &
   [ STEM < "k'untl'aa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_get_burned_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_get+burned_v_rel" ].
 
 tlagaayda := tr-verb-lex &
   [ STEM < "tlagaayda" >,
@@ -171,7 +171,7 @@ taa := tr-verb-lex &
 
 daang := tr-verb-lex &
   [ STEM < "daang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_throw_away_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_throw+away_v_rel" ].
 
 sdahla := tr-verb-lex &
   [ STEM < "sdahla" >,
@@ -195,27 +195,27 @@ rad := itr-nom-verb-lex &
 
 srid_1 := itr-nom-verb-lex &
   [ STEM < "srid" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_red_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_red_v_rel" ].
 
 ts’uudalaa_1 := itr-nom-verb-lex &
   [ STEM < "ts’uudalaa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_small_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_small_v_rel" ].
 
 7iw7aan_1 := itr-nom-verb-lex &
   [ STEM < "7iw7aan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_big_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_big_v_rel" ].
 
 q’iigaa_1 := itr-nom-verb-lex &
   [ STEM < "q’iigaa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_old_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_old_v_rel" ].
 
 xaw%2Eula_1 := itr-nom-verb-lex &
   [ STEM < "xaw.ula" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_delicious_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_delicious_v_rel" ].
 
 ’laa_2 := itr-nom-verb-lex &
   [ STEM < "’laa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_be_good_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_good_v_rel" ].
 
 qaaguhlaa%aa := itr-nom-verb-lex &
   [ STEM < "qaaguhlaa.aa" >,
@@ -278,15 +278,15 @@ dii_2 := inalienable-poss-pron-det-lex &
 
 gam := neg-adv-lex &
   [ STEM < "gam" >,
-    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "neg_a_rel" ].
 
 gah := neg-adv-lex &
   [ STEM < "gah" >,
-    SYNSEM.LKEYS.KEYREL.PRED "neg_emphatic_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "neg+emph_a_rel" ].
 
 neesdagaang%an := adverb-lex &
   [ STEM < "neesdagaang.an" >,
-    SYNSEM.LKEYS.KEYREL.PRED "right_away_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_right+away_a_rel" ].
 
 
 ;;; Conjunctions
