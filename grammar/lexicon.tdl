@@ -296,6 +296,8 @@ neesdagaang%an := adverb-lex &
   [ STEM < "neesdagaang.an" >,
     SYNSEM.LKEYS.KEYREL.PRED "_right+away_a_rel" ].
 
+gu := question-clitic-lex &
+    [STEM <"gu">].
 
 ;;; Conjunctions
 
