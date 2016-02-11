@@ -109,6 +109,10 @@ naan := inalienable-noun-lex &
   [ STEM < "naan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_grandmother_n_rel" ].
 
+7aanàa := locative-noun-lex &
+  [ STEM < "7aanàa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_in+next+room_n_rel" ].
+
 ;;; Adjectives
 
 srid_2 := attrib-adj-lex &
@@ -221,6 +225,10 @@ qaaguhlaa%aa := itr-nom-verb-lex &
   [ STEM < "qaaguhlaa.aa" >,
     SYNSEM.LKEYS.KEYREL.PRED "qaaguhlaa.aa" ].
 
+7iij2 := tr-verb-lex &
+  [ STEM < "7iij" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
+
 ;;; Auxiliaries
 
 tlaagaang := inceptive-aux-lex &
@@ -229,7 +237,7 @@ tlaagaang := inceptive-aux-lex &
 
 ;;; Copulas
 
-7iij := copula-cop-lex &
+7iij := adp-comp-copula-verb-lex &
   [ STEM < "7iij" > ].
 
 ;;; Determiners
