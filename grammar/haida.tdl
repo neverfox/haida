@@ -103,7 +103,6 @@ high-pot-null := high-pot-list & null.
 case := *top*.
 nom := case.  ; nom
 acc := case.  ; acc
-loc := case.  ; loc
 
 ;;; Pernum
 
@@ -697,11 +696,12 @@ bare-np-phrase := basic-bare-np-phrase &
     HEAD-DTR.SYNSEM.OPT-CS #optcs,
     HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST #optcs ].
 
+; while these are called locative, there is not locative case, just a class of nouns
 locative-pp-phrase := unary-phrase &
   [ SYNSEM [ LOCAL.CAT [ HEAD adp & [ MOD < [ SYNSEM.LOCAL intersective-mod &
                                                     [ CAT.HEAD verb ] ] > ],
               VAL [ COMPS < >,
-              SUBJ < >, 
+              SUBJ < >,
               SPR < > ]]],
     C-CONT [ HOOK [ LTOP #ltop,
         INDEX #index,
@@ -713,7 +713,7 @@ locative-pp-phrase := unary-phrase &
          ARG1 #xarg,
          ARG2 #dtr ] ! >,
        HCONS < ! ! >  ],
-    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun & [CASE loc],
+    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun,
           VAL.SPR < > ],
           CONT.HOOK [ INDEX #dtr ]]] > ].
 
