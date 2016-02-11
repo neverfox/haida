@@ -374,6 +374,13 @@ attr-only-adj-lex := attr-adj-lex &
   [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
                        VAL.SUBJ < > ] ].
 
+poss-pron-adj-lex := attr-adj-lex &
+  [ SYNSEM [ LOCAL [ CAT.HEAD.MOD < [ LOCAL.CONT.HOOK [ INDEX [ COG-ST uniq+fam+act ],
+                                                        LTOP #lbl ] ] >,
+                     CONT.RELS < ! [ PRED "exist_q_rel" ],
+                                   [ PRED "poss_rel",
+                                     LBL #lbl ] ! > ] ] ].
+
 ;;; Others
 
 ;;; Determiners
@@ -412,31 +419,6 @@ dem-det-lex := determiner-lex-supertype &
                                      #altkeyrel ! > ] ],
             LKEYS.ALTKEYREL #altkeyrel & arg1-ev-relation & [ LBL #lbl,
                                                               ARG1 #arg ] ] ].
-
-poss-pron-det-lex := determiner-lex-supertype &
-  [ SYNSEM [ LOCAL [ CAT.VAL.SPEC < [ LOCAL.CONT.HOOK [ INDEX #arg1 & [ COG-ST uniq+fam+act ],
-                                                        LTOP #lbl ] ] >,
-                     CONT [ RELS < ! [ PRED "exist_q_rel" ],
-                                     arg12-ev-relation & [ PRED "poss_rel",
-                                                           LBL #lbl,
-                                                           ARG1 #arg1,
-                                                           ARG2 #arg2 ],
-                                     quant-relation & [ PRED "exist_q_rel",
-                                                        ARG0 #arg2,
-                                                        RSTR #harg ],
-                                     #altkeyrel ! >,
-                            HCONS < ! [ ], qeq & [ HARG #harg,
-                                                   LARG #lbl2 ] ! > ] ],
-            LKEYS.ALTKEYREL #altkeyrel & noun-relation & [ PRED "pron_rel",
-                                                           LBL #lbl2,
-                                                           ARG0 #arg2 & [ COG-ST activ-or-more,
-                                                                          SPECI + ] ] ] ].
-
-alienable-poss-pron-det-lex := poss-pron-det-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY +].
-
-inalienable-poss-pron-det-lex := poss-pron-det-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY -].
 
 ;;; Type for adverbs
 

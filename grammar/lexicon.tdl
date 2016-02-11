@@ -262,23 +262,25 @@ waasgee := dem-det-lex &
     SYNSEM.LKEYS.ALTKEYREL [ PRED "distal+dem_a_rel",
                              ARG1.PNG.PERNUM 3pl ] ].
 
-gyaagan := alienable-poss-pron-det-lex &
+;;; Possessive Modifiers
+
+gyaagan := basic-intersective-adjective-lex &
   [ STEM < "gyaagan" >,
     SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
 
-diinaa := alienable-poss-pron-det-lex &
+diinaa := basic-intersective-adjective-lex &
   [ STEM < "diinaa" >,
     SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
 
-daangaa := alienable-poss-pron-det-lex &
+daangaa := basic-intersective-adjective-lex &
   [ STEM < "daangaa" >,
     SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 2sg ].
 
-’laangaa := alienable-poss-pron-det-lex &
+’laangaa := poss-pron-adj-lex &
   [ STEM < "’laangaa" >,
     SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 3sg ].
 
-dii_2 := inalienable-poss-pron-det-lex &
+dii_2 := basic-intersective-adjective-lex &
   [ STEM < "dii" >,
     SYNSEM.LKEYS.ALTKEYREL.ARG0.PNG.PERNUM 1sg ].
 
