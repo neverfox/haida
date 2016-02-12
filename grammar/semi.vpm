@@ -64,20 +64,21 @@ PNG.PERNUM : PNG.PERNUM
 PNG.GEND : PNG.GEND
   * <> *
 
-E.TENSE : E.TENSE
+E.TENSE : TENSE
   present <> present
   nonpast <> nonpast
   past <> past
   * <> *
 
-E.ASPECT : E.ASPECT
+E.ASPECT : ASPECT
   perfective <> perfective
   progressive <> progressive
   frequentive <> frequentive
   imperfective <> imperfective
   inceptive <> inceptive
+  perfective << [e]
   * <> *
 
-E.MOOD : E.MOOD
+E.MOOD : MOOD
   future <> future
   * <> *
