@@ -26,6 +26,7 @@ png :+ [ EVIDENTIAL bool,
 noun :+ [ CASE case ].
 
 head :+ [ INT bool,
+    INF bool,
     AUX bool,
     PRD bool,
     NEGATED luk,
@@ -622,6 +623,11 @@ modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & int_tense-rul
 fut-lex-rule := modal-2-lex-rule-super &
   [ INFLECTED.FUT-FLAG +,
     SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD future ].
+
+infin-lex-rule := modal-2-lex-rule-super &
+  [ INFLECTED.FUT-FLAG #fut,
+    DTR.INFLECTED.FUT-FLAG #fut,
+    SYNSEM.LOCAL.CAT.HEAD.INF + ].
 
 evid-lex-rule := modal-2-lex-rule-super &
   [ INFLECTED.FUT-FLAG #fut,
