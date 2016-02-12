@@ -45,8 +45,8 @@ ts’at’sa := alienable-noun-lex &
   [ STEM < "ts’at’sa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_carrot_n_rel" ].
 
-x-aay := alienable-noun-lex &
-  [ STEM < "x-aay" >,
+x := alienable-noun-lex &
+  [ STEM < "x" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
 
 taanaanee := alienable-noun-lex &
@@ -60,6 +60,10 @@ ts’agts’ag := alienable-noun-lex &
 gid := alienable-noun-lex &
   [ STEM < "gid" >,
     SYNSEM.LKEYS.KEYREL.PRED "_child_n_rel" ].
+
+buud := alienable-noun-lex &
+  [ STEM < "buud" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_boat_n_rel" ].
 
 hlaa := 1sg-nom-pron-noun-lex &
   [ STEM < "hlaa" >,
@@ -104,6 +108,10 @@ Bill := proper-noun-lex &
 Mary := proper-noun-lex &
   [ STEM < "Mary" >,
     SYNSEM.LKEYS.KEYREL.PRED "_Mary_n_rel" ].
+
+Joe := proper-noun-lex &
+  [ STEM < "Joe" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Joe_n_rel" ].
 
 naan := inalienable-noun-lex &
   [ STEM < "naan" >,
@@ -319,3 +327,10 @@ gyaa := adposition-lex &
   [ STEM < "gyaa" >,
     SYNSEM.LKEYS.KEYREL [ PRED "poss_rel",
                           ARG1.COG-ST uniq+fam+act ] ].
+
+;;; Postpositions
+
+gwa%a := adposition-lex &
+  [ STEM < "gwa.a" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_on_p_rel" ].
+
