@@ -109,9 +109,6 @@ naan := inalienable-noun-lex &
   [ STEM < "naan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_grandmother_n_rel" ].
 
-7aanàa := locative-noun-lex &
-  [ STEM < "7aanàa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_in+next+room_n_rel" ].
 
 ;;; Adjectives
 
