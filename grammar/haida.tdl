@@ -35,6 +35,9 @@ synsem :+ [ NEG-SAT luk ].
 canonical-synsem :+
  [ L-PERIPH bool ].
 
+non-local :+ 			
+ [ YNQ 0-1-dlist ].
+
 basic-verb-lex :+ [ SYNSEM.NEG-SAT na-or-+ ].
 
 basic-head-comp-phrase :+ [ HEAD-DTR.SYNSEM [ NEG-SAT #ns,
@@ -50,12 +53,25 @@ basic-head-subj-phrase :+ [ SYNSEM.NEG-SAT #ns,
 ; clause :+ [ SYNSEM.NEG-SAT na-or-+ ].
 
 basic-binary-phrase :+
- [ SYNSEM.L-PERIPH #periph,
-   ARGS < [ SYNSEM.L-PERIPH #periph ], [SYNSEM.L-PERIPH -] > ].
-
+ [ SYNSEM [ L-PERIPH #periph,
+	    NON-LOCAL.YNQ [ LIST #list,
+                                       LAST #last ]],
+   ARGS < [ SYNSEM [ L-PERIPH #periph,
+		     NON-LOCAL.YNQ [ LIST #list,
+                                                               LAST #middle ]]], 
+		[SYNSEM [ L-PERIPH -,
+			  NON-LOCAL.YNQ [ LIST #middle,
+                                                                LAST #last]]] > ].
 head-adj-int-phrase :+
- [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.MOD < [ L-PERIPH #periph ]>,
+ [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.MOD < [ L-PERIPH #periph,
+					      LOCAL.CAT.VAL.SPR < > ]>,
    HEAD-DTR.SYNSEM.L-PERIPH #periph ].
+
+basic-zero-arg :+ [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
+basic-one-arg :+ [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
+basic-two-arg :+ [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
+basic-three-arg :+ [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
+intersective-mod-lex :+ [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
 
 ; This grammar includes head-modifier rules.  To keep
 ; out extraneous parses, constrain the value of MOD on
@@ -305,7 +321,7 @@ itr-verb-lex := verb-lex.
 
 itr-nom-verb-lex := itr-verb-lex & nom-intransitive-verb-lex.
 
-sentenal-verb-lex := verb-lex & clausal-second-arg-trans-lex-item &
+sentential-verb-lex := verb-lex & clausal-second-arg-trans-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun ],
              #comps &
@@ -314,10 +330,10 @@ sentenal-verb-lex := verb-lex & clausal-second-arg-trans-lex-item &
                            HEAD verb ],
 		       CONT.HOOK.INDEX.SF prop-or-ques]] > ].
 
-prop-sent-verb-lex := sentenal-verb-lex &
+prop-sent-verb-lex := sentential-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS  < [ LOCAL.CONT.HOOK.INDEX.SF prop ] >].
 
-ques-sent-verb-lex := sentenal-verb-lex &
+ques-sent-verb-lex := sentential-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS  < [ LOCAL.CONT.HOOK.INDEX.SF ques ] >].
 
 ;;; Auxiliaries
@@ -399,16 +415,19 @@ attr-only-adj-lex := attr-adj-lex &
   [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
                        VAL.SUBJ < > ] ].
 
+non-ynq-word := lex-item &
+  [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
+
 question-clitic-lex := no-hcons-lex-item &
- [ SYNSEM.LOCAL [ CAT [ POSTHEAD + ,
-			VAL [ SPR < >,
-			      COMPS < >,
-			      SUBJ < >,
+ [ SYNSEM [ LOCAL [ CAT [ POSTHEAD + ,
+			VAL [ SPR < >, 
+			      COMPS < >, 
+			      SUBJ < >, 
 			      SPEC < > ],
 			HEAD adv & [ MOD < [ LIGHT +,
-					     L-PERIPH +,
-					     LOCAL.CAT.VAL.SPR < > ] > ]],
-		  CONT.RELS <! !> ]].
+					     L-PERIPH + ] > ]],
+		    CONT.RELS <! !> ],
+	    NON-LOCAL.YNQ <! *top* !>]].
 
 ;;; Others
 
@@ -704,7 +723,7 @@ non-factive-lex-rule := modal-3-lex-rule-super &
 
 ; constrained for LIGHT +, high potency compliment and low potency, 3p subject -KP
 
-context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase & same-periph-unary-phrase &
+context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase & same-periph-unary-phrase & same-ynq-unary-phrase &
   [ HEAD-DTR.SYNSEM [LIGHT +,
 		     LOCAL.CAT.VAL [SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY low,
                                                                          PERNUM 3rd ],
@@ -717,7 +736,7 @@ comp-head-phrase := basic-head-1st-comp-phrase & head-final.
 
 ; created to handle optional compliments -KP
 
-context1-head-opt-comp-phrase := basic-head-opt-comp-phrase & same-periph-unary-phrase &
+context1-head-opt-comp-phrase := basic-head-opt-comp-phrase & same-periph-unary-phrase & same-ynq-unary-phrase  &
   [ SYNSEM.LIGHT -,
     HEAD-DTR.SYNSEM.LOCAL.CAT.VAL [SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
 				   COMPS < [ LOCAL.CONT.HOOK.INDEX.PNG [POTENCY low,
@@ -734,7 +753,7 @@ subj-head-phrase := decl-head-subj-phrase & head-final &
 ; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
 ; introduced to match the semantic effect of bare NPs in your language.
 
-bare-np-phrase := basic-bare-np-phrase & same-periph-unary-phrase &
+bare-np-phrase := basic-bare-np-phrase & same-periph-unary-phrase & same-ynq-unary-phrase &
   [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !>,
     HEAD-DTR.SYNSEM.OPT-CS #optcs,
     HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST #optcs ].
@@ -742,6 +761,38 @@ bare-np-phrase := basic-bare-np-phrase & same-periph-unary-phrase &
 same-periph-unary-phrase := unary-phrase &
  [ SYNSEM.L-PERIPH #periph,
    ARGS < [ SYNSEM.L-PERIPH #periph ] > ].
+
+same-ynq-unary-phrase := unary-phrase &
+  [ SYNSEM.NON-LOCAL.YNQ #ynq,
+    ARGS < [ SYNSEM.NON-LOCAL.YNQ #ynq ] > ].
+
+   ; while these are called locative, there is not locative case, just a class of nouns
+locative-pp-phrase := unary-phrase &
+  [ SYNSEM [ LOCAL.CAT [ HEAD adp & [ MOD < [ SYNSEM.LOCAL intersective-mod &
+                                                    [ CAT.HEAD verb ] ] > ],
+              VAL [ COMPS < >,
+              SUBJ < >,
+              SPR < > ]]],
+    C-CONT [ HOOK [ LTOP #ltop,
+        INDEX #index,
+        XARG #xarg ],
+       RELS < ! arg12-ev-relation &
+       [ PRED "_loc_p_rel",
+         LBL #ltop,
+         ARG0 #index,
+         ARG1 #xarg,
+         ARG2 #dtr ] ! >,
+       HCONS < ! ! >  ],
+    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun,
+          VAL.SPR < > ],
+          CONT.HOOK [ INDEX #dtr ]]] > ].
+          
+int-clause := head-only & interrogative-clause &
+  [ SYNSEM [ LOCAL.CAT [HEAD verb,
+			VAL #val ],
+                    NON-LOCAL.YNQ <! !> ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT.VAL #val,
+		      NON-LOCAL.YNQ <! *top* !> ]].
 
 ;;;;;;;;;;;;;;;;;;
 ;;; Coordination
