@@ -731,7 +731,7 @@ Vetted: s
 Judgment: g
 Phenomena: {q}
 daagu gudang
-daa-gu gudang
+daa=gu gudang
 you-Q understand
 `Do you understand it?'
 
@@ -741,7 +741,7 @@ Vetted: s
 Judgment: g
 Phenomena: {q}
 daagu gudangaa
-daa-gu gudang-gaa
+daa=gu gudang-gaa
 you-Q understand-EVID
 `Did you understand it?'
 
@@ -751,7 +751,7 @@ Vetted: s
 Judgment: g
 Phenomena: {q}
 daagu gudang7as
-daa-gu gudang-.asa
+daa=gu gudang-.asa
 you-Q understand-FUT
 `Will you understand it?'
 
@@ -761,7 +761,7 @@ Vetted: f
 Judgment: u
 Phenomena: {q}
 daagu gudanggang
-daa-gu gudang-gang
+daa=gu gudang-gang
 you-Q understand-PRS
 `Do you understand it?'
 
@@ -771,7 +771,7 @@ Vetted: f
 Judgment: u
 Phenomena: {q}
 daagu gudanggan
-daa-gu gudang-gan
+daa=gu gudang-gan
 you-Q understand-PST
 `Did you understand it?'
 
@@ -781,7 +781,7 @@ Vetted: f
 Judgment: u
 Phenomena: {q}
 dii daagu gudang
-dii daa-gu gudang
+dii daa=gu gudang
 1SG.ACC you-Q understand
 `Do you understand me?'
 
@@ -791,7 +791,7 @@ Vetted: f
 Judgment: g
 Phenomena: {q}
 diigu daa gudang
-dii-gu daa gudang
+dii=gu daa gudang
 1SG.ACC-Q you understand
 `Do you understand me?'
 

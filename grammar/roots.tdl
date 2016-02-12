@@ -12,6 +12,7 @@ root := phrase &
 		     CAT [ VAL [ SUBJ < >,
                                COMPS < > ],
 			   MC +,
+			   INT -,
 			   HEAD +vj &
 			       [ FORM finite ] ] ],
 	     NON-LOCAL.YNQ 0-dlist ] ].
