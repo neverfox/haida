@@ -32,7 +32,7 @@ head :+ [ AUX bool,
 
 synsem :+ [ NEG-SAT luk ].
 
-canonical-synsem :+ 
+canonical-synsem :+
  [ L-PERIPH bool ].
 
 basic-verb-lex :+ [ SYNSEM.NEG-SAT na-or-+ ].
@@ -365,7 +365,7 @@ inceptive-aux-lex := arg-comp-aux-with-pred &
 
 ;;; Copulas
 
-copula-verb-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 &
+copula-verb-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 & verb-lex &
   [ SYNSEM.LOCAL [ CAT.VAL [ SUBJ < [ LOCAL [ CONT.HOOK.INDEX #xarg,
                                               CAT [ VAL [ SPR < >,
                                                           COMPS < > ],
@@ -401,9 +401,9 @@ attr-only-adj-lex := attr-adj-lex &
 
 question-clitic-lex := no-hcons-lex-item &
  [ SYNSEM.LOCAL [ CAT [ POSTHEAD + ,
-			VAL [ SPR < >, 
-			      COMPS < >, 
-			      SUBJ < >, 
+			VAL [ SPR < >,
+			      COMPS < >,
+			      SUBJ < >,
 			      SPEC < > ],
 			HEAD adv & [ MOD < [ LIGHT +,
 					     L-PERIPH +,
@@ -695,7 +695,7 @@ modal-3-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-
         [ INFLECTED #infl &
                     [ FIN-FLAG + ] ] ].
 
-non-factive-lex-rule := modal-3-lex-rule-super & 
+non-factive-lex-rule := modal-3-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.MC - ].
 
 ;;;;;;;;;;;;;;;;;;;
@@ -742,7 +742,7 @@ bare-np-phrase := basic-bare-np-phrase & same-periph-unary-phrase &
 same-periph-unary-phrase := unary-phrase &
  [ SYNSEM.L-PERIPH #periph,
    ARGS < [ SYNSEM.L-PERIPH #periph ] > ].
-          
+
 ;;;;;;;;;;;;;;;;;;
 ;;; Coordination
 ;;;;;;;;;;;;;;;;;;
