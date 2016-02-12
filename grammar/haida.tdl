@@ -306,15 +306,20 @@ itr-verb-lex := verb-lex.
 
 itr-nom-verb-lex := itr-verb-lex & nom-intransitive-verb-lex.
 
-sentenal-verb-lex := main-verb-lex & clausal-second-arg-trans-lex-item &
+sentenal-verb-lex := verb-lex & clausal-second-arg-trans-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun ],
              #comps &
              [ LOCAL [ CAT [ VAL [ SUBJ < >,
                                    COMPS < > ],
-                           HEAD verb ]]] >,
-    INFLECTED.TRANSITIVE-VERB-FLAG + ].
+                           HEAD verb ],
+		       CONT.HOOK.INDEX.SF prop-or-ques]] > ].
 
+prop-sent-verb-lex := sentenal-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS  < [ LOCAL.CONT.HOOK.INDEX.SF prop ] >].
+
+ques-sent-verb-lex := sentenal-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS  < [ LOCAL.CONT.HOOK.INDEX.SF ques ] >].
 
 ;;; Auxiliaries
 

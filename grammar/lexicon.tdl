@@ -185,7 +185,7 @@ tla%2Eàwhla := tr-verb-lex &
   [ STEM < "tla.àwhla" >,
     SYNSEM.LKEYS.KEYREL.PRED "_build_v_rel" ].
 
-gudang := tr-verb-lex &
+gudang_1 := tr-verb-lex &
   [ STEM < "gudang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_understand_v_rel" ].
 
@@ -228,6 +228,18 @@ qaaguhlaa%aa := itr-nom-verb-lex &
 7iij_1 := tr-verb-lex &
   [ STEM < "7iij" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
+
+gudang_2 := prop-sent-verb-lex &
+  [ STEM < "gudang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_id_rel" ].
+
+suu := prop-sent-verb-lex &
+  [ STEM < "suu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_say_v_id_rel" ].
+
+kyaanang := ques-sent-verb-lex &
+  [ STEM < "kyaanang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ask_v_id_rel" ].
 
 ;;; Auxiliaries
 
