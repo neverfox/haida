@@ -8,3 +8,9 @@ non-3pl-intrans-lex := non-3pl-intrans-lex-rule.
 non-fin-lex := non-fin-lex-rule.
 
 fin-lex := fin-lex-rule.
+
+int-lex := int-lex-rule.
+
+decl-lex := decl-lex-rule.
+
+int_present-lex := int_present-lex-rule.
