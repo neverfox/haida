@@ -55,8 +55,7 @@ basic-binary-phrase :+
 
 head-adj-int-phrase :+
  [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.MOD < [ L-PERIPH #periph ]>,
-   HEAD-DTR.SYNSEM [ L-PERIPH #periph,
-		     LOCAL.CAT.VAL.SPR < > ]].
+   HEAD-DTR.SYNSEM.L-PERIPH #periph ].
 
 ; This grammar includes head-modifier rules.  To keep
 ; out extraneous parses, constrain the value of MOD on
@@ -407,7 +406,8 @@ question-clitic-lex := no-hcons-lex-item &
 			      SUBJ < >, 
 			      SPEC < > ],
 			HEAD adv & [ MOD < [ LIGHT +,
-					     L-PERIPH + ] > ]],
+					     L-PERIPH +,
+					     LOCAL.CAT.VAL.SPR < > ] > ]],
 		  CONT.RELS <! !> ]].
 
 ;;; Others
@@ -695,7 +695,8 @@ modal-3-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-
         [ INFLECTED #infl &
                     [ FIN-FLAG + ] ] ].
 
-non-factive-lex-rule := modal-3-lex-rule-super.
+non-factive-lex-rule := modal-3-lex-rule-super & 
+  [ SYNSEM.LOCAL.CAT.MC - ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
@@ -724,6 +725,11 @@ context1-head-opt-comp-phrase := basic-head-opt-comp-phrase & same-periph-unary-
 
 subj-head-phrase := decl-head-subj-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
+
+;non-mc-subj-head-phrase := decl-head-subj-phrase & head-final &
+;  [ SYNSEM.LOCAL.CAT.MC -,
+;    INFLECTED.TENSE-FLAG na-or--,
+;    HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
 
 ; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
 ; introduced to match the semantic effect of bare NPs in your language.

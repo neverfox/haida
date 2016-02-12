@@ -17,6 +17,8 @@ comp-head := comp-head-phrase.
 
 subj-head := subj-head-phrase.
 
+non-mc-subj-head := non-mc-subj-head-phrase.
+
 head-spec := head-spec-phrase.
 
 bare-np := bare-np-phrase.
