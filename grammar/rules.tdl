@@ -36,5 +36,3 @@ vp3-bottom-coord := vp3-bottom-coord-rule.
 s3-top-coord := s3-top-coord-rule.
 
 s3-bottom-coord := s3-bottom-coord-rule.
-
-locative-pp := locative-pp-phrase.

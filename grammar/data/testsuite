@@ -1021,7 +1021,7 @@ Vetted: s
 Judgement: g
 Phenomena: {crd}
 gyùudanee 7isgyaan xaay 7ists’agan
-gyùudan-ee 7isgyaan x-aay 7ists’a-gan
+gyùudan-ee 7isgyaan x-ee 7ists’a-gan
 horse-DEF and dog-DEF come.in-PST
 `The horse and the dog came in.'
 
@@ -1614,3 +1614,13 @@ gah gam gyùudanee ts’agts’aggee qinggan
 gah gam gyùudan-ee ts’agts’ag-ee qing-gan
 NEG NEG horse-DEF wagon-DEF see-PST
 `The horse absolutely did not see the wagon.'
+
+# 163 non-verbal predicates - PP, adapted from a:1094
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {cop}
+Joe 7isgyaan xaay buudgeegwa.a 7iijang
+Joe 7isgyaan x-ee buud-ee=gwa.a 7iij-gang
+Joe and dog-DEF boat-DEF=on be-PRS
+`Joe and the dog are on the boat.'

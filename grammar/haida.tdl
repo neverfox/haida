@@ -736,27 +736,6 @@ bare-np-phrase := basic-bare-np-phrase & same-periph-unary-phrase &
 same-periph-unary-phrase := unary-phrase &
  [ SYNSEM.L-PERIPH #periph,
    ARGS < [ SYNSEM.L-PERIPH #periph ] > ].
-
-   ; while these are called locative, there is not locative case, just a class of nouns
-locative-pp-phrase := unary-phrase &
-  [ SYNSEM [ LOCAL.CAT [ HEAD adp & [ MOD < [ SYNSEM.LOCAL intersective-mod &
-                                                    [ CAT.HEAD verb ] ] > ],
-              VAL [ COMPS < >,
-              SUBJ < >,
-              SPR < > ]]],
-    C-CONT [ HOOK [ LTOP #ltop,
-        INDEX #index,
-        XARG #xarg ],
-       RELS < ! arg12-ev-relation &
-       [ PRED "_loc_p_rel",
-         LBL #ltop,
-         ARG0 #index,
-         ARG1 #xarg,
-         ARG2 #dtr ] ! >,
-       HCONS < ! ! >  ],
-    ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun,
-          VAL.SPR < > ],
-          CONT.HOOK [ INDEX #dtr ]]] > ].
           
 ;;;;;;;;;;;;;;;;;;
 ;;; Coordination
