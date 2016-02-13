@@ -163,8 +163,8 @@ qats’a := itr-acc-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_come+in_v_rel" ].
 
 k%27untl%27aa := itr-acc-verb-lex &
-  [ STEM < "k'untl'aa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_get+burned_v_rel" ].
+  [ STEM < "k’untl’aa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_get_burned_v_rel" ].
 
 tlagaayda := tr-verb-lex &
   [ STEM < "tlagaayda" >,

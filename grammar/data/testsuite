@@ -1470,8 +1470,8 @@ Source: a:430
 Vetted: s
 Judgement: g
 Phenomena: {emb-d}
-Bill gid k'untl'aa.ang ’la suugan
-Bill gid k'untl'aa-.ang ’laa suu-gan
+Bill gid k’untl’aa.ang ’la suugan
+Bill gid k’untl’aa-.ang ’laa suu-gan
 Bill child get.burned-NF 3p say-PST
 `Bill said that his child got burned.'
 
@@ -1480,8 +1480,8 @@ Source: a:430
 Vetted: s
 Judgement: g
 Phenomena: {emb-d}
-Bill gid k'untl'aa.ang suugan
-Bill gid k'untl'aa-.ang suu-gan
+Bill gid k’untl’aa.ang suugan
+Bill gid k’untl’aa-.ang suu-gan
 Bill child get.burned-NF say-PST
 `Bill said that his child got burned.'
 
@@ -1490,8 +1490,8 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {emb-d}
-Bill suugan gid k'untl'aa.ang
-Bill suu-gan gid k'untl'aa-.ang
+Bill suugan gid k’untl’aa.ang
+Bill suu-gan gid k’untl’aa-.ang
 Bill say-PST child get.burned-NF
 `Bill said that his child got burned.'
 
@@ -1500,8 +1500,8 @@ Source: author
 Vetted: f
 Judgement: u
 Phenomena: {emb-d}
-gid k'untl'aa.ang Bill suugan
-gid k'untl'aa-.ang Bill suu-gan
+gid k’untl’aa.ang Bill suugan
+gid k’untl’aa-.ang Bill suu-gan
 child get.burned-NF Bill say-PST
 `Bill said that his child got burned.'
 
