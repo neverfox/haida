@@ -238,6 +238,10 @@ qaaguhlaa%aa := itr-nom-verb-lex &
   [ STEM < "7iij" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
 
+7isdaa := tr-verb-lex &
+  [ STEM < "7isdaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_do_v_id_rel" ].
+
 gudang_2 := prop-sent-verb-lex &
   [ STEM < "gudang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_think_v_id_rel" ].
@@ -255,6 +259,10 @@ kyaanang := ques-sent-verb-lex &
 tlaagaang := inceptive-aux-lex &
   [ STEM < "tlaagaang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_start_v_rel" ].
+
+hlangaa := inceptive-aux-lex &
+  [ STEM < "hlangaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_can_v_rel" ].
 
 ;;; Copulas
 
