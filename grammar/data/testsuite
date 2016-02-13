@@ -1125,7 +1125,7 @@ Phenomena: {cop}
 be-PRS mallard bird
 `A mallard is a bird.'
 
-#113 non-verbal predicate - pp - adapted from p114 (iv)
+#113 non-verbal predicate - "locative" NP - adapted from p114 (iv)
 Source: author
 Vetted: f
 Judgement: g
@@ -1135,7 +1135,7 @@ xa.a 7aanàa 7iij-gang
 mallard in.next.room be-PRS
 `A mallard is in the next room.'
 
-#114 non-verbal predicate - pp - adapted from p114 (iv)
+#114 non-verbal predicate - "locative" NP - adapted from p114 (iv)
 Source: author
 Vetted: f
 Judgement: u
@@ -1145,7 +1145,7 @@ xa.a 7iij-gang 7aanàa
 mallard be-PRS in.next.room
 `A mallard is in the next room.'
 
-#115 non-verbal predicate - pp - adapted from p114 (iv)
+#115 non-verbal predicate - "locative" NP - adapted from p114 (iv)
 Source: author
 Vetted: f
 Judgement: u
@@ -1155,7 +1155,7 @@ xa.a 7aanàa
 mallard in.next.room
 `A mallard is in the next room.'
 
-#116 non-verbal predicate - pp - adapted from p114 (iv)
+#116 non-verbal predicate - "locative" NP - adapted from p114 (iv)
 Source: author
 Vetted: f
 Judgement: u
@@ -1165,7 +1165,7 @@ Phenomena: {cop}
 be-PRS mallard in.next.room
 `A mallard is in the next room.'
 
-#117 non-verbal predicate - pp - adapted from p114 (iv)
+#117 non-verbal predicate - "locative" NP - adapted from p114 (iv)
 Source: author
 Vetted: f
 Judgement: u
@@ -1624,3 +1624,33 @@ Joe 7isgyaan xaay buudgeegwa.a 7iijang
 Joe 7isgyaan x-ee buud-ee=gwa.a 7iij-gang
 Joe and dog-DEF boat-DEF=on be-PRS
 `Joe and the dog are on the boat.'
+
+# 164 embedded NVP (adapted from a:211, a:430)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {emb-d}
+xa.a xid7iid 7is.ang hla suugan
+xa.a xid7iid 7iij-.ang hlaa suu-gan
+mallard bird be-NF 1sg say-PST
+`I said that a mallard is a bird.'
+
+# 165 embedded NVP (adapted from a:430)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {emb-d}
+gyùudanee 7iw7aan.ang hla suugan
+gyùudan-ee 7iw7aan-.ang hlaa suu-gan
+horse-DEF be.big-NF 1sg say-PST
+`I said that the horse is big.'
+
+# 166 embedded NVP (adapted from a:430)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {emb-d}
+Joe 7isgyaan xaay buudgeegwa.a 7is.ang hla suugan
+Joe 7isgyaan x-ee buud-ee=gwa.a 7iij-.ang hlaa suu-gan
+Joe and dog-DEF boat-DEF=on be-NF 1sg say-PST
+`I said that Joe and the dog are on the boat.'
