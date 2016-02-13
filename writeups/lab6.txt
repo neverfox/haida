@@ -496,7 +496,7 @@ The implementation of NP predicates in Haida is very simple. We added a transiti
 
 This implementation yields the desired semantics, correlate to those of "the cat is the dog".
 
-There is a class of nouns that act like PPS, but do not inflect. This makes them close to the category of locative NPs
+There is a class of nouns that act like PPs, but do not inflect. This makes them close to the category of locative NPs
 
 #113 non-verbal predicate - "locative" NP - adapted from p114 (iv)
 Source: author
@@ -599,7 +599,7 @@ The following generator rule was required in trigger.mtr
 
 7iij_2_gr := generator_rule & [ CONTEXT.RELS <! [ PRED "~.*_p_" ] !>, FLAGS.TRIGGER "7iij_2" ].
 
-The copula type could also be used for our linker posetion word.
+The copula type could also be used for our linker possession word.
 
 gwa%a := adposition-lex &
   [ STEM < "gwa.a" >,
