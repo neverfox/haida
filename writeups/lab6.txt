@@ -1,0 +1,403 @@
+Lab 4 Write Up
+Author: Kristen Piepgrass
+Partner: Roman Pearah
+Language: Haida
+Date: February 12, 2016
+
+Matrix yes-no questions.
+
+Yes/no questions in Haida are marked with a clitic after the first constituent. In addition, the head verb in a 
+yes/no question lacks its position four and five suffixes. (I remind you that the Haida verb complex contains a number
+of ordered suffixes, including negation, plural, modal, tense etc. tenses occcur in the fourth and fifth positions). 
+As a result, a present tense question doesn't have a tense marker. The future tense marker is in the third suffix position, so
+it is unaffected. But with the past tense marker omitted, yes/no questions in the past tense are marked with the 
+evidential modal. Each of these tenses are represented in the data below.
+
+# 73 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudang
+daa=gu gudang
+you=Q understand
+`Do you understand it?'
+
+# 74 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudangaa
+daa=gu gudang-gaa
+you=Q understand-EVID
+`Did you understand it?'
+
+# 75 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudang7as
+daa=gu gudang-.asa
+you=Q understand-FUT
+`Will you understand it?'
+
+# 79 yes/no questions. clitic in wrong position
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {q}
+diigu daa gudang
+dii=gu daa gudang
+1SG.ACC=Q you understand
+`Do you understand me?'
+
+
+It is worth noting that the following examples are ungrammatical, due either to the position of the clitic or the
+presence of a position 3 or 4 (such as a past or present tense) suffix.
+
+# 76 yes/no questions. illegal present tense marker
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+daagu gudanggang
+daa=gu gudang-gang
+you=Q understand-PRS
+`Do you understand it?'
+
+# 77 yes/no questions. illegal past tense marker
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+daagu gudanggan
+daa=gu gudang-gan
+you=Q understand-PST
+`Did you understand it?'
+
+# 78 yes/no questions. clitic in wrong position
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+dii daagu gudang
+dii daa=gu gudang
+1SG.ACC you=Q understand
+`Do you understand me?'
+
+According to Enrico, the use of negation in a yes/no question is awkward and speakers of Haida offer alternatives,
+rather than negation. For example, one would not say "Is Bill here yet? Did he not come?", but rather "Is Bill
+here? Or is he still at home?"
+
+There are two steps to this implementation, first the second position clitic, and second, the tense. I will begin
+by discussing the second position clitic.
+
+To ensure that the clitic appears only after the first constituent, we added the boolean value L-PERIPH to
+haida.tdl:
+
+canonical-synsem :+ 
+ [ L-PERIPH bool ].
+ 
+And constrained binary and unary rules to copy the feature:
+ 
+basic-binary-phrase :+
+ [ SYNSEM [ L-PERIPH #periph,
+	    NON-LOCAL.YNQ [ LIST #list,
+                                       LAST #last ]],
+   ARGS < [ SYNSEM [ L-PERIPH #periph,
+		     NON-LOCAL.YNQ [ LIST #list,
+                                                               LAST #middle ]]], 
+		[SYNSEM [ L-PERIPH -,
+			  NON-LOCAL.YNQ [ LIST #middle,
+                                                                LAST #last]]] > ].
+   
+same-periph-unary-phrase := unary-phrase &
+ [ SYNSEM.L-PERIPH #periph,
+   ARGS < [ SYNSEM.L-PERIPH #periph ] > ].
+ 
+It was also necessary to add a YNQ feature and to constrain the basic-binary phrase to collect the YNQ
+feature from both daughters as shown in the tdl for basic-binary-phrase above.
+
+non-local :+
+  [ YNQ 0-1-dlist ].
+ 
+We added a question clitic lex that selects for a SPR <> modifier and that is LPERIPH +
+
+question-clitic-lex := no-hcons-lex-item &
+ [ SYNSEM [ LOCAL [ CAT [ POSTHEAD + ,
+			VAL [ SPR < >, 
+			      COMPS < >, 
+			      SUBJ < >, 
+			      SPEC < > ],
+			HEAD adv & [ MOD < [ LIGHT +,
+					     L-PERIPH +,
+					     LOCAL.CAT.VAL.SPR < > ] > ]],
+		    CONT.RELS <! !> ],
+	    NON-LOCAL.YNQ <! *top* !>]].
+		
+We implimented the clitic "gu" as this type in our lexicon.
+
+It was also necessary to create a non-ynq-word lex item so that other words would have an empty YNQ value.
+We implemented this on other arg and mod types as follows.
+
+non-ynq-word := lex-item &
+  [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
+  
+basic-zero-arg :+ [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
+basic-one-arg :+ [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
+basic-two-arg :+ [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
+basic-three-arg :+ [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
+intersective-mod-lex :+ [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
+
+This implementation successfully restricts the clitic to the second position, attaching to the first argument
+of the yes/no question, per the examples given above.
+
+Next, we implimented the tense system necessary for yes/no questions. To do this, we created a question rule
+with a null suffix to add the feature INT + to questions and then route verbs to either an int tense track or
+a regular (declarative for our current purposes) track.
+
+question-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & modal-3-rule-dtr &
+  [ INFLECTED [ QUESTION-FLAG +,
+                INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                FUT-FLAG #fut,
+                COG-ST-FLAG #cog-st,
+                FINITE-FLAG #finite,
+                NUM-FLAG #num,
+                FIN-FLAG #fin ],
+    DTR question-rule-dtr &
+        [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      FUT-FLAG #fut,
+                      COG-ST-FLAG #cog-st,
+                      FINITE-FLAG #finite,
+                      NUM-FLAG #num,
+                      FIN-FLAG #fin ] ] ].
+
+int-lex-rule := int_tense-rule-dtr & question-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT.INT + ].
+
+decl-lex-rule := question-lex-rule-super & tense-rule-dtr &
+  [ SYNSEM.LOCAL.CAT.INT - ].
+
+int_tense-lex-rule-super := add-only-no-ccont-rule &
+  [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG +,
+                NUM-FLAG #num,
+                FUT-FLAG #fut,
+                QUESTION-FLAG #question,
+                COG-ST-FLAG #cog-st,
+                FINITE-FLAG #finite,
+                FIN-FLAG #fin,
+                TRANSITIVE-VERB-FLAG #transitive-verb ],
+    DTR int_tense-rule-dtr &
+        [ INFLECTED [ NUM-FLAG #num,
+                      FUT-FLAG #fut,
+                      QUESTION-FLAG #question,
+                      COG-ST-FLAG #cog-st,
+                      FINITE-FLAG #finite,
+                      FIN-FLAG #fin,
+                      TRANSITIVE-VERB-FLAG #transitive-verb ] ] ].
+
+for the int_tense track, we added three new tenses- past, present and future:
+
+int_past-lex-rule := infl-lex-rule & int_tense-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past ].
+
+int_present-lex-rule := const-lex-rule & int_tense-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE present ].
+
+int_future-lex-rule := infl-lex-rule & int_tense-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD future ]. 
+  
+In order to get the clitic and the tense to work in tandem, we took a few steps. Before describing the 
+steps we took, it is important to note two things: First- there are no examples in Enrico (that we can
+find) that show a clitic inside an embedded clause. Second- Enrico does not say that Haida does or does
+not allow for inflection-only questions. Because inflection-only questions are common in the world's 
+languages, our analysis assumes that they are possible.
+
+We created an interrogative clause rule to select for INT + (supplied by the question lexical rule) and
+to constrian the YNQ on teh head daughter to *top*
+
+int-clause := head-only & interrogative-clause &
+  [ SYNSEM [ LOCAL.CAT [HEAD verb,
+		        INT -,
+			VAL #val ],
+	     NON-LOCAL.YNQ <! !> ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT [ INT +,
+				  VAL #val ],
+		      NON-LOCAL.YNQ <! *top* !> ]].
+			  
+Note that we constrained the mother note to INT- and changed the root symbol to select for INT-, so that
+the root has to be a declarative or have gone through the int clause rule. The YNQ value constrains the
+int-clause to select for an input with the gu clitic.
+
+root := phrase &
+  [ SYNSEM [ NEG-SAT na-or-+,
+	     LOCAL [ COORD -,
+		     CAT [ VAL [ SUBJ < >,
+                               COMPS < > ],
+			   MC +,
+			   INT -,
+			   HEAD +vj &
+			       [ FORM finite ] ] ],
+	     NON-LOCAL.YNQ 0-dlist ] ].
+		 
+To insure that the INT value would in fact be passed up we created the following type and made it a parent to
+all headed phrases:
+
+same-int-phrase := headed-phrase &
+  [ SYNSEM.LOCAL.CAT.INT #int,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.INT #int ].
+
+neg-adj-head-scop-phrase
+context1-decl-head-opt-subj-phrase
+comp-head-phrase
+context1-head-opt-comp-phrase 
+subj-head-phrase 
+same-int-phrase
+
+However. We still find that while the grammatical sentences parse as they should. Our analysis did not
+successfully prevent regular/declarative tense suffixes on yes/no questions. For example, the following 
+parses.
+
+# 76 yes/no questions. illegal present tense marker
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+daagu gudanggang
+daa=gu gudang-gang
+you=Q understand-PRS
+`Do you understand it?'
+
+We suspect that our declarative tenses are under constrained and intend to investigate this and other
+possibilities further.
+
+Sentenal Compliment Verbs
+
+Haida does not use a complementizer for embedded clauses and embedded clauses bear no overt marker. Instead, 
+embedded clauses are a complement of the transitive verb and occur in object position. The content of the 
+embedded clause follows standard Haida word order. We selected the verbs 'say', 'think' and 'ask'. The first
+two embed sentences as shown below.
+
+#147 embedded clauses (adapted from a:430)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {emb-d}
+dii naa.n k’untl’aa.ang hla suugan
+dii naa.n k’untl’aa-.ang hlaa suu-gan
+My grandmother get.burned-NF 1sg say-PST
+`I said that my grandmother got burned.'
+
+#148 embedded clauses (adapted from a:430)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {emb-d}
+dii naa.n k’untl’aa.ang ’la suugan
+dii naa.n k’untl’aa-.ang ’laa suu-gan
+My grandmother get.burned-NF 3p say-PST
+`He said that my grandmother got burned.'
+
+#149 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-d}
+’la suugan dii naa.n k’untl’aa.ang
+’laa suu-gan dii naa.n k’untl’aa-.ang
+He say-PST my grandmother get.burned-NF
+`He said that my grandmother got burned.'
+
+#150 embedded clauses
+Source: author
+Vetted: f
+Judgement: u
+Phenomena: {emb-d}
+dii naa.n k’untl’aagan ’la suugan
+dii naa.n k’untl’aa-gan ’laa suu-gan
+My grandmother get.burned 3p say-PST
+`He said that my grandmother got burned.'
+
+Enrico does not discuss the suffixes of embedded clauses in his analysis, but we note that sentences embedded
+by say and think bear the non-factive tense. As a result, we have added a feature NF so that embedded clauses
+will select for this tense:
+
+head :+ [ INF bool,
+    NF bool,
+    AUX bool,
+    PRD bool,
+    NEGATED luk,
+    FORM form ].
+
+non-factive-lex-rule := modal-3-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT [ MC -,
+		       HEAD.NF +]].
+
+We added the following supertype for verbs taking sentence compliments and subtype for the proposition embedding
+verb:
+
+sentential-verb-lex := verb-lex & clausal-second-arg-trans-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
+    ARG-ST < #comps &
+	     [ NEG-SAT +,
+	       LOCAL [ CAT [ VAL [ SUBJ < >,
+				   COMPS < > ],
+			     HEAD verb ],
+		       CONT.HOOK.INDEX.SF prop-or-ques ]],
+	     [ LOCAL.CAT.HEAD noun ] > ].
+
+prop-sent-verb-lex := sentential-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS   < [ LOCAL [ CONT.HOOK.INDEX.SF prop,
+					    CAT [ HEAD.NF +,
+						  MC - ]]] > ].
+
+ques-sent-verb-lex := sentential-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS  < [ LOCAL [ CONT.HOOK.INDEX.SF ques,
+					    CAT.HEAD.INF + ]] >].
+						
+However, our analysis does not work in two ways:
+First, the NF feature is not properly constrained and the verb does not actually select a clause with NF. Coincidentally,
+the non-factive suffix is the same as the negative suffix. Despite our constraint on NEG-SAT, the negative suffix is
+applied to the verb, without our negative adverb (remember that Haida negation is bi-partite) and parses. This is shown
+in the following example:
+
+#147 embedded clauses (adapted from a:430)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {emb-d}
+dii naa.n k’untl’aa.ang hla suugan
+dii naa.n k’untl’aa-.ang hlaa suu-gan
+My grandmother get.burned-NF 1sg say-PST
+`I said that my grandmother got burned.'
+
+Enrico says the embedded questions take the form of infinitive clauses. However, he analyzes only free relative clauses
+and only in respect to anaphora resolution. As a result, in his examples, the subject of the main clause is bound to
+the subject or posessor in the relative clause and according to Enrico, this requires a postposition on the verb and
+on the object of the embedded clause. This coindexing is outside the scope of this lab and we did not create an
+analysis of the postposition. Furthermore, the shared subject is required to occur in focal position, making it impossible
+for us to develop examples of grammatical sentences that could be handled by our grammar.
+
+However, we did develop a lexical type for question embedding verbs, in hopes that if we are able to develop an analysis
+for focalization, we will be able to impliment this construction. In fact, prior to the discovery that Enrico's embedded
+questions requires a co-indexed subject, we made parallel modifications to our grammar as with embedded declaratives.
+
+We added an INF bool as shown in the tdl for embedded declaritives and an infinitival lex rule.
+
+infin-lex-rule := modal-2-lex-rule-super &
+  [ INFLECTED.FUT-FLAG #fut,
+    DTR.INFLECTED.FUT-FLAG #fut,
+    SYNSEM.LOCAL.CAT.HEAD.INF + ].
+	
+ques-sent-verb-lex := sentential-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS  < [ LOCAL [ CONT.HOOK.INDEX.SF ques,
+					    CAT [ HEAD.INF +,
+						  MC - ]]] > ].
+						  
+
+ 
+ trigger warning for sentenal verbs
