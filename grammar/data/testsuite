@@ -732,7 +732,7 @@ Judgment: g
 Phenomena: {q}
 daagu gudang
 daa=gu gudang
-you-Q understand
+you=Q understand
 `Do you understand it?'
 
 # 74 yes/no questions
@@ -742,7 +742,7 @@ Judgment: g
 Phenomena: {q}
 daagu gudangaa
 daa=gu gudang-gaa
-you-Q understand-EVID
+you=Q understand-EVID
 `Did you understand it?'
 
 # 75 yes/no questions
@@ -752,7 +752,7 @@ Judgment: g
 Phenomena: {q}
 daagu gudang7as
 daa=gu gudang-.asa
-you-Q understand-FUT
+you=Q understand-FUT
 `Will you understand it?'
 
 # 76 yes/no questions. illegal present tense marker
@@ -762,7 +762,7 @@ Judgment: u
 Phenomena: {q}
 daagu gudanggang
 daa=gu gudang-gang
-you-Q understand-PRS
+you=Q understand-PRS
 `Do you understand it?'
 
 # 77 yes/no questions. illegal past tense marker
@@ -772,7 +772,7 @@ Judgment: u
 Phenomena: {q}
 daagu gudanggan
 daa=gu gudang-gan
-you-Q understand-PST
+you=Q understand-PST
 `Did you understand it?'
 
 # 78 yes/no questions. clitic in wrong position
@@ -782,7 +782,7 @@ Judgment: u
 Phenomena: {q}
 dii daagu gudang
 dii daa=gu gudang
-1SG.ACC you-Q understand
+1SG.ACC you=Q understand
 `Do you understand me?'
 
 # 79 yes/no questions. clitic in wrong position
@@ -792,7 +792,7 @@ Judgment: g
 Phenomena: {q}
 diigu daa gudang
 dii=gu daa gudang
-1SG.ACC-Q you understand
+1SG.ACC=Q you understand
 `Do you understand me?'
 
 #80 wh questions
