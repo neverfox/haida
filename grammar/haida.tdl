@@ -331,19 +331,22 @@ itr-nom-verb-lex := itr-verb-lex & nom-intransitive-verb-lex.
 sentential-verb-lex := verb-lex & clausal-second-arg-trans-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun ],
-             #comps &
-             [ LOCAL [ CAT [ VAL [ SUBJ < >,
-                                   COMPS < > ],
-                           HEAD verb ],
-		       CONT.HOOK.INDEX.SF prop-or-ques]] > ].
+	     #comps &
+	     [ NEG-SAT +,
+	       LOCAL [ CAT [ VAL [ SUBJ < >,
+				   COMPS < > ],
+			     HEAD verb ],
+		       CONT.HOOK.INDEX.SF prop-or-ques ]] > ].
 
 prop-sent-verb-lex := sentential-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS   < [ LOCAL [ CONT.HOOK.INDEX.SF prop,
-					    CAT.HEAD.NF + ]] >].
+					    CAT [ HEAD.NF +,
+						  MC - ]]] > ].
 
 ques-sent-verb-lex := sentential-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS  < [ LOCAL [ CONT.HOOK.INDEX.SF ques,
-					    CAT.HEAD.INF + ]] >].
+					    CAT.HEAD.INF +,
+						  MC - ]]] > ].
 
 ;;; Auxiliaries
 
@@ -750,7 +753,7 @@ modal-3-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-
 
 non-factive-lex-rule := modal-3-lex-rule-super &
   [ SYNSEM.LOCAL.CAT [ MC -,
-		       HEAD.INF +]].
+		       HEAD.NF +]].
 
 question-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & modal-3-rule-dtr &
   [ INFLECTED [ QUESTION-FLAG +,
