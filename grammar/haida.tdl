@@ -26,6 +26,7 @@ png :+ [ EVIDENTIAL bool,
 noun :+ [ CASE case ].
 
 head :+ [ INF bool,
+    NF bool,
     AUX bool,
     PRD bool,
     NEGATED luk,
@@ -337,10 +338,12 @@ sentential-verb-lex := verb-lex & clausal-second-arg-trans-lex-item &
 		       CONT.HOOK.INDEX.SF prop-or-ques]] > ].
 
 prop-sent-verb-lex := sentential-verb-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS  < [ LOCAL.CONT.HOOK.INDEX.SF prop ] >].
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS   < [ LOCAL [ CONT.HOOK.INDEX.SF prop,
+					    CAT.HEAD.NF + ]] >].
 
 ques-sent-verb-lex := sentential-verb-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.COMPS  < [ LOCAL.CONT.HOOK.INDEX.SF ques ] >].
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS  < [ LOCAL [ CONT.HOOK.INDEX.SF ques,
+					    CAT.HEAD.INF + ]] >].
 
 ;;; Auxiliaries
 
@@ -746,7 +749,8 @@ modal-3-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-
                     [ FIN-FLAG + ] ] ].
 
 non-factive-lex-rule := modal-3-lex-rule-super &
-  [ SYNSEM.LOCAL.CAT.MC - ].
+  [ SYNSEM.LOCAL.CAT [ MC -,
+		       HEAD.INF +]].
 
 question-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & modal-3-rule-dtr &
   [ INFLECTED [ QUESTION-FLAG +,
@@ -827,10 +831,10 @@ context1-head-opt-comp-phrase := basic-head-opt-comp-phrase & same-int-phrase & 
 subj-head-phrase := decl-head-subj-phrase & same-int-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
 
-non-mc-subj-head-phrase := decl-head-subj-phrase & head-final & same-int-phrase &
-  [ SYNSEM.LOCAL.CAT.MC -,
-    INFLECTED.TENSE-FLAG na-or--,
-    HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
+;non-mc-subj-head-phrase := decl-head-subj-phrase & head-final & same-int-phrase &
+;  [ SYNSEM.LOCAL.CAT.MC -,
+;    INFLECTED.TENSE-FLAG na-or--,
+;    HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
 
 ; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
 ; introduced to match the semantic effect of bare NPs in your language.
