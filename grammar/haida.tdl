@@ -345,7 +345,7 @@ prop-sent-verb-lex := sentential-verb-lex &
 
 ques-sent-verb-lex := sentential-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS  < [ LOCAL [ CONT.HOOK.INDEX.SF ques,
-					    CAT.HEAD.INF +,
+					    CAT [ HEAD.INF +,
 						  MC - ]]] > ].
 
 ;;; Auxiliaries
