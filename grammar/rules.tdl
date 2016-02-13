@@ -1,6 +1,8 @@
 ;;; -*- Mode: TDL; Coding: utf-8 -*-
 head-adj-int := head-adj-int-phrase.
 
+int-cl := int-clause.
+
 adj-head-int := adj-head-int-phrase.
 
 context1-decl-head-opt-subj := context1-decl-head-opt-subj-phrase.
@@ -12,6 +14,8 @@ neg-adj-head-scop := neg-adj-head-scop-phrase.
 comp-head := comp-head-phrase.
 
 subj-head := subj-head-phrase.
+
+non-mc-subj-head := non-mc-subj-head-phrase.
 
 head-spec := head-spec-phrase.
 

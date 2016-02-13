@@ -17,6 +17,10 @@ evid-suffix :=
 %suffix (* -gaa)
 evid-lex-rule.
 
+infin-suffix :=
+%suffix (* -gee)
+infin-lex-rule.
+
 past-suffix :=
 %suffix (* -gan)
 past-lex-rule.
@@ -52,3 +56,11 @@ pl-obj-lex-rule.
 non-factive-suffix :=
 %suffix (* -.ang)
 non-factive-lex-rule.
+
+int-past-suffix :=
+%suffix (* -gaa)
+int-past-lex-rule.
+
+int-future-suffix :=
+%suffix (* -.asa)
+int-future-lex-rule.
