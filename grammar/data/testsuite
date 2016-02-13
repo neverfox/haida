@@ -1465,45 +1465,45 @@ ts’agts’ag-ee 7iw7aan-gan=gyaan ts’agts’ag-ee srid-gan=7isan
 wagon-DEF be.big-PST=and wagon-DEF be.red-PST=too
 `The wagon was big and the wagon was red.'
 
-#147 embedded clauses
-Source: a:430
-Vetted: s
+#147 embedded clauses (adapted from a:430)
+Source: author
+Vetted: f
 Judgement: g
 Phenomena: {emb-d}
-Bill gid k’untl’aa.ang ’la suugan
-Bill gid k’untl’aa-.ang ’laa suu-gan
-Bill child get.burned-NF 3p say-PST
-`Bill said that his child got burned.'
+dii naa.n k’untl’aa.ang hla suugan
+dii naa.n k’untl’aa-.ang hlaa suu-gan
+My grandmother get.burned-NF 1sg say-PST
+`I said that my grandmother got burned.'
 
-#148 embedded clauses
-Source: a:430
-Vetted: s
+#148 embedded clauses (adapted from a:430)
+Source: author
+Vetted: f
 Judgement: g
 Phenomena: {emb-d}
-Bill gid k’untl’aa.ang suugan
-Bill gid k’untl’aa-.ang suu-gan
-Bill child get.burned-NF say-PST
-`Bill said that his child got burned.'
+dii naa.n k’untl’aa.ang ’la suugan
+dii naa.n k’untl’aa-.ang ’laa suu-gan
+My grandmother get.burned-NF 3p say-PST
+`He said that my grandmother got burned.'
 
 #149 embedded clauses
 Source: author
 Vetted: f
 Judgement: u
 Phenomena: {emb-d}
-Bill suugan gid k’untl’aa.ang
-Bill suu-gan gid k’untl’aa-.ang
-Bill say-PST child get.burned-NF
-`Bill said that his child got burned.'
+’la suugan dii naa.n k’untl’aa.ang
+’laa suu-gan dii naa.n k’untl’aa-.ang
+He say-PST my grandmother get.burned-NF
+`He said that my grandmother got burned.'
 
 #150 embedded clauses
 Source: author
 Vetted: f
 Judgement: u
 Phenomena: {emb-d}
-gid k’untl’aa.ang Bill suugan
-gid k’untl’aa-.ang Bill suu-gan
-child get.burned-NF Bill say-PST
-`Bill said that his child got burned.'
+dii naa.n k’untl’aagan ’la suugan
+dii naa.n k’untl’aa-gan ’laa suu-gan
+My grandmother get.burned 3p say-PST
+`He said that my grandmother got burned.'
 
 #151 embedded clauses
 Source: a:430
