@@ -1502,7 +1502,7 @@ Judgment: u
 Phenomena: {emb-d}
 dii naa.n k’untl’aagan ’la suugan
 dii naa.n k’untl’aa-gan ’laa suu-gan
-My grandmother get.burned 3p say-PST
+My grandmother get.burned-PST 3p say-PST
 `He said that my grandmother got burned.'
 
 #151 embedded clauses
@@ -1672,5 +1672,5 @@ Judgment: g
 Phenomena: {emb-d, wh}
 tliits'aan Bill na.àwhliyeega Joe kyaananggan
 tliits'aan Bill na.àwhli-yee-ga Joe kyaanang-gan
-where when Bill build.house-INFIN-PP Joe ask-PST
+where Bill build.house-INFIN-PP Joe ask-PST
 `Joe asked where Bill is building a house.'
