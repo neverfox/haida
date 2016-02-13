@@ -113,8 +113,8 @@ Joe := proper-noun-lex &
   [ STEM < "Joe" >,
     SYNSEM.LKEYS.KEYREL.PRED "_Joe_n_rel" ].
 
-naan := inalienable-noun-lex &
-  [ STEM < "naan" >,
+naa%n := inalienable-noun-lex &
+  [ STEM < "naa.n" >,
     SYNSEM.LKEYS.KEYREL.PRED "_grandmother_n_rel" ].
 
 
