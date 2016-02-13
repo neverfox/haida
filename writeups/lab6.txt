@@ -322,6 +322,36 @@ dii naa.n k’untl’aa-gan ’laa suu-gan
 My grandmother get.burned 3p say-PST
 `He said that my grandmother got burned.'
 
+#151 embedded clauses
+Source: a:430
+Vetted: s
+Judgment: g
+Phenomena: {emb-q}
+daagu 7isdaa hlangaa.ang dang gudang
+daa=gu 7isdaa hlangaa-.ang dang gudang
+you=Q do could-NF you think
+`Do you think that you could do it'
+
+#152 embedded clauses
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-q}
+hlangaa.ang dang gudang daagu 7isdaa
+hlangaa-.ang dang gudang daa=gu 7isdaa
+could-NF you think you=Q do
+`Do you think that you could do it'
+
+#153 embedded clauses
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-q}
+daa 7isdaa hlangaa.ang dang gudang
+daa 7isdaa hlangaa-.ang dang gudang
+you do could-NF you think
+`Do you think that you could do it'
+
 Enrico does not discuss the suffixes of embedded clauses in his analysis, but we note that sentences embedded
 by say and think bear the non-factive tense. As a result, we have added a feature NF so that embedded clauses
 will select for this tense:
@@ -398,6 +428,148 @@ ques-sent-verb-lex := sentential-verb-lex &
 					    CAT [ HEAD.INF +,
 						  MC - ]]] > ].
 						  
+We would also like to note that we receive a trigger warning for all three of our clause-embedding words, although all
+three parse. Please let us know if you would like additional details to file a bug.
 
- 
- trigger warning for sentenal verbs
+
+Non-Verbal Predicates
+
+Non-Verbal Predicates
+
+Haida has a copula for non-verbal predicates of type NP and PP. It is important to note that the copula is NOT used
+for attributive APs. Rather an intransitive verb exists for each adjective. This was already implimented in lab5 The Haida
+copula occurs in the standard verb position, after the subject and either NP or PP. The predicative phrase must occur
+after its subject and before the copula. 
+
+#108 non-verbal predicate - noun
+Source: a:211
+Vetted: s
+Judgment: g
+Phenomena: {cop, wo}
+xa.a xid7iid 7iijang
+xa.a xid7iid 7iij-gang
+mallard bird be-PRS
+`A mallard is a bird.'
+
+#109 non-verbal predicate - noun while this is syntactically valid, it is worth noting that the NP predicate cannot occur before the subject. Rather, we get a different meaning.
+Source: a:211
+Vetted: s
+Judgment: u
+Phenomena: {cop, wo}
+xid7iid xa.a 7iijang
+xid7iid xa.a 7iij-gang
+bird mallard be-PRS
+`A mallard is a bird.'
+
+#110 non-verbal predicate - noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cop}
+xa.a xid7iid
+xa.a xid7iid
+mallard bird
+`A mallard is a bird.'
+
+#111 non-verbal predicate - noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cop}
+xa.a 7iijang xid7iid
+xa.a 7iij-gang xid7iid
+mallard be-PRS bird
+`A mallard is a bird.'
+
+#112 non-verbal predicate - noun
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cop}
+7iijang xa.a xid7iid
+7iij-gang xa.a xid7iid
+be-PRS mallard bird
+`A mallard is a bird.'
+
+#113 non-verbal predicate - "locative" NP - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {cop}
+xa.a 7aanàa 7iijang
+xa.a 7aanàa 7iij-gang
+mallard in.next.room be-PRS
+`A mallard is in the next room.'
+
+#114 non-verbal predicate - "locative" NP - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cop}
+xa.a 7iijang 7aanàa
+xa.a 7iij-gang 7aanàa
+mallard be-PRS in.next.room
+`A mallard is in the next room.'
+
+#115 non-verbal predicate - "locative" NP - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cop}
+xa.a 7aanàa
+xa.a 7aanàa
+mallard in.next.room
+`A mallard is in the next room.'
+
+#116 non-verbal predicate - "locative" NP - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cop}
+7iijang xa.a 7aanàa
+7iij-gang xa.a 7aanàa
+be-PRS mallard in.next.room
+`A mallard is in the next room.'
+
+#117 non-verbal predicate - "locative" NP - adapted from p114 (iv)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cop}
+7aanàa 7iijang xa.a
+7aanàa 7iij-gang xa.a
+in.next.room be-PRS mallard
+`A mallard is in the next room.'
+
+The implimentation of NP predicates in Haida is very simple. We added a transitive verb for the copula as follows:
+
+7iij_1 := tr-verb-lex &
+  [ STEM < "7iij" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
+
+This implementation yields the desired semantics, correlate to those of "the cat is the dog"
+
+
+
+
+Additional Changes This Week
+
+We made a few additional changes this week to improve our grammar.
+
+To reduce over-generation we changed the following constraints in semi.vpm
+
+E.ASPECT : ASPECT
+  perfective <> perfective
+  progressive <> progressive
+  frequentive <> frequentive
+  imperfective <> imperfective
+  inceptive <> inceptive
+  perfective << [e]
+  * <> *
+  
+  This sets perfective as a default when aspect is underspecified and prevents sentences with underspecified aspect
+  from generating way too many sentences.
+  
+We also added clitics to our grammar by going into repp/vanilla.rpp and telling it to break on = so that our clitics
+will be treated as words by the lkb.
+  
