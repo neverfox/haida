@@ -13,4 +13,4 @@ int-lex := int-lex-rule.
 
 decl-lex := decl-lex-rule.
 
-int_present-lex := int_present-lex-rule.
+int-present-lex := int-present-lex-rule.
