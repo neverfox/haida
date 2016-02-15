@@ -194,7 +194,7 @@ gudang_1 := tr-verb-lex &
   [ STEM < "gudang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_understand_v_rel" ].
 
-suu := tr-verb-lex &
+suu_1 := tr-verb-lex &
   [ STEM < "suu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
 
@@ -246,7 +246,7 @@ gudang_2 := prop-sent-verb-lex &
   [ STEM < "gudang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_think_v_id_rel" ].
 
-suu := prop-sent-verb-lex &
+suu_2 := prop-sent-verb-lex &
   [ STEM < "suu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_say_v_id_rel" ].
 

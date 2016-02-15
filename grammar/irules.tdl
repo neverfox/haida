@@ -57,10 +57,10 @@ non-factive-suffix :=
 %suffix (* -.ang)
 non-factive-lex-rule.
 
-int-past-suffix :=
+int_past-suffix :=
 %suffix (* -gaa)
-int-past-lex-rule.
+int_past-lex-rule.
 
-int-future-suffix :=
+int_future-suffix :=
 %suffix (* -.asa)
-int-future-lex-rule.
+int_future-lex-rule.
