@@ -610,7 +610,7 @@ negation-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule
 neg-lex-rule := negation-lex-rule-super &
   [ SYNSEM.NEG-SAT - ].
 
-modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-3-rule-dtr & question-rule-dtr &
+modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-3-rule-dtr &
   [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
                 TRANSITIVE-VERB-FLAG #transitive-verb,
                 COG-ST-FLAG #cog-st,
