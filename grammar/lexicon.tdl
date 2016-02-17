@@ -198,6 +198,10 @@ suu_1 := tr-verb-lex &
   [ STEM < "suu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
 
+qii%id := tr-verb-lex &
+  [ STEM < "qii.id" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pick+up_v_rel"].
+
 rad := itr-nom-verb-lex &
   [ STEM < "rad" >,
     SYNSEM.LKEYS.KEYREL.PRED "_run_v_rel" ].

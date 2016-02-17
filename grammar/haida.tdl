@@ -610,7 +610,7 @@ negation-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule
 neg-lex-rule := negation-lex-rule-super &
   [ SYNSEM.NEG-SAT - ].
 
-modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-3-rule-dtr & same-neg-sat-lex-rule &
+modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-3-rule-dtr & same-neg-sat-lex-rule & question-rule-dtr &
   [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
                 TRANSITIVE-VERB-FLAG #transitive-verb,
                 COG-ST-FLAG #cog-st,
@@ -637,8 +637,10 @@ infin-lex-rule := modal-2-lex-rule-super &
     SYNSEM.LOCAL.CAT.HEAD.INF + ].
 
 evid-lex-rule := modal-2-lex-rule-super &
-  [ INFLECTED.FUT-FLAG #fut,
-    DTR.INFLECTED.FUT-FLAG #fut ].
+  [ INFLECTED [ FUT-FLAG #fut,
+		QUESTION-FLAG -,
+		TENSE-FLAG - ],
+    DTR.INFLECTED.FUT-FLAG #fut].
 
 tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-lex-rule &
   [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG +,
@@ -747,7 +749,7 @@ non-fin-lex-rule := finite-lex-rule-super &
 
 modal-3-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-lex-rule &
   [ INFLECTED #infl,
-    DTR modal-3-rule-dtr &
+    DTR evid-lex-rule &
         [ INFLECTED #infl &
                     [ FIN-FLAG + ] ] ].
 
