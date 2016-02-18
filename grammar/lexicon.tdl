@@ -370,25 +370,25 @@ gwa%a := adposition-lex &
 
 %2Euu-marker-n := focus-marking-mod-lex &
   [ STEM < ".uu" >,
-    SYNSEM.LOCAL.CAT.HEAD.MOD < [ LIGHT -,
-                                  LOCAL.CAT.HEAD noun ] > ].
+    SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
+                                              VAL.SPR < > ] ] > ].
 
-%2Euu-marker-v := focus-marking-mod-lex &
-  [ STEM < ".uu" >,
-    SYNSEM.LOCAL.CAT.HEAD.MOD < [ LIGHT +,
-                                  LOCAL.CAT.HEAD verb ] > ].
+;%2Euu-marker-v := focus-marking-mod-lex &
+;  [ STEM < ".uu" >,
+;    SYNSEM.LOCAL.CAT.HEAD.MOD < [ LIGHT +,
+;                                  LOCAL.CAT.HEAD verb ] > ].
 
 ;;; Modifiers of expressing information structure
 
 gu-marker-n := focus-marking-mod-lex &
   [ STEM < "gu" >,
-    SYNSEM.LOCAL.CAT.HEAD.MOD < [ LIGHT -,
-                                  LOCAL.CAT.HEAD noun ] > ].
+    SYNSEM.LOCAL.CAT.HEAD.MOD < LOCAL.CAT [ HEAD noun,
+                                            VAL.SPR < > ] ] > ].
 
-gu-marker-v := focus-marking-mod-lex &
-  [ STEM < "gu" >,
-    SYNSEM.LOCAL.CAT.HEAD.MOD < [ LIGHT +,
-                                  LOCAL.CAT.HEAD verb ] > ].
+;gu-marker-v := focus-marking-mod-lex &
+;  [ STEM < "gu" >,
+;    SYNSEM.LOCAL.CAT.HEAD.MOD < [ LIGHT +,
+;                                  LOCAL.CAT.HEAD verb ] > ].
 
 ;; Question words
 

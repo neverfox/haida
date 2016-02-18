@@ -39,7 +39,7 @@ synsem :+ [ NEG-SAT luk ].
 canonical-synsem :+
  [ L-PERIPH bool ].
 
-non-local :+ 			
+non-local :+
  [ YNQ 0-1-dlist ].
 
 basic-verb-lex :+ [ SYNSEM.NEG-SAT na-or-+ ].
@@ -62,7 +62,7 @@ basic-binary-phrase :+
                                        LAST #last ]],
    ARGS < [ SYNSEM [ L-PERIPH #periph,
 		     NON-LOCAL.YNQ [ LIST #list,
-                                                               LAST #middle ]]], 
+                                                               LAST #middle ]]],
 		[SYNSEM [ L-PERIPH -,
 			  NON-LOCAL.YNQ [ LIST #middle,
                                                                 LAST #last]]] > ].
@@ -427,14 +427,14 @@ attr-only-adj-lex := attr-adj-lex &
   [ SYNSEM.LOCAL.CAT [ HEAD.PRD -,
                        VAL.SUBJ < > ] ].
 
-non-ynq-word := lex-item &
+non-ynq-lex-item := lex-item &
   [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
 
 question-clitic-lex := no-hcons-lex-item &
  [ SYNSEM [ LOCAL [ CAT [ POSTHEAD + ,
-			VAL [ SPR < >, 
-			      COMPS < >, 
-			      SUBJ < >, 
+			VAL [ SPR < >,
+			      COMPS < >,
+			      SUBJ < >,
 			      SPEC < > ],
 			HEAD adv & [ MOD < [ LIGHT +,
 					     L-PERIPH +,
@@ -587,21 +587,21 @@ adposition-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-it
 
 ;;; Wh pronouns
 
-wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item & 
+wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item & non-ynq-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
-         VAL [ SPR < >,
-         SUBJ < >,
-         COMPS < >,
-         SPEC < > ] ],
-         CONT [ HOOK.INDEX.PNG.PERNUM 3rd,
-                      RELS < ! [ LBL #larg,
-               ARG0 #ind & ref-ind ],
-          [ PRED "wh_q_rel",
-            ARG0 #ind,
-            RSTR #harg ] ! >,
-          HCONS < ! [ HARG #harg,
-                LARG #larg ] ! > ] ],
-       NON-LOCAL.QUE < ! #ind ! > ] ].
+                           VAL [ SPR < >,
+                                 SUBJ < >,
+                                 COMPS < >,
+                                 SPEC < > ] ],
+                           CONT [ HOOK.INDEX.PNG.PERNUM 3rd,
+                                  RELS < ! [ LBL #larg,
+                                             ARG0 #ind & ref-ind ],
+                                           [ PRED "wh_q_rel",
+                                             ARG0 #ind,
+                                             RSTR #harg ] ! >,
+                                  HCONS < ! [ HARG #harg,
+                                              LARG #larg ] ! > ] ],
+             NON-LOCAL [ QUE < ! #ind ! > ] ] ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
@@ -937,7 +937,7 @@ locative-pp-phrase := unary-phrase &
     ARGS < [ SYNSEM.LOCAL [ CAT [ HEAD noun,
           VAL.SPR < > ],
           CONT.HOOK [ INDEX #dtr ]]] > ].
-          
+
 int-clause := head-only & interrogative-clause &
   [ SYNSEM [ LOCAL.CAT [HEAD verb,
 		        INT -,
@@ -952,7 +952,7 @@ int-clause := head-only & interrogative-clause &
 basic-head-filler-phrase :+
    [ ARGS < [ SYNSEM.LOCAL.COORD - ], [ SYNSEM.LOCAL.COORD - ] > ].
 
-wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & 
+wh-ques-phrase := basic-head-filler-phrase & interrogative-clause &
       head-final &
    [ SYNSEM.LOCAL.CAT [ MC bool,
       VAL #val,
@@ -961,7 +961,7 @@ wh-ques-phrase := basic-head-filler-phrase & interrogative-clause &
          VAL #val & [ SUBJ < >,
                 COMPS < > ] ],
      NON-HEAD-DTR.SYNSEM.NON-LOCAL.QUE < ! ref-ind ! > ].
-      
+
 
 extracted-comp-phrase := basic-extracted-comp-phrase &
   [ SYNSEM.LOCAL.CAT.HEAD verb,
