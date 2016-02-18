@@ -447,7 +447,7 @@ question-clitic-lex := no-hcons-lex-item &
 ;;; Determiners
 ;;; SPEC is non-empty, and already specified by basic-determiner-lex.
 
-determiner-lex := basic-determiner-lex & basic-zero-arg & non-mod-lex-item &
+determiner-lex := basic-determiner-lex & norm-zero-arg & non-mod-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL [ SPR < >,
                            COMPS < >,
                            SUBJ < > ] ].
@@ -456,6 +456,27 @@ dem-sg-determiner-lex := determiner-lex & no-icons-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM sg ].
 
 dem-pl-determiner-lex := determiner-lex & no-icons-lex-item.
+
+infostr-marking-mod-lex := no-rels-hcons-lex-item & one-icons-lex-item &
+  [ SYNSEM.LOCAL [ CAT [ HEAD adv &
+                              [ MOD < [ LIGHT luk,
+                                        LOCAL [ CAT.MKG [ FC na-or--,
+                                                          TP na-or-- ],
+                                                CONT.HOOK [ INDEX #target,
+                                                            ICONS-KEY #icons ] ] ] > ],
+                         VAL [ SUBJ < >,
+                               COMPS < >,
+                               SPR < >,
+                               SPEC < > ] ],
+                   CONT.ICONS <! #icons &
+                                 [ IARG2 #target ] !> ] ].
+
+focus-marking-mod-lex := infostr-marking-mod-lex &
+  [ SYNSEM.LOCAL.CAT [ MKG fc,
+                       POSTHEAD +,
+                       HEAD.MOD < [ L-PERIPH luk,
+                                    LOCAL [ CAT.HEAD +nv,
+                                            CONT.HOOK.ICONS-KEY focus ] ] > ] ].
 
 demonstrative_a_rel := predsort.
 proximal+dem_a_rel := demonstrative_a_rel. ; close to speaker
@@ -563,6 +584,24 @@ adposition-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-it
                                                     VAL.SPR < > ],
                                               CONT.HOOK.INDEX #ind ]] >,
                             SUBJ < > ]]]]].
+
+;;; Wh pronouns
+
+wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item & 
+  [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
+         VAL [ SPR < >,
+         SUBJ < >,
+         COMPS < >,
+         SPEC < > ] ],
+         CONT [ HOOK.INDEX.PNG.PERNUM 3rd,
+                      RELS < ! [ LBL #larg,
+               ARG0 #ind & ref-ind ],
+          [ PRED "wh_q_rel",
+            ARG0 #ind,
+            RSTR #harg ] ! >,
+          HCONS < ! [ HARG #harg,
+                LARG #larg ] ! > ] ],
+       NON-LOCAL.QUE < ! #ind ! > ] ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
@@ -861,10 +900,11 @@ subj-head-phrase := decl-head-subj-phrase & same-int-phrase & head-final &
 ; Bare NP phrase.  Consider modifying the PRED value of the quantifier relation
 ; introduced to match the semantic effect of bare NPs in your language.
 
-bare-np-phrase := basic-bare-np-phrase & same-periph-unary-phrase & same-ynq-unary-phrase &
+bare-np-phrase := basic-bare-np-phrase & same-periph-unary-phrase & same-ynq-unary-phrase & head-valence-phrase &
   [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !>,
-    HEAD-DTR.SYNSEM.OPT-CS #optcs,
-    HEAD-DTR.SYNSEM.LOCAL.CONT.HOOK.INDEX.COG-ST #optcs ].
+    HEAD-DTR.SYNSEM [ OPT-CS #optcs,
+                      LOCAL [ CAT.VAL.SPR < unexpressed >,
+                              CONT.HOOK.INDEX.COG-ST #optcs ] ] ].
 
 same-periph-unary-phrase := unary-phrase &
  [ SYNSEM.L-PERIPH #periph,
@@ -908,9 +948,40 @@ int-clause := head-only & interrogative-clause &
 				  VAL #val ],
 		      NON-LOCAL.YNQ <! *top* !> ]].
 
+; Wh-initial phrase structure rules
+
+basic-head-filler-phrase :+
+   [ ARGS < [ SYNSEM.LOCAL.COORD - ], [ SYNSEM.LOCAL.COORD - ] > ].
+
+wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & 
+      head-final &
+   [ SYNSEM.LOCAL.CAT [ MC bool,
+      VAL #val,
+      HEAD verb & [ FORM finite ] ],
+     HEAD-DTR.SYNSEM.LOCAL.CAT [ MC na,
+         VAL #val & [ SUBJ < >,
+                COMPS < > ] ],
+     NON-HEAD-DTR.SYNSEM.NON-LOCAL.QUE < ! ref-ind ! > ].
+      
+
+extracted-comp-phrase := basic-extracted-comp-phrase &
+  [ SYNSEM.LOCAL.CAT.HEAD verb,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ cons ].
+
+extracted-subj-phrase := basic-extracted-subj-phrase &
+  [ SYNSEM.LOCAL.CAT.HEAD verb,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS olist ].
+
 ;;;;;;;;;;;;;;;;;;
 ;;; Coordination
 ;;;;;;;;;;;;;;;;;;
+
+coord-phrase :+ [ SYNSEM.NON-LOCAL #nl,
+   LCOORD-DTR.SYNSEM.NON-LOCAL #nl,
+   RCOORD-DTR.SYNSEM.NON-LOCAL #nl ].
+
+bottom-coord-phrase :+ [ SYNSEM.NON-LOCAL #nl,
+   NONCONJ-DTR.SYNSEM.NON-LOCAL #nl ].
 
 ;;; Coordination Strategy 1
 

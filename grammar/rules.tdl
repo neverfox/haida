@@ -36,3 +36,9 @@ vp3-bottom-coord := vp3-bottom-coord-rule.
 s3-top-coord := s3-top-coord-rule.
 
 s3-bottom-coord := s3-bottom-coord-rule.
+
+wh-ques := wh-ques-phrase.
+
+extracted-comp := extracted-comp-phrase.
+
+extracted-subj := extracted-subj-phrase.
