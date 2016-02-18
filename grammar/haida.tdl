@@ -457,7 +457,7 @@ dem-sg-determiner-lex := determiner-lex & no-icons-lex-item &
 
 dem-pl-determiner-lex := determiner-lex & no-icons-lex-item.
 
-infostr-marking-mod-lex := no-rels-hcons-lex-item & one-icons-lex-item &
+infostr-marking-mod-lex := no-rels-hcons-lex-item & one-icons-lex-item & norm-zero-arg &
   [ SYNSEM.LOCAL [ CAT [ HEAD adv &
                               [ MOD < [ LIGHT luk,
                                         LOCAL [ CAT.MKG [ FC na-or--,
