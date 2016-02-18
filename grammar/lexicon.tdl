@@ -198,7 +198,7 @@ suu_1 := tr-verb-lex &
   [ STEM < "suu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
 
-qii%id := tr-verb-lex &
+qii%2Eid := tr-verb-lex &
   [ STEM < "qii.id" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pick+up_v_rel"].
 
@@ -245,10 +245,6 @@ qaaguhlaa%aa := itr-nom-verb-lex &
 7isdaa := tr-verb-lex &
   [ STEM < "7isdaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
-
-qii%id := tr-verb-lex &
-  [ STEM < "qii.id" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pick+up_v_rel"].
 
 gudang_2 := prop-sent-verb-lex &
   [ STEM < "gudang" >,
@@ -329,7 +325,7 @@ gah := neg-adv-lex &
   [ STEM < "gah" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg+emph_a_rel" ].
 
-neesdagaang%an := int-adverb-lex &
+neesdagaang%2Ean := int-adverb-lex &
   [ STEM < "neesdagaang.an" >,
     SYNSEM.LKEYS.KEYREL.PRED "_right+away_a_rel" ].
 
