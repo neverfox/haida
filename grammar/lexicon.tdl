@@ -366,3 +366,32 @@ gwa%a := adposition-lex &
   [ STEM < "gwa.a" >,
     SYNSEM.LKEYS.KEYREL.PRED "_on_p_rel" ].
 
+;;; Modifiers of expressing information structure
+
+%2Euu-marker-n := focus-marking-mod-lex &
+  [ STEM < ".uu" >,
+    SYNSEM.LOCAL.CAT.HEAD.MOD < [ LIGHT -,
+                                  LOCAL.CAT.HEAD noun ] > ].
+
+%2Euu-marker-v := focus-marking-mod-lex &
+  [ STEM < ".uu" >,
+    SYNSEM.LOCAL.CAT.HEAD.MOD < [ LIGHT +,
+                                  LOCAL.CAT.HEAD verb ] > ].
+
+;;; Modifiers of expressing information structure
+
+gu-marker-n := focus-marking-mod-lex &
+  [ STEM < "gu" >,
+    SYNSEM.LOCAL.CAT.HEAD.MOD < [ LIGHT -,
+                                  LOCAL.CAT.HEAD noun ] > ].
+
+gu-marker-v := focus-marking-mod-lex &
+  [ STEM < "gu" >,
+    SYNSEM.LOCAL.CAT.HEAD.MOD < [ LIGHT +,
+                                  LOCAL.CAT.HEAD verb ] > ].
+
+;; Question words
+
+who := wh-pronoun-noun-lex &
+  [ STEM < "giisd" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
