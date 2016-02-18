@@ -17,9 +17,9 @@ evid-suffix :=
 %suffix (* -gaa)
 evid-lex-rule.
 
-infin-suffix :=
-%suffix (* -gee)
-infin-lex-rule.
+infin-pp-suffix :=
+%suffix (* -gee-ga)
+infin-pp-lex-rule.
 
 past-suffix :=
 %suffix (* -gan)

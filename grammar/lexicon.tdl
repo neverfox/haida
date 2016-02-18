@@ -254,7 +254,7 @@ suu_2 := prop-sent-verb-lex &
   [ STEM < "suu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
 
-kyaanang := ques-sent-verb-lex &
+kyaanang := ditrans-ques-sent-verb-lex &
   [ STEM < "kyaanang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
 
@@ -380,10 +380,10 @@ gwa%a := adposition-lex &
 
 ;;; Modifiers of expressing information structure
 
-gu-marker-n := focus-marking-mod-lex &
-  [ STEM < "gu" >,
-    SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
-                                            VAL.SPR < > ] ] > ].
+;gu-marker-n := focus-marking-mod-lex &
+;  [ STEM < "gu" >,
+;    SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
+;                                            VAL.SPR < > ] ] > ].
 
 ;gu-marker-v := focus-marking-mod-lex &
 ;  [ STEM < "gu" >,
