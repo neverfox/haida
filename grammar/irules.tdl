@@ -64,3 +64,7 @@ int_past-lex-rule.
 int_future-suffix :=
 %suffix (* -.asa)
 int_future-lex-rule.
+
+tc-suffix :=
+%suffix (* -ii)
+tc-lex-rule.

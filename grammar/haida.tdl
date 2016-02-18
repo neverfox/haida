@@ -268,7 +268,7 @@ locative-noun-lex := common-noun-lex.
 ;
 ;   lexical Vs for V-level attachment of negative adverbs.
 
-verb-lex := non-mod-lex-item & NUM-rule-dtr & aspect-rule-dtr & modal-2-rule-dtr & modal-3-rule-dtr & negation-rule-dtr & question-rule-dtr &
+verb-lex := non-mod-lex-item & NUM-rule-dtr & aspect-rule-dtr & modal-2-rule-dtr & modal-3-rule-dtr & negation-rule-dtr & question-rule-dtr & topic-change-rule-dtr &
   [ SYNSEM.LOCAL.CAT [ HEAD verb,
                        HC-LIGHT - ],
     INFLECTED [ QUESTION-FLAG -,
@@ -508,13 +508,21 @@ inalienable-poss-pron-det-lex := poss-pron-det-lex &
 
 ;;; Type for adverbs
 
-adverb-lex := basic-adverb-lex & intersective-mod-lex &
+int-adverb-lex := basic-int-adverb-lex &
   [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD verb ]>,
 			   	 POSTHEAD -,
 				 VAL [ SPR < >,
 				 SUBJ < >,
 				 COMPS < >,
 				 SPEC < > ]]]]].
+
+scopal-adverb-lex := basic-scopal-adverb-lex &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD.MOD < [ LOCAL.CAT.HEAD verb ]>,
+                           POSTHEAD -,
+                           VAL [ SPR < >,
+                                 SUBJ < >,
+                                 COMPS < >,
+                                 SPEC < > ] ] ] ] ].
 
 ; Type for negative adverbs.
 ;
@@ -565,6 +573,7 @@ adposition-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-it
 int_tense-rule-dtr := word-or-lexrule.
 modal-3-rule-dtr := word-or-lexrule.
 negation-rule-dtr := word-or-lexrule.
+topic-change-rule-dtr := word-or-lexrule.
 modal-2-rule-dtr := word-or-lexrule.
 aspect-rule-dtr := word-or-lexrule.
 NUM-rule-dtr := word-or-lexrule.
@@ -601,7 +610,7 @@ indef-lex-rule := cog-st-lex-rule-super & const-lex-rule &
 def-lex-rule := cog-st-lex-rule-super & infl-lex-rule &
   [ SYNSEM.OPT-CS uniq+fam+act ].
 
-negation-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & modal-3-rule-dtr & question-rule-dtr &
+negation-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & modal-3-rule-dtr & question-rule-dtr & topic-change-rule-dtr &
   [ INFLECTED #infl,
     DTR negation-rule-dtr &
         [ INFLECTED #infl &
@@ -610,7 +619,7 @@ negation-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule
 neg-lex-rule := negation-lex-rule-super &
   [ SYNSEM.NEG-SAT - ].
 
-modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-3-rule-dtr & same-neg-sat-lex-rule & question-rule-dtr &
+modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-3-rule-dtr & same-neg-sat-lex-rule & question-rule-dtr & topic-change-rule-dtr &
   [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
                 TRANSITIVE-VERB-FLAG #transitive-verb,
                 COG-ST-FLAG #cog-st,
@@ -642,7 +651,7 @@ evid-lex-rule := modal-2-lex-rule-super &
 		TENSE-FLAG - ],
     DTR.INFLECTED.FUT-FLAG #fut].
 
-tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-lex-rule &
+tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-lex-rule & topic-change-rule-dtr &
   [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG +,
                 NUM-FLAG #num,
                 FUT-FLAG #fut,
@@ -673,7 +682,7 @@ present-lex-rule := non-past-lex-rule &
 rel-prs-lex-rule := non-past-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE rel-prs ].
 
-aspect-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & modal-3-rule-dtr & negation-rule-dtr & question-rule-dtr & same-neg-sat-lex-rule &
+aspect-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & modal-3-rule-dtr & negation-rule-dtr & question-rule-dtr & same-neg-sat-lex-rule & topic-change-rule-dtr &
   [ INFLECTED #infl,
     DTR aspect-rule-dtr &
         [ INFLECTED #infl ] ].
@@ -690,7 +699,7 @@ prog-aspect-lex-rule := imperf-aspect-lex-rule &
 freq-aspect-lex-rule := imperf-aspect-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.ASPECT frequentive ].
 
-NUM-lex-rule-super := add-only-no-ccont-rule & modal-2-rule-dtr & modal-3-rule-dtr & question-rule-dtr & same-neg-sat-lex-rule &
+NUM-lex-rule-super := add-only-no-ccont-rule & modal-2-rule-dtr & modal-3-rule-dtr & question-rule-dtr & same-neg-sat-lex-rule & topic-change-rule-dtr &
   [ INFLECTED [ NUM-FLAG +,
                 INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
                 TRANSITIVE-VERB-FLAG #transitive-verb,
@@ -738,7 +747,7 @@ finite-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & same-neg-sat-
                       QUESTION-FLAG #question,
                       NUM-FLAG #num ] ] ].
 
-fin-lex-rule := NUM-rule-dtr & aspect-rule-dtr & finite-lex-rule-super & modal-2-rule-dtr & modal-3-rule-dtr & negation-rule-dtr & question-rule-dtr &
+fin-lex-rule := NUM-rule-dtr & aspect-rule-dtr & finite-lex-rule-super & modal-2-rule-dtr & modal-3-rule-dtr & negation-rule-dtr & question-rule-dtr & topic-change-rule-dtr &
   [ INFLECTED.FIN-FLAG +,
     SYNSEM.LOCAL.CAT.HEAD.FORM finite ].
 
@@ -778,7 +787,7 @@ question-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & modal-3-rul
 int-lex-rule := int_tense-rule-dtr & question-lex-rule-super &
   [ SYNSEM.LOCAL.CAT.INT + ].
 
-decl-lex-rule := question-lex-rule-super & tense-rule-dtr &
+decl-lex-rule := question-lex-rule-super & tense-rule-dtr & topic-change-rule-dtr &
   [ SYNSEM.LOCAL.CAT.INT - ].
 
 int_tense-lex-rule-super := add-only-no-ccont-rule &
@@ -807,6 +816,14 @@ int_present-lex-rule := const-lex-rule & int_tense-lex-rule-super &
 
 int_future-lex-rule := infl-lex-rule & int_tense-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD future ].
+
+topic-change-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+  [ INFLECTED #infl,
+    DTR topic-change-rule-dtr &
+        [ INFLECTED #infl ] ].
+
+tc-lex-rule := topic-change-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.ICONS-KEY contrast-topic ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types

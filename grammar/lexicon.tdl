@@ -246,6 +246,10 @@ qaaguhlaa%aa := itr-nom-verb-lex &
   [ STEM < "7isdaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
 
+qii%id := tr-verb-lex &
+  [ STEM < "qii.id" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pick+up_v_rel"].
+
 gudang_2 := prop-sent-verb-lex &
   [ STEM < "gudang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
@@ -325,9 +329,13 @@ gah := neg-adv-lex &
   [ STEM < "gah" >,
     SYNSEM.LKEYS.KEYREL.PRED "neg+emph_a_rel" ].
 
-neesdagaang%an := adverb-lex &
+neesdagaang%an := int-adverb-lex &
   [ STEM < "neesdagaang.an" >,
     SYNSEM.LKEYS.KEYREL.PRED "_right+away_a_rel" ].
+
+7waagyaan+hit’an := basic-scopal-adverb-lex &
+  [ STEM < "7waagyaan+hit’an" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and+then_a_rel" ].
 
 gu := question-clitic-lex &
     [STEM <"gu">].
