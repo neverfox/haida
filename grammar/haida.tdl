@@ -861,8 +861,7 @@ topic-change-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
     DTR topic-change-rule-dtr &
         [ INFLECTED #infl ] ].
 
-tc-lex-rule := topic-change-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.ICONS-KEY contrast-topic ].
+tc-lex-rule := topic-change-lex-rule-super.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Phrasal Types
