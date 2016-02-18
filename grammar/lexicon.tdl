@@ -382,7 +382,7 @@ gwa%a := adposition-lex &
 
 gu-marker-n := focus-marking-mod-lex &
   [ STEM < "gu" >,
-    SYNSEM.LOCAL.CAT.HEAD.MOD < LOCAL.CAT [ HEAD noun,
+    SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
                                             VAL.SPR < > ] ] > ].
 
 ;gu-marker-v := focus-marking-mod-lex &
