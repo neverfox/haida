@@ -11,6 +11,8 @@ context1-head-opt-comp := context1-head-opt-comp-phrase.
 
 neg-adj-head-scop := neg-adj-head-scop-phrase.
 
+adj-head-scop := adj-head-scop-phrase.
+
 comp-head := comp-head-phrase.
 
 subj-head := subj-head-phrase.

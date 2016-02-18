@@ -329,7 +329,7 @@ neesdagaang%2Ean := int-adverb-lex &
   [ STEM < "neesdagaang.an" >,
     SYNSEM.LKEYS.KEYREL.PRED "_right+away_a_rel" ].
 
-7waagyaan+hit’an := basic-scopal-adverb-lex &
+7waagyaan+hit’an := scopal-adverb-lex &
   [ STEM < "7waagyaan+hit’an" >,
     SYNSEM.LKEYS.KEYREL.PRED "_and+then_a_rel" ].
 
