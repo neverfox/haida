@@ -234,7 +234,7 @@ riihlgii := itr-nom-verb-lex &
   [ STEM < "riihlgii" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ready_a_rel" ].
 
-qaaguhlaa%aa := itr-nom-verb-lex &
+qaaguhlaa%2Eaa := itr-nom-verb-lex &
   [ STEM < "qaaguhlaa.aa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go+out_v_rel" ].
 
@@ -257,6 +257,10 @@ suu_2 := prop-sent-verb-lex &
 kyaanang := ditrans-ques-sent-verb-lex &
   [ STEM < "kyaanang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
+
+na%2Eàwhli := tr-verb-lex &
+  [ STEM < "na.àwhli" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_build+house_v_rel" ].
 
 ;;; Auxiliaries
 
@@ -362,7 +366,7 @@ gyaa := adposition-lex &
 
 ;;; Postpositions
 
-gwa%a := adposition-lex &
+gwa%2Ea := adposition-lex &
   [ STEM < "gwa.a" >,
     SYNSEM.LKEYS.KEYREL.PRED "_on_p_rel" ].
 
@@ -392,6 +396,14 @@ gwa%a := adposition-lex &
 
 ;; Question words
 
-who := wh-pronoun-noun-lex &
+giisd := wh-pronoun-noun-lex &
   [ STEM < "giisd" >,
     SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+
+guus := wh-pronoun-noun-lex &
+  [ STEM < "guus" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
+
+tliits’aan := wh-pronoun-noun-lex &
+  [ STEM < "tliits’aan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_where_n_rel" ].
