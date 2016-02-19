@@ -550,7 +550,14 @@ scopal-adverb-lex := basic-scopal-adverb-lex &
 ; This adverb should go through a specialized phrase structure rule
 ;        included with this grammar.
 
-scopal-adj-head-phrase := adj-head-scop-phrase & same-int-phrase.
+scop-sent-adv-lex:= basic-scopal-adverb-lex &
+  [ SYNSEM.LOCAL.CAT [ VAL [ SPR < >,
+                             COMPS < >,
+                             SUBJ < > ],
+                       POSTHEAD -,
+                       HEAD [ MOD < [ LOCAL.CAT [ HEAD verb,
+                                                  VAL [ SUBJ null,
+                                                        COMPS null ] ] ] > ] ] ].
 
 neg-adv-lex := basic-scopal-adverb-lex &
   [ SYNSEM.LOCAL.CAT [ VAL [ SPR < >,
@@ -562,10 +569,6 @@ neg-adv-lex := basic-scopal-adverb-lex &
                                                   VAL [ SUBJ null,
                                                         COMPS null ] ] ] > ] ] ].
 
-neg-adj-head-scop-phrase := adj-head-scop-phrase & same-int-phrase &
-  [ SYNSEM.NEG-SAT +,
-    HEAD-DTR.SYNSEM.NEG-SAT -,
-    NON-HEAD-DTR neg-adv-lex ].
 
 ;;; Possessives
 
@@ -986,6 +989,15 @@ extracted-comp-phrase := basic-extracted-comp-phrase & same-ynq-unary-phrase & s
 extracted-subj-phrase := basic-extracted-subj-phrase & same-ynq-unary-phrase & same-int-phrase &
   [ SYNSEM.LOCAL.CAT.HEAD verb,
     HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS olist ].
+
+neg-adj-head-scop-phrase := adj-head-scop-phrase & same-int-phrase &
+  [ SYNSEM.NEG-SAT +,
+    HEAD-DTR.SYNSEM.NEG-SAT -,
+    NON-HEAD-DTR neg-adv-lex ].
+
+scopal-adj-head-phrase := adj-head-scop-phrase & same-int-phrase &
+  [ HEAD-DTR.SYNSEM.NEG-SAT +,
+    NON-HEAD-DTR scop-sent-adv-lex ].
 
 ;;;;;;;;;;;;;;;;;;
 ;;; Coordination
