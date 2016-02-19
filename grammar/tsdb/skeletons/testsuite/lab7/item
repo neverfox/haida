@@ -51,8 +51,8 @@
 51@author@@@1@tam,neg@gam gyùudan-ee dladahlda-.ang-gii-gan@@@@0@3@NEG horse-DEF fall.down-NEG-PFV-PST`The horse hasn't fallen down.'@roman pearah & kristen piepgrass@january 14, 2016
 52@author@@@1@tam@gyùudan-ee rad-da-gang@@@@1@2@horse-DEF run-PROG-PRS`The horse is running.'@roman pearah & kristen piepgrass@january 14, 2016
 53@author@@@1@tam@gyùudan-ee rad-gang-da@@@@0@2@horse-DEF run-PRS-PROG`The horse is running.'@roman pearah & kristen piepgrass@january 14, 2016
-54@author@@@1@tam@gyùudan-ee rad-da-gang@@@@1@2@horse-DEF run-FREQ-PRS`The horse often runs.' or `The horse usually runs.'@roman pearah & kristen piepgrass@january 14, 2016
-55@author@@@1@tam@gyùudan-ee rad-gang-da@@@@0@2@horse-DEF run-PRS-FREQ`The horse often runs.' or `The horse usually runs.'@roman pearah & kristen piepgrass@january 14, 2016
+54@author@@@1@tam@gyùudan-ee rad-da-gang@@@@1@2@horse-DEF run-FR-PRS`The horse often runs.' or `The horse usually runs.'@roman pearah & kristen piepgrass@january 14, 2016
+55@author@@@1@tam@gyùudan-ee rad-gang-da@@@@0@2@horse-DEF run-PRS-FR`The horse often runs.' or `The horse usually runs.'@roman pearah & kristen piepgrass@january 14, 2016
 56@author@@@1@agr@gyùudan-ee ts’agts’ag-ee qing-7wa-gan@@@@1@3@horse-DEF wagon-DEF see-PL-PST`The horse saw the wagons.' or `The horses saw the wagon.'@roman pearah & kristen piepgrass@january 14, 2016
 57@author@@@1@agr@hlaa ts’agts’ag-ee qing-7wa-gan@@@@1@3@1SG.NOM wagon-DEF see-PL-PST`I saw the wagons.'@roman pearah & kristen piepgrass@january 14, 2016
 58@author@@@1@agr@hlaa daa qing-7wa-gan@@@@0@3@1SG.NOM 2SG.ACC see-PL-PST`I saw him.'@roman pearah & kristen piepgrass@january 14, 2016
@@ -73,14 +73,14 @@
 73@a:132@@@1@q@daa=gu gudang@@@@1@2@you=Q understand`Do you understand it?'@roman pearah & kristen piepgrass@january 14, 2016
 74@a:132@@@1@q@daa=gu gudang-gaa@@@@1@2@you=Q understand-EVID`Did you understand it?'@roman pearah & kristen piepgrass@january 14, 2016
 75@a:132@@@1@q@daa=gu gudang-.asa@@@@1@2@you=Q understand-FUT`Will you understand it?'@roman pearah & kristen piepgrass@january 14, 2016
-76@author@@@1@q@daa=gu gudang-gang@@@@0@2@you=Q understand-PRS`Do you understand it?'@roman pearah & kristen piepgrass@january 14, 2016
+76@author@@@1@q@daa=gu gudang-gang@@@@1@2@you=Q understand-FR`Do you frequently understand it?'@roman pearah & kristen piepgrass@january 14, 2016
 77@author@@@1@q@daa=gu gudang-gan@@@@0@2@you=Q understand-PST`Did you understand it?'@roman pearah & kristen piepgrass@january 14, 2016
 78@author@@@1@q@dii daa=gu gudang@@@@0@3@1SG.ACC you=Q understand`Do you understand me?'@roman pearah & kristen piepgrass@january 14, 2016
 79@author@@@1@q@dii=gu daa gudang@@@@1@3@1SG.ACC=Q you understand`Do you understand me?'@roman pearah & kristen piepgrass@january 14, 2016
 80@a:134@@@1@wh@giisd=.uu dang gyaa taanaanee tla.àwhla-gang@@@@1@5@who=FOC you POSS smokehouse build-PRS`Who is building your smokehouse?'@roman pearah & kristen piepgrass@january 14, 2016
 81@a:134@@@1@wh@giisd=.uu dang gyaa taanaanee tla.àwhla-gaa@@@@1@5@who=FOC you POSS smokehouse build-EVID`Who built your smokehouse?'@roman pearah & kristen piepgrass@january 14, 2016
 82@author@@@1@wh@dang gyaa giisd=.uu taanaanee tla.àwhla-gang@@@@0@5@you POSS who=FOC smokehouse build-PRS`Who is building your smokehouse?'@roman pearah & kristen piepgrass@january 14, 2016
-83@author@@@1@wh@giisd dang gyaa taanaanee tla.àwhla-gang@@@@0@5@who you POSS smokehouse build-PRS`Who is building your smokehouse?'@roman pearah & kristen piepgrass@january 14, 2016
+83@author@@@1@wh@giisd dang gyaa taanaanee tla.àwhla-gang@@@@0@5@who you POSS smokehouse build-PRS`Who builds your smokehouse?'@roman pearah & kristen piepgrass@january 14, 2016
 84@a:134@@@1@wh@huu=gu Bill guus taa-gaa@@@@1@4@there=Q Bill what eat-EVID`What did Bill eat?'@roman pearah & kristen piepgrass@january 14, 2016
 85@author@@@1@wh@Bill huu=gu guus taa-gaa@@@@1@4@Bill there=Q what eat-EVID`What did Bill eat?'@roman pearah & kristen piepgrass@january 14, 2016
 86@author@@@1@wh@Bill guus taa-gaa huu=gu@@@@0@4@Bill what eat-EVID there=Q`What did Bill eat?'@roman pearah & kristen piepgrass@january 14, 2016
@@ -164,8 +164,13 @@
 164@author@@@1@emb-d@gyùudan-ee 7iw7aan-.ang hlaa suu-gan@@@@1@4@horse-DEF be.big-NF 1sg say-PST`I said that the horse is big.'@roman pearah & kristen piepgrass@january 14, 2016
 165@author@@@1@emb-d@Joe 7isgyaan x-ee buud-ee=gwa.a 7iij-.ang hlaa suu-gan@@@@1@7@Joe and dog-DEF boat-DEF=on be-NF 1sg say-PST`I said that Joe and the dog are on the boat.'@roman pearah & kristen piepgrass@january 14, 2016
 166@a:70@@@1@emb-d,q@’laa riihlgii-gee-ga ’laa-.ahl hlaa kyaanang-gan@@@@1@5@3p be.ready-INFIN-PP 3p-PP I ask-PST`I asked him if he was ready.'@roman pearah & kristen piepgrass@january 14, 2016
-167@author@@@1@emb-d,wh@tliits'aan Bill na.àwhli-yee-ga Joe kyaanang-gan@@@@1@5@where Bill build.house-INFIN-PP Joe ask-PST`Joe asked where Bill is building a house.'@roman pearah & kristen piepgrass@january 14, 2016
+167@author@@@1@emb-d,wh@tliits’aan Bill na.àwhli-gee-ga Joe kyaanang-gan@@@@1@5@where Bill build.house-INFIN-PP Joe ask-PST`Joe asked where Bill is building a house.'@roman pearah & kristen piepgrass@january 14, 2016
 168@author@@@1@cop@Joe 7isgyaan x-ee buud-ee=gwa.a@@@@0@4@Joe and dog-DEF boat-DEF=on`Joe and the dog are on the boat.'@roman pearah & kristen piepgrass@january 14, 2016
 169@author@@@1@emb-d@xa.a xid7iid 7iij-gang hlaa suu-gan@@@@0@5@mallard bird be-PRS 1sg say-PST`I said that a mallard is a bird.'@roman pearah & kristen piepgrass@january 14, 2016
 170@author@@@1@emb-d@gyùudan-ee 7iw7aan-gang hlaa suu-gan@@@@0@4@horse-DEF be.big-PRS 1sg say-PST`I said that the horse is big.'@roman pearah & kristen piepgrass@january 14, 2016
 171@author@@@1@emb-d@Joe 7isgyaan x-ee buud-ee=gwa.a 7iij-gang hlaa suu-gan@@@@0@7@Joe and dog-DEF boat-DEF=on be-PRS 1sg say-PST`I said that Joe and the dog are on the boat.'@roman pearah & kristen piepgrass@january 14, 2016
+172@author@@@1@emb-d,wh@giisd=.uu na.àwhli-gee-ga Joe kyaanang-gan@@@@0@4@who=FOC build.house-INFIN-PP Joe ask-PST`Joe asked who is building a house.'@roman pearah & kristen piepgrass@january 14, 2016
+173@author@@@1@wh@guus=.uu daa qing-gaa@@@@1@3@what=FOC 2p see-EVID`What did you see?'@roman pearah & kristen piepgrass@january 14, 2016
+174@author@@@1@wh@nang daa qing-gaa@@@@0@3@nang 2p see-EVID`Who did you see.'@roman pearah & kristen piepgrass@january 14, 2016
+175@author@@@1@wh@ginn daa qing-gaa@@@@0@3@what 2p see-EVID`What did you see.'@roman pearah & kristen piepgrass@january 14, 2016
+176@author@@@1@emb-d,wh@nang Bill na.àwhli-gee-ga Joe kyaanang-gan@@@@1@5@who Bill build.house-INFIN-PP Joe ask-PST`Joe asked who is building a house.'@roman pearah & kristen piepgrass@january 14, 2016

@@ -1722,7 +1722,7 @@ Judgment: u
 Phenomena: {emb-d, wh}
 giisd.uu na.àwhliyeega Joe kyaananggan
 giisd=.uu na.àwhli-gee-ga Joe kyaanang-gan
-who build.house-INFIN-PP Joe ask-PST
+who=FOC build.house-INFIN-PP Joe ask-PST
 `Joe asked who is building a house.'
 
 # 174 wh question
@@ -1734,4 +1734,35 @@ guus.uu daa qinggaa
 guus=.uu daa qing-gaa
 what=FOC 2p see-EVID
 `What did you see?'
+
+# 176 wh question with embedded what
+Source: author
+Vetted: s
+Judgment: u
+Phenomena: {wh}
+nang daa qinggaa
+nang daa qing-gaa
+nang 2p see-EVID
+`Who did you see.'
+
+# 177 wh question with embedded what
+Source: author
+Vetted: s
+Judgment: u
+Phenomena: {wh}
+ginn daa qinggaa
+ginn daa qing-gaa
+what 2p see-EVID
+`What did you see.'
+
+# 178 embedded question (adapted from a:485)
+Source: author
+Vetted: s
+Judgment: g
+Phenomena: {emb-d, wh}
+nang Bill na.àwhliyeega Joe kyaananggan
+nang Bill na.àwhli-gee-ga Joe kyaanang-gan
+who Bill build.house-INFIN-PP Joe ask-PST
+`Joe asked who is building a house.'
+
 

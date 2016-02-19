@@ -404,6 +404,14 @@ guus := wh-pronoun-noun-lex &
   [ STEM < "guus" >,
     SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
 
+ginn := wh-pronoun-noun-lex &
+  [ STEM < "ginn" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
+
+nang := wh-pronoun-noun-lex &
+  [ STEM < "nang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+
 tliits’aan := wh-pronoun-noun-lex &
   [ STEM < "tliits’aan" >,
     SYNSEM.LKEYS.KEYREL.PRED "_where_n_rel" ].
