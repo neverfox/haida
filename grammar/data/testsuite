@@ -542,7 +542,7 @@ Judgment: g
 Phenomena: {tam}
 gyùudanee raddagang
 gyùudan-ee rad-da-gang
-horse-DEF run-FREQ-PRS
+horse-DEF run-FR-PRS
 `The horse often runs.' or `The horse usually runs.'
 
 # 55 frequentive aspect
@@ -552,7 +552,7 @@ Judgment: u
 Phenomena: {tam}
 gyùudanee radgangda
 gyùudan-ee rad-gang-da
-horse-DEF run-PRS-FREQ
+horse-DEF run-PRS-FR
 `The horse often runs.' or `The horse usually runs.'
 
 # 56 agreement
@@ -762,7 +762,7 @@ Judgment: g
 Phenomena: {q}
 daagu gudanggang
 daa=gu gudang-gang
-you=Q understand-PRS
+you=Q understand-FR
 `Do you frequently understand it?'
 
 # 77 yes/no questions. illegal past tense marker
@@ -832,8 +832,8 @@ Judgment: u
 Phenomena: {wh}
 giisd dang gyaa taanaa nee tla.àwhlaang
 giisd dang gyaa taanaanee tla.àwhla-gang
-who you POSS smokehouse build-FR
-`Who frequently builds your smokehouse?'
+who you POSS smokehouse build-PRS
+`Who builds your smokehouse?'
 
 #84 wh questions
 Source: a:134
