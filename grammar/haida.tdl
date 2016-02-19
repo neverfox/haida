@@ -471,7 +471,7 @@ infostr-marking-mod-lex := no-rels-hcons-lex-item & one-icons-lex-item & norm-ze
                    CONT.ICONS <! #icons &
                                  [ IARG2 #target ] !> ] ].
 
-focus-marking-mod-lex := infostr-marking-mod-lex &
+focus-marking-mod-lex := infostr-marking-mod-lex & non-ynq-lex-item &
   [ SYNSEM.LOCAL.CAT [ MKG fc,
                        POSTHEAD +,
                        HEAD.MOD < [ L-PERIPH luk,
@@ -587,7 +587,7 @@ adposition-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-it
 
 ;;; Wh pronouns
 
-wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item & non-ynq-lex-item &
+wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item & non-ynq-lex-item & 
   [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
                            VAL [ SPR < >,
                                  SUBJ < >,
@@ -601,7 +601,9 @@ wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item & non-ynq-lex-i
                                              RSTR #harg ] ! >,
                                   HCONS < ! [ HARG #harg,
                                               LARG #larg ] ! > ] ],
-             NON-LOCAL [ QUE < ! #ind ! > ] ] ].
+             NON-LOCAL [ SLASH <! !>,
+			 REL <! !>,
+			 QUE < ! #ind ! > ] ] ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
@@ -957,17 +959,18 @@ wh-ques-phrase := basic-head-filler-phrase & interrogative-clause &
    [ SYNSEM.LOCAL.CAT [ MC bool,
       VAL #val,
       HEAD verb & [ FORM finite ] ],
-     HEAD-DTR.SYNSEM.LOCAL.CAT [ MC na,
+     HEAD-DTR.SYNSEM.LOCAL.CAT [ INT -,
+				 MC na,
          VAL #val & [ SUBJ < >,
                 COMPS < > ] ],
      NON-HEAD-DTR.SYNSEM.NON-LOCAL.QUE < ! ref-ind ! > ].
 
 
-extracted-comp-phrase := basic-extracted-comp-phrase &
+extracted-comp-phrase := basic-extracted-comp-phrase & same-ynq-unary-phrase & same-int-phrase &
   [ SYNSEM.LOCAL.CAT.HEAD verb,
     HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ cons ].
 
-extracted-subj-phrase := basic-extracted-subj-phrase &
+extracted-subj-phrase := basic-extracted-subj-phrase & same-ynq-unary-phrase & same-int-phrase &
   [ SYNSEM.LOCAL.CAT.HEAD verb,
     HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS olist ].
 
