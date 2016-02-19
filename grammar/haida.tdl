@@ -604,8 +604,8 @@ wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item & non-ynq-lex-i
                                   HCONS < ! [ HARG #harg,
                                               LARG #larg ] ! > ] ],
              NON-LOCAL [ SLASH <! !>,
-			 REL <! !>,
-			 QUE < ! #ind ! > ] ] ].
+                         REL <! !>,
+                         QUE < ! #ind ! > ] ] ].
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
@@ -957,7 +957,7 @@ basic-head-filler-phrase :+
    [ ARGS < [ SYNSEM.LOCAL.COORD - ], [ SYNSEM.LOCAL.COORD - ] > ].
 
 wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
-   [ SYNSEM.LOCAL.CAT [ MC bool,
+   [ SYNSEM.LOCAL.CAT [ MC +,
                         VAL #val,
                         HEAD verb & [ FORM finite ] ],
      HEAD-DTR.SYNSEM.LOCAL.CAT [ MC na,
@@ -967,6 +967,17 @@ wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
      NON-HEAD-DTR.SYNSEM [ LOCAL.CAT.MKG.FC +,
                            NON-LOCAL.QUE < ! ref-ind ! > ] ].
 
+emb-wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
+   [ SYNSEM.LOCAL.CAT [ MC -,
+                        VAL #val,
+                        HEAD verb & [ FORM finite ] ],
+     HEAD-DTR.SYNSEM.LOCAL.CAT [ MC na,
+                                 INT +,
+                                 HEAD.INF +,
+                                 VAL #val & [ SUBJ < >,
+                                              COMPS < > ] ],
+     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT.MKG.FC na-or--,
+                           NON-LOCAL.QUE < ! ref-ind ! > ] ].
 
 extracted-comp-phrase := basic-extracted-comp-phrase & same-ynq-unary-phrase & same-int-phrase &
   [ SYNSEM.LOCAL.CAT.HEAD verb,
