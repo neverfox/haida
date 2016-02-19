@@ -550,7 +550,7 @@ scopal-adverb-lex := basic-scopal-adverb-lex &
 ; This adverb should go through a specialized phrase structure rule
 ;        included with this grammar.
 
-scopal-adj-head-lex := basic-scopal-adverb-lex & adj-head-scop-phrase & same-int-phrase &.
+scopal-adj-head-phrase := adj-head-scop-phrase & same-int-phrase.
 
 neg-adv-lex := basic-scopal-adverb-lex &
   [ SYNSEM.LOCAL.CAT [ VAL [ SPR < >,
