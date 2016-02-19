@@ -605,8 +605,9 @@ adposition-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-it
 
 ;;; Wh pronouns
 
-wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item & non-ynq-lex-item & 
+wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item & non-ynq-lex-item &
   [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
+                           MKG non-fc,
                            VAL [ SPR < >,
                                  SUBJ < >,
                                  COMPS < >,
@@ -992,7 +993,7 @@ emb-wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-fin
                                  HEAD.INF +,
                                  VAL #val & [ SUBJ < >,
                                               COMPS < > ] ],
-     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT.MKG.FC na-or--,
+     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT.MKG.FC -,
                            NON-LOCAL.QUE < ! ref-ind ! > ] ].
 
 extracted-comp-phrase := basic-extracted-comp-phrase & same-ynq-unary-phrase & same-int-phrase &
