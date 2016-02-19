@@ -1,0 +1,145 @@
+# Lab 7
+
+### University of Washington, LING 567, Winter 2016
+
+#### Author: Roman Pearah
+#### Partner: Kristen Piepgrass
+
+#### Language: Haida (Masset dialect)
+
+---
+
+## Phenomena
+
+
+### Negation
+
+#### Description
+
+#### Examples
+
+#### Implementation
+
+#### Problems
+
+
+### Wh-questions
+
+#### Description
+
+#### Examples
+
+```
+#80 wh questions
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.àwhlaang
+giisd=.uu dang gyaa taanaanee tla.àwhla-gang
+who=FOC you POSS smokehouse build-PRS
+`Who is building your smokehouse?'
+
+#81 wh questions
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.àwhlayaa
+giisd=.uu dang gyaa taanaanee tla.àwhla-gaa
+who=FOC you POSS smokehouse build-EVID
+`Who built your smokehouse?'
+
+#82 wh questions -- wrong order.
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+dang gyaa giisd.uu taanaa nee tla.àwhlaang
+dang gyaa giisd=.uu taanaanee tla.àwhla-gang
+you POSS who=FOC smokehouse build-PRS
+`Who is building your smokehouse?'
+
+#83 wh questions no focus
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+giisd dang gyaa taanaa nee tla.àwhlaang
+giisd dang gyaa taanaanee tla.àwhla-gang
+who you POSS smokehouse build-PRS
+`Who builds your smokehouse?'
+
+#84 wh questions
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+huugu Bill guus taagaa
+huu=gu Bill guus taa-gaa
+there=Q Bill what eat-EVID
+`What did Bill eat?'
+
+#85 wh questions
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wh}
+Bill huugu guus taagaa
+Bill huu=gu guus taa-gaa
+Bill there=Q what eat-EVID
+`What did Bill eat?'
+
+#86 wh questions
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+Bill guus taagaa huugu
+Bill guus taa-gaa huu=gu
+Bill what eat-EVID there=Q
+`What did Bill eat?'
+
+#87 wh questions from embedded clause. adapted from 381
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.àwhlaang Bill gudang-gang
+giisd=.uu dang gyaa taanaanee tla.àwhla-gang Bill gudang-gang
+who=FOC you POSS smokehouse build-PRS Bill think-PRS
+`Who does Bill think is building your smokehouse?'
+
+# 168 embedded question (adapted from a:485)
+Source: author
+Vetted: s
+Judgment: g
+Phenomena: {emb-d, wh}
+tliits'aan Bill na.àwhliyeega Joe kyaananggan
+tliits'aan Bill na.àwhli-gee-ga Joe kyaanang-gan
+where Bill build.house-INFIN-PP Joe ask-PST
+`Joe asked where Bill is building a house.'
+```
+
+#### Implementation
+
+#### Problems
+
+
+### Corpus Sentence
+
+
+### Additional notes
+
+
+## Coverage
+
+Our baseline from lab 6 (run against all testsuite changes from this week):
+
+* Coverage: %
+* Overgeneration: %
+
+After the changes implemented in lab 7:
+
+* Coverage: % (+%)
+* Overgeneration: % (-%)
