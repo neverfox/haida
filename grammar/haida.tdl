@@ -348,6 +348,19 @@ ques-sent-verb-lex := sentential-verb-lex &
               CAT [ HEAD.INF +,
               MC - ]]] > ].
 
+;ditrans-ques-sent-verb-lex := main-verb-lex & clausal-third-arg-ditrans-lex-item &
+;  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps & [ LOCAL [ CONT.HOOK.INDEX.SF prop,
+;              					    CAT [ HEAD.NF +,
+;             					    MC - ]]] >,
+;    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+;	     #comps &
+;	     [ NEG-SAT +,
+;	       LOCAL [ CAT [ VAL [ SUBJ < >,
+;				   COMPS < > ],
+;			     HEAD verb ],
+;		       CONT.HOOK.INDEX.SF prop-or-ques ]],
+;	     [ LOCAL.CAT.HEAD noun ] > ].
+
 ;;; Auxiliaries
 
 arg-comp-aux := aux-lex & basic-two-arg &

@@ -254,7 +254,7 @@ suu_2 := prop-sent-verb-lex &
   [ STEM < "suu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
 
-kyaanang := ditrans-ques-sent-verb-lex &
+kyaanang := ques-sent-verb-lex &
   [ STEM < "kyaanang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
 
