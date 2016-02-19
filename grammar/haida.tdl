@@ -956,15 +956,16 @@ int-clause := head-only & interrogative-clause &
 basic-head-filler-phrase :+
    [ ARGS < [ SYNSEM.LOCAL.COORD - ], [ SYNSEM.LOCAL.COORD - ] > ].
 
-wh-ques-phrase := basic-head-filler-phrase & interrogative-clause &
-      head-final &
+wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
    [ SYNSEM.LOCAL.CAT [ MC bool,
-      VAL #val,
-      HEAD verb & [ FORM finite ] ],
-     HEAD-DTR.SYNSEM.LOCAL.CAT [ INT +, MC na,
-         VAL #val & [ SUBJ < >,
-                COMPS < > ] ],
-     NON-HEAD-DTR.SYNSEM.NON-LOCAL.QUE < ! ref-ind ! > ].
+                        VAL #val,
+                        HEAD verb & [ FORM finite ] ],
+     HEAD-DTR.SYNSEM.LOCAL.CAT [ MC na,
+                                 INT +,
+                                 VAL #val & [ SUBJ < >,
+                                              COMPS < > ] ],
+     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT.MKG.FC +,
+                           NON-LOCAL.QUE < ! ref-ind ! > ] ].
 
 
 extracted-comp-phrase := basic-extracted-comp-phrase & same-ynq-unary-phrase & same-int-phrase &
