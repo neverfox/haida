@@ -703,7 +703,7 @@ fut-lex-rule := modal-2-lex-rule-super &
 infin-pp-lex-rule := modal-2-lex-rule-super &
   [ INFLECTED.FUT-FLAG #fut,
     DTR.INFLECTED.FUT-FLAG #fut,
-    SYNSEM.LOCAL.CAT.HEAD [ INF +, FORM nonfinite ] ].
+    SYNSEM.LOCAL.CAT.HEAD [ INF + ] ].
 
 evid-lex-rule := modal-2-lex-rule-super &
   [ INFLECTED [ FUT-FLAG #fut,
@@ -987,7 +987,7 @@ wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
 emb-wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
    [ SYNSEM.LOCAL.CAT [ MC -,
                         VAL #val,
-                        HEAD verb & [ FORM nonfinite ] ],
+                        HEAD verb & [ FORM finite ] ],
      HEAD-DTR.SYNSEM.LOCAL.CAT [ MC na,
                                  INT +,
                                  HEAD.INF +,
