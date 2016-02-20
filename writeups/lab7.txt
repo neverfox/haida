@@ -39,7 +39,7 @@ Not only do matrix wh-questions use different wh-words from embedded questions, 
 
 ##### Matrix
 
-There are two ways that matrix wh-questions are expressed in Masset Haida, that are otherwise (according to Enrico) “not semantically or pragmatically different” from each another:
+There are two ways that matrix wh-questions are expressed in Masset Haida, that are otherwise (according to Enrico) “not semantically or pragmatically different” from each other:
 
 1. A sentence-inital question word (drawn from the root forms above), set off by the focus marker *.uu*, e.g.
 
@@ -150,37 +150,27 @@ giisd dang gyaa taanaanee tla.àwhla-gang
 who you POSS smokehouse build-PRS
 `Who builds your smokehouse?'
 
-#87 wh questions from embedded clause. adapted from 381
-Source: author
-Vetted: f
-Judgment: g
-Phenomena: {wh}
-giisd.uu dang gyaa taanaa nee tla.àwhlaang Bill gudang-gang
-giisd=.uu dang gyaa taanaanee tla.àwhla-gang Bill gudang-gang
-who=FOC you POSS smokehouse build-PRS Bill think-PRS
-`Who does Bill think is building your smokehouse?'
-
-# 168 embedded question (adapted from a:485)
-Source: author
-Vetted: f
-Judgment: g
-Phenomena: {emb-d, wh}
-tliits’aan Bill na.àwhliyeega Joe kyaananggan
-tliits’aan Bill na.àwhli-gee-ga Joe kyaanang-gan
-where Bill build.house-INFIN-PP Joe ask-PST
-`Joe asked where Bill is building a house.'
-
-# 173 embedded question (adapted from a:485)
+# 87 embedded question (adapted from a:485)
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {emb-d, wh}
-giisd.uu na.àwhliyeega Joe kyaananggan
-giisd=.uu na.àwhli-gee-ga Joe kyaanang-gan
-who=FOC build.house-INFIN-PP Joe ask-PST
+giisd na.àwhliyeega Joe kyaananggan
+giisd na.àwhli-gee-ga Joe kyaanang-gan
+who build.house-INFIN-PP Joe ask-PST
 `Joe asked who is building a house.'
 
-# 174 wh question
+# 168 non-verbal predicates - PP, adapted from a:1094
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cop}
+Joe 7isgyaan xaay buudgeegwa.a
+Joe 7isgyaan x-ee buud-ee=gwa.a
+Joe and dog-DEF boat-DEF=on
+`Joe and the dog are on the boat.''
+
+# 173 wh question
 Source: author
 Vetted: f
 Judgment: g
@@ -188,9 +178,9 @@ Phenomena: {wh}
 guus.uu daa qinggaa
 guus=.uu daa qing-gaa
 what=FOC 2p see-EVID
-`What did you see?'
+`What did you see?''
 
-# 176 wh question with embedded what
+# 174 wh question with embedded what
 Source: author
 Vetted: f
 Judgment: u
@@ -200,7 +190,7 @@ nang daa qing-gaa
 nang 2p see-EVID
 `Who did you see.'
 
-# 177 wh question with embedded what
+# 175 wh question with embedded what
 Source: author
 Vetted: f
 Judgment: u
@@ -210,25 +200,27 @@ ginn daa qing-gaa
 what 2p see-EVID
 `What did you see.'
 
-# 178 embedded question (adapted from a:485)
+# 176 embedded question (adapted from a:485)
 Source: author
 Vetted: f
 Judgment: g
 Phenomena: {emb-d, wh}
-nang Bill na.àwhliyeega Joe kyaananggan
-nang Bill na.àwhli-gee-ga Joe kyaanang-gan
-who Bill build.house-INFIN-PP Joe ask-PST
+nang na.àwhliyeega Joe kyaananggan
+nang na.àwhli-gee-ga Joe kyaanang-gan
+who build.house-INFIN-PP Joe ask-PST
 `Joe asked who is building a house.'
 
-# 179 embedded question (adapted from a:485)
+# 177 embedded question (adapted from a:485)
 Source: author
 Vetted: f
 Judgment: u
 Phenomena: {emb-d, wh}
-giisd Bill na.àwhliyeega Joe kyaananggan
-giisd Bill na.àwhli-gee-ga Joe kyaanang-gan
-who Bill build.house-INFIN-PP Joe ask-PST
+nang na.àwhligan Joe kyaananggan
+nang na.àwhli-gan Joe kyaanang-gan
+who build.house-PST Joe ask-PST
 `Joe asked who is building a house.'
+
+
 ```
 
 #### Implementation
@@ -330,7 +322,7 @@ Then, in the lexicon, we added:
 
 This was `LIGHT -` coming out of the matrix, but we were advised to remove that and replace it with `SPR < >` to avoid spurious attachments.
 
-Next we needed to add an infinite lexical rule to our grammar:
+Next we needed to add an infinitive lexical rule to our grammar:
 
 ```
 infin-pp-lex-rule := modal-2-lex-rule-super &
