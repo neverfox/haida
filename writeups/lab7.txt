@@ -16,11 +16,46 @@
 
 #### Description
 
+As described in Lab 3, sentential negation in Haida is marked by two things occuring together: the adverb *gam* appearing before the verb (and early in the sentence) and the verb suffix *-.ang*.
+
 #### Examples
+
+```
+# 41 negation
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {neg}
+gam gyùudanee ts’agts’aggee qing.anggan
+gam gyùudan-ee ts’agts’ag-ee qing-.ang-gan
+NEG horse-DEF wagon-DEF see-NEG-PST
+`The horse did not see the wagon.'
+
+# 42 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gyùudanee ts’agts’aggee qing.anggan
+gyùudan-ee ts’agts’ag-ee qing-.ang-gan
+horse-DEF wagon-DEF see-NEG-PST
+`The horse did not see the wagon.'
+
+# 43 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gam gyùudanee ts’agts’aggee qinggan
+gam gyùudan-ee ts’agts’ag-ee qing-gan
+NEG horse-DEF wagon-DEF see-PST
+`The horse did not see the wagon.'
+```
 
 #### Implementation
 
-#### Problems
+Coming in to this lab, our negation was broken `same-neg-sat-lex-rule` was missing as a supertype of the following tenses: `modal-2-lex-rule-super`, `aspect-lex-rule-super`, `num-lex-rule-super`, `finite-lex-rule-super`, and `question-lex-rule-super`. This allowed
+the negative suffix to be licensed without the negative adverb. After adding `same-neg-sat-lex-rule` as a supertype to these rules, negation now parses correctly and gives the correct semantics.
 
 
 ### Wh-questions
@@ -629,7 +664,84 @@ To implement this sentence, we first had to:
 
 This resulted in two parses that mean *He picked it up* or *It picked him up*. We get both readings because of pro-drop.
 
-### Additional notes
+### Other changes
+
+`sentential-verb-lex` now inherits from `main-verb-lex` (instead of verb lex), which is `SPR < >`.  This significantly reduces spurious parsing because sentence complement-taking verbs are now restricted to an NP subject, and not N. Inheriting from `main-verb-lex` also makes `sentential-verb-lex` a subtype of `norm-sem-lex-item`, which correctly puts `KEYREL` on the `RELS` list. The following example shows both of these improvements:
+
+```
+#147 embedded clauses (adapted from a:430)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {emb-d}
+dii naa.n k’untl’aa.ang hla suugan
+dii naa.n k’untl’aa-.ang hlaa suu-gan
+My grandmother get.burned-NF 1sg say-PST
+`I said that my grandmother got burned.'
+```
+
+Previously, tense was producing a large amount of spurious ambiguity because interrogative tenses were not properly constrained to questions and declarative tenses were not properly constrained to statements, as noted in Lab 6. The `question-lex-rule-super` type has two daughters: `int-lex-rule` and `decl-lex-rule`, and one of these two daughters is obligatory. However, the grammar was treating them as optional, licensing the daughters of `tense-lex-rule` and `int_tense-lex-rule` without their going through `decl-lex-rule` and `int-lex-rule`, respectively. The solution was to remove `int_tense-rule-dtr` and `tense-rule-dtr` from the supertypes of all lex rules except for `int-lex-rule` and `decl-lex-rule`.
+
+We also removed `question-lex-rule-super` from the supertype of `modal-2-lex-rule-super` to prevent the modals in this position class future, evidential and infinitive) from become inputs to other tenses. We also changed the daughter type on the `modal-3-lex-rule-super` from `modal-3-lex-rule-super` to `evid-lex-rule` so that it would follow the evidential lexical rule in the pipeline.
+
+```
+modal-3-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-lex-rule &
+  [ INFLECTED #infl,
+    DTR evid-lex-rule &
+        [ INFLECTED #infl &
+                    [ FIN-FLAG + ] ] ].
+```
+          
+This cut the spurious ambiguity resulting from this problem down by half. However new spurious ambiguity was introduced by the addition of `extracted-comp` for wh-questions (competing with `head-opt-comp`). In addition to that, we have ambiguity related to `EVID` + `INT_PRESENT` vs. `INT_PAST` tense:
+
+```
+# 74 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudangaa
+daa=gu gudang-gaa
+you=Q understand-EVID
+`Did you understand it?'
+
+# 75 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudang7as
+daa=gu gudang-.asa
+you=Q understand-FUT
+`Will you understand it?'
+```
+
+This no longer parses:
+
+```
+# 77 yes/no questions. illegal past tense marker
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+daagu gudanggan
+daa=gu gudang-gan
+you=Q understand-PST
+`Did you understand it?'
+```
+
+The following example was changed to grammatical because even though *-gang* cannot be licensed as a present tense marker, it is legal as a frequentive aspect marker:
+
+```
+# 76 yes/no questions. Source: author
+Vetted: f
+Judgment: g
+Phenomena: {q}
+daagu gudanggang
+daa=gu gudang-gang
+you=Q understand-FRQ
+`Do you understand it?'
+```
 
 
 ## Coverage
