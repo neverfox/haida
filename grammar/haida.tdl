@@ -625,6 +625,12 @@ wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item & non-ynq-lex-i
                          REL <! !>,
                          QUE < ! #ind ! > ] ] ].
 
+root-wh-pronoun-noun-lex := wh-pronoun-noun-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.WH-EMB - ].
+
+emb-wh-pronoun-noun-lex := wh-pronoun-noun-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.WH-EMB + ].
+
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Rules
 ;;;;;;;;;;;;;;;;;;;
@@ -1020,7 +1026,7 @@ scopal-adj-head-phrase := adj-head-scop-phrase & same-int-phrase &
 ;;; Coordination
 ;;;;;;;;;;;;;;;;;;
 
-coord-phrase :+ [ SYNSEM.NON-LOCAL #nl,
+topormid-coord-phrase :+ [ SYNSEM.NON-LOCAL #nl,
    LCOORD-DTR.SYNSEM.NON-LOCAL #nl,
    RCOORD-DTR.SYNSEM.NON-LOCAL #nl ].
 
