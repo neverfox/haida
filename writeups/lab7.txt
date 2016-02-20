@@ -618,7 +618,7 @@ and then 3p pick.up-EVID-PST-TC
 To implement this sentence, we first had to:
 
 * add a new verb *qii.id*
-* add a new lex type and phrase type to handle non-negative scopal adverbs
+* add a new lex type and phrase type to handle non-negative scopal adverbs like 'and then'
 
     ```
     scopal-adj-head-phrase := adj-head-scop-phrase & same-int-phrase &
