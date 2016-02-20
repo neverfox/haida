@@ -1667,7 +1667,7 @@ Phenomena: {emb-d, q}
 
 # 168 embedded question (adapted from a:485)
 Source: author
-Vetted: s
+Vetted: f
 Judgment: g
 Phenomena: {emb-d, wh}
 tliits’aan Bill na.àwhliyeega Joe kyaananggan
@@ -1737,7 +1737,7 @@ what=FOC 2p see-EVID
 
 # 176 wh question with embedded what
 Source: author
-Vetted: s
+Vetted: f
 Judgment: u
 Phenomena: {wh}
 nang daa qinggaa
@@ -1747,7 +1747,7 @@ nang 2p see-EVID
 
 # 177 wh question with embedded what
 Source: author
-Vetted: s
+Vetted: f
 Judgment: u
 Phenomena: {wh}
 ginn daa qinggaa
@@ -1757,7 +1757,7 @@ what 2p see-EVID
 
 # 178 embedded question (adapted from a:485)
 Source: author
-Vetted: s
+Vetted: f
 Judgment: g
 Phenomena: {emb-d, wh}
 nang Bill na.àwhliyeega Joe kyaananggan
@@ -1765,4 +1765,12 @@ nang Bill na.àwhli-gee-ga Joe kyaanang-gan
 who Bill build.house-INFIN-PP Joe ask-PST
 `Joe asked who is building a house.'
 
-
+# 178 embedded question (adapted from a:485)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-d, wh}
+giisd Bill na.àwhliyeega Joe kyaananggan
+giisd Bill na.àwhli-gee-ga Joe kyaanang-gan
+who Bill build.house-INFIN-PP Joe ask-PST
+`Joe asked who is building a house.'

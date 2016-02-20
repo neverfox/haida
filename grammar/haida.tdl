@@ -30,7 +30,8 @@ head :+ [ INF bool,
     AUX bool,
     PRD bool,
     NEGATED luk,
-    FORM form ].
+    FORM form,
+    WH-EMB bool ].
 
 cat :+ [ INT bool ].
 
@@ -981,7 +982,8 @@ wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
                                  INT +,
                                  VAL #val & [ SUBJ < >,
                                               COMPS < > ] ],
-     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT.MKG.FC +,
+     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD.WH-EMB -,
+                                       MKG.FC + ],
                            NON-LOCAL.QUE < ! ref-ind ! > ] ].
 
 emb-wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
@@ -993,7 +995,8 @@ emb-wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-fin
                                  HEAD.INF +,
                                  VAL #val & [ SUBJ < >,
                                               COMPS < > ] ],
-     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT.MKG.FC -,
+     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD.WH-EMB +,
+                                       MKG.FC - ],
                            NON-LOCAL.QUE < ! ref-ind ! > ] ].
 
 extracted-comp-phrase := basic-extracted-comp-phrase & same-ynq-unary-phrase & same-int-phrase &
