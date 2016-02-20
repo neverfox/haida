@@ -195,6 +195,16 @@ giisd na.àwhli-gee-ga Joe kyaanang-gan
 who build.house-INFIN-PP Joe ask-PST
 `Joe asked who is building a house.'
 
+# 167 embedded question (adapted from a:485)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-d, wh}
+tliits’aan Bill na.àwhliyeega Joe kyaananggan
+tliits’aan Bill na.àwhli-gee-ga Joe kyaanang-gan
+where Bill build.house-INFIN-PP Joe ask-PST
+`Joe asked where Bill is building a house.'
+
 # 172 embedded question (adapted from a:485)
 Source: author
 Vetted: f
@@ -213,7 +223,7 @@ Phenomena: {wh}
 guus.uu daa qinggaa
 guus=.uu daa qing-gaa
 what=FOC 2p see-EVID
-`What did you see?''
+`What did you see?'
 
 # 174 wh question with embedded what
 Source: author
@@ -254,7 +264,6 @@ nang na.àwhligan Joe kyaananggan
 nang na.àwhli-gan Joe kyaanang-gan
 who build.house-PST Joe ask-PST
 `Joe asked who is building a house.'
-
 
 ```
 
@@ -434,18 +443,20 @@ Finally, the matrix and embedded phrase types constrain their non-head daughters
 
 `same-ynq-unary-phrase` was added to the extracted phrase types to ensure that important non-local values are passed up to avoid broken diff list appends (this was also done to `context1-decl-head-opt-subj-phrase`, `context1-head-opt-comp-phrase` and `bare-np-phrase` for the same reason). `same-int-phrase` was added to ensure the `INT` value of the head daughter is passed up to the mother.
 
-This implementation correctly constrained the syntax, but not the semantics. The extracted subj phrase did not correctly append the RELS list and the semantics of the right branch was dropped in the HEAD-COMP-RULE. To remedy this, we added the following constraints to RELS, HCONS and ICONS:
+This implementation correctly constrained the syntax, but not the semantics. The `extracted-subj-phrase` did not correctly append the `RELS` list and the semantics of the right branch was dropped in the `HEAD-COMP-RULE`. To remedy this, we added the following constraints to `RELS`, `HCONS` and `ICONS`:
 
+```
 extracted-subj-phrase := basic-extracted-subj-phrase & same-ynq-unary-phrase & same-int-phrase &
   [ C-CONT [ RELS <! !>,
-	     HCONS <! !>,
-	     ICONS <! !> ],
+             HCONS <! !>,
+             ICONS <! !> ],
     SYNSEM.LOCAL.CAT.HEAD verb,
     HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS olist ].
+```
 
 #### Results and Problems
 
-The implementation described, terms of both syntax and semantics, correctly parses our grammatical examples and rejects our ungrammatical examples, with the exception (noted above) of the non-pronoun *‘where’* examples.
+The implementation described, terms of both syntax and semantics, correctly parses our grammatical examples and rejects our ungrammatical examples for both matrix and embedded wh-questions, with the exception (noted above) of the non-pronoun *‘where’* examples.
 
 ##### Matrix
 
@@ -551,15 +562,6 @@ Source: author
 Vetted: f
 Judgment: g
 Phenomena: {emb-d, wh}
-tliits’aan Bill na.àwhliyeega Joe kyaananggan
-tliits’aan Bill na.àwhli-gee-ga Joe kyaanang-gan
-where Bill build.house-INFIN-PP Joe ask-PST
-`Joe asked where Bill is building a house.'
-
-Source: author
-Vetted: f
-Judgment: g
-Phenomena: {emb-d, wh}
 nang na.àwhliyeega Joe kyaananggan
 nang na.àwhli-gee-ga Joe kyaanang-gan
 who build.house-INFIN-PP Joe ask-PST
@@ -599,6 +601,18 @@ nang na.àwhligan Joe kyaananggan
 nang na.àwhli-gan Joe kyaanang-gan
 who build.house-PST Joe ask-PST
 `Joe asked who is building a house.'
+```
+
+And this does not parse because ‘where’ is not implemented:
+```
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-d, wh}
+tliits’aan Bill na.àwhliyeega Joe kyaananggan
+tliits’aan Bill na.àwhli-gee-ga Joe kyaanang-gan
+where Bill build.house-INFIN-PP Joe ask-PST
+`Joe asked where Bill is building a house.'
 ```
 
 ### Corpus Sentence
