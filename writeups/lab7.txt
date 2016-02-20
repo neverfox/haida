@@ -160,15 +160,15 @@ giisd na.àwhli-gee-ga Joe kyaanang-gan
 who build.house-INFIN-PP Joe ask-PST
 `Joe asked who is building a house.'
 
-# 168 non-verbal predicates - PP, adapted from a:1094
+# 172 embedded question (adapted from a:485)
 Source: author
 Vetted: f
 Judgment: u
-Phenomena: {cop}
-Joe 7isgyaan xaay buudgeegwa.a
-Joe 7isgyaan x-ee buud-ee=gwa.a
-Joe and dog-DEF boat-DEF=on
-`Joe and the dog are on the boat.''
+Phenomena: {emb-d, wh}
+giisd.uu na.àwhliyeega Joe kyaananggan
+giisd=.uu na.àwhli-gee-ga Joe kyaanang-gan
+who=FOC build.house-INFIN-PP Joe ask-PST
+`Joe asked who is building a house.'
 
 # 173 wh question
 Source: author
@@ -399,13 +399,22 @@ Finally, the matrix and embedded phrase types constrain their non-head daughters
 
 `same-ynq-unary-phrase` was added to the extracted phrase types to ensure that important non-local values are passed up to avoid broken diff list appends (this was also done to `context1-decl-head-opt-subj-phrase`, `context1-head-opt-comp-phrase` and `bare-np-phrase` for the same reason). `same-int-phrase` was added to ensure the `INT` value of the head daughter is passed up to the mother.
 
+This implementation correctly constrained the syntax, but not the semantics. The extracted subj phrase did not correctly append the RELS list and the semantics of the right branch was dropped in the HEAD-COMP-RULE. To remedy this, we added the following constraints to RELS, HCONS and ICONS:
+
+extracted-subj-phrase := basic-extracted-subj-phrase & same-ynq-unary-phrase & same-int-phrase &
+  [ C-CONT [ RELS <! !>,
+	     HCONS <! !>,
+	     ICONS <! !> ],
+    SYNSEM.LOCAL.CAT.HEAD verb,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS olist ].
+
 #### Results and Problems
 
 The implementation described, terms of both syntax and semantics, correctly parses our grammatical examples and rejects our ungrammatical examples, with the exception (noted above) of the non-pronoun *‘where’* examples.
 
 ##### Matrix
 
-Tense is assigned as present when the present suffix is used and past when the evidential is used (rejecting standard past tense suffix as ungrammatical). It's worth noting that because our frequentive suffix has the same spelling and we don't currently have a way to control for different verb suffix positions relative to each other, the LKB interprets *-gang* as frequentive aspect. This means that our grammar isn't currently able to have any non-evidential suffix drive the tense assignment, and is relying on `INT +` and `int_present-lex` to make all non-evidential verbs present tense. This will need to be resolved with a new, additional tense track for this form of question, as it would overgenerate on verbs what simply lacked a suffix in a question sentence.
+Tense is assigned as present when the present suffix is used and past when the evidential is used (rejecting standard past tense suffix as ungrammatical). It's worth noting that because our frequentive suffix has the same spelling it can also be parsed as *-gang* as frequentive aspect + int_present tense. In its current state, our grammar does not have any non-evidential suffixes drive the tense assignment, but relies on `INT +` and `int_present-lex` to make all non-evidential verbs present tense. Because wh-question morphology does not align perfectly with either declaratives or yes/no interrogatives, we should impliment a third tense track for this form of question, to prevent overgeneration on verbs what simply lacked a suffix in a question sentence.
 
 In Lab 6, we discussed that the `INT` feature was added to drive a tense pipeline for Y/N questions, which differ from wh question in that they expect present tense questions to have no tense suffix (while still requiring EVID for past). Declarative sentences, on the other hand, have past, present and future (mood) driven by the tense suffixes.
 
@@ -477,7 +486,7 @@ what=FOC 2p see-EVID
 Question words from the embedded set are not allowed:
 
 ```
-# 176 wh question with embedded what
+# 174 wh question with embedded what
 Source: author
 Vetted: f
 Judgment: u
@@ -487,7 +496,7 @@ nang daa qing-gaa
 nang 2p see-EVID
 `Who did you see.'
 
-# 177 wh question with embedded what
+# 175 wh question with embedded what
 Source: author
 Vetted: f
 Judgment: u
