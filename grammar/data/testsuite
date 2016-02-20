@@ -542,7 +542,7 @@ Judgment: g
 Phenomena: {tam}
 gyùudanee raddagang
 gyùudan-ee rad-da-gang
-horse-DEF run-FREQ-PRS
+horse-DEF run-FR-PRS
 `The horse often runs.' or `The horse usually runs.'
 
 # 55 frequentive aspect
@@ -552,7 +552,7 @@ Judgment: u
 Phenomena: {tam}
 gyùudanee radgangda
 gyùudan-ee rad-gang-da
-horse-DEF run-PRS-FREQ
+horse-DEF run-PRS-FR
 `The horse often runs.' or `The horse usually runs.'
 
 # 56 agreement
@@ -758,12 +758,12 @@ you=Q understand-FUT
 # 76 yes/no questions. illegal present tense marker
 Source: author
 Vetted: f
-Judgment: u
+Judgment: g
 Phenomena: {q}
 daagu gudanggang
 daa=gu gudang-gang
-you=Q understand-PRS
-`Do you understand it?'
+you=Q understand-FR
+`Do you frequently understand it?'
 
 # 77 yes/no questions. illegal past tense marker
 Source: author
@@ -785,7 +785,7 @@ dii daa=gu gudang
 1SG.ACC you=Q understand
 `Do you understand me?'
 
-# 79 yes/no questions. clitic in wrong position
+# 79 yes/no questions.
 Source: author
 Vetted: f
 Judgment: g
@@ -801,8 +801,8 @@ Vetted: s
 Judgment: g
 Phenomena: {wh}
 giisd.uu dang gyaa taanaa nee tla.àwhlaang
-giisd-.uu dang gyaa taanaanee tla.àwhla-gang
-who-FOC you POSS smokehouse build-PRS
+giisd=.uu dang gyaa taanaanee tla.àwhla-gang
+who=FOC you POSS smokehouse build-PRS
 `Who is building your smokehouse?'
 
 #81 wh questions
@@ -811,8 +811,8 @@ Vetted: s
 Judgment: g
 Phenomena: {wh}
 giisd.uu dang gyaa taanaa nee tla.àwhlayaa
-giisd-.uu dang gyaa taanaanee tla.àwhla-gaa
-who-FOC you POSS smokehouse build-EVID
+giisd=.uu dang gyaa taanaanee tla.àwhla-gaa
+who=FOC you POSS smokehouse build-EVID
 `Who built your smokehouse?'
 
 #82 wh questions -- wrong order.
@@ -821,8 +821,8 @@ Vetted: f
 Judgment: u
 Phenomena: {wh}
 dang gyaa giisd.uu taanaa nee tla.àwhlaang
-dang gyaa giisd-.uu taanaanee tla.àwhla-gang
-you POSS who-FOC smokehouse build-PRS
+dang gyaa giisd=.uu taanaanee tla.àwhla-gang
+you POSS who=FOC smokehouse build-PRS
 `Who is building your smokehouse?'
 
 #83 wh questions no focus
@@ -833,7 +833,7 @@ Phenomena: {wh}
 giisd dang gyaa taanaa nee tla.àwhlaang
 giisd dang gyaa taanaanee tla.àwhla-gang
 who you POSS smokehouse build-PRS
-`Who is building your smokehouse?'
+`Who builds your smokehouse?'
 
 #84 wh questions
 Source: a:134
@@ -841,8 +841,8 @@ Vetted: s
 Judgment: g
 Phenomena: {wh}
 huugu Bill guus taagaa
-huu-gu Bill guus taa-gaa
-there-Q Bill what eat-EVID
+huu=gu Bill guus taa-gaa
+there=Q Bill what eat-EVID
 `What did Bill eat?'
 
 #85 wh questions
@@ -851,8 +851,8 @@ Vetted: f
 Judgment: g
 Phenomena: {wh}
 Bill huugu guus taagaa
-Bill huu-gu guus taa-gaa
-Bill there-Q what eat-EVID
+Bill huu=gu guus taa-gaa
+Bill there=Q what eat-EVID
 `What did Bill eat?'
 
 #86 wh questions
@@ -860,20 +860,20 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {wh}
-Bill guus taagaa huugu
-Bill guus taa-gaa huu-gu
-Bill what eat-EVID there-Q
+Bill huugu taagaa guus
+Bill huu=gu taa-gaa guus
+Bill there=Q eat-EVID what
 `What did Bill eat?'
 
-#87 wh questions from embedded clause. adapted from 381
+# 87 embedded question (adapted from a:485)
 Source: author
 Vetted: f
-Judgment: g
-Phenomena: {wh}
-giisd.uu dang gyaa taanaa nee tla.àwhlaang Bill gudang-gang
-giisd-.uu dang gyaa taanaanee tla.àwhla-gang Bill gudang-gang
-who-FOC you POSS smokehouse build-PRS Bill think-PRS
-`Who does Bill think is building your smokehouse?'
+Judgment: u
+Phenomena: {emb-d, wh}
+giisd na.àwhliyeega Joe kyaananggan
+giisd na.àwhli-gee-ga Joe kyaanang-gan
+who build.house-INFIN-PP Joe ask-PST
+`Joe asked who is building a house.'
 
 # 88 adverbs example constructed from data on pages 40
 Source: author
@@ -1511,8 +1511,8 @@ Vetted: s
 Judgment: g
 Phenomena: {emb-q}
 daagu 7isdaa hlangaa.ang dang gudang
-daa-gu 7isdaa hlangaa-.ang dang gudang
-you-Q do could-NF you think
+daa=gu 7isdaa hlangaa-.ang dang gudang
+you=Q do could-NF you think
 `Do you think that you could do it'
 
 #152 embedded clauses
@@ -1521,8 +1521,8 @@ Vetted: f
 Judgment: u
 Phenomena: {emb-q}
 hlangaa.ang dang gudang daagu 7isdaa
-hlangaa-.ang dang gudang daa-gu 7isdaa
-could-NF you think you-Q do
+hlangaa-.ang dang gudang daa=gu 7isdaa
+could-NF you think you=Q do
 `Do you think that you could do it'
 
 #153 embedded clauses
@@ -1615,7 +1615,7 @@ gah gam gyùudan-ee ts’agts’ag-ee qing-gan
 NEG NEG horse-DEF wagon-DEF see-PST
 `The horse absolutely did not see the wagon.'
 
-# 163 non-verbal predicates - PP, adapted from a:1094
+# 162 non-verbal predicates - PP, adapted from a:1094
 Source: author
 Vetted: f
 Judgment: g
@@ -1625,7 +1625,7 @@ Joe 7isgyaan x-ee buud-ee=gwa.a 7iij-gang
 Joe and dog-DEF boat-DEF=on be-PRS
 `Joe and the dog are on the boat.'
 
-# 164 embedded NVP (adapted from a:211, a:430)
+# 163 embedded NVP (adapted from a:211, a:430)
 Source: author
 Vetted: f
 Judgment: g
@@ -1635,7 +1635,7 @@ xa.a xid7iid 7iij-.ang hlaa suu-gan
 mallard bird be-NF 1sg say-PST
 `I said that a mallard is a bird.'
 
-# 165 embedded NVP (adapted from a:430)
+# 164 embedded NVP (adapted from a:430)
 Source: author
 Vetted: f
 Judgment: g
@@ -1645,7 +1645,7 @@ gyùudan-ee 7iw7aan-.ang hlaa suu-gan
 horse-DEF be.big-NF 1sg say-PST
 `I said that the horse is big.'
 
-# 166 embedded NVP (adapted from a:430)
+# 165 embedded NVP (adapted from a:430)
 Source: author
 Vetted: f
 Judgment: g
@@ -1655,7 +1655,7 @@ Joe 7isgyaan x-ee buud-ee=gwa.a 7iij-.ang hlaa suu-gan
 Joe and dog-DEF boat-DEF=on be-NF 1sg say-PST
 `I said that Joe and the dog are on the boat.'
 
-# 167 embedded question
+# 166 embedded question
 Source: a:70
 Vetted: s
 Judgment: g
@@ -1665,17 +1665,17 @@ Phenomena: {emb-d, q}
 3p be.ready-INFIN-PP 3p-PP I ask-PST
 `I asked him if he was ready.'
 
-# 168 embedded question (adapted from a:485)
+# 167 embedded question (adapted from a:485)
 Source: author
-Vetted: s
+Vetted: f
 Judgment: g
 Phenomena: {emb-d, wh}
-tliits'aan Bill na.àwhliyeega Joe kyaananggan
-tliits'aan Bill na.àwhli-yee-ga Joe kyaanang-gan
+tliits’aan Bill na.àwhliyeega Joe kyaananggan
+tliits’aan Bill na.àwhli-gee-ga Joe kyaanang-gan
 where Bill build.house-INFIN-PP Joe ask-PST
 `Joe asked where Bill is building a house.'
 
-# 169 non-verbal predicates - PP, adapted from a:1094
+# 168 non-verbal predicates - PP, adapted from a:1094
 Source: author
 Vetted: f
 Judgment: u
@@ -1685,7 +1685,7 @@ Joe 7isgyaan x-ee buud-ee=gwa.a
 Joe and dog-DEF boat-DEF=on
 `Joe and the dog are on the boat.'
 
-# 170 embedded NVP (adapted from a:211, a:430)
+# 169 embedded NVP (adapted from a:211, a:430)
 Source: author
 Vetted: f
 Judgment: u
@@ -1695,7 +1695,7 @@ xa.a xid7iid 7iij-gang hlaa suu-gan
 mallard bird be-PRS 1sg say-PST
 `I said that a mallard is a bird.'
 
-# 171 embedded NVP (adapted from a:430)
+# 170 embedded NVP (adapted from a:430)
 Source: author
 Vetted: f
 Judgment: u
@@ -1705,7 +1705,7 @@ gyùudan-ee 7iw7aan-gang hlaa suu-gan
 horse-DEF be.big-PRS 1sg say-PST
 `I said that the horse is big.'
 
-# 172 embedded NVP (adapted from a:430)
+# 171 embedded NVP (adapted from a:430)
 Source: author
 Vetted: f
 Judgment: u
@@ -1714,3 +1714,63 @@ Joe 7isgyaan xaay buudgeegwa.a 7isgang hla suugan
 Joe 7isgyaan x-ee buud-ee=gwa.a 7iij-gang hlaa suu-gan
 Joe and dog-DEF boat-DEF=on be-PRS 1sg say-PST
 `I said that Joe and the dog are on the boat.'
+
+# 172 embedded question (adapted from a:485)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-d, wh}
+giisd.uu na.àwhliyeega Joe kyaananggan
+giisd=.uu na.àwhli-gee-ga Joe kyaanang-gan
+who=FOC build.house-INFIN-PP Joe ask-PST
+`Joe asked who is building a house.'
+
+# 173 wh question
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wh}
+guus.uu daa qinggaa
+guus=.uu daa qing-gaa
+what=FOC 2p see-EVID
+`What did you see?'
+
+# 174 wh question with embedded what
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+nang daa qinggaa
+nang daa qing-gaa
+nang 2p see-EVID
+`Who did you see.'
+
+# 175 wh question with embedded what
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+ginn daa qinggaa
+ginn daa qing-gaa
+what 2p see-EVID
+`What did you see.'
+
+# 176 embedded question (adapted from a:485)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-d, wh}
+nang na.àwhliyeega Joe kyaananggan
+nang na.àwhli-gee-ga Joe kyaanang-gan
+who build.house-INFIN-PP Joe ask-PST
+`Joe asked who is building a house.'
+
+# 177 embedded question (adapted from a:485)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-d, wh}
+nang na.àwhligan Joe kyaananggan
+nang na.àwhli-gan Joe kyaanang-gan
+who build.house-PST Joe ask-PST
+`Joe asked who is building a house.'

@@ -1,0 +1,771 @@
+# Lab 7
+
+### University of Washington, LING 567, Winter 2016
+
+#### Author: Roman Pearah
+#### Partner: Kristen Piepgrass
+
+#### Language: Haida (Masset dialect)
+
+---
+
+## Phenomena
+
+
+### Negation
+
+#### Description
+
+As described in Lab 3, sentential negation in Haida is marked by two things occuring together: the adverb *gam* appearing before the verb (and early in the sentence) and the verb suffix *-.ang*.
+
+#### Examples
+
+```
+# 41 negation
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {neg}
+gam gyùudanee ts’agts’aggee qing.anggan
+gam gyùudan-ee ts’agts’ag-ee qing-.ang-gan
+NEG horse-DEF wagon-DEF see-NEG-PST
+`The horse did not see the wagon.'
+
+# 42 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gyùudanee ts’agts’aggee qing.anggan
+gyùudan-ee ts’agts’ag-ee qing-.ang-gan
+horse-DEF wagon-DEF see-NEG-PST
+`The horse did not see the wagon.'
+
+# 43 negation
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {neg}
+gam gyùudanee ts’agts’aggee qinggan
+gam gyùudan-ee ts’agts’ag-ee qing-gan
+NEG horse-DEF wagon-DEF see-PST
+`The horse did not see the wagon.'
+```
+
+#### Implementation
+
+Coming in to this lab, our negation was broken `same-neg-sat-lex-rule` was missing as a supertype of the following tenses: `modal-2-lex-rule-super`, `aspect-lex-rule-super`, `num-lex-rule-super`, `finite-lex-rule-super`, and `question-lex-rule-super`. This allowed
+the negative suffix to be licensed without the negative adverb. After adding `same-neg-sat-lex-rule` as a supertype to these rules, negation now parses correctly and gives the correct semantics.
+
+
+### Wh-questions
+
+#### Description
+
+There are two mutually exclusive sets of wh words in Masset Haida: root (matrix) wh words and embedded wh words. Here is a small subset of those that appear in our testsuite:
+
+| Meaning | Root forms | Embedded forms |
+|---------|------------|----------------|
+| who     | giisd      | nang           |
+| what    | guus       | ginn           |
+| where   | gidlaan    | tliits’aan     |
+
+Not only do matrix wh-questions use different wh-words from embedded questions, but they conform to a different set of rules. So we will address each type separately.
+
+##### Matrix
+
+There are two ways that matrix wh-questions are expressed in Masset Haida, that are otherwise (according to Enrico) “not semantically or pragmatically different” from each other:
+
+1. A sentence-inital question word (drawn from the root forms above), set off by the focus marker *.uu*, e.g.
+
+    ```
+    giisd=.uu dang gyaa taanaanee tla.àwhla-gang
+    who=FOC you POSS smokehouse build-PRS
+    `Who is building your smokehouse?'
+
+    *giisd dang gyaa taanaanee tla.àwhla-gang
+    who you POSS smokehouse build-PRS
+    `Who is building your smokehouse?' (no focus)
+
+    *dang gyaa taanaanee giisd=.uu tla.àwhla-gang
+    you POSS smokehouse who=FOC build-PRS
+    `Who is building your smokehouse?' (not sentence-initial)
+    ```
+
+2. A question word (again, root form) elsewhere in the sentence, in which case the sentence must be marked as interrogative by means of another focus marker *gu*, which leans on a separate word that stands, as Enrico puts it, “where the question word belongs”, though it's not clear what dictates that.
+
+    In this way, the question word is “always somehow associated with the root focus position,” which Enrico claims means “it is not correct to say that it is focused in situ.”
+
+    Given the different treatment of sentence-initial wh-words and the verb-final nature of the language, that means the question word itself can, in this case, be anywhere but sentence-initial or sentence-final position, e.g.
+
+    ```
+    huu=gu Bill guus taa-gaa
+    there=Q Bill what eat-EVID
+    `What did Bill eat?'
+
+    Bill huu=gu guus taa-gaa
+    Bill there=Q what eat-EVID
+    `What did Bill eat?'
+
+    *Bill huu=gu taa-gaa guus
+    Bill there=Q eat-EVID what
+    `What did Bill eat?' (sentence-final)
+    ```
+
+With the approval of Prof. Bender, we have only attempted to implement the first, sentence-initial kind of matrix wh-question.
+
+As for verb tense, “present question-word questions have morphological present tense; past ones do not have morphological tense in M (the evidential taking over the role of marking past test).”
+
+##### Embedded
+
+Embedded wh-questions, unlike matrix wh-questions, are formed as infinitival clauses, with no clear evidence we could find of tense-marking of the embedded question. Furthermore, these infinitival clauses, by all evidence, are marked with a postposition. However, Enrico offers no insight into why that is or how different postpositions are selected. Finally, as stated before, a different, embedded form of question word is used, and no focus marker is involved:
+
+    ```
+    [tliits'aan Bill na.àwhli-gee]-ga Joe kyaanang-gan
+    [where Bill build.house-INFIN]-PP Joe ask-PST
+    `Joe asked where Bill is building a house.'
+
+    *[gidlaan Bill na.àwhli-gee]-ga Joe kyaanang-gan
+    [where Bill build.house-INFIN]-PP Joe ask-PST
+    `Joe asked where Bill is building a house.' (not embedded form wh-word)
+
+    *[tliits'aan=.uu Bill na.àwhli-gee]-ga Joe kyaanang-gan
+    [where Bill build.house-INFIN]-PP Joe ask-PST
+    `Joe asked where Bill is building a house.' (focus marker)
+
+    *tliits'aan Bill na.àwhli-gee Joe kyaanang-gan
+    where Bill build.house-INFIN Joe ask-PST
+    `Joe asked where Bill is building a house.' (no PP)
+
+    *tliits'aan Bill na.àwhli-gang Joe kyaanang-gan
+    where Bill build.house-PRS Joe ask-PST
+    `Joe asked where Bill is building a house.' (not infinitive)
+    ```
+
+#### Examples
+
+```
+#80 wh questions
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.àwhlaang
+giisd=.uu dang gyaa taanaanee tla.àwhla-gang
+who=FOC you POSS smokehouse build-PRS
+`Who is building your smokehouse?'
+
+#81 wh questions
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.àwhlayaa
+giisd=.uu dang gyaa taanaanee tla.àwhla-gaa
+who=FOC you POSS smokehouse build-EVID
+`Who built your smokehouse?'
+
+#82 wh questions -- wrong order.
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+dang gyaa giisd.uu taanaa nee tla.àwhlaang
+dang gyaa giisd=.uu taanaanee tla.àwhla-gang
+you POSS who=FOC smokehouse build-PRS
+`Who is building your smokehouse?'
+
+#83 wh questions no focus
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+giisd dang gyaa taanaa nee tla.àwhlaang
+giisd dang gyaa taanaanee tla.àwhla-gang
+who you POSS smokehouse build-PRS
+`Who builds your smokehouse?'
+
+# 87 embedded question (adapted from a:485)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-d, wh}
+giisd na.àwhliyeega Joe kyaananggan
+giisd na.àwhli-gee-ga Joe kyaanang-gan
+who build.house-INFIN-PP Joe ask-PST
+`Joe asked who is building a house.'
+
+# 167 embedded question (adapted from a:485)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-d, wh}
+tliits’aan Bill na.àwhliyeega Joe kyaananggan
+tliits’aan Bill na.àwhli-gee-ga Joe kyaanang-gan
+where Bill build.house-INFIN-PP Joe ask-PST
+`Joe asked where Bill is building a house.'
+
+# 172 embedded question (adapted from a:485)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-d, wh}
+giisd.uu na.àwhliyeega Joe kyaananggan
+giisd=.uu na.àwhli-gee-ga Joe kyaanang-gan
+who=FOC build.house-INFIN-PP Joe ask-PST
+`Joe asked who is building a house.'
+
+# 173 wh question
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wh}
+guus.uu daa qinggaa
+guus=.uu daa qing-gaa
+what=FOC 2p see-EVID
+`What did you see?'
+
+# 174 wh question with embedded what
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+nang daa qinggaa
+nang daa qing-gaa
+nang 2p see-EVID
+`Who did you see.'
+
+# 175 wh question with embedded what
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+ginn daa qinggaa
+ginn daa qing-gaa
+what 2p see-EVID
+`What did you see.'
+
+# 176 embedded question (adapted from a:485)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-d, wh}
+nang na.àwhliyeega Joe kyaananggan
+nang na.àwhli-gee-ga Joe kyaanang-gan
+who build.house-INFIN-PP Joe ask-PST
+`Joe asked who is building a house.'
+
+# 177 embedded question (adapted from a:485)
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-d, wh}
+nang na.àwhligan Joe kyaananggan
+nang na.àwhli-gan Joe kyaanang-gan
+who build.house-PST Joe ask-PST
+`Joe asked who is building a house.'
+
+```
+
+#### Implementation
+
+In order to add the wh-words to the lexicon, we added a new type for them that differs from the English example we were given by:
+
+* excluding Y/N questions
+* being non-fc
+* having empty NON-LOCAL SLASH and REL dlists
+
+```
+wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item & non-ynq-lex-item &
+  [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
+                           MKG non-fc,
+                           VAL [ SPR < >,
+                                 SUBJ < >,
+                                 COMPS < >,
+                                 SPEC < > ] ],
+                           CONT [ HOOK.INDEX.PNG.PERNUM 3rd,
+                                  RELS < ! [ LBL #larg,
+                                             ARG0 #ind & ref-ind ],
+                                           [ PRED "wh_q_rel",
+                                             ARG0 #ind,
+                                             RSTR #harg ] ! >,
+                                  HCONS < ! [ HARG #harg,
+                                              LARG #larg ] ! > ] ],
+             NON-LOCAL [ SLASH <! !>,
+                         REL <! !>,
+                         QUE < ! #ind ! > ] ] ].
+```
+
+We also added a bool, nominal, syntactic feature to HEAD called WH-EMB to allow us to later constrain for one of the two categories of wh-words. Two subtypes of `wh-pronoun-noun-lex` make use of this:
+
+```
+root-wh-pronoun-noun-lex := wh-pronoun-noun-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.WH-EMB - ].
+
+emb-wh-pronoun-noun-lex := wh-pronoun-noun-lex &
+  [ SYNSEM.LOCAL.CAT.HEAD.WH-EMB + ].
+```
+
+This allowed us to add the following lexical entries:
+
+```
+giisd := root-wh-pronoun-noun-lex &
+  [ STEM < "giisd" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+
+guus := root-wh-pronoun-noun-lex &
+  [ STEM < "guus" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
+
+ginn := emb-wh-pronoun-noun-lex &
+  [ STEM < "ginn" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
+
+nang := emb-wh-pronoun-noun-lex &
+  [ STEM < "nang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+```
+
+We did not implement other, non-pronoun lex types, e.g. to deal with *where*, as that appeared to be out of scope, but did include an example of such a wh-question in our testsuite from Enrico.
+
+To implement the *.uu* focus clitic, we used the matrix customization system to add two types:
+
+```
+infostr-marking-mod-lex := no-rels-hcons-lex-item & one-icons-lex-item & norm-zero-arg &
+  [ SYNSEM.LOCAL [ CAT [ HEAD adv &
+                              [ MOD < [ LIGHT luk,
+                                        LOCAL [ CAT.MKG [ FC na-or--,
+                                                          TP na-or-- ],
+                                                CONT.HOOK [ INDEX #target,
+                                                            ICONS-KEY #icons ] ] ] > ],
+                         VAL [ SUBJ < >,
+                               COMPS < >,
+                               SPR < >,
+                               SPEC < > ] ],
+                   CONT.ICONS <! #icons &
+                                 [ IARG2 #target ] !> ] ].
+
+focus-marking-mod-lex := infostr-marking-mod-lex & non-ynq-lex-item &
+  [ SYNSEM.LOCAL.CAT [ MKG fc,
+                       POSTHEAD +,
+                       HEAD.MOD < [ L-PERIPH luk,
+                                    LOCAL [ CAT.HEAD +nv,
+                                            CONT.HOOK.ICONS-KEY focus ] ] > ] ].
+```
+
+We modified `infostr-marking-mod-lex` to be `norm-zero-arg` and its subtype `focus-marking-mod-lex` to be `non-ynq-lex-item` and `POSTHEAD +`. The `focus-marking-mod-lex` is allowed to modify `+nv` to accurately reflect the fact that (as a member of one of three categories of general Masset clitics) it is technically capable of modifiying either phrase category.
+
+Then, in the lexicon, we added:
+
+```
+%2Euu-marker-n := focus-marking-mod-lex &
+  [ STEM < ".uu" >,
+    SYNSEM.LOCAL.CAT.HEAD.MOD < [ LOCAL.CAT [ HEAD noun,
+                                              VAL.SPR < > ] ] > ].
+```
+
+This was `LIGHT -` coming out of the matrix, but we were advised to remove that and replace it with `SPR < >` to avoid spurious attachments.
+
+Next we needed to add an infinitive lexical rule to our grammar:
+
+```
+infin-pp-lex-rule := modal-2-lex-rule-super &
+  [ INFLECTED.FUT-FLAG #fut,
+    DTR.INFLECTED.FUT-FLAG #fut,
+    SYNSEM.LOCAL.CAT.HEAD [ INF + ] ].
+```
+
+Our existing implementation of infinitives (inherited from Lab 6) did not leverage our `FORM` feature, as perhaps it should have, and we're using the feature `INF` to mark infinitive. We made an attempt to rectify this but ran into issues that require a deeper refactoring and will be addressed if needed.
+
+Next, we implemented the relevant ancillary changes to our grammar, which are just summarized here from the lab instructions:
+
+* Constrained the value of NON-LOCAL on the root symbol in roots.tdl to `non-local-none`
+* Changed `basic-zero-arg` to `norm-zero-arg` everywhere
+* Modified `bare-np-phrase` to inherit from `head-valence-phrase` as an additional supertype
+* Modified `bare-np-phrase` to constrain the element of the daughter's non-empty SPR list to be unexpressed
+* Modified subj-raise-aux to constrain the element of the non-empty SUBJ list of its complement to be unexpressed
+* Made the following modifications to the analysis of coordination (as type addenda):
+
+    ```
+    topormid-coord-phrase :+ [ SYNSEM.NON-LOCAL #nl,
+       LCOORD-DTR.SYNSEM.NON-LOCAL #nl,
+       RCOORD-DTR.SYNSEM.NON-LOCAL #nl ].
+            
+    bottom-coord-phrase :+ [ SYNSEM.NON-LOCAL #nl,
+       NONCONJ-DTR.SYNSEM.NON-LOCAL #nl ].
+    ```
+
+With the lexicon and grammar prepped, we needed phrase types to handle both the matrix and embedded constructions:
+
+```
+basic-head-filler-phrase :+
+   [ ARGS < [ SYNSEM.LOCAL.COORD - ], [ SYNSEM.LOCAL.COORD - ] > ].
+
+wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
+   [ SYNSEM.LOCAL.CAT [ MC +,
+                        VAL #val,
+                        HEAD verb & [ FORM finite ] ],
+     HEAD-DTR.SYNSEM.LOCAL.CAT [ MC na,
+                                 INT +,
+                                 VAL #val & [ SUBJ < >,
+                                              COMPS < > ] ],
+     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD.WH-EMB -,
+                                       MKG.FC + ],
+                           NON-LOCAL.QUE < ! ref-ind ! > ] ].
+
+emb-wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
+   [ SYNSEM.LOCAL.CAT [ MC -,
+                        VAL #val,
+                        HEAD verb & [ FORM finite ] ],
+     HEAD-DTR.SYNSEM.LOCAL.CAT [ MC na,
+                                 INT +,
+                                 HEAD.INF +,
+                                 VAL #val & [ SUBJ < >,
+                                              COMPS < > ] ],
+     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD.WH-EMB +,
+                                       MKG.FC - ],
+                           NON-LOCAL.QUE < ! ref-ind ! > ] ].
+
+extracted-comp-phrase := basic-extracted-comp-phrase & same-ynq-unary-phrase & same-int-phrase &
+  [ SYNSEM.LOCAL.CAT.HEAD verb,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ cons ].
+
+extracted-subj-phrase := basic-extracted-subj-phrase & same-ynq-unary-phrase & same-int-phrase &
+  [ SYNSEM.LOCAL.CAT.HEAD verb,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS olist ].
+```
+
+The root `wh-ques-phrase` is designed to handle the matrix case, so it is `MC +`, while `emb-wh-ques-phrase` is `MC -`. To activate our interrogative tense track for matrix questions, `wh-ques-phrase` constrains the head daughter to `INT +`. Ideally, `emb-wh-ques-phrase` would be `INT -`, since we do not need a interrogative tense track here, but an ongoing problem with our tenses forces us to leave it underspecified at this time (discussed below).
+
+The embedded version is, however, `INF +` on the head daughter to require an infinitive. Because of the issue discussed above with regard to our use of form, the `FORM` value of `emb-wh-ques-phrase` is `finite` where one might expect `nonfinite`. This is something we hope to address, but for the time being the `INF` feature serves to drive the constraint on infinitives and a 'FORM nonfinite' would not allow the phrase to work at this time.
+
+Finally, the matrix and embedded phrase types constrain their non-head daughters to be `WH-EMB -`/`FC +` and `WH-EMB +`/`FC -` respectively to account account for the different requirements regarding the form of the question word and the focus marker.
+
+`same-ynq-unary-phrase` was added to the extracted phrase types to ensure that important non-local values are passed up to avoid broken diff list appends (this was also done to `context1-decl-head-opt-subj-phrase`, `context1-head-opt-comp-phrase` and `bare-np-phrase` for the same reason). `same-int-phrase` was added to ensure the `INT` value of the head daughter is passed up to the mother.
+
+This implementation correctly constrained the syntax, but not the semantics. The `extracted-subj-phrase` did not correctly append the `RELS` list and the semantics of the right branch was dropped in the `HEAD-COMP-RULE`. To remedy this, we added the following constraints to `RELS`, `HCONS` and `ICONS`:
+
+```
+extracted-subj-phrase := basic-extracted-subj-phrase & same-ynq-unary-phrase & same-int-phrase &
+  [ C-CONT [ RELS <! !>,
+             HCONS <! !>,
+             ICONS <! !> ],
+    SYNSEM.LOCAL.CAT.HEAD verb,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS olist ].
+```
+
+#### Results and Problems
+
+The implementation described, terms of both syntax and semantics, correctly parses our grammatical examples and rejects our ungrammatical examples for both matrix and embedded wh-questions, with the exception (noted above) of the non-pronoun *‘where’* examples.
+
+##### Matrix
+
+Tense is assigned as present when the present suffix is used and past when the evidential is used (rejecting standard past tense suffix as ungrammatical). It's worth noting that because our frequentive suffix has the same spelling it can also be parsed as *-gang* as frequentive aspect + int_present tense. In its current state, our grammar does not have any non-evidential suffixes drive the tense assignment, but relies on `INT +` and `int_present-lex` to make all non-evidential verbs present tense. Because wh-question morphology does not align perfectly with either declaratives or yes/no interrogatives, we should impliment a third tense track for this form of question, to prevent overgeneration on verbs what simply lacked a suffix in a question sentence.
+
+In Lab 6, we discussed that the `INT` feature was added to drive a tense pipeline for Y/N questions, which differ from wh question in that they expect present tense questions to have no tense suffix (while still requiring EVID for past). Declarative sentences, on the other hand, have past, present and future (mood) driven by the tense suffixes.
+
+```
+#80 wh questions
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.àwhlaang
+giisd=.uu dang gyaa taanaanee tla.àwhla-gang
+who=FOC you POSS smokehouse build-PRS
+`Who is building your smokehouse?'
+```
+
+#81 wh questions
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.àwhlayaa
+giisd=.uu dang gyaa taanaanee tla.àwhla-gaa
+who=FOC you POSS smokehouse build-EVID
+`Who built your smokehouse?'
+```
+
+The question word is only allowed in sentence-initial position:
+
+```
+#82 wh questions -- wrong order.
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+dang gyaa giisd.uu taanaa nee tla.àwhlaang
+dang gyaa giisd=.uu taanaanee tla.àwhla-gang
+you POSS who=FOC smokehouse build-PRS
+`Who is building your smokehouse?'
+```
+
+And requires focus:
+
+```
+#83 wh questions no focus
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+giisd dang gyaa taanaa nee tla.àwhlaang
+giisd dang gyaa taanaanee tla.àwhla-gang
+who you POSS smokehouse build-PRS
+`Who builds your smokehouse?'
+```
+
+‘What’ predications work in the same way as ‘Who’:
+
+```
+# 174 wh question
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {wh}
+guus.uu daa qinggaa
+guus=.uu daa qing-gaa
+what=FOC 2p see-EVID
+`What did you see?'
+```
+
+Question words from the embedded set are not allowed:
+
+```
+# 174 wh question with embedded what
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+nang daa qinggaa
+nang daa qing-gaa
+nang 2p see-EVID
+`Who did you see.'
+
+# 175 wh question with embedded what
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {wh}
+ginn daa qinggaa
+ginn daa qing-gaa
+what 2p see-EVID
+`What did you see.'
+```
+
+##### Embedded
+
+The canonical examples parse with the embedded form of the wh-word and the INFIN-PP embedded verb:
+
+```
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-d, wh}
+nang na.àwhliyeega Joe kyaananggan
+nang na.àwhli-gee-ga Joe kyaanang-gan
+who build.house-INFIN-PP Joe ask-PST
+`Joe asked who is building a house.'
+```
+
+Using a root form wh-word, with or without focus, is rejected:
+
+```
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-d, wh}
+giisd.uu na.àwhliyeega Joe kyaananggan
+giisd=.uu na.àwhli-gee-ga Joe kyaanang-gan
+who=FOC build.house-INFIN-PP Joe ask-PST
+`Joe asked who is building a house.'
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-d, wh}
+giisd Bill na.àwhliyeega Joe kyaananggan
+giisd Bill na.àwhli-gee-ga Joe kyaanang-gan
+who Bill build.house-INFIN-PP Joe ask-PST
+`Joe asked who is building a house.'
+```
+
+Non-infinitival embedded clauses are rejected:
+
+```
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {emb-d, wh}
+nang na.àwhligan Joe kyaananggan
+nang na.àwhli-gan Joe kyaanang-gan
+who build.house-PST Joe ask-PST
+`Joe asked who is building a house.'
+```
+
+And this does not parse because ‘where’ is not implemented:
+```
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-d, wh}
+tliits’aan Bill na.àwhliyeega Joe kyaananggan
+tliits’aan Bill na.àwhli-gee-ga Joe kyaanang-gan
+where Bill build.house-INFIN-PP Joe ask-PST
+`Joe asked where Bill is building a house.'
+```
+
+### Corpus Sentence
+
+```
+# 2
+Source: a:1341
+Vetted: s
+Judgment: g
+Phenomena:
+7waagyaan hit’an ’la qii.idaanii
+7waagyaan+hit’an ’laa qii.id-gaa-gan-ii
+and then 3p pick.up-EVID-PST-TC
+`He picked it up.'
+```
+
+To implement this sentence, we first had to:
+
+* add a new verb *qii.id*
+* add a new lex type and phrase type to handle non-negative scopal adverbs like 'and then'
+
+    ```
+    scopal-adj-head-phrase := adj-head-scop-phrase & same-int-phrase &
+      [ HEAD-DTR.SYNSEM.NEG-SAT +,
+        NON-HEAD-DTR scop-sent-adv-lex ].
+
+    scopal-adj-head := scopal-adj-head-phrase.
+      
+    scop-sent-adv-lex:= basic-scopal-adverb-lex &
+      [ SYNSEM.LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < >,
+                                 SUBJ < > ],
+                           POSTHEAD -,
+                           HEAD [ MOD < [ LOCAL.CAT [ HEAD verb,
+                                                      VAL [ SUBJ null,
+                                                            COMPS null ] ] ] > ] ] ].
+    ```
+
+* add a new scopal adverb *7waagyaan hit’an* (will be treated as a “word with a space”)
+
+    ```
+    7waagyaan+hit’an := scop-sent-adv-lex &
+      [ STEM < "7waagyaan+hit’an" >,
+        SYNSEM.LKEYS.KEYREL.PRED "_and+then_a_rel" ].
+    ```
+
+* implement the topic change position class and suffix, giving it the last position in our inflection chain (applying `topic-change-rule-dtr` to the appropriate set of other lex-rules)
+
+    ```
+    topic-change-rule-dtr := word-or-lexrule.
+
+    topic-change-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+      [ INFLECTED #infl,
+        DTR topic-change-rule-dtr &
+            [ INFLECTED #infl ] ].
+
+    tc-lex-rule := topic-change-lex-rule-super.
+
+    tc-suffix :=
+      %suffix (* -ii)
+      tc-lex-rule.
+    ```
+
+This resulted in two parses that mean *He picked it up* or *It picked him up*. We get both readings because of pro-drop.
+
+### Other changes
+
+`sentential-verb-lex` now inherits from `main-verb-lex` (instead of verb lex), which is `SPR < >`.  This significantly reduces spurious parsing because sentence complement-taking verbs are now restricted to an NP subject, and not N. Inheriting from `main-verb-lex` also makes `sentential-verb-lex` a subtype of `norm-sem-lex-item`, which correctly puts `KEYREL` on the `RELS` list. The following example shows both of these improvements:
+
+```
+#147 embedded clauses (adapted from a:430)
+Source: author
+Vetted: f
+Judgement: g
+Phenomena: {emb-d}
+dii naa.n k’untl’aa.ang hla suugan
+dii naa.n k’untl’aa-.ang hlaa suu-gan
+My grandmother get.burned-NF 1sg say-PST
+`I said that my grandmother got burned.'
+```
+
+Previously, tense was producing a large amount of spurious ambiguity because interrogative tenses were not properly constrained to questions and declarative tenses were not properly constrained to statements, as noted in Lab 6. The `question-lex-rule-super` type has two daughters: `int-lex-rule` and `decl-lex-rule`, and one of these two daughters is obligatory. However, the grammar was treating them as optional, licensing the daughters of `tense-lex-rule` and `int_tense-lex-rule` without their going through `decl-lex-rule` and `int-lex-rule`, respectively. The solution was to remove `int_tense-rule-dtr` and `tense-rule-dtr` from the supertypes of all lex rules except for `int-lex-rule` and `decl-lex-rule`.
+
+We also removed `question-lex-rule-super` from the supertype of `modal-2-lex-rule-super` to prevent the modals in this position class future, evidential and infinitive) from become inputs to other tenses. We also changed the daughter type on the `modal-3-lex-rule-super` from `modal-3-lex-rule-super` to `evid-lex-rule` so that it would follow the evidential lexical rule in the pipeline.
+
+```
+modal-3-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-lex-rule &
+  [ INFLECTED #infl,
+    DTR evid-lex-rule &
+        [ INFLECTED #infl &
+                    [ FIN-FLAG + ] ] ].
+```
+          
+This cut the spurious ambiguity resulting from this problem down by half. However new spurious ambiguity was introduced by the addition of `extracted-comp` for wh-questions (competing with `head-opt-comp`). In addition to that, we have ambiguity related to `EVID` + `INT_PRESENT` vs. `INT_PAST` tense:
+
+```
+# 74 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudangaa
+daa=gu gudang-gaa
+you=Q understand-EVID
+`Did you understand it?'
+
+# 75 yes/no questions
+Source: a:132
+Vetted: s
+Judgment: g
+Phenomena: {q}
+daagu gudang7as
+daa=gu gudang-.asa
+you=Q understand-FUT
+`Will you understand it?'
+```
+
+This no longer parses:
+
+```
+# 77 yes/no questions. illegal past tense marker
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {q}
+daagu gudanggan
+daa=gu gudang-gan
+you=Q understand-PST
+`Did you understand it?'
+```
+
+The following example was changed to grammatical because even though *-gang* cannot be licensed as a present tense marker, it is legal as a frequentive aspect marker:
+
+```
+# 76 yes/no questions. Source: author
+Vetted: f
+Judgment: g
+Phenomena: {q}
+daagu gudanggang
+daa=gu gudang-gang
+you=Q understand-FRQ
+`Do you understand it?'
+```
+
+
+## Coverage
+
+Our baseline from lab 6 (run against all testsuite changes from this week):
+
+* Coverage: 75.3%
+* Overgeneration: 17.5%
+
+After the changes implemented in lab 7:
+
+* Coverage: 79.4% (+4.1%)
+* Overgeneration: 10.0% (-7.5%)

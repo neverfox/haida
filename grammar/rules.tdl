@@ -11,6 +11,8 @@ context1-head-opt-comp := context1-head-opt-comp-phrase.
 
 neg-adj-head-scop := neg-adj-head-scop-phrase.
 
+scopal-adj-head := scopal-adj-head-phrase.
+
 comp-head := comp-head-phrase.
 
 subj-head := subj-head-phrase.
@@ -36,3 +38,11 @@ vp3-bottom-coord := vp3-bottom-coord-rule.
 s3-top-coord := s3-top-coord-rule.
 
 s3-bottom-coord := s3-bottom-coord-rule.
+
+wh-ques := wh-ques-phrase.
+
+emb-wh-ques-phrase := emb-wh-ques-phrase.
+
+extracted-comp := extracted-comp-phrase.
+
+extracted-subj := extracted-subj-phrase.
