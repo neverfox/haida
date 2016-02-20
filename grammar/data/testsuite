@@ -865,15 +865,15 @@ Bill huu=gu taa-gaa guus
 Bill there=Q eat-EVID what
 `What did Bill eat?'
 
-#87 wh questions from embedded clause. adapted from 381
+# 87 embedded question (adapted from a:485)
 Source: author
 Vetted: f
-Judgment: g
-Phenomena: {wh}
-giisd.uu dang gyaa taanaa nee tla.àwhlaang Bill gudang-gang
-giisd=.uu dang gyaa taanaanee tla.àwhla-gang Bill gudang-gang
-who=FOC you POSS smokehouse build-PRS Bill think-PRS
-`Who does Bill think is building your smokehouse?'
+Judgment: u
+Phenomena: {emb-d, wh}
+giisd na.àwhliyeega Joe kyaananggan
+giisd na.àwhli-gee-ga Joe kyaanang-gan
+who build.house-INFIN-PP Joe ask-PST
+`Joe asked who is building a house.'
 
 # 88 adverbs example constructed from data on pages 40
 Source: author
@@ -1770,7 +1770,7 @@ Source: author
 Vetted: f
 Judgment: u
 Phenomena: {emb-d, wh}
-giisd na.àwhliyeega Joe kyaananggan
-giisd na.àwhli-gee-ga Joe kyaanang-gan
-who build.house-INFIN-PP Joe ask-PST
+nang na.àwhligan Joe kyaananggan
+nang na.àwhli-gan Joe kyaanang-gan
+who build.house-PST Joe ask-PST
 `Joe asked who is building a house.'
