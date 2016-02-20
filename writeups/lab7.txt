@@ -559,6 +559,66 @@ who build.house-PST Joe ask-PST
 
 ### Corpus Sentence
 
+```
+# 2
+Source: a:1341
+Vetted: s
+Judgment: g
+Phenomena:
+7waagyaan hit’an ’la qii.idaanii
+7waagyaan+hit’an ’laa qii.id-gaa-gan-ii
+and then 3p pick.up-EVID-PST-TC
+`He picked it up.'
+```
+
+To implement this sentence, we first had to:
+
+* add a new verb *qii.id*
+* add a new lex type and phrase type to handle non-negative scopal adverbs
+
+    ```
+    scopal-adj-head-phrase := adj-head-scop-phrase & same-int-phrase &
+      [ HEAD-DTR.SYNSEM.NEG-SAT +,
+        NON-HEAD-DTR scop-sent-adv-lex ].
+
+    scopal-adj-head := scopal-adj-head-phrase.
+      
+    scop-sent-adv-lex:= basic-scopal-adverb-lex &
+      [ SYNSEM.LOCAL.CAT [ VAL [ SPR < >,
+                                 COMPS < >,
+                                 SUBJ < > ],
+                           POSTHEAD -,
+                           HEAD [ MOD < [ LOCAL.CAT [ HEAD verb,
+                                                      VAL [ SUBJ null,
+                                                            COMPS null ] ] ] > ] ] ].
+    ```
+
+* add a new scopal adverb *7waagyaan hit’an* (will be treated as a “word with a space”)
+
+    ```
+    7waagyaan+hit’an := scop-sent-adv-lex &
+      [ STEM < "7waagyaan+hit’an" >,
+        SYNSEM.LKEYS.KEYREL.PRED "_and+then_a_rel" ].
+    ```
+
+* implement the topic change position class and suffix, giving it the last position in our inflection chain (applying `topic-change-rule-dtr` to the appropriate set of other lex-rules)
+
+    ```
+    topic-change-rule-dtr := word-or-lexrule.
+
+    topic-change-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+      [ INFLECTED #infl,
+        DTR topic-change-rule-dtr &
+            [ INFLECTED #infl ] ].
+
+    tc-lex-rule := topic-change-lex-rule-super.
+
+    tc-suffix :=
+      %suffix (* -ii)
+      tc-lex-rule.
+    ```
+
+This resulted in two parses that mean *He picked it up* or *It picked him up*. We get both readings because of pro-drop.
 
 ### Additional notes
 
@@ -567,10 +627,10 @@ who build.house-PST Joe ask-PST
 
 Our baseline from lab 6 (run against all testsuite changes from this week):
 
-* Coverage: %
-* Overgeneration: %
+* Coverage: 75.3%
+* Overgeneration: 17.5%
 
 After the changes implemented in lab 7:
 
-* Coverage: % (+%)
-* Overgeneration: % (-%)
+* Coverage: 79.4% (+4.1%)
+* Overgeneration: 10.0% (-7.5%)
