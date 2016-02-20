@@ -1010,7 +1010,10 @@ extracted-comp-phrase := basic-extracted-comp-phrase & same-ynq-unary-phrase & s
     HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ cons ].
 
 extracted-subj-phrase := basic-extracted-subj-phrase & same-ynq-unary-phrase & same-int-phrase &
-  [ SYNSEM.LOCAL.CAT.HEAD verb,
+  [ C-CONT [ RELS <! !>,
+	     HCONS <! !>,
+	     ICONS <! !> ],
+    SYNSEM.LOCAL.CAT.HEAD verb,
     HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS olist ].
 
 neg-adj-head-scop-phrase := adj-head-scop-phrase & same-int-phrase &

@@ -258,7 +258,7 @@ kyaanang := ques-sent-verb-lex &
   [ STEM < "kyaanang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
 
-na%2Eàwhli := tr-verb-lex &
+na%2Eàwhli := itr-nom-verb-lex &
   [ STEM < "na.àwhli" >,
     SYNSEM.LKEYS.KEYREL.PRED "_build+house_v_rel" ].
 
@@ -411,7 +411,3 @@ ginn := emb-wh-pronoun-noun-lex &
 nang := emb-wh-pronoun-noun-lex &
   [ STEM < "nang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
-
-tliits’aan := emb-wh-pronoun-noun-lex &
-  [ STEM < "tliits’aan" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_where_n_rel" ].
