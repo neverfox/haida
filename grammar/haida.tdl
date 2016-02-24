@@ -113,6 +113,9 @@ cat :+ [ VC luk ].
 lex-rule :+ [ SYNSEM.LOCAL.CAT.VC #vc,
     DTR.SYNSEM.LOCAL.CAT.VC #vc ].
 
+evid := sort.
+
+tam :+ [ EVID evid ].
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Some useful kinds of lists
@@ -186,6 +189,11 @@ no-aspect := aspect.
 ;;; Mood
 
 future := mood.
+
+;;; Evidential
+
+evidential := evid.
+no-evid := evid.
 
 ;;;;;;;;;;;;;;;;;;;
 ;;; Lexical Types
@@ -713,7 +721,8 @@ infin-pp-lex-rule := modal-2-lex-rule-super &
     SYNSEM.LOCAL.CAT.HEAD [ INF + ] ].
 
 evid-lex-rule := modal-2-lex-rule-super &
-  [ INFLECTED [ FUT-FLAG #fut,
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.EVID evidential,
+    INFLECTED [ FUT-FLAG #fut,
     QUESTION-FLAG -,
     TENSE-FLAG - ],
     DTR.INFLECTED.FUT-FLAG #fut].
@@ -884,7 +893,7 @@ int_present-lex-rule := const-lex-rule & int_tense-lex-rule-super &
 int_future-lex-rule := infl-lex-rule & int_tense-lex-rule-super &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD future ].
 
-topic-change-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule &
+topic-change-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-lex-rule &
   [ INFLECTED #infl,
     DTR topic-change-rule-dtr &
         [ INFLECTED #infl ] ].

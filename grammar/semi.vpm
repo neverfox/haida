@@ -66,7 +66,7 @@ PNG.PERNUM : PER NUM
   sg << * sg
   * <> *
   
-  PNG.ALIENABILITY : ALIENABILITY
+PNG.ALIENABILITY : ALIENABILITY
   + <> +
   - <> -
   * <> *
@@ -92,3 +92,9 @@ E.ASPECT : ASPECT
 E.MOOD : MOOD
   future <> future
   * <> *
+
+E.EVID : EVID
+  evidential <> evidential
+  no-evid <> no-evid
+  * >> no-evid
+  no-evid << [e]

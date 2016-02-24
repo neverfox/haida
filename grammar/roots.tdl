@@ -14,7 +14,8 @@ root := phrase &
 			   MC +,
 			   INT -,
 			   HEAD +vj &
-			       [ FORM finite ] ] ],
+			       [ FORM finite,
+				 INF - ] ] ],
 	     NON-LOCAL non-local-none & [ YNQ 0-dlist ] ] ].
 
 ; This start symbol allows you to parse single words as stand-alone
