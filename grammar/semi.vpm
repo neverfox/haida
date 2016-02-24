@@ -40,28 +40,38 @@ COG-ST : COG-ST
   * <> *
 
 
-PNG.POTENCY : PNG.POTENCY
+PNG.POTENCY : POTENCY
   high <> high
   low <> low
   * <> *
 
-PNG.PERNUM : PNG.PERNUM
-  3pl <> 3pl
-  2pl <> 2pl
-  1pl_excl <> 1pl_excl
-  1pl_incl <> 1pl_incl
-  1pl <> 1pl
-  3sg <> 3sg
-  2sg <> 2sg
-  1sg <> 1sg
-  3rd <> 3rd
-  2nd <> 2nd
-  1st <> 1st
-  pl <> pl
-  sg <> sg
+PNG.PERNUM : PERS NUM
+  3pl <> 3 pl
+  2pl <> 2 pl
+  1pl_excl <> 1 pl
+  1pl_incl <> 1 pl
+  1pl <> 1 pl
+  3sg <> 3 sg
+  2sg <> 2 sg
+  1sg <> 1 sg
+  3rd <> 3 !
+  3rd << 3 *
+  2nd <> 2 !
+  2nd << 2 *
+  1st <> 1 !
+  1st << 1 *
+  pl <> ! pl
+  pl << * pl
+  sg <> ! sg
+  sg << * sg
   * <> *
 
-PNG.GEND : PNG.GEND
+PNG.GEND : GEND
+  * <> *
+
+PNG.ALIENABILITY : ALIENABILITY
+  + <> +
+  - <> -
   * <> *
 
 E.TENSE : TENSE
