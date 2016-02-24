@@ -117,6 +117,9 @@ naa%n := inalienable-noun-lex &
   [ STEM < "naa.n" >,
     SYNSEM.LKEYS.KEYREL.PRED "_grandmother_n_rel" ].
 
+gud := 3p-lpot-pron-noun-lex &
+  [ STEM < "gud" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_there_n_rel" ].
 
 ;;; Adjectives
 
@@ -333,6 +336,10 @@ neesdagaang%2Ean := int-adverb-lex &
   [ STEM < "neesdagaang.an" >,
     SYNSEM.LKEYS.KEYREL.PRED "_right+away_a_rel" ].
 
+7waagyaan := scop-sent-adv-lex &
+  [ STEM < "7waagyaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_a_rel" ].
+
 7waagyaan+hit’an := scop-sent-adv-lex &
   [ STEM < "7waagyaan+hit’an" >,
     SYNSEM.LKEYS.KEYREL.PRED "_and+then_a_rel" ].
@@ -369,6 +376,10 @@ gyaa := adposition-lex &
 gwa%2Ea := adposition-lex &
   [ STEM < "gwa.a" >,
     SYNSEM.LKEYS.KEYREL.PRED "_on_p_rel" ].
+
+sda := adposition-lex &
+  [ STEM < "sda" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_from_p_rel" ].
 
 ;;; Modifiers of expressing information structure
 
