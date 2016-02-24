@@ -40,7 +40,7 @@ COG-ST : COG-ST
   * <> *
 
 
-PNG.POTENCY : POTENCY
+PNG.POTENCY : PNG.POTENCY
   high <> high
   low <> low
   * <> *
@@ -65,13 +65,13 @@ PNG.PERNUM : PERS NUM
   sg <> ! sg
   sg << * sg
   * <> *
-
-PNG.GEND : GEND
-  * <> *
-
-PNG.ALIENABILITY : ALIENABILITY
+  
+  PNG.ALIENABILITY : ALIENABILITY
   + <> +
   - <> -
+  * <> *
+
+PNG.GEND : GEND
   * <> *
 
 E.TENSE : TENSE
@@ -86,8 +86,8 @@ E.ASPECT : ASPECT
   frequentive <> frequentive
   imperfective <> imperfective
   inceptive <> inceptive
-  perfective << [e]
-  * <> *
+  * >> no-aspect
+  no-aspect << [e]
 
 E.MOOD : MOOD
   future <> future

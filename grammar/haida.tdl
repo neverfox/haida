@@ -182,6 +182,7 @@ imperfective := aspect.
 progressive := imperfective.
 frequentive := imperfective.
 inceptive := aspect.
+no-aspect := aspect.
 
 ;;; Mood
 
