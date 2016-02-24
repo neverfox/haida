@@ -40,12 +40,12 @@ COG-ST : COG-ST
   * <> *
 
 
-PNG.POTENCY : PNG.POTENCY
+POTENCY : POTENCY
   high <> high
   low <> low
   * <> *
 
-PNG.PERNUM : PERS NUM
+PNG.PERNUM : PER NUM
   3pl <> 3 pl
   2pl <> 2 pl
   1pl_excl <> 1 pl

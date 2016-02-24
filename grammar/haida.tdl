@@ -18,8 +18,7 @@ non-mod-lex-item := lex-item &
 ;;; Matrix Type Addenda
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
-png :+ [ EVIDENTIAL bool,
-    ALIENABILITY bool,
+png :+ [ ALIENABILITY bool,
     PERNUM pernum,
     POTENCY potency ].
 
