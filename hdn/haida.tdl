@@ -294,8 +294,9 @@ main-verb-lex := verb-lex & basic-verb-lex &
                                SUBJ < #subj > ] ],
                    CONT.HOOK.XARG #xarg ],
     ARG-ST.FIRST #subj &
-                 [ LOCAL [ CAT.VAL [ SPR < >,
-                                     COMPS < > ],
+                 [ LOCAL [ CAT [HEAD noun,
+				VAL [ SPR < >,
+                                     COMPS < > ]],
                            CONT.HOOK.INDEX #xarg ] ] ].
 
 aux-lex := verb-lex &
@@ -338,7 +339,16 @@ itr-verb-lex := verb-lex.
 itr-nom-verb-lex := itr-verb-lex & nom-intransitive-verb-lex.
 
 ;; TODO: need to a) stop runaway rule error and b) make third argument a PP
-ditr-ctrl-verb-lex := main-verb-lex & ditrans-second-arg-control-lex-item.
+ditr-ctrl-verb-lex := main-verb-lex & ditrans-second-arg-control-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps1, #comps2 >,
+    ARG-ST < [ ],
+	     #comps1 &
+	     [ LOCAL.CAT [ HEAD noun,
+			   VAL.SPR < >]],
+	     #comps2 &
+	     [ OPT -,
+	       LOCAL.CAT [ HEAD adp,
+			   VAL.COMPS < > ]] > ].
 
 sentential-verb-lex := main-verb-lex & clausal-second-arg-trans-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
@@ -606,7 +616,7 @@ adposition-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-it
              LOCAL [ CONT.HOOK [ XARG #xarg,
                                  INDEX #arg0 ],
                      CAT [ POSTHEAD -,
-         HEAD.MOD < [ LOCAL [ CAT [ HEAD noun,
+			   HEAD.MOD < [ LOCAL [ CAT [ HEAD noun,
                                                       VAL.SPR cons ],
                                                 CONT.HOOK.INDEX #xarg ]] >,
                       VAL [ SPR < >,
@@ -925,8 +935,8 @@ comp-head-phrase := basic-head-1st-comp-phrase & head-final & same-int-phrase.
 context1-head-opt-comp-phrase := basic-head-opt-comp-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase  &
   [ SYNSEM.LIGHT -,
     HEAD-DTR.SYNSEM.LOCAL.CAT.VAL [SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
-           COMPS < [ LOCAL.CONT.HOOK.INDEX.PNG [POTENCY low,
-                       PERNUM 3rd]] > ]].
+           COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [POTENCY low,
+                       PERNUM 3rd]]].
 
 subj-head-phrase := decl-head-subj-phrase & same-int-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
