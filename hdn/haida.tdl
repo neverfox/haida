@@ -337,6 +337,9 @@ itr-verb-lex := verb-lex.
 
 itr-nom-verb-lex := itr-verb-lex & nom-intransitive-verb-lex.
 
+;; TODO: need to a) stop runaway rule error and b) make third argument a PP
+ditr-ctrl-verb-lex := main-verb-lex & ditrans-second-arg-control-lex-item.
+
 sentential-verb-lex := main-verb-lex & clausal-second-arg-trans-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun ],
