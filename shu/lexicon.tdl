@@ -1,0 +1,671 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Nouns
+
+inta := Pronoun_2SG_M-noun-lex &
+  [ STEM < "inta" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+inti := Pronoun_2SG_F-noun-lex &
+  [ STEM < "inti" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+hu := Pronoun_3SG_M-noun-lex &
+  [ STEM < "hu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+hi := Pronoun_3SG_F-noun-lex &
+  [ STEM < "hi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+aniina := Pronoun_1PL-noun-lex &
+  [ STEM < "aniina" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+intu := Pronoun_2PL-noun-lex &
+  [ STEM < "intu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+humman := Pronoun_3PL-noun-lex &
+  [ STEM < "humman" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+chunu := wh-pronoun-noun-lex &
+  [ STEM < "chunu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thing_n_rel" ].
+
+yaatu := wh-masc-sing-pron-lex &
+  [ STEM < "yaatu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+
+yaati := wh-fem-sing-pron-lex &
+  [ STEM < "yaati" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+
+yaatumman := wh-pl-pron-lex &
+  [ STEM < "yaatumman" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_person_n_rel" ].
+
+ana := Pronoun_1SG-noun-lex &
+  [ STEM < "ana" >,
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
+
+deef := masc-CommonNoun-noun-lex &
+  [ STEM < "deef" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_guest_n_rel" ].
+
+kalib := masc-CommonNoun-noun-lex &
+  [ STEM < "kalib" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
+
+biss := masc-CommonNoun-noun-lex &
+  [ STEM < "biss" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
+
+wileed := masc-CommonNoun-noun-lex &
+  [ STEM < "wileed" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_boy_n_rel" ].
+
+eech := masc-CommonNoun-noun-lex &
+  [ STEM < "eech" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_boule_n_rel" ].
+
+yoom := masc-CommonNoun-noun-lex &
+  [ STEM < "yoom" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_day_n_rel" ].
+
+raajil := masc-CommonNoun-noun-lex &
+  [ STEM < "raajil" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_man_n_rel" ].
+
+laban := masc-CommonNoun-noun-lex &
+  [ STEM < "laban" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_milk_n_rel" ].
+
+akil := masc-CommonNoun-noun-lex &
+  [ STEM < "akil" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_food_n_rel" ].
+
+baab := masc-CommonNoun-noun-lex &
+  [ STEM < "baab" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_door_n_rel" ].
+
+daktoor := masc-CommonNoun-noun-lex &
+  [ STEM < "daktoor" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_doctor_n_rel" ].
+
+sultaan := masc-CommonNoun-noun-lex &
+  [ STEM < "sultaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sultan_n_rel" ].
+
+lekkool := masc-CommonNoun-noun-lex &
+  [ STEM < "lekkool" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_school_n_rel" ].
+
+laham := masc-CommonNoun-noun-lex &
+  [ STEM < "laham" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_meat_n_rel" ].
+
+almi := masc-CommonNoun-noun-lex &
+  [ STEM < "almi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_water_n_rel" ].
+
+kitaab := masc-CommonNoun-noun-lex &
+  [ STEM < "kitaab" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_book_n_rel" ].
+
+beet := masc-CommonNoun-noun-lex &
+  [ STEM < "beet" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_house_n_rel" ].
+
+duud := masc-CommonNoun-noun-lex &
+  [ STEM < "duud" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lion_n_rel" ].
+
+labtaan := masc-CommonNoun-noun-lex &
+  [ STEM < "labtaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hospital_n_rel" ].
+
+bagar := masc-CommonNoun-noun-lex &
+  [ STEM < "bagar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cattle_n_rel" ].
+
+ijil := masc-CommonNoun-noun-lex &
+  [ STEM < "ijil" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_calf_n_rel" ].
+
+bahar := masc-CommonNoun-noun-lex &
+  [ STEM < "bahar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_river_n_rel" ].
+
+gible := masc-CommonNoun-noun-lex &
+  [ STEM < "gible" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_direction_n_rel" ].
+
+dagiig := masc-CommonNoun-noun-lex &
+  [ STEM < "dagiig" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_flour_n_rel" ].
+
+sukkar := masc-CommonNoun-noun-lex &
+  [ STEM < "sukkar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sugar_n_rel" ].
+
+cheyy := masc-CommonNoun-noun-lex &
+  [ STEM < "cheyy" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_something_n_rel" ].
+
+derib := masc-CommonNoun-noun-lex &
+  [ STEM < "derib" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_road_n_rel" ].
+
+giid := masc-CommonNoun-noun-lex &
+  [ STEM < "giid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_guide_n_rel" ].
+
+bakaan := masc-CommonNoun-noun-lex &
+  [ STEM < "bakaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_place_n_rel" ].
+
+laayo := masc-CommonNoun-noun-lex &
+  [ STEM < "laayo" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thin_porridge_n_rel" ].
+
+fajur := masc-CommonNoun-noun-lex &
+  [ STEM < "fajur" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_morning_n_rel" ].
+
+aasir := masc-CommonNoun-noun-lex &
+  [ STEM < "aasir" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_late_afternoon_n_rel" ].
+
+Muusa := MascProperNoun-noun-lex &
+  [ STEM < "Muusa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Moses_n_rel" ].
+
+Allah := MascProperNoun-noun-lex &
+  [ STEM < "Allah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_God_n_rel" ].
+
+Bangui := MascProperNoun-noun-lex &
+  [ STEM < "Bangui" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Bangui_n_rel" ].
+
+Amm-al-Tiimaan := MascProperNoun-noun-lex &
+  [ STEM < "Amm-al-Tiimaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Amm-al-Tiimaan_n_rel" ].
+
+Zara := FemProperNoun-noun-lex &
+  [ STEM < "Zara" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_Zara_n_rel" ].
+
+mara := fem-CommonNoun-noun-lex &
+  [ STEM < "mara" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_woman_n_rel" ].
+
+kalbe := fem-CommonNoun-noun-lex &
+  [ STEM < "kalbe" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dog_f_n_rel" ].
+
+sana := fem-CommonNoun-noun-lex &
+  [ STEM < "sana" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_year_n_rel" ].
+
+bineeye := fem-CommonNoun-noun-lex &
+  [ STEM < "bineeye" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_girl_n_rel" ].
+
+tarbeeza := fem-CommonNoun-noun-lex &
+  [ STEM < "tarbeeza" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_table_n_rel" ].
+
+madiide := fem-CommonNoun-noun-lex &
+  [ STEM < "madiide" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_porridge_n_rel" ].
+
+hille := fem-CommonNoun-noun-lex &
+  [ STEM < "hille" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_village_n_rel" ].
+
+watiir := fem-CommonNoun-noun-lex &
+  [ STEM < "watiir" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
+
+; this word means a bare field
+; but we are using "park" for our MTT translation exercise
+naga%27a := fem-CommonNoun-noun-lex &
+  [ STEM < "naga'a" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_park_n_rel" ].
+
+jamaa%27a := pl-CommonNoun-noun-lex &
+  [ STEM < "jamaa'a" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_group_of_people_n_rel" ].
+
+
+
+;;; Adjectives
+
+tawiil := adj-lex &
+  [ STEM < "tawiil" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tall_a_rel" ].
+
+kabiir := adj-lex &
+  [ STEM < "kabiir" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_big_a_rel" ].
+
+nadiif := adj-lex &
+  [ STEM < "nadiif" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_clean_a_rel" ].
+
+rigeeyig := adj-lex &
+  [ STEM < "rigeeyig" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_thin_a_rel" ].
+
+sameh := adj-lex &
+  [ STEM < "sameh" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_beautiful_a_rel" ].
+
+gawi := adj-lex &
+  [ STEM < "gawi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_strong_a_rel" ].
+
+zeen := adj-lex &
+  [ STEM < "zeen" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_good_a_rel" ].
+
+mardaan := adj-lex &
+  [ STEM < "mardaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sick_a_rel" ].
+
+jii%27aan := adj-lex &
+  [ STEM < "jii'aan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hungry_a_rel" ].
+
+taani := adj-lex &
+  [ STEM < "taani" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_second_a_rel" ].
+
+musaamah := past_participle-adj-lex &
+  [ STEM < "musaamah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_forgiven_a_rel" ].
+
+gaa%27id_2 := pres_participle-adj-lex &
+  [ STEM < "gaa'id" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_stay_a_rel" ].
+
+raagid := pres_participle-adj-lex &
+  [ STEM < "raagid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_lie_down_a_rel" ].
+
+maachi := pres_participle-adj-lex &
+  [ STEM < "maachi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_go_a_rel" ].
+
+
+;;; Adverbs
+
+ajala := adverb-lex &
+  [ STEM < "ajala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_quickly_a_rel" ].
+
+bas := adverb-lex &
+  [ STEM < "bas" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_only_a_rel" ].
+
+kula := adverb-lex &
+  [ STEM < "kula" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_also_a_rel" ].
+
+
+;;; perfective verbs
+
+maat := PFV_intrans-verb-lex &
+  [ STEM < "maat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
+
+naam := PFV_intrans-verb-lex &
+  [ STEM < "naam" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
+
+jara := PFV_intrans-verb-lex &
+  [ STEM < "jara" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_run_v_rel" ].
+
+gamma := PFV_intrans-verb-lex &
+  [ STEM < "gamma" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_get_up_v_rel" ].
+
+sarah := PFV_intrans-verb-lex &
+  [ STEM < "sarah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pasture_v_rel" ].
+
+raah := PFV_intrans-verb-lex &
+  [ STEM < "raah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_get_lost_v_rel" ].
+
+raakh := PFV_intrans-verb-lex &
+  [ STEM < "raakh" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_walk_v_rel" ].
+
+katal := PFV_trans-verb-lex &
+  [ STEM < "katal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kill_v_rel" ].
+
+akal := PFV_trans-verb-lex &
+  [ STEM < "akal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+
+katab := PFV_trans-verb-lex &
+  [ STEM < "katab" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_write_v_rel" ].
+
+chirib := PFV_trans-verb-lex &
+  [ STEM < "chirib" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_drink_v_rel" ].
+
+darab := PFV_trans-verb-lex &
+  [ STEM < "darab" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hit_v_rel" ].
+
+saafar := PFV_intrans-verb-lex &
+  [ STEM < "saafar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_travel_v_rel" ].
+
+ga%27ad := PFV_intrans-verb-lex &
+  [ STEM < "ga'ad" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_stay_v_rel" ].
+
+kammal := PFV_intrans-verb-lex &
+  [ STEM < "kammal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_finish_v_rel" ].
+
+macha := PFV_trans-verb-lex &
+  [ STEM < "macha" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
+
+gata%27 := PFV_trans-verb-lex &
+  [ STEM < "gata'" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cut_v_rel" ].
+
+simi%27 := PFV_trans-verb-lex &
+  [ STEM < "simi'" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hear_v_rel" ].
+
+faat := PFV_trans-verb-lex &
+  [ STEM < "faat" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_leave_v_rel" ].
+
+wassal := PFV_trans-verb-lex &
+  [ STEM < "wassal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_arrive_v_rel" ].
+
+fattach := PFV_trans-verb-lex &
+  [ STEM < "fattach" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_look_for_v_rel" ].
+
+najja := PFV_trans-verb-lex &
+  [ STEM < "najja" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_save_v_rel" ].
+
+sawwa := PFV_strict_trans-verb-lex &
+  [ STEM < "sawwa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
+
+chaal := PFV_strict_trans-verb-lex &
+  [ STEM < "chaal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_take_v_rel" ].
+
+baa%27 := PFV_strict_trans-verb-lex &
+  [ STEM < "baa'" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_buy_v_rel" ].
+
+gidir := PFV_strict_trans-verb-lex &
+  [ STEM < "gidir" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_able_v_rel" ].
+
+taarad := PFV_strict_trans-verb-lex &
+  [ STEM < "taarad" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
+
+;;; perfective verbs that take embedded clauses
+irif_1 := PFV_clause-decl-verb-lex &
+  [ STEM < "irif" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+irif_2 := PFV_clause-ques-verb-lex &
+[ STEM < "irif" >,
+  SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+irif_3 := PFV_trans-verb-lex &
+  [ STEM < "irif" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+hasab_1 := PFV_clause-decl-verb-lex &
+  [ STEM < "hasab" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
+
+hasab_2 := PFV_trans-verb-lex &
+  [ STEM < "hasab" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_count_v_rel" ].
+
+; this usually has a direct object as well - you told whom that...
+oora := PFV_clause-decl-verb-lex &
+  [ STEM < "oora" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tell_v_rel" ].
+
+dawwar_1 := PFV_clause-decl-verb-lex &
+  [ STEM < "dawwar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_want_v_rel" ].
+
+dawwar_2 := PFV_strict_trans-verb-lex &
+  [ STEM < "dawwar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_want_v_rel" ].
+
+gaal := PFV_clause-decl-verb-lex &
+  [ STEM < "gaal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
+
+sa%27al := PFV_clause-ques-verb-lex &
+ [ STEM < "sa'al" >,
+   SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
+
+;;; imperfective verbs that take embedded clauses
+a%27arif_1 := IPFV_clause-decl-verb-lex &
+  [ STEM < "a'arif" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+a%27arif_2 := IPFV_clause-ques-verb-lex &
+  [ STEM < "a'arif" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+a%27arif_3 := IPFV_trans-verb-lex &
+  [ STEM < "a'arif" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+ahsib_1 := IPFV_clause-decl-verb-lex &
+  [ STEM < "ahsib" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
+
+ahsib_2 := IPFV_trans-verb-lex &
+  [ STEM < "ahsib" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_count_v_rel" ].
+
+; this usually has a direct object as well - you told whom that...
+i%27oori := IPFV_clause-decl-verb-lex &
+  [ STEM < "i'oori" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_tell_v_rel" ].
+
+idoor_1 := IPFV_clause-decl-verb-lex &
+  [ STEM < "idoor" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_want_v_rel" ].
+
+idoor_2 := IPFV_strict_trans-verb-lex &
+  [ STEM < "idoor" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_want_v_rel" ].
+
+uguul := IPFV_clause-decl-verb-lex &
+  [ STEM < "gaal" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
+
+as%27al := IPFV_clause-ques-verb-lex &
+  [ STEM < "as'al" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_ask_v_rel" ].
+
+;;; imperfective verbs
+umuut := IPFV_intrans-verb-lex &
+  [ STEM < "umuut" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_die_v_rel" ].
+
+abki := IPFV_intrans-verb-lex &
+  [ STEM < "abki" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cry_v_rel" ].
+
+ikammil := IPFV_intrans-verb-lex &
+  [ STEM < "ikammil" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_finish_v_rel" ].
+
+amchi := IPFV_trans-verb-lex &
+  [ STEM < "amchi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_go_v_rel" ].
+
+aktul := IPFV_trans-verb-lex &
+  [ STEM < "aktul" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_kill_v_rel" ].
+
+aakul := IPFV_trans-verb-lex &
+  [ STEM < "aakul" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
+
+aftah := IPFV_trans-verb-lex &
+  [ STEM < "aftah" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_open_v_rel" ].
+
+agood := IPFV_intrans-verb-lex &
+  [ STEM < "agood" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_stay_v_rel" ].
+
+aji := IPFV_intrans-verb-lex &
+  [ STEM < "aji" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_come_v_rel" ].
+
+unuum := IPFV_intrans-verb-lex &
+ [ STEM < "unuum">,
+   SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
+
+inlagi := IPFV_intrans-verb-lex &
+ [ STEM < "inlagi">,
+   SYNSEM.LKEYS.KEYREL.PRED "_be_findable_v_rel" ].
+
+agdar := IPFV_trans-verb-lex &
+  [ STEM < "agdar" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_be_able_v_rel" ].
+
+ifattich := IPFV_trans-verb-lex &
+  [ STEM < "ifattich" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_look_for_v_rel" ].
+
+isawwi := IPFV_strict_trans-verb-lex &
+  [ STEM < "isawwi" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_make_v_rel" ].
+
+ichiil := IPFV_strict_trans-verb-lex &
+  [ STEM < "ichiil" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_take_v_rel" ].
+
+ibii%27 := IPFV_strict_trans-verb-lex &
+  [ STEM < "ibii'" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_buy_v_rel" ].
+
+itaarid := IPFV_strict_trans-verb-lex &
+  [ STEM < "itaarid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel" ].
+
+
+;;; Auxiliaries
+
+gaa%27id_1 := Continuous-aux-lex &
+  [ STEM < "gaa'id" > ].
+
+;;; Determiners
+
+;;; al := DET-determiner-lex &
+;;;  [ STEM < "al" >,
+;;;    SYNSEM.LKEYS.KEYREL.PRED "_exist_q_rel" ].
+
+da := prox_msg_det-determiner-lex &
+  [ STEM < "da" > ].
+   ; SYNSEM.LKEYS.ALTKEYREL.PRED "proximal+dem_a_rel" ].
+
+di := prox_fsg_det-determiner-lex &
+  [ STEM < "di" >].
+   ; SYNSEM.LKEYS.ALTKEYREL.PRED "proximal+dem_a_rel" ].
+
+dool := prox_pl_det-determiner-lex &
+  [ STEM < "dool" >].
+   ; SYNSEM.LKEYS.ALTKEYREL.PRED "proximal+dem_a_rel" ].
+
+daak := dist_msg_det-determiner-lex &
+  [ STEM < "daak" >].
+   ; SYNSEM.LKEYS.ALTKEYREL.PRED "distal+dem_a_rel" ].
+
+diik := dist_fsg_det-determiner-lex &
+  [ STEM < "diik" >].
+   ; SYNSEM.LKEYS.ALTKEYREL.PRED "distal+dem_a_rel" ].
+
+doolak := dist_pl_det-determiner-lex &
+  [ STEM < "doolak" >].
+   ; SYNSEM.LKEYS.ALTKEYREL.PRED "distal+dem_a_rel" ].
+
+walla := qpart-lex-item &
+  [ STEM < "walla" > ].
+
+kadar := decl-comp-lex-item &
+ [ STEM < "kadar" >].
+
+kan := interr-comp-lex-item &
+ [ STEM < "kan" > ].
+
+ma := neg-adv-lex &
+  [ STEM < "ma" >,
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
+
+wa := conj-lex &
+  [ STEM < "wa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_coord_rel",
+    CFORM "1" ].
+
+laakin := conj-lex &
+  [ STEM < "laakin" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_but_coord_rel",
+    CFORM "1" ].
+
+fi := prep-lex-item &
+ [ STEM < "fi" >,
+   SYNSEM.LKEYS.KEYREL.PRED "_in_p_rel"].
+
+ma%27a := prep-lex-item &
+ [ STEM < "ma'a" >,
+   SYNSEM.LKEYS.KEYREL.PRED "_with_p_rel"].
+
+be := prep-lex-item &
+ [ STEM < "be" >,
+   SYNSEM.LKEYS.KEYREL.PRED "_with_p_rel"].
+
+foog := prep-lex-item &
+ [ STEM < "foog" >,
+   SYNSEM.LKEYS.KEYREL.PRED "_on_p_rel"].
+
+ind := prep-lex-item &
+ [ STEM < "ind" >,
+   SYNSEM.LKEYS.KEYREL.PRED "_of_p_rel"].
+
+le := prep-lex-item &
+ [ STEM < "le" >,
+   SYNSEM.LKEYS.KEYREL.PRED "_to_p_rel"].
+
+min := prep-lex-item &
+ [ STEM < "min" >,
+   SYNSEM.LKEYS.KEYREL.PRED "_from_p_rel"].
+
+namma := prep-lex-item &
+ [ STEM < "namma" >,
+   SYNSEM.LKEYS.KEYREL.PRED "_until_p_rel"].
+

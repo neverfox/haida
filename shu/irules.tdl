@@ -1,0 +1,206 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Inflecting Lexical Rule Instances
+
+Dual-suffix :=
+%suffix (* -een)
+Dual-lex-rule.
+
+Plural-suffix :=
+%suffix (* -pl)
+Plural-lex-rule.
+
+def_noun-prefix :=
+%prefix (* al-)
+def_noun-lex-rule.
+
+perfective_1sg_subject-suffix :=
+%suffix (* -t)
+perfective_1sg_subject-lex-rule.
+
+perfective_2sg_m_subject-suffix :=
+%suffix (* -t)
+perfective_2sg_m_subject-lex-rule.
+
+perfective_2sg_f_subject-suffix :=
+%suffix (* -ti)
+perfective_2sg_f_subject-lex-rule.
+
+perfective_3sg_m_subject-suffix :=
+%suffix (* -0)
+perfective_3sg_m_subject-lex-rule.
+
+perfective_3sg_f_subject-suffix :=
+%suffix (* -at)
+perfective_3sg_f_subject-lex-rule.
+
+perfective_1pl_subject-suffix :=
+%suffix (* -na)
+perfective_1pl_subject-lex-rule.
+
+perfective_2pl_subject-suffix :=
+%suffix (* -tu)
+perfective_2pl_subject-lex-rule.
+
+perfective_3pl_subject-suffix :=
+%suffix (* -o)
+perfective_3pl_subject-lex-rule.
+
+drop_1sg_object-suffix :=
+%suffix (* -ni)
+drop_1sg_object-lex-rule.
+
+drop_2sg_m_object-suffix :=
+%suffix (* -k)
+drop_2sg_m_object-lex-rule.
+
+drop_2sg_f_object-suffix :=
+%suffix (* -ki)
+drop_2sg_f_object-lex-rule.
+
+drop_3sg_m_object-suffix :=
+%suffix (* -h)
+drop_3sg_m_object-lex-rule.
+
+drop_3sg_f_object-suffix :=
+%suffix (* -ha)
+drop_3sg_f_object-lex-rule.
+
+drop_1pl_object-suffix :=
+%suffix (* -na)
+drop_1pl_object-lex-rule.
+
+drop_2pl_object-suffix :=
+%suffix (* -ku)
+drop_2pl_object-lex-rule.
+
+drop_3pl_object-suffix :=
+%suffix (* -hum)
+drop_3pl_object-lex-rule.
+
+prep_1sg_object-suffix :=
+%suffix (* -i)
+prep_1sg_object-lex-rule.
+
+prep_2sg_m_object-suffix :=
+%suffix (* -k)
+prep_2sg_m_object-lex-rule.
+
+prep_2sg_f_object-suffix :=
+%suffix (* -ki)
+prep_2sg_f_object-lex-rule.
+
+prep_3sg_m_object-suffix :=
+%suffix (* -h)
+prep_3sg_m_object-lex-rule.
+
+prep_3sg_f_object-suffix :=
+%suffix (* -ha)
+prep_3sg_f_object-lex-rule.
+
+prep_1pl_object-suffix :=
+%suffix (* -na)
+prep_1pl_object-lex-rule.
+
+prep_2pl_object-suffix :=
+%suffix (* -ku)
+prep_2pl_object-lex-rule.
+
+prep_3pl_object-suffix :=
+%suffix (* -hum)
+prep_3pl_object-lex-rule.
+
+1st_subject-prefix :=
+%prefix (* n-)
+1st_subject-lex-rule.
+
+2nd_subject-prefix :=
+%prefix (* t-)
+2nd_subject-lex-rule.
+
+3rd_s_m_y_subject-prefix :=
+%prefix (* y-)
+3rd_s_m_subject-lex-rule.
+
+3rd_s_m_b_subject-prefix :=
+%prefix (* b-)
+3rd_s_m_subject-lex-rule.
+
+3rd_s_f_subject-prefix :=
+%prefix (* t-)
+3rd_s_f_subject-lex-rule.
+
+3rd_pl_y_subject-prefix :=
+%prefix (* y-)
+3rd_pl_subject-lex-rule.
+
+3rd_pl_b_subject-prefix :=
+%prefix (* b-)
+3rd_pl_subject-lex-rule.
+
+sing_non2_subject-suffix :=
+%suffix (* -0)
+sing_non2_subject-lex-rule.
+
+pl_subject-suffix :=
+%suffix (* -u)
+pl_subject-lex-rule.
+
+2nd_sing_f_subject-suffix :=
+%suffix (* -i)
+2nd_sing_f_subject-lex-rule.
+
+2nd_sing_m_subject-suffix :=
+%suffix (* -0)
+2nd_sing_m_subject-lex-rule.
+
+sing_fem_subj-suffix :=
+%suffix (* -e)
+sing_fem_subj-lex-rule.
+
+sing_masc_subj-suffix :=
+%suffix (* -0)
+sing_masc_subj-lex-rule.
+
+pl_subj-suffix :=
+%suffix (* -iin)
+pl_subj-lex-rule.
+
+masc_sg_adj-suffix :=
+%suffix (* -0)
+masc_sg_adj-lex-rule.
+
+fem_sg_adj-suffix :=
+%suffix (* -e)
+fem_sg_adj-lex-rule.
+
+pl_adj-suffix :=
+%suffix (* -PL)
+pl_adj-lex-rule.
+
+masc_sg_pastp-suffix :=
+%suffix (* -0)
+masc_sg_pastp-lex-rule.
+
+fem_sg_pastp-suffix :=
+%suffix (* -a)
+fem_sg_pastp-lex-rule.
+
+pl_pastp-suffix :=
+%suffix (* -iin)
+pl_pastp-lex-rule.
+
+masc_sg_presp-suffix :=
+%suffix (* -0)
+masc_sg_presp-lex-rule.
+
+fem_sg_presp-suffix :=
+%suffix (* -e)
+fem_sg_presp-lex-rule.
+
+pl_presp-suffix :=
+%suffix (* -iin)
+pl_presp-lex-rule.
+
+def_adj-prefix :=
+%prefix (* al-)
+def_adj-lex-rule.

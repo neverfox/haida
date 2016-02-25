@@ -1,0 +1,22 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+;;; Semantically Empty Lexical Entries
+
+gaa%27id_1_gr := arg0e_gtr &
+  [ CONTEXT.RELS <! [ PRED "non_existing_rel" ] !>,
+    FLAGS.TRIGGER "gaa%27id_1" ].
+
+walla_gr := generator_rule &
+  [ CONTEXT.RELS <! [ ARG0.SF ques ] !>,
+    FLAGS.TRIGGER "walla" ].
+
+kan_gr := generator_rule &
+[ CONTEXT [ RELS <! [ ARG2 #h & handle ],
+                    [ ARG0 #e & event ] !> ],
+  FLAGS [ EQUAL < #e, #h >,
+          TRIGGER "kan" ]].
+
+kadar_gr := generator_rule &
+[ CONTEXT [ RELS <! [ ARG2 #h & handle ],
+                    [ ARG0 #e & event ] !> ],
+  FLAGS [ EQUAL < #e, #h >,
+          TRIGGER "kadar" ]].
