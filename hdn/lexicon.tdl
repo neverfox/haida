@@ -265,6 +265,10 @@ na%2Eàwhli := itr-nom-verb-lex &
   [ STEM < "na.àwhli" >,
     SYNSEM.LKEYS.KEYREL.PRED "_build+house_v_rel" ].
 
+q’a := itr-nom-verb-lex &
+  [ STEM < "q’a" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
+
 ;;; Auxiliaries
 
 tlaagaang := inceptive-aux-lex &
