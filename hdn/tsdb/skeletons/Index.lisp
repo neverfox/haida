@@ -25,4 +25,6 @@
  ((:path . "testsuite/lab5") (:content . "test suite lab 5"))
  ((:path . "testsuite/lab6") (:content . "test suite lab 6"))
  ((:path . "testsuite/lab7") (:content . "test suite lab 7"))
- ((:path . "testcorpus/lab7") (:content . "test corpus lab 7")))
+ ((:path . "testsuite/lab8") (:content . "test suite lab 8"))
+ ((:path . "testcorpus/lab7") (:content . "test corpus lab 7"))
+ ((:path . "testcorpus/lab8") (:content . "test corpus lab 8")))
