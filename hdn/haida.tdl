@@ -175,7 +175,7 @@ finite := form.
 nonpast := tense.
 present := nonpast.
 past := tense.
-rel-prs := present.
+;rel-prs := present.
 
 ;;; Aspect
 
@@ -770,8 +770,8 @@ non-past-lex-rule := tense-lex-rule-super &
 present-lex-rule := non-past-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE present ].
 
-rel-prs-lex-rule := non-past-lex-rule &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE rel-prs ].
+;rel-prs-lex-rule := non-past-lex-rule &
+;  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE rel-prs ].
 
 aspect-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & modal-3-rule-dtr & negation-rule-dtr & question-rule-dtr & same-neg-sat-lex-rule & topic-change-rule-dtr &
   [ INFLECTED #infl,

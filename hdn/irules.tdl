@@ -29,9 +29,9 @@ present-suffix :=
 %suffix (* -gang)
 present-lex-rule.
 
-rel-prs-suffix :=
-%suffix (* -as)
-rel-prs-lex-rule.
+;rel-prs-suffix :=
+;%suffix (* -as)
+;rel-prs-lex-rule.
 
 perf-aspect-suffix :=
 %suffix (* -gii)

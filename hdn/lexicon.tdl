@@ -65,6 +65,10 @@ buud := alienable-noun-lex &
   [ STEM < "buud" >,
     SYNSEM.LKEYS.KEYREL.PRED "_boat_n_rel" ].
 
+car := alienable-noun-lex &
+  [ STEM < "car" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
+
 hlaa := 1sg-nom-pron-noun-lex &
   [ STEM < "hlaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
@@ -204,6 +208,10 @@ suu_1 := tr-verb-lex &
 qii%2Eid := tr-verb-lex &
   [ STEM < "qii.id" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pick+up_v_rel"].
+
+cidiid := tr-verb-lex &
+  [ STEM < "cidiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_chase_v_rel"].
 
 rad := itr-nom-verb-lex &
   [ STEM < "rad" >,

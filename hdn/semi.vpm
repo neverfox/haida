@@ -46,20 +46,20 @@ POTENCY : POTENCY
   * <> *
 
 PNG.PERNUM : PER NUM
-  3pl <> 3 pl
-  2pl <> 2 pl
-  1pl_excl <> 1 pl
-  1pl_incl <> 1 pl
-  1pl <> 1 pl
-  3sg <> 3 sg
-  2sg <> 2 sg
-  1sg <> 1 sg
-  3rd <> 3 !
-  3rd << 3 *
-  2nd <> 2 !
-  2nd << 2 *
-  1st <> 1 !
-  1st << 1 *
+  3pl <> third pl
+  2pl <> second pl
+  1pl_excl <> first pl
+  1pl_incl <> first pl
+  1pl <> first pl
+  3sg <> third sg
+  2sg <> second sg
+  1sg <> first sg
+  3rd <> third !
+  3rd << third *
+  2nd <> second !
+  2nd << second *
+  1st <> first !
+  1st << first *
   pl <> ! pl
   pl << * pl
   sg <> ! sg
