@@ -203,29 +203,28 @@ no-evid := evid.
 
 ;;; Nouns
 
-noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
-  [ SYNSEM.LOCAL.CAT [ HEAD.PRON -,
-                       VAL [ SPR < #spr &
-                                   [ LOCAL.CAT.HEAD det ] >,
-                             COMPS < >,
-                             SUBJ < >,
-                             SPEC < > ] ],
+noun-pron-lex-super := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL [ SPR < #spr &
+                                [ LOCAL.CAT.HEAD det ] >,
+                           COMPS < >,
+                           SUBJ < >,
+                           SPEC < > ],
     ARG-ST < #spr > ].
 
-pronoun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
-  [ SYNSEM.LOCAL.CAT [ HEAD.PRON +,
-                       VAL [ SPR < #spr &
-                                   [ LOCAL.CAT.HEAD det ] >,
-                             COMPS < >,
-                             SUBJ < >,
-                             SPEC < > ] ],
-    ARG-ST < #spr > ].
-
-no-spr-noun-lex := noun-lex &
+no-spr-noun-pron-lex-super := noun-pron-lex-super &
   [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
 
-no-spr-pronoun-lex := pronoun-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
+noun-lex := noun-pron-lex-super &
+  [ SYNSEM.LOCAL.CAT.HEAD.PRON - ].
+
+pronoun-lex := noun-pron-lex-super &
+  [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
+
+no-spr-noun-lex := no-spr-noun-pron-lex-super & 
+  [ SYNSEM.LOCAL.CAT.HEAD.PRON - ].
+
+no-spr-pronoun-lex := no-spr-noun-pron-lex-super &
+  [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
 
 ; Nouns which cannot take specifiers mark their SPR requirement
 ; as OPT +.  Making the non-head daughter OPT - in this rule
@@ -241,40 +240,40 @@ alienable-noun-lex := common-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY +,
     INFLECTED.COG-ST-FLAG - ].
 
-nom-pron-noun-lex := no-spr-noun-lex &
+nom-pron-lex := no-spr-pronoun-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE nom ].
 
-acc-pron-noun-lex := no-spr-noun-lex &
+acc-pron-lex := no-spr-pronoun-lex &
   [ SYNSEM.LOCAL.CAT.HEAD.CASE acc ].
 
-1sg-nom-pron-noun-lex := nom-pron-noun-lex &
+1sg-nom-pron-lex := nom-pron-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
 
-1pl-nom-pron-noun-lex := nom-pron-noun-lex &
+1pl-nom-pron-lex := nom-pron-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl ].
 
-2sg-nom-pron-noun-lex := nom-pron-noun-lex &
+2sg-nom-pron-lex := nom-pron-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
 
-3p-hpot-pron-noun-lex := no-spr-pronoun-lex &
+3p-hpot-pron-lex := no-spr-pronoun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY high,
                                          PERNUM 3rd ] ].
 
-1sg-acc-pron-noun-lex := acc-pron-noun-lex &
+1sg-acc-pron-lex := acc-pron-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
 
-1pl-acc-pron-noun-lex := acc-pron-noun-lex &
+1pl-acc-pron-lex := acc-pron-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1pl ].
 
-2pl-pron-noun-lex := no-spr-noun-lex &
+2pl-pron-lex := no-spr-pronoun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ].
 
-3p-lpot-pron-noun-lex := acc-pron-noun-lex &
+3p-lpot-pron-lex := acc-pron-lex &
   [ SYNSEM.LOCAL [ CAT.HEAD.CASE acc,
                    CONT.HOOK.INDEX.PNG [ POTENCY low,
                                          PERNUM 3rd ] ] ].
 
-2sg-acc-pron-noun-lex := acc-pron-noun-lex &
+2sg-acc-pron-lex := acc-pron-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ].
 
 proper-noun-lex := no-spr-noun-lex.
@@ -644,7 +643,7 @@ adposition-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-it
 ;;; Wh pronouns
 
 wh-pronoun-noun-lex := norm-hook-lex-item & basic-icons-lex-item & non-ynq-lex-item &
-  [ SYNSEM [ LOCAL [ CAT [ HEAD noun,
+  [ SYNSEM [ LOCAL [ CAT [ HEAD noun & [ PRON + ],
                            MKG non-fc,
                            VAL [ SPR < >,
                                  SUBJ < >,

@@ -69,39 +69,39 @@ car := alienable-noun-lex &
   [ STEM < "car" >,
     SYNSEM.LKEYS.KEYREL.PRED "_car_n_rel" ].
 
-hlaa := 1sg-nom-pron-noun-lex &
+hlaa := 1sg-nom-pron-lex &
   [ STEM < "hlaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-t’alang := 1pl-nom-pron-noun-lex &
+t’alang := 1pl-nom-pron-lex &
   [ STEM < "t’alang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-daa := 2sg-nom-pron-noun-lex &
+daa := 2sg-nom-pron-lex &
   [ STEM < "daa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-’laa_1 := 3p-hpot-pron-noun-lex &
+’laa_1 := 3p-hpot-pron-lex &
   [ STEM < "’laa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-dii_1 := 1sg-acc-pron-noun-lex &
+dii_1 := 1sg-acc-pron-lex &
   [ STEM < "dii" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-7ittl’ := 1pl-acc-pron-noun-lex &
+7ittl’ := 1pl-acc-pron-lex &
   [ STEM < "7ittl’" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-dalang := 2pl-pron-noun-lex &
+dalang := 2pl-pron-lex &
   [ STEM < "dalang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-7waa := 3p-lpot-pron-noun-lex &
+7waa := 3p-lpot-pron-lex &
   [ STEM < "7waa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
-dang := 2sg-acc-pron-noun-lex &
+dang := 2sg-acc-pron-lex &
   [ STEM < "dang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
@@ -121,7 +121,7 @@ naa%n := inalienable-noun-lex &
   [ STEM < "naa.n" >,
     SYNSEM.LKEYS.KEYREL.PRED "_grandmother_n_rel" ].
 
-gud := 3p-lpot-pron-noun-lex &
+gud := 3p-lpot-pron-lex &
   [ STEM < "gud" >,
     SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
