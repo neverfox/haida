@@ -287,7 +287,7 @@ tlaagaang := inceptive-aux-lex &
   [ STEM < "tlaagaang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_start_v_rel" ].
 
-hlangaa := subj-raising-aux-lex &
+hlangaa := arg-comp-aux-with-pred &
   [ STEM < "hlangaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_can_v_rel" ].
 

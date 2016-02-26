@@ -441,7 +441,6 @@ inceptive-aux-lex := arg-comp-aux-with-pred &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT inceptive,
                    CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ].
 
-subj-raising-aux-lex := trans-first-arg-raising-lex-item & arg-comp-aux.
 
 ;;; Copulas
 
@@ -1012,7 +1011,8 @@ int-clause := head-only & interrogative-clause &
        NON-LOCAL.YNQ <! !> ],
     HEAD-DTR.SYNSEM [ LOCAL.CAT [ INT +,
           VAL #val ],
-          NON-LOCAL.YNQ <! *top* !> ]].
+          NON-LOCAL [ YNQ <! *top* !>,
+		      SLASH <! !> ]]].
 
 ; Wh-initial phrase structure rules
 
