@@ -245,9 +245,13 @@ qaaguhlaa%2Eaa := itr-nom-verb-lex &
   [ STEM < "7iij" >,
     SYNSEM.LKEYS.KEYREL.PRED "_be_v_id_rel" ].
 
-7isdaa := ditr-ctrl-verb-lex &
+7isdaa_1 := tr-verb-lex &
   [ STEM < "7isdaa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_do+take_v_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_do_v_rel" ].
+
+7isdaa_2 := ditr-ctrl-verb-lex &
+  [ STEM < "7isdaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_take_v_rel" ].
 
 gudang_2 := prop-sent-verb-lex &
   [ STEM < "gudang" >,
