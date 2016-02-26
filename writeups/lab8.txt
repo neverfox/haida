@@ -366,6 +366,40 @@ There were a couple of other suffixes on the verb when we started machine transl
 was part of a larger process this week, which overlapped with our work on MT. I discuss these changes in the
 next section.
 
+##### Other changes to the grammar
+
+When fixing the SLASH value as described above:
+
+int-clause := head-only & interrogative-clause &
+  [ SYNSEM [ LOCAL.CAT [HEAD verb,
+            INT -,
+      VAL #val ],
+       NON-LOCAL.YNQ <! !> ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT [ INT +,
+          VAL #val ],
+          NON-LOCAL [ YNQ <! *top* !>,
+		      SLASH <! !> ]]].
+
+we found that our non-factive rule had not actually been working. NF is the same suffix as NEG, and int-clause
+was erasing a NEG-SAT - value from the neg-suffix. In fact, our non-factive-rule was in the wrong position
+class. We moved it to the tense position class as shown here:
+
+non-factive-lex-rule := tense-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT [ MC -,
+           HEAD.NF +]].
+
+This yields the correct parse on this sentence:
+
+#147 embedded clauses (adapted from a:430)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-d}
+dii naa.n k’untl’aa.ang hla suugan
+dii naa.n k’untl’aa-.ang hlaa suu-gan
+My grandmother get.burned-NF 1sg say-PST
+`I said that my grandmother got burned.'
+
 ##### Current Coverage
 Baseline Coverage:
 Current Coverate: 
