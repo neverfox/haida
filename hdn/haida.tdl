@@ -348,7 +348,8 @@ ditr-ctrl-verb-lex := main-verb-lex & ditrans-second-arg-control-lex-item &
 	     #comps2 &
 	     [ OPT -,
 	       LOCAL.CAT [ HEAD adp,
-			   VAL.COMPS < > ]] > ].
+			   VAL.COMPS < > ]] >,
+    INFLECTED.TRANSITIVE-VERB-FLAG +].
 
 sentential-verb-lex := main-verb-lex & clausal-second-arg-trans-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
@@ -708,16 +709,14 @@ neg-lex-rule := negation-lex-rule-super &
   [ SYNSEM.NEG-SAT - ].
 
 modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-3-rule-dtr & same-neg-sat-lex-rule & question-rule-dtr & topic-change-rule-dtr &
-  [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
-                TRANSITIVE-VERB-FLAG #transitive-verb,
+  [ INFLECTED [ TRANSITIVE-VERB-FLAG #transitive-verb,
                 COG-ST-FLAG #cog-st,
                 QUESTION-FLAG #question,
                 FINITE-FLAG #finite,
                 NUM-FLAG #num,
                 FIN-FLAG #fin ],
     DTR modal-2-rule-dtr &
-        [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
-                      TRANSITIVE-VERB-FLAG #transitive-verb,
+        [ INFLECTED [ TRANSITIVE-VERB-FLAG #transitive-verb,
                       COG-ST-FLAG #cog-st,
                       QUESTION-FLAG #question,
                       FINITE-FLAG #finite,
@@ -725,8 +724,14 @@ modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-3-rule-
                       FIN-FLAG #fin & + ] ] ].
 
 fut-lex-rule := modal-2-lex-rule-super &
-  [ INFLECTED.FUT-FLAG +,
+  [ INFLECTED [ FUT-FLAG +,
+		INT_TENSE-OR-TENSE-FLAG + ],
     SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD future ].
+
+modal-2-lex-rule-non-future := modal-2-lex-rule-super &
+  [ INFLECTED.INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
+    DTR.INFLECTED.INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense ].
+                      
 
 infin-pp-lex-rule := modal-2-lex-rule-super &
   [ INFLECTED.FUT-FLAG #fut,
@@ -750,7 +755,8 @@ tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-le
                 FIN-FLAG #fin,
                 TRANSITIVE-VERB-FLAG #transitive-verb ],
     DTR tense-rule-dtr &
-        [ INFLECTED [ NUM-FLAG #num,
+        [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG na-or--,
+		      NUM-FLAG #num,
                       FUT-FLAG #fut,
                       QUESTION-FLAG #question,
                       COG-ST-FLAG #cog-st,
