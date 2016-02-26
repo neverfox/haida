@@ -402,6 +402,10 @@ My grandmother get.burned-NF 1sg say-PST
 `I said that my grandmother got burned.'
 
 ##### Current Testsuite Coverage
+
+There is no change in our coverage this week. All changes reduced overgeneration or the way a sentence
+parsed but no more or fewer sentences parse.
+
 Baseline Coverage: 79.4%
 Current Coverate: 79.4%
 
