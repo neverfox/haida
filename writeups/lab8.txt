@@ -1,0 +1,420 @@
+Lab 8 Write Up
+Author: Kristen Piepgrass
+Partner: Roman Pearah
+Language: Haida
+Date: February 26, 2016
+
+##### Corpus Sentence
+
+For your reference, this is the corpus sentence that we worked on last week:
+
+# 2
+Source: a:1341
+Vetted: s
+Judgment: g
+Phenomena:
+7waagyaan hit’an ’la qii.idaanii
+7waagyaan+hit’an ’laa qii.id-gaa-gan-ii
+and+then 3p pick.up-EVID-PST-TC
+`He picked it up.'
+
+This week we worked on the corpus sentence:
+
+# 3
+Source: a:1341
+Vetted: s
+Judgment: g
+Phenomena:
+7waagyaan gudsda ’la 7isdaayaanii
+7waagyaan gud=sda ’laa 7isdaa-gaa-gan-ii
+and REC=from 3p take-EVID-PST-TC
+`He took it apart.'
+
+This sentences builds off of last weeks in that it also has the topic change (TC) suffix and it uses a scopal
+adverb 'and'. When we added the word with spaces 'and+then' last week, we added 'and' so this part was already
+working.
+
+7waagyaan := scop-sent-adv-lex &
+  [ STEM < "7waagyaan" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and_a_rel" ].
+
+7waagyaan+hit’an := scop-sent-adv-lex &
+  [ STEM < "7waagyaan+hit’an" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_and+then_a_rel" ].
+
+For this week's corpus sentences, we needed to address a few new phenomena. Haida has a reciprocal pronoun, 
+meaning itself/himself. It is third person low potencey. We added this to the lexicon: 
+
+gud := 3p-lpot-pron-noun-lex &
+  [ STEM < "gud" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+	
+Second, from is an adposition, which attaches to the noun it modifies as a clitic. We already had a type for
+this and added sda to the lexicon:
+
+sda := adposition-lex &
+  [ STEM < "sda" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_from_p_rel" ].
+
+	
+Finally, we the verb take, as in take apart is a ditransitive control verb with two complements: an NP and a 
+PP. We created the following type and added it to the lexicon:
+
+ditr-ctrl-verb-lex := main-verb-lex & ditrans-second-arg-control-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps1, #comps2 >,
+    ARG-ST < [ ],
+	     #comps1 &
+	     [ LOCAL.CAT [ HEAD noun,
+			   VAL.SPR < >]],
+	     #comps2 &
+	     [ OPT -,
+	       LOCAL.CAT [ HEAD adp,
+			   VAL.COMPS < > ]] >,
+    INFLECTED.TRANSITIVE-VERB-FLAG +].
+	
+7isdaa_2 := ditr-ctrl-verb-lex &
+  [ STEM < "7isdaa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_take_v_rel" ].
+
+There are a few things to note here. The first complement is an NP, head noun with a saturated spr value. The
+second is an adposition with a saturated comps list and is also OPT -. In the implementation of 
+ditr-ctrl-verb-lex, we discovered that its parent type, main-verb-lex was not constrained to an NP subject.
+Therefore it was necessary to add HEAD noun and SPR < >, as shown below.
+	
+main-verb-lex := verb-lex & basic-verb-lex &
+  [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
+                         VC +,
+                         VAL [ SPR < >,
+                               SPEC < >,
+                               SUBJ < #subj > ] ],
+                   CONT.HOOK.XARG #xarg ],
+    ARG-ST.FIRST #subj &
+                 [ LOCAL [ CAT [HEAD noun,
+								VAL [ SPR < >,
+                                     COMPS < > ]],
+                           CONT.HOOK.INDEX #xarg ] ] ].
+	
+While working on this sentence, we found that the non-3pl-lex and non-3pl-intrans-lex were both affixing to
+the control verb. To prevent the intransitive version of this rule form applying, we added the
+INFLECTED.TRANSITIVE-VERB-FLAG + constraint that you see in the definition above.
+	
+The verb take is a homonym of the verb do. Because take is a ditransitive control verb and do is a
+transitive verb, it was necessary to create two separate lexical entries. This is necessary so that the 
+following sentence continues to parse correctly:
+
+#151 embedded clauses
+Source: a:430
+Vetted: s
+Judgment: g
+Phenomena: {emb-q}
+daagu 7isdaa hlangaa.ang dang gudang
+daa=gu 7isdaa hlangaa-.ang dang gudang
+you=Q do could-NF you think
+`Do you think that you could do it'
+
+Initially we got an additional parse from the ditransitive control verb. We found that the int-clause type
+definition did not specify SLASH <! !> on the daughter and made the appropriate correction:
+
+int-clause := head-only & interrogative-clause &
+  [ SYNSEM [ LOCAL.CAT [HEAD verb,
+            INT -,
+      VAL #val ],
+       NON-LOCAL.YNQ <! !> ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT [ INT +,
+          VAL #val ],
+          NON-LOCAL [ YNQ <! *top* !>,
+		      SLASH <! !> ]]].
+
+To prevent the corpus sentence from parsing with the transitive verb, we added a feature PRON in HEAD and
+refactored our noun/pronoun type hierarchy to incorporate it:
+
+head :+ [ INF bool,
+    NF bool,
+    AUX bool,
+    PRD bool,
+    NEGATED luk,
+    FORM form,
+    WH-EMB bool,
+    PRON bool ].
+
+noun-pron-lex-super := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
+  [ SYNSEM.LOCAL.CAT.VAL [ SPR < #spr &
+                                [ LOCAL.CAT.HEAD det ] >,
+                           COMPS < >,
+                           SUBJ < >,
+                           SPEC < > ],
+    ARG-ST < #spr > ].
+
+no-spr-noun-pron-lex-super := noun-pron-lex-super &
+  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
+
+noun-lex := noun-pron-lex-super &
+  [ SYNSEM.LOCAL.CAT.HEAD.PRON - ].
+
+pronoun-lex := noun-pron-lex-super &
+  [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
+
+no-spr-noun-lex := no-spr-noun-pron-lex-super & 
+  [ SYNSEM.LOCAL.CAT.HEAD.PRON - ].
+
+no-spr-pronoun-lex := no-spr-noun-pron-lex-super &
+  [ SYNSEM.LOCAL.CAT.HEAD.PRON + ].
+
+We updated all of our pronoun lex types to inherit from no-spr-pronoun-lex, which includes the 3p-hpot-pron-lex:
+
+3p-hpot-pron-lex := no-spr-pronoun-lex &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY high,
+                                         PERNUM 3rd ] ].
+
+										 
+Then we constrained the adposition type to be select for a noun that is PRON -.
+adposition-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-item &
+  [ SYNSEM [ LKEYS.KEYREL [ ARG0 #arg0,
+                            ARG1 #xarg,
+                            ARG2 #ind ],
+             LOCAL [ CONT.HOOK [ XARG #xarg,
+                                 INDEX #arg0 ],
+                     CAT [ POSTHEAD -,
+			   HEAD.MOD < [ LOCAL [ CAT [ HEAD noun & [ PRON - ],
+                                    VAL.SPR cons ],
+                              CONT.HOOK.INDEX #xarg ]] >,
+                      VAL [ SPR < >,
+                            COMPS < [ LOCAL [ CAT [ HEAD noun,
+                                                    VAL.SPR < > ],
+                                              CONT.HOOK.INDEX #ind ]] >,
+                            SUBJ < > ]]]]].
+
+This allows us to correctly parse the corpus sentence. We get two trees, one where the subject is dropped
+and one where the first complement is dropped. Although the correct tree is the one where 'it' is dropped
+because an object has lower potency than a person, our grammar is not sufficiently constrained to determine
+which of two nouns has lower potency, so in our grammar, both readings are expected.
+
+##### Changes to VPM
+
+### Changes to reduce generation
+For aspect and mood we created no-aspect and no-mood instances to use when aspect or mood are underspecified 
+or so that if another language has an aspect or mood that we don't have in Haida, it will not be realized:
+
+In haida.tdl:
+
+;;; Aspect
+
+perfective := aspect.
+imperfective := aspect.
+progressive := imperfective.
+frequentive := imperfective.
+inceptive := aspect.
+no-aspect := aspect.
+
+;;; Mood
+
+future := mood.
+no-mood := mood.
+
+In semi.vpm:
+
+E.ASPECT : ASPECT
+  perfective <> perfective
+  progressive <> progressive
+  frequentive <> frequentive
+  imperfective <> imperfective
+  inceptive <> inceptive
+  * >> no-aspect
+  no-aspect << [e]
+
+E.MOOD : MOOD
+  future <> future
+  * >> no-mood
+  no-mood << [e]
+
+The evidential was not showing up in the semantics at all and needed to be added to the grammar. So I added
+the following to Haida.tdl:
+
+evid := sort.
+
+tam :+ [ EVID evid ].
+
+;;; Evidential
+evidential := evid.
+no-evid := evid.
+
+evid-lex-rule := modal-2-lex-rule-super &
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.EVID evidential,
+    INFLECTED [ FUT-FLAG #fut,
+    QUESTION-FLAG -,
+    TENSE-FLAG - ],
+    DTR.INFLECTED.FUT-FLAG #fut].
+
+And then we added this to semi.vpm so that it would be constrained like aspect and mood:
+
+E.EVID : EVID
+  evidential <> evidential
+  no-evid <> no-evid
+  * >> no-evid
+  no-evid << [e]
+   
+These three changes alone significantly reduced generation. We had previously specified a default aspect,
+but creating a no-* for aspect, mood and evid prevents sentences which are underspecified for aspect, mood
+or evidential from receiving them in generation.
+ 
+### Changes to get MT working  
+
+For machine translation, PNG needed to be removed from the right side of POTENCY and GEND
+
+PNG.GEND : GEND
+  * <> *
+  
+POTENCY : POTENCY
+  high <> high
+  low <> low
+  * <> *
+  
+Previously alienability was not present in our semantics. So I added the following to semi.vpm.
+
+PNG.ALIENABILITY : ALIENABILITY
+  + <> +
+  - <> -
+  * <> *
+  
+We do not believe that this had any effect on the generation in our grammar because alienability is
+syntactically constrained, but it will probably be necessary when translating posessives next week.
+
+Finally, PERNUM needed to be changed to PER and NUM:
+
+PNG.PERNUM : PER NUM
+  3pl <> third pl
+  2pl <> second pl
+  1pl_excl <> first pl
+  1pl_incl <> first pl
+  1pl <> first pl
+  3sg <> third sg
+  2sg <> second sg
+  1sg <> first sg
+  3rd <> third !
+  3rd << third *
+  2nd <> second !
+  2nd << second *
+  1st <> first !
+  1st << first *
+  pl <> ! pl
+  pl << * pl
+  sg <> ! sg
+  sg << * sg
+  * <> *
+  
+##### Machine Translation
+
+After the initial changes to vpm for machine translation (aside from correcting some spelling errors along
+the way), it was only necessary to add sleep to the lexicon, in order to translate "Dogs sleep".
+
+q’a := itr-nom-verb-lex &
+  [ STEM < "q’a" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_sleep_v_rel" ].
+	
+Dog was already in the lexicon:
+
+x := alienable-noun-lex &
+  [ STEM < "x" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
+	
+There was some overgeneration with translation at the beginning. The topic change lex rule was not passing
+up the NEG-SAT feature, so the negative suffix was generated on some strings. We added same-neg-sat-lex-rule 
+as a supertype:
+
+topic-change-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-lex-rule &
+  [ INFLECTED #infl,
+    DTR topic-change-rule-dtr &
+        [ INFLECTED #infl ] ].
+
+The INFIN-PP suffix, which gives present tense to the verb in an embedded wh-question was generated as
+present tense on some strings. This is possible because our INFIN-PP suffix is finite, rather than
+non-finite because of the present tense in embedded wh-questions. To prevent it from generating
+in matrix clauses, we added INF- to the root symbol:
+
+root := phrase &
+  [ SYNSEM [ NEG-SAT na-or-+,
+	     LOCAL [ COORD -,
+		     CAT [ VAL [ SUBJ < >,
+                               COMPS < > ],
+			   MC +,
+			   INT -,
+			   HEAD +vj &
+			       [ FORM finite,
+				 INF - ] ] ],
+	     NON-LOCAL non-local-none & [ YNQ 0-dlist ] ] ].
+
+The rel-pres-lex rule that we implemented for inflected adjectives in embedded clause was not properly
+constrained and was generated on some strings. This is out of scope this quarter, so we commented it out
+of our grammar so that it will not cause over-generation.
+
+The correct translation for the sentence 'Dogs sleep' is:
+
+x 		q’a-7wa-gang
+dogs	sleep-3PL-PRS
+'Dogs sleep'
+
+Currently we generate this sentence and one other. The other sentence that we generate is:
+
+x 		q’a-7wa-gang-ii
+dogs	sleep-3PL-PRS-TC
+'Dogs sleep'
+
+The topic change suffix is semantically empty in our grammar, but is necessary to parse our corpus sentence.
+We plan to comment the inflectional rule out next week so that it will not generate extra strings when we
+do machine translation.
+
+There were a couple of other suffixes on the verb when we started machine translation. Reducing generation
+was part of a larger process this week, which overlapped with our work on MT. I discuss these changes in the
+next section.
+
+##### Other changes to the grammar
+
+When fixing the SLASH value as described above:
+
+int-clause := head-only & interrogative-clause &
+  [ SYNSEM [ LOCAL.CAT [HEAD verb,
+            INT -,
+      VAL #val ],
+       NON-LOCAL.YNQ <! !> ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT [ INT +,
+          VAL #val ],
+          NON-LOCAL [ YNQ <! *top* !>,
+		      SLASH <! !> ]]].
+
+We found that our non-factive rule had not actually been working. NF is the same suffix as NEG, and int-clause
+was erasing a NEG-SAT - value from the neg-suffix. In fact, our non-factive-rule was in the wrong position
+class. We moved it to the tense position class as shown here:
+
+non-factive-lex-rule := tense-lex-rule-super &
+  [ SYNSEM.LOCAL.CAT [ MC -,
+           HEAD.NF +]].
+
+This yields the correct parse on this sentence:
+
+#147 embedded clauses (adapted from a:430)
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {emb-d}
+dii naa.n k’untl’aa.ang hla suugan
+dii naa.n k’untl’aa-.ang hlaa suu-gan
+My grandmother get.burned-NF 1sg say-PST
+`I said that my grandmother got burned.'
+
+##### Current Testsuite Coverage
+
+There is no change in our coverage this week. All changes reduced overgeneration or the way a sentence
+parsed but no more or fewer sentences parse.
+
+Baseline Coverage: 79.4%
+Current Coverate: 79.4%
+
+Baseline Overgeneration: 10.0%
+Current Overgeneration: 10.0%
+
+##### Current Corpus Coverage
+Baseline Coverage: 10.0%
+Current Coverate: 20.0%
+
+Baseline Overgeneration: NA
+Current Overgeneration: NA

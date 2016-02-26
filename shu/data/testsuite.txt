@@ -1,0 +1,2789 @@
+Language: Chadian Arabic
+Language code: shu
+Lines: orth orth-seg gloss translat
+Author: Jeff Heath and Amy Marsh
+Date: Winter 2015
+Source a: Extracts from Faure grammar
+Source b: Extracts from Pommerol grammar 1
+Source c: Extracts from Pommerol grammar 2
+Source d: Extracts from Pommerol grammar 3
+Source e: Jullien de Pommerol, Grammaire pratique de l'arabe tchadien
+Source f: Chadian Arabic, Samir Abu-Absi
+
+#Note: sentences marked Vetted: t were vetted by a field linguist not MT speaker
+#Word Order - SV and VS intransitive
+#Note that VS -> VO with implied subject (grammatical)
+#SVO - 6 permutations
+#ditransitive - 24 permutations (some ungrammatical permutations removed)
+
+Source: b:3
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+Al-deef maat.
+al-deef maat-0
+DEF-guest die.PFV-3SG.M
+'The guest died.'
+
+Source: b:3
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+Maat al-deef.
+maat-0 al-deef
+die.PFV-3SG.M DEF-guest
+'*The guest died.'
+
+Source: b:3
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+Al-deef katal.
+al-deef katal-0
+DEF-guest kill.PFV-3SG.M
+'The guest killed.'
+
+Source: b:3
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+Katal al-deef.
+katal-0 al-deef
+kill.PFV-3SG.M DEF-guest
+'He killed the guest.'
+
+Source: b:3
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+Al-deef katal al-kalib.
+al-deef katal-0 al-kalib
+DEF-guest kill.PFV-3SG.M DEF-dog
+'The guest killed the dog.'
+
+Source: b:3
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+Al-kalib katal al-deef.
+al-kalib katal-0 al-deef
+DEF-dog kill.PFV-3SG.M DEF-guest
+'The dog killed the guest.'
+
+Source: b:3
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+Katal al-kalib al-deef.
+katal-0 al-kalib al-deef
+kill.PFV-3SG.M DEF-dog DEF-guest
+'*The dog killed the guest.'
+
+Source: b:3
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+Katal al-deef al-kalib.
+katal-0 al-deef al-kalib
+kill.PFV-3SG.M DEF-guest DEF-dog
+'*The guest killed the dog.'
+
+Source: b:3
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+Al-deef al-kalib katal.
+al-deef al-kalib katal-0
+DEF-guest DEF-dog kill.PFV-3SG.M
+'*The guest killed the dog.'
+
+Source: b:3
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+Al-kalib al-deef katal.
+al-kalib al-deef katal-0
+DEF-dog DEF-guest kill.PFV-3SG.M
+'*The dog killed the guest.'
+
+Source: d:1
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+Al-deef wassaf al-wileed al-kalib.
+al-deef wassaf-0 al-wileed al-kalib
+DEF-guest show.PFV-3SG.M DEF-boy DEF-dog
+'The guest showed (to) the boy the dog.'
+
+Source: d:1
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+Al-deef wassaf al-kalib al-wileed.
+al-deef wassaf-0 al-kalib al-wileed
+DEF-guest show.PFV-3SG.M DEF-dog DEF-boy
+'The guest showed (to) the dog the boy.'
+
+Source: d:1
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+Al-wileed wassaf al-deef al-kalib.
+al-wileed wassaf-0 al-deef al-kalib
+DEF-boy show.PFV-3SG.M DEF-guest DEF-dog
+'The boy showed (to) the guest the dog.'
+
+Source: d:1
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+Al-wileed wassaf al-kalib al-deef.
+al-wileed wassaf-0 al-kalib al-deef
+DEF-boy show.PFV-3SG.M DEF-dog DEF-guest
+'The boy showed (to) the dog the guest.'
+
+Source: d:1
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+Al-kalib wassaf al-wileed al-deef.
+al-kalib wassaf-0 al-wileed al-deef
+DEF-dog show.PFV-3SG.M DEF-boy DEF-guest
+'The dog showed (to) the boy the guest.'
+
+Source: d:1
+Vetted: t
+Judgment: g
+Phenomena: {word order}
+Al-kalib wassaf al-deef al-wileed.
+al-kalib wassaf-0 al-deef al-wileed
+DEF-dog show.PFV-3SG.M DEF-guest DEF-boy
+'The dog showed (to) the guest the boy.'
+
+Source: d:1
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+Al-deef al-kalib wassaf al-wileed.
+al-deef al-kalib wassaf-0 al-wileed
+DEF-guest DEF-dog show.PFV-3SG.M DEF-boy
+'*The guest showed (to) the dog the boy.'
+
+Source: d:1
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+Al-deef al-wileed wassaf al-kalib.
+al-deef al-wileed wassaf-0 al-kalib
+DEF-guest DEF-boy show.PFV-3SG.M DEF-dog
+'*The guest showed (to) the boy the dog.'
+
+Source: d:1
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+Al-deef al-kalib al-wileed wassaf.
+al-deef al-kalib al-wileed wassaf-0
+DEF-guest DEF-dog DEF-boy show.PFV-3SG.M
+'*The guest showed (to) the dog the boy.'
+
+Source: d:1
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+Al-deef al-wileed al-kalib wassaf.
+al-deef al-wileed al-kalib wassaf-0
+DEF-guest DEF-boy DEF-dog show.PFV-3SG.M
+'*The guest showed (to) the boy the dog.'
+
+Source: d:1
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+Wassaf al-deef al-kalib al-wileed.
+wassaf-0 al-deef al-kalib al-wileed
+show.PFV-3SG.M DEF-guest DEF-dog DEF-boy
+'*The guest showed (to) the dog the boy.'
+
+Source: d:1
+Vetted: t
+Judgment: u
+Phenomena: {word order}
+Wassaf al-wileed al-deef al-kalib.
+wassaf-0 al-wileed al-deef al-kalib
+show.PFV-3SG.M DEF-boy DEF-guest DEF-dog
+'*The boy showed (to) the guest the dog.'
+
+
+#Pronouns
+
+#Subject pronouns with a verb
+Source: b:2
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Ana katalt.
+ana katal-t
+1SG.SBJ kill.PFV-1SG
+'I killed.'
+
+Source: b:2
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Inta katalt.
+inta katal-t
+2SG.M.SBJ kill.PFV-2SG.M
+'You(M) killed.'
+
+Source: b:2
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Inti katalti.
+inti katal-ti
+2SG.F.SBJ kill.PFV-2SG.F
+'You(F) killed.'
+
+Source: b:3
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Hu katal.
+hu katal-0
+3SG.M.SBJ kill.PFV-3SG.M
+'He killed.'
+
+Source: b:3
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Hi katalat.
+Hi katal-at
+3SG.F.SBJ kill.PFV-3SG.F
+'She killed.'
+
+Source: b:3
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Aniina katalna.
+aniina katal-na
+1PL.SBJ kill.PFV-1PL
+'We killed.'
+
+Source: b:3
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Intu kataltu.
+intu katal-tu
+2PL.SBJ kill.PFV-2PL
+'You(PL) killed.'
+
+Source: b:3
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Humman katalo.
+humman katal-o
+3PL.SBJ kill.PFV-3PL
+'They killed.'
+
+#Object Pronouns
+
+Source: c:1
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Ana kataltini.
+ana katal-t-ni
+1SG.SBJ kill.PFV-1SG-1SG.OBJ
+'I killed me.'
+
+Source: c:1
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Ana kataltak.
+ana katal-t-k
+1SG.SBJ kill.PFV-1SG-2SG.M.OBJ
+'I killed you(M).'
+
+Source: c:1
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Ana kataltiki.
+ana katal-t-ki
+1SG.SBJ kill.PFV-1SG-2SG.F.OBJ
+'I killed you(F).'
+
+Source: c:1
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Ana kataltah.
+ana katal-t-h
+1SG.SBJ kill.PFV-1SG-3SG.M.OBJ
+'I killed him.'
+
+Source: c:1
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Ana kataltaha.
+ana katal-t-ha
+1SG.SBJ kill.PFV-1SG-3SG.F.OBJ
+'I killed her.'
+
+Source: c:1
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Ana kataltina.
+ana katal-t-na
+1SG.SBJ kill.PFV-1SG-1PL.OBJ
+'I killed us.'
+
+Source: c:1
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Ana kataltuku.
+ana katal-t-ku
+1SG.SBJ kill.PFV-1SG-2PL.OBJ
+'I killed you(PL).'
+
+Source: c:1
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Ana kataltuhum.
+ana katal-t-hum
+1SG.SBJ kill.PFV-1SG-3PL.OBJ
+'I killed them.'
+
+Source: c:1
+Vetted: t
+Judgment: u
+Phenomena: {pronouns}
+Ana katalt humman.
+ana katal-t humman
+1SG.SBJ kill.PFV-1SG 3PL.SBJ
+'*I killed them.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Ana katalt Muusa.
+ana katal-t Muusa
+1SG.SBJ kill.PFV-1SG Moses
+'I killed Moses.'
+
+
+#Case - N/A
+
+#Determiners
+#We have - singular with and without determiners preceding (grammatical)
+#No plural nouns with or without determiners for now
+#determiners following nouns (ungrammatical)
+#determiner with proper noun (ungrammatical)
+#determiner with pronoun (ungrammatical) - both orders, but maybe not necessary
+
+Source: b:7
+Vetted: t
+Judgment: g
+Phenomena: {determiners}
+Al-deef akal eech.
+al-deef akal-0 eech
+DEF-guest eat.PFV-3SG.M boule
+'The guest ate boule.'
+
+Source: b:7
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+Deef-al akal eech.
+deef al-akal-0 eech
+guest DEF-eat.PFV-3SG.M boule
+'*The guest ate boule.'
+
+Source: b:7
+Vetted: t
+Judgment: g
+Phenomena: {determiners}
+Deef akal eech.
+deef akal-0 eech
+guest eat.PFV-3SG.M boule
+'A guest ate boule.'
+
+Source: b:7
+Vetted: t
+Judgment: g
+Phenomena: {determiners}
+Al-difaan akalo eech.
+al-deef-PL akal-o eech
+DEF-guest-PL eat.PFV-3PL boule
+'The guests ate boule.'
+
+Source: b:7
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+Difaan-al akalo eech.
+deef-PL al-akal-o eech
+guest-PL DEF-eat.PFV-3PL boule
+'*The guests ate boule.'
+
+Source: b:7
+Vetted: t
+Judgment: g
+Phenomena: {determiners}
+Difaan akalo eech.
+deef-PL akal-o eech
+guest-PL eat.PFV-3PL boule
+'Guests ate boule.'
+
+Source: b:7
+Vetted: t
+Judgment: g
+Phenomena: {determiners}
+Muusa akal eech.
+Muusa akal-0 eech
+Moses eat.PFV-3SG.M boule
+'Moses ate boule.'
+
+Source: b:7
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+Al-Muusa akal eech.
+al-Muusa akal-0 eech
+DEF-Moses eat.PFV-3SG.M boule
+'*Moses ate boule.'
+
+Source: b:7
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+Muusa-al akal eech.
+Muusa al-akal-0 eech
+Moses DEF-eat.PFV-3SG.M boule
+'*Moses ate boule.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {determiners}
+Al-kalbeen maato.
+al-kalib-een maat-o
+DEF-dog-DL die.PFV-3PL
+'The two dogs died.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {determiners}
+Kalbeen maato.
+kalib-een maat-o
+dog-DL die.PFV-3PL
+'Two dogs died.'
+
+Source: b:2
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+Al-ana katalt.
+al-ana katal-t
+DEF-1SG.SBJ kill.PFV-1SG
+'*I killed.'
+
+Source: b:2
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+Al-inta katalt.
+al-inta katal-t
+DEF-2SG.M.SBJ kill.PFV-2SG.M
+'*You(M) killed.'
+
+Source: b:2
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+Al-inti katalti.
+al-inti katal-ti
+DEF-2SG.F.SBJ kill.PFV-2SG.F
+'*You(F) killed.'
+
+Source: b:3
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+Al-hu katal.
+al-hu katal-0
+DEF-3SG.M.SBJ kill.PFV-3SG.M
+'*He killed.'
+
+Source: b:3
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+Al-hi katalat.
+al-hi katal-at
+DEF-3SG.F.SBJ kill.PFV-3SG.F
+'*She killed.'
+
+Source: b:3
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+Al-aniina katalna.
+al-aniina katal-na
+DEF-1PL.SBJ kill.PFV-1PL
+'*We killed.'
+
+Source: b:3
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+Al-intu kataltu.
+al-intu katal-tu
+DEF-2PL.SBJ kill.PFV-2PL
+'*You(PL) killed.'
+
+Source: b:3
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+Al-humman katalo.
+al-humman katal-o
+DEF-3PL.SBJ kill.PFV-3PL
+'*They killed.'
+
+Source: b:2
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+Ana-al katalt.
+ana al-katal-t
+1SG.SBJ DEF-kill.PFV-1SG
+'*I killed.'
+
+Source: b:2
+Vetted: t
+Judgment: u
+Phenomena: {determiners}
+Inta-al katalt.
+inta al-katal-t
+2SG.M.SBJ DEF-kill.PFV-2SG.M
+'*You(M) killed.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {agreement}
+Al-kalib katal.
+al-kalib katal-0
+DEF-dog kill.PFV-3SG.M
+'The dog(M) killed.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Al-kalib katalat.
+al-kalib katal-at
+DEF-dog kill.PFV-3SG.F
+'*The dog(M) killed.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {agreement}
+Al-kalbe katalat.
+al-kalbe katal-at
+DEF-dog.F kill.PFV-3SG.F
+'The dog(F) killed.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Al-kalbe katal.
+al-kalbe katal-0
+DEF-dog.F kill.PFV-3SG.M
+'*The dog(F) killed.'
+
+
+# subject pronouns and optionality
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+Hu akal.
+hu akal-0
+3SG.M.SBJ eat.PFV-3SG.M
+'He ate.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+Akal.
+akal-0
+eat.PFV-3SG.M
+'He ate.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+Hi akalat.
+hi akal-at
+3SG.F.SBJ eat.PFV-3SG.F
+'She ate.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+Akalat.
+akal-at
+eat.PFV-3SG.F
+'She ate.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+Hu akal eech.
+hu akal-0 eech
+3SG.M.SBJ eat.PFV-3SG.M boule
+'He ate boule.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+Akal eech.
+akal-0 eech
+eat.PFV-3SG.M boule
+'He ate boule.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+Akalt.
+akal-t
+eat.PFV-1SG
+'I ate.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+Akalt.
+akal-t
+eat.PFV-2SG.M
+'You(M) ate.'
+
+
+# object pronouns and optionality
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+Ana akalt.
+ana akal-t
+1SG.SBJ eat.PFV-1SG
+'I ate.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+Ana akalt eech.
+ana akal-t eech
+1SG.SBJ eat.PFV-1SG boule
+'I ate boule.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+Ana akaltah.
+ana akal-t-h
+1SG.SBJ eat.PFV-1SG-3SG.M.OBJ
+'I ate it.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {argument optionality}
+Ana akaltah eech.
+ana akal-t-h eech
+1SG.SBJ eat.PFV-1SG-3SG.M.OBJ boule
+'*I ate boule.'
+
+
+# Imperfective verb paradigm
+
+Source: e:138
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+naakul.
+n-aakul-0
+1-eat.IPFV-SG
+'I eat.'
+
+Source: e:138
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+taakul.
+t-aakul-0
+2-eat.IPFV-SG
+'You(M) eat.'
+
+Source: e:138
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+taakuli.
+t-aakul-i
+2-eat.IPFV-2SG.F
+'You(F) eat.'
+
+Source: e:138
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+yaakul.
+y-aakul-0
+3SG.M-eat.IPFV-SG
+'He eats.'
+
+Source: e:138
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+taakul.
+t-aakul-0
+3SG.F-eat.IPFV-SG
+'She eats.'
+
+Source: e:138
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+naakulu.
+n-aakul-u
+1-eat.IPFV-PL
+'We eat.'
+
+Source: e:138
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+taakulu.
+t-aakul-u
+2-eat.IPFV-PL
+'You(PL) eat.'
+
+Source: e:138
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+yaakulu.
+y-aakul-u
+3PL-eat.IPFV-PL
+'They eat.'
+
+# These ungrammatical cases show that the 2SG.F marker cannot be used
+# (cannot co-occur) with the 1- and 3- IPFV prefixes, and some required verb agreement
+
+Source: e:138
+Vetted: s
+Judgment: u
+Phenomena: {tense aspect mood}
+naakuli.
+n-aakul-i
+1-eat.IPFV-2SG.F
+'*I eat.'
+
+Source: e:138
+Vetted: s
+Judgment: u
+Phenomena: {tense aspect mood}
+yaakuli.
+y-aakul-i
+3SG.M-eat.IPFV-2SG.F
+'*He eats.'
+
+Source: e:138
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+Hi taakul.
+hi t-aakul-0
+3SG.F.SBJ 3SG.F-eat.IPFV-SG
+'She eats.'
+
+Source: e:138
+Vetted: s
+Judgment: u
+Phenomena: {tense aspect mood}
+Hi yaakul.
+hi y-aakul-0
+3SG.F.SBJ 3SG.M-eat.IPFV-SG
+'*She eats.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {tense aspect mood}
+Inti taakul.
+inti t-aakul-0
+2SG.F.SBJ 2-eat.IPFV-SG
+'*You(F) eat.'
+
+
+# Morphophonemics - this doesn't really affect us in this analysis as we are
+# targeting the morpheme line, but there are some vowel harmony changes that
+# appear in the orthography line in these examples
+
+Source: e:146
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+taftahe al-baab.
+t-aftah-i al-baab
+2-open.IPFV-2SG.F DEF-door
+'You(F) open the door.'
+
+Source: e:146
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+naftaho al-baab.
+n-aftah-u al-baab
+1-eat.IPFV-PL DEF-door
+'We open the door.'
+
+
+
+# Imperfective forms with object pronouns
+
+Source: c:3
+Vetted: t
+Judgment: g
+Phenomena: {tense aspect mood, pronouns}
+Yaktulni.
+y-aktul-0-ni
+3SG.M-kill.IPFV-SG-1SG.OBJ
+'He kills me.'
+
+Source: c:4
+Vetted: t
+Judgment: g
+Phenomena: {tense aspect mood, pronouns}
+Yaktulak.
+y-aktul-0-k
+3SG.M-kill.IPFV-SG-2SG.M.OBJ
+'He kills you(M).'
+
+Source: c:4
+Vetted: t
+Judgment: g
+Phenomena: {tense aspect mood, pronouns}
+Yaktulki.
+y-aktul-0-ki
+3SG.M-kill.IPFV-SG-2SG.F.OBJ
+'He kills you(F).'
+
+Source: c:4
+Vetted: t
+Judgment: g
+Phenomena: {tense aspect mood, pronouns}
+Yaktulah.
+y-aktul-0-h
+3SG.M-kill.IPFV-SG-3SG.M.OBJ
+'He kills him.'
+
+Source: c:4
+Vetted: t
+Judgment: g
+Phenomena: {tense aspect mood, pronouns}
+Yaktulha.
+y-aktul-0-ha
+3SG.M-kill.IPFV-SG-3SG.F.OBJ
+'He kills her.'
+
+Source: c:4
+Vetted: t
+Judgment: g
+Phenomena: {tense aspect mood, pronouns}
+Yaktulna
+y-aktul-0-na
+3SG.M-kill.IPFV-SG-1PL.OBJ
+'He kills us.'
+
+Source: c:4
+Vetted: t
+Judgment: g
+Phenomena: {tense aspect mood, pronouns}
+Yaktulna
+y-aktul-0-ku
+3SG.M-kill.IPFV-SG-2PL.OBJ
+'He kills you(PL).'
+
+Source: c:4
+Vetted: t
+Judgment: g
+Phenomena: {tense aspect mood, pronouns}
+Yaktulhum
+y-aktul-0-hum
+3SG.M-kill.IPFV-SG-3PL.OBJ
+'He kills them.'
+
+
+# Imperfective verbs and overt direct objects, can't co-occur with object pronoun
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Yaktul al-kalib.
+y-aktul-0 al-kalib
+3SG.M-kill.IPFV-SG DEF-dog
+'He kills the dog.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {pronouns}
+Yaktul al-kulaab.
+y-aktul-0 al-kalib-PL
+3SG.M-kill.IPFV-SG DEF-dog-PL
+'He kills the dogs.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {pronouns}
+Yaktulah al-kalib.
+y-aktul-0-h al-kalib
+3SG.M-kill.IPFV-SG-3SG.M.OBJ DEF-dog
+'*He kills the dog.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {pronouns}
+Yaktulhum al-kulaab.
+y-aktul-0-hum al-kalib-PL
+3SG.M-kill.IPFV-SG-3PL.OBJ DEF-dog-PL
+'*He kills the dogs.'
+
+# The present participle can be used as a predicate
+# and it agrees in number and gender with the subject
+
+Source: b:1
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+Ana gaa'id.
+ana gaa'id-0
+1SG.SBJ stay.PRS.PTCP-SG.M
+'I(M) am here.'
+
+Source: b:1
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+Ana gaa'ide.
+ana gaa'id-e
+1SG.SBJ stay.PRS.PTCP-SG.F
+'I(F) am here.'
+
+Source: b:1
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+Hi gaa'ide.
+hi gaa'id-e
+3SG.F.SBJ stay.PRS.PTCP-SG.F
+'She is here.'
+
+Source: b:1
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+Intu gaa'idiin.
+intu gaa'id-iin
+2PL.SBJ stay.PRS.PTCP-PL
+'You(PL) are here.'
+
+Source: e:66
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+Muusa raagid.
+Muusa raagid-0
+Muusa lie.down.PRS.PTCP-SG.M
+'Muusa is lying down.'
+
+Source: b:1
+Vetted: s
+Judgment: u
+Phenomena: {agreement}
+Hi gaa'id.
+hi gaa'id-0
+3SG.F.SBJ stay.PRS.PTCP-SG.M
+'*She is here.'
+
+Source: b:1
+Vetted: s
+Judgment: u
+Phenomena: {agreement}
+Intu gaa'ide.
+intu gaa'id-e
+2PL.SBJ stay.PRS.PTCP-SG.F
+'*You(PL) are here.'
+
+
+# The present participle gaa'id can also be used as an auxiliary
+# with another verb in the imperfective to mark an ongoing action
+
+Source: e:208
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+Al-wileed gaa'id yabki.
+al-wileed gaa'id-0 y-abki-0
+DEF-boy stay.PRS.PTCP-SG.M 3SG.M-cry.IPFV-SG
+'The boy is crying.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tense aspect mood}
+Ana gaa'id naakul.
+ana gaa'id-0 n-aakul-0
+1SG.SUBJ stay.PRS.PTCP-SG.M 1-cry.IPFV-SG
+'I am eating.'
+
+# Both the present participle and the imperfective verb must agree with the subject
+# And the verb afterwards cannot be in perfective aspect
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {tense aspect mood}
+Al-wileed gaa'id tabki.
+al-wileed gaa'id-0 t-abki-0
+DEF-boy stay.PRS.PTCP-SG.M 2-cry.IPFV-SG
+'*The boy is crying.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {tense aspect mood}
+Al-wileed gaa'idiin yabki.
+al-wileed gaa'id-iin y-abki-0
+DEF-boy stay.PRS.PTCP-PL 3SG.M-cry.IPFV-SG
+'*The boy is crying.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {tense aspect mood}
+Ana gaa'id katalt.
+ana gaa'id-0 katal-t
+1SG.SUBJ stay.PRS.PTCP-SG.M kill.PFV-1SG
+'*I am killing.'
+
+
+
+# The past participle can also be used as a predicate
+# and it agrees in number and gender with the subject
+# in a similar way to the present participle, but the
+# feminine ending is -a, not -e
+
+Source: e:68
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+Inta musaamah.
+inta musaamah-0
+2SG.M.SBJ forgive.PST.PTCP-SG.M
+'You(M) are forgiven.'
+
+Source: e:68
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+Hi musaamaha.
+hi musaamah-a
+3SG.F.SBJ forgive.PRS.PTCP-SG.F
+'She is forgiven.'
+
+Source: e:69
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+Humman musaamahiin.
+humman musaamah-iin
+2PL.SBJ forgive.PRS.PTCP-PL
+'You(PL) are forgiven.'
+
+
+
+# Further ways of expressing tense and aspect
+
+Source: e:205
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+Kulla yoom naakulu eech.
+kulla yoom n-aakul-u eech
+all day 1-eat.IPFV-PL boule
+'Every day we eat boule.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {tense aspect mood}
+Ambaakir naakulu eech.
+ambaakir n-aakul-u eech
+tomorrow 1-eat.IPFV-PL boule
+'Tomorrow we will eat boule.'
+
+Source: e:205
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+Zamaan al-banaat ma yamurgu barra.
+zamaan al-bineeye-PL ma y-amrug-u barra
+in.the.past DEF-girl-PL NEG 3PL-go.out.IPFV-PL outside
+'In the past girls didn't go outside.'
+
+Source: e:207
+Vetted: s
+Judgment: g
+Phenomena: {tense aspect mood}
+Al-wileed gamma yaakul.
+al-wileed gamma-0 y-aakul-0
+DEF-boy rise.PFV-3SG.M 3SG.M-eat.IPFV-SG
+'The boy began to eat.'
+
+
+# Demonstratives as modifiers in an NP
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cognitive status}
+Al-raajil da maat.
+al-raajil da maat-0
+DEF-man this.SG.M die.PFV-3SG.M
+'This man died.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cognitive status}
+Al-mara di maatat.
+al-mara di maat-at
+DEF-woman this.SG.F die.PFV-3SG.F
+'This woman died.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cognitive status}
+Al-iyaal dool maato.
+al-wileed-PL dool maat-o
+DEF-boy-PL this.PL die.PFV-3PL
+'These children died.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cognitive status}
+Al-raajil daak maat.
+al-raajil daak maat-0
+DEF-man that.SG.M die.PFV-3SG.M
+'That man died.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cognitive status}
+Al-mara diik maatat.
+al-mara diik maat-at
+DEF-woman that.SG.F die.PFV-3SG.F
+'That woman died.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {cognitive status}
+Al-iyaal doolak maato.
+al-wileed-PL doolak maat-o
+DEF-boy-PL that.PL die.PFV-3PL
+'Those children died.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Al-mara da maatat.
+al-mara da maat-at
+DEF-woman this.M die.PFV-3SG.F
+'*This woman died.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Al-iyaal da maato.
+al-wileed-PL da maat-o
+DEF-boy-PL this.SG.M die.PFV-3PL
+'*These children died.'
+
+# The demonstrative occurs after the NP it is modifying.
+# But recall that "Da al-raajil" (above) is grammatical, where
+# "al-rajiil" is a predicative NP.
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {cognitive status}
+Da al-raajil maat.
+da al-raajil maat-0
+this.M DEF-man die.PFV-3SG.M
+'*This man died.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {cognitive status}
+Daak al-raajil maat.
+daak al-raajil maat-0
+that.M DEF-man die.PFV-3SG.M
+'*That man died.'
+
+# The demonstrative must modify a determined noun
+# (Although some informal speech may do this?)
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {cognitive status}
+Raajil da maat.
+raajil da maat-0
+man this.SG.M die.PFV-3SG.M
+'*This man died.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {cognitive status}
+Raajil daak maat.
+raajil daak maat-0
+man that.SG.M die.PFV-3SG.M
+'*That man died.'
+
+# Negation - normally with the "ma" adverb modifier
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {negation}
+Al-raajil ma maat.
+al-raajil ma maat-0
+DEF-man NEG die.PFV-3SG.M
+'The man did not die.'
+
+Source: e:220
+Vetted: t
+Judgment: g
+Phenomena: {negation}
+Ana ma chiribt laban.
+ana ma chirib-t laban
+1SG.SBJ NEG drink.PFV-1SG milk
+'I did not drink milk.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {negation}
+Ma al-raajil maat.
+ma al-raajil maat-0
+NEG DEF-man die.PFV-3SG.M
+'*The man did not die.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {negation}
+Al-raajil maat ma.
+al-raajil maat-0 ma
+DEF-man die.PFV-3SG.M NEG
+'*The man did not die.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {negation}
+Al-kalib ma yunuum.
+al-kalib ma y-unuum-0
+DEF-dog NEG 3-sleep.IPFV-SG
+'The dog is not sleeping.'
+
+
+# Some verbs are strictly transitive - they must have either an overt object
+# or object marking on the verb indicating a pronoun object
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+Al-mara sawwat akil.
+al-mara sawwa-at akil
+DEF-woman made.PFV-3SG.F food
+'The woman made food.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {argument optionality}
+Al-mara sawwatah.
+al-mara sawwa-at-h
+DEF-woman made.PFV-3SG.F-3SG.M.OBJ
+'The woman made it.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {argument optionality}
+Al-mara sawwat.
+al-mara sawwa-at
+DEF-woman made.PFV-3SG.F
+'*The woman made (it).'
+
+#  Yes-No Questions
+#  Marked by "walla" at the end of the sentence; "walla" would not be placed elsewhere
+
+
+Source: f:33
+Vetted: s
+Judgment: g
+Phenomena: {matrix yes-no questions}
+Hu sultaan walla?
+hu sultaan walla
+3SG.SBJ sultan QUEST
+'Is he a sultan?'
+
+# this actually is grammatical, but a different construct
+# giving negative rhetorical/sarcastic question (beyond our scope for now)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {matrix yes-no questions}
+Hu walla sultaan?
+hu walla sultaan
+3SG.SBJ QUEST sultan
+'*Is he a sultan?'
+
+# this is also grammatical, but with walla meaning 'or'
+# and continuing a previous thought
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {matrix yes-no questions}
+Walla hu sultaan?
+walla hu sultaan
+QUEST 3SG.SBJ sultan
+'*Is he a sultan?'
+
+Source: f:34
+Vetted: t
+Judgment: g
+Phenomena: {matrix yes-no questions}
+Indak kitaab walla?
+ind-k kitaab walla
+have.PFV-2SG.M book QUEST
+'Do you(SG.M) have a book?'
+
+Source: f:34
+Vetted: t
+Judgment: g
+Phenomena: {matrix yes-no questions}
+Al-deef saafar walla?
+al-deef saafar-0 walla
+DEF-guest travel.PFV-3SG.M QUEST
+'Did the guest travel?'
+
+# this actually is grammatical, but a different construct
+# giving negative rhetorical/sarcastic question (beyond our scope for now)
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {matrix yes-no questions}
+Al-deef walla saafar?
+al-deef walla saafar-0
+DEF-guest QUEST travel-3SG.M
+'*Did the guest travel?'
+
+# this is also grammatical, but with walla meaning 'or'
+# and continuing a previous thought
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {matrix yes-no questions}
+Walla al-deef saafar?
+walla al-deef saafar-0
+QUEST DEF-guest travel-3SG.M
+'*Did the guest travel?'
+
+Source: f:34
+Vetted: t
+Judgment: g
+Phenomena: {matrix yes-no questions}
+Ma macheetu walla?
+ma macha-tu walla
+not go.PFV-2PL QUEST
+'Didn't you go?'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {matrix yes-no questions}
+Ma walla macheetu?
+ma walla macha-tu
+not QUEST go-2PL
+'*Didn't you go?'
+
+# this is grammatical, but with walla meaning 'or'
+# and continuing a previous thought
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {matrix yes-no questions}
+Walla ma macheetu?
+walla ma macha-tu
+QUEST not go-2PL
+'*Didn't you go?'
+
+# Matrix wh questions
+# chunu means what, yaatu means who, whom, or what
+# normally the question word is in position of word it is interrogating
+# but in nominal phrases that can be either side
+
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {matrix wh questions}
+Yaatu akal al-eech?
+yaatu akal-0 al-eech
+who.SG.M eat.PFV-3SG.M DEF-boule
+'Who ate the boule?'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {matrix wh questions}
+Akal yaatu al-eech?
+akal-0 yaatu al-eech
+eat.PFV-3SG.M who.SG.M DEF-boule
+'*Who ate the boule?'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {matrix wh questions}
+Akal al-eech yaatu?
+akal-0 al-eech yaatu
+eat.PFV-3SG.M DEF-boule who.SG.M
+'*Who ate the boule?'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {agreement, matrix wh questions}
+Yaatumman akalo al-eech?
+yaatumman akal-o al-eech
+who.PL eat.PFV-3PL DEF-boule
+'Who(PL) ate the boule?'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {agreement, matrix wh questions}
+Yaati akalat al-eech?
+yaati akal-at al-eech
+who.SG.F eat.PFV-3SG.F DEF-boule
+'Who(F) ate the boule?'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Yaatu akalo al-eech?
+yaatu akal-o al-eech
+who.SG.M eat.PFV-3PL DEF-boule
+'*Who ate the boule?'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Yaatumman akal al-eech?
+yaatumman akal-0 al-eech
+who.PL eat.PFV-3SG.M DEF-boule
+'*Who(PL) ate the boule?'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Yaati akal al-eech?
+yaati akal-0 al-eech
+who.SG.F eat.PFV-3SG.M DEF-boule
+'*Who(F) ate the boule?'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Yaati akalo al-eech?
+yaati akal-o al-eech
+who.SG.F eat.PFV-3PL DEF-boule
+'*Who(F) ate the boule?'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {matrix wh questions}
+Chunu akal al-eech?
+chunu akal-0 al-eech
+what eat.PFV-3SG.M DEF-boule
+'What ate the boule?'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {matrix wh questions}
+Al-kalib akal al-eech.
+al-kalib akal-0 al-eech
+DEF-dog eat.PFV-3SG.M DEF-boule
+'The dog ate the boule.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {matrix wh questions}
+akal chunu al-eech?
+akal-0 chunu al-eech
+eat.PFV-3SG.M what DEF-boule
+'*What ate the boule?'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {matrix wh questions}
+akal al-eech chunu?
+akal-0 al-eech chunu
+eat.PFV-3SG.M DEF-boule what
+'*What ate the boule?'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {matrix wh questions}
+Al-deef akal chunu?
+al-deef akal-0 chunu
+DEF-guest eat.PFV-3SG.M what
+'The guest ate what?/What did the guest eat?'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {matrix wh questions}
+Chunu akal al-eech?
+chunu akal-0 al-eech
+what eat.PFV-3SG.M DEF-boule
+'What ate the boule?'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {matrix wh questions}
+Al-duud akal yaatu?
+al-duud akal-0 yaatu
+DEF-lion eat.PFV-3SG.M who.SG.M
+'The lion ate whom?/Whom did the lion eat?'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {matrix wh questions}
+Yaatu daktoor?
+yaatu daktoor
+who.SG.M doctor
+'Who is a doctor?'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {matrix wh questions}
+Yaatu al-daktoor?
+yaatu al-daktoor
+who.SG.M DEF-doctor
+'Who is the doctor?'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {matrix wh questions}
+Al-daktoor yaatu?
+al-daktoor yaatu
+DEF-doctor who.SG.M
+'The doctor is who?'
+
+# This doesn't make much sense semantically, but we determined that 
+# an undetermined noun can be in subject position, so this should be possible
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {matrix wh questions}
+Daktoor yaatu?
+daktoor yaatu
+doctor who.SG.M
+'A doctor is who?'
+
+Source: e:226
+Vetted: t
+Judgment: g
+Phenomena: {matrix wh questions}
+Yaatumman darabook?
+yaatumman darab-o-k
+who.PL hit.PFV-3PL-2SG.M.OBJ
+'Who(PL) hit you?'
+
+Source: e:226
+Vetted: t
+Judgment: g
+Phenomena: {matrix wh questions}
+Yaatumman al-darabook?
+yaatumman al-darab-o-k
+who.PL DEF-hit.PFV-3PL-2SG.M.OBJ
+'Who(PL) are the ones who hit you?'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {matrix wh questions}
+Chunu daktoor?
+chunu daktoor
+what doctor
+'What is a doctor?'
+
+Source: e:226
+Vetted: t
+Judgment: g
+Phenomena: {matrix wh questions}
+Tidoor chunu?
+t-idoor-0 chunu
+2-want.IPFV-SG what
+'What do you want?'
+
+# You can't use the Y/N question marker with a wh-question word
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {matrix yes-no questions}
+Yaatu akal al-eech walla?
+yaatu akal-0 al-eech walla
+who.SG.M eat.PFV-3SG.M DEF-boule QUEST
+'*Who ate the boule?'
+
+# this is an unnatural sentence says the field linguist
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {matrix wh questions}
+Al-raajil hasab al-deef akal chunu?
+al-raajil hasab-0 al-deef akal-0 chunu
+DEF-man count.PFV-3SG.M DEF-guest eat.PFV-3SG.M what
+'The man thought the guest ate what?/What did the man think the guest ate?'
+
+
+# Coordination
+# wa - 'and'
+# laakin - 'but'
+# walla - 'or'
+# wa la - 'neither/nor'
+
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Al-raajil wa l-mara akalo eech.
+al-raajil wa al-mara akal-o eech
+DEF-man and DEF-woman eat.PFV-3PL boule
+'The man and the woman ate boule.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Al-raajil wa l-mara wa l-wileed akalo eech.
+al-raajil wa al-mara wa al-wileed akal-o eech
+DEF-man and DEF-woman and DEF-boy eat.PFV-3PL boule
+'The man and the woman and the boy ate boule.'
+
+# this could be used, but is less frequent
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Al-raajil, al-mara wa l-wileed akalo eech.
+al-raajil, al-mara wa al-wileed akal-o eech
+DEF-man, DEF-woman and DEF-boy eat.PFV-3PL boule
+'The man, the woman and the boy ate boule.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {coordination}
+Al-raajil, al-mara, al-wileed akalo eech.
+al-raajil, al-mara, al-wileed akal-o eech
+DEF-man, DEF-woman, DEF-boy eat.PFV-3PL boule
+'*The man, the woman and the boy ate boule.'
+
+#If one noun is definite and one is not, the determiner can only apply to the first noun.
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Al-raajil wa mara akalo eech.
+al-raajil wa mara akal-o eech
+DEF-man and woman eat.PFV-3PL boule
+'The man and a woman ate boule.'
+
+#The verb must be third person plural
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Al-raajil wa l-mara akal eech.
+al-raajil wa al-mara akal-0 eech
+DEF-man and DEF-woman eat.PFV-3SG.M boule
+'*The man and the woman ate boule.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Al-raajil wa l-mara akalat eech.
+al-raajil wa al-mara akal-at eech
+DEF-man and DEF-woman eat.PFV-3SG.F boule
+'*The man and the woman ate boule.'
+
+# Coordinating in object position
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Al-raajil akal eech wa laham.
+al-raajil akal-0 eech wa laham
+DEF-man eat.PFV-3PL boule and meat
+'The man ate boule and meat.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {coordination}
+Al-raajil akal eech laham.
+al-raajil akal-0 eech laham
+DEF-man eat.PFV-3PL boule meat
+'*The man ate boule and meat.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {coordination}
+Al-raajil akal wa eech wa laham.
+al-raajil akal-0 wa eech wa laham
+DEF-man eat.PFV-3PL and boule and meat
+'*The man ate boule and meat.'
+
+# putting a "wa" between each item is preferred, but this is still grammatical
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Al-raajil akal eech, laham, wa laban.
+al-raajil akal-0 eech laham wa laban
+DEF-man eat.PFV-3PL boule meat and milk
+'The man ate boule, meat, and milk.'
+
+# so you would need to include the wa to indicate separate items
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Al-raajil akal eech wa laban wa laham.
+al-raajil akal-0 eech wa laban wa laham
+DEF-man eat.PFV-3PL boule and milk and meat
+'The man ate boule and milk and meat.'
+
+
+# Coordinating adjectives
+# The man is tall and strong/The tall and strong man ate boule.
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Al-raajil tawiil wa rigeeyig.
+al-raajil tawiil-0 wa rigeeyig-0
+DEF-man tall-SG.M and thin-SG.M
+'The man (is) tall and thin.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {coordination}
+Al-raajil al-tawiil wa rigeeyig.
+al-raajil al-tawiil-0 wa rigeeyig-0
+DEF-man DEF-tall-SG.M and thin-SG.M
+'*The man is tall and thin.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {coordination}
+Al-raajil al-tawiil wa l-rigeeyig
+al-raajil al-tawiil-0 wa al-rigeeyig-0
+DEF-man DEF-tall-SG.M and DEF-thin-SG.M
+'*The man is tall and thin.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adjectives}
+Al-raajil al-tawiil rigeeyig.
+al-raajil al-tawiil-0 rigeeyig-0
+DEF-man DEF-tall-SG.M thin-SG.M
+'The tall man is thin.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Al-raajil al-tawiil wa rigeeyig maat.
+al-raajil al-tawiil-0 wa rigeeyig-0 maat-0
+DEF-man DEF-tall-SG.M and thin-SG.M die.PFV-3SG.M
+'The tall and thin man died.'
+
+# you can't determine both coordinated adjectives 
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {coordination}
+Al-raajil al-tawiil wa l-rigeeyig maat.
+al-raajil al-tawiil-0 wa al-rigeeyig-0 maat-0
+DEF-man DEF-tall-SG.M and DEF-thin-SG.M die.PFV-3SG.M
+'*The tall and thin man died.'
+
+#you also must use the word "wa" and can't string adjectives together
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {coordination}
+Al-raajil al-tawiil rigeeyig maat.
+al-raajil al-tawiil-0 rigeeyig-0 maat-0
+DEF-man DEF-tall-SG.M thin-SG.M die.PFV-3SG.M
+'*The tall man who was thin died.'
+
+# unless they're all definite, in which case it becomes a relative clause:
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Al-raajil al-tawiil al-rigeeyig maat.
+al-raajil al-tawiil-0 al-rigeeyig-0 maat-0
+DEF-man DEF-tall-SG.M DEF-thin-SG.M die.PFV-3SG.M
+'The tall man who was thin died.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+raajil tawiil wa rigeeyig maat.
+raajil tawiil-0 wa rigeeyig-0 maat-0
+man tall-SG.M and thin-SG.M die.PFV-3SG.M
+'A tall and thin man died.'
+
+# check this one
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+raajil tawiil rigeeyig maat.
+raajil tawiil-0 rigeeyig-0 maat-0
+man tall-SG.M thin-SG.M die.PFV-3SG.M
+'A tall man who is thin died.'
+
+#Some examples with feminine nouns
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Al-bineeye tawiile wa rigeeyge.
+al-bineeye tawiil-e wa rigeeyig-e
+DEF-girl tall-SG.F and thin-SG.F
+'The girl is tall and thin.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {coordination}
+Al-bineeye al-tawiile wa rigeeyge.
+al-bineeye al-tawiil-e wa rigeeyig-e
+DEF-girl DEF-tall-SG.F and thin-SG.F
+'*The girl is tall and thin.'
+
+# or would be better to translate: "The girl that is tall and thin ate."?
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Al-bineeye al-tawiile wa rigeeyge akalat.
+al-bineeye al-tawiil-e wa rigeeyig-e akal-at
+DEF-girl DEF-tall-SG.F and thin-SG.F eat.PFV-3SG.F
+'The tall and thin girl ate.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Al-bineeye al-samhe akalat.
+al-bineeye al-sameh-e akal-at
+DEF-girl DEF-beautiful-SG.F eat.PFV-3SG.F
+'The beautiful girl ate.'
+
+# Coordinating VPs
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Al-raajil akal eech wa chirib almi.
+al-raajil akal-0 eech wa chirib-0 almi
+DEF-man eat.PFV-3SG.M boule and drink.PFV-3SG.M water
+'The man ate boule and drank water.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Al-raajil akal wa chirib.
+al-raajil akal-0 wa chirib-0
+DEF-man eat.PFV-3SG.M and drink.PFV-3SG.M
+'The man ate and drank.'
+
+# Coordinating sentences.
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Al-raajil akal eech wa l-mara chiribat almi.
+al-raajil akal-0 eech wa al-mara chirib-at almi
+DEF-man eat.PFV-3SG.M boule and DEF-woman drink.PFV-3SG.F water
+'The man ate boule and the woman drank water.'
+
+# Coordination using 'laakin' - 'but', 'wa la' - 'neither/nor'
+
+Source: f:36
+Vetted: s
+Judgment: g
+Phenomena: {coordination}
+Al-raajil tawiil laakin ma gawi.
+al-raajil tawiil-0 laakin ma gawi-0
+DEF-man tall-SG.M but not strong-3SG.M
+'The man is tall but not strong.'
+
+Source: f:36
+Vetted: s
+Judgment: g
+Phenomena: {coordination}
+Al-raajil tawiil wa laakin ma gawi.
+al-raajil tawiil-0 wa laakin ma gawi-0
+DEF-man tall-SG.M and but not strong-SG.M
+'The man is tall but not strong.'
+
+Source: f:36
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Hu ma akal wa la chirib.
+hu ma akal-0 wa la chirib-0
+3SG.SBJ not eat.PFV-3SG.M and nor drink.PFV-3SG.M
+'He did not eat or drink.'
+
+Source: f:36
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Hu ma akal eech wa la laham.
+hu ma akal-0 eech wa la laham
+3SG.SBJ not eat.PFV-3SG.M boule and nor meat
+'He did not eat boule or meat.'
+
+
+Source: f:36
+Vetted: t
+Judgment: g
+Phenomena: {coordination}
+Muusa wa la akal wa la chirib.
+Muusa wa la akal-0 wa la chirib-0
+Moses and nor eat.PFV-3SG.M and nor drink.PFV-3SG.M
+'Moses neither ate nor drank.'
+
+
+# Attributive Adjectives
+
+# attributive adjectives follow the nouns they modify and agree with them in definiteness, number, and gender
+
+# See coordination section for using two adjectives together
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {agreement, adjectives}
+Al-raajil al-tawiil maat.
+al-raajil al-tawiil-0 maat-0
+DEF-man DEF-tall-SG.M die.PFV-3SG.M
+'The tall man died.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adjectives}
+Al-tawiil al-raajil maat.
+al-tawiil-0 al-raajil maat-0
+DEF-tall-SG.M DEF-man die.PFV-3SG.M
+'*The tall man died.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {agreement, adjectives}
+Al-raajil al-tawiil da maat.
+al-raajil al-tawiil-0 da maat-0
+DEF-man DEF-tall-SG.M this.SG.M die.PFV-3SG.M
+'This tall man died.'
+
+# might be grammatical if you consider al-tawiil in apposition
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adjectives}
+Al-raajil da al-tawiil maat.
+al-raajil da al-tawiil-0 maat-0
+DEF-man this.SG.M DEF-tall-SG.M die.PFV-3SG.M
+'*This tall man died.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adjectives}
+Da l-raajil al-tawiil maat.
+da al-raajil al-tawiil-0 maat-0
+this.SG.M DEF-man DEF-tall-SG.M die.PFV-3SG.M
+'*This tall man died.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {agreement, adjectives}
+Raajil tawiil maat.
+raajil tawiil-0 maat-0
+man tall-SG.M die.PFV-3SG.M
+'A tall man died.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adjectives}
+Tawiil raajil maat.
+tawiil-0 raajil maat-0
+tall-SG.M man die.PFV-3SG.M
+'*A tall man died.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Al-raajil tawiil maat.
+al-raajil tawiil-0 maat-0
+DEF-man tall-SG.M die.PFV-3SG.M
+'*The tall man died.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Raajil al-tawiil maat.
+raajil al-tawiil-0 maat-0
+man DEF-tall-SG.M die.PFV-3SG.M
+'*A tall man died.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {agreement, adjectives}
+Al-rujaal al-tuwaal maato.
+al-raajil-PL al-tawiil-PL maat-o
+DEF-man-PL DEF-tall-PL die.PFV-3PL
+'The tall men died.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Al-rujaal al-tawiil maato.
+al-raajil-PL al-tawiil-0 maat-o
+DEF-man-PL DEF-tall-SG.M die.PFV-3PL
+'*The tall men died.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Al-raajil al-tuwaal maat.
+al-raajil al-tawiil-PL maat-0
+DEF-man DEF-tall-PL die.PFV-3SG.M
+'*The tall man died.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {agreement, adjectives}
+Al-mara al-tawiile maatat.
+al-mara al-tawiil-e maat-at
+DEF-woman DEF-tall-SG.F die.PFV-3SG.F
+'The tall woman died.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Al-mara al-tawiil maatat.
+al-mara al-tawiil-0 maat-at
+DEF-woman DEF-tall-SG.M die.PFV-3SG.F
+'*The tall woman died.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Al-raajil al-tawiile maat.
+al-raajil al-tawiil-e maat-0
+DEF-man DEF-tall-SG.F die.PFV-3SG.M
+'*The tall man died.'
+
+# Adverbs of manner
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adverbs}
+Al-raajil akal ajala.
+al-raajil akal-0 ajala
+DEF-man eat.PFV-3SG.M quickly
+'The man ate quickly.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adverbs}
+Al-raajil akal eech ajala.
+al-raajil akal-0 eech ajala
+DEF-man eat.PFV-3SG.M boule quickly
+'The man ate boule quickly.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adverbs}
+Al-raajil akal ajala eech.
+al-raajil akal-0 ajala eech
+DEF-man eat.PFV-3SG.M quickly boule
+'*The man ate boule quickly.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {adverbs}
+Ajala ke, al-raajil akal.
+ajala ke, al-raajil akal-0
+quickly like.that, DEF-man eat.PFV-3SG.M
+'Quickly, the man ate.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adverbs}
+Ajala al-raajil akal.
+ajala al-raajil akal-0
+quickly DEF-man eat.PFV-3SG.M
+'*Quickly, the man ate.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {adverbs}
+Al-raajil ajala akal.
+al-raajil ajala akal-0
+DEF-man quickly eat.PFV-3SG.M
+'*The man ate quickly.'
+
+# Non-verbal predicates
+
+# NPs, adjectives, and PPs can function as predicates.  No copula is used.
+# NPs and adjectival predicates must agree with the subject.
+# The subject of a nominal phrase must be a determined noun (including pronoun, proper noun)
+# But you can have a nominal phrase that is an undetermined noun following a prepositional phrase
+# (see Jullien de Pommerol pp 197-199)
+# Tense would be expressed by context - adverbs of time, etc.
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {non-verbal predicates}
+Hu daktoor.
+hu daktoor
+3SG.M.SBJ doctor
+'He is a doctor.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {non-verbal predicates}
+Al-raajil daktoor.
+al-raajil daktoor
+DEF-man doctor
+'The man is a doctor.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {non-verbal predicates}
+Muusa daktoor.
+Muusa daktoor
+Moses doctor
+'Moses is a doctor.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {non-verbal predicates, coordination}
+Al-raajil sultaan wa daktoor.
+al-raajil sultaan wa daktoor
+DEF-man sultan and doctor
+'The man is a sultan and a doctor.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {non-verbal predicates}
+Al-beet nadiif
+al-beet nadiif-0
+DEF-house clean-SG.M
+'The house is clean.'
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {non-verbal predicates}
+Al-beet al-nadiif
+al-beet al-nadiif-0
+DEF-house DEF-clean-SG.M
+'*The house is clean.'
+
+Source: author
+Vetted: t
+Judgment: u
+Phenomena: {agreement}
+Al-beet nadiife
+al-beet nadiif-e
+DEF-house clean-SG.F
+'*The house is clean.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {non-verbal predicates}
+Al-deef fi lekkool
+al-deef fi lekkool
+DEF-guest at school
+'The guest is at school.'
+
+# The subject of a non-verbal predicate can be indefinite
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {non-verbal predicates}
+Raajil daktoor.
+raajil daktoor
+man doctor
+'*A man is a doctor.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {non-verbal predicates}
+Raajil tawiil daktoor.
+raajil tawiil-0 daktoor
+man tall-SG.M doctor
+'*A tall man is a doctor.'
+
+# this is grammatical, but a bit weird semantically
+# but you could use an undetermined subject to make a general statement
+# like the example sentence following this one
+Source: author
+Vetted: s
+Judgment: g
+Phenomena: {non-verbal predicates}
+Beet nadiif
+beet nadiif-0
+house clean-SG.M
+'A house is clean.'
+
+Source: author
+Vetted: s
+Judgment: g
+Phenomena: {non-verbal predicates}
+Kulaab kubaar
+kalib-PL kabiir-PL
+dog-PL big-PL
+'Dogs are big.'
+
+Source: author
+Vetted: s
+Judgment: u
+Phenomena: {non-verbal predicates}
+Beet al-nadiif
+beet al-nadiif-0
+house DEF-clean-SG.M
+'*The house is clean.'
+
+# some adverbs and prepositions
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adverbs}
+Al-kitaab foog.
+al-kitaab foog
+DEF-book up
+'The books (is) up there.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adverbs}
+Al-kitaab foog al-tarbeeza.
+al-kitaab foog al-tarbeeza
+DEF-book on DEF-table
+'The books (is) on the table.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {adverbs}
+Al-kitaab al-foog waga'.
+al-kitaab al-foog waga'-0
+DEF-book DEF-high fall.PFV-3SG.M
+'The book up high fell.'
+
+# Further examples and limitations of demonstratives in an NP
+
+Source: e:90
+Vetted: f
+Judgment: g
+Phenomena: {cognitive status}
+Hu da wileed.
+hu da wileed
+3SG.M.SBJ this.SG.M boy
+'This he is a boy./He is a boy.'
+
+Source: e:90
+Vetted: f
+Judgment: g
+Phenomena: {cognitive status}
+Al-bineeye di kabiire.
+al-bineeye di kabiir-e
+DEF-girl this.SG.F big-SG.F
+'This girl is big.'
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cognitive status}
+Bineeye di kabiire.
+bineeye di kabiir-e
+girl this.SG.F big-SG.F
+'*This girl is big.'
+
+Source: e:90
+Vetted: f
+Judgment: g
+Phenomena: {cognitive status}
+Al-banaat dool jaro.
+al-bineeye-PL dool jara-o
+DEF-girl-PL this.PL run.PFV-3PL
+'These girls ran.'
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {cognitive status}
+Al-raajil da da maat.
+al-raajil da da maat-0
+DEF-man this.SG.M this.SG.M die.PFV-3SG.M
+'This man died.'
+
+#You can't have an adjective cover coordinated nouns
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {coordination}
+Al-raajil wa mara tawiile akalo eech.
+al-raajil wa mara tawiil-e akal-o eech
+DEF-man and woman tall-SG.F eat.PFV-3PL boule
+'The man and a tall woman ate boule.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {coordination}
+Al-raajil wa mara tuwaal akalo eech.
+al-raajil wa mara tawiil-PL akal-o eech
+DEF-man and woman tall-PL eat.PFV-3PL boule
+'The man and a woman, both tall, ate boule.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {coordination}
+Al-raajil al-tawiil wa deef rigeeyig maato.
+al-raajil al-tawiil-0 wa deef rigeeyig-0 maat-o
+DEF-man DEF-tall-SG.M and guest thin-SG.M die.PFV-3PL
+'The tall man and a thin guest died.'
+
+# Embedded clauses
+
+# the verb hasab means count/consider
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {embedded declaratives}
+Al-raajil hasab kadar al-deef akal eech.
+al-raajil hasab-0 kadar al-deef akal-0 eech
+DEF-man count.PFV-3SG.M COMP DEF-guest eat.PFV-3SG.M boule
+'The man thought that the guest ate boule.'
+
+# the complementizer is optional
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {embedded declaratives}
+Al-raajil hasab al-deef akal eech.
+al-raajil hasab-0 al-deef akal-0 eech
+DEF-man count.PFV-3SG.M DEF-guest eat.PFV-3SG.M boule
+'The man thought the guest ate boule.'
+
+# Chadian Arabic may prefer direct speech to reported speech
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {embedded questions}
+Al-raajil sa'al kan al-deef akal eech.
+al-raajil sa'al-0 kan al-deef akal-0 eech
+DEF-man ask.PFV-3SG.M if DEF-guest eat.PFV-3SG.M boule
+'The man asked if the guest ate boule.'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {embedded questions}
+Al-raajil sa'al kan al-deef akal chunu.
+al-raajil sa'al-0 kan al-deef akal-0 chunu
+DEF-man ask.PFV-3SG.M if DEF-guest eat.PFV-3SG.M what
+'The man asked if the guest ate what?'
+
+Source: author
+Vetted: t
+Judgment: g
+Phenomena: {embedded questions}
+Al-raajil sa'al al-deef akal chunu?
+al-raajil sa'al-0 al-deef akal-0 chunu
+DEF-man ask.PFV-3SG.M DEF-guest eat.PFV-3SG.M what
+'The man asked, the guest ate what?'
+
+#verb with either "kadar" or "kan"
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {embedded declaratives}
+Al-raajil irif kadar al-deef akal eech.
+al-raajil irif-0 kadar al-deef akal-0 eech
+DEF-man know.PFV-3SG.M COMP DEF-guest eat.PFV-3SG.M boule
+'The man knew that the guest ate boule.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {embedded questions}
+Al-raajil irif kan al-deef akal eech.
+al-raajil irif-0 kan al-deef akal-0 eech
+DEF-man know.PFV-3SG.M if DEF-guest eat.PFV-3SG.M boule
+'The man knew if the guest ate boule.'
+
+Source: e:235
+Vetted: s
+Judgment: g
+Phenomena: {embedded declaratives}
+Al-awiin irifo inta raajil zeen.
+al-mara-PL irif-o inta raajil zeen-0
+DEF-woman-PL know.PFV-3PL 2SG.M.SBJ man good-SG.M
+'The women knew (that) you(SG) are a good man.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {embedded declaratives}
+Al-awiin irifo kadar inta raajil zeen.
+al-mara-PL irif-o kadar inta raajil zeen-0
+DEF-woman-PL know.PFV-3PL COMP 2SG.M.SBJ man good-SG.M
+'The women knew that you(SG) are a good man.'
+
+Source: e:235
+Vetted: s
+Judgment: g
+Phenomena: {embedded declaratives}
+Hu oora al-raajil Zara mardaane.
+hu oora-0 al-raajil Zara mardaan-e
+3SG.M.SBJ tell.PFV-3SG.M DEF-man Zara sick-SG.F
+'He told the man (that) Zara is sick.'
+
+Source: e:235
+Vetted: s
+Judgment: g
+Phenomena: {embedded declaratives}
+Humman gaalo Muusa macha lekkool.
+humman gaal-o Muusa macha-0 lekkool
+3PL.SBJ say.PFV-3PL Muusa go.PFV-3SG.M school
+'They said (that) Muusa went (to) school.'
+
+Source: e:235
+Vetted: s
+Judgment: g
+Phenomena: {embedded declaratives}
+Nidoor taji ma'a al-raajil.
+n-idoor-0 t-aji-0 ma'a al-raajil
+1-want.IPFV-SG 2-come.IPFV-SG with DEF-man
+'I want you (to) come with the man.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {embedded declaratives}
+Nidoor taji.
+n-idoor-0 t-aji-0
+1-want.IPFV-SG 2-come.IPFV-SG
+'I want you (to) come.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {embedded declaratives}
+Nidoor inta taji.
+n-idoor-0 inta t-aji-0
+1-want.IPFV-SG 2SG.M.SBJ 2-come.IPFV-SG
+'I want you (to) come.'
+
+# Lab 6 test sentences
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {embedded declaratives}
+Ana na'arif kadar inta tunuum.
+ana n-a'arif-0 kadar inta t-unuum-0
+1SG.SBJ 1-know.IPFV-SG COMP 2SG.M.SBJ 2-sleep.IPFV-SG
+'I know that you are sleeping.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {embedded declaratives}
+Ana sa'alt kan inta tunuum.
+ana sa'al-t kan inta t-unuum-0
+1SG.SBJ ask.PFV-1SG if 2SG.M.SBJ 2-sleep.IPFV-SG
+'I asked if you are sleeping.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {non-verbal predicates}
+Al-biss jii'aan.
+al-biss jii'aan-0
+DEF-cat hungry-SG.M
+'The cat is hungry.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {non-verbal predicates}
+Al-biss fi l-beet.
+al-biss fi al-beet
+DEF-cat at DEF-house
+'The cat is at the house.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {non-verbal predicates}
+Al-biss al-kalib.
+al-biss al-kalib
+DEF-cat DEF-dog
+'The cat is the dog.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {information structure}
+Al-deef akal eech fi lekkool.
+al-deef akal-0 eech fi lekkool
+DEF-guest eat.PFV-3SG.M boule at school
+'The guest ate boule at school.'
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {information structure}
+Al-deef akal fi lekkool eech.
+al-deef akal-0 fi lekkool eech
+DEF-guest eat.PFV-3SG.M at school boule
+'*The guest ate boule at school.'
+
+# object pronouns with prepositions
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pronouns}
+Hu akal ma'aayi.
+hu akal-0 ma'a-i
+3SG.M.OBJ eat.PFV-3SG.M with-1SG.OBJ
+'He ate with me.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pronouns}
+Hu akal ma'aak.
+hu akal-0 ma'a-k
+3SG.M.OBJ eat.PFV-3SG.M with-2SG.M.OBJ
+'He ate with you(SG.M).'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pronouns}
+Hu akal ma'aaki.
+hu akal-0 ma'a-ki
+3SG.M.OBJ eat.PFV-3SG.M with-2SG.F.OBJ
+'He ate with you(SG.F).'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pronouns}
+Hu akal ma'aayah.
+hu akal-0 ma'a-h
+3SG.M.OBJ eat.PFV-3SG.M with-3SG.M.OBJ
+'He ate with him.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pronouns}
+Hu akal ma'aaha.
+hu akal-0 ma'a-ha
+3SG.M.OBJ eat.PFV-3SG.M with-3SG.F.OBJ
+'He ate with her.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pronouns}
+Hu akal ma'aana.
+hu akal-0 ma'a-na
+3SG.M.OBJ eat.PFV-3SG.M with-1PL.OBJ
+'He ate with us.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pronouns}
+Hu akal ma'aaku.
+hu akal-0 ma'a-ku
+3SG.M.OBJ eat.PFV-3SG.M with-2PL.OBJ
+'He ate with you(PL).'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pronouns}
+Hu akal ma'aahum.
+hu akal-0 ma'a-hum
+3SG.M.OBJ eat.PFV-3SG.M with-3PL.OBJ
+'He ate with them.'
+
+Source: author
+Vetted: f
+Judgment: u
+Phenomena: {pronouns}
+Hu akal ma'aayah al-raajil.
+hu akal-0 ma'a-h al-raajil
+3SG.M.OBJ eat.PFV-3SG.M with-3SG.M.OBJ DEF-man
+'*He ate with the man.'
+
+Source: author
+Vetted: f
+Judgment: g
+Phenomena: {pronouns}
+Hu akal ma'a al-raajil.
+hu akal-0 ma'a al-raajil
+3SG.M.OBJ eat.PFV-3SG.M with DEF-man
+'He ate with the man.'
+

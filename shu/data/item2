@@ -1,0 +1,265 @@
+1@b:3@@@1@wo@al-deef maat-0@@@@1@2@DEF-guest die.PFV-3SG.M'The guest died.'@jeff heath and amy marsh@winter 2015
+2@b:3@@@1@wo@maat-0 al-deef@@@@0@2@die.PFV-3SG.M DEF-guest'*The guest died.'@jeff heath and amy marsh@winter 2015
+3@b:3@@@1@wo@al-deef katal-0@@@@1@2@DEF-guest kill.PFV-3SG.M'The guest killed.'@jeff heath and amy marsh@winter 2015
+4@b:3@@@1@wo@katal-0 al-deef@@@@1@2@kill.PFV-3SG.M DEF-guest'He killed the guest.'@jeff heath and amy marsh@winter 2015
+5@b:3@@@1@wo@al-deef katal-0 al-kalib@@@@1@3@DEF-guest kill.PFV-3SG.M DEF-dog'The guest killed the dog.'@jeff heath and amy marsh@winter 2015
+6@b:3@@@1@wo@al-kalib katal-0 al-deef@@@@1@3@DEF-dog kill.PFV-3SG.M DEF-guest'The dog killed the guest.'@jeff heath and amy marsh@winter 2015
+7@b:3@@@1@wo@katal-0 al-kalib al-deef@@@@0@3@kill.PFV-3SG.M DEF-dog DEF-guest'*The dog killed the guest.'@jeff heath and amy marsh@winter 2015
+8@b:3@@@1@wo@katal-0 al-deef al-kalib@@@@0@3@kill.PFV-3SG.M DEF-guest DEF-dog'*The guest killed the dog.'@jeff heath and amy marsh@winter 2015
+9@b:3@@@1@wo@al-deef al-kalib katal-0@@@@0@3@DEF-guest DEF-dog kill.PFV-3SG.M'*The guest killed the dog.'@jeff heath and amy marsh@winter 2015
+10@b:3@@@1@wo@al-kalib al-deef katal-0@@@@0@3@DEF-dog DEF-guest kill.PFV-3SG.M'*The dog killed the guest.'@jeff heath and amy marsh@winter 2015
+11@d:1@@@1@wo@al-deef wassaf-0 al-wileed al-kalib@@@@1@4@DEF-guest show.PFV-3SG.M DEF-boy DEF-dog'The guest showed (to) the boy the dog.'@jeff heath and amy marsh@winter 2015
+12@d:1@@@1@wo@al-deef wassaf-0 al-kalib al-wileed@@@@1@4@DEF-guest show.PFV-3SG.M DEF-dog DEF-boy'The guest showed (to) the dog the boy.'@jeff heath and amy marsh@winter 2015
+13@d:1@@@1@wo@al-wileed wassaf-0 al-deef al-kalib@@@@1@4@DEF-boy show.PFV-3SG.M DEF-guest DEF-dog'The boy showed (to) the guest the dog.'@jeff heath and amy marsh@winter 2015
+14@d:1@@@1@wo@al-wileed wassaf-0 al-kalib al-deef@@@@1@4@DEF-boy show.PFV-3SG.M DEF-dog DEF-guest'The boy showed (to) the dog the guest.'@jeff heath and amy marsh@winter 2015
+15@d:1@@@1@wo@al-kalib wassaf-0 al-wileed al-deef@@@@1@4@DEF-dog show.PFV-3SG.M DEF-boy DEF-guest'The dog showed (to) the boy the guest.'@jeff heath and amy marsh@winter 2015
+16@d:1@@@1@wo@al-kalib wassaf-0 al-deef al-wileed@@@@1@4@DEF-dog show.PFV-3SG.M DEF-guest DEF-boy'The dog showed (to) the guest the boy.'@jeff heath and amy marsh@winter 2015
+17@d:1@@@1@wo@al-deef al-kalib wassaf-0 al-wileed@@@@0@4@DEF-guest DEF-dog show.PFV-3SG.M DEF-boy'*The guest showed (to) the dog the boy.'@jeff heath and amy marsh@winter 2015
+18@d:1@@@1@wo@al-deef al-wileed wassaf-0 al-kalib@@@@0@4@DEF-guest DEF-boy show.PFV-3SG.M DEF-dog'*The guest showed (to) the boy the dog.'@jeff heath and amy marsh@winter 2015
+19@d:1@@@1@wo@al-deef al-kalib al-wileed wassaf-0@@@@0@4@DEF-guest DEF-dog DEF-boy show.PFV-3SG.M'*The guest showed (to) the dog the boy.'@jeff heath and amy marsh@winter 2015
+20@d:1@@@1@wo@al-deef al-wileed al-kalib wassaf-0@@@@0@4@DEF-guest DEF-boy DEF-dog show.PFV-3SG.M'*The guest showed (to) the boy the dog.'@jeff heath and amy marsh@winter 2015
+21@d:1@@@1@wo@wassaf-0 al-deef al-kalib al-wileed@@@@0@4@show.PFV-3SG.M DEF-guest DEF-dog DEF-boy'*The guest showed (to) the dog the boy.'@jeff heath and amy marsh@winter 2015
+22@d:1@@@1@wo@wassaf-0 al-wileed al-deef al-kalib@@@@0@4@show.PFV-3SG.M DEF-boy DEF-guest DEF-dog'*The boy showed (to) the guest the dog.'@jeff heath and amy marsh@winter 2015
+23@b:2@@@1@pn@ana katal-t@@@@1@2@1SG.SBJ kill.PFV-1SG'I killed.'@jeff heath and amy marsh@winter 2015
+24@b:2@@@1@pn@inta katal-t@@@@1@2@2SG.M.SBJ kill.PFV-2SG.M'You(M) killed.'@jeff heath and amy marsh@winter 2015
+25@b:2@@@1@pn@inti katal-ti@@@@1@2@2SG.F.SBJ kill.PFV-2SG.F'You(F) killed.'@jeff heath and amy marsh@winter 2015
+26@b:3@@@1@pn@hu katal-0@@@@1@2@3SG.M.SBJ kill.PFV-3SG.M'He killed.'@jeff heath and amy marsh@winter 2015
+27@b:3@@@1@pn@Hi katal-at@@@@1@2@3SG.F.SBJ kill.PFV-3SG.F'She killed.'@jeff heath and amy marsh@winter 2015
+28@b:3@@@1@pn@aniina katal-na@@@@1@2@1PL.SBJ kill.PFV-1PL'We killed.'@jeff heath and amy marsh@winter 2015
+29@b:3@@@1@pn@intu katal-tu@@@@1@2@2PL.SBJ kill.PFV-2PL'You(PL) killed.'@jeff heath and amy marsh@winter 2015
+30@b:3@@@1@pn@humman katal-o@@@@1@2@3PL.SBJ kill.PFV-3PL'They killed.'@jeff heath and amy marsh@winter 2015
+31@c:1@@@1@pn@ana katal-t-ni@@@@1@2@1SG.SBJ kill.PFV-1SG-1SG.OBJ'I killed me.'@jeff heath and amy marsh@winter 2015
+32@c:1@@@1@pn@ana katal-t-k@@@@1@2@1SG.SBJ kill.PFV-1SG-2SG.M.OBJ'I killed you(M).'@jeff heath and amy marsh@winter 2015
+33@c:1@@@1@pn@ana katal-t-ki@@@@1@2@1SG.SBJ kill.PFV-1SG-2SG.F.OBJ'I killed you(F).'@jeff heath and amy marsh@winter 2015
+34@c:1@@@1@pn@ana katal-t-h@@@@1@2@1SG.SBJ kill.PFV-1SG-3SG.M.OBJ'I killed him.'@jeff heath and amy marsh@winter 2015
+35@c:1@@@1@pn@ana katal-t-ha@@@@1@2@1SG.SBJ kill.PFV-1SG-3SG.F.OBJ'I killed her.'@jeff heath and amy marsh@winter 2015
+36@c:1@@@1@pn@ana katal-t-na@@@@1@2@1SG.SBJ kill.PFV-1SG-1PL.OBJ'I killed us.'@jeff heath and amy marsh@winter 2015
+37@c:1@@@1@pn@ana katal-t-ku@@@@1@2@1SG.SBJ kill.PFV-1SG-2PL.OBJ'I killed you(PL).'@jeff heath and amy marsh@winter 2015
+38@c:1@@@1@pn@ana katal-t-hum@@@@1@2@1SG.SBJ kill.PFV-1SG-3PL.OBJ'I killed them.'@jeff heath and amy marsh@winter 2015
+39@c:1@@@1@pn@ana katal-t humman@@@@0@3@1SG.SBJ kill.PFV-1SG 3PL.SBJ'*I killed them.'@jeff heath and amy marsh@winter 2015
+40@author@@@1@pn@ana katal-t Muusa@@@@1@3@1SG.SBJ kill.PFV-1SG Moses'I killed Moses.'@jeff heath and amy marsh@winter 2015
+41@b:7@@@1@det@al-deef akal-0 eech@@@@1@3@DEF-guest eat.PFV-3SG.M boule'The guest ate boule.'@jeff heath and amy marsh@winter 2015
+42@b:7@@@1@det@deef al-akal-0 eech@@@@0@3@guest DEF-eat.PFV-3SG.M boule'*The guest ate boule.'@jeff heath and amy marsh@winter 2015
+43@b:7@@@1@det@deef akal-0 eech@@@@1@3@guest eat.PFV-3SG.M boule'A guest ate boule.'@jeff heath and amy marsh@winter 2015
+44@b:7@@@1@det@al-deef-PL akal-o eech@@@@1@3@DEF-guest-PL eat.PFV-3PL boule'The guests ate boule.'@jeff heath and amy marsh@winter 2015
+45@b:7@@@1@det@deef-PL al-akal-o eech@@@@0@3@guest-PL DEF-eat.PFV-3PL boule'*The guests ate boule.'@jeff heath and amy marsh@winter 2015
+46@b:7@@@1@det@deef-PL akal-o eech@@@@1@3@guest-PL eat.PFV-3PL boule'Guests ate boule.'@jeff heath and amy marsh@winter 2015
+47@b:7@@@1@det@Muusa akal-0 eech@@@@1@3@Moses eat.PFV-3SG.M boule'Moses ate boule.'@jeff heath and amy marsh@winter 2015
+48@b:7@@@1@det@al-Muusa akal-0 eech@@@@0@3@DEF-Moses eat.PFV-3SG.M boule'*Moses ate boule.'@jeff heath and amy marsh@winter 2015
+49@b:7@@@1@det@Muusa al-akal-0 eech@@@@0@3@Moses DEF-eat.PFV-3SG.M boule'*Moses ate boule.'@jeff heath and amy marsh@winter 2015
+50@author@@@1@det@al-kalib-een maat-o@@@@1@2@DEF-dog-DL die.PFV-3PL'The two dogs died.'@jeff heath and amy marsh@winter 2015
+51@author@@@1@det@kalib-een maat-o@@@@1@2@dog-DL die.PFV-3PL'Two dogs died.'@jeff heath and amy marsh@winter 2015
+52@b:2@@@1@det@al-ana katal-t@@@@0@2@DEF-1SG.SBJ kill.PFV-1SG'*I killed.'@jeff heath and amy marsh@winter 2015
+53@b:2@@@1@det@al-inta katal-t@@@@0@2@DEF-2SG.M.SBJ kill.PFV-2SG.M'*You(M) killed.'@jeff heath and amy marsh@winter 2015
+54@b:2@@@1@det@al-inti katal-ti@@@@0@2@DEF-2SG.F.SBJ kill.PFV-2SG.F'*You(F) killed.'@jeff heath and amy marsh@winter 2015
+55@b:3@@@1@det@al-hu katal-0@@@@0@2@DEF-3SG.M.SBJ kill.PFV-3SG.M'*He killed.'@jeff heath and amy marsh@winter 2015
+56@b:3@@@1@det@al-hi katal-at@@@@0@2@DEF-3SG.F.SBJ kill.PFV-3SG.F'*She killed.'@jeff heath and amy marsh@winter 2015
+57@b:3@@@1@det@al-aniina katal-na@@@@0@2@DEF-1PL.SBJ kill.PFV-1PL'*We killed.'@jeff heath and amy marsh@winter 2015
+58@b:3@@@1@det@al-intu katal-tu@@@@0@2@DEF-2PL.SBJ kill.PFV-2PL'*You(PL) killed.'@jeff heath and amy marsh@winter 2015
+59@b:3@@@1@det@al-humman katal-o@@@@0@2@DEF-3PL.SBJ kill.PFV-3PL'*They killed.'@jeff heath and amy marsh@winter 2015
+60@b:2@@@1@det@ana al-katal-t@@@@0@2@1SG.SBJ DEF-kill.PFV-1SG'*I killed.'@jeff heath and amy marsh@winter 2015
+61@b:2@@@1@det@inta al-katal-t@@@@0@2@2SG.M.SBJ DEF-kill.PFV-2SG.M'*You(M) killed.'@jeff heath and amy marsh@winter 2015
+62@author@@@1@agr@al-kalib katal-0@@@@1@2@DEF-dog kill.PFV-3SG.M'The dog(M) killed.'@jeff heath and amy marsh@winter 2015
+63@author@@@1@agr@al-kalib katal-at@@@@0@2@DEF-dog kill.PFV-3SG.F'*The dog(M) killed.'@jeff heath and amy marsh@winter 2015
+64@author@@@1@agr@al-kalbe katal-at@@@@1@2@DEF-dog.F kill.PFV-3SG.F'The dog(F) killed.'@jeff heath and amy marsh@winter 2015
+65@author@@@1@agr@al-kalbe katal-0@@@@0@2@DEF-dog.F kill.PFV-3SG.M'*The dog(F) killed.'@jeff heath and amy marsh@winter 2015
+66@author@@@1@pro-d@hu akal-0@@@@1@2@3SG.M.SBJ eat.PFV-3SG.M'He ate.'@jeff heath and amy marsh@winter 2015
+67@author@@@1@pro-d@akal-0@@@@1@1@eat.PFV-3SG.M'He ate.'@jeff heath and amy marsh@winter 2015
+68@author@@@1@pro-d@hi akal-at@@@@1@2@3SG.F.SBJ eat.PFV-3SG.F'She ate.'@jeff heath and amy marsh@winter 2015
+69@author@@@1@pro-d@akal-at@@@@1@1@eat.PFV-3SG.F'She ate.'@jeff heath and amy marsh@winter 2015
+70@author@@@1@pro-d@hu akal-0 eech@@@@1@3@3SG.M.SBJ eat.PFV-3SG.M boule'He ate boule.'@jeff heath and amy marsh@winter 2015
+71@author@@@1@pro-d@akal-0 eech@@@@1@2@eat.PFV-3SG.M boule'He ate boule.'@jeff heath and amy marsh@winter 2015
+72@author@@@1@pro-d@akal-t@@@@1@1@eat.PFV-1SG'I ate.'@jeff heath and amy marsh@winter 2015
+73@author@@@1@pro-d@akal-t@@@@1@1@eat.PFV-2SG.M'You(M) ate.'@jeff heath and amy marsh@winter 2015
+74@author@@@1@pro-d@ana akal-t@@@@1@2@1SG.SBJ eat.PFV-1SG'I ate.'@jeff heath and amy marsh@winter 2015
+75@author@@@1@pro-d@ana akal-t eech@@@@1@3@1SG.SBJ eat.PFV-1SG boule'I ate boule.'@jeff heath and amy marsh@winter 2015
+76@author@@@1@pro-d@ana akal-t-h@@@@1@2@1SG.SBJ eat.PFV-1SG-3SG.M.OBJ'I ate it.'@jeff heath and amy marsh@winter 2015
+77@author@@@1@pro-d@ana akal-t-h eech@@@@0@3@1SG.SBJ eat.PFV-1SG-3SG.M.OBJ boule'*I ate boule.'@jeff heath and amy marsh@winter 2015
+78@e:138@@@1@tenseaspectmood@n-aakul-0@@@@1@1@1-eat.IPFV-SG'I eat.'@jeff heath and amy marsh@winter 2015
+79@e:138@@@1@tenseaspectmood@t-aakul-0@@@@1@1@2-eat.IPFV-SG'You(M) eat.'@jeff heath and amy marsh@winter 2015
+80@e:138@@@1@tenseaspectmood@t-aakul-i@@@@1@1@2-eat.IPFV-2SG.F'You(F) eat.'@jeff heath and amy marsh@winter 2015
+81@e:138@@@1@tenseaspectmood@y-aakul-0@@@@1@1@3SG.M-eat.IPFV-SG'He eats.'@jeff heath and amy marsh@winter 2015
+82@e:138@@@1@tenseaspectmood@t-aakul-0@@@@1@1@3SG.F-eat.IPFV-SG'She eats.'@jeff heath and amy marsh@winter 2015
+83@e:138@@@1@tenseaspectmood@n-aakul-u@@@@1@1@1-eat.IPFV-PL'We eat.'@jeff heath and amy marsh@winter 2015
+84@e:138@@@1@tenseaspectmood@t-aakul-u@@@@1@1@2-eat.IPFV-PL'You(PL) eat.'@jeff heath and amy marsh@winter 2015
+85@e:138@@@1@tenseaspectmood@y-aakul-u@@@@1@1@3PL-eat.IPFV-PL'They eat.'@jeff heath and amy marsh@winter 2015
+86@e:138@@@1@tenseaspectmood@n-aakul-i@@@@0@1@1-eat.IPFV-2SG.F'*I eat.'@jeff heath and amy marsh@winter 2015
+87@e:138@@@1@tenseaspectmood@y-aakul-i@@@@0@1@3SG.M-eat.IPFV-2SG.F'*He eats.'@jeff heath and amy marsh@winter 2015
+88@e:138@@@1@tenseaspectmood@hi t-aakul-0@@@@1@2@3SG.F.SBJ 3SG.F-eat.IPFV-SG'She eats.'@jeff heath and amy marsh@winter 2015
+89@e:138@@@1@tenseaspectmood@hi y-aakul-0@@@@0@2@3SG.F.SBJ 3SG.M-eat.IPFV-SG'*She eats.'@jeff heath and amy marsh@winter 2015
+90@author@@@1@tenseaspectmood@inti t-aakul-0@@@@0@2@2SG.F.SBJ 2-eat.IPFV-SG'*You(F) eat.'@jeff heath and amy marsh@winter 2015
+91@e:146@@@1@tenseaspectmood@t-aftah-i al-baab@@@@1@2@2-open.IPFV-2SG.F DEF-door'You(F) open the door.'@jeff heath and amy marsh@winter 2015
+92@e:146@@@1@tenseaspectmood@n-aftah-u al-baab@@@@1@2@1-eat.IPFV-PL DEF-door'We open the door.'@jeff heath and amy marsh@winter 2015
+93@c:3@@@1@tenseaspectmood,pn@y-aktul-0-ni@@@@1@1@3SG.M-kill.IPFV-SG-1SG.OBJ'He kills me.'@jeff heath and amy marsh@winter 2015
+94@c:4@@@1@tenseaspectmood,pn@y-aktul-0-k@@@@1@1@3SG.M-kill.IPFV-SG-2SG.M.OBJ'He kills you(M).'@jeff heath and amy marsh@winter 2015
+95@c:4@@@1@tenseaspectmood,pn@y-aktul-0-ki@@@@1@1@3SG.M-kill.IPFV-SG-2SG.F.OBJ'He kills you(F).'@jeff heath and amy marsh@winter 2015
+96@c:4@@@1@tenseaspectmood,pn@y-aktul-0-h@@@@1@1@3SG.M-kill.IPFV-SG-3SG.M.OBJ'He kills him.'@jeff heath and amy marsh@winter 2015
+97@c:4@@@1@tenseaspectmood,pn@y-aktul-0-ha@@@@1@1@3SG.M-kill.IPFV-SG-3SG.F.OBJ'He kills her.'@jeff heath and amy marsh@winter 2015
+98@c:4@@@1@tenseaspectmood,pn@y-aktul-0-na@@@@1@1@3SG.M-kill.IPFV-SG-1PL.OBJ'He kills us.'@jeff heath and amy marsh@winter 2015
+99@c:4@@@1@tenseaspectmood,pn@y-aktul-0-ku@@@@1@1@3SG.M-kill.IPFV-SG-2PL.OBJ'He kills you(PL).'@jeff heath and amy marsh@winter 2015
+100@c:4@@@1@tenseaspectmood,pn@y-aktul-0-hum@@@@1@1@3SG.M-kill.IPFV-SG-3PL.OBJ'He kills them.'@jeff heath and amy marsh@winter 2015
+101@author@@@1@pn@y-aktul-0 al-kalib@@@@1@2@3SG.M-kill.IPFV-SG DEF-dog'He kills the dog.'@jeff heath and amy marsh@winter 2015
+102@author@@@1@pn@y-aktul-0 al-kalib-PL@@@@1@2@3SG.M-kill.IPFV-SG DEF-dog-PL'He kills the dogs.'@jeff heath and amy marsh@winter 2015
+103@author@@@1@pn@y-aktul-0-h al-kalib@@@@0@2@3SG.M-kill.IPFV-SG-3SG.M.OBJ DEF-dog'*He kills the dog.'@jeff heath and amy marsh@winter 2015
+104@author@@@1@pn@y-aktul-0-hum al-kalib-PL@@@@0@2@3SG.M-kill.IPFV-SG-3PL.OBJ DEF-dog-PL'*He kills the dogs.'@jeff heath and amy marsh@winter 2015
+105@b:1@@@1@tenseaspectmood@ana gaa'id-0@@@@1@2@1SG.SBJ stay.PRS.PTCP-SG.M'I(M) am here.'@jeff heath and amy marsh@winter 2015
+106@b:1@@@1@tenseaspectmood@ana gaa'id-e@@@@1@2@1SG.SBJ stay.PRS.PTCP-SG.F'I(F) am here.'@jeff heath and amy marsh@winter 2015
+107@b:1@@@1@tenseaspectmood@hi gaa'id-e@@@@1@2@3SG.F.SBJ stay.PRS.PTCP-SG.F'She is here.'@jeff heath and amy marsh@winter 2015
+108@b:1@@@1@tenseaspectmood@intu gaa'id-iin@@@@1@2@2PL.SBJ stay.PRS.PTCP-PL'You(PL) are here.'@jeff heath and amy marsh@winter 2015
+109@e:66@@@1@tenseaspectmood@Muusa raagid-0@@@@1@2@Muusa lie.down.PRS.PTCP-SG.M'Muusa is lying down.'@jeff heath and amy marsh@winter 2015
+110@b:1@@@1@agr@hi gaa'id-0@@@@0@2@3SG.F.SBJ stay.PRS.PTCP-SG.M'*She is here.'@jeff heath and amy marsh@winter 2015
+111@b:1@@@1@agr@intu gaa'id-e@@@@0@2@2PL.SBJ stay.PRS.PTCP-SG.F'*You(PL) are here.'@jeff heath and amy marsh@winter 2015
+112@e:208@@@1@tenseaspectmood@al-wileed gaa'id-0 y-abki-0@@@@1@3@DEF-boy stay.PRS.PTCP-SG.M 3SG.M-cry.IPFV-SG'The boy is crying.'@jeff heath and amy marsh@winter 2015
+113@author@@@1@tenseaspectmood@ana gaa'id-0 n-aakul-0@@@@1@3@1SG.SUBJ stay.PRS.PTCP-SG.M 1-cry.IPFV-SG'I am eating.'@jeff heath and amy marsh@winter 2015
+114@author@@@1@tenseaspectmood@al-wileed gaa'id-0 t-abki-0@@@@0@3@DEF-boy stay.PRS.PTCP-SG.M 2-cry.IPFV-SG'*The boy is crying.'@jeff heath and amy marsh@winter 2015
+115@author@@@1@tenseaspectmood@al-wileed gaa'id-iin y-abki-0@@@@0@3@DEF-boy stay.PRS.PTCP-PL 3SG.M-cry.IPFV-SG'*The boy is crying.'@jeff heath and amy marsh@winter 2015
+116@author@@@1@tenseaspectmood@ana gaa'id-0 katal-t@@@@0@3@1SG.SUBJ stay.PRS.PTCP-SG.M kill.PFV-1SG'*I am killing.'@jeff heath and amy marsh@winter 2015
+117@e:68@@@1@tenseaspectmood@inta musaamah-0@@@@1@2@2SG.M.SBJ forgive.PST.PTCP-SG.M'You(M) are forgiven.'@jeff heath and amy marsh@winter 2015
+118@e:68@@@1@tenseaspectmood@hi musaamah-a@@@@1@2@3SG.F.SBJ forgive.PRS.PTCP-SG.F'She is forgiven.'@jeff heath and amy marsh@winter 2015
+119@e:69@@@1@tenseaspectmood@humman musaamah-iin@@@@1@2@2PL.SBJ forgive.PRS.PTCP-PL'You(PL) are forgiven.'@jeff heath and amy marsh@winter 2015
+120@e:205@@@1@tenseaspectmood@kulla yoom n-aakul-u eech@@@@1@4@all day 1-eat.IPFV-PL boule'Every day we eat boule.'@jeff heath and amy marsh@winter 2015
+121@author@@@1@tenseaspectmood@ambaakir n-aakul-u eech@@@@1@3@tomorrow 1-eat.IPFV-PL boule'Tomorrow we will eat boule.'@jeff heath and amy marsh@winter 2015
+122@e:205@@@1@tenseaspectmood@zamaan al-bineeye-PL ma y-amrug-u barra@@@@1@5@in.the.past DEF-girl-PL NEG 3PL-go.out.IPFV-PL outside'In the past girls didn't go outside.'@jeff heath and amy marsh@winter 2015
+123@e:207@@@1@tenseaspectmood@al-wileed gamma-0 y-aakul-0@@@@1@3@DEF-boy rise.PFV-3SG.M 3SG.M-eat.IPFV-SG'The boy began to eat.'@jeff heath and amy marsh@winter 2015
+124@author@@@1@cognitivestatus@al-raajil da maat-0@@@@1@3@DEF-man this.SG.M die.PFV-3SG.M'This man died.'@jeff heath and amy marsh@winter 2015
+125@author@@@1@cognitivestatus@al-mara di maat-at@@@@1@3@DEF-woman this.SG.F die.PFV-3SG.F'This woman died.'@jeff heath and amy marsh@winter 2015
+126@author@@@1@cognitivestatus@al-wileed-PL dool maat-o@@@@1@3@DEF-boy-PL this.PL die.PFV-3PL'These children died.'@jeff heath and amy marsh@winter 2015
+127@author@@@1@cognitivestatus@al-raajil daak maat-0@@@@1@3@DEF-man that.SG.M die.PFV-3SG.M'That man died.'@jeff heath and amy marsh@winter 2015
+128@author@@@1@cognitivestatus@al-mara diik maat-at@@@@1@3@DEF-woman that.SG.F die.PFV-3SG.F'That woman died.'@jeff heath and amy marsh@winter 2015
+129@author@@@1@cognitivestatus@al-wileed-PL doolak maat-o@@@@1@3@DEF-boy-PL that.PL die.PFV-3PL'Those children died.'@jeff heath and amy marsh@winter 2015
+130@author@@@1@agr@al-mara da maat-at@@@@0@3@DEF-woman this.M die.PFV-3SG.F'*This woman died.'@jeff heath and amy marsh@winter 2015
+131@author@@@1@agr@al-wileed-PL da maat-o@@@@0@3@DEF-boy-PL this.SG.M die.PFV-3PL'*These children died.'@jeff heath and amy marsh@winter 2015
+132@author@@@1@cognitivestatus@da al-raajil maat-0@@@@0@3@this.M DEF-man die.PFV-3SG.M'*This man died.'@jeff heath and amy marsh@winter 2015
+133@author@@@1@cognitivestatus@daak al-raajil maat-0@@@@0@3@that.M DEF-man die.PFV-3SG.M'*That man died.'@jeff heath and amy marsh@winter 2015
+134@author@@@1@cognitivestatus@raajil da maat-0@@@@0@3@man this.SG.M die.PFV-3SG.M'*This man died.'@jeff heath and amy marsh@winter 2015
+135@author@@@1@cognitivestatus@raajil daak maat-0@@@@0@3@man that.SG.M die.PFV-3SG.M'*That man died.'@jeff heath and amy marsh@winter 2015
+136@author@@@1@neg@al-raajil ma maat-0@@@@1@3@DEF-man NEG die.PFV-3SG.M'The man did not die.'@jeff heath and amy marsh@winter 2015
+137@e:220@@@1@neg@ana ma chirib-t laban@@@@1@4@1SG.SBJ NEG drink.PFV-1SG milk'I did not drink milk.'@jeff heath and amy marsh@winter 2015
+138@author@@@1@neg@ma al-raajil maat-0@@@@0@3@NEG DEF-man die.PFV-3SG.M'*The man did not die.'@jeff heath and amy marsh@winter 2015
+139@author@@@1@neg@al-raajil maat-0 ma@@@@0@3@DEF-man die.PFV-3SG.M NEG'*The man did not die.'@jeff heath and amy marsh@winter 2015
+140@author@@@1@pro-d@al-mara sawwa-at akil@@@@1@3@DEF-woman made.PFV-3SG.F food'The woman made food.'@jeff heath and amy marsh@winter 2015
+141@author@@@1@pro-d@al-mara sawwa-at-h@@@@1@2@DEF-woman made.PFV-3SG.F-3SG.M.OBJ'The woman made it.'@jeff heath and amy marsh@winter 2015
+142@author@@@1@pro-d@al-mara sawwa-at@@@@0@2@DEF-woman made.PFV-3SG.F'*The woman made (it).'@jeff heath and amy marsh@winter 2015
+143@f:33@@@1@q@hu sultan walla@@@@1@3@3SG.SBJ sultan QUEST'Is he a sultan?'@jeff heath and amy marsh@winter 2015
+144@author@@@1@q@hu walla sultan@@@@1@3@3SG.SBJ QUEST sultan'*Is he a sultan?'@jeff heath and amy marsh@winter 2015
+145@author@@@1@q@walla hu sultan@@@@1@3@QUEST 3SG.SBJ sultan'*Is he a sultan?'@jeff heath and amy marsh@winter 2015
+146@f:34@@@1@q@ind-k kitaab walla@@@@1@3@have.PFV-2SG.M book QUEST'Do you(SG.M) have a book?'@jeff heath and amy marsh@winter 2015
+147@f:34@@@1@q@al-deef safar-0 walla@@@@1@3@DEF-guest travel.PFV-3SG.M QUEST'Did the guest travel?'@jeff heath and amy marsh@winter 2015
+148@author@@@1@q@al-deef walla safar-0@@@@1@3@DEF-guest QUEST travel-3SG.M'*Did the guest travel?'@jeff heath and amy marsh@winter 2015
+149@author@@@1@q@walla al-deef safar-0@@@@1@3@QUEST DEF-guest travel-3SG.M'*Did the guest travel?'@jeff heath and amy marsh@winter 2015
+150@f:34@@@1@q@ma macha-tu walla@@@@1@3@not go.PFV-2PL QUEST'Didn't you go?'@jeff heath and amy marsh@winter 2015
+151@author@@@1@q@ma walla macha-tu@@@@0@3@not QUEST go-2PL'*Didn't you go?'@jeff heath and amy marsh@winter 2015
+152@author@@@1@q@walla ma macha-tu@@@@1@3@QUEST not go-2PL'*Didn't you go?'@jeff heath and amy marsh@winter 2015
+153@author@@@1@matrixwhquestions@yaatu akal-0 al-eech@@@@1@3@who.SG.M eat.PFV-3SG.M DEF-boule'Who ate the boule?'@jeff heath and amy marsh@winter 2015
+154@author@@@1@matrixwhquestions@akal-0 yaatu al-eech@@@@0@3@eat.PFV-3SG.M who.SG.M DEF-boule'*Who ate the boule?'@jeff heath and amy marsh@winter 2015
+155@author@@@1@matrixwhquestions@akal-0 al-eech yaatu@@@@0@3@eat.PFV-3SG.M DEF-boule who.SG.M'*Who ate the boule?'@jeff heath and amy marsh@winter 2015
+156@author@@@1@agr,matrixwhquestions@yaatumman akal-o al-eech@@@@1@3@who.PL eat.PFV-3PL DEF-boule'Who(PL) ate the boule?'@jeff heath and amy marsh@winter 2015
+157@author@@@1@agr,matrixwhquestions@yaati akal-at al-eech@@@@1@3@who.SG.F eat.PFV-3SG.F DEF-boule'Who(F) ate the boule?'@jeff heath and amy marsh@winter 2015
+158@author@@@1@agr@yaatu akal-o al-eech@@@@0@3@who.SG.M eat.PFV-3PL DEF-boule'*Who ate the boule?'@jeff heath and amy marsh@winter 2015
+159@author@@@1@agr@yaatumman akal-0 al-eech@@@@0@3@who.PL eat.PFV-3SG.M DEF-boule'*Who(PL) ate the boule?'@jeff heath and amy marsh@winter 2015
+160@author@@@1@agr@yaati akal-0 al-eech@@@@0@3@who.SG.F eat.PFV-3SG.M DEF-boule'*Who(F) ate the boule?'@jeff heath and amy marsh@winter 2015
+161@author@@@1@agr@yaati akal-o al-eech@@@@0@3@who.SG.F eat.PFV-3PL DEF-boule'*Who(F) ate the boule?'@jeff heath and amy marsh@winter 2015
+162@author@@@1@matrixwhquestions@chunu akal-0 al-eech@@@@1@3@what eat.PFV-3SG.M DEF-boule'What ate the boule?'  (to be answered by "the dog")@jeff heath and amy marsh@winter 2015
+163@author@@@1@matrixwhquestions@akal-0 chunu al-eech@@@@0@3@eat.PFV-3SG.M what DEF-boule'*What ate the boule?'@jeff heath and amy marsh@winter 2015
+164@author@@@1@matrixwhquestions@akal-0 al-eech chunu@@@@0@3@eat.PFV-3SG.M DEF-boule what'*What ate the boule?'@jeff heath and amy marsh@winter 2015
+165@author@@@1@matrixwhquestions@al-deef akal-0 chunu@@@@1@3@DEF-guest eat.PFV-3SG.M what'The guest ate what?/What did the guest eat?'@jeff heath and amy marsh@winter 2015
+166@author@@@1@matrixwhquestions@chunu akal-0 al-eech@@@@1@3@what eat.PFV-3SG.M DEF-boule'What ate the boule?'@jeff heath and amy marsh@winter 2015
+167@author@@@1@matrixwhquestions@al-duud akal-0 yaatu@@@@1@3@DEF-lion eat.PFV-3SG.M who.SG.M'The lion ate whom?/Whom did the lion eat?'@jeff heath and amy marsh@winter 2015
+168@author@@@1@matrixwhquestions@yaatu daktoor@@@@1@2@who.SG.M doctor'Who is a doctor?'@jeff heath and amy marsh@winter 2015
+169@author@@@1@matrixwhquestions@yaatu al-daktoor@@@@1@2@who.SG.M DEF-doctor'Who is the doctor?'@jeff heath and amy marsh@winter 2015
+170@author@@@1@matrixwhquestions@al-daktoor yaatu@@@@1@2@DEF-doctor who.SG.M'The doctor is who?'@jeff heath and amy marsh@winter 2015
+171@author@@@1@matrixwhquestions@daktoor yaatu@@@@0@2@doctor who.SG.M'*A doctor is who?'@jeff heath and amy marsh@winter 2015
+172@e:226@@@1@matrixwhquestions@yaatumman darab-o-k@@@@1@2@who.PL hit.PFV-3PL-2SG.M.OBJ'Who(PL) hit you?'@jeff heath and amy marsh@winter 2015
+173@e:226@@@1@matrixwhquestions@yaatumman al-darab-o-k@@@@1@2@who.PL DEF-hit.PFV-3PL-2SG.M.OBJ'Who(PL) are the ones who hit you?'@jeff heath and amy marsh@winter 2015
+174@author@@@1@matrixwhquestions@chunu daktoor@@@@1@2@what doctor'What is a doctor?'@jeff heath and amy marsh@winter 2015
+175@e:226@@@1@matrixwhquestions@t-idoor-0 chunu@@@@1@2@2-want.IPFV-SG what'What do you want?'@jeff heath and amy marsh@winter 2015
+176@author@@@1@emb-d@al-raajil hasab-0 al-deef akal-0 chunu@@@@1@5@DEF-man count.PFV-3SG.M DEF-guest eat.PFV-3SG.M what'The man thought the guest ate what?/What did the man think the guest ate?'@jeff heath and amy marsh@winter 2015
+177@author@@@1@crd@al-raajil wa al-mara akal-o eech@@@@1@5@DEF-man and DEF-woman eat.PFV-3PL boule'The man and the woman ate boule.'@jeff heath and amy marsh@winter 2015
+178@author@@@1@crd@al-raajil wa al-mara wa al-wileed akal-o eech@@@@1@7@DEF-man and DEF-woman and DEF-boy eat.PFV-3PL boule'The man and the woman and the boy ate boule.'@jeff heath and amy marsh@winter 2015
+179@author@@@1@crd@al-raajil, al-mara wa al-wileed akal-o eech@@@@1@6@DEF-man, DEF-woman and DEF-boy eat.PFV-3PL boule'The man, the woman and the boy ate boule.'@jeff heath and amy marsh@winter 2015
+180@author@@@1@crd@al-raajil, al-mara, al-wileed akal-o eech@@@@0@5@DEF-man, DEF-woman, DEF-boy eat.PFV-3PL boule'*The man, the woman and the boy ate boule.'@jeff heath and amy marsh@winter 2015
+181@author@@@1@crd@al-raajil wa mara akal-o eech@@@@1@5@DEF-man and woman eat.PFV-3PL boule'The man and a woman ate boule.'@jeff heath and amy marsh@winter 2015
+182@author@@@1@agr@al-raajil wa al-mara akal-0 eech@@@@0@5@DEF-man and DEF-woman eat.PFV-3SG.M boule'The man and the woman ate boule.'@jeff heath and amy marsh@winter 2015
+183@author@@@1@agr@al-raajil wa al-mara akal-at eech@@@@0@5@DEF-man and DEF-woman eat.PFV-3SG.F boule'The man and the woman ate boule.'@jeff heath and amy marsh@winter 2015
+184@author@@@1@crd@al-raajil akal-0 eech wa laham@@@@1@5@DEF-man eat.PFV-3PL boule and meat'The man ate boule and meat.'@jeff heath and amy marsh@winter 2015
+185@author@@@1@crd@al-raajil akal-0 eech laham@@@@0@4@DEF-man eat.PFV-3PL boule meat'*The man ate boule and meat.'@jeff heath and amy marsh@winter 2015
+186@author@@@1@crd@al-raajil akal-0 wa eech wa laham@@@@0@6@DEF-man eat.PFV-3PL and boule and meat'*The man ate boule and meat.'@jeff heath and amy marsh@winter 2015
+187@author@@@1@crd@al-raajil akal-0 eech laham wa laban@@@@1@6@DEF-man eat.PFV-3PL boule meat and milk'The man ate boule, meat, and milk.'@jeff heath and amy marsh@winter 2015
+188@author@@@1@crd@al-raajil akal-0 eech wa laban wa laham@@@@1@7@DEF-man eat.PFV-3PL boule and milk and meat'The man ate boule and milk and meat.'@jeff heath and amy marsh@winter 2015
+189@author@@@1@crd@al-raajil tawiil-0 wa rigeeyig-0@@@@1@4@DEF-man tall-SG.M and thin-SG.M'The man (is) tall and thin.'@jeff heath and amy marsh@winter 2015
+190@author@@@1@crd@al-raajil al-tawiil-0 wa rigeeyig-0@@@@0@4@DEF-man DEF-tall-SG.M and thin-SG.M'*The man is tall and thin.'@jeff heath and amy marsh@winter 2015
+191@author@@@1@crd@al-raajil al-tawiil-0 wa al-rigeeyig-0@@@@0@4@DEF-man DEF-tall-SG.M and DEF-thin-SG.M'*The man is tall and thin.'@jeff heath and amy marsh@winter 2015
+192@author@@@1@adj@al-raajil al-tawiil-0 rigeeyig-0@@@@1@3@DEF-man DEF-tall-SG.M thin-SG.M'The tall man is thin.'@jeff heath and amy marsh@winter 2015
+193@author@@@1@crd@al-raajil al-tawiil-0 wa rigeeyig-0 maat-0@@@@1@5@DEF-man DEF-tall-SG.M and thin-SG.M die.PFV-3SG.M'The tall and thin man died.'@jeff heath and amy marsh@winter 2015
+194@author@@@1@crd@al-raajil al-tawiil-0 wa al-rigeeyig-0 maat-0@@@@0@5@DEF-man DEF-tall-SG.M and DEF-thin-SG.M die.PFV-3SG.M'*The tall and thin man died.'@jeff heath and amy marsh@winter 2015
+195@author@@@1@crd@al-raajil al-tawiil-0 rigeeyig-0 maat-0@@@@0@4@DEF-man DEF-tall-SG.M thin-SG.M die.PFV-3SG.M'*The tall man who was thin died.'@jeff heath and amy marsh@winter 2015
+196@author@@@1@crd@al-raajil al-tawiil-0 al-rigeeyig-0 maat-0@@@@1@4@DEF-man DEF-tall-SG.M DEF-thin-SG.M die.PFV-3SG.M'The tall man who was thin died.'@jeff heath and amy marsh@winter 2015
+197@author@@@1@crd@raajil tawiil-0 wa rigeeyig-0 maat-0@@@@1@5@man tall-SG.M and thin-SG.M die.PFV-3SG.M'A tall and thin man died.'@jeff heath and amy marsh@winter 2015
+198@author@@@1@crd@raajil tawiil-0 rigeeyig-0 maat-0@@@@1@4@man tall-SG.M thin-SG.M die.PFV-3SG.M'A tall man who is thin died.'@jeff heath and amy marsh@winter 2015
+199@author@@@1@crd@al-bineeye tawiil-e wa rigeeyig-e@@@@1@4@DEF-girl tall-SG.F and thin-SG.F'The girl is tall and thin.'@jeff heath and amy marsh@winter 2015
+200@author@@@1@crd@al-bineeye al-tawiil-e wa rigeeyig-e@@@@0@4@DEF-girl DEF-tall-SG.F and thin-SG.F'*The girl is tall and thin.'@jeff heath and amy marsh@winter 2015
+201@author@@@1@crd@al-bineeye al-tawiil-e wa rigeeyig-e akal-at@@@@1@5@DEF-girl DEF-tall-SG.F and thin-SG.F eat.PFV-3SG.F'The tall and thin girl ate.'@jeff heath and amy marsh@winter 2015
+202@author@@@1@crd@al-bineeye al-sameh-e akal-at@@@@1@3@DEF-girl DEF-beautiful-SG.F eat.PFV-3SG.F'The beautiful girl ate.'@jeff heath and amy marsh@winter 2015
+203@author@@@1@crd@al-raajil akal-0 eech wa chirib-0 almi@@@@1@6@DEF-man eat.PFV-3SG.M boule and drink.PFV-3SG.M water'The man ate boule and drank water.'@jeff heath and amy marsh@winter 2015
+204@author@@@1@crd@al-raajil akal-0 wa chirib-0@@@@1@4@DEF-man eat.PFV-3SG.M and drink.PFV-3SG.M'The man ate and drank.'@jeff heath and amy marsh@winter 2015
+205@author@@@1@crd@al-raajil akal-0 eech wa al-mara chirib-at almi@@@@1@7@DEF-man eat.PFV-3SG.M boule and DEF-woman drink.PFV-3SG.F water'The man ate boule and the woman drank water.'@jeff heath and amy marsh@winter 2015
+206@f:36@@@1@crd@al-raajil tawiil-0 laakin ma gawi-0@@@@1@5@DEF-man tall-SG.M but not strong-3SG.M'The man is tall but not strong.'@jeff heath and amy marsh@winter 2015
+207@f:36@@@1@crd@al-raajil tawiil-0 wa laakin ma gawi-0@@@@1@6@DEF-man tall-SG.M and but not strong-SG.M'The man is tall but not strong.'@jeff heath and amy marsh@winter 2015
+208@f:36@@@1@crd@hu ma akal-0 wa la chirib-0@@@@1@6@3SG.SBJ not eat.PFV-3SG.M and nor drink.PFV-3SG.M'He did not eat or drink.'@jeff heath and amy marsh@winter 2015
+209@f:36@@@1@crd@hu ma akal-0 eech wa la laham@@@@1@7@3SG.SBJ not eat.PFV-3SG.M boule and nor meat'He did not eat boule or meat.'@jeff heath and amy marsh@winter 2015
+210@f:36@@@1@crd@Muusa wa la akal-0 wa la chirib-0@@@@1@7@Moses and nor eat.PFV-3SG.M and nor drink.PFV-3SG.M'Moses neither ate nor drank.'@jeff heath and amy marsh@winter 2015
+211@author@@@1@agr,adj@al-raajil al-tawiil-0 maat-0@@@@1@3@DEF-man DEF-tall-SG.M die.PFV-3SG.M'The tall man died.'@jeff heath and amy marsh@winter 2015
+212@author@@@1@adj@al-tawiil-0 al-raajil maat-0@@@@0@3@DEF-tall-SG.M DEF-man die.PFV-3SG.M'*The tall man died.'@jeff heath and amy marsh@winter 2015
+213@author@@@1@agr,adj@al-raajil al-tawiil-0 da maat-0@@@@1@4@DEF-man DEF-tall-SG.M this.SG.M die.PFV-3SG.M'This tall man died.'@jeff heath and amy marsh@winter 2015
+214@author@@@1@adj@al-raajil da al-tawiil-0 maat-0@@@@0@4@DEF-man this.SG.M DEF-tall-SG.M die.PFV-3SG.M'*This tall man died.'@jeff heath and amy marsh@winter 2015
+215@author@@@1@adj@da al-raajil al-tawiil-0 maat-0@@@@0@4@this.SG.M DEF-man DEF-tall-SG.M die.PFV-3SG.M'*This tall man died.'@jeff heath and amy marsh@winter 2015
+216@author@@@1@agr,adj@raajil tawiil-0 maat-0@@@@1@3@man tall-SG.M die.PFV-3SG.M'A tall man died.'@jeff heath and amy marsh@winter 2015
+217@author@@@1@adj@tawiil-0 raajil maat-0@@@@0@3@tall-SG.M man die.PFV-3SG.M'*A tall man died.'@jeff heath and amy marsh@winter 2015
+218@author@@@1@agr@al-raajil tawiil-0 maat-0@@@@0@3@DEF-man tall-SG.M die.PFV-3SG.M'*The tall man died.'@jeff heath and amy marsh@winter 2015
+219@author@@@1@agr@raajil al-tawiil-0 maat-0@@@@0@3@man DEF-tall-SG.M die.PFV-3SG.M'*A tall man died.'@jeff heath and amy marsh@winter 2015
+220@author@@@1@agr,adj@al-raajil-PL al-tawiil-PL maat-o@@@@1@3@DEF-man-PL DEF-tall-PL die.PFV-3PL'The tall men died.'@jeff heath and amy marsh@winter 2015
+221@author@@@1@agr@al-raajil-PL al-tawiil-0 maat-o@@@@0@3@DEF-man-PL DEF-tall-SG.M die.PFV-3PL'*The tall men died.'@jeff heath and amy marsh@winter 2015
+222@author@@@1@agr@al-raajil al-tawiil-PL maat-0@@@@0@3@DEF-man DEF-tall-PL die.PFV-3SG.M'*The tall man died.'@jeff heath and amy marsh@winter 2015
+223@author@@@1@agr,adj@al-mara al-tawiil-e maat-at@@@@1@3@DEF-woman DEF-tall-SG.F die.PFV-3SG.F'The tall woman died.'@jeff heath and amy marsh@winter 2015
+224@author@@@1@agr@al-mara al-tawiil-0 maat-at@@@@0@3@DEF-woman DEF-tall-SG.M die.PFV-3SG.F'*The tall woman died.'@jeff heath and amy marsh@winter 2015
+225@author@@@1@agr@al-raajil al-tawiil-e maat-0@@@@0@3@DEF-man DEF-tall-SG.F die.PFV-3SG.M'*The tall man died.'@jeff heath and amy marsh@winter 2015
+226@author@@@1@adverbs@al-raajil akal-0 ajala@@@@1@3@DEF-man eat.PFV-3SG.M quickly'The man ate quickly.'@jeff heath and amy marsh@winter 2015
+227@author@@@1@adverbs@al-raajil akal-0 eech ajala@@@@1@4@DEF-man eat.PFV-3SG.M boule quickly'The man ate boule quickly.'@jeff heath and amy marsh@winter 2015
+228@author@@@1@adverbs@al-raajil akal-0 ajala eech@@@@0@4@DEF-man eat.PFV-3SG.M quickly boule'*The man ate boule quickly.'@jeff heath and amy marsh@winter 2015
+229@author@@@1@adverbs@ajala ke, al-raajil akal-0@@@@1@4@quickly like.that, DEF-man eat.PFV-3SG.M'Quickly, the man ate.'@jeff heath and amy marsh@winter 2015
+230@author@@@1@adverbs@ajala al-raajil akal-0@@@@0@3@quickly DEF-man eat.PFV-3SG.M'*Quickly, the man ate.'@jeff heath and amy marsh@winter 2015
+231@author@@@1@adverbs@al-raajil ajala akal-0@@@@0@3@DEF-man quickly eat.PFV-3SG.M'*The man ate quickly.'@jeff heath and amy marsh@winter 2015
+232@author@@@1@emb-d@al-raajil hasab-0 kadar al-deef akal-0 eech@@@@1@6@DEF-man count.PFV-3SG.M COMP DEF-guest eat.PFV-3SG.M boule'The man thought that the guest ate boule.'@jeff heath and amy marsh@winter 2015
+233@author@@@1@emb-d@al-raajil hasab-0 al-deef akal-0 eech@@@@1@5@DEF-man count.PFV-3SG.M DEF-guest eat.PFV-3SG.M boule'The man thought the guest ate boule.'@jeff heath and amy marsh@winter 2015
+234@author@@@1@emb-q@al-raajil sa'al-0 kan al-deef akal-0 eech@@@@1@6@DEF-man ask.PFV-3SG.M if DEF-guest eat.PFV-3SG.M boule'The man asked if the guest ate boule.'@jeff heath and amy marsh@winter 2015
+235@author@@@1@emb-d@al-raajil irif-0 kadar al-deef akal-0 eech@@@@1@6@DEF-man know.PFV-3SG.M COMP DEF-guest eat.PFV-3SG.M boule'The man knew that the guest ate boule.'@jeff heath and amy marsh@winter 2015
+236@author@@@1@emb-q@al-raajil irif-0 kan al-deef akal-0 eech@@@@1@6@DEF-man know.PFV-3SG.M if DEF-guest eat.PFV-3SG.M boule'The man knew if the guest ate boule.'@jeff heath and amy marsh@winter 2015
+237@author@@@1@non-verbalpredicates@hu daktoor@@@@1@2@3SG.M.SBJ doctor'He is a doctor.'@jeff heath and amy marsh@winter 2015
+238@author@@@1@non-verbalpredicates@al-raajil daktoor@@@@1@2@DEF-man doctor'The man is a doctor.'@jeff heath and amy marsh@winter 2015
+239@author@@@1@non-verbalpredicates@Muusa daktoor@@@@1@2@Moses doctor'Moses is a doctor.'@jeff heath and amy marsh@winter 2015
+240@author@@@1@non-verbalpredicates@al-beet nadiif-0@@@@1@2@DEF-house clean-SG.M'The house is clean.'@jeff heath and amy marsh@winter 2015
+241@author@@@1@non-verbalpredicates@al-beet al-nadiif-0@@@@0@2@DEF-house DEF-clean-SG.M'*The house is clean.'@jeff heath and amy marsh@winter 2015
+242@author@@@1@agr@al-beet nadiif-e@@@@0@2@DEF-house clean-SG.F'*The house is clean.'@jeff heath and amy marsh@winter 2015
+243@author@@@1@non-verbalpredicates@al-deef fi lekkool@@@@1@3@DEF-guest at school'The guest is at school.'@jeff heath and amy marsh@winter 2015
+244@author@@@1@non-verbalpredicates@raajil daktoor@@@@0@2@man doctor'*A man is a doctor.'@jeff heath and amy marsh@winter 2015
+245@author@@@1@non-verbalpredicates@raajil tawiil-0 daktoor@@@@0@3@man tall-SG.M doctor'*A tall man is a doctor.'@jeff heath and amy marsh@winter 2015
+246@author@@@1@non-verbalpredicates@beet nadiif-0@@@@0@2@house clean-SG.M'*A house is clean.'@jeff heath and amy marsh@winter 2015
+247@author@@@1@non-verbalpredicates@beet al-nadiif-0@@@@0@2@house DEF-clean-SG.M'*The house is clean.'@jeff heath and amy marsh@winter 2015
+248@author@@@1@adverbs@al-kitaab foog@@@@1@2@DEF-book up'The books (is) up there.'@jeff heath and amy marsh@winter 2015
+249@author@@@1@adverbs@al-kitaab foog al-tarbeeza@@@@1@3@DEF-book on DEF-table'The books (is) on the table.'@jeff heath and amy marsh@winter 2015
+250@author@@@1@adverbs@al-kitaab al-foog waga'-0@@@@1@3@DEF-book DEF-high fall.PFV-3SG.M'The book up high fell.'@jeff heath and amy marsh@winter 2015
+251@e:90@@@1@cognitivestatus@hu da wileed@@@@1@3@3SG.M.SBJ this.SG.M boy'This he is a boy./He is a boy.'@jeff heath and amy marsh@winter 2015
+252@e:90@@@1@cognitivestatus@al-bineeye di kabiir-e@@@@1@3@DEF-girl this.SG.F big-SG.F'This girl is big.'@jeff heath and amy marsh@winter 2015
+253@author@@@1@cognitivestatus@bineeye di kabiir-e@@@@0@3@girl this.SG.F big-SG.F'*This girl is big.'@jeff heath and amy marsh@winter 2015
+254@e:90@@@1@cognitivestatus@al-bineeye-PL dool jara-o@@@@1@3@DEF-girl-PL this.PL run.PFV-3PL'These girls ran.'@jeff heath and amy marsh@winter 2015
+255@author@@@1@cognitivestatus@al-raajil da da maat-0@@@@0@4@DEF-man this.SG.M this.SG.M die.PFV-3SG.M'This man died.'@jeff heath and amy marsh@winter 2015
+256@author@@@1@crd@al-raajil wa mara tawiil-e akal-o eech@@@@1@6@DEF-man and woman tall-SG.F eat.PFV-3PL boule'The man and a tall woman ate boule.'@jeff heath and amy marsh@winter 2015
+257@author@@@1@crd@al-raajil wa mara tawiil-PL akal-o eech@@@@1@6@DEF-man and woman tall-PL eat.PFV-3PL boule'The man and a woman, both tall, ate boule.'@jeff heath and amy marsh@winter 2015
+258@author@@@1@crd@al-raajil al-tawiil-0 wa deef rigeeyig-0 maat-o@@@@1@6@DEF-man DEF-tall-SG.M and guest thin-SG.M die.PFV-3PL'The tall man and a thin guest died.'@jeff heath and amy marsh@winter 2015
+259@e:235@@@1@emb-d@al-mara-PL irif-o inta raajil zeen-0@@@@1@5@DEF-woman-PL know.PFV-3PL 2SG.M.SBJ man good-SG.M'The women knew (that) you(SG) are a good man.'@jeff heath and amy marsh@winter 2015
+260@author@@@1@emb-d@al-mara-PL irif-o kadar inta raajil zeen-0@@@@1@6@DEF-woman-PL know.PFV-3PL that 2SG.M.SBJ man good-SG.M'The women knew that you(SG) are a good man.'@jeff heath and amy marsh@winter 2015
+261@e:235@@@1@emb-d@hu oora-0 al-raajil Zara mardaan-e@@@@1@5@3SG.M.SBJ tell.PFV-3SG.M DEF-man Zara sick-SG.F'He told the man (that) Zara is sick.'@jeff heath and amy marsh@winter 2015
+262@e:235@@@1@emb-d@humman gaal-o Muusa macha-0 lekkool@@@@1@5@3PL.SBJ say.PFV-3PL Muusa go.PFV-3SG.M school'They said (that) Muusa went (to) school.'@jeff heath and amy marsh@winter 2015
+263@e:235@@@1@emb-d@n-idoor-0 t-aji-0 ma'a al-raajil@@@@1@4@1-want.IPFV-SG 2-come.IPFV-SG with DEF-man'I want you (to) come with the man.'@jeff heath and amy marsh@winter 2015
+264@author@@@1@emb-d@n-idoor-0 t-aji-0@@@@1@2@1-want.IPFV-SG 2-come.IPFV-SG'I want you (to) come.'@jeff heath and amy marsh@winter 2015
+265@author@@@1@emb-d@n-idoor-0 inta t-aji-0@@@@1@3@1-want.IPFV-SG 2SG.M.SBJ 2-come.IPFV-SG'I want you (to) come.'@jeff heath and amy marsh@winter 2015

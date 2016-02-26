@@ -1,0 +1,101 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+; A basic VPM for Matrix grammars.
+event          <> e
+ref-ind        <> x
+individual     <> i
+handle         <> h
+non_event      <> p
+*              >> u
+semarg         << u
+
+SPECI : SPECI
+  * <> *
+
+POTENCY : POTENCY
+ * <> *
+
+SF : SF
+  prop <> prop
+  ques <> ques
+  prop-or-ques >> prop-or-ques
+  prop << prop-or-ques
+  comm <> comm
+  * <> *
+
+COG-ST : COG-ST
+  type-id <> type-id
+  uniq-id <> uniq-id
+  familiar <> familiar
+  activated <> activated
+  in-foc <> in-foc
+  activ+fam <> activ+fam
+  uniq+fam <> uniq+fam
+  activ-or-more <> activ-or-more
+  uniq-or-less <> uniq-or-less
+  uniq+fam+act <> uniq+fam+act
+  fam-or-more <> fam-or-more
+  fam-or-less <> fam-or-less
+  uniq-or-more <> uniq-or-more
+  activ-or-less <> activ-or-less
+  * <> *
+
+
+POTENCY : POTENCY
+  high <> high
+  low <> low
+  * <> *
+
+PNG.PERNUM : PER NUM
+  3pl <> third pl
+  2pl <> second pl
+  1pl_excl <> first pl
+  1pl_incl <> first pl
+  1pl <> first pl
+  3sg <> third sg
+  2sg <> second sg
+  1sg <> first sg
+  3rd <> third !
+  3rd << third *
+  2nd <> second !
+  2nd << second *
+  1st <> first !
+  1st << first *
+  pl <> ! pl
+  pl << * pl
+  sg <> ! sg
+  sg << * sg
+  * <> *
+  
+PNG.ALIENABILITY : ALIENABILITY
+  + <> +
+  - <> -
+  * <> *
+
+PNG.GEND : GEND
+  * <> *
+
+E.TENSE : TENSE
+  present <> present
+  nonpast <> nonpast
+  past <> past
+  * <> *
+
+E.ASPECT : ASPECT
+  perfective <> perfective
+  progressive <> progressive
+  frequentive <> frequentive
+  imperfective <> imperfective
+  inceptive <> inceptive
+  * >> no-aspect
+  no-aspect << [e]
+
+E.MOOD : MOOD
+  future <> future
+  * >> no-mood
+  no-mood << [e]
+
+E.EVID : EVID
+  evidential <> evidential
+  no-evid <> no-evid
+  * >> no-evid
+  no-evid << [e]

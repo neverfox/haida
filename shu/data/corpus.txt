@@ -1,0 +1,449 @@
+Language: Chadian Arabic
+Language code: shu
+Lines: orth orth-seg gloss translat
+Author: Jeff Heath and Amy Marsh
+Date: Winter 2015
+Source a: The trip to Bangui, Story by Siddig Breeme, Dec 2006
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Gisse haggi safar al-kaan.
+gisse hagg-i safar al-kaan-0
+story belong-1SG trip DEF-happen.PFV-3SG.M
+'My story is (about) a trip that happened.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Ana sawweetah min Amm al-Tiimaan le Bangui.
+ana sawwa-t-h min Amm-al-Tiimaan le Bangui
+1SG.SBJ do.PFV-1SG-3SG.M.OBJ from Amm-al-Tiimaan to Bangui
+'I took it from Amm al-Tiimaan to Bangui.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Saafart be bagar.
+saafar-t be bagar
+travel.PFV-1SG with cattle.COLL
+'I traveled with cattle.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Saafarna.
+saafar-na
+travel.PFV-1PL
+'We traveled.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Aniina talaata wa talaatiin nafar.
+aniina talaata wa talaatiin nafar
+1PL.SBJ 3 and 30 type
+'We were 33 people.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Wa indina wahadaachar muraah.
+wa ind-na wahadaachar muraah
+and of-1PL 11 caravan.animal
+'And we had 11 caravan animals.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Wakit gammeena min Amm al-Tiimaan, ma na'arfu al-derib.
+wakit gamma-na min Amm al-Tiimaan, ma n-a'arif-u al-derib
+time get.up.PFV-1PL from Amm al-Tiimaan, not 1-know.IPFV-PL DEF-road
+'When we left Amm al-Tiimaan, we did not know the road.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Illa nichuulu gible bas.
+illa n-ichiil-u gible bas
+except 1-take.IPFV-PL direction only
+'We were only taking a direction.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Gible haggit Bangui.
+gible hagg-t Bangui
+direction belong-COMP Bangui
+'Direction of Bangui.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Wa khalaas maachiin.
+wa khalaas maachi-iin
+and finished go.PRS.PTCP-PL
+'And so (we) were going.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Aniina fi adad hana talaata wa talaatiin nafar.
+aniina fi adad hana talaata wa talaatiin nafar
+1PL.SBJ in count of 3 and 30 type
+'We were 33 people.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Indina giid laakin al-giid ma ba'arif al-derib.
+ind-na giid laakin al-giid ma b-a'arif-0 al-derib
+of-1PL guide but DEF-guide not 3-know.IPFV-SG DEF-road
+'We had a guide but the guide did not know the road.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Bichiil al-gible bas wa maachi.
+b-ichiil-0 al-gible bas wa maachi-0
+3-take.IPFV-SG DEF-direction only and go.PRS.PTCP-PL
+'He was only taking the direction and going.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Wa ba'ad chahar wa khamistaachar yoom, ligiina nafisna fi Andeele.
+wa ba'ad chahar wa khamistaachar yoom, ligi-na nafis-na fi Andeele
+and after month and 15 day, find.PFV-1PL self-1PL in Andeele
+'And after a month and 15 days, we found ourselves in Andeele.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Wa fi l-bakaan daak al-akil al-indina kammal.
+wa fi al-bakaan daak al-akil al-ind-na kammal-0
+and in DEF-place that.SG.M DEF-food DEF-of-1PL finish.PFV-3SG.M
+'And in that place the food that we had finished.'
+
+Source: a
+Vetted: tSource: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Ma indina dagiig.
+ma ind-na dagiig
+not of-1PL flour
+'We did not have flour.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Ma indina sukkar.
+ma ind-na sukkar
+not of-1PL sugar
+'We did not have sugar.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Ma indina cheyy.
+ma ind-na cheyy
+not of-1PL something
+'We did not have anything.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Al-dagiig al-faddal, chiyya marra waahid.
+al-dagiig al-faddal-0, chiyya marra waahid
+DEF-flour DEF-remain.PFV-3SG.M, little times one
+'The flour that remained was extremely little.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Ma nagdaro nisawwu madiide kula.
+ma n-agdar-u n-isawwi-u madiide kula
+not 1-be.able.IPFV-PL 1-make.IPFV-PL porridge also
+'We were not even able to make porridge.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Illa nisawwu laayo wa nusubbu foogha mileh.
+illa n-isawwi-u laayo wa n-usubb-u foog-ha mileh
+except 1-make.IPFV-PL thin.porridge and 1-pour.IPFV-PL on-3SG.F.OBJ salt
+'We could only make thin porridge and pour salt on it.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Wa ayyi zool, kan katiir balga leyah jukhumteen aw talaata wa khalaas.
+wa ayyi zool, kan katiir-0 b-alga-0 le-h jukhma-een aw talaata wa khalaas
+and each person, if a.lot-SG.M 3-find.IPFV-SG to-3SG.M.OBJ mouthful-DL or 3 and finished
+'And each person at most was finding for himself 2 or 3 mouthfuls and that was it.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Min al-bakaan daak, le l-hille al-usumha Bakara, machi hana talaata yoom fajur wa achiiye.
+min al-bakaan daak, le al-hille al-usum-ha Bakara, machi hana talaata yoom fajur wa achiiye
+from DEF-place that.SG.M, to DEF-village DEF-name-3SG.F.POSS Bakara, going of 3 day morning and evening
+'From that place to the village whose name is Bakara, the travel (takes) 3 days, morning and evening (all day).'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Gammeena wa fi l-yoom al-taani ana saraht be l-bagar.
+gamma-na wa fi al-yoom al-taani ana sarah-t be al-bagar
+get.up.PFV-1PL and in DEF-day DEF-second 1SG.SBJ pasture.PFV-1SG with DEF-cattle.COLL
+'We got up and on the second day I went to pasture with the cattle.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Wakit gabbalt ligiit ijil waahid ma fiih.
+wakit gabbal-t ligi-t ijil waahid ma fi-h
+time return.PFV-1SG find.PFV-1SG calf one not EXIST-3SG.M.OBJ
+'When I came back I found one calf was not there.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Macheet nifattich al-ijil.
+macha-t n-ifattich-0 al-ijil
+go.PFV-1SG 3-look.for.IPFV-SG DEF-calf
+'I went to look for the calf.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Ana kula ruht.
+ana kula raah-t
+1SG.SBJ also get.lost.PFV-1SG
+'I also got lost.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Wa l-jamaa'a ma bagdaro barjooni.
+wa al-jamaa'a-PL ma b-agdar-u b-arja-u-ni
+and DEF-group.of.people-PL not 3-able.to.IPFV-PL 3-wait.IPFV-PL-1SG.OBJ
+'And the group (of people) was not able to wait for me.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Humman chaalo al-bagar wa faato.
+humman chaal-o al-bagar wa faat-o
+3PL.SBJ take.PFV-3PL DEF-cattle.COLL and leave.PFV-3PL
+'They took the cattle and left.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Wa khallo arba'a nafar achaan yagoodu yifattuchuuni.
+wa khall-o arba'a nafar achaan y-agood-u y-ifattuch-u-ni
+and leave.behind.PFV-3PL 4 type because 3-stay.IPFV-PL 3-look.for.IPFV-PL-3SG.M.OBJ
+'And left behind 4 people in order to stay and look for me.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Al-jamaa'a dool yifattuchu min al-fajur namma al-aasir.
+al-jamaa'a-PL dool y-ifattich-u min al-fajur namma al-aasir
+DEF-group.of.people-PL this.PL 3-look.for.IPFV-PL from DEF-morning until DEF-late.afternoon
+'This group (of people) was looking from the morning until late afternoon.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Wakit ma ligooni khalaas jo mugabbiliin.
+wakit ma ligi-o-ni khalaas ja-o mugabbil-iin
+time not find.PFV-3PL-1SG.OBJ finished come.PFV-3PL return.PST.PTCP-SG.M
+'So when they did not find me, they came while they were returning.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Jo jambi bigabbulu al-bahar.
+ja-o jamb-i b-igabbil-u al-bahar
+come.PFV-3PL next.to-1SG.OBJ 3-return.IPFV-PL DEF-river
+'They came next to me, they were returning (to) the river.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Wa gaa'idiin buguulu : Al-zool da ma ligiinaah.
+wa gaa'id-iin b-uguul-u : al-zool da ma ligi-na-h
+and stay.PRS.PTCP-PL 3-say.IPFV-PL : DEF-person this.SG.M not find.PFV-1PL-3SG.M.OBJ
+'And (they) were saying: this person, we did not find him.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Khalaas aniina nigabbulu.
+khalaas aniina n-igabbil-u
+finished 1PL.SBJ 1-return.IPFV-PL
+'So we will return.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Ma binlagi leena.
+ma b-inlagi-0 le-na
+not 3-be.findable.IPFV-SG to-1PL.OBJ
+'He was not findable by us/We couldn't find him.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Ana simi'tuhum.
+ana simi'-t-hum
+1SG.SBJ hear.PFV-1SG-3PL.OBJ
+'I heard them.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Wa ga'adt fi l-almi.
+wa ga'ad-t fi al-almi
+and stay.PFV-1SG in DEF-water
+'And I was at the water.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Wa gata't al-bahar.
+wa gata'-t al-bahar
+and cut.PFV-1SG DEF-river
+'And I crossed the river.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Jiit leehum.
+ja-t le-hum
+come.PFV-1SG to-3PL.OBJ
+'I came to them.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Wa min al-bakaan daak aniina rukhna ruwaakha haggit sitte saa'aat hatta wisilna bakaan al-jamaa'a macho nazzalo.
+wa min al-bakaan daak aniina raakh-na ruwaakha hagg-t sitte saa'a-PL hatta wisil-na bakaan al-jamaa'a-PL macha-o nazzal-o
+and from DEF-place that.3SG.M 3PL.SBJ walk.PFV-1PL walk belong-COMP 6 hour-PL until arrive.PFV-1PL place DEF-group.of.people-PL go.PFV-3PL descend.PFV-3PL
+'And from that place we walked a hike of 6 hours until we arrived at the place the group (of people) went down to (made camp).'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Al-jamaa'a kulluhum jo lammo fi daraana wa gaalo : Kaffaara.
+al-jamaa'a-PL kullu-hum ja-o lamma-o fi dara-na wa gaal-o : Kaffaara
+DEF-group.of.people-PL all-3PL.POSS come.PFV-3PL meet.PFV-3PL at men.meeting.place-1PL.POSS and say.PFV-3PL : payment.for.wrong
+'The group (of people) all came and met at our meeting place and said: So sorry.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Allah najjaak minha.
+Allah najja-0-k min-ha
+God save.PFV-3SG.M-2SG.M.OBJ from-3SG.F.OBJ
+'God saved you from it.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Kan ma ke al-bakaan da khatari marra waahid.
+kan ma ke al-bakaan da khatari marra waahid
+if not like.that DEF-place this.SG.M dangerous times one
+'If not, this place is extremely dangerous.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Kulla chadar wa almi bas.
+kulla chadar wa almi bas
+all tree.COLL and water only
+'All trees and water only.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Min al-bakaan daak rukhna macheena al-hille.
+min al-bakaan daak raakh-na macha-na al-hille
+from DEF-place that.SG.M walk.PFV-1PL go.PFV-1PL DEF-village
+'From that place we walked and went (to) the village.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Bi'na akil.
+baa'-na akil
+buy.PFV-1PL food
+'We bought food.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Wa hatta min daak battaan rukhna chahar wa khamistaachar yoom.
+wa hatta min daak battaan raakh-na chahar wa khamistaachar yoom
+and until from there again walk.PFV-1PL month and 15 day
+'And then from there again we walked a month and 15 days.'
+
+Source: a
+Vetted: t
+Judgment: g
+Phenomena: Corpus
+Wa wassalna Bangui.
+wa wassal-na Bangui
+and arrive.PFV-1PL Bangui
+'And we arrived (at) Bangui.'
+

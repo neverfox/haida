@@ -1,0 +1,18 @@
+;;; -*- Mode: TDL; Coding: utf-8 -*-
+Singular-lex := Singular-lex-rule.
+
+indef_noun-lex := indef_noun-lex-rule.
+
+object_marker-no-lex-drop-lex := object_marker-no-lex-drop-lex-rule.
+
+indef_adj-lex := indef_adj-lex-rule.
+
+obj_marker-lex-dropped := object_marker-lex-drop.
+
+pred_adj-lex := pred_adj-lex-rule.
+
+pred_prep := pred-prep-lex-rule.
+
+;attr_prep := attr-prep-lex-rule.
+
+prep_no_suffix := prep_no_suf-lex-rule.
