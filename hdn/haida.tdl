@@ -348,7 +348,8 @@ ditr-ctrl-verb-lex := main-verb-lex & ditrans-second-arg-control-lex-item &
 	     #comps2 &
 	     [ OPT -,
 	       LOCAL.CAT [ HEAD adp,
-			   VAL.COMPS < > ]] > ].
+			   VAL.COMPS < > ]] >,
+    INFLECTED.TRANSITIVE-VERB-FLAG +].
 
 sentential-verb-lex := main-verb-lex & clausal-second-arg-trans-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
