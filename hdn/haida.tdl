@@ -353,6 +353,10 @@ itr-verb-lex := verb-lex.
 
 itr-nom-verb-lex := itr-verb-lex & nom-intransitive-verb-lex.
 
+<<<<<<< 4bbc85976331516b68157a84b098f9f87cf643b3
+=======
+
+>>>>>>> 9bfdef315a4241dab2da9fa97bd91438f264e317
 ditr-ctrl-verb-lex := main-verb-lex & ditrans-second-arg-control-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps1, #comps2 >,
     ARG-ST < [ ],

@@ -123,7 +123,7 @@ naa%n := inalienable-noun-lex &
 
 gud := 3p-lpot-pron-noun-lex &
   [ STEM < "gud" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_there_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
 
 ;;; Adjectives
 
