@@ -30,7 +30,8 @@ head :+ [ INF bool,
     PRD bool,
     NEGATED luk,
     FORM form,
-    WH-EMB bool ].
+    WH-EMB bool,
+    PRON bool ].
 
 cat :+ [ INT bool ].
 
@@ -203,14 +204,27 @@ no-evid := evid.
 ;;; Nouns
 
 noun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
-  [ SYNSEM.LOCAL.CAT.VAL [ SPR < #spr &
-                                 [ LOCAL.CAT.HEAD det ] >,
-                           COMPS < >,
-                           SUBJ < >,
-                           SPEC < > ],
+  [ SYNSEM.LOCAL.CAT [ HEAD.PRON -,
+                       VAL [ SPR < #spr &
+                                   [ LOCAL.CAT.HEAD det ] >,
+                             COMPS < >,
+                             SUBJ < >,
+                             SPEC < > ] ],
+    ARG-ST < #spr > ].
+
+pronoun-lex := basic-noun-lex & basic-one-arg & no-hcons-lex-item & non-mod-lex-item &
+  [ SYNSEM.LOCAL.CAT [ HEAD.PRON +,
+                       VAL [ SPR < #spr &
+                                   [ LOCAL.CAT.HEAD det ] >,
+                             COMPS < >,
+                             SUBJ < >,
+                             SPEC < > ] ],
     ARG-ST < #spr > ].
 
 no-spr-noun-lex := noun-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
+
+no-spr-pronoun-lex := pronoun-lex &
   [ SYNSEM.LOCAL.CAT.VAL.SPR < [ OPT + ] > ].
 
 ; Nouns which cannot take specifiers mark their SPR requirement
@@ -242,9 +256,9 @@ acc-pron-noun-lex := no-spr-noun-lex &
 2sg-nom-pron-noun-lex := nom-pron-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
 
-3p-hpot-pron-noun-lex := no-spr-noun-lex &
+3p-hpot-pron-noun-lex := no-spr-pronoun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY high,
-                                       PERNUM 3rd ] ].
+                                         PERNUM 3rd ] ].
 
 1sg-acc-pron-noun-lex := acc-pron-noun-lex &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 1sg ].
@@ -339,7 +353,6 @@ itr-verb-lex := verb-lex.
 
 itr-nom-verb-lex := itr-verb-lex & nom-intransitive-verb-lex.
 
-;; TODO: need to a) stop runaway rule error and b) make third argument a PP
 ditr-ctrl-verb-lex := main-verb-lex & ditrans-second-arg-control-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps1, #comps2 >,
     ARG-ST < [ ],
@@ -618,9 +631,9 @@ adposition-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-it
              LOCAL [ CONT.HOOK [ XARG #xarg,
                                  INDEX #arg0 ],
                      CAT [ POSTHEAD -,
-			   HEAD.MOD < [ LOCAL [ CAT [ HEAD noun,
-                                                      VAL.SPR cons ],
-                                                CONT.HOOK.INDEX #xarg ]] >,
+			   HEAD.MOD < [ LOCAL [ CAT [ HEAD noun & [ PRON - ],
+                                    VAL.SPR cons ],
+                              CONT.HOOK.INDEX #xarg ]] >,
                       VAL [ SPR < >,
                             COMPS < [ LOCAL [ CAT [ HEAD noun,
                                                     VAL.SPR < > ],
