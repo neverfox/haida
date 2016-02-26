@@ -441,6 +441,8 @@ inceptive-aux-lex := arg-comp-aux-with-pred &
   [ SYNSEM.LOCAL [ CONT.HOOK.INDEX.E.ASPECT inceptive,
                    CAT.VAL.COMPS.FIRST.LOCAL.CAT.HEAD.FORM finite ] ].
 
+subj-raising-aux-lex := trans-first-arg-raising-lex-item & arg-comp-aux.
+
 ;;; Copulas
 
 copula-verb-lex := basic-verb-lex-super & trans-first-arg-raising-lex-item-2 & verb-lex &
@@ -894,7 +896,7 @@ int-lex-rule := int_tense-rule-dtr & question-lex-rule-super &
 decl-lex-rule := question-lex-rule-super & tense-rule-dtr & topic-change-rule-dtr &
   [ SYNSEM.LOCAL.CAT.INT - ].
 
-int_tense-lex-rule-super := add-only-no-ccont-rule &
+int_tense-lex-rule-super := add-only-no-ccont-rule & same-neg-sat-lex-rule &
   [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG +,
                 NUM-FLAG #num,
                 FUT-FLAG #fut,
@@ -934,7 +936,7 @@ tc-lex-rule := topic-change-lex-rule-super.
 
 ; constrained for LIGHT +, high potency compliment and low potency, 3p subject -KP
 
-context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase &
+context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase & 
   [ HEAD-DTR.SYNSEM [LIGHT +,
          LOCAL.CAT.VAL [SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY low,
                                                                          PERNUM 3rd ],
