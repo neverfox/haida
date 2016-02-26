@@ -189,6 +189,7 @@ no-aspect := aspect.
 ;;; Mood
 
 future := mood.
+no-mood := mood.
 
 ;;; Evidential
 

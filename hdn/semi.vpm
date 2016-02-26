@@ -91,7 +91,8 @@ E.ASPECT : ASPECT
 
 E.MOOD : MOOD
   future <> future
-  * <> *
+  * >> no-mood
+  no-mood << [e]
 
 E.EVID : EVID
   evidential <> evidential
