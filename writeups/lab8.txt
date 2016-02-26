@@ -402,10 +402,10 @@ My grandmother get.burned-NF 1sg say-PST
 `I said that my grandmother got burned.'
 
 ##### Current Testsuite Coverage
-Baseline Coverage:
+Baseline Coverage: 79.4%
 Current Coverate: 79.4%
 
-Baseline Overgeneration:
+Baseline Overgeneration: 10.0%
 Current Overgeneration: 10.0%
 
 ##### Current Corpus Coverage
