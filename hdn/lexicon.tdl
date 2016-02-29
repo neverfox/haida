@@ -261,13 +261,17 @@ qaaguhlaa%2Eaa := itr-nom-verb-lex &
   [ STEM < "7isdaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_take_v_rel" ].
 
-gudang_2 := prop-sent-verb-lex &
-  [ STEM < "gudang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
+7unsiid := prop-sent-verb-lex &
+  [ STEM < "7unsiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
 suu_2 := prop-sent-verb-lex &
   [ STEM < "suu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
+
+gudang_2 := prop-sent-verb-lex &
+  [ STEM < "gudang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
 
 kyaanang := ques-sent-verb-lex &
   [ STEM < "kyaanang" >,

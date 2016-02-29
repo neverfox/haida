@@ -6,13 +6,13 @@ dang hlaa cidiid-gang
 
 x taa-7wa-gang
 
-The dogs chase cars.
+x-ee car cidiid-7wa-gang
 
-The dogs don't chase cars.
+gam x-ee car cidiid-.ang-7wa-gang
 
-I think that you know that dogs chase cars.
+x car cidiid-7wa-gang dang 7unsiid-.ang hlaa gudang-gang
 
-I ask whether you know that dogs chase cars.
+x car cidiid-7wa-gang dang 7unsiid-gee-ga hlaa kyaanang-gang
 
 Cats and dogs chase cars.
 
