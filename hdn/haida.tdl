@@ -1005,12 +1005,15 @@ locative-pp-phrase := unary-phrase &
 
 int-clause := head-only & interrogative-clause &
   [ SYNSEM [ LOCAL.CAT [HEAD verb,
-            INT -,
-      VAL #val ],
-       NON-LOCAL.YNQ <! !> ],
-    HEAD-DTR.SYNSEM [ LOCAL.CAT [ INT +,
-          VAL #val ],
-          NON-LOCAL [ YNQ <! *top* !>,
+			INT -,
+			VAL #val ],
+	     NON-LOCAL.YNQ <! !>,
+	     NEG-SAT #negsat ],
+    HEAD-DTR.SYNSEM 
+	   [ NEG-SAT #negsat,
+	     LOCAL.CAT [ INT +,
+			 VAL #val ],
+	     NON-LOCAL [ YNQ <! *top* !>,
 		      SLASH <! !> ]]].
 
 ; Wh-initial phrase structure rules

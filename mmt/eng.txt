@@ -40,7 +40,9 @@ Dogs chase cars and cats chase dogs.
 ; 288 generation results
 Cats chase dogs and sleep.
 
-; 8 generation results
+; 4 generation results
+; same explanation as dogs chase cars
+; good
 Do cats chase dogs?
 
 ; doesn't generate
