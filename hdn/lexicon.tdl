@@ -257,7 +257,7 @@ qaaguhlaa%2Eaa := itr-nom-verb-lex &
   [ STEM < "qaaguhlaa.aa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go+out_v_rel" ].
 
-taa := itr-nom-verb-lex &
+taa := tr-verb-lex &
   [ STEM < "taa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
@@ -358,7 +358,7 @@ dii_2 := inalienable-poss-pron-det-lex &
 
 gam := neg-adv-lex &
   [ STEM < "gam" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_neg_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
 gah := neg-adv-lex &
   [ STEM < "gah" >,
