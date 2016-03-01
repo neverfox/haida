@@ -189,10 +189,6 @@ qing := tr-verb-lex &
   [ STEM < "qing" >,
     SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
 
-taa := tr-verb-lex &
-  [ STEM < "taa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
-
 daang := tr-verb-lex &
   [ STEM < "daang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_throw+away_v_rel" ].
@@ -260,6 +256,10 @@ riihlgii := itr-nom-verb-lex &
 qaaguhlaa%2Eaa := itr-nom-verb-lex &
   [ STEM < "qaaguhlaa.aa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go+out_v_rel" ].
+
+taa := itr-nom-verb-lex &
+  [ STEM < "taa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
 7iij_1 := tr-verb-lex &
   [ STEM < "7iij" >,
@@ -358,7 +358,7 @@ dii_2 := inalienable-poss-pron-det-lex &
 
 gam := neg-adv-lex &
   [ STEM < "gam" >,
-    SYNSEM.LKEYS.KEYREL.PRED "neg_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "_neg_a_rel" ].
 
 gah := neg-adv-lex &
   [ STEM < "gah" >,

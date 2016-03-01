@@ -1,19 +1,27 @@
 ; 1 generation result
+; good
 Dogs sleep.
 
 ; 4 generation results
+; 2 from word order x 2 from whether the verb gets plural-obj-suffix or plural-subj-suffix
+; good
 Dogs chase cars.
 
 ; 4 generation results
+; 2 wo x 2 you is sg or pl
+; good
 I chase you.
 
 ; doesn't generate
+; changed eat to itr-nom. question outo n gopost
 Dogs eat.
 
 ; 4 generation results
+; same explanation as dogs chase cars
+; good
 The dogs chase cars.
 
-; the English sentence doesn't parse
+; problem with neg_rel- question out on gopost
 The dogs don't chase cars.
 
 ; Edge allowance overrun error
