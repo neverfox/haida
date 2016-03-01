@@ -142,4 +142,4 @@
 ; output all complete generated results
 ; (setf *bypass-equality-check* t)
 
-(setf *translate-grid* '(:shu :eng))
+(setf *translate-grid* '(:shu :eng :hdn))
