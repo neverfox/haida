@@ -1,45 +1,67 @@
+; 1 generation result
 Dogs sleep.
 
+; 4 generation results
 Dogs chase cars.
 
+; 4 generation results
 I chase you.
 
+; doesn't generate
 Dogs eat.
 
+; 4 generation results
 The dogs chase cars.
 
+; the English sentence doesn't parse
 The dogs don't chase cars.
 
+; Edge allowance overrun error
 I think that you know that dogs chase cars.
 
+; 2304 generation results!
 I ask whether you know that dogs chase cars.
 
+; 8 generation results
 Cats and dogs chase cars.
 
+; 4608 generation results :/
 Dogs chase cars and cats chase dogs.
 
+; 288 generation results
 Cats chase dogs and sleep.
 
+; 8 generation results
 Do cats chase dogs?
 
+; doesn't generate
 Hungry dogs eat.
 
+; doesn't generate
 Dogs eat quickly.
 
+; generates one correctly!
 The dogs are hungry.
 
+; Neither Enrico nor Lachler have the Haida for `park`
 The dogs are in the park.
 
+; 4 generation results (word order and plural)
 The dogs are the cats.
 
+; 2 generation results (one is negative)
 Who sleeps?
 
+; 4 generation results (2 negative)
 What do the dogs chase?
 
+; 192 generation results
 What do you think the dogs chase?
 
+; 32 generation results
 Who asked what the dogs chase?
 
+; 64 generations results
 I asked what the dogs chased.
 
 The dog's car sleeps.

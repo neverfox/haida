@@ -49,6 +49,10 @@ x := alienable-noun-lex &
   [ STEM < "x" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
 
+duuj := alienable-noun-lex &
+  [ STEM < "duuj" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
+
 taanaanee := alienable-noun-lex &
   [ STEM < "taanaanee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_smokehouse_n_rel" ].
@@ -151,6 +155,10 @@ xaw%2Eula_2 := attrib-adj-lex &
   [ STEM < "’laa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_good_a_rel" ].
 
+q’wiid_2 := attrib-adj-lex &
+  [ STEM < "q’wiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hungry_a_rel" ].
+
 t’iij := attrib-adj-lex &
   [ STEM < "t’iij" >,
     SYNSEM.LKEYS.KEYREL.PRED "_some+of_a_rel" ].
@@ -240,6 +248,10 @@ xaw%2Eula_1 := itr-nom-verb-lex &
 ’laa_2 := itr-nom-verb-lex &
   [ STEM < "’laa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_good_a_rel" ].
+
+q’wiid_1 := itr-nom-verb-lex &
+  [ STEM < "q’wiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hungry_a_rel" ].
 
 riihlgii := itr-nom-verb-lex &
   [ STEM < "riihlgii" >,
@@ -355,6 +367,10 @@ gah := neg-adv-lex &
 neesdagaang%2Ean := int-adverb-lex &
   [ STEM < "neesdagaang.an" >,
     SYNSEM.LKEYS.KEYREL.PRED "_right+away_a_rel" ].
+
+cangala := int-adverb-lex &
+  [ STEM < "cangala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_quickly_a_rel" ].
 
 7waagyaan := scop-sent-adv-lex &
   [ STEM < "7waagyaan" >,
