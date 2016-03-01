@@ -21,7 +21,8 @@ Dogs eat.
 ; good
 The dogs chase cars.
 
-; problem with neg_rel- question out on gopost
+; 1 generation
+; good
 The dogs don't chase cars.
 
 ; Edge allowance overrun error
