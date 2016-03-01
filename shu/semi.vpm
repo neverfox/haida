@@ -50,19 +50,6 @@ PNG.NUM : NUM
   Singular <> sg
   * <> *
 
-PNG.GEND : GEND
-  gender <> *
-
-;E.TENSE : TENSE
-; tense <> *
-;
-;E.ASPECT : ASPECT
-;  Imperfective <> imperfect
-;  Perfective <> perfect
-;  Perfective << *
-;  * >> no-aspect
-;  no-aspect << [e]
-
 E.TENSE E.ASPECT : TENSE ASPECT
   tense imperfective <> * imperfect
   tense perfective <> * perfect
@@ -71,8 +58,17 @@ E.TENSE E.ASPECT : TENSE ASPECT
   tense imperfective << present *
   tense imperfective << future *
   tense imperfective << * *
-;  tense imperfective << tense *
-;  tense no-aspect << * *
+
+; E.TENSE : TENSE
+;  tense <> *
+
+; E.ASPECT : ASPECT
+;   Imperfective <> imperfect
+;   Perfective <> perfect
+;   Perfective << *
+;   * >> no-aspect
+;   no-aspect << [e]
+
 
 E.MOOD : MOOD
   mood <> *
