@@ -64,6 +64,8 @@ Who asked what the dogs chase?
 ; 64 generations results
 I asked what the dogs chased.
 
+; 2 generation results (one not definite)
 The dog's car sleeps.
 
+; 8 generation results
 My dogs sleep.
