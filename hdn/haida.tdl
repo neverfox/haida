@@ -497,7 +497,8 @@ question-clitic-lex := no-hcons-lex-item &
             SPEC < > ],
       HEAD adv & [ MOD < [ LIGHT +,
                L-PERIPH +,
-               LOCAL.CAT.VAL.SPR < > ] > ]],
+               LOCAL.CAT [ HEAD noun,
+			   VAL.SPR < > ]] > ]],
         CONT.RELS <! !> ],
       NON-LOCAL.YNQ <! *top* !>]].
 
@@ -1124,15 +1125,57 @@ np2-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase &
 ;;; Coordination Strategy 3
 
 vp3-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "3" ].
+  [ SYNSEM [ LOCAL [ COORD-STRAT "3",
+		     CAT [ INT #int,
+			   MC #mc,
+			   HEAD.INF #inf ]],
+	     NEG-SAT #negsat],
+    LCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
+				    MC #mc,
+				    HEAD.INF #inf ],
+			NEG-SAT #negsat],
+    RCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
+				    MC #mc,
+				    HEAD.INF #inf ],
+			NEG-SAT #negsat ]].
 
 vp3-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase &
-  [ SYNSEM.LOCAL.COORD-STRAT "3" ].
+    [ SYNSEM [ LOCAL [ COORD-STRAT "3",
+		       CAT [ INT #int,
+			     MC #mc,
+			     HEAD.INF #inf ]],
+	     NEG-SAT #negsat],
+    NONCONJ-DTR.SYNSEM [ LOCAL [ COORD-STRAT "3",
+				 CAT [ INT #int,
+				       MC #mc,
+				       HEAD.INF #inf ]],
+			 NEG-SAT #negsat]].
 
 ;;; Coordination Strategy 3
 
 s3-top-coord-rule := basic-s-top-coord-rule & apoly-top-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "3" ].
+  [ SYNSEM [ LOCAL [ COORD-STRAT "3",
+		     CAT [ INT #int,
+			   MC #mc,
+			   HEAD.INF #inf ]],
+	     NEG-SAT #negsat],
+    LCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
+				    MC #mc,
+				    HEAD.INF #inf ],
+			NEG-SAT #negsat],
+    RCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
+				    MC #mc,
+				    HEAD.INF #inf ],
+			NEG-SAT #negsat ]].
 
 s3-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
-  [ SYNSEM.LOCAL.COORD-STRAT "3" ].
+    [ SYNSEM [ LOCAL [ COORD-STRAT "3",
+		       CAT [ INT #int,
+			     MC #mc,
+			     HEAD.INF #inf ]],
+	     NEG-SAT #negsat],
+    NONCONJ-DTR.SYNSEM [ LOCAL [ COORD-STRAT "3",
+				 CAT [ INT #int,
+				       MC #mc,
+				       HEAD.INF #inf ]],
+			 NEG-SAT #negsat]].

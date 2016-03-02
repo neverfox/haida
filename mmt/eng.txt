@@ -35,12 +35,20 @@ I think that you know that dogs chase cars.
 I ask whether you know that dogs chase cars.
 
 ; 8 generation results
+; 2 for plural subj/obj x 2 for rahl vs 7isgyaan x 2 for wo
+; good
 Cats and dogs chase cars.
 
-; 4608 generation results :/
+; 16 generation results 
+; constrained neg-sat, MC, INT and INF on s-coord rules
+; for some reason we were getting the question clitic at the end of the sentence. i constrained the clitic
+; to take a mod that is head noun. i ran tsdb and this didn't have an impact on our performance.
+; good
 Dogs chase cars and cats chase dogs.
 
-; 288 generation results
+; 2generation results
+; constrained neg-sat, MC, INT and INF on vp-coord rules
+; good
 Cats chase dogs and sleep.
 
 ; 4 generation results
@@ -52,8 +60,10 @@ Do cats chase dogs?
 ; 2 from whether the verb gets plural-obj-suffix or plural-subj-suffix x 2 from DEF-INDEF
 Hungry dogs eat.
 
-; doesn't generate
+; 6 results
+; 2 from plural obj vs. plural subj x 3 from adverb on the V, VP and S
 ; added constraints to head-adj-int and adj-head-int to ccopy up neg-sat, INT, created same-mc phrase and added as supertype to all phrase types
+; good
 Dogs eat quickly.
 
 ; generates one correctly!
