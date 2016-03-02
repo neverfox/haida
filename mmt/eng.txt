@@ -78,9 +78,10 @@ Who asked what the dogs chase?
 ; 56 generations results
 I asked what the dogs chased.
 
-; 2 generation results
-; need to require the -DEF because the COG-ST is uniq+fam+act
+; 1 generation result
+; good
 The dog's car sleeps.
 
-; 8 generation results (4 are the result of the -DEF problem)
+; 2 generation results (2 forms of my)
+; good
 My dogs sleep.

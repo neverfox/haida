@@ -31,7 +31,8 @@ head :+ [ INF bool,
     NEGATED luk,
     FORM form,
     WH-EMB bool,
-    PRON bool ].
+    PRON bool,
+    DEF bool ].
 
 cat :+ [ INT bool ].
 
@@ -572,10 +573,12 @@ poss-pron-det-lex := determiner-lex-supertype &
                                                                           SPECI + ] ] ] ].
 
 alienable-poss-pron-det-lex := poss-pron-det-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY +].
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL [ CAT.HEAD.DEF +,
+                                            CONT.HOOK.INDEX.PNG.ALIENABILITY + ] ].
 
 inalienable-poss-pron-det-lex := poss-pron-det-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY -].
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL [ CAT.HEAD.DEF -,
+                                            CONT.HOOK.INDEX.PNG.ALIENABILITY - ] ].
 
 ;;; Type for adverbs
 
@@ -708,10 +711,12 @@ cog-st-lex-rule-super := add-only-no-ccont-rule &
                       FIN-FLAG #fin  ] ] ].
 
 indef-lex-rule := cog-st-lex-rule-super & const-lex-rule &
-  [ SYNSEM.OPT-CS type-id ].
+  [ SYNSEM [ OPT-CS type-id,
+             LOCAL.CAT.HEAD.DEF - ] ].
 
 def-lex-rule := cog-st-lex-rule-super & infl-lex-rule &
-  [ SYNSEM.OPT-CS uniq+fam+act ].
+  [ SYNSEM [ OPT-CS uniq+fam+act,
+             LOCAL.CAT.HEAD.DEF + ] ].
 
 negation-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule & modal-2-rule-dtr & modal-3-rule-dtr & question-rule-dtr & topic-change-rule-dtr &
   [ INFLECTED #infl,
