@@ -12,8 +12,10 @@ Dogs chase cars.
 ; good
 I chase you.
 
-; doesn't generate
-; changed eat to itr-nom. question outo n gopost
+; 2 results
+; 2 from whether the verb gets plural-obj-suffix or plural-subj-suffix
+; added pro-drop and eat-intrans transfer rules
+; good
 Dogs eat.
 
 ; 4 generation results
@@ -46,10 +48,12 @@ Cats chase dogs and sleep.
 ; good
 Do cats chase dogs?
 
-; doesn't generate
+; 2 results
+; 2 from whether the verb gets plural-obj-suffix or plural-subj-suffix x 2 from DEF-INDEF
 Hungry dogs eat.
 
 ; doesn't generate
+; added constraints to head-adj-int and adj-head-int to ccopy up neg-sat, INT, created same-mc phrase and added as supertype to all phrase types
 Dogs eat quickly.
 
 ; generates one correctly!
