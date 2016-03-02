@@ -46,14 +46,16 @@ non-local :+
 
 basic-verb-lex :+ [ SYNSEM.NEG-SAT na-or-+ ].
 
-basic-head-comp-phrase :+ [ HEAD-DTR.SYNSEM [ NEG-SAT #ns,
+basic-head-comp-phrase :+
+  [ HEAD-DTR.SYNSEM [ NEG-SAT #ns,
                       LOCAL.CAT.MC #mc ],
     SYNSEM [ NEG-SAT #ns,
              LOCAL.CAT [ MC #mc,
                          VC #vc ] ],
     NON-HEAD-DTR.SYNSEM.LOCAL.CAT.VC #vc ].
 
-basic-head-subj-phrase :+ [ SYNSEM.NEG-SAT #ns,
+basic-head-subj-phrase :+
+  [ SYNSEM.NEG-SAT #ns,
     HEAD-DTR.SYNSEM.NEG-SAT #ns ].
 ; commented out for negation bug fix - KP
 ; clause :+ [ SYNSEM.NEG-SAT na-or-+ ].
@@ -68,9 +70,15 @@ basic-binary-phrase :+
     [SYNSEM [ L-PERIPH -,
         NON-LOCAL.YNQ [ LIST #middle,
                                                                 LAST #last]]] > ].
-head-adj-int-phrase :+
- [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.MOD < [ L-PERIPH #periph ]>,
-   HEAD-DTR.SYNSEM.L-PERIPH #periph ].
+head-adj-int-phrase :+ same-int-phrase &
+ [ SYNSEM.NEG-SAT #negsat,
+   NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.MOD < [ L-PERIPH #periph ]>,
+   HEAD-DTR.SYNSEM [ NEG-SAT #negsat,
+		     L-PERIPH #periph ]].
+
+adj-head-int-phrase :+ same-int-phrase &
+  [ SYNSEM.NEG-SAT #negsat,
+    HEAD-DTR.SYNSEM [ NEG-SAT #negsat ]].
 
 basic-zero-arg :+ [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
 basic-one-arg :+ [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
