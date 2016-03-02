@@ -966,9 +966,11 @@ subj-head-phrase := decl-head-subj-phrase & same-int-phrase & head-final &
 
 bare-np-phrase := basic-bare-np-phrase & same-periph-unary-phrase & same-ynq-unary-phrase & head-valence-phrase &
   [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !>,
-    HEAD-DTR.SYNSEM [ OPT-CS #optcs,
-                      LOCAL [ CAT.VAL.SPR < unexpressed >,
-                              CONT.HOOK.INDEX.COG-ST #optcs ] ] ].
+    INFLECTED.COG-ST-FLAG #cogst,
+    HEAD-DTR [ SYNSEM [ OPT-CS #optcs,
+                        LOCAL [ CAT.VAL.SPR < unexpressed >,
+                                CONT.HOOK.INDEX.COG-ST #optcs ] ],
+               INFLECTED.COG-ST-FLAG #cogst ] ].
 
 same-periph-unary-phrase := unary-phrase &
  [ SYNSEM.L-PERIPH #periph,
