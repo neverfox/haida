@@ -61,24 +61,26 @@ The dogs are in the park.
 ; good
 The dogs are the cats.
 
-; 2 generation results (one is negative)
+; 1 generation result
+; good
 Who sleeps?
 
-; 4 generation results (2 negative)
+; 2 generation results (pl subj/obj)
+; good
 What do the dogs chase?
 
-; 192 generation results
+; 48 generation results
 What do you think the dogs chase?
 
-; 32 generation results
+; 16 generation results
 Who asked what the dogs chase?
 
-; 64 generations results
+; 56 generations results
 I asked what the dogs chased.
 
 ; 2 generation results
 ; need to require the -DEF because the COG-ST is uniq+fam+act
 The dog's car sleeps.
 
-; 8 generation results
+; 8 generation results (4 are the result of the -DEF problem)
 My dogs sleep.

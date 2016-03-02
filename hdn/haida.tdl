@@ -1048,15 +1048,19 @@ emb-wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-fin
                            NON-LOCAL.QUE < ! ref-ind ! > ] ].
 
 extracted-comp-phrase := basic-extracted-comp-phrase & same-ynq-unary-phrase & same-int-phrase &
-  [ SYNSEM.LOCAL.CAT.HEAD verb,
-    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ cons ].
+  [ SYNSEM [ LOCAL.CAT.HEAD verb,
+             NEG-SAT #negsat ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT.VAL.SUBJ cons,
+                      NEG-SAT #negsat ] ].
 
 extracted-subj-phrase := basic-extracted-subj-phrase & same-ynq-unary-phrase & same-int-phrase &
   [ C-CONT [ RELS <! !>,
        HCONS <! !>,
        ICONS <! !> ],
-    SYNSEM.LOCAL.CAT.HEAD verb,
-    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS olist ].
+    SYNSEM [ LOCAL.CAT.HEAD verb,
+             NEG-SAT #negsat ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT.VAL.COMPS olist,
+                      NEG-SAT #negsat ] ].
 
 neg-adj-head-scop-phrase := adj-head-scop-phrase & same-int-phrase &
   [ SYNSEM.NEG-SAT +,
