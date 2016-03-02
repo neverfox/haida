@@ -21,9 +21,10 @@ Dogs eat.
 ; good
 The dogs chase cars.
 
-; 1 generation
+; 4 generation results
+; same explanation as dogs chase cars
 ; good
-The dogs don't chase cars.
+The dogs dont chase cars.
 
 ; Edge allowance overrun error
 I think that you know that dogs chase cars.

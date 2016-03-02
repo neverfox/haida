@@ -14,27 +14,27 @@ x car cidiid-7wa-gang dang 7unsiid-.ang hlaa gudang-gang
 
 x car cidiid-7wa-gang dang 7unsiid-gee-ga hlaa kyaanang-gang
 
-Cats and dogs chase cars.
+duuj 7isgyaan x car cidiid-7wa-gang
 
-Dogs chase cars and cats chase dogs.
+x car cidiid-7wa-gang=gyaan duuj x cidiid-7wa-gang
 
-Cats chase dogs and sleep.
+duuj x cidiid-7wa-gang=gyaan ’laa q’a-7wa-gang
 
 x gu duuj cidiid-7wa
 
-Hungry dogs eat.
+x q’wiid taa-7wa-gang
 
 Dogs eat quickly.
 
-The dogs are hungry.
+x-ee q’wiid-gang
 
 The dogs are in the park.
 
-The dogs are the cats.
+x-ee duuj-ee 7iij-7wa-gang
 
-Who sleeps?
+giisd gu q’a
 
-What do the dogs chase?
+guus gu x-ee cidiid-7wa
 
 What do you think the dogs chase?
 
@@ -42,6 +42,6 @@ Who asked what the dogs chase?
 
 I asked what the dogs chased.
 
-The dog's car sleeps.
+x-ee gyaa car-ee q’a-gang
 
-My dogs sleep.
+gyaagan x-ee q’a-7wa-gang
