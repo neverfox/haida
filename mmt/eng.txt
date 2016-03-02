@@ -54,10 +54,11 @@ Dogs eat quickly.
 ; generates one correctly!
 The dogs are hungry.
 
-; Neither Enrico nor Lachler have the Haida for `park`
+; Neither Enrico nor Lachler have the Haida for `park` or `in.the.park`
 The dogs are in the park.
 
 ; 4 generation results (word order and plural)
+; good
 The dogs are the cats.
 
 ; 2 generation results (one is negative)
@@ -75,7 +76,8 @@ Who asked what the dogs chase?
 ; 64 generations results
 I asked what the dogs chased.
 
-; 2 generation results (one not definite)
+; 2 generation results
+; need to require the -DEF because the COG-ST is uniq+fam+act
 The dog's car sleeps.
 
 ; 8 generation results
