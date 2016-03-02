@@ -939,11 +939,13 @@ tc-lex-rule := topic-change-lex-rule-super.
 
 ; constrained for LIGHT +, high potency compliment and low potency, 3p subject -KP
 
-context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase & 
-  [ HEAD-DTR.SYNSEM [LIGHT +,
-         LOCAL.CAT.VAL [SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY low,
-                                                                         PERNUM 3rd ],
-            COMPS high-pot-list ] ]].
+context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase &
+[ SYNSEM.NEG-SAT #negsat,
+  HEAD-DTR.SYNSEM [ NEG-SAT #negsat,
+  LIGHT +,
+  LOCAL.CAT.VAL [SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY low,
+							PERNUM 3rd ],
+		 COMPS high-pot-list ] ]].
 
 ;Constraint on MC used to be part of matrix.tdl
 ;;it applies to all wo implementations, except for v2
@@ -953,10 +955,12 @@ comp-head-phrase := basic-head-1st-comp-phrase & head-final & same-int-phrase.
 ; created to handle optional compliments -KP
 
 context1-head-opt-comp-phrase := basic-head-opt-comp-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase  &
-  [ SYNSEM.LIGHT -,
-    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL [SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
-           COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [POTENCY low,
-                       PERNUM 3rd]]].
+[ SYNSEM [ LIGHT -,
+	   NEG-SAT #negsat ],
+  HEAD-DTR.SYNSEM[ NEG-SAT #negsat,
+		   LOCAL.CAT.VAL [SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
+				  COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [POTENCY low,
+									 PERNUM 3rd]]]].
 
 subj-head-phrase := decl-head-subj-phrase & same-int-phrase & head-final &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
