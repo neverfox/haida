@@ -71,10 +71,12 @@ basic-binary-phrase :+
         NON-LOCAL.YNQ [ LIST #middle,
                                                                 LAST #last]]] > ].
 head-adj-int-phrase :+ same-int-phrase & same-mc-phrase &
- [ SYNSEM [ NEG-SAT #negsat ],
+ [ SYNSEM [ NEG-SAT #negsat,
+            OPT-CS #opt-cs ],
    NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.MOD < [ L-PERIPH #periph ]>,
-   HEAD-DTR.SYNSEM [ NEG-SAT #negsat,
-		     L-PERIPH #periph ]].
+   HEAD-DTR.SYNSEM [ OPT-CS #opt-cs,
+                     NEG-SAT #negsat,
+                     L-PERIPH #periph ]].
 
 adj-head-int-phrase :+ same-int-phrase & same-mc-phrase &
   [ SYNSEM [ NEG-SAT #negsat ],
