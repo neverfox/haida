@@ -76,7 +76,8 @@ E.TENSE : TENSE
   present <> present
   nonpast <> nonpast
   past <> past
-  * <> *
+  * >> present
+  present << [e]
 
 E.ASPECT : ASPECT
   perfective <> perfective

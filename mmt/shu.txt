@@ -1,4 +1,5 @@
-; 2 generation results (1 ok, 1 past)
+; 1 generation
+; specified default tense = present
 kalib-PL y-unuum-u
 
 ; 8 generation results (4 are ok but 4 are past)
