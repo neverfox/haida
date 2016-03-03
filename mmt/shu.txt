@@ -1,11 +1,15 @@
 ; 1 generation
 ; specified default tense = present
+; good
 kalib-PL y-unuum-u
 
-; 8 generation results (4 are ok but 4 are past)
+; 4 generation results
+; good
 kalib-PL y-itaarid-u watiir-PL
 
-; 0 generation results
+; 2 generation results
+; added transfer rules pro-ins2 and pro-ins1, corrected pernum value on our 2sg-acc type (it was plural!)
+; good 
 ana n-itaarid-0-k
 
 ; error `Problem in create-liszt-fs-from-rels'.

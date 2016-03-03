@@ -283,7 +283,7 @@ acc-pron-lex := no-spr-pronoun-lex &
                                          PERNUM 3rd ] ] ].
 
 2sg-acc-pron-lex := acc-pron-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
 
 proper-noun-lex := no-spr-noun-lex.
 
