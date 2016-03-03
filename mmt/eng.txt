@@ -97,6 +97,6 @@ I asked what the dogs chased.
 ; good
 The dog's car sleeps.
 
-; 2 generation results (2 forms of my)
+; 4 generation results (multiple ways of expressing my)
 ; good
 My dogs sleep.

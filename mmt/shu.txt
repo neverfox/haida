@@ -1,43 +1,67 @@
+; 2 generation results (1 ok, 1 past)
 kalib-PL y-unuum-u
 
+; 8 generation results (4 are ok but 4 are past)
 kalib-PL y-itaarid-u watiir-PL
 
+; 0 generation results
 ana n-itaarid-0-k
 
+; error `Problem in create-liszt-fs-from-rels'.
 kalib-PL y-aakul-u
 
+; 8 generation results (4 ok, 4 past)
 al-kalib-PL y-itaarid-u watiir-PL
 
+; 8 generation results (4 ok, 4 past)
 al-kalib-PL ma y-itaarid-u watiir-PL
 
+; error `next-active-edge(): edge limit exhausted (see `*maximum-number-of-edges*')'.
 ana n-ahsib-0 kadar inta t-a'arif-0 kadar kalib-PL y-itaarid-u watiir-PL
 
+; error `next-active-edge(): edge limit exhausted (see `*maximum-number-of-edges*')'.
 ana n-as'al-0 kan inta t-a'arif-0 kadar kalib-PL y-itaarid-u watiir-PL
 
+; 16 generation results (8 ok, 8 past)
 biss-PL wa kalib-PL y-itaarid-u watiir-PL
 
+; 64 generation results
+; would be 16 and good without the spurious past versions because of the 2 verbs
 kalib-PL y-itaarid-u watiir-PL wa biss-PL y-itaarid-u kalib-PL
 
+; 8 generation results
+; would be 2 and good without the spurious past versions because of the 2 verbs
 biss-PL y-itaarid-u kalib-PL wa naam-o
 
+; 8 generation results
 biss-PL y-itaarid-u kalib-PL walla
 
+;  error `Problem in create-liszt-fs-from-rels'.
 kalib-PL jii'aan-PL y-aakul-u
 
+;  error `Problem in create-liszt-fs-from-rels'.
 kalib-PL y-aakul-u ajala
 
+; 2 generation results (1 ok, 1 past)
 al-kalib-PL jii'aan-PL
 
+; same as with English, no park
 al-kalib-PL fi al-naga'a
 
+; 8 generation results (4 ok, 4 past)
 al-kalib-PL al-biss-PL
 
+; 2 generation results (1 ok, 1 without EVID)
 yaatu y-unuum-0
 
+; 4 generation results (2 ok, 2 without EVID)
 al-kalib-PL y-itaarid-u chunu
 
+; 80 generation results (problems from past and EVID)
 inta t-ahsib-0 kadar al-kalib-PL y-itaarid-u chunu
 
+; 32 generation results
 yaatu sa'al-0 al-kalib-PL y-itaarid-u chunu
 
+; 288 generation results
 ana sa'al-t al-kalib-PL taarad-o chunu
