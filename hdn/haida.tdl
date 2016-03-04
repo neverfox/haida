@@ -504,16 +504,16 @@ non-ynq-lex-item := lex-item &
 
 question-clitic-lex := no-hcons-lex-item &
  [ SYNSEM [ LOCAL [ CAT [ POSTHEAD + ,
-      VAL [ SPR < >,
-            COMPS < >,
-            SUBJ < >,
-            SPEC < > ],
-      HEAD adv & [ MOD < [ LIGHT +,
-               L-PERIPH +,
-               LOCAL.CAT [ HEAD noun,
-         VAL.SPR < > ]] > ]],
-        CONT.RELS <! !> ],
-      NON-LOCAL.YNQ <! *top* !>]].
+			  VAL [ SPR < >,
+				COMPS < >,
+				SUBJ < >,
+				SPEC < > ],
+			  HEAD adv & [ MOD < [ LIGHT +,
+					       L-PERIPH +,
+					       LOCAL.CAT [ HEAD noun,
+							   VAL.SPR < > ]] > ]],
+		    CONT.RELS <! !> ],
+	    NON-LOCAL.YNQ <! *top* !>]].
 
 ;;; Others
 
