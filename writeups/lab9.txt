@@ -125,7 +125,7 @@ adj-head-int-phrase :+ same-int-phrase & same-mc-phrase & same-nf-phrase &
     HEAD-DTR.SYNSEM [ NEG-SAT #negsat ]].
 ```
 
-Furthermore, when attempting to translate `Dogs eat quickly`, we noticed that the `head-adj-int` rule was dropping `INT` and `MC` features, leading to incorrect inflection. We solved this by adding `same-int-phrase` to `head-adj-int` (and `adj-head-int`) and by creating a `same-mc-type` to add as well:
+Furthermore, when attempting to translate `Dogs eat quickly`, we noticed that the `head-adj-int` rule was dropping `INT` and `MC` features, causing interrogative tense and embedded clause suffixes to appear where they shouldn't. We solved this by adding `same-int-phrase` to `head-adj-int` (and `adj-head-int`) and by creating a `same-mc-type` to add as well:
 
 ```
 same-mc-phrase := headed-phrase &
@@ -133,7 +133,7 @@ same-mc-phrase := headed-phrase &
     HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
 ```
 
-We were also getting “spinning” in our embedded clauses from a failure to pass up our `NF` (non-factive) feature, so we created a rule for this identity:
+Embedded clauses were generating many thousands of results or maxing out from a failure to pass up our `NF` (non-factive) feature, for one thing, so we created a rule for `NF` identity:
 
 ```
 same-nf-phrase := headed-phrase &
@@ -141,25 +141,7 @@ same-nf-phrase := headed-phrase &
     HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.NF #nf ].
 ```
 
-We added these three identities as supertypes where seen above as well as the following:
-
-```
-comp-head-phrase := basic-head-1st-comp-phrase & head-final & same-int-phrase & same-mc-phrase & same-nf-phrase.
-
-subj-head-phrase := decl-head-subj-phrase & same-int-phrase & head-final & same-mc-phrase & same-nf-phrase &
-  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
-
-neg-adj-head-scop-phrase := adj-head-scop-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
-  [ SYNSEM.NEG-SAT +,
-    HEAD-DTR.SYNSEM.NEG-SAT -,
-    NON-HEAD-DTR neg-adv-lex ].
-
-scopal-adj-head-phrase := adj-head-scop-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
-  [ HEAD-DTR.SYNSEM.NEG-SAT +,
-    NON-HEAD-DTR scop-sent-adv-lex ].
-```
-
-We also had three embedding verbs of type `prop-sent-verb-lex`, which treated all three as having non-factive complements, when “know” actually takes a factive complement:
+For another thing, we also had three embedding verbs of type `prop-sent-verb-lex`, which treated all three as having non-factive complements, when “know” actually takes a factive complement, and there was no selection against infinitivals or interrogative tenses:
 
 ```
 prop-sent-verb-lex := sentential-verb-lex &
@@ -180,7 +162,7 @@ gudang_2 := prop-sent-verb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
 ```
 
-So we split the type up accordingly and changed the type of *suu* and *gudang*, also being sure to set `INF -` and `INT -`:
+So we split the type up accordingly and changed the type of *suu* and *gudang*, additionally selecting for proposition sentences that weren't infinitival or interrogative tense:
 
 ```
 prop-sent-verb-lex := sentential-verb-lex &
@@ -208,6 +190,24 @@ suu_2 := prop-non-fac-sent-verb-lex &
 gudang_2 := prop-non-fac-sent-verb-lex &
   [ STEM < "gudang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].                                    
+```
+
+We added `same-int-phrase & same-mc-phrase & same-nf-phrase` as supertypes on phrase types seen above, as well as the following:
+
+```
+comp-head-phrase := basic-head-1st-comp-phrase & head-final & same-int-phrase & same-mc-phrase & same-nf-phrase.
+
+subj-head-phrase := decl-head-subj-phrase & same-int-phrase & head-final & same-mc-phrase & same-nf-phrase &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
+
+neg-adj-head-scop-phrase := adj-head-scop-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
+  [ SYNSEM.NEG-SAT +,
+    HEAD-DTR.SYNSEM.NEG-SAT -,
+    NON-HEAD-DTR neg-adv-lex ].
+
+scopal-adj-head-phrase := adj-head-scop-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
+  [ HEAD-DTR.SYNSEM.NEG-SAT +,
+    NON-HEAD-DTR scop-sent-adv-lex ].
 ```
 
 ### Coordination
@@ -272,11 +272,11 @@ s3-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
 
 ### Definiteness
 
-We also had to find a way to eliminate translations of attributive adjective and possessive sentences where the modified or possessed noun lacked the Haida -DEF suffix. For this, we needed to identify `OPT-CS` between mother and head daughter on `head-adj-int-phrase` (attribute adjectives) and `adj-head-int-phrase` (possessives), both see above.
+We also had to find a way to eliminate translations of attributive adjective and possessive sentences where the modified or possessed noun lacked the Haida -DEF suffix. For this, we needed to identify `OPT-CS` between mother and head daughter on `head-adj-int-phrase` (attribute adjectives) and `adj-head-int-phrase` (possessives), both shown above.
 
 ### Question Clitic
 
-We had to constrain the modifier of our question clitic to `HEAD noun` because ???:
+We had to constrain the modifier of our question clitic to `HEAD noun` because it was attaching to the right of `Dogs eat quickly`:
 
 ```
 question-clitic-lex := no-hcons-lex-item &
@@ -295,7 +295,7 @@ question-clitic-lex := no-hcons-lex-item &
 
 ### Variable Property Mapping
 
-Because Chadian Arabic doesn't export any tense during translation, relying instead on aspect, we were getting both past and present tense generation, when we should only see present. To stop this, we set a default present tense for Haida:
+Because Chadian Arabic is underspecified for tense, relying instead on aspect, we were getting both past and present tense generation, when we should only see present. To stop this, we set a default present tense for Haida:
 
 ```
 E.TENSE : TENSE
@@ -310,11 +310,7 @@ We also removed the GEND section, as recommended.
 
 ## Transfer Rules
 
-We instantiated the provided `pro-drop` transfer rule for both English and Chadian Arabic because Haida is a pro-drop language.
-
-For Chadian Arabic, we also instantiated both the `pro-insert-arg1-mtr` and `pro-insert-arg2-mtr` transfer rules because ???.
-
-For English, we created a new transfer rule for ‘eat’ because ???:
+Haida treats *taa* (*eat*) as a transitive verb with a dropped object. We added a transfer rule in both eng and shu that allows us to get the predication on the thing eaten:
 
 ```
 eat-intrans-mtr := monotonic_omtr &
@@ -328,6 +324,58 @@ eat-intrans-mtr := monotonic_omtr &
                      LBL #lbl,
                      ARG0 #arg0,
                      ARG1 #arg1 ] !> ]].
+```
+
+This goes along with instantiating `pronoun-delete-mtr`:
+
+```
+pronoun-delete-mtr := monotonic_omtr &
+ [ INPUT [ RELS <! [ PRED "pron_rel",
+                     ARG0 #x,
+                     LBL #larg ],
+                   [ PRED "exist_q_rel",
+                     ARG0 #x,
+                     RSTR #harg ] !>,
+           HCONS <! qeq & [ LARG #larg,
+                            HARG #harg ] !> ],
+   OUTPUT [ RELS <! !>,
+            HCONS <! !> ] ].
+```
+
+For Chadian Arabic only, we also instantiated both the `pro-insert-arg1-mtr` and `pro-insert-arg2-mtr` transfer rules because shu is pro-drop, which worked out-of-the-box:
+
+```
+pro-insert-arg1-mtr := monotonic_mtr &
+[ INPUT.RELS <! !>,
+  CONTEXT.RELS <! [ ARG0.SF prop-or-ques,
+       ARG1 #x ] !>,
+  FILTER.RELS <! [ ARG0 #x ] !>,
+  OUTPUT [ RELS <! [ PRED "pron_rel",
+        ARG0 #x,
+        LBL #larg ],
+      [ PRED "exist_q_rel",
+        ARG0 #x,
+        RSTR #harg ] !>,
+  HCONS <! qeq &
+    [ HARG #harg,
+      LARG #larg ] !> ],
+  FLAGS.EQUAL < #x > ].
+
+pro-insert-arg2-mtr := monotonic_mtr &
+[ INPUT.RELS <! !>,
+  CONTEXT.RELS <! [ ARG0.SF prop-or-ques,
+       ARG2 #x & [ COG-ST fam-or-more ]] !>,
+  FILTER.RELS <! [ ARG0 #x ] !>,
+  OUTPUT [ RELS <! [ PRED "pron_rel",
+        ARG0 #x,
+        LBL #larg ],
+      [ PRED "exist_q_rel",
+        ARG0 #x,
+        RSTR #harg ] !>,
+  HCONS <! qeq &
+    [ HARG #harg,
+      LARG #larg ] !> ],
+  FLAGS.EQUAL < #x > ].
 ```
 
 ## Coverage
@@ -369,8 +417,14 @@ The dogs chase cars.
 ; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
 The dogs dont chase cars.
 
-; 192 generation results
-; TODO: justify this number with a breakdown
+; 64 generation results
+; 2 from SOV/OSV word order
+; x 2 `plural-obj-suffix` or `plural-subj-suffix`
+; x 2 daa, dalang
+; x 2 word order of *you* and *that dogs chase cars*
+; = 16 for 'you know that dogs chase cars' 
+; x 2 word order of *I* and *you know that dogs chase cars*
+; x 2 non-factive is underspecified
 I think that you know that dogs chase cars.
 
 ; 8 generation results
