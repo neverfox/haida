@@ -31,7 +31,7 @@ The dogs dont chase cars.
 ; Edge allowance overrun error
 I think that you know that dogs chase cars.
 
-; 2304 generation results!
+; 4032 generation results!
 I ask whether you know that dogs chase cars.
 
 ; 8 generation results
@@ -41,12 +41,10 @@ Cats and dogs chase cars.
 
 ; 16 generation results 
 ; constrained neg-sat, MC, INT and INF on s-coord rules
-; for some reason we were getting the question clitic at the end of the sentence. i constrained the clitic
-; to take a mod that is head noun. i ran tsdb and this didn't have an impact on our performance.
 ; good
 Dogs chase cars and cats chase dogs.
 
-; 2generation results
+; 2 generation results
 ; constrained neg-sat, MC, INT and INF on vp-coord rules
 ; good
 Cats chase dogs and sleep.
@@ -84,7 +82,7 @@ Who sleeps?
 ; good
 What do the dogs chase?
 
-; 48 generation results
+; 72 generation results
 What do you think the dogs chase?
 
 ; 16 generation results
