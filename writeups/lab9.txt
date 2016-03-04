@@ -272,33 +272,7 @@ s3-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
 
 ### Definiteness
 
-We also had to find a way to eliminate translations of possessive sentences where the possessed lacked the Haida -DEF suffix. For this, we added a boolean `HEAD.DEF` feature that is contrained to + by the possessive adposition and is used to differentiate our two types of possessive pronouns (inalienable possessed cannot have -DEF) and our `indef` and `def` lexical rules:
-
-```
-gyaa := adposition-lex &
-  [ STEM < "gyaa" >,
-    SYNSEM [ LKEYS.KEYREL [ PRED "poss_rel",
-                            ARG1.COG-ST uniq+fam+act ],
-             LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.DEF + ] ] .
-
-alienable-poss-pron-det-lex := poss-pron-det-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL [ CAT.HEAD.DEF +,
-                                            CONT.HOOK.INDEX.PNG.ALIENABILITY + ] ].
-
-inalienable-poss-pron-det-lex := poss-pron-det-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL [ CAT.HEAD.DEF -,
-                                            CONT.HOOK.INDEX.PNG.ALIENABILITY - ] ].
-
-indef-lex-rule := cog-st-lex-rule-super & const-lex-rule &
-  [ SYNSEM [ OPT-CS type-id,
-             LOCAL.CAT.HEAD.DEF - ] ].
-
-def-lex-rule := cog-st-lex-rule-super & infl-lex-rule &
-  [ SYNSEM [ OPT-CS uniq+fam+act,
-             LOCAL.CAT.HEAD.DEF + ] ].
-```
-
-We also added `OPT-CS` identity in `head-adj-int-phrase` (shown earlier) to prevent the same spurious indefinite in attributive adjective sentences like ‘Hungry dogs eat’
+We also had to find a way to eliminate translations of attributive adjective and possessive sentences where the modified or possessed noun lacked the Haida -DEF suffix. For this, we needed to identify `OPT-CS` between mother and head daughter on `head-adj-int-phrase` (attribute adjectives) and `adj-head-int-phrase` (possessives), both see above.
 
 ### Question Clitic
 

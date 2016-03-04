@@ -405,8 +405,7 @@ gyaan3 := conj-lex &
 gyaa := adposition-lex &
   [ STEM < "gyaa" >,
     SYNSEM [ LKEYS.KEYREL [ PRED "poss_rel",
-                            ARG1.COG-ST uniq+fam+act ],
-             LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.DEF + ] ] .
+                            ARG1.COG-ST uniq+fam+act ] ] ] .
 
 ;;; Postpositions
 
