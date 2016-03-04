@@ -509,7 +509,7 @@ question-clitic-lex := no-hcons-lex-item &
       HEAD adv & [ MOD < [ LIGHT +,
                L-PERIPH +,
                LOCAL.CAT [ HEAD noun,
-			   VAL.SPR < > ]] > ]],
+         VAL.SPR < > ]] > ]],
         CONT.RELS <! !> ],
       NON-LOCAL.YNQ <! *top* !>]].
 
@@ -964,8 +964,8 @@ context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase & same-mc-phrase
   HEAD-DTR.SYNSEM [ NEG-SAT #negsat,
   LIGHT +,
   LOCAL.CAT.VAL [SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY low,
-							PERNUM 3rd ],
-		 COMPS high-pot-list ] ]].
+              PERNUM 3rd ],
+     COMPS high-pot-list ] ]].
 
 ;Constraint on MC used to be part of matrix.tdl
 ;;it applies to all wo implementations, except for v2
@@ -976,11 +976,11 @@ comp-head-phrase := basic-head-1st-comp-phrase & head-final & same-int-phrase & 
 
 context1-head-opt-comp-phrase := basic-head-opt-comp-phrase & same-mc-phrase & same-nf-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase  &
 [ SYNSEM [ LIGHT -,
-	   NEG-SAT #negsat ],
+     NEG-SAT #negsat ],
   HEAD-DTR.SYNSEM[ NEG-SAT #negsat,
-		   LOCAL.CAT.VAL [SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
-				  COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [POTENCY low,
-									 PERNUM 3rd]]]].
+       LOCAL.CAT.VAL [SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
+          COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [POTENCY low,
+                   PERNUM 3rd]]]].
 
 subj-head-phrase := decl-head-subj-phrase & same-int-phrase & head-final & same-mc-phrase & same-nf-phrase &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
@@ -1141,56 +1141,56 @@ np2-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase &
 
 vp3-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
   [ SYNSEM [ LOCAL [ COORD-STRAT "3",
-		     CAT [ INT #int,
-			   MC #mc,
-			   HEAD.INF #inf ]],
-	     NEG-SAT #negsat],
+         CAT [ INT #int,
+         MC #mc,
+         HEAD.INF #inf ]],
+       NEG-SAT #negsat],
     LCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
-				    MC #mc,
-				    HEAD.INF #inf ],
-			NEG-SAT #negsat],
+            MC #mc,
+            HEAD.INF #inf ],
+      NEG-SAT #negsat],
     RCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
-				    MC #mc,
-				    HEAD.INF #inf ],
-			NEG-SAT #negsat ]].
+            MC #mc,
+            HEAD.INF #inf ],
+      NEG-SAT #negsat ]].
 
 vp3-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase &
     [ SYNSEM [ LOCAL [ COORD-STRAT "3",
-		       CAT [ INT #int,
-			     MC #mc,
-			     HEAD.INF #inf ]],
-	     NEG-SAT #negsat],
+           CAT [ INT #int,
+           MC #mc,
+           HEAD.INF #inf ]],
+       NEG-SAT #negsat],
     NONCONJ-DTR.SYNSEM [ LOCAL [ COORD-STRAT "3",
-				 CAT [ INT #int,
-				       MC #mc,
-				       HEAD.INF #inf ]],
-			 NEG-SAT #negsat]].
+         CAT [ INT #int,
+               MC #mc,
+               HEAD.INF #inf ]],
+       NEG-SAT #negsat]].
 
 ;;; Coordination Strategy 3
 
 s3-top-coord-rule := basic-s-top-coord-rule & apoly-top-coord-rule &
   [ SYNSEM [ LOCAL [ COORD-STRAT "3",
-		     CAT [ INT #int,
-			   MC #mc,
-			   HEAD.INF #inf ]],
-	     NEG-SAT #negsat],
+         CAT [ INT #int,
+         MC #mc,
+         HEAD.INF #inf ]],
+       NEG-SAT #negsat],
     LCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
-				    MC #mc,
-				    HEAD.INF #inf ],
-			NEG-SAT #negsat],
+            MC #mc,
+            HEAD.INF #inf ],
+      NEG-SAT #negsat],
     RCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
-				    MC #mc,
-				    HEAD.INF #inf ],
-			NEG-SAT #negsat ]].
+            MC #mc,
+            HEAD.INF #inf ],
+      NEG-SAT #negsat ]].
 
 s3-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
     [ SYNSEM [ LOCAL [ COORD-STRAT "3",
-		       CAT [ INT #int,
-			     MC #mc,
-			     HEAD.INF #inf ]],
-	     NEG-SAT #negsat],
+           CAT [ INT #int,
+           MC #mc,
+           HEAD.INF #inf ]],
+       NEG-SAT #negsat],
     NONCONJ-DTR.SYNSEM [ LOCAL [ COORD-STRAT "3",
-				 CAT [ INT #int,
-				       MC #mc,
-				       HEAD.INF #inf ]],
-			 NEG-SAT #negsat]].
+         CAT [ INT #int,
+               MC #mc,
+               HEAD.INF #inf ]],
+       NEG-SAT #negsat]].

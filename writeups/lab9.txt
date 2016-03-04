@@ -1,0 +1,340 @@
+# Lab 9
+
+### University of Washington, LING 567, Winter 2016
+
+#### Author: Roman Pearah
+#### Partner: Kristen Piepgrass
+
+#### Language: Haida (Masset dialect)
+
+---
+
+## Changes to Grammar
+
+### Normalization
+
+There were a couple of aspects of our grammar that simply needed to be normalized to be compatible with the MMT grammars. So we:
+
+* Changed all instances of `_pron_n_rel` to `pron_rel`
+* Changed all instances of `neg_a_rel` to `neg_rel`
+
+### Lexicon
+
+Next, we had to add to our lexicon all words from the MMT sentences that were not already accounted for:
+
+```
+duuj := alienable-noun-lex &
+  [ STEM < "duuj" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
+
+q’wiid_1 := itr-nom-verb-lex &
+  [ STEM < "q’wiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hungry_a_rel" ].
+
+q’wiid_2 := attrib-adj-lex &
+  [ STEM < "q’wiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hungry_a_rel" ].
+
+7unsiid := prop-sent-verb-lex &
+  [ STEM < "7unsiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+cangala := int-adverb-lex &
+  [ STEM < "cangala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_quickly_a_rel" ].
+```
+
+### Topic Change
+
+Also, because our topic change lexical rule lacked semantic content and we could not locate a sufficient explanation to help us add any, we commented it out for the purposes of MT.
+
+###
+
+In our first pass through the translation process, we found that we were seeing our negative suffix attach throughout where it shouldn't. This was caused by a failure to unify `NEG-SAT` values of the mother and head daughter in several clause and phrase definitions, which we corrected:
+
+```
+int-clause := head-only & interrogative-clause &
+  [ SYNSEM [ LOCAL.CAT [ HEAD verb,
+                         INT -,
+                         VAL #val ],
+             NON-LOCAL.YNQ <! !>,
+             NEG-SAT #negsat ],
+    HEAD-DTR.SYNSEM [ NEG-SAT #negsat,
+                      LOCAL.CAT [ INT +,
+                                  VAL #val ],
+                      NON-LOCAL [ YNQ <! *top* !>,
+                                  SLASH <! !> ]]].
+
+wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
+   [ SYNSEM [ LOCAL.CAT [ MC +,
+                          VAL #val,
+                          HEAD verb & [ FORM finite ] ],
+              NEG-SAT #negsat ],
+     HEAD-DTR.SYNSEM [ LOCAL.CAT [ MC na,
+                                   INT +,
+                                   VAL #val & [ SUBJ < >,
+                                                COMPS < > ] ],
+                       NEG-SAT #negsat ],
+     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD.WH-EMB -,
+                                       MKG.FC + ],
+                           NON-LOCAL.QUE < ! ref-ind ! > ] ].
+
+extracted-comp-phrase := basic-extracted-comp-phrase & same-ynq-unary-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
+  [ SYNSEM [ LOCAL.CAT.HEAD verb,
+             NEG-SAT #negsat ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT.VAL.SUBJ cons,
+                      NEG-SAT #negsat ] ].
+
+extracted-subj-phrase := basic-extracted-subj-phrase & same-ynq-unary-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
+  [ C-CONT [ RELS <! !>,
+       HCONS <! !>,
+       ICONS <! !> ],
+    SYNSEM [ LOCAL.CAT.HEAD verb,
+             NEG-SAT #negsat ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT.VAL.COMPS olist,
+                      NEG-SAT #negsat ] ].
+
+context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase & same-mc-phrase & same-nf-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase &
+[ SYNSEM.NEG-SAT #negsat,
+  HEAD-DTR.SYNSEM [ NEG-SAT #negsat,
+  LIGHT +,
+  LOCAL.CAT.VAL [SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY low,
+              PERNUM 3rd ],
+     COMPS high-pot-list ] ]].
+
+context1-head-opt-comp-phrase := basic-head-opt-comp-phrase & same-mc-phrase & same-nf-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase  &
+[ SYNSEM [ LIGHT -,
+     NEG-SAT #negsat ],
+  HEAD-DTR.SYNSEM[ NEG-SAT #negsat,
+       LOCAL.CAT.VAL [SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
+          COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [POTENCY low,
+                   PERNUM 3rd]]]].
+
+head-adj-int-phrase :+ same-int-phrase & same-mc-phrase & same-nf-phrase &
+ [ SYNSEM [ NEG-SAT #negsat,
+            OPT-CS #opt-cs ],
+   NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.MOD < [ L-PERIPH #periph ]>,
+   HEAD-DTR.SYNSEM [ OPT-CS #opt-cs,
+                     NEG-SAT #negsat,
+                     L-PERIPH #periph ]].
+
+adj-head-int-phrase :+ same-int-phrase & same-mc-phrase & same-nf-phrase &
+  [ SYNSEM [ NEG-SAT #negsat ],
+    HEAD-DTR.SYNSEM [ NEG-SAT #negsat ]].
+```
+
+Furthermore, when attempting to translate `Dogs eat quickly`, we noticed that the `head-adj-int` rule was dropping `INT` and `MC` features, leading to incorrect inflection. We solved this by adding `same-int-phrase` to `head-adj-int` (and `adj-head-int`) and by creating a `same-mc-type` to add as well:
+
+```
+same-mc-phrase := headed-phrase &
+  [ SYNSEM.LOCAL.CAT.MC #mc,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+```
+
+We were also getting “spinning” in our embedded clauses from a failure to pass up our `NF` (non-factive) feature, so we created a rule for this identity:
+
+```
+same-nf-phrase := headed-phrase &
+  [ SYNSEM.LOCAL.CAT.HEAD.NF #nf,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.NF #nf ].
+```
+
+We added these three identities as supertypes where seen above as well as the following:
+
+```
+comp-head-phrase := basic-head-1st-comp-phrase & head-final & same-int-phrase & same-mc-phrase & same-nf-phrase.
+
+subj-head-phrase := decl-head-subj-phrase & same-int-phrase & head-final & same-mc-phrase & same-nf-phrase &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
+
+neg-adj-head-scop-phrase := adj-head-scop-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
+  [ SYNSEM.NEG-SAT +,
+    HEAD-DTR.SYNSEM.NEG-SAT -,
+    NON-HEAD-DTR neg-adv-lex ].
+
+scopal-adj-head-phrase := adj-head-scop-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
+  [ HEAD-DTR.SYNSEM.NEG-SAT +,
+    NON-HEAD-DTR scop-sent-adv-lex ].
+```
+
+We also had three embedding verbs of type `prop-sent-verb-lex`, which treated all three as having non-factive complements, when “know” actually takes a factive complement:
+
+```
+prop-sent-verb-lex := sentential-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ LOCAL [ CONT.HOOK.INDEX.SF prop,
+                                           CAT [ HEAD.NF +,
+                                                 MC - ] ] ] > ].
+
+7unsiid := prop-sent-verb-lex &
+  [ STEM < "7unsiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+suu_2 := prop-sent-verb-lex &
+  [ STEM < "suu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
+
+gudang_2 := prop-sent-verb-lex &
+  [ STEM < "gudang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
+```
+
+So we split the type up accordingly and changed the type of *suu* and *gudang*, also being sure to set `INF -` and `INT -`:
+
+```
+prop-sent-verb-lex := sentential-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ LOCAL [ CONT.HOOK.INDEX.SF prop,
+                                           CAT [ HEAD [ NF -,
+                                                        INF - ],
+                                                 MC -,
+                                                 INT - ] ] ] > ].
+
+prop-non-fac-sent-verb-lex := sentential-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ LOCAL [ CONT.HOOK.INDEX.SF prop,
+                                           CAT [ HEAD [ NF +,
+                                                        INF - ],
+                                                 MC - ,
+                                                 INT - ] ] ] > ].
+
+7unsiid := prop-sent-verb-lex &
+  [ STEM < "7unsiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+suu_2 := prop-non-fac-sent-verb-lex &
+  [ STEM < "suu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
+
+gudang_2 := prop-non-fac-sent-verb-lex &
+  [ STEM < "gudang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].                                    
+```
+
+### Coordination
+
+To reduce overgeneration in clausal coordination sentences, we added mother-daughter identities for `INT`, `MC`, `INF` and `NEG-SAT` features to our VP/S coordination rules:
+
+```
+vp3-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM [ LOCAL [ COORD-STRAT "3",
+         CAT [ INT #int,
+         MC #mc,
+         HEAD.INF #inf ]],
+       NEG-SAT #negsat],
+    LCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
+            MC #mc,
+            HEAD.INF #inf ],
+      NEG-SAT #negsat],
+    RCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
+            MC #mc,
+            HEAD.INF #inf ],
+      NEG-SAT #negsat ]].
+
+vp3-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase &
+    [ SYNSEM [ LOCAL [ COORD-STRAT "3",
+           CAT [ INT #int,
+           MC #mc,
+           HEAD.INF #inf ]],
+       NEG-SAT #negsat],
+    NONCONJ-DTR.SYNSEM [ LOCAL [ COORD-STRAT "3",
+         CAT [ INT #int,
+               MC #mc,
+               HEAD.INF #inf ]],
+       NEG-SAT #negsat]].
+
+s3-top-coord-rule := basic-s-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM [ LOCAL [ COORD-STRAT "3",
+         CAT [ INT #int,
+         MC #mc,
+         HEAD.INF #inf ]],
+       NEG-SAT #negsat],
+    LCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
+            MC #mc,
+            HEAD.INF #inf ],
+      NEG-SAT #negsat],
+    RCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
+            MC #mc,
+            HEAD.INF #inf ],
+      NEG-SAT #negsat ]].
+
+s3-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
+    [ SYNSEM [ LOCAL [ COORD-STRAT "3",
+           CAT [ INT #int,
+           MC #mc,
+           HEAD.INF #inf ]],
+       NEG-SAT #negsat],
+    NONCONJ-DTR.SYNSEM [ LOCAL [ COORD-STRAT "3",
+         CAT [ INT #int,
+               MC #mc,
+               HEAD.INF #inf ]],
+       NEG-SAT #negsat]].
+```
+
+### Definiteness in Possessives
+
+We also had to find a way to eliminate translations of possessive sentences where the possessed lacked the Haida -DEF suffix. For this, we added a boolean `HEAD.DEF` feature that is contrained to + by the possessive adposition and is used to differentiate our two types of possessive pronouns (inalienable possessed cannot have -DEF) and our `indef` and `def` lexical rules:
+
+```
+gyaa := adposition-lex &
+  [ STEM < "gyaa" >,
+    SYNSEM [ LKEYS.KEYREL [ PRED "poss_rel",
+                            ARG1.COG-ST uniq+fam+act ],
+             LOCAL.CAT.HEAD.MOD.FIRST.LOCAL.CAT.HEAD.DEF + ] ] .
+
+alienable-poss-pron-det-lex := poss-pron-det-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL [ CAT.HEAD.DEF +,
+                                            CONT.HOOK.INDEX.PNG.ALIENABILITY + ] ].
+
+inalienable-poss-pron-det-lex := poss-pron-det-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL [ CAT.HEAD.DEF -,
+                                            CONT.HOOK.INDEX.PNG.ALIENABILITY - ] ].
+
+indef-lex-rule := cog-st-lex-rule-super & const-lex-rule &
+  [ SYNSEM [ OPT-CS type-id,
+             LOCAL.CAT.HEAD.DEF - ] ].
+
+def-lex-rule := cog-st-lex-rule-super & infl-lex-rule &
+  [ SYNSEM [ OPT-CS uniq+fam+act,
+             LOCAL.CAT.HEAD.DEF + ] ].
+```
+
+### Question Clitic
+
+We had to constrain the modifier of our question clitic to `HEAD noun` because ???:
+
+```
+question-clitic-lex := no-hcons-lex-item &
+ [ SYNSEM [ LOCAL [ CAT [ POSTHEAD + ,
+      VAL [ SPR < >,
+            COMPS < >,
+            SUBJ < >,
+            SPEC < > ],
+      HEAD adv & [ MOD < [ LIGHT +,
+               L-PERIPH +,
+               LOCAL.CAT [ HEAD noun,
+         VAL.SPR < > ]] > ]],
+        CONT.RELS <! !> ],
+      NON-LOCAL.YNQ <! *top* !>]].
+```
+
+### semi.vpm
+
+Because Chadian Arabic doesn't export any tense during translation, relying instead on aspect, we were getting both past and present tense generation, when we should only see present. To stop this, we set a default present tense for Haida:
+
+```
+E.TENSE : TENSE
+  present <> present
+  nonpast <> nonpast
+  past <> past
+  * >> present
+  present << [e]
+```
+
+We also removed the GEND section, as recommended.
+
+## Transfer Rules
+
+Describe the transfer rules you instantiated, and why.
+Describe any further transfer rules you needed to develop, and why.
+
+## Coverage
+Document your current coverage on translating the MMT sentences from English and Chadian Arabic into your language. If you are generating more than one output for each input, explain the sources of variation.
+If you don't have full coverage, describe why not.
