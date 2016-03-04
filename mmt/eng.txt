@@ -87,13 +87,16 @@ Who sleeps?
 ; good
 What do the dogs chase?
 
-; 72 generation results
+; 8 generation results
+; i think these are all right
 What do you think the dogs chase?
 
-; 16 generation results
+; 4 generation results
+; good
 Who asked what the dogs chase?
 
-; 56 generations results
+; 8 generations results
+; i think these are all right
 I asked what the dogs chased.
 
 ; 1 generation result
