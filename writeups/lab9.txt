@@ -44,11 +44,13 @@ cangala := int-adverb-lex &
     SYNSEM.LKEYS.KEYREL.PRED "_quickly_a_rel" ].
 ```
 
+We also found that our 2sg acc pronoun was listed as plural and corrected it.
+
 ### Topic Change
 
 Also, because our topic change lexical rule lacked semantic content and we could not locate a sufficient explanation to help us add any, we commented it out for the purposes of MT.
 
-###
+### Features
 
 In our first pass through the translation process, we found that we were seeing our negative suffix attach throughout where it shouldn't. This was caused by a failure to unify `NEG-SAT` values of the mother and head daughter in several clause and phrase definitions, which we corrected:
 
@@ -268,7 +270,7 @@ s3-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
        NEG-SAT #negsat]].
 ```
 
-### Definiteness in Possessives
+### Definiteness
 
 We also had to find a way to eliminate translations of possessive sentences where the possessed lacked the Haida -DEF suffix. For this, we added a boolean `HEAD.DEF` feature that is contrained to + by the possessive adposition and is used to differentiate our two types of possessive pronouns (inalienable possessed cannot have -DEF) and our `indef` and `def` lexical rules:
 
@@ -296,6 +298,8 @@ def-lex-rule := cog-st-lex-rule-super & infl-lex-rule &
              LOCAL.CAT.HEAD.DEF + ] ].
 ```
 
+We also added `OPT-CS` identity in `head-adj-int-phrase` (shown earlier) to prevent the same spurious indefinite in attributive adjective sentences like ‘Hungry dogs eat’
+
 ### Question Clitic
 
 We had to constrain the modifier of our question clitic to `HEAD noun` because ???:
@@ -315,7 +319,7 @@ question-clitic-lex := no-hcons-lex-item &
       NON-LOCAL.YNQ <! *top* !>]].
 ```
 
-### semi.vpm
+### Variable Property Mapping
 
 Because Chadian Arabic doesn't export any tense during translation, relying instead on aspect, we were getting both past and present tense generation, when we should only see present. To stop this, we set a default present tense for Haida:
 
@@ -332,9 +336,225 @@ We also removed the GEND section, as recommended.
 
 ## Transfer Rules
 
-Describe the transfer rules you instantiated, and why.
-Describe any further transfer rules you needed to develop, and why.
+We instantiated the provided `pro-drop` transfer rule for both English and Chadian Arabic because Haida is a pro-drop language.
+
+For Chadian Arabic, we also instantiated both the `pro-insert-arg1-mtr` and `pro-insert-arg2-mtr` transfer rules because ???.
+
+For English, we created a new transfer rule for ‘eat’ because ???:
+
+```
+eat-intrans-mtr := monotonic_omtr &
+[ INPUT [ RELS <! [ PRED "_eat_v_rel",
+                    LBL #lbl,
+                    ARG0 #arg0,
+                    ARG1 #arg1,
+                    ARG2 #arg2 & [ COG-ST type-id ] ] !> ],
+  FILTER [ RELS <! [ ARG0 #arg2 ] !> ],
+  OUTPUT [ RELS <! [ PRED "_eat_v_rel",
+                     LBL #lbl,
+                     ARG0 #arg0,
+                     ARG1 #arg1 ] !> ]].
+```
 
 ## Coverage
-Document your current coverage on translating the MMT sentences from English and Chadian Arabic into your language. If you are generating more than one output for each input, explain the sources of variation.
-If you don't have full coverage, describe why not.
+
+Valid sources of multiple translations include:
+
+* SOV vs. OSV word order
+* No marking of subject or object for number (`plural-obj-suffix` or `plural-subj-suffix`)
+* rahl and 7isgyaan coordination are interchangeable
+* Multiple ways of expressing 1sg alienable possession
+* Combinatoric explosion of the above in coordination
+
+### English
+#### 19 of 24 coverage
+
+##### Successes
+
+```
+; 1 generation result
+Dogs sleep.
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+Dogs chase cars.
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+I chase you.
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+Dogs eat.
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+The dogs chase cars.
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+The dogs dont chase cars.
+
+; 192 generation results
+; TODO: justify this number with a breakdown
+I think that you know that dogs chase cars.
+
+; 8 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix` x 2 rahl vs 7isgyaan coordination
+Cats and dogs chase cars.
+
+; 16 generation results 
+; 4^2: 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix` ^ 2 clauses
+Dogs chase cars and cats chase dogs.
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+Cats chase dogs and sleep.
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+Do cats chase dogs?
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+Hungry dogs eat.
+
+; 6 generation results
+; 2 `plural-obj-suffix` or `plural-subj-suffix` x 3 from adverb on the V, VP and S
+Dogs eat quickly.
+
+; 1 generation result
+The dogs are hungry.
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+The dogs are the cats.
+
+; 1 generation result
+Who sleeps?
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+What do the dogs chase?
+
+; 1 generation result
+The dog's car sleeps.
+
+; 4 generation results
+; Multiple ways of expressing 1sg alienable possession
+My dogs sleep.
+```
+
+##### Failures
+
+```
+; 672 generation results
+I ask whether you know that dogs chase cars.
+
+; We were not able to locate a word for `park` or `in.the.park`
+; However, even if we had, we did not implement this phenomena
+; as the way it is expressed in Haida was out-of-scope
+The dogs are in the park.
+
+; 72 generation results
+What do you think the dogs chase?
+
+; 16 generation results
+Who asked what the dogs chase?
+
+; 56 generations results
+I asked what the dogs chased.
+```
+
+### Chadian Arabic
+#### 16 of 22 coverage
+
+##### Successes
+
+```
+; 1 generation result
+kalib-PL y-unuum-u
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+kalib-PL y-itaarid-u watiir-PL
+
+; 2 generation results
+; SOV/OSV word order
+ana n-itaarid-0-k
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+kalib-PL y-aakul-u
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+al-kalib-PL y-itaarid-u watiir-PL
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+al-kalib-PL ma y-itaarid-u watiir-PL
+
+; 8 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix` x 2 rahl vs 7isgyaan coordination
+biss-PL wa kalib-PL y-itaarid-u watiir-PL
+
+; 16 generation results 
+; 4^2: 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix` ^ 2 clauses
+kalib-PL y-itaarid-u watiir-PL wa biss-PL y-itaarid-u kalib-PL
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+biss-PL y-itaarid-u kalib-PL wa naam-o
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+biss-PL y-itaarid-u kalib-PL walla
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+kalib-PL jii'aan-PL y-aakul-u
+
+; 6 generation results
+; 2 `plural-obj-suffix` or `plural-subj-suffix` x 3 from adverb on the V, VP and S
+kalib-PL y-aakul-u ajala
+
+; 1 generation result
+al-kalib-PL jii'aan-PL
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+al-kalib-PL al-biss-PL
+
+; 1 generation result
+yaatu y-unuum-0
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+al-kalib-PL y-itaarid-u chunu
+```
+
+##### Failures
+
+```
+; 2304 generation results
+ana n-ahsib-0 kadar inta t-a'arif-0 kadar kalib-PL y-itaarid-u watiir-PL
+
+; 2688 generation results
+ana n-as'al-0 kan inta t-a'arif-0 kadar kalib-PL y-itaarid-u watiir-PL
+
+; We were not able to locate a word for `park` or `in.the.park`
+; However, even if we had, we did not implement this phenomena
+; as the way it is expressed in Haida was out-of-scope
+al-kalib-PL fi al-naga'a
+
+; 48 generation results
+; problems from past and EVID
+inta t-ahsib-0 kadar al-kalib-PL y-itaarid-u chunu
+
+; 8 generation results
+yaatu sa'al-0 al-kalib-PL y-itaarid-u chunu
+
+; 80 generation results
+ana sa'al-t al-kalib-PL taarad-o chunu
+```
