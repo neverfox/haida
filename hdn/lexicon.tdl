@@ -277,11 +277,11 @@ taa := tr-verb-lex &
   [ STEM < "7unsiid" >,
     SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
-suu_2 := prop-sent-verb-lex &
+suu_2 := prop-non-fac-sent-verb-lex &
   [ STEM < "suu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
 
-gudang_2 := prop-sent-verb-lex &
+gudang_2 := prop-non-fac-sent-verb-lex &
   [ STEM < "gudang" >,
     SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
 

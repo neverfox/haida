@@ -70,7 +70,7 @@ basic-binary-phrase :+
     [SYNSEM [ L-PERIPH -,
         NON-LOCAL.YNQ [ LIST #middle,
                                                                 LAST #last]]] > ].
-head-adj-int-phrase :+ same-int-phrase & same-mc-phrase &
+head-adj-int-phrase :+ same-int-phrase & same-mc-phrase & same-nf-phrase &
  [ SYNSEM [ NEG-SAT #negsat,
             OPT-CS #opt-cs ],
    NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.MOD < [ L-PERIPH #periph ]>,
@@ -78,7 +78,7 @@ head-adj-int-phrase :+ same-int-phrase & same-mc-phrase &
                      NEG-SAT #negsat,
                      L-PERIPH #periph ]].
 
-adj-head-int-phrase :+ same-int-phrase & same-mc-phrase &
+adj-head-int-phrase :+ same-int-phrase & same-mc-phrase & same-nf-phrase &
   [ SYNSEM [ NEG-SAT #negsat ],
     HEAD-DTR.SYNSEM [ NEG-SAT #negsat ]].
 
@@ -387,13 +387,22 @@ sentential-verb-lex := main-verb-lex & clausal-second-arg-trans-lex-item &
 
 prop-sent-verb-lex := sentential-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS   < [ LOCAL [ CONT.HOOK.INDEX.SF prop,
-              CAT [ HEAD.NF +,
-              MC - ]]] > ].
+					     CAT [ HEAD [ NF -,
+							  INF - ],
+						   MC -,
+						   INT - ]]] > ].
+
+prop-non-fac-sent-verb-lex := sentential-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS   < [ LOCAL [ CONT.HOOK.INDEX.SF prop,
+              CAT [ HEAD [ NF +,
+			   INF - ],
+		    MC - ,
+		    INT - ]]] > ].
 
 ques-sent-verb-lex := sentential-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS  < [ LOCAL [ CONT.HOOK.INDEX.SF ques,
-              CAT [ HEAD.INF +,
-              MC - ]]] > ].
+					    CAT [ HEAD.INF +,
+						  MC - ]]] > ].
 
 ;ditrans-ques-sent-verb-lex := main-verb-lex & clausal-third-arg-ditrans-lex-item &
 ;  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps & [ LOCAL [ CONT.HOOK.INDEX.SF prop,
@@ -950,7 +959,7 @@ tc-lex-rule := topic-change-lex-rule-super.
 
 ; constrained for LIGHT +, high potency compliment and low potency, 3p subject -KP
 
-context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase & same-mc-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase &
+context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase & same-mc-phrase & same-nf-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase &
 [ SYNSEM.NEG-SAT #negsat,
   HEAD-DTR.SYNSEM [ NEG-SAT #negsat,
   LIGHT +,
@@ -961,11 +970,11 @@ context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase & same-mc-phrase
 ;Constraint on MC used to be part of matrix.tdl
 ;;it applies to all wo implementations, except for v2
 
-comp-head-phrase := basic-head-1st-comp-phrase & head-final & same-int-phrase & same-mc-phrase.
+comp-head-phrase := basic-head-1st-comp-phrase & head-final & same-int-phrase & same-mc-phrase & same-nf-phrase.
 
 ; created to handle optional compliments -KP
 
-context1-head-opt-comp-phrase := basic-head-opt-comp-phrase & same-mc-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase  &
+context1-head-opt-comp-phrase := basic-head-opt-comp-phrase & same-mc-phrase & same-nf-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase  &
 [ SYNSEM [ LIGHT -,
 	   NEG-SAT #negsat ],
   HEAD-DTR.SYNSEM[ NEG-SAT #negsat,
@@ -973,7 +982,7 @@ context1-head-opt-comp-phrase := basic-head-opt-comp-phrase & same-mc-phrase & s
 				  COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [POTENCY low,
 									 PERNUM 3rd]]]].
 
-subj-head-phrase := decl-head-subj-phrase & same-int-phrase & head-final & same-mc-phrase &
+subj-head-phrase := decl-head-subj-phrase & same-int-phrase & head-final & same-mc-phrase & same-nf-phrase &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
 
 ;non-mc-subj-head-phrase := decl-head-subj-phrase & head-final & same-int-phrase &
@@ -1007,6 +1016,10 @@ same-int-phrase := headed-phrase &
 same-mc-phrase := headed-phrase &
   [ SYNSEM.LOCAL.CAT.MC #mc,
     HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+
+same-nf-phrase := headed-phrase &
+  [ SYNSEM.LOCAL.CAT.HEAD.NF #nf,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.NF #nf ].
 
    ; while these are called locative, there is not locative case, just a class of nouns
 locative-pp-phrase := unary-phrase &
@@ -1073,13 +1086,13 @@ emb-wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-fin
                                        MKG.FC - ],
                            NON-LOCAL.QUE < ! ref-ind ! > ] ].
 
-extracted-comp-phrase := basic-extracted-comp-phrase & same-ynq-unary-phrase & same-int-phrase & same-mc-phrase &
+extracted-comp-phrase := basic-extracted-comp-phrase & same-ynq-unary-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
   [ SYNSEM [ LOCAL.CAT.HEAD verb,
              NEG-SAT #negsat ],
     HEAD-DTR.SYNSEM [ LOCAL.CAT.VAL.SUBJ cons,
                       NEG-SAT #negsat ] ].
 
-extracted-subj-phrase := basic-extracted-subj-phrase & same-ynq-unary-phrase & same-int-phrase & same-mc-phrase &
+extracted-subj-phrase := basic-extracted-subj-phrase & same-ynq-unary-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
   [ C-CONT [ RELS <! !>,
        HCONS <! !>,
        ICONS <! !> ],
@@ -1088,12 +1101,12 @@ extracted-subj-phrase := basic-extracted-subj-phrase & same-ynq-unary-phrase & s
     HEAD-DTR.SYNSEM [ LOCAL.CAT.VAL.COMPS olist,
                       NEG-SAT #negsat ] ].
 
-neg-adj-head-scop-phrase := adj-head-scop-phrase & same-int-phrase & same-mc-phrase &
+neg-adj-head-scop-phrase := adj-head-scop-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
   [ SYNSEM.NEG-SAT +,
     HEAD-DTR.SYNSEM.NEG-SAT -,
     NON-HEAD-DTR neg-adv-lex ].
 
-scopal-adj-head-phrase := adj-head-scop-phrase & same-int-phrase & same-mc-phrase &
+scopal-adj-head-phrase := adj-head-scop-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
   [ HEAD-DTR.SYNSEM.NEG-SAT +,
     NON-HEAD-DTR scop-sent-adv-lex ].
 
