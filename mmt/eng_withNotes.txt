@@ -1,0 +1,110 @@
+; 1 generation result
+; good
+Dogs sleep.
+
+; 4 generation results
+; 2 from word order x 2 from whether the verb gets plural-obj-suffix or plural-subj-suffix
+; good
+Dogs chase cars.
+
+; 4 generation results
+; 2 wo x 2 you is sg or pl
+; good
+I chase you.
+
+; 2 results
+; 2 from whether the verb gets plural-obj-suffix or plural-subj-suffix
+; added pro-drop and eat-intrans transfer rules
+; good
+Dogs eat.
+
+; 4 generation results
+; same explanation as dogs chase cars
+; good
+The dogs chase cars.
+
+; 4 generation results
+; same explanation as dogs chase cars
+; good
+The dogs dont chase cars.
+
+; 32 generation results
+; added prop-non-fac-sent-verb-lex which is what prop-sent-verb-lex used to look like for think and say, but selects for a non-factive compliment
+; changed prop-sent-verb-lex for know, because it takes a regular (not a non-factive) verb complement
+; created same-nf-phrase and made it a parent to all phrase-types
+; added INF - to the verbal compliment of both
+; constrained sent verbs to select of nom subj
+; MADE position classes add INF - and NF -
+; good
+I think that you know that dogs chase cars.
+
+; 48 generation results
+I ask whether you know that dogs chase cars.
+
+; 8 generation results
+; 2 for plural subj/obj x 2 for rahl vs 7isgyaan x 2 for wo
+; good
+Cats and dogs chase cars.
+
+; 16 generation results 
+; constrained neg-sat, MC, INT and INF on s-coord rules
+; good
+Dogs chase cars and cats chase dogs.
+
+; 2 generation results
+; constrained neg-sat, MC, INT and INF on vp-coord rules
+; good
+Cats chase dogs and sleep.
+
+; 4 generation results
+; same explanation as dogs chase cars
+; good
+Do cats chase dogs?
+
+; 2 results
+; 2 from whether the verb gets plural-obj-suffix or plural-subj-suffix x 2 from DEF-INDEF
+Hungry dogs eat.
+
+; 6 results
+; 2 from plural obj vs. plural subj x 3 from adverb on the V, VP and S
+; added constraints to head-adj-int and adj-head-int to ccopy up neg-sat, INT, created same-mc phrase and added as supertype to all phrase types
+; good
+Dogs eat quickly.
+
+; generates one correctly!
+The dogs are hungry.
+
+; Neither Enrico nor Lachler have the Haida for `park` or `in.the.park`
+The dogs are in the park.
+
+; 4 generation results (word order and plural)
+; good
+The dogs are the cats.
+
+; 1 generation result
+; good
+Who sleeps?
+
+; 2 generation results (pl subj/obj)
+; good
+What do the dogs chase?
+
+; 8 generation results
+; i think these are all right
+What do you think the dogs chase?
+
+; 4 generation results
+; good
+Who asked what the dogs chase?
+
+; 8 generations results
+; i think these are all right
+I asked what the dogs chased.
+
+; 1 generation result
+; good
+The dog's car sleeps.
+
+; 6 generation results (multiple ways of expressing my)
+
+My dogs sleep.

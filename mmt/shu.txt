@@ -1,89 +1,43 @@
-; 1 generation
-; specified default tense = present
-; good
 kalib-PL y-unuum-u
 
-; 4 generation results
-; good
 kalib-PL y-itaarid-u watiir-PL
 
-; 2 generation results
-; added transfer rules pro-ins2 and pro-ins1, corrected pernum value on our 2sg-acc type (it was plural!)
-; good 
 ana n-itaarid-0-k
 
-; 2 results
-; added to acm.tdl and acm.mtr same as for english
-; good
 kalib-PL y-aakul-u
 
-; 4 generation results
-; good
 al-kalib-PL y-itaarid-u watiir-PL
 
-; 4 generation results
-; good
 al-kalib-PL ma y-itaarid-u watiir-PL
 
-; 16 generation results
-; good
 ana n-ahsib-0 kadar inta t-a'arif-0 kadar kalib-PL y-itaarid-u watiir-PL
 
-; 56 generation results
-; gu problem like english
 ana n-as'al-0 kan inta t-a'arif-0 kadar kalib-PL y-itaarid-u watiir-PL
 
-; 8 generation results
-; good
 biss-PL wa kalib-PL y-itaarid-u watiir-PL
 
-; 16 generation results
-; good
 kalib-PL y-itaarid-u watiir-PL wa biss-PL y-itaarid-u kalib-PL
 
-; 2 generation results
-; good
 biss-PL y-itaarid-u kalib-PL wa naam-o
 
-; 4 generation results
-; good
 biss-PL y-itaarid-u kalib-PL walla
 
-;  2
-; good
 kalib-PL jii'aan-PL y-aakul-u
 
-;  6 results
-; good
 kalib-PL y-aakul-u ajala
 
-; 1 generation results
-; good
 al-kalib-PL jii'aan-PL
 
-; same as with English, the issue isn't the word- we have not implemented this phenomenon
 al-kalib-PL fi al-naga'a
 
-; 4 generation results
-; good
 al-kalib-PL al-biss-PL
 
-; 1 generation results
-; good
 yaatu y-unuum-0
 
-; 2 generation results
-; good
 al-kalib-PL y-itaarid-u chunu
 
-; 4 generation results
-; good
 inta t-ahsib-0 kadar al-kalib-PL y-itaarid-u chunu
 
-; 2 generation results
-; good
 yaatu sa'al-0 al-kalib-PL y-itaarid-u chunu
 
-; 16 generation results
-; we're getting gu on these too :(
 ana sa'al-t al-kalib-PL taarad-o chunu
