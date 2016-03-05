@@ -49,6 +49,10 @@ x := alienable-noun-lex &
   [ STEM < "x" >,
     SYNSEM.LKEYS.KEYREL.PRED "_dog_n_rel" ].
 
+duuj := alienable-noun-lex &
+  [ STEM < "duuj" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
+
 taanaanee := alienable-noun-lex &
   [ STEM < "taanaanee" >,
     SYNSEM.LKEYS.KEYREL.PRED "_smokehouse_n_rel" ].
@@ -71,39 +75,39 @@ car := alienable-noun-lex &
 
 hlaa := 1sg-nom-pron-lex &
   [ STEM < "hlaa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 t’alang := 1pl-nom-pron-lex &
   [ STEM < "t’alang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 daa := 2sg-nom-pron-lex &
   [ STEM < "daa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 ’laa_1 := 3p-hpot-pron-lex &
   [ STEM < "’laa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 dii_1 := 1sg-acc-pron-lex &
   [ STEM < "dii" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 7ittl’ := 1pl-acc-pron-lex &
   [ STEM < "7ittl’" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 dalang := 2pl-pron-lex &
   [ STEM < "dalang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 7waa := 3p-lpot-pron-lex &
   [ STEM < "7waa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 dang := 2sg-acc-pron-lex &
   [ STEM < "dang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 Bill := proper-noun-lex &
   [ STEM < "Bill" >,
@@ -123,7 +127,7 @@ naa%n := inalienable-noun-lex &
 
 gud := 3p-lpot-pron-lex &
   [ STEM < "gud" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_pron_n_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "pron_rel" ].
 
 ;;; Adjectives
 
@@ -150,6 +154,10 @@ xaw%2Eula_2 := attrib-adj-lex &
 ’laa_3 := attrib-adj-lex &
   [ STEM < "’laa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_good_a_rel" ].
+
+q’wiid_2 := attrib-adj-lex &
+  [ STEM < "q’wiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hungry_a_rel" ].
 
 t’iij := attrib-adj-lex &
   [ STEM < "t’iij" >,
@@ -180,10 +188,6 @@ tlagaayda := tr-verb-lex &
 qing := tr-verb-lex &
   [ STEM < "qing" >,
     SYNSEM.LKEYS.KEYREL.PRED "_see_v_rel" ].
-
-taa := tr-verb-lex &
-  [ STEM < "taa" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
 daang := tr-verb-lex &
   [ STEM < "daang" >,
@@ -241,6 +245,10 @@ xaw%2Eula_1 := itr-nom-verb-lex &
   [ STEM < "’laa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_good_a_rel" ].
 
+q’wiid_1 := itr-nom-verb-lex &
+  [ STEM < "q’wiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hungry_a_rel" ].
+
 riihlgii := itr-nom-verb-lex &
   [ STEM < "riihlgii" >,
     SYNSEM.LKEYS.KEYREL.PRED "_ready_a_rel" ].
@@ -248,6 +256,10 @@ riihlgii := itr-nom-verb-lex &
 qaaguhlaa%2Eaa := itr-nom-verb-lex &
   [ STEM < "qaaguhlaa.aa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_go+out_v_rel" ].
+
+taa := tr-verb-lex &
+  [ STEM < "taa" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_eat_v_rel" ].
 
 7iij_1 := tr-verb-lex &
   [ STEM < "7iij" >,
@@ -261,13 +273,17 @@ qaaguhlaa%2Eaa := itr-nom-verb-lex &
   [ STEM < "7isdaa" >,
     SYNSEM.LKEYS.KEYREL.PRED "_take_v_rel" ].
 
-gudang_2 := prop-sent-verb-lex &
-  [ STEM < "gudang" >,
-    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
+7unsiid := prop-sent-verb-lex &
+  [ STEM < "7unsiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
 
-suu_2 := prop-sent-verb-lex &
+suu_2 := prop-non-fac-sent-verb-lex &
   [ STEM < "suu" >,
     SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
+
+gudang_2 := prop-non-fac-sent-verb-lex &
+  [ STEM < "gudang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
 
 kyaanang := ques-sent-verb-lex &
   [ STEM < "kyaanang" >,
@@ -342,7 +358,7 @@ dii_2 := inalienable-poss-pron-det-lex &
 
 gam := neg-adv-lex &
   [ STEM < "gam" >,
-    SYNSEM.LKEYS.KEYREL.PRED "neg_a_rel" ].
+    SYNSEM.LKEYS.KEYREL.PRED "neg_rel" ].
 
 gah := neg-adv-lex &
   [ STEM < "gah" >,
@@ -351,6 +367,10 @@ gah := neg-adv-lex &
 neesdagaang%2Ean := int-adverb-lex &
   [ STEM < "neesdagaang.an" >,
     SYNSEM.LKEYS.KEYREL.PRED "_right+away_a_rel" ].
+
+cangala := int-adverb-lex &
+  [ STEM < "cangala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_quickly_a_rel" ].
 
 7waagyaan := scop-sent-adv-lex &
   [ STEM < "7waagyaan" >,
@@ -384,8 +404,8 @@ gyaan3 := conj-lex &
 
 gyaa := adposition-lex &
   [ STEM < "gyaa" >,
-    SYNSEM.LKEYS.KEYREL [ PRED "poss_rel",
-                          ARG1.COG-ST uniq+fam+act ] ].
+    SYNSEM [ LKEYS.KEYREL [ PRED "poss_rel",
+                            ARG1.COG-ST uniq+fam+act ] ] ] .
 
 ;;; Postpositions
 

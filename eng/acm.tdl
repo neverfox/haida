@@ -191,6 +191,20 @@ eat-ini-mtr := monotonic_mtr &
 		     LARG #larg ] !> ],
   FLAGS [ EQUAL < #arg2 > ]].
 
+
+eat-intrans-mtr := monotonic_omtr &
+[ INPUT [ RELS <! [ PRED "_eat_v_rel",
+		    LBL #lbl,
+		    ARG0 #arg0,
+		    ARG1 #arg1,
+		    ARG2 #arg2 & [ COG-ST type-id ] ] !> ],
+  FILTER [ RELS <! [ ARG0 #arg2 ] !> ],
+  OUTPUT [ RELS <! [ PRED "_eat_v_rel",
+		     LBL #lbl,
+		     ARG0 #arg0,
+		     ARG1 #arg1 ] !> ]].
+
+
 make-thought-mtr := monotonic_mtr &
 [ INPUT [ RELS <! [ PRED "_make_v_rel",
 		   LBL #lbl,
@@ -234,9 +248,4 @@ think-mtr := monotonic_mtr &
 	   HCONS <! [ HARG #harg,
 		     LARG #larg ] !> ]].
 
-; Negation + MOOD irrealis
-
-irrealis := mood.
-realis := mood.
-no-mood := mood.
 

@@ -37,17 +37,6 @@ COG-ST : COG-ST
   * <> *
 
 
-; PNG.PER : PNG.PER
-;   3rd <> 3rd
-;   2nd <> 2nd
-;   1st <> 1st
-;   * <> *
-
-; PNG.NUM : PNG.NUM
-;   pl <> pl
-;   sg <> sg
-;   * <> *
-
 PNG.PERNUM : PER NUM
   1sg <> first sg
   1pl <> first pl
@@ -66,11 +55,6 @@ PNG.PERNUM : PER NUM
   pl <> ! pl
   pl << * pl
   *  <> ! !
-
-PNG.GEND : GEND
-  neut <> neut
-  fem <> fem
-  masc <> masc
 
 E.TENSE : TENSE
   present <> present

@@ -1,0 +1,756 @@
+# Lab 9
+
+### University of Washington, LING 567, Winter 2016
+
+#### Author: Roman Pearah
+#### Partner: Kristen Piepgrass
+
+#### Language: Haida (Masset dialect)
+
+---
+
+## Changes to Grammar
+
+### Normalization
+
+There were a couple of aspects of our grammar that simply needed to be normalized to be compatible with the MMT grammars. So we:
+
+* Changed all instances of `_pron_n_rel` to `pron_rel`
+* Changed all instances of `neg_a_rel` to `neg_rel`
+
+### Lexicon
+
+Next, we had to add to our lexicon all words from the MMT sentences that were not already accounted for:
+
+```
+duuj := alienable-noun-lex &
+  [ STEM < "duuj" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_cat_n_rel" ].
+
+q’wiid_1 := itr-nom-verb-lex &
+  [ STEM < "q’wiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hungry_a_rel" ].
+
+q’wiid_2 := attrib-adj-lex &
+  [ STEM < "q’wiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_hungry_a_rel" ].
+
+7unsiid := prop-sent-verb-lex &
+  [ STEM < "7unsiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+cangala := int-adverb-lex &
+  [ STEM < "cangala" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_quickly_a_rel" ].
+```
+
+We also found that our 2sg acc pronoun was listed as plural and corrected it.
+
+### Topic Change
+
+Also, because our topic change lexical rule lacked semantic content and we could not locate a sufficient explanation to help us add any, we commented it out for the purposes of MT.
+
+### Features
+
+In our first pass through the translation process, we found that we were seeing our negative suffix attach throughout where it shouldn't. This was caused by a failure to unify `NEG-SAT` values of the mother and head daughter in several clause and phrase definitions, which we corrected:
+
+```
+int-clause := head-only & interrogative-clause &
+  [ SYNSEM [ LOCAL.CAT [ HEAD verb,
+                         INT -,
+                         VAL #val ],
+             NON-LOCAL.YNQ <! !>,
+             NEG-SAT #negsat ],
+    HEAD-DTR.SYNSEM [ NEG-SAT #negsat,
+                      LOCAL.CAT [ INT +,
+                                  VAL #val ],
+                      NON-LOCAL [ YNQ <! *top* !>,
+                                  SLASH <! !> ]]].
+
+wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
+   [ SYNSEM [ LOCAL.CAT [ MC +,
+                          VAL #val,
+                          HEAD verb & [ FORM finite ] ],
+              NEG-SAT #negsat ],
+     HEAD-DTR.SYNSEM [ LOCAL.CAT [ MC na,
+                                   INT +,
+                                   VAL #val & [ SUBJ < >,
+                                                COMPS < > ] ],
+                       NEG-SAT #negsat ],
+     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD.WH-EMB -,
+                                       MKG.FC + ],
+                           NON-LOCAL.QUE < ! ref-ind ! > ] ].
+
+emb-wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
+   [ SYNSEM [ NEG-SAT #negsat,
+        LOCAL.CAT [ MC -,
+        VAL #val,
+        HEAD verb & [ FORM finite ]] ],
+     HEAD-DTR.SYNSEM [ NEG-SAT #negsat,
+           LOCAL.CAT [ MC na,
+           INT +,
+           HEAD.INF +,
+                 VAL #val & [ SUBJ < >,
+            COMPS < > ] ]],
+     NON-HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD.WH-EMB +,
+                                       MKG.FC - ],
+                           NON-LOCAL.QUE < ! ref-ind ! > ] ].
+
+extracted-comp-phrase := basic-extracted-comp-phrase & same-ynq-unary-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
+  [ SYNSEM [ LOCAL.CAT.HEAD verb,
+             NEG-SAT #negsat ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT.VAL.SUBJ cons,
+                      NEG-SAT #negsat ] ].
+
+extracted-subj-phrase := basic-extracted-subj-phrase & same-ynq-unary-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
+  [ C-CONT [ RELS <! !>,
+       HCONS <! !>,
+       ICONS <! !> ],
+    SYNSEM [ LOCAL.CAT.HEAD verb,
+             NEG-SAT #negsat ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT.VAL.COMPS olist,
+                      NEG-SAT #negsat ] ].
+
+context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase & same-mc-phrase & same-nf-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase &
+[ SYNSEM.NEG-SAT #negsat,
+  HEAD-DTR.SYNSEM [ NEG-SAT #negsat,
+  LIGHT +,
+  LOCAL.CAT.VAL [SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY low,
+              PERNUM 3rd ],
+     COMPS high-pot-list ] ]].
+
+context1-head-opt-comp-phrase := basic-head-opt-comp-phrase & same-mc-phrase & same-nf-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase  &
+[ SYNSEM [ LIGHT -,
+     NEG-SAT #negsat ],
+  HEAD-DTR.SYNSEM[ NEG-SAT #negsat,
+       LOCAL.CAT.VAL [SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
+          COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [POTENCY low,
+                   PERNUM 3rd]]]].
+
+head-adj-int-phrase :+ same-int-phrase & same-mc-phrase & same-nf-phrase &
+ [ SYNSEM [ NEG-SAT #negsat,
+            OPT-CS #opt-cs ],
+   NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.MOD < [ L-PERIPH #periph ]>,
+   HEAD-DTR.SYNSEM [ OPT-CS #opt-cs,
+                     NEG-SAT #negsat,
+                     L-PERIPH #periph ]].
+
+adj-head-int-phrase :+ same-int-phrase & same-mc-phrase & same-nf-phrase &
+  [ SYNSEM [ NEG-SAT #negsat ],
+    HEAD-DTR.SYNSEM [ NEG-SAT #negsat ]].
+```
+
+Furthermore, when attempting to translate `Dogs eat quickly`, we noticed that the `head-adj-int` rule was dropping `INT` and `MC` features, causing interrogative tense and embedded clause suffixes to appear where they shouldn't. We solved this by adding `same-int-phrase` to `head-adj-int` (and `adj-head-int`) and by creating a `same-mc-type` to add as well:
+
+```
+same-mc-phrase := headed-phrase &
+  [ SYNSEM.LOCAL.CAT.MC #mc,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+```
+
+Embedded clauses were generating many thousands of results or maxing out from a failure to pass up our `NF` (non-factive) feature, for one thing, so we created a rule for `NF` identity:
+
+```
+same-nf-phrase := headed-phrase &
+  [ SYNSEM.LOCAL.CAT.HEAD.NF #nf,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.NF #nf ].
+```
+
+For another thing, we also had three embedding verbs of type `prop-sent-verb-lex`, which treated all three as having non-factive complements, when “know” actually takes a factive complement, and there was no selection against infinitivals or interrogative tenses:
+
+```
+prop-sent-verb-lex := sentential-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ LOCAL [ CONT.HOOK.INDEX.SF prop,
+                                           CAT [ HEAD.NF +,
+                                                 MC - ] ] ] > ].
+
+7unsiid := prop-sent-verb-lex &
+  [ STEM < "7unsiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+suu_2 := prop-sent-verb-lex &
+  [ STEM < "suu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
+
+gudang_2 := prop-sent-verb-lex &
+  [ STEM < "gudang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].
+```
+
+So we split the type up accordingly and changed the type of *suu* and *gudang*, additionally selecting for proposition sentences that weren't infinitival or interrogative tense:
+
+```
+prop-sent-verb-lex := sentential-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ LOCAL [ CONT.HOOK.INDEX.SF prop,
+                                           CAT [ HEAD [ NF -,
+                                                        INF - ],
+                                                 MC -,
+                                                 INT - ] ] ] > ].
+
+prop-non-fac-sent-verb-lex := sentential-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS < [ LOCAL [ CONT.HOOK.INDEX.SF prop,
+                                           CAT [ HEAD [ NF +,
+                                                        INF - ],
+                                                 MC - ,
+                                                 INT - ] ] ] > ].
+
+7unsiid := prop-sent-verb-lex &
+  [ STEM < "7unsiid" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_know_v_rel" ].
+
+suu_2 := prop-non-fac-sent-verb-lex &
+  [ STEM < "suu" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_say_v_rel" ].
+
+gudang_2 := prop-non-fac-sent-verb-lex &
+  [ STEM < "gudang" >,
+    SYNSEM.LKEYS.KEYREL.PRED "_think_v_rel" ].                                    
+```
+
+We added `same-int-phrase & same-mc-phrase & same-nf-phrase` as supertypes on phrase types seen above, as well as the following:
+
+```
+comp-head-phrase := basic-head-1st-comp-phrase & head-final & same-int-phrase & same-mc-phrase & same-nf-phrase.
+
+subj-head-phrase := decl-head-subj-phrase & same-int-phrase & head-final & same-mc-phrase & same-nf-phrase &
+  [ HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
+
+neg-adj-head-scop-phrase := adj-head-scop-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
+  [ SYNSEM.NEG-SAT +,
+    HEAD-DTR.SYNSEM.NEG-SAT -,
+    NON-HEAD-DTR neg-adv-lex ].
+
+scopal-adj-head-phrase := adj-head-scop-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
+  [ HEAD-DTR.SYNSEM.NEG-SAT +,
+    NON-HEAD-DTR scop-sent-adv-lex ].
+```
+
+### Modal 2 Position Class
+
+We also saw `INFIN-PP` in embedded propositions and `NF` in embedded questions, against expectations. `infin-pp-lex-rule` is a `modal-2` position class and sets its verb to `INF +` and `emb-wh-ques-phrase` selects for `INF +`. To contrast, we set the other lex rules in the `modal-2` position class (the daughters of `modal-2-lex-rule-super`) to set their verb to `INF -`, so that they wouldn't go through and get picked up by the `emb-wh-ques-phrase`. Since `modal-2` was not already obligatory, we added a no-affix subtype called `no-modal-2-lex` that sets `INF -` and made the position class obligatory by adding a flag `MODAL-2-LEX`:
+
+```
+verb-lex := non-mod-lex-item & NUM-rule-dtr & aspect-rule-dtr & modal-2-rule-dtr & modal-3-rule-dtr & negation-rule-dtr & question-rule-dtr & topic-change-rule-dtr &
+  [ SYNSEM.LOCAL.CAT [ HEAD verb,
+                       HC-LIGHT - ],
+    INFLECTED [ QUESTION-FLAG -,
+    INT_TENSE-OR-TENSE-FLAG -,
+    FIN-FLAG na-or--,
+                FINITE-FLAG -,
+                NUM-FLAG -,
+    MODAL-2-FLAG - ] ].
+
+modal-2-lex-rule-super := add-only-no-ccont-rule & modal-3-rule-dtr & same-neg-sat-lex-rule & question-rule-dtr & topic-change-rule-dtr &
+  [ INFLECTED [ MODAL-2-FLAG +,
+    INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
+                TRANSITIVE-VERB-FLAG #transitive-verb,
+                COG-ST-FLAG #cog-st,
+                QUESTION-FLAG #question,
+                FINITE-FLAG #finite,
+                NUM-FLAG #num,
+                FIN-FLAG #fin ],
+    DTR modal-2-rule-dtr &
+        [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
+                      TRANSITIVE-VERB-FLAG #transitive-verb,
+                      COG-ST-FLAG #cog-st,
+                      QUESTION-FLAG #question,
+                      FINITE-FLAG #finite,
+                      NUM-FLAG #num,
+                      FIN-FLAG #fin & + ] ] ].
+
+fut-lex-rule := modal-2-lex-rule-super & infl-lex-rule &
+  [ INFLECTED.FUT-FLAG +,
+    SYNSEM.LOCAL [CAT.HEAD.INF -,
+      CONT.HOOK.INDEX.E.MOOD future ]].
+
+infin-pp-lex-rule := modal-2-lex-rule-super  & infl-lex-rule &
+  [ INFLECTED.FUT-FLAG #fut,
+    DTR.INFLECTED.FUT-FLAG #fut,
+    SYNSEM.LOCAL.CAT.HEAD [ INF + ] ].
+
+evid-lex-rule := modal-2-lex-rule-super  & infl-lex-rule &
+  [ SYNSEM.LOCAL [CAT.HEAD.INF -,
+      CONT.HOOK.INDEX.E.EVID evidential],
+    INFLECTED [ FUT-FLAG #fut,
+    QUESTION-FLAG -,
+    TENSE-FLAG - ],
+    DTR.INFLECTED.FUT-FLAG #fut].
+
+no-modal-2-lex-rule := modal-2-lex-rule-super & const-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.INF - ].
+
+no-modal-2-lex := no-modal-2-lex-rule.
+```
+
+This reduced but did not eliminate spurious suffixes from `I ask whether you know that dogs chase cars.`.
+
+### Coordination
+
+To reduce overgeneration in clausal coordination sentences, we added mother-daughter identities for `INT`, `MC`, `INF` and `NEG-SAT` features to our VP/S coordination rules:
+
+```
+vp3-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM [ LOCAL [ COORD-STRAT "3",
+         CAT [ INT #int,
+         MC #mc,
+         HEAD.INF #inf ]],
+       NEG-SAT #negsat],
+    LCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
+            MC #mc,
+            HEAD.INF #inf ],
+      NEG-SAT #negsat],
+    RCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
+            MC #mc,
+            HEAD.INF #inf ],
+      NEG-SAT #negsat ]].
+
+vp3-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase &
+    [ SYNSEM [ LOCAL [ COORD-STRAT "3",
+           CAT [ INT #int,
+           MC #mc,
+           HEAD.INF #inf ]],
+       NEG-SAT #negsat],
+    NONCONJ-DTR.SYNSEM [ LOCAL [ COORD-STRAT "3",
+         CAT [ INT #int,
+               MC #mc,
+               HEAD.INF #inf ]],
+       NEG-SAT #negsat]].
+
+s3-top-coord-rule := basic-s-top-coord-rule & apoly-top-coord-rule &
+  [ SYNSEM [ LOCAL [ COORD-STRAT "3",
+         CAT [ INT #int,
+         MC #mc,
+         HEAD.INF #inf ]],
+       NEG-SAT #negsat],
+    LCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
+            MC #mc,
+            HEAD.INF #inf ],
+      NEG-SAT #negsat],
+    RCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
+            MC #mc,
+            HEAD.INF #inf ],
+      NEG-SAT #negsat ]].
+
+s3-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
+    [ SYNSEM [ LOCAL [ COORD-STRAT "3",
+           CAT [ INT #int,
+           MC #mc,
+           HEAD.INF #inf ]],
+       NEG-SAT #negsat],
+    NONCONJ-DTR.SYNSEM [ LOCAL [ COORD-STRAT "3",
+         CAT [ INT #int,
+               MC #mc,
+               HEAD.INF #inf ]],
+       NEG-SAT #negsat]].
+```
+
+### Definiteness
+
+We also had to find a way to eliminate translations of attributive adjective and possessive sentences where the modified or possessed noun lacked the Haida -DEF suffix. For this, we needed to identify `OPT-CS` between mother and head daughter on `head-adj-int-phrase` (attribute adjectives) and `adj-head-int-phrase` (possessives), both shown above.
+
+### Question Clitic
+
+We had to constrain the modifier of our question clitic to `HEAD noun` because it was attaching to the right of the whole S-T of `Dogs chase cars and cats chase dogs`:
+
+```
+question-clitic-lex := no-hcons-lex-item &
+ [ SYNSEM [ LOCAL [ CAT [ POSTHEAD + ,
+      VAL [ SPR < >,
+            COMPS < >,
+            SUBJ < >,
+            SPEC < > ],
+      HEAD adv & [ MOD < [ LIGHT +,
+               L-PERIPH +,
+               LOCAL.CAT [ HEAD noun,
+         VAL.SPR < > ]] > ]],
+        CONT.RELS <! !> ],
+      NON-LOCAL.YNQ <! *top* !>]].
+```
+
+After this, we still find the clitic attaching to the first constituent of *I ask whether you know that dogs chase cars*, i.e. when an embedded question is at the start of the sentence. As there isn't a clear way to handle this at this time, we were advised to leave the type as it is here.
+
+### Variable Property Mapping
+
+Because Chadian Arabic is underspecified for tense, relying instead on aspect, we were getting both past and present tense generation, when we should only see present. To stop this, we set a default present tense for Haida:
+
+```
+E.TENSE : TENSE
+  present <> present
+  nonpast <> nonpast
+  past <> past
+  * >> present
+  present << [e]
+```
+
+We also removed the GEND section, as recommended.
+
+### Other
+
+The `non-factive-lex` rule is a tense, which is obligatory, so we set the other tenses as well as the `int-tense-lex` rule super to assign `NF -`.
+
+```
+past-lex-rule := tense-lex-rule-super &
+  [ DTR.INFLECTED.FUT-FLAG na,
+    SYNSEM.LOCAL [CAT.HEAD.NF -,
+      CONT.HOOK.INDEX.E.TENSE past ]].
+
+non-past-lex-rule := tense-lex-rule-super &
+  [ SYNSEM.LOCAL [CAT.HEAD.NF -,
+      CONT.HOOK.INDEX.E.TENSE nonpast ]].
+
+int_tense-lex-rule-super := add-only-no-ccont-rule & same-neg-sat-lex-rule &
+  [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG +,
+                NUM-FLAG #num,
+    MODAL-2-FLAG #modal2,
+                FUT-FLAG #fut,
+                QUESTION-FLAG #question,
+                COG-ST-FLAG #cog-st,
+                FINITE-FLAG #finite,
+                FIN-FLAG #fin,
+                TRANSITIVE-VERB-FLAG #transitive-verb ],
+    SYNSEM.LOCAL.CAT.HEAD.NF -,
+    DTR int_tense-rule-dtr &
+        [ INFLECTED [ NUM-FLAG #num,
+          MODAL-2-FLAG #modal2,
+                      FUT-FLAG #fut,
+                      QUESTION-FLAG #question,
+                      COG-ST-FLAG #cog-st,
+                      FINITE-FLAG #finite,
+                      FIN-FLAG #fin,
+                      TRANSITIVE-VERB-FLAG #transitive-verb ]]].
+```
+
+## Transfer Rules
+
+Haida treats *taa* (*eat*) as a transitive verb with a dropped object. We added a transfer rule in both eng and shu that allows us to get the predication on the thing eaten:
+
+```
+eat-intrans-mtr := monotonic_omtr &
+[ INPUT [ RELS <! [ PRED "_eat_v_rel",
+                    LBL #lbl,
+                    ARG0 #arg0,
+                    ARG1 #arg1,
+                    ARG2 #arg2 & [ COG-ST type-id ] ] !> ],
+  FILTER [ RELS <! [ ARG0 #arg2 ] !> ],
+  OUTPUT [ RELS <! [ PRED "_eat_v_rel",
+                     LBL #lbl,
+                     ARG0 #arg0,
+                     ARG1 #arg1 ] !> ]].
+```
+
+This goes along with instantiating `pronoun-delete-mtr`:
+
+```
+pronoun-delete-mtr := monotonic_omtr &
+ [ INPUT [ RELS <! [ PRED "pron_rel",
+                     ARG0 #x,
+                     LBL #larg ],
+                   [ PRED "exist_q_rel",
+                     ARG0 #x,
+                     RSTR #harg ] !>,
+           HCONS <! qeq & [ LARG #larg,
+                            HARG #harg ] !> ],
+   OUTPUT [ RELS <! !>,
+            HCONS <! !> ] ].
+```
+
+For Chadian Arabic only, we also instantiated both the `pro-insert-arg1-mtr` and `pro-insert-arg2-mtr` transfer rules because shu is pro-drop, which worked out-of-the-box:
+
+```
+pro-insert-arg1-mtr := monotonic_mtr &
+[ INPUT.RELS <! !>,
+  CONTEXT.RELS <! [ ARG0.SF prop-or-ques,
+       ARG1 #x ] !>,
+  FILTER.RELS <! [ ARG0 #x ] !>,
+  OUTPUT [ RELS <! [ PRED "pron_rel",
+        ARG0 #x,
+        LBL #larg ],
+      [ PRED "exist_q_rel",
+        ARG0 #x,
+        RSTR #harg ] !>,
+  HCONS <! qeq &
+    [ HARG #harg,
+      LARG #larg ] !> ],
+  FLAGS.EQUAL < #x > ].
+
+pro-insert-arg2-mtr := monotonic_mtr &
+[ INPUT.RELS <! !>,
+  CONTEXT.RELS <! [ ARG0.SF prop-or-ques,
+       ARG2 #x & [ COG-ST fam-or-more ]] !>,
+  FILTER.RELS <! [ ARG0 #x ] !>,
+  OUTPUT [ RELS <! [ PRED "pron_rel",
+        ARG0 #x,
+        LBL #larg ],
+      [ PRED "exist_q_rel",
+        ARG0 #x,
+        RSTR #harg ] !>,
+  HCONS <! qeq &
+    [ HARG #harg,
+      LARG #larg ] !> ],
+  FLAGS.EQUAL < #x > ].
+```
+
+We are keeping our transfer rules in both the grammar for eng and for shu, as appropriate.
+
+## Coverage
+
+### Testsuite
+
+Coverage 76.3%
+Baseline: 79.4%
+Overgen: 5%
+Baseline: 10%
+
+We lost two sentences dealing with the focus clitic in our attempts to fix the question clitic for MT:
+
+```
+#80 wh questions
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.àwhlaang
+giisd=.uu dang gyaa taanaanee tla.àwhla-gang
+who=FOC you POSS smokehouse build-PRS
+`Who is building your smokehouse?'
+
+#81 wh questions
+Source: a:134
+Vetted: s
+Judgment: g
+Phenomena: {wh}
+giisd.uu dang gyaa taanaa nee tla.àwhlayaa
+giisd=.uu dang gyaa taanaanee tla.àwhla-gaa
+who=FOC you POSS smokehouse build-EVID
+`Who built your smokehouse?'
+```
+
+### Corpus
+
+Coverage: 0%
+Baseline 20%
+
+This is because we commented out topic change for MT.
+
+### MT
+
+Some valid sources of multiple translations include:
+
+* SOV vs. OSV word order
+* No marking of subject or object for number (`plural-obj-suffix` or `plural-subj-suffix`)
+* rahl and 7isgyaan coordination are interchangeable
+* Multiple ways of expressing 1sg alienable possession
+* Combinatoric explosion of the above in coordination
+
+Specific sources are noted with each sentence.
+
+### English
+#### 18 of 24 coverage
+
+##### Successes
+
+```
+; 1 generation result
+Dogs sleep.
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+Dogs chase cars.
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+I chase you.
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+Dogs eat.
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+The dogs chase cars.
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+The dogs dont chase cars.
+
+; 32 generation results
+; 2 from SOV/OSV word order
+; x 2 `plural-obj-suffix` or `plural-subj-suffix`
+; x 2 daa, dalang
+; x 2 word order of *you* and *that dogs chase cars*
+; = 16 for 'you know that dogs chase cars' 
+; x 2 word order of *I* and *you know that dogs chase cars*
+I think that you know that dogs chase cars.
+
+; 8 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix` x 2 rahl vs 7isgyaan coordination
+Cats and dogs chase cars.
+
+; 16 generation results 
+; 4^2: 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix` ^ 2 clauses
+Dogs chase cars and cats chase dogs.
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+Cats chase dogs and sleep.
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+Do cats chase dogs?
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+Hungry dogs eat.
+
+; 6 generation results
+; 2 `plural-obj-suffix` or `plural-subj-suffix` x 3 from adverb on the V, VP and S
+Dogs eat quickly.
+
+; 1 generation result
+The dogs are hungry.
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+The dogs are the cats.
+
+; 1 generation result
+Who sleeps?
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+What do the dogs chase?
+
+; 1 generation result
+The dog's car sleeps.
+```
+
+##### Failures
+
+```
+; 112 generation results
+; spurious question clitic
+; INF constraint not working
+I ask whether you know that dogs chase cars.
+
+; We were not able to locate a word for `park` or `in.the.park`
+; However, even if we had, we did not implement this phenomena
+; as the way it is expressed in Haida was out-of-scope
+The dogs are in the park.
+
+; 8 generation results
+; spurious question clitic
+What do you think the dogs chase?
+
+; 4 generation results
+; spurious question clitic
+Who asked what the dogs chase?
+
+; 8 generations results
+; spurious question clitic
+I asked what the dogs chased.
+
+; 6 generation results
+; Multiple ways of expressing 1sg alienable possession are ok
+; but could not eliminate indefinite
+My dogs sleep.
+```
+
+### Chadian Arabic
+#### 19 of 22 coverage
+
+##### Successes
+
+```
+; 1 generation result
+kalib-PL y-unuum-u
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+kalib-PL y-itaarid-u watiir-PL
+
+; 2 generation results
+; SOV/OSV word order
+ana n-itaarid-0-k
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+kalib-PL y-aakul-u
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+al-kalib-PL y-itaarid-u watiir-PL
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+al-kalib-PL ma y-itaarid-u watiir-PL
+
+; 16 generation results
+; 2 from SOV/OSV word order
+; x 2 `plural-obj-suffix` or `plural-subj-suffix`
+; x 2 word order of *you* and *that dogs chase cars*
+; x 2 word order of *I* and *you know that dogs chase cars*
+ana n-ahsib-0 kadar inta t-a'arif-0 kadar kalib-PL y-itaarid-u watiir-PL
+
+; 8 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix` x 2 rahl vs 7isgyaan coordination
+biss-PL wa kalib-PL y-itaarid-u watiir-PL
+
+; 16 generation results 
+; 4^2: 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix` ^ 2 clauses
+kalib-PL y-itaarid-u watiir-PL wa biss-PL y-itaarid-u kalib-PL
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+biss-PL y-itaarid-u kalib-PL wa naam-o
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+biss-PL y-itaarid-u kalib-PL walla
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+kalib-PL jii'aan-PL y-aakul-u
+
+; 6 generation results
+; 2 `plural-obj-suffix` or `plural-subj-suffix` x 3 from adverb on the V, VP and S
+kalib-PL y-aakul-u ajala
+
+; 1 generation result
+al-kalib-PL jii'aan-PL
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+al-kalib-PL al-biss-PL
+
+; 1 generation result
+yaatu y-unuum-0
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+al-kalib-PL y-itaarid-u chunu
+
+; 4 generation results
+; 2 from SOV/OSV word order x 2 `plural-obj-suffix` or `plural-subj-suffix`
+inta t-ahsib-0 kadar al-kalib-PL y-itaarid-u chunu
+
+; 2 generation results
+; `plural-obj-suffix` or `plural-subj-suffix`
+yaatu sa'al-0 al-kalib-PL y-itaarid-u chunu
+```
+
+##### Failures
+
+```
+; 56 generation results
+; spurious question clitic
+ana n-as'al-0 kan inta t-a'arif-0 kadar kalib-PL y-itaarid-u watiir-PL
+
+; We were not able to locate a word for `park` or `in.the.park`
+; However, even if we had, we did not implement this phenomena
+; as the way it is expressed in Haida was out-of-scope
+al-kalib-PL fi al-naga'a
+
+; 16 generation results
+; spurious question clitic
+ana sa'al-t al-kalib-PL taarad-o chunu
+```

@@ -14,3 +14,5 @@ int-lex := int-lex-rule.
 decl-lex := decl-lex-rule.
 
 int_present-lex := int_present-lex-rule.
+
+no-modal-2-lex := no-modal-2-lex-rule.

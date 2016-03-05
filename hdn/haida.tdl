@@ -45,14 +45,16 @@ non-local :+
 
 basic-verb-lex :+ [ SYNSEM.NEG-SAT na-or-+ ].
 
-basic-head-comp-phrase :+ [ HEAD-DTR.SYNSEM [ NEG-SAT #ns,
+basic-head-comp-phrase :+
+  [ HEAD-DTR.SYNSEM [ NEG-SAT #ns,
                       LOCAL.CAT.MC #mc ],
     SYNSEM [ NEG-SAT #ns,
              LOCAL.CAT [ MC #mc,
                          VC #vc ] ],
     NON-HEAD-DTR.SYNSEM.LOCAL.CAT.VC #vc ].
 
-basic-head-subj-phrase :+ [ SYNSEM.NEG-SAT #ns,
+basic-head-subj-phrase :+
+  [ SYNSEM.NEG-SAT #ns,
     HEAD-DTR.SYNSEM.NEG-SAT #ns ].
 ; commented out for negation bug fix - KP
 ; clause :+ [ SYNSEM.NEG-SAT na-or-+ ].
@@ -67,9 +69,19 @@ basic-binary-phrase :+
     [SYNSEM [ L-PERIPH -,
         NON-LOCAL.YNQ [ LIST #middle,
                                                                 LAST #last]]] > ].
-head-adj-int-phrase :+
- [ NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.MOD < [ L-PERIPH #periph ]>,
-   HEAD-DTR.SYNSEM.L-PERIPH #periph ].
+head-adj-int-phrase :+ same-int-phrase & same-mc-phrase & same-nf-phrase &
+ [ SYNSEM [ NEG-SAT #negsat,
+            OPT-CS #opt-cs ],
+   NON-HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.MOD < [ L-PERIPH #periph ]>,
+   HEAD-DTR.SYNSEM [ OPT-CS #opt-cs,
+                     NEG-SAT #negsat,
+                     L-PERIPH #periph ]].
+
+adj-head-int-phrase :+ same-int-phrase & same-mc-phrase & same-nf-phrase &
+  [ SYNSEM [ NEG-SAT #negsat,
+             OPT-CS #opt-cs ],
+    HEAD-DTR.SYNSEM [ NEG-SAT #negsat,
+                      OPT-CS #opt-cs ]].
 
 basic-zero-arg :+ [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
 basic-one-arg :+ [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
@@ -86,14 +98,15 @@ intersective-mod-lex :+ [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
 +nvcdmo :+ [ MOD < > ].
 
 inflected :+ [ INT_TENSE-OR-TENSE-FLAG luk,
-    TRANSITIVE-VERB-FLAG luk,
-    QUESTION-FLAG luk,
-    COG-ST-FLAG luk,
-    FUT-FLAG luk,
-    FINITE-FLAG luk,
-    FIN-FLAG luk,
-    NUM-FLAG luk,
-    TENSE-FLAG luk ].
+         TRANSITIVE-VERB-FLAG luk,
+         QUESTION-FLAG luk,
+         COG-ST-FLAG luk,
+         FUT-FLAG luk,
+         FINITE-FLAG luk,
+         FIN-FLAG luk,
+         NUM-FLAG luk,
+         TENSE-FLAG luk,
+         MODAL-2-FLAG luk].
 
 infl-satisfied :+ [ INT_TENSE-OR-TENSE-FLAG na-or-+,
     TRANSITIVE-VERB-FLAG na-or-+,
@@ -102,7 +115,8 @@ infl-satisfied :+ [ INT_TENSE-OR-TENSE-FLAG na-or-+,
     FINITE-FLAG na-or-+,
     FIN-FLAG na-or-+,
     NUM-FLAG na-or-+,
-    TENSE-FLAG na-or-+ ].
+    TENSE-FLAG na-or-+,
+    MODAL-2-FLAG na-or-+].
 
 basic-head-mod-phrase-simple :+ [ SYNSEM.LOCAL.CAT.MC #mc,
     NON-HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
@@ -274,7 +288,7 @@ acc-pron-lex := no-spr-pronoun-lex &
                                          PERNUM 3rd ] ] ].
 
 2sg-acc-pron-lex := acc-pron-lex &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2pl ].
+  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.PNG.PERNUM 2sg ].
 
 proper-noun-lex := no-spr-noun-lex.
 
@@ -298,7 +312,8 @@ verb-lex := non-mod-lex-item & NUM-rule-dtr & aspect-rule-dtr & modal-2-rule-dtr
     INT_TENSE-OR-TENSE-FLAG -,
     FIN-FLAG na-or--,
                 FINITE-FLAG -,
-                NUM-FLAG - ] ].
+                NUM-FLAG -,
+    MODAL-2-FLAG - ] ].
 
 main-verb-lex := verb-lex & basic-verb-lex &
   [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
@@ -309,7 +324,7 @@ main-verb-lex := verb-lex & basic-verb-lex &
                    CONT.HOOK.XARG #xarg ],
     ARG-ST.FIRST #subj &
                  [ LOCAL [ CAT [HEAD noun,
-				VAL [ SPR < >,
+        VAL [ SPR < >,
                                      COMPS < > ]],
                            CONT.HOOK.INDEX #xarg ] ] ].
 
@@ -355,18 +370,19 @@ itr-nom-verb-lex := itr-verb-lex & nom-intransitive-verb-lex.
 ditr-ctrl-verb-lex := main-verb-lex & ditrans-second-arg-control-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps1, #comps2 >,
     ARG-ST < [ ],
-	     #comps1 &
-	     [ LOCAL.CAT [ HEAD noun,
-			   VAL.SPR < >]],
-	     #comps2 &
-	     [ OPT -,
-	       LOCAL.CAT [ HEAD adp,
-			   VAL.COMPS < > ]] >,
+       #comps1 &
+       [ LOCAL.CAT [ HEAD noun,
+         VAL.SPR < >]],
+       #comps2 &
+       [ OPT -,
+         LOCAL.CAT [ HEAD adp,
+         VAL.COMPS < > ]] >,
     INFLECTED.TRANSITIVE-VERB-FLAG +].
 
 sentential-verb-lex := main-verb-lex & clausal-second-arg-trans-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
-    ARG-ST < [ LOCAL.CAT.HEAD noun ],
+    ARG-ST < [ LOCAL.CAT.HEAD noun &
+                              [ CASE nom ] ],
        #comps &
        [ NEG-SAT +,
          LOCAL [ CAT [ VAL [ SUBJ < >,
@@ -376,8 +392,17 @@ sentential-verb-lex := main-verb-lex & clausal-second-arg-trans-lex-item &
 
 prop-sent-verb-lex := sentential-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS   < [ LOCAL [ CONT.HOOK.INDEX.SF prop,
-              CAT [ HEAD.NF +,
-              MC - ]]] > ].
+               CAT [ HEAD [ NF -,
+                INF - ],
+               MC -,
+               INT - ]]] > ].
+
+prop-non-fac-sent-verb-lex := sentential-verb-lex &
+  [ SYNSEM.LOCAL.CAT.VAL.COMPS   < [ LOCAL [ CONT.HOOK.INDEX.SF prop,
+              CAT [ HEAD [ NF +,
+         INF - ],
+        MC - ,
+        INT - ]]] > ].
 
 ques-sent-verb-lex := sentential-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS  < [ LOCAL [ CONT.HOOK.INDEX.SF ques,
@@ -386,16 +411,16 @@ ques-sent-verb-lex := sentential-verb-lex &
 
 ;ditrans-ques-sent-verb-lex := main-verb-lex & clausal-third-arg-ditrans-lex-item &
 ;  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps & [ LOCAL [ CONT.HOOK.INDEX.SF prop,
-;              					    CAT [ HEAD.NF +,
-;             					    MC - ]]] >,
+;                           CAT [ HEAD.NF +,
+;                           MC - ]]] >,
 ;    ARG-ST < [ LOCAL.CAT.HEAD noun ],
-;	     #comps &
-;	     [ NEG-SAT +,
-;	       LOCAL [ CAT [ VAL [ SUBJ < >,
-;				   COMPS < > ],
-;			     HEAD verb ],
-;		       CONT.HOOK.INDEX.SF prop-or-ques ]],
-;	     [ LOCAL.CAT.HEAD noun ] > ].
+;      #comps &
+;      [ NEG-SAT +,
+;        LOCAL [ CAT [ VAL [ SUBJ < >,
+;          COMPS < > ],
+;          HEAD verb ],
+;          CONT.HOOK.INDEX.SF prop-or-ques ]],
+;      [ LOCAL.CAT.HEAD noun ] > ].
 
 ;;; Auxiliaries
 
@@ -482,13 +507,14 @@ non-ynq-lex-item := lex-item &
 
 question-clitic-lex := no-hcons-lex-item &
  [ SYNSEM [ LOCAL [ CAT [ POSTHEAD + ,
-      VAL [ SPR < >,
-            COMPS < >,
-            SUBJ < >,
-            SPEC < > ],
-      HEAD adv & [ MOD < [ LIGHT +,
-               L-PERIPH +,
-               LOCAL.CAT.VAL.SPR < > ] > ]],
+        VAL [ SPR < >,
+        COMPS < >,
+        SUBJ < >,
+        SPEC < > ],
+        HEAD adv & [ MOD < [ LIGHT +,
+                 L-PERIPH +,
+                 LOCAL.CAT [ HEAD noun,
+                 VAL.SPR < > ]] > ]],
         CONT.RELS <! !> ],
       NON-LOCAL.YNQ <! *top* !>]].
 
@@ -572,10 +598,10 @@ poss-pron-det-lex := determiner-lex-supertype &
                                                                           SPECI + ] ] ] ].
 
 alienable-poss-pron-det-lex := poss-pron-det-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY +].
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY + ].
 
 inalienable-poss-pron-det-lex := poss-pron-det-lex &
-  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY -].
+  [ SYNSEM.LOCAL.CAT.VAL.SPEC.FIRST.LOCAL.CONT.HOOK.INDEX.PNG.ALIENABILITY - ].
 
 ;;; Type for adverbs
 
@@ -631,7 +657,7 @@ adposition-lex := basic-adposition-lex & intersective-mod-lex & norm-ltop-lex-it
              LOCAL [ CONT.HOOK [ XARG #xarg,
                                  INDEX #arg0 ],
                      CAT [ POSTHEAD -,
-			   HEAD.MOD < [ LOCAL [ CAT [ HEAD noun & [ PRON - ],
+         HEAD.MOD < [ LOCAL [ CAT [ HEAD noun & [ PRON - ],
                                     VAL.SPR cons ],
                               CONT.HOOK.INDEX #xarg ]] >,
                       VAL [ SPR < >,
@@ -697,6 +723,7 @@ cog-st-lex-rule-super := add-only-no-ccont-rule &
                 FUT-FLAG #fut,
                 FINITE-FLAG #finite,
                 NUM-FLAG #num,
+    MODAL-2-FLAG #modal2,
                 FIN-FLAG #fin ],
     DTR alienable-noun-lex &
         [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
@@ -705,6 +732,7 @@ cog-st-lex-rule-super := add-only-no-ccont-rule &
                       FUT-FLAG #fut,
                       FINITE-FLAG #finite,
                       NUM-FLAG #num,
+          MODAL-2-FLAG #modal2,
                       FIN-FLAG #fin  ] ] ].
 
 indef-lex-rule := cog-st-lex-rule-super & const-lex-rule &
@@ -722,8 +750,9 @@ negation-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule
 neg-lex-rule := negation-lex-rule-super &
   [ SYNSEM.NEG-SAT - ].
 
-modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-3-rule-dtr & same-neg-sat-lex-rule & question-rule-dtr & topic-change-rule-dtr &
-  [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
+modal-2-lex-rule-super := add-only-no-ccont-rule & modal-3-rule-dtr & same-neg-sat-lex-rule & question-rule-dtr & topic-change-rule-dtr &
+  [ INFLECTED [ MODAL-2-FLAG +,
+    INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
                 TRANSITIVE-VERB-FLAG #transitive-verb,
                 COG-ST-FLAG #cog-st,
                 QUESTION-FLAG #question,
@@ -739,25 +768,31 @@ modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-3-rule-
                       NUM-FLAG #num,
                       FIN-FLAG #fin & + ] ] ].
 
-fut-lex-rule := modal-2-lex-rule-super &
+fut-lex-rule := modal-2-lex-rule-super & infl-lex-rule &
   [ INFLECTED.FUT-FLAG +,
-    SYNSEM.LOCAL.CONT.HOOK.INDEX.E.MOOD future ].
+    SYNSEM.LOCAL [CAT.HEAD.INF -,
+      CONT.HOOK.INDEX.E.MOOD future ]].
 
-infin-pp-lex-rule := modal-2-lex-rule-super &
+infin-pp-lex-rule := modal-2-lex-rule-super  & infl-lex-rule &
   [ INFLECTED.FUT-FLAG #fut,
     DTR.INFLECTED.FUT-FLAG #fut,
     SYNSEM.LOCAL.CAT.HEAD [ INF + ] ].
 
-evid-lex-rule := modal-2-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.EVID evidential,
+evid-lex-rule := modal-2-lex-rule-super  & infl-lex-rule &
+  [ SYNSEM.LOCAL [CAT.HEAD.INF -,
+      CONT.HOOK.INDEX.E.EVID evidential],
     INFLECTED [ FUT-FLAG #fut,
     QUESTION-FLAG -,
     TENSE-FLAG - ],
     DTR.INFLECTED.FUT-FLAG #fut].
 
+no-modal-2-lex-rule := modal-2-lex-rule-super & const-lex-rule &
+  [ SYNSEM.LOCAL.CAT.HEAD.INF - ].
+
 tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-lex-rule & topic-change-rule-dtr &
   [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG +,
                 NUM-FLAG #num,
+    MODAL-2-FLAG #modal2,
                 FUT-FLAG #fut,
                 QUESTION-FLAG #question,
                 COG-ST-FLAG #cog-st,
@@ -766,7 +801,8 @@ tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-le
                 TRANSITIVE-VERB-FLAG #transitive-verb ],
     DTR tense-rule-dtr &
         [ INFLECTED [ NUM-FLAG #num,
-                      FUT-FLAG #fut,
+          MODAL-2-FLAG #modal2,
+          FUT-FLAG #fut,
                       QUESTION-FLAG #question,
                       COG-ST-FLAG #cog-st,
                       FINITE-FLAG #finite,
@@ -775,10 +811,12 @@ tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-le
 
 past-lex-rule := tense-lex-rule-super &
   [ DTR.INFLECTED.FUT-FLAG na,
-    SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE past ].
+    SYNSEM.LOCAL [CAT.HEAD.NF -,
+      CONT.HOOK.INDEX.E.TENSE past ]].
 
 non-past-lex-rule := tense-lex-rule-super &
-  [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE nonpast ].
+  [ SYNSEM.LOCAL [CAT.HEAD.NF -,
+      CONT.HOOK.INDEX.E.TENSE nonpast ]].
 
 present-lex-rule := non-past-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE present ].
@@ -806,6 +844,7 @@ freq-aspect-lex-rule := imperf-aspect-lex-rule &
 NUM-lex-rule-super := add-only-no-ccont-rule & modal-2-rule-dtr & modal-3-rule-dtr & question-rule-dtr & same-neg-sat-lex-rule & topic-change-rule-dtr &
   [ INFLECTED [ NUM-FLAG +,
                 INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
+    MODAL-2-FLAG #modal2,
                 TRANSITIVE-VERB-FLAG #transitive-verb,
                 FUT-FLAG #fut,
                 QUESTION-FLAG #question,
@@ -814,6 +853,7 @@ NUM-lex-rule-super := add-only-no-ccont-rule & modal-2-rule-dtr & modal-3-rule-d
                 FIN-FLAG #fin ],
     DTR NUM-rule-dtr &
         [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
+          MODAL-2-FLAG #modal2,
                       TRANSITIVE-VERB-FLAG #transitive-verb,
                       FUT-FLAG #fut,
                       QUESTION-FLAG #question,
@@ -842,14 +882,16 @@ finite-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & same-neg-sat-
                 FUT-FLAG #fut,
                 COG-ST-FLAG #cog-st,
                 QUESTION-FLAG #question,
-                NUM-FLAG #num ],
+                NUM-FLAG #num,
+    MODAL-2-FLAG #modal2],
     DTR verb-lex &
         [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
                       TRANSITIVE-VERB-FLAG #transitive-verb,
                       FUT-FLAG #fut,
                       COG-ST-FLAG #cog-st,
                       QUESTION-FLAG #question,
-                      NUM-FLAG #num ] ] ].
+                      NUM-FLAG #num,
+          MODAL-2-FLAG #modal2] ] ].
 
 fin-lex-rule := NUM-rule-dtr & aspect-rule-dtr & finite-lex-rule-super & modal-2-rule-dtr & modal-3-rule-dtr & negation-rule-dtr & question-rule-dtr & topic-change-rule-dtr &
   [ INFLECTED.FIN-FLAG +,
@@ -878,6 +920,7 @@ question-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & modal-3-rul
                 COG-ST-FLAG #cog-st,
                 FINITE-FLAG #finite,
                 NUM-FLAG #num,
+    MODAL-2-FLAG #modal2,
                 FIN-FLAG #fin ],
     DTR question-rule-dtr &
         [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
@@ -886,6 +929,7 @@ question-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & modal-3-rul
                       COG-ST-FLAG #cog-st,
                       FINITE-FLAG #finite,
                       NUM-FLAG #num,
+          MODAL-2-FLAG #modal2,
                       FIN-FLAG #fin ] ] ].
 
 int-lex-rule := int_tense-rule-dtr & question-lex-rule-super &
@@ -897,14 +941,17 @@ decl-lex-rule := question-lex-rule-super & tense-rule-dtr & topic-change-rule-dt
 int_tense-lex-rule-super := add-only-no-ccont-rule & same-neg-sat-lex-rule &
   [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG +,
                 NUM-FLAG #num,
+    MODAL-2-FLAG #modal2,
                 FUT-FLAG #fut,
                 QUESTION-FLAG #question,
                 COG-ST-FLAG #cog-st,
                 FINITE-FLAG #finite,
                 FIN-FLAG #fin,
                 TRANSITIVE-VERB-FLAG #transitive-verb ],
+    SYNSEM.LOCAL.CAT.HEAD.NF -,
     DTR int_tense-rule-dtr &
         [ INFLECTED [ NUM-FLAG #num,
+          MODAL-2-FLAG #modal2,
                       FUT-FLAG #fut,
                       QUESTION-FLAG #question,
                       COG-ST-FLAG #cog-st,
@@ -934,26 +981,30 @@ tc-lex-rule := topic-change-lex-rule-super.
 
 ; constrained for LIGHT +, high potency compliment and low potency, 3p subject -KP
 
-context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase & 
-  [ HEAD-DTR.SYNSEM [LIGHT +,
-         LOCAL.CAT.VAL [SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY low,
-                                                                         PERNUM 3rd ],
-            COMPS high-pot-list ] ]].
+context1-decl-head-opt-subj-phrase := decl-head-opt-subj-phrase & same-mc-phrase & same-nf-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase &
+[ SYNSEM.NEG-SAT #negsat,
+  HEAD-DTR.SYNSEM [ NEG-SAT #negsat,
+  LIGHT +,
+  LOCAL.CAT.VAL [SUBJ.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [ POTENCY low,
+              PERNUM 3rd ],
+     COMPS high-pot-list ] ]].
 
 ;Constraint on MC used to be part of matrix.tdl
 ;;it applies to all wo implementations, except for v2
 
-comp-head-phrase := basic-head-1st-comp-phrase & head-final & same-int-phrase.
+comp-head-phrase := basic-head-1st-comp-phrase & head-final & same-int-phrase & same-mc-phrase & same-nf-phrase.
 
 ; created to handle optional compliments -KP
 
-context1-head-opt-comp-phrase := basic-head-opt-comp-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase  &
-  [ SYNSEM.LIGHT -,
-    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL [SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
-           COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [POTENCY low,
-                       PERNUM 3rd]]].
+context1-head-opt-comp-phrase := basic-head-opt-comp-phrase & same-mc-phrase & same-nf-phrase & same-int-phrase & same-periph-unary-phrase & same-ynq-unary-phrase  &
+[ SYNSEM [ LIGHT -,
+     NEG-SAT #negsat ],
+  HEAD-DTR.SYNSEM[ NEG-SAT #negsat,
+       LOCAL.CAT.VAL [SUBJ < [ LOCAL.CONT.HOOK.INDEX.PNG.POTENCY high ] >,
+          COMPS.FIRST.LOCAL.CONT.HOOK.INDEX.PNG [POTENCY low,
+                   PERNUM 3rd]]]].
 
-subj-head-phrase := decl-head-subj-phrase & same-int-phrase & head-final &
+subj-head-phrase := decl-head-subj-phrase & same-int-phrase & head-final & same-mc-phrase & same-nf-phrase &
   [ HEAD-DTR.SYNSEM.LOCAL.CAT.VC + ].
 
 ;non-mc-subj-head-phrase := decl-head-subj-phrase & head-final & same-int-phrase &
@@ -966,9 +1017,11 @@ subj-head-phrase := decl-head-subj-phrase & same-int-phrase & head-final &
 
 bare-np-phrase := basic-bare-np-phrase & same-periph-unary-phrase & same-ynq-unary-phrase & head-valence-phrase &
   [ C-CONT.RELS <! [ PRED "exist_q_rel" ] !>,
-    HEAD-DTR.SYNSEM [ OPT-CS #optcs,
-                      LOCAL [ CAT.VAL.SPR < unexpressed >,
-                              CONT.HOOK.INDEX.COG-ST #optcs ] ] ].
+    INFLECTED.COG-ST-FLAG #cogst,
+    HEAD-DTR [ SYNSEM [ OPT-CS #optcs,
+                        LOCAL [ CAT.VAL.SPR < unexpressed >,
+                                CONT.HOOK.INDEX.COG-ST #optcs ] ],
+               INFLECTED.COG-ST-FLAG #cogst ] ].
 
 same-periph-unary-phrase := unary-phrase &
  [ SYNSEM.L-PERIPH #periph,
@@ -981,6 +1034,14 @@ same-ynq-unary-phrase := unary-phrase &
 same-int-phrase := headed-phrase &
   [ SYNSEM.LOCAL.CAT.INT #int,
     HEAD-DTR.SYNSEM.LOCAL.CAT.INT #int ].
+
+same-mc-phrase := headed-phrase &
+  [ SYNSEM.LOCAL.CAT.MC #mc,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.MC #mc ].
+
+same-nf-phrase := headed-phrase &
+  [ SYNSEM.LOCAL.CAT.HEAD.NF #nf,
+    HEAD-DTR.SYNSEM.LOCAL.CAT.HEAD.NF #nf ].
 
    ; while these are called locative, there is not locative case, just a class of nouns
 locative-pp-phrase := unary-phrase &
@@ -1004,14 +1065,16 @@ locative-pp-phrase := unary-phrase &
           CONT.HOOK [ INDEX #dtr ]]] > ].
 
 int-clause := head-only & interrogative-clause &
-  [ SYNSEM [ LOCAL.CAT [HEAD verb,
-            INT -,
-      VAL #val ],
-       NON-LOCAL.YNQ <! !> ],
-    HEAD-DTR.SYNSEM [ LOCAL.CAT [ INT +,
-          VAL #val ],
-          NON-LOCAL [ YNQ <! *top* !>,
-		      SLASH <! !> ]]].
+  [ SYNSEM [ LOCAL.CAT [ HEAD verb,
+                         INT -,
+                         VAL #val ],
+             NON-LOCAL.YNQ <! !>,
+             NEG-SAT #negsat ],
+    HEAD-DTR.SYNSEM [ NEG-SAT #negsat,
+                      LOCAL.CAT [ INT +,
+                                  VAL #val ],
+                      NON-LOCAL [ YNQ <! *top* !>,
+                                  SLASH <! !> ]]].
 
 ; Wh-initial phrase structure rules
 
@@ -1019,47 +1082,55 @@ basic-head-filler-phrase :+
    [ ARGS < [ SYNSEM.LOCAL.COORD - ], [ SYNSEM.LOCAL.COORD - ] > ].
 
 wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
-   [ SYNSEM.LOCAL.CAT [ MC +,
-                        VAL #val,
-                        HEAD verb & [ FORM finite ] ],
-     HEAD-DTR.SYNSEM.LOCAL.CAT [ MC na,
-                                 INT +,
-                                 VAL #val & [ SUBJ < >,
-                                              COMPS < > ] ],
+   [ SYNSEM [ LOCAL.CAT [ MC +,
+                          VAL #val,
+                          HEAD verb & [ FORM finite ] ],
+              NEG-SAT #negsat ],
+     HEAD-DTR.SYNSEM [ LOCAL.CAT [ MC na,
+                                   INT +,
+                                   VAL #val & [ SUBJ < >,
+                                                COMPS < > ] ],
+                       NEG-SAT #negsat ],
      NON-HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD.WH-EMB -,
                                        MKG.FC + ],
                            NON-LOCAL.QUE < ! ref-ind ! > ] ].
 
 emb-wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
-   [ SYNSEM.LOCAL.CAT [ MC -,
-                        VAL #val,
-                        HEAD verb & [ FORM finite ] ],
-     HEAD-DTR.SYNSEM.LOCAL.CAT [ MC na,
-                                 INT +,
-                                 HEAD.INF +,
-                                 VAL #val & [ SUBJ < >,
-                                              COMPS < > ] ],
+   [ SYNSEM [ NEG-SAT #negsat,
+        LOCAL.CAT [ MC -,
+        VAL #val,
+        HEAD verb & [ FORM finite ]] ],
+     HEAD-DTR.SYNSEM [ NEG-SAT #negsat,
+           LOCAL.CAT [ MC na,
+           INT +,
+           HEAD.INF +,
+                 VAL #val & [ SUBJ < >,
+            COMPS < > ] ]],
      NON-HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD.WH-EMB +,
                                        MKG.FC - ],
                            NON-LOCAL.QUE < ! ref-ind ! > ] ].
 
-extracted-comp-phrase := basic-extracted-comp-phrase & same-ynq-unary-phrase & same-int-phrase &
-  [ SYNSEM.LOCAL.CAT.HEAD verb,
-    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.SUBJ cons ].
+extracted-comp-phrase := basic-extracted-comp-phrase & same-ynq-unary-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
+  [ SYNSEM [ LOCAL.CAT.HEAD verb,
+             NEG-SAT #negsat ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT.VAL.SUBJ cons,
+                      NEG-SAT #negsat ] ].
 
-extracted-subj-phrase := basic-extracted-subj-phrase & same-ynq-unary-phrase & same-int-phrase &
+extracted-subj-phrase := basic-extracted-subj-phrase & same-ynq-unary-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
   [ C-CONT [ RELS <! !>,
-	     HCONS <! !>,
-	     ICONS <! !> ],
-    SYNSEM.LOCAL.CAT.HEAD verb,
-    HEAD-DTR.SYNSEM.LOCAL.CAT.VAL.COMPS olist ].
+       HCONS <! !>,
+       ICONS <! !> ],
+    SYNSEM [ LOCAL.CAT.HEAD verb,
+             NEG-SAT #negsat ],
+    HEAD-DTR.SYNSEM [ LOCAL.CAT.VAL.COMPS olist,
+                      NEG-SAT #negsat ] ].
 
-neg-adj-head-scop-phrase := adj-head-scop-phrase & same-int-phrase &
+neg-adj-head-scop-phrase := adj-head-scop-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
   [ SYNSEM.NEG-SAT +,
     HEAD-DTR.SYNSEM.NEG-SAT -,
     NON-HEAD-DTR neg-adv-lex ].
 
-scopal-adj-head-phrase := adj-head-scop-phrase & same-int-phrase &
+scopal-adj-head-phrase := adj-head-scop-phrase & same-int-phrase & same-mc-phrase & same-nf-phrase &
   [ HEAD-DTR.SYNSEM.NEG-SAT +,
     NON-HEAD-DTR scop-sent-adv-lex ].
 
@@ -1093,15 +1164,57 @@ np2-bottom-coord-rule := conj-first-bottom-coord-rule & np-bottom-coord-phrase &
 ;;; Coordination Strategy 3
 
 vp3-top-coord-rule := basic-vp-top-coord-rule & apoly-top-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "3" ].
+  [ SYNSEM [ LOCAL [ COORD-STRAT "3",
+         CAT [ INT #int,
+         MC #mc,
+         HEAD.INF #inf ]],
+       NEG-SAT #negsat],
+    LCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
+            MC #mc,
+            HEAD.INF #inf ],
+      NEG-SAT #negsat],
+    RCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
+            MC #mc,
+            HEAD.INF #inf ],
+      NEG-SAT #negsat ]].
 
 vp3-bottom-coord-rule := conj-first-bottom-coord-rule & vp-bottom-coord-phrase &
-  [ SYNSEM.LOCAL.COORD-STRAT "3" ].
+    [ SYNSEM [ LOCAL [ COORD-STRAT "3",
+           CAT [ INT #int,
+           MC #mc,
+           HEAD.INF #inf ]],
+       NEG-SAT #negsat],
+    NONCONJ-DTR.SYNSEM [ LOCAL [ COORD-STRAT "3",
+         CAT [ INT #int,
+               MC #mc,
+               HEAD.INF #inf ]],
+       NEG-SAT #negsat]].
 
 ;;; Coordination Strategy 3
 
 s3-top-coord-rule := basic-s-top-coord-rule & apoly-top-coord-rule &
-  [ SYNSEM.LOCAL.COORD-STRAT "3" ].
+  [ SYNSEM [ LOCAL [ COORD-STRAT "3",
+         CAT [ INT #int,
+         MC #mc,
+         HEAD.INF #inf ]],
+       NEG-SAT #negsat],
+    LCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
+            MC #mc,
+            HEAD.INF #inf ],
+      NEG-SAT #negsat],
+    RCOORD-DTR.SYNSEM [ LOCAL.CAT [ INT #int,
+            MC #mc,
+            HEAD.INF #inf ],
+      NEG-SAT #negsat ]].
 
 s3-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
-  [ SYNSEM.LOCAL.COORD-STRAT "3" ].
+    [ SYNSEM [ LOCAL [ COORD-STRAT "3",
+           CAT [ INT #int,
+           MC #mc,
+           HEAD.INF #inf ]],
+       NEG-SAT #negsat],
+    NONCONJ-DTR.SYNSEM [ LOCAL [ COORD-STRAT "3",
+         CAT [ INT #int,
+               MC #mc,
+               HEAD.INF #inf ]],
+       NEG-SAT #negsat]].

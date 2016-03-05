@@ -1,0 +1,5 @@
+pro-ins2 := pro-insert-arg2-mtr.
+pro-ins1 := pro-insert-arg1-mtr.
+
+pro-drop := pronoun-delete-mtr.
+eat-intrans := eat-intrans-mtr.
