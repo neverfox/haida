@@ -28,7 +28,7 @@ The dogs chase cars.
 ; good
 The dogs dont chase cars.
 
-; 322 generation results
+; 32 generation results
 ; added prop-non-fac-sent-verb-lex which is what prop-sent-verb-lex used to look like for think and say, but selects for a non-factive compliment
 ; changed prop-sent-verb-lex for know, because it takes a regular (not a non-factive) verb complement
 ; created same-nf-phrase and made it a parent to all phrase-types

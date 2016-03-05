@@ -25,10 +25,12 @@ al-kalib-PL y-itaarid-u watiir-PL
 ; good
 al-kalib-PL ma y-itaarid-u watiir-PL
 
-; 2304 generation results
+; 16 generation results
+; good
 ana n-ahsib-0 kadar inta t-a'arif-0 kadar kalib-PL y-itaarid-u watiir-PL
 
-; 2688 generation results
+; 56 generation results
+; gu problem like english
 ana n-as'al-0 kan inta t-a'arif-0 kadar kalib-PL y-itaarid-u watiir-PL
 
 ; 8 generation results
@@ -74,11 +76,14 @@ yaatu y-unuum-0
 ; good
 al-kalib-PL y-itaarid-u chunu
 
-; 48 generation results (problems from past and EVID)
+; 4 generation results
+; good
 inta t-ahsib-0 kadar al-kalib-PL y-itaarid-u chunu
 
-; 8 generation results
+; 2 generation results
+; good
 yaatu sa'al-0 al-kalib-PL y-itaarid-u chunu
 
-; 80 generation results
+; 16 generation results
+; we're getting gu on these too :(
 ana sa'al-t al-kalib-PL taarad-o chunu
