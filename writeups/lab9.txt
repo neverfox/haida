@@ -348,6 +348,8 @@ s3-bottom-coord-rule := conj-first-bottom-coord-rule & s-bottom-coord-phrase &
 
 We also had to find a way to eliminate translations of attributive adjective and possessive sentences where the modified or possessed noun lacked the Haida -DEF suffix. For this, we needed to identify `OPT-CS` between mother and head daughter on `head-adj-int-phrase` (attribute adjectives) and `adj-head-int-phrase` (possessives), both shown above.
 
+We still get the indefinite when the sentence involves the `head-spec-phrase` (e.g. *My dogs sleep*) but we did not succeed in our attempt to apply a similar strategy there.
+
 ### Question Clitic
 
 We had to constrain the modifier of our question clitic to `HEAD noun` because it was attaching to the right of the whole S-T of `Dogs chase cars and cats chase dogs`:
