@@ -98,15 +98,15 @@ intersective-mod-lex :+ [ SYNSEM.NON-LOCAL.YNQ 0-dlist ].
 +nvcdmo :+ [ MOD < > ].
 
 inflected :+ [ INT_TENSE-OR-TENSE-FLAG luk,
-	       TRANSITIVE-VERB-FLAG luk,
-	       QUESTION-FLAG luk,
-	       COG-ST-FLAG luk,
-	       FUT-FLAG luk,
-	       FINITE-FLAG luk,
-	       FIN-FLAG luk,
-	       NUM-FLAG luk,
-	       TENSE-FLAG luk,
-	       MODAL-2-FLAG luk].
+         TRANSITIVE-VERB-FLAG luk,
+         QUESTION-FLAG luk,
+         COG-ST-FLAG luk,
+         FUT-FLAG luk,
+         FINITE-FLAG luk,
+         FIN-FLAG luk,
+         NUM-FLAG luk,
+         TENSE-FLAG luk,
+         MODAL-2-FLAG luk].
 
 infl-satisfied :+ [ INT_TENSE-OR-TENSE-FLAG na-or-+,
     TRANSITIVE-VERB-FLAG na-or-+,
@@ -313,7 +313,7 @@ verb-lex := non-mod-lex-item & NUM-rule-dtr & aspect-rule-dtr & modal-2-rule-dtr
     FIN-FLAG na-or--,
                 FINITE-FLAG -,
                 NUM-FLAG -,
-		MODAL-2-FLAG - ] ].
+    MODAL-2-FLAG - ] ].
 
 main-verb-lex := verb-lex & basic-verb-lex &
   [ SYNSEM.LOCAL [ CAT [ HEAD.AUX -,
@@ -383,31 +383,31 @@ sentential-verb-lex := main-verb-lex & clausal-second-arg-trans-lex-item &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps >,
     ARG-ST < [ LOCAL.CAT.HEAD noun &
                               [ CASE nom ] ],
-	     #comps &
-	     [ NEG-SAT +,
-	       LOCAL [ CAT [ VAL [ SUBJ < >,
-				   COMPS < > ],
-			     HEAD verb ],
-		       CONT.HOOK.INDEX.SF prop-or-ques ]] > ].
+       #comps &
+       [ NEG-SAT +,
+         LOCAL [ CAT [ VAL [ SUBJ < >,
+           COMPS < > ],
+           HEAD verb ],
+           CONT.HOOK.INDEX.SF prop-or-ques ]] > ].
 
 prop-sent-verb-lex := sentential-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS   < [ LOCAL [ CONT.HOOK.INDEX.SF prop,
-					     CAT [ HEAD [ NF -,
-							  INF - ],
-						   MC -,
-						   INT - ]]] > ].
+               CAT [ HEAD [ NF -,
+                INF - ],
+               MC -,
+               INT - ]]] > ].
 
 prop-non-fac-sent-verb-lex := sentential-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS   < [ LOCAL [ CONT.HOOK.INDEX.SF prop,
               CAT [ HEAD [ NF +,
-			   INF - ],
-		    MC - ,
-		    INT - ]]] > ].
+         INF - ],
+        MC - ,
+        INT - ]]] > ].
 
 ques-sent-verb-lex := sentential-verb-lex &
   [ SYNSEM.LOCAL.CAT.VAL.COMPS  < [ LOCAL [ CONT.HOOK.INDEX.SF ques,
-					    CAT [ HEAD.INF +,
-						  MC - ]]] > ].
+              CAT [ HEAD.INF +,
+              MC - ]]] > ].
 
 ;ditrans-ques-sent-verb-lex := main-verb-lex & clausal-third-arg-ditrans-lex-item &
 ;  [ SYNSEM.LOCAL.CAT.VAL.COMPS < #comps & [ LOCAL [ CONT.HOOK.INDEX.SF prop,
@@ -507,16 +507,16 @@ non-ynq-lex-item := lex-item &
 
 question-clitic-lex := no-hcons-lex-item &
  [ SYNSEM [ LOCAL [ CAT [ POSTHEAD + ,
-			  VAL [ SPR < >,
-				COMPS < >,
-				SUBJ < >,
-				SPEC < > ],
-			  HEAD adv & [ MOD < [ LIGHT +,
-					       L-PERIPH +,
-					       LOCAL.CAT [ HEAD noun,
-							   VAL.SPR < > ]] > ]],
-		    CONT.RELS <! !> ],
-	    NON-LOCAL.YNQ <! *top* !>]].
+        VAL [ SPR < >,
+        COMPS < >,
+        SUBJ < >,
+        SPEC < > ],
+        HEAD adv & [ MOD < [ LIGHT +,
+                 L-PERIPH +,
+                 LOCAL.CAT [ HEAD noun,
+                 VAL.SPR < > ]] > ]],
+        CONT.RELS <! !> ],
+      NON-LOCAL.YNQ <! *top* !>]].
 
 ;;; Others
 
@@ -723,7 +723,7 @@ cog-st-lex-rule-super := add-only-no-ccont-rule &
                 FUT-FLAG #fut,
                 FINITE-FLAG #finite,
                 NUM-FLAG #num,
-		MODAL-2-FLAG #modal2,
+    MODAL-2-FLAG #modal2,
                 FIN-FLAG #fin ],
     DTR alienable-noun-lex &
         [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
@@ -732,7 +732,7 @@ cog-st-lex-rule-super := add-only-no-ccont-rule &
                       FUT-FLAG #fut,
                       FINITE-FLAG #finite,
                       NUM-FLAG #num,
-		      MODAL-2-FLAG #modal2,
+          MODAL-2-FLAG #modal2,
                       FIN-FLAG #fin  ] ] ].
 
 indef-lex-rule := cog-st-lex-rule-super & const-lex-rule &
@@ -752,7 +752,7 @@ neg-lex-rule := negation-lex-rule-super &
 
 modal-2-lex-rule-super := add-only-no-ccont-rule & modal-3-rule-dtr & same-neg-sat-lex-rule & question-rule-dtr & topic-change-rule-dtr &
   [ INFLECTED [ MODAL-2-FLAG +,
-		INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
+    INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
                 TRANSITIVE-VERB-FLAG #transitive-verb,
                 COG-ST-FLAG #cog-st,
                 QUESTION-FLAG #question,
@@ -771,7 +771,7 @@ modal-2-lex-rule-super := add-only-no-ccont-rule & modal-3-rule-dtr & same-neg-s
 fut-lex-rule := modal-2-lex-rule-super & infl-lex-rule &
   [ INFLECTED.FUT-FLAG +,
     SYNSEM.LOCAL [CAT.HEAD.INF -,
-		  CONT.HOOK.INDEX.E.MOOD future ]].
+      CONT.HOOK.INDEX.E.MOOD future ]].
 
 infin-pp-lex-rule := modal-2-lex-rule-super  & infl-lex-rule &
   [ INFLECTED.FUT-FLAG #fut,
@@ -780,10 +780,10 @@ infin-pp-lex-rule := modal-2-lex-rule-super  & infl-lex-rule &
 
 evid-lex-rule := modal-2-lex-rule-super  & infl-lex-rule &
   [ SYNSEM.LOCAL [CAT.HEAD.INF -,
-		  CONT.HOOK.INDEX.E.EVID evidential],
+      CONT.HOOK.INDEX.E.EVID evidential],
     INFLECTED [ FUT-FLAG #fut,
-		QUESTION-FLAG -,
-		TENSE-FLAG - ],
+    QUESTION-FLAG -,
+    TENSE-FLAG - ],
     DTR.INFLECTED.FUT-FLAG #fut].
 
 no-modal-2-lex-rule := modal-2-lex-rule-super & const-lex-rule &
@@ -792,7 +792,7 @@ no-modal-2-lex-rule := modal-2-lex-rule-super & const-lex-rule &
 tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-lex-rule & topic-change-rule-dtr &
   [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG +,
                 NUM-FLAG #num,
-		MODAL-2-FLAG #modal2,
+    MODAL-2-FLAG #modal2,
                 FUT-FLAG #fut,
                 QUESTION-FLAG #question,
                 COG-ST-FLAG #cog-st,
@@ -800,9 +800,9 @@ tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-le
                 FIN-FLAG #fin,
                 TRANSITIVE-VERB-FLAG #transitive-verb ],
     DTR tense-rule-dtr &
-	      [ INFLECTED [ NUM-FLAG #num,
-			    MODAL-2-FLAG #modal2,
-			    FUT-FLAG #fut,
+        [ INFLECTED [ NUM-FLAG #num,
+          MODAL-2-FLAG #modal2,
+          FUT-FLAG #fut,
                       QUESTION-FLAG #question,
                       COG-ST-FLAG #cog-st,
                       FINITE-FLAG #finite,
@@ -812,11 +812,11 @@ tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-le
 past-lex-rule := tense-lex-rule-super &
   [ DTR.INFLECTED.FUT-FLAG na,
     SYNSEM.LOCAL [CAT.HEAD.NF -,
-		  CONT.HOOK.INDEX.E.TENSE past ]].
+      CONT.HOOK.INDEX.E.TENSE past ]].
 
 non-past-lex-rule := tense-lex-rule-super &
   [ SYNSEM.LOCAL [CAT.HEAD.NF -,
-		  CONT.HOOK.INDEX.E.TENSE nonpast ]].
+      CONT.HOOK.INDEX.E.TENSE nonpast ]].
 
 present-lex-rule := non-past-lex-rule &
   [ SYNSEM.LOCAL.CONT.HOOK.INDEX.E.TENSE present ].
@@ -844,7 +844,7 @@ freq-aspect-lex-rule := imperf-aspect-lex-rule &
 NUM-lex-rule-super := add-only-no-ccont-rule & modal-2-rule-dtr & modal-3-rule-dtr & question-rule-dtr & same-neg-sat-lex-rule & topic-change-rule-dtr &
   [ INFLECTED [ NUM-FLAG +,
                 INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
-		MODAL-2-FLAG #modal2,
+    MODAL-2-FLAG #modal2,
                 TRANSITIVE-VERB-FLAG #transitive-verb,
                 FUT-FLAG #fut,
                 QUESTION-FLAG #question,
@@ -853,7 +853,7 @@ NUM-lex-rule-super := add-only-no-ccont-rule & modal-2-rule-dtr & modal-3-rule-d
                 FIN-FLAG #fin ],
     DTR NUM-rule-dtr &
         [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
-		      MODAL-2-FLAG #modal2,
+          MODAL-2-FLAG #modal2,
                       TRANSITIVE-VERB-FLAG #transitive-verb,
                       FUT-FLAG #fut,
                       QUESTION-FLAG #question,
@@ -883,7 +883,7 @@ finite-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & same-neg-sat-
                 COG-ST-FLAG #cog-st,
                 QUESTION-FLAG #question,
                 NUM-FLAG #num,
-		MODAL-2-FLAG #modal2],
+    MODAL-2-FLAG #modal2],
     DTR verb-lex &
         [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
                       TRANSITIVE-VERB-FLAG #transitive-verb,
@@ -891,7 +891,7 @@ finite-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & same-neg-sat-
                       COG-ST-FLAG #cog-st,
                       QUESTION-FLAG #question,
                       NUM-FLAG #num,
-		      MODAL-2-FLAG #modal2] ] ].
+          MODAL-2-FLAG #modal2] ] ].
 
 fin-lex-rule := NUM-rule-dtr & aspect-rule-dtr & finite-lex-rule-super & modal-2-rule-dtr & modal-3-rule-dtr & negation-rule-dtr & question-rule-dtr & topic-change-rule-dtr &
   [ INFLECTED.FIN-FLAG +,
@@ -910,7 +910,7 @@ modal-3-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-
 
 non-factive-lex-rule := tense-lex-rule-super &
   [ SYNSEM.LOCAL.CAT [ MC -,
-		       HEAD.NF +]].
+           HEAD.NF +]].
 
 question-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & modal-3-rule-dtr & same-neg-sat-lex-rule &
   [ INFLECTED [ QUESTION-FLAG +,
@@ -920,7 +920,7 @@ question-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & modal-3-rul
                 COG-ST-FLAG #cog-st,
                 FINITE-FLAG #finite,
                 NUM-FLAG #num,
-		MODAL-2-FLAG #modal2,
+    MODAL-2-FLAG #modal2,
                 FIN-FLAG #fin ],
     DTR question-rule-dtr &
         [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
@@ -929,7 +929,7 @@ question-lex-rule-super := add-only-no-ccont-rule & const-lex-rule & modal-3-rul
                       COG-ST-FLAG #cog-st,
                       FINITE-FLAG #finite,
                       NUM-FLAG #num,
-		      MODAL-2-FLAG #modal2,
+          MODAL-2-FLAG #modal2,
                       FIN-FLAG #fin ] ] ].
 
 int-lex-rule := int_tense-rule-dtr & question-lex-rule-super &
@@ -941,7 +941,7 @@ decl-lex-rule := question-lex-rule-super & tense-rule-dtr & topic-change-rule-dt
 int_tense-lex-rule-super := add-only-no-ccont-rule & same-neg-sat-lex-rule &
   [ INFLECTED [ INT_TENSE-OR-TENSE-FLAG +,
                 NUM-FLAG #num,
-		MODAL-2-FLAG #modal2,
+    MODAL-2-FLAG #modal2,
                 FUT-FLAG #fut,
                 QUESTION-FLAG #question,
                 COG-ST-FLAG #cog-st,
@@ -951,7 +951,7 @@ int_tense-lex-rule-super := add-only-no-ccont-rule & same-neg-sat-lex-rule &
     SYNSEM.LOCAL.CAT.HEAD.NF -,
     DTR int_tense-rule-dtr &
         [ INFLECTED [ NUM-FLAG #num,
-		      MODAL-2-FLAG #modal2,
+          MODAL-2-FLAG #modal2,
                       FUT-FLAG #fut,
                       QUESTION-FLAG #question,
                       COG-ST-FLAG #cog-st,
@@ -1097,15 +1097,15 @@ wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
 
 emb-wh-ques-phrase := basic-head-filler-phrase & interrogative-clause & head-final &
    [ SYNSEM [ NEG-SAT #negsat,
-	      LOCAL.CAT [ MC -,
-			  VAL #val,
-			  HEAD verb & [ FORM finite ]] ],
+        LOCAL.CAT [ MC -,
+        VAL #val,
+        HEAD verb & [ FORM finite ]] ],
      HEAD-DTR.SYNSEM [ NEG-SAT #negsat,
-		       LOCAL.CAT [ MC na,
-	 			   INT +,
-				   HEAD.INF +,
-			           VAL #val & [ SUBJ < >,
-						COMPS < > ] ]],
+           LOCAL.CAT [ MC na,
+           INT +,
+           HEAD.INF +,
+                 VAL #val & [ SUBJ < >,
+            COMPS < > ] ]],
      NON-HEAD-DTR.SYNSEM [ LOCAL.CAT [ HEAD.WH-EMB +,
                                        MKG.FC - ],
                            NON-LOCAL.QUE < ! ref-ind ! > ] ].
