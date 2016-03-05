@@ -750,7 +750,7 @@ negation-lex-rule-super := NUM-rule-dtr & add-only-no-ccont-rule & infl-lex-rule
 neg-lex-rule := negation-lex-rule-super &
   [ SYNSEM.NEG-SAT - ].
 
-modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-3-rule-dtr & same-neg-sat-lex-rule & question-rule-dtr & topic-change-rule-dtr &
+modal-2-lex-rule-super := add-only-no-ccont-rule & modal-3-rule-dtr & same-neg-sat-lex-rule & question-rule-dtr & topic-change-rule-dtr &
   [ INFLECTED [ MODAL-2-FLAG +,
 		INT_TENSE-OR-TENSE-FLAG #int_tense-or-tense,
                 TRANSITIVE-VERB-FLAG #transitive-verb,
@@ -768,17 +768,17 @@ modal-2-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & modal-3-rule-
                       NUM-FLAG #num,
                       FIN-FLAG #fin & + ] ] ].
 
-fut-lex-rule := modal-2-lex-rule-super &
+fut-lex-rule := modal-2-lex-rule-super & infl-lex-rule &
   [ INFLECTED.FUT-FLAG +,
     SYNSEM.LOCAL [CAT.HEAD.INF -,
 		  CONT.HOOK.INDEX.E.MOOD future ]].
 
-infin-pp-lex-rule := modal-2-lex-rule-super &
+infin-pp-lex-rule := modal-2-lex-rule-super  & infl-lex-rule &
   [ INFLECTED.FUT-FLAG #fut,
     DTR.INFLECTED.FUT-FLAG #fut,
     SYNSEM.LOCAL.CAT.HEAD [ INF + ] ].
 
-evid-lex-rule := modal-2-lex-rule-super &
+evid-lex-rule := modal-2-lex-rule-super  & infl-lex-rule &
   [ SYNSEM.LOCAL [CAT.HEAD.INF -,
 		  CONT.HOOK.INDEX.E.EVID evidential],
     INFLECTED [ FUT-FLAG #fut,
@@ -786,7 +786,7 @@ evid-lex-rule := modal-2-lex-rule-super &
 		TENSE-FLAG - ],
     DTR.INFLECTED.FUT-FLAG #fut].
 
-no-modal-2-lex-rule := modal-2-lex-rule-super &
+no-modal-2-lex-rule := modal-2-lex-rule-super & const-lex-rule &
   [ SYNSEM.LOCAL.CAT.HEAD.INF - ].
 
 tense-lex-rule-super := add-only-no-ccont-rule & infl-lex-rule & same-neg-sat-lex-rule & topic-change-rule-dtr &
