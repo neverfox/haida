@@ -28,15 +28,17 @@ The dogs chase cars.
 ; good
 The dogs dont chase cars.
 
-; 64 generation results
+; 322 generation results
 ; added prop-non-fac-sent-verb-lex which is what prop-sent-verb-lex used to look like for think and say, but selects for a non-factive compliment
 ; changed prop-sent-verb-lex for know, because it takes a regular (not a non-factive) verb complement
 ; created same-nf-phrase and made it a parent to all phrase-types
 ; added INF - to the verbal compliment of both
 ; constrained sent verbs to select of nom subj
+; MADE position classes add INF - and NF -
+; good
 I think that you know that dogs chase cars.
 
-; 224 generation results!
+; 48 generation results
 I ask whether you know that dogs chase cars.
 
 ; 8 generation results
@@ -103,6 +105,6 @@ I asked what the dogs chased.
 ; good
 The dog's car sleeps.
 
-; 4 generation results (multiple ways of expressing my)
-; good
+; 6 generation results (multiple ways of expressing my)
+
 My dogs sleep.

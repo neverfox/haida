@@ -10,9 +10,9 @@ x-ee car cidiid-7wa-gang
 
 gam x-ee car cidiid-.ang-7wa-gang
 
-x car cidiid-7wa-gang dang 7unsiid-.ang hlaa gudang-gang
+x car cidiid-7wa-gang daa 7unsiid-.ang hlaa gudang-gang
 
-x car cidiid-7wa-gang dang 7unsiid-gee-ga hlaa kyaanang-gang
+x car cidiid-7wa-gang daa 7unsiid-gee-ga hlaa kyaanang-gang
 
 duuj 7isgyaan x car cidiid-7wa-gang
 
@@ -26,7 +26,7 @@ x q’wiid taa-7wa-gang
 
 x cangala taa-7wa-gang
 
-x-ee q’wiid-gang
+x-ee q’wiid-7wa-gang
 
 ------------------------------------
 
@@ -36,12 +36,13 @@ giisd gu q’a
 
 guus gu x-ee cidiid-7wa
 
-What do you think the dogs chase?
+guus gu x-ee cidiid-7wa-.ang daa gudang
 
-Who asked what the dogs chase?
+giisd gu ginn x-ee cidiid-7wa-gee-ga kyaanang-gaa
 
-I asked what the dogs chased.
+ginn x-ee cidiid-7wa-gee-ga-gaa hlaa kyaanang-gan
 
 x-ee gyaa car-ee q’a-gang
 
 gyaagan x-ee q’a-7wa-gang
+Q
